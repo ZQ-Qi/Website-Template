@@ -1,0 +1,88 @@
+/*---------------------------
+
+Start google map
+
+---------------------------*/
+
+.map-height{
+  width: 100%;
+  height: 350px;
+}
+
+#geocoding_form{
+  margin-bottom: $gaping-10;
+  input{
+    border: 1px solid $main-site-color;
+    height: $gaping-30;
+    padding: $gaping-5;
+  }
+}
+
+.overlay{
+  display:block;
+  text-align: $text-center;
+  color:$white-text-color;
+  font-size:40px;
+  line-height:$gaping-60;
+  opacity:0.8;
+  background:#4477aa;
+  border:solid 3px #336699;
+  border-radius:4px;
+  box-shadow:2px 2px 10px $dark-gray-background-color;
+  text-shadow:1px 1px 1px #666;
+  padding:$gaping-0 4px;
+}
+
+.overlay_arrow{
+  left:50%;
+  margin-left:-16px;
+  width:$gaping-0;
+  height:$gaping-0;
+  position:absolute;
+  &.above{
+    bottom:-15px;
+    border-left:16px solid transparent;
+    border-right:16px solid transparent;
+    border-top:16px solid #336699;
+  }
+  &.below{
+    top:-15px;
+    border-left:16px solid transparent;
+    border-right:16px solid transparent;
+    border-bottom:16px solid #336699;
+  }
+}
+/*---- Start responsive google map ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:479px) {
+  .map-height{
+    height: 250px;
+  }
+  #geocoding_form{
+    input {
+      width: 185px;
+    }
+  }
+}
+/*---- End responsive google map ----*/
+
+/*---------------------------
+
+End google map
+
+---------------------------*/

@@ -1,0 +1,357 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Sidebar
+	1.1 Navbar (logo)
+	1.2 Navigation
+		1.2.1 Sub Navigation
+	1.3 Sidebar Collapsed Mode
+	1.4 Sidebar Color Options
+	1.5 Sidebar on mobile
+
+-------------------------------------------------------------------*/
+
+
+
+.sidebar{
+	position: fixed;
+	width: $sidebar-expand-width;
+	background-color: $gray-800;
+	height: 100%;
+	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
+	z-index: 1022;;
+	white-space: nowrap;
+	@include transition(all 0.5s);
+
+	+ .content-area{
+		margin-left: $sidebar-expand-width;
+		@include transition(margin 0.5s);
+	}
+
+	/* LOGO */
+	.navbar{
+		flex-wrap: unset;
+		white-space: nowrap;
+		.brand-title{
+			opacity: 1;
+			@include transition(all 0.5s);
+			+ span{
+				flex:auto;
+			}
+		}
+		.toggle-sidebar{
+			margin-right: 0px;
+			@include transition(margin 0.5s);
+		}
+	}
+
+
+	.navigation{
+		padding: $grid-gutter-width 0px;
+		overflow: auto;
+		height: calc(100vh - 62px);
+		label{
+			font-size: 11px;
+			font-weight: 200;
+			padding: 1rem 1.2rem 0rem 1.2rem;
+			color: rgba(255,255,255,0.6);
+		    margin-top: 0.5rem;
+		    border-top: 1px solid rgba(0,0,0,0.2);
+		    display: block;
+		    overflow: hidden;
+		}
+		ul{
+			margin: 0px;
+			padding: 0px;
+			li{
+				list-style: none;
+				position: relative;
+				@include transition(all 0.5s);
+				a{
+					display: block;
+					padding: 0rem 1.2rem;
+					text-decoration: none;
+					color: rgba(255,255,255,0.3);
+					line-height: 48px;
+					font-weight: 300;
+					overflow: hidden;
+					@include transition(all 0.5s);
+					position: relative;
+					/*white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;*/
+					
+					.nav-icon{
+						display: inline-block;
+						margin-right: ($grid-gutter-width / 3);
+						vertical-align: middle;
+						font-size: 20px;
+						position: relative;
+						top: -2px;
+						//@include transition(font-size 0.5s);
+						@include transition(margin 0.5s);
+					}
+					.toogle-sub-nav{
+						position: absolute;
+						right: ($grid-gutter-width / 2);
+						top: 0px;
+						bottom: 0px;
+						margin: auto;
+						height: 18px;
+						font-size: 18px;
+						opacity: 1;
+						
+						@include transition(all 0.5s);
+					}
+
+				}
+
+				&:hover{
+					> a{ color:#fff; }
+				}
+
+				&.notification{
+					> a{
+						&:before{
+							content: '';
+							position: absolute;
+							display: inline-block;
+							height: 12px;
+							width: 12px;
+							left: 30px;
+							top: 10px;
+							background-color: theme-color("warning");
+							border-radius: 12px;
+							z-index: 1;
+						}
+					}
+				}
+
+				// Active State
+				&.active{
+					> a{
+						color: #fff;
+						box-shadow: inset 3px 0px 0px var( --theme-colors-primary );
+						background-color: rgba(0,0,0,0.15);
+					}
+				}
+
+				// Open State
+				&.open{
+					background-color: rgba(0,0,0,0.15);
+					> a{
+						color: #fff;
+						.toogle-sub-nav{
+							transform: rotate(90deg);
+						}
+					}
+					&.active{
+						> a{
+							background-color: transparent;
+						}
+					}
+					> .sub-nav{
+						display: block;
+					}
+				}
+
+
+				.sub-nav{
+					display: none;
+					padding: ($grid-gutter-width / 2) 0px;
+					padding-top: 0px;
+					li{
+						a{
+							line-height: 32px;
+							padding-left: calc( 32px + 1.2rem );
+							font-size: 13px;
+						}
+						&.active{
+							a{
+								background-color: transparent;
+								box-shadow: none;
+							}
+						}
+					}
+				}
+
+
+			}
+		}
+	}
+
+
+
+	/* WHEN SIDE IS NOT COLLAPSED */
+	&:not(.collapsed){
+
+	}
+	/* WHEN SIDE IS NOT COLLAPSED */
+
+
+
+	/* WHEN SIDE IS COLLAPSED (only on desktop verstion)*/
+	@media only screen and (min-width: map-get($grid-breakpoints, "md")) {
+		&.collapsed{
+
+			width: $sidebar-collapse-width;
+			.navbar{
+				place-content: flex-end;
+				.brand-title{
+					text-indent: -9em;
+					opacity: 0;
+					@include transition(all 0.5s);
+				}
+				.toggle-sidebar{
+					margin-right: 8px;
+				}
+			}
+
+			+ .content-area{
+				margin-left: $sidebar-collapse-width;
+			}
+
+			.navigation{
+				overflow-x: hidden;
+	  			overflow-y: auto;
+				label{
+					text-align: center;
+					span{
+						display: none;
+					}
+					&:before{
+						content: '...';
+					}
+				}
+				ul{
+					li{
+						position: static;
+						a{
+							padding: 0rem 1.4rem;
+							.nav-icon{
+								font-size: 22px;
+								margin-right: 22px;
+							}
+							.toogle-sub-nav{	
+								opacity: 0;
+							}
+						}
+						.sub-nav{
+							display: none !important;
+							position: absolute;
+							left: 100%;
+							top: 0px;
+							min-width: 200px;
+							padding: ($grid-gutter-width / 2) 0px;
+							background-color: $gray-800;
+							box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
+							a{
+								padding-left: 1.2rem;
+							}
+						}
+						&:hover{
+							.sub-nav{
+								display: block !important;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+	/* WHEN SIDE IS COLLAPSED (only on desktop verstion)*/
+
+
+
+
+	/* SIDEBAR COLOR OPTION*/
+	&.sidebar-light{
+		background-color: #fff;
+		.navigation{
+			label{
+				color: rgba(0,0,0,0.4);
+				font-weight: 400;
+			}
+			ul{
+				li{
+					a{
+						color: rgba(0,0,0,0.5);
+						font-weight: 400;
+						&:hover{
+							color: rgba(0,0,0,0.75);
+						}
+					}
+					&.active{
+						> a{
+							color: rgba(0,0,0,0.75);
+							background-color: rgba(0,0,0,0.075);
+						}
+					}
+					&.open{
+						> a{
+							color: rgba(0,0,0,0.75);
+						}
+						background-color: rgba(0,0,0,0.075);
+						&.active{
+							> a{
+								background-color: transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.collapsed{
+			.navigation{
+				ul{
+					li{
+						.sub-nav{ background-color: #fff;}
+					}
+				}
+			}
+		}
+
+	}
+	/* SIDEBAR COLOR OPTION*/
+
+
+
+
+
+	/* On Mobile View */
+	@media only screen and (max-width:  map-get($grid-breakpoints, "md") ) {
+		left: ( -$sidebar-expand-width - 4px );
+		+ .content-area{
+			margin-left: 0px;
+		}
+		&.collapsed{
+			width: $sidebar-expand-width;
+			left: 0px;
+
+			+ .content-area{
+				filter:blur(3px);
+				@include transition(filter 0.5s);
+				&:before{
+					content:"";
+					display: block;
+					position: fixed;
+					top: 0px;
+					left: 0px;
+					background-color: rgba(255,255,255,0.5);
+					width: 100%;
+					height: 100%;
+					z-index: 1021;
+				}
+			}
+		}
+	}
+
+
+
+
+}
+
+
+

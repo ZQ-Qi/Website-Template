@@ -1,0 +1,1 @@
+$(function(){"use strict";$(function(){$(".preloader").fadeOut()}),$("a").on("click",function(t){var e=$(this);$("html, body").stop().animate({scrollTop:$(e.attr("href")).offset().top-90},1e3),t.preventDefault()})});

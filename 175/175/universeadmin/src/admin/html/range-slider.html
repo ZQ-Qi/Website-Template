@@ -1,0 +1,63 @@
+{% extends "./common/layout.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+{{ super() }}
+{% endblock %}
+
+{% block title %}Range Slider / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Range slider</h2>
+    </div>
+  </div>
+  <div class="main-container container-fh__content">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="mt-4">
+          <div class="nouislider-custom"></div>
+        </div>
+        <div class="mt-5">
+          <div class="nouislider"></div>
+        </div>
+        <div class="mt-5">
+          <div class="nouislider-tooltips"></div>
+        </div>
+
+        <div class="mt-5">
+          <div id="nouislider-a" class="nouislider-a"></div>
+        </div>
+
+        <div class="mt-5">
+          <div id="nouislider-a1" class="nouislider-a"></div>
+        </div>
+
+        <div class="mt-5">
+          <div id="nouislider-b" class="nouislider-b"></div>
+        </div>
+
+        <div class="mt-5">
+          <div id="nouislider-b1" class="nouislider-b"></div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="mt-4">
+          <div id="nouislider-b2" class="nouislider-b is-pips-enabled"></div>
+        </div>
+        <div class="mt-5">
+          <div id="nouislider-b3" class="nouislider-b is-pips-enabled"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/nouislider/nouislider.min.js"></script>
+<script src="js/preview/range-slider.min.js"></script>
+{% endblock %}

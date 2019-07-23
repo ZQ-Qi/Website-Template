@@ -1,0 +1,169 @@
+@import "../../../../styles/config/colors";
+
+.ks-irs-slider-modern-danger {
+    .irs-line-mid,
+    .irs-line-left,
+    .irs-line-right,
+    .irs-bar,
+    .irs-bar-edge,
+    .irs-slider {
+        background: url(../img/sprite-skin-modern-danger.png) repeat-x;
+    }
+
+    .irs {
+        height: 60px;
+    }
+
+    .irs-with-grid {
+        height: 70px;
+    }
+
+    .irs-line {
+        height: 5px; top: 25px;
+        border-radius: 5px;
+        background-color: #ebebeb;
+    }
+
+    .irs-line-left {
+        height: 5px;
+        background-position: 0 -30px;
+    }
+
+    .irs-line-mid {
+        height: 5px;
+        background-position: 0 0;
+    }
+
+    .irs-line-right {
+        height: 5px;
+        background-position: 100% -30px;
+    }
+
+    .irs-bar {
+        height: 5px; top: 25px;
+        background-position: 0 -46px;
+    }
+
+    .irs-bar-edge {
+        top: 20px;
+        height: 12px;
+        width: 6px;
+        background-position: 0 -64px;
+    }
+
+    .irs-shadow {
+        height: 5px; top: 25px;
+        background: #000;
+        opacity: 0.25;
+    }
+
+    .lt-ie9 .irs-shadow {
+        filter: alpha(opacity=25);
+    }
+
+    .irs-slider {
+        width: 12px; height: 18px;
+        top: 33px;
+        background-position: 0 -94px;
+        cursor: pointer;
+    }
+
+    .irs-slider.state_hover, .irs-slider:hover {
+        background-position: 0 -127px;
+    }
+
+    .irs-min, .irs-max {
+        font-size: 10px;
+        padding: 0 5px;
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-stretch: normal;
+        display: flex;
+        color: #858585;
+        text-shadow: none;
+        top: -4px;
+        height: 18px;
+        background: #ebebeb;
+        border-radius: 2px;
+    }
+
+    .irs-from, .irs-to, .irs-single {
+        text-shadow: none;
+        height: 20px;
+        padding: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $ks-color-danger;
+        border-radius: 2px;
+        font-size: 11px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        color: #fff;
+        cursor: pointer;
+        top: -4px;
+    }
+
+    .irs-from:after,
+    .irs-to:after,
+    .irs-single:after {
+        position: absolute;
+        display: block;
+        content: "";
+        bottom: -6px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -3px;
+        overflow: hidden;
+        border: 3px solid transparent;
+        border-top-color: $ks-color-danger;
+    }
+
+    .irs-grid {
+        height: 34px;
+        top: 42px;
+    }
+
+    .irs-grid-pol {
+        background-color: #c4cbe1;
+    }
+
+    .irs-grid-text {
+        bottom: 12px;
+        color: #858585;
+    }
+
+    .irs-disable-mask {
+
+    }
+
+    .irs-disabled {
+
+    }
+
+    .lt-ie9 .irs-disabled {
+
+    }
+
+    &.ks-hide-controls {
+        .irs-min, .irs-max, .irs-from, .irs-to, .irs-grid-pol, .irs-single, .irs-with-grid {
+            display: none;
+        }
+
+        .irs {
+            height: 20px;
+        }
+
+        .irs-line, .irs-bar-edge, .irs-bar {
+            top: 11px;
+        }
+
+        .irs-slider {
+            top: 2px;
+        }
+    }
+}

@@ -1,0 +1,832 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Booking Dashboard / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Booking Dashboard</h2>
+    </div>
+    <div class="page-content__header-meta">
+      <div class="dropdown table-dropdown page-content__header-dropdown">
+        <a class="btn btn-link dropdown-toggle" href="#" data-toggle="dropdown">
+          <span class="table-dropdown__text">Sort by:</span> <span class="table-dropdown__value">Most Hours</span>
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <div class="dropdown table-dropdown page-content__header-dropdown">
+        <a class="btn btn-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          <span class="table-dropdown__text">Time line:</span> <span class="table-dropdown__value">Last 15 days</span>
+        </a>
+        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 36px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <a href="#" class="btn btn-info icon-left">
+        Add Widget <span class="btn-icon ua-icon-plus-circle"></span>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="widget widget-tabs bd-widget-overview">
+        <div class="widget-tabs__header widget-tabs__header--bordered">
+          <div>
+            Dashboard Overview
+          </div>
+          <div class="widget-tabs__header-meta">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#widget-day">Day</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-week">Week</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-month">Month</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-year">Year</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-year">All Time</a>
+              </li>
+            </ul>
+            <div class="input-group input-group-icon icon-right">
+              <input class="form-control" type="email" placeholder="Custom Date">
+              <span class="input-icon ua-icon-datepicker"></span>
+            </div>
+          </div>
+        </div>
+        <div class="widget-tabs__content">
+          <div class="tab-content">
+            <div class="tab-pane show active" id="widget-day">
+              <div class="bd-widget-overview__info">
+                <div>
+                  <div class="radio-group radio-group--md">
+                    <label class="radio-group__item">
+                      <input type="radio" name="radio-group-md" class="radio-group__input">
+                      <span class="radio-group__text">Purchase</span>
+                    </label>
+                    <label class="radio-group__item">
+                      <input type="radio" name="radio-group-md" class="radio-group__input" checked="">
+                      <span class="radio-group__text">Sales</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="bd-widget-overview__tags">
+                  <span class="badge-circle badge-circle-xs badge-circle--green-mantis bd-widget-overview__tag">Total</span>
+                  <span class="badge-circle badge-circle-xs badge-circle--info bd-widget-overview__tag">Online</span>
+                  <span class="badge-circle badge-circle-xs badge-circle--tapestry bd-widget-overview__tag">Phone</span>
+                  <span class="badge-circle badge-circle-xs badge-circle--apricot bd-widget-overview__tag color-gray">Canceled</span>
+                  <span class="badge-circle badge-circle-xs badge-circle--casper bd-widget-overview__tag color-gray">Walkins</span>
+                  <span class="badge-circle badge-circle-xs badge-circle--au-chico bd-widget-overview__tag color-gray">No Show</span>
+                </div>
+              </div>
+              <div id="bd-widget-overview-chart" class="bd-widget-overview__chart"></div>
+              <div class="bd-widget-overview__stats">
+                <div class="bd-widget-overview__stats-item">
+                  <div class="bd-widget-overview__stats-title">Nos of Guests</div>
+                  <div class="bd-widget-overview__stats-content">
+                    2200 <span class="ua-icon-arrow-up bd-widget-overview__stats-icon bd-widget-overview__stats-icon--up"></span>
+                  </div>
+                </div>
+                <div class="bd-widget-overview__stats-item">
+                  <div class="bd-widget-overview__stats-title">Sitting Capacity</div>
+                  <div class="bd-widget-overview__stats-content">
+                    80% <span class="ua-icon-arrow-up bd-widget-overview__stats-icon bd-widget-overview__stats-icon--up"></span>
+                  </div>
+                </div>
+                <div class="bd-widget-overview__stats-item">
+                  <div class="bd-widget-overview__stats-title">Cancelation</div>
+                  <div class="bd-widget-overview__stats-content">
+                    20% <span class="ua-icon-arrow-down bd-widget-overview__stats-icon bd-widget-overview__stats-icon--down"></span>
+                  </div>
+                </div>
+                <div class="bd-widget-overview__stats-item">
+                  <div class="bd-widget-overview__stats-title">Guests no Show</div>
+                  <div class="bd-widget-overview__stats-content">
+                    30% <span class="ua-icon-arrow-up bd-widget-overview__stats-icon bd-widget-overview__stats-icon--up"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="widget-week">Week</div>
+            <div class="tab-pane" id="widget-month">Month</div>
+            <div class="tab-pane" id="widget-year">Year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="widget widget-tabs bd-widget-overview bd-widget-overview--most-booked">
+        <div class="widget-tabs__header widget-tabs__header--bordered">
+          <div>
+            Most booked Hours
+          </div>
+          <div class="widget-tabs__header-meta">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#widget-most-booked-mon">Mon</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-most-booked-tue">Tue</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-most-booked-wed">Wed</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-most-booked-thu">Thu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-most-booked-fri">Fri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-most-booked-sat">Sat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#widget-most-booked-sun">Sun</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="widget-tabs__content">
+          <div class="tab-content">
+            <div class="tab-pane show active" id="widget-most-booked-mon">
+              <div id="bd-widget-most-booked-chart" class="bd-widget-overview__most-booked-chart"></div>
+            </div>
+            <div class="tab-pane" id="widget-most-booked-tue">Tue</div>
+            <div class="tab-pane" id="widget-most-booked-wed">Wed</div>
+            <div class="tab-pane" id="widget-most-booked-thu">Thu</div>
+            <div class="tab-pane" id="widget-most-booked-fri">Fri</div>
+            <div class="tab-pane" id="widget-most-booked-sat">Sat</div>
+            <div class="tab-pane" id="widget-most-booked-sun">Sun</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="widget widget-controls widget-sales-stats bd-widget-stats">
+            <div class="widget-controls__header">
+              <div>
+                Most booked Hours
+              </div>
+            </div>
+            <div class="widget-controls__content widget-sales-stats__content">
+              <div class="widget-step-goal__donut-wrap">
+                <div class="widget-step-goal__donut-progress">
+                  <div class="widget-step-goal__donut-progress-amount">6134</div>
+                  <div class="widget-step-goal__donut-progress-desc">Reservation</div>
+                </div>
+                <div id="bg-widget-donut-stats-chart" class="bd-widget-stats__chart"></div>
+              </div>
+              <div class="widget-sales-stats__labels">
+                <span class="badge-circle badge-circle-xs badge-circle-yellow-orange widget-sales-stats__label">201 <span>Confirm</span></span>
+                <span class="badge-circle badge-circle-xs badge-circle-fountain-blue widget-sales-stats__label">140 <span>Arrived</span></span>
+                <span class="badge-circle badge-circle-xs badge-circle-heliotrope widget-sales-stats__label">10 <span>Walk In</span></span>
+                <span class="badge-circle badge-circle-xs badge-circle-golden widget-sales-stats__label">25 <span>Canceled</span></span>
+                <span class="badge-circle badge-circle-xs badge-circle-waterlemon widget-sales-stats__label">130 <span>Pending</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="widget widget-controls bd-widget-top-countries">
+            <div class="widget-controls__header">
+              <div>
+                Top Countries
+              </div>
+            </div>
+            <div class="widget-controls__content">
+              <div id="bd-widget-top-countries-chart" class="bd-widget-top-countries__chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="widget widget-controls bd-widget-feedback">
+            <div class="widget-controls__header">
+              <div>
+                Average Rating and Feedback
+              </div>
+            </div>
+            <div class="widget-controls__content bd-widget-feedback__content">
+              <div class="bd-widget-feedback__rating">
+                <div class="bd-widget-feedback__rating-header">
+                  <span class="bd-widget-feedback__rating-amount">4,5</span>
+                  <div>
+                    <div class="bd-widget-feedback__rating-stars">
+                      <span class="ua-icon-star bd-widget-feedback__rating-star is-active"></span>
+                      <span class="ua-icon-star bd-widget-feedback__rating-star is-active"></span>
+                      <span class="ua-icon-star bd-widget-feedback__rating-star is-active"></span>
+                      <span class="ua-icon-star bd-widget-feedback__rating-star is-active"></span>
+                      <span class="ua-icon-star bd-widget-feedback__rating-star"></span>
+                    </div>
+                    <div class="bd-widget-feedback__rating-reviews-amount">3635 Review</div>
+                  </div>
+                </div>
+                <ul class="bd-widget-feedback__rating-categories">
+                  <li class="bd-widget-feedback__rating-category">
+                    <span class="bd-widget-feedback__rating-category-name">Food</span>
+                    <div class="progress progress-md bd-widget-feedback__rating-category-progress">
+                      <div class="progress-bar bg-lighting-yellow" role="progressbar" style="width: 90%"></div>
+                    </div>
+                    <span class="bd-widget-feedback__rating-category-amount">90%</span>
+                  </li>
+                  <li class="bd-widget-feedback__rating-category">
+                    <span class="bd-widget-feedback__rating-category-name">Service</span>
+                    <div class="progress progress-md bd-widget-feedback__rating-category-progress">
+                      <div class="progress-bar bg-lighting-yellow" role="progressbar" style="width: 80%"></div>
+                    </div>
+                    <span class="bd-widget-feedback__rating-category-amount">80%</span>
+                  </li>
+                  <li class="bd-widget-feedback__rating-category">
+                    <span class="bd-widget-feedback__rating-category-name">Ambience</span>
+                    <div class="progress progress-md bd-widget-feedback__rating-category-progress">
+                      <div class="progress-bar bg-lighting-yellow" role="progressbar" style="width: 90%"></div>
+                    </div>
+                    <span class="bd-widget-feedback__rating-category-amount">90%</span>
+                  </li>
+                  <li class="bd-widget-feedback__rating-category">
+                    <span class="bd-widget-feedback__rating-category-name">Cleanliness</span>
+                    <div class="progress progress-md bd-widget-feedback__rating-category-progress">
+                      <div class="progress-bar bg-lighting-yellow" role="progressbar" style="width: 70%"></div>
+                    </div>
+                    <span class="bd-widget-feedback__rating-category-amount">70%</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bd-widget-feedback__reviews">
+                <div class="bd-widget-feedback__review-scrollpanel js-scrollable">
+                  <table class="table">
+                    <tr class="bd-widget-feedback__review">
+                      <td class="bd-widget-feedback__review-avatar">
+                        <img src="img/users/user-11.png" alt="" class="rounded-circle">
+                      </td>
+                      <td>
+                        <div class="bd-widget-feedback__review-title">
+                          <a href="#" class="bd-widget-feedback__review-username">Emma Clark</a>
+                          <span class="bd-widget-feedback__review-meta">27/06/2024  9:30</span>
+                        </div>
+                        <div class="bd-widget-feedback__review-stars">
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star"></span>
+                        </div>
+                        <div class="bd-widget-feedback__review-desc">
+                          Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit, sed do eiusmod tempor
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="bd-widget-feedback__review">
+                      <td class="bd-widget-feedback__review-avatar">
+                        <img src="img/users/user-11.png" alt="" class="rounded-circle">
+                      </td>
+                      <td>
+                        <div class="bd-widget-feedback__review-title">
+                          <a href="#" class="bd-widget-feedback__review-username">Emma Clark</a>
+                          <span class="bd-widget-feedback__review-meta">27/06/2024  9:30</span>
+                        </div>
+                        <div class="bd-widget-feedback__review-stars">
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star"></span>
+                        </div>
+                        <div class="bd-widget-feedback__review-desc">
+                          Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit, sed do eiusmod tempor
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="bd-widget-feedback__review">
+                      <td class="bd-widget-feedback__review-avatar">
+                        <img src="img/users/user-11.png" alt="" class="rounded-circle">
+                      </td>
+                      <td>
+                        <div class="bd-widget-feedback__review-title">
+                          <a href="#" class="bd-widget-feedback__review-username">Emma Clark</a>
+                          <span class="bd-widget-feedback__review-meta">27/06/2024  9:30</span>
+                        </div>
+                        <div class="bd-widget-feedback__review-stars">
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star"></span>
+                        </div>
+                        <div class="bd-widget-feedback__review-desc">
+                          Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit, sed do eiusmod tempor
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="bd-widget-feedback__review">
+                      <td class="bd-widget-feedback__review-avatar">
+                        <img src="img/users/user-11.png" alt="" class="rounded-circle">
+                      </td>
+                      <td>
+                        <div class="bd-widget-feedback__review-title">
+                          <a href="#" class="bd-widget-feedback__review-username">Emma Clark</a>
+                          <span class="bd-widget-feedback__review-meta">27/06/2024  9:30</span>
+                        </div>
+                        <div class="bd-widget-feedback__review-stars">
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star"></span>
+                        </div>
+                        <div class="bd-widget-feedback__review-desc">
+                          Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit, sed do eiusmod tempor
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="bd-widget-feedback__review">
+                      <td class="bd-widget-feedback__review-avatar">
+                        <img src="img/users/user-11.png" alt="" class="rounded-circle">
+                      </td>
+                      <td>
+                        <div class="bd-widget-feedback__review-title">
+                          <a href="#" class="bd-widget-feedback__review-username">Emma Clark</a>
+                          <span class="bd-widget-feedback__review-meta">27/06/2024  9:30</span>
+                        </div>
+                        <div class="bd-widget-feedback__review-stars">
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star is-active"></span>
+                          <span class="ua-icon-star bd-widget-feedback__review-star"></span>
+                        </div>
+                        <div class="bd-widget-feedback__review-desc">
+                          Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit, sed do eiusmod tempor
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="widget bd-widget-latest-reservations">
+        <div class="widget-controls__header">
+          <div>
+            Latest Reservations
+          </div>
+          <div class="widget-controls__header-controls">
+            <span class="widget-controls__header-control ua-icon-settings"></span>
+          </div>
+        </div>
+        <div class="widget-controls__content js-scrollable">
+          <ul class="bd-widget-latest-reservations__items">
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> 12</a>
+              </div>
+            </li>
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> 12</a>
+              </div>
+            </li>
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> 12</a>
+              </div>
+            </li>
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> 12</a>
+              </div>
+            </li>
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> 12</a>
+              </div>
+            </li>
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> <span class="bd-widget-latest-reservations__item-meta-icon-text">12</span></a>
+              </div>
+            </li>
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> <span class="bd-widget-latest-reservations__item-meta-icon-text">12</span></a>
+              </div>
+            </li>
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> <span class="bd-widget-latest-reservations__item-meta-icon-text">12</span></a>
+              </div>
+            </li>
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> <span class="bd-widget-latest-reservations__item-meta-icon-text">12</span></a>
+              </div>
+            </li>
+            <li class="bd-widget-latest-reservations__item">
+              <div class="bd-widget-latest-reservations__item-title">
+                <a href="#" class="bd-widget-latest-reservations__item-username">Emma Clark</a>
+                <span class="bd-widget-latest-reservations__item-date">27/06/2024  9:30</span>
+              </div>
+              <div class="bd-widget-latest-reservations__item-desc">
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+              </div>
+              <div class="bd-widget-latest-reservations__item-meta">
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-phone"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-comments"></span></a>
+                <a href="#" class="bd-widget-latest-reservations__item-meta-icon"><span class="ua-icon-datepicker"></span> <span class="bd-widget-latest-reservations__item-meta-icon-text">12</span></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="widget widget-controls widget-table bd-widget-top-clients">
+        <div class="widget-controls__header widget-controls__header--bordered">
+          <div>
+            Top 10 Clients
+          </div>
+        </div>
+        <div class="widget-controls__content js-scrollable">
+          <table class="table">
+            <thead>
+              <tr>
+                <th colspan="2">Top Clients</th>
+                <th>Last Booking</th>
+                <th>Total Visit</th>
+                <th>Avg. Feedback</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">1</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">2</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">3</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">4</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">5</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">6</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">7</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">8</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">9</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="bd-widget-top-clients__point-cell">
+                  <span class="bd-widget-top-clients__point">10</span>
+                </td>
+                <td>
+                  <a href="#">Emma Clark</a>
+                  <div class="color-gray">
+                    <div>emmaclark@example.com</div>
+                    <div>123-456-7890</div>
+                  </div>
+                </td>
+                <td class="color-gray">15/06/24</td>
+                <td class="color-gray">20</td>
+                <td class="bd-widget-top-clients__stars">
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star is-active"></span>
+                  <span class="ua-icon-star bd-widget-top-clients__star"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="widget widget-controls bd-widget-client-database">
+        <div class="widget-controls__header">
+          <div>
+            Client Database
+          </div>
+        </div>
+        <div class="widget-controls__content">
+          <div class="bd-widget-overview__stats">
+            <div class="bd-widget-overview__stats-item">
+              <div class="bd-widget-overview__stats-title">Nos of Guests</div>
+              <div class="bd-widget-overview__stats-content">
+                2200 <span class="ua-icon-arrow-up bd-widget-overview__stats-icon bd-widget-overview__stats-icon--up"></span>
+              </div>
+            </div>
+            <div class="bd-widget-overview__stats-item">
+              <div class="bd-widget-overview__stats-title">Sitting Capacity</div>
+              <div class="bd-widget-overview__stats-content">
+                80% <span class="ua-icon-arrow-up bd-widget-overview__stats-icon bd-widget-overview__stats-icon--up"></span>
+              </div>
+            </div>
+            <div class="bd-widget-overview__stats-item">
+              <div class="bd-widget-overview__stats-title">Cancelation</div>
+              <div class="bd-widget-overview__stats-content">
+                20% <span class="ua-icon-arrow-down bd-widget-overview__stats-icon bd-widget-overview__stats-icon--down"></span>
+              </div>
+            </div>
+          </div>
+          <div id="bd-widget-client-database-chart" class="bd-widget-client-database__chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="vendor/echarts/echarts.min.js"></script>
+{{ super() }}
+<script src="js/preview/booking-dashboard.min.js"></script>
+{% endblock %}

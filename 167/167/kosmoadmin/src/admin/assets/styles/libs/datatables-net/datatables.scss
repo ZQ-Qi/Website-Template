@@ -1,0 +1,330 @@
+@import "../../config/colors";
+
+div.dataTables_wrapper {
+  background: #fff;
+  width: 100%;
+
+  th {
+    &.sorting, &.sorting_desc, &.sorting_asc {
+      &::after, &::before {
+        font-size: 20px;
+        bottom: 0.3em;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &.container-fluid {
+    padding: 0;
+  }
+
+  .dt-buttons {
+    margin-top: 6px;
+
+    .buttons-colvis {
+      padding-left: 15px;
+    }
+
+    .buttons-collection {
+      &.dropdown-toggle {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  + .dataTables_wrapper {
+    margin-top: 20px;
+  }
+
+  .row {
+    + .row {
+      margin-top: 0;
+    }
+  }
+
+  div.dataTables_paginate {
+    margin-top: 15px;
+    float: right;
+  }
+
+  div.dataTables_info {
+    margin-top: 19px;
+    float: left;
+    padding-top: 0;
+  }
+
+  > .row:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border: solid 1px $ks-default-border-color;
+    border-bottom: none;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .dataTables_length {
+    padding: 8px 4px;
+
+    select.form-control {
+      display: inline-block;
+      margin-left: 8px;
+      margin-right: 8px;
+      height: 30px;
+      padding: 8px;
+    }
+
+    label {
+      margin-bottom: 0;
+    }
+
+    .bootstrap-select {
+      &.form-control {
+        width: 80px;
+        height: 34px;
+        margin-left: 8px;
+        margin-right: 8px;
+
+        .dropdown-toggle {
+          height: 32px;
+
+          .filter-option {
+            height: 34px;
+            padding-top: 9px;
+          }
+        }
+      }
+    }
+
+    .select2 {
+      margin-left: 8px;
+      margin-right: 8px;
+
+      .select2-selection {
+        height: 34px;
+
+        .select2-selection__rendered {
+          line-height: 32px;
+        }
+
+        .select2-selection__arrow {
+          height: 34px;
+        }
+      }
+    }
+  }
+
+  .dataTables_filter {
+    padding: 8px 4px;
+
+    .form-control {
+      height: 34px;
+      display: inline-block;
+      margin-left: 8px;
+    }
+
+    label {
+      margin-bottom: 0;
+    }
+  }
+
+  table.dataTable {
+    width: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    &.table-bordered {
+      td, th {
+        border: none;
+        border-top: solid 1px $ks-default-border-color;
+        border-right: solid 1px $ks-default-border-color;
+      }
+
+      tr {
+        td, th {
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+
+      thead, tfoot {
+        th {
+          font-weight: 500;
+        }
+      }
+
+      thead {
+        tr:first-child {
+          th {
+            border-top: none;
+          }
+        }
+
+        th {
+          &:before, &:after {
+            bottom: 0.3em;
+          }
+
+          &:empty {
+            &:before, &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dataTables_scroll, .dataTables_scrollHead {
+    .dataTables_scrollFootInner, .dataTables_scrollHeadInner {
+      width: 100% !important;
+      padding-right: 0 !important;
+
+      .dataTable {
+        width: 100% !important;
+      }
+    }
+
+    .dataTables_scrollHeadInner {
+      .dataTable {
+        border-bottom: solid 1px $ks-default-border-color;
+      }
+    }
+  }
+
+  .jspPane {
+    .dataTable {
+      margin-bottom: 0 !important;
+      border-bottom: none;
+
+      &.no-footer {
+        border-bottom: solid 1px $ks-default-border-color;
+      }
+
+      tbody {
+        tr:first-child {
+          td {
+            border-top: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+table.DTCR_clonedTable.dataTable {
+  border-top: none;
+  border-bottom: none;
+}
+
+div.DTCR_pointer {
+  background-color: $ks-color-info;
+  bottom: 40px;
+}
+
+.ks-full-table {
+  .ks-full-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 30px;
+
+    .ks-full-table-name {
+      margin: 0;
+      font-size: 24px;
+      font-weight: normal;
+    }
+  }
+
+  .dataTables_wrapper {
+    > .row:first-child {
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    > .row:last-child {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .table {
+    thead {
+      th {
+        &.sorting, &.sorting_asc, &.sorting_desc {
+          &:before, &:after {
+            bottom: 0.45em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dataTable {
+  &.ks-table-info {
+    thead {
+      th {
+        background-color: rgba(57, 80, 155, 0.05);
+        padding: 10px 30px;
+
+        &:before, &:after {
+          bottom: 0.75em;
+        }
+
+        &:empty {
+          &:before, &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    tbody {
+      td {
+        padding: 12px 30px;
+        border: none;
+
+        &.ks-controls {
+          width: 1px;
+          text-align: right;
+
+          > .dropdown {
+            position: relative;
+            top: 2px;
+
+            > .btn-link {
+              font-size: 22px;
+              padding: 3px 0;
+              color: $ks-default-text-color;
+            }
+          }
+        }
+      }
+
+      tr:hover {
+        td {
+          background-color: rgba(57, 80, 155, 0.05);
+        }
+      }
+    }
+
+    &.ks-table-lg {
+      tbody {
+        td {
+          padding: 20px 30px;
+        }
+      }
+    }
+  }
+}

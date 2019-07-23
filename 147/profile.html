@@ -1,0 +1,1490 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>:: Falcon - Admin Dashboard ::</title>
+	<link rel="icon" type="image/ico" href="assets/images/favicon.ico" />
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/js/vendor/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/vendor/animsition.min.css">		
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body id="falcon" class="main_Wrapper">
+
+	<!--Application Content -->
+	<div id="wrap" class="animsition">
+
+		<!--  HEADER Content -->
+		 <div id="header">
+            <header class="clearfix">
+                <!-- Branding -->
+                <div class="branding">
+                    <a class="brand" href="index.html">
+                        <span>Falcon</span>
+                    </a>
+                    <a role="button" tabindex="0" class="offcanvas-toggle visible-xs-inline">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <!-- Branding end -->
+
+                <!-- Left-side navigation -->
+                <ul class="nav-left pull-left list-unstyled list-inline">
+                    <li class="leftmenu-collapse">
+                        <a role="button" tabindex="0" class="collapse-leftmenu">
+                            <i class="fa fa-outdent"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown leftmenu-collapse">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-language"></i>
+                        </a>
+                        <div class="dropdown-menu pull-left panel-default pt-0 pb-0" role="menu">
+                            <ul class="list-group mb-0">
+                                <li class="list-group-item">
+                                    <a href="javascript:void(0);" class="p-0 m-0" >English</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:void(0);" class="p-0 m-0" >Spanish</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:void(0);" class="p-0 m-0" >Chinese</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:void(0);" class="p-0 m-0" >Arabic</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown leftmenu-collapse">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-plus mr-5"></i>New
+                        </a>
+                        <div class="dropdown-menu pull-left panel panel-default" role="menu">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a role="button" class="media">
+                                        <span class="pull-left media-object">
+                                            <i class="fa fa-briefcase"></i>
+                                        </span>
+                                        <div class="media-body">
+                                            <span class="block">New Campaign</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a role="button" class="media">
+                                        <span class="pull-left media-object">
+                                            <i class="fa fa-area-chart"></i>
+                                        </span>
+                                        <div class="media-body">
+                                            <span class="block">Generate Report</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a role="button" class="media">
+                                        <span class="pull-left media-object">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        <div class="media-body">
+                                            <span class="block">Add New User</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a role="button" class="media">
+                                        <span class="pull-left media-object">
+                                            <i class="fa fa-file-text"></i>
+                                        </span>
+                                        <div class="media-body">
+                                            <span class="block">Create Page</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Left-side navigation end -->
+                <div class="search" id="main-search">
+                    <input type="text" class="form-control underline-input" placeholder="Explore Falcon...">
+                </div>
+                <!-- Search end -->
+
+                <!-- Right-side navigation -->
+                <ul class="nav-right pull-right list-inline">
+                    <li class="dropdown users">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-th"></i>
+                        </a>
+                        <div class="dropdown-menu pull-right panel panel-default" role="menu">
+                            <ul class="app-sortcut">
+                                <li>
+                                    <a href="#" class="connection-item">
+                                        <i class="fa fa-umbrella"></i>
+                                        <span class="block">Weather</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ui-widgets.html" class="connection-item">
+                                        <i class="fa fa-object-ungroup"></i>
+                                        <span class="block">Widget</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="calendar.html" class="connection-item">
+                                        <i class="fa fa-calendar-check-o"></i>
+                                        <span class="block">calendar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="maps-google.html" class="connection-item">
+                                        <i class="fa fa-map-o"></i>
+                                        <span class="block">map</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chat.html" class="connection-item">
+                                        <i class="fa fa-comments-o"></i>
+                                        <span class="block">chat</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="connection-item">
+                                        <i class="fa fa-book"></i>
+                                        <span class="block">contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown messages">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope"></i>
+                            <div class="notify">
+                                <span class="heartbit"></span>
+                                <span class="point"></span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu pull-right panel panel-default" role="menu">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a role="button" tabindex="0" class="media">
+                                        <span class="pull-left media-object thumb thumb-sm">
+                                            <img src="assets/images/pi-avatar.jpg" alt="" > </span>
+                                        <div class="media-body">
+                                            <span class="block">Lucas sent you a message</span>
+                                            <small class="text-muted">9 minutes ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a role="button" tabindex="0" class="media">
+                                        <span class="pull-left media-object  thumb thumb-sm">
+                                            <img src="assets/images/Jane-avatar.jpg" alt="" > </span>
+                                        <div class="media-body">
+                                            <span class="block">Jane sent you a message</span>
+                                            <small class="text-muted">27 minutes ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a role="button" tabindex="0" class="media">
+                                        <span class="pull-left media-object  thumb thumb-sm">
+                                            <img src="assets/images/random-avatar1.jpg" alt="" > </span>
+                                        <div class="media-body">
+                                            <span class="block">Lee sent you a message</span>
+                                            <small class="text-muted">2 hour ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a role="button" tabindex="0" class="media">
+                                        <span class="pull-left media-object  thumb thumb-sm">
+                                            <img src="assets/images/random-avatar3.jpg" alt="" > </span>
+                                        <div class="media-body">
+                                            <span class="block">Rihtik sent you a message</span>
+                                            <small class="text-muted">8 hours ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="panel-footer">
+                                <a role="button" tabindex="0">Show all messages
+                                    <i class="pull-right fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown notifications">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell"></i>
+                            <div class="notify">
+                                <span class="heartbit"></span>
+                                <span class="point"></span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu pull-right panel panel-default">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a role="button" tabindex="0" class="media">
+                                        <span class="pull-left media-object media-icon">
+                                            <i class="fa fa-ban"></i>
+                                        </span>
+                                        <div class="media-body">
+                                            <span class="block">User Lucas cancelled account</span>
+                                            <small class="text-muted">12 minutes ago</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a role="button" tabindex="0" class="media">
+                                        <span class="pull-left media-object media-icon">
+                                            <i class="fa fa-spotify"></i>
+                                        </span>
+                                        <div class="media-body">
+                                            <span class="block">2 voice mails</span>
+                                            <small class="text-muted">Neque porro quisquam est</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a role="button" tabindex="0" class="media">
+                                        <span class="pull-left media-object media-icon">
+                                            <i class="fa fa-whatsapp"></i>
+                                        </span>
+                                        <div class="media-body">
+                                            <span class="block">8 voice messanger</span>
+                                            <small class="text-muted">8 texts</small>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="panel-footer">
+                                <a role="button" tabindex="0">Show all notifications
+                                    <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown nav-profile">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/profile-photo.jpg" alt="" class="0 size-30x30"> </a>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li>
+                                <div class="user-info">
+                                    <div class="user-name">Alexander</div>
+                                    <div class="user-position online">Available</div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="profile.html" role="button" tabindex="0">
+                                    <span class="label label-success pull-right">80%</span>
+                                    <i class="fa fa-user"></i>Profile</a>
+                            </li>
+                            <li>
+                                <a role="button" tabindex="0">
+                                    <span class="label label-info pull-right">new</span>
+                                    <i class="fa fa-check"></i>Tasks</a>
+                            </li>
+                            <li>
+                                <a role="button" tabindex="0">
+                                    <i class="fa fa-cog"></i>Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="locked.html" role="button" tabindex="0">
+                                    <i class="fa fa-lock"></i>Lock</a>
+                            </li>
+                            <li>
+                                <a href="login.html" role="button" tabindex="0">
+                                    <i class="fa fa-sign-out"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toggle-right-leftmenu">
+                        <a role="button" tabindex="0">
+                            <i class="fa fa-align-left"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Right-side navigation end -->
+            </header>
+        </div>
+		<!--/ HEADER Content  -->
+
+		<!--  CONTROLS Content  -->
+		<div id="controls">
+			<!--SIDEBAR Content -->
+			<aside id="leftmenu">
+				<div id="leftmenu-wrap">
+					<div class="panel-group slim-scroll" role="tablist">
+						<div class="panel panel-default">
+							<div id="leftmenuNav" class="panel-collapse collapse in" role="tabpanel">
+								<div class="panel-body">
+									<!--  NAVIGATION Content -->
+									<ul id="navigation">
+										<li>
+											<a href="index.html">
+												<i class="fa fa-dashboard"></i>
+												<span>Dashboard</span>
+											</a>
+										</li>
+										<li>
+											<a role="button" tabindex="0">
+												<i class="fa fa-envelope"></i>
+												<span>Mail Box</span>
+											</a>
+											<ul>
+												<li>
+													<a href="mail-inbox.html">
+														<i class="fa fa-angle-right"></i> Inbox
+														<span class="label label-success">new</span>
+													</a>
+												</li>
+												<li>
+													<a href="mail-compose.html">
+														<i class="fa fa-angle-right"></i> Compose Mail</a>
+												</li>
+												<li>
+													<a href="mail-single.html">
+														<i class="fa fa-angle-right"></i> Single Mail</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="material.html">
+												<i class="fa fa-arrow-right"></i>
+												<span>Material UI</span>
+											</a>
+										</li>
+										<li>
+											<a role="button" tabindex="0">
+												<i class="fa fa-list"></i>
+												<span>Form Elements</span>
+											</a>
+											<ul>
+												<li>
+													<a href="form-common.html">
+														<i class="fa fa-angle-right"></i> Common Elements</a>
+												</li>
+												<li>
+													<a href="form-validate.html">
+														<i class="fa fa-angle-right"></i> Validation Elements</a>
+												</li>
+												<li>
+													<a href="form-wizard.html">
+														<i class="fa fa-angle-right"></i> Form Wizard
+														<span class="badge br-10 badge-success">13</span>
+													</a>
+												</li>
+												<li>
+													<a href="form-upload.html">
+														<i class="fa fa-angle-right"></i> File Upload</a>
+												</li>
+												<li>
+													<a href="form-imgcrop.html">
+														<i class="fa fa-angle-right"></i> Image Crop</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a role="button" tabindex="0">
+												<i class="fa fa-leaf"></i>
+												<span>Falcon UI</span>
+											</a>
+											<ul>
+												<li>
+													<a href="ui-general.html">
+														<i class="fa fa-angle-right"></i>General Elements</a>
+												</li>
+												<li>
+													<a href="ui-navigation.html">
+														<i class="fa fa-angle-right"></i>Nav & Accordions</a>
+												</li>
+												<li>
+													<a href="ui-widgets.html">
+														<i class="fa fa-angle-right"></i>Widgets</a>
+												</li>
+
+												<li>
+													<a href="ui-lists.html">
+														<i class="fa fa-angle-right"></i>Lists</a>
+												</li>
+												<li>
+													<a href="ui-modals.html">
+														<i class="fa fa-angle-right"></i>Modals</a>
+												</li>
+												<li>
+													<a href="ui-icons.html">
+														<i class="fa fa-angle-right"></i>Icons</a>
+												</li>
+												<li>
+													<a href="ui-typography.html">
+														<i class="fa fa-angle-right"></i>Typography</a>
+												</li>
+												<li>
+													<a href="ui-boxss.html">
+														<i class="fa fa-angle-right"></i>boxss</a>
+												</li>
+												<li>
+													<a href="ui-portlets.html">
+														<i class="fa fa-angle-right"></i>Portlets</a>
+												</li>
+												<li>
+													<a href="ui-grid.html">
+														<i class="fa fa-angle-right"></i>Grid</a>
+												</li>
+												<li>
+													<a href="ui-alerts.html">
+														<i class="fa fa-angle-right"></i>Alerts</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="charts.html">
+												<i class="fa fa-bar-chart-o"></i>
+												<span>Charts</span>
+											</a>
+										</li>
+										<li>
+											<a role="button" tabindex="0">
+												<i class="fa fa-delicious"></i>
+												<span>Layouts Format</span>
+											</a>
+											<ul>
+												<li>
+													<a href="layout-boxed.html">
+														<i class="fa fa-angle-right"></i> Boxed layout</a>
+												</li>
+												<li>
+													<a href="layout-fullwidth.html">
+														<i class="fa fa-angle-right"></i> Full-width layout
+														<span class="label  label-success">new</span>
+													</a>
+												</li>
+												<li>
+													<a href="layout-offcanvas.html">
+														<i class="fa fa-angle-right"></i> Off-canvas leftmenu</a>
+												</li>
+												<li>
+													<a href="layout-rtl.html">
+														<i class="fa fa-angle-right"></i> RTL layout</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a role="button" tabindex="0">
+												<i class="fa fa-table"></i>
+												<span>Tables</span>
+											</a>
+											<ul>
+												<li>
+													<a href="tables-bootstrap.html">
+														<i class="fa fa-angle-right"></i> Bootstrap Tables</a>
+												</li>
+												<li>
+													<a href="tables-static.html">
+														<i class="fa fa-angle-right"></i>Static Tables</a>
+												</li>
+												<li>
+													<a href="tables-footable.html">
+														<i class="fa fa-angle-right"></i> FooTable</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a role="button" tabindex="0">
+												<i class="fa fa-map-o"></i>
+												<span>Maps</span>
+											</a>
+											<ul>
+												<li>
+													<a href="maps-vector.html">
+														<i class="fa fa-angle-right"></i> Vector Maps</a>
+												</li>
+												<li>
+													<a href="maps-google.html">
+														<i class="fa fa-angle-right"></i> Google Maps</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a role="button" tabindex="0">
+												<i class="fa fa-lock"></i>
+												<span>Authentication</span>
+											</a>
+											<ul>
+												<li>
+													<a href="login.html">
+														<i class="fa fa-angle-right"></i> Login Page</a>
+												</li>
+												<li>
+													<a href="signup.html">
+														<i class="fa fa-angle-right"></i> Signup Page</a>
+												</li>
+												<li>
+													<a href="forgotpass.html">
+														<i class="fa fa-angle-right"></i> Forgot Password</a>
+												</li>
+												<li>
+													<a href="page-offline.html">
+														<i class="fa fa-angle-right"></i> Page Offline</a>
+												</li>
+												<li>
+													<a href="locked.html">
+														<i class="fa fa-angle-right"></i> Locked Screen</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a role="button" tabindex="0">
+												<i class="fa fa-desktop"></i>
+												<span>Extra Pages</span>
+											</a>
+											<ul>
+												<li>
+													<a href="page404.html">
+														<i class="fa fa-angle-right"></i> Page 404</a>
+												</li>
+												<li>
+													<a href="page500.html">
+														<i class="fa fa-angle-right"></i> Page 500</a>
+												</li>
+												<li>
+													<a href="gallery.html">
+														<i class="fa fa-angle-right"></i> Gallery</a>
+												</li>
+												<li>
+													<a href="timeline.html">
+														<i class="fa fa-angle-right"></i> Timeline</a>
+												</li>
+												<li>
+													<a href="chat.html">
+														<i class="fa fa-angle-right"></i> Chat</a>
+												</li>
+												<li>
+													<a href="invoices.html">
+														<i class="fa fa-angle-right"></i> Invoices</a>
+												</li>
+												<li>
+													<a href="search-results.html">
+														<i class="fa fa-angle-right"></i> Search Results</a>
+												</li>
+											</ul>
+										</li>
+										<li class="active open">
+											<a href="profile.html">
+												<i class="fa fa-user"></i>
+												<span>User Profile</span>
+											</a>
+										</li>
+										<li>
+											<a href="calendar.html">
+												<i class="fa fa-calendar-check-o"></i>
+												<span>Calendar</span>
+												<span class="label label-primary">new events</span>
+											</a>
+										</li>
+										<li>
+											<a role="button" tabindex="0">
+												<i class="fa fa-magic"></i>
+												<span>Menu Levels</span>
+											</a>
+											<ul>
+												<li>
+													<a role="button" tabindex="0">
+														<i class="fa fa-angle-right"></i> Menu Level 1.1</a>
+													<ul>
+														<li>
+															<a role="button" tabindex="0">
+																<i class="fa fa-angle-right"></i> Menu Level 2.1</a>
+														</li>
+														<li>
+															<a role="button" tabindex="0">
+																<i class="fa fa-angle-right"></i> Menu Level 2.2</a>
+														</li>
+														<li>
+															<a role="button" tabindex="0">
+																<i class="fa fa-angle-right"></i> Menu Level 2.3</a>
+															<ul>
+																<li>
+																	<a role="button" tabindex="0">
+																		<i class="fa fa-angle-right"></i> Menu Level 3.1</a>
+																</li>
+																<li>
+																	<a role="button" tabindex="0">
+																		<i class="fa fa-angle-right"></i> Menu Level 3.2</a>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a role="button" tabindex="0">
+														<i class="fa fa-angle-right"></i> Menu Level 1.2</a>
+													<ul>
+														<li>
+															<a role="button" tabindex="0">
+																<i class="fa fa-angle-right"></i> Menu Level 2.1</a>
+															<ul>
+																<li>
+																	<a role="button" tabindex="0">
+																		<i class="fa fa-angle-right"></i> Menu Level 3.1</a>
+																</li>
+																<li>
+																	<a role="button" tabindex="0">
+																		<i class="fa fa-angle-right"></i> Menu Level 3.2</a>
+																	<ul>
+																		<li>
+																			<a role="button" tabindex="0">
+																				<i class="fa fa-angle-right"></i> Menu Level 4.1</a>
+																		</li>
+																		<li>
+																			<a role="button" tabindex="0">
+																				<i class="fa fa-angle-right"></i> Menu Level 4.2</a>
+																		</li>
+																	</ul>
+																</li>
+																<li>
+																	<a role="button" tabindex="0">
+																		<i class="fa fa-angle-right"></i> Menu Level 3.3</a>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<a role="button" tabindex="0">
+																<i class="fa fa-angle-right"></i> Menu Level 2.2</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<!--/ NAVIGATION Content -->
+								</div>
+							</div>
+						</div>
+						<div class="panel settings panel-default">
+							<div class="panel-heading" role="tab">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" href="#leftmenuControls">General Settings
+										<i class="fa fa-angle-up"></i>
+									</a>
+								</h4>
+							</div>
+							<div id="leftmenuControls" class="panel-collapse collapse in" role="tabpanel">
+								<div class="panel-body">
+									<div class="form-group">
+										<div class="row">
+											<label class="col-xs-8">Switch ON</label>
+											<div class="col-xs-4 control-label">
+												<div class="togglebutton">
+													<label>
+														<input type="checkbox" checked="">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<label class="col-xs-8">Switch OFF</label>
+											<div class="col-xs-4 control-label">
+												<div class="togglebutton">
+													<label>
+														<input type="checkbox">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="milestone-sidbar">
+								<div class="text-center-folded">
+									<span class="pull-right pull-none-folded">60%</span>
+									<span class="hidden-folded">Milestone</span>
+								</div>
+								<div class="progress progress-xxs m-t-sm dk">
+									<div class="progress-bar progress-bar-info" style="width: 60%;"> </div>
+								</div>
+								<div class="text-center-folded">
+									<span class="pull-right pull-none-folded">35%</span>
+									<span class="hidden-folded">Release</span>
+								</div>
+								<div class="progress progress-xxs m-t-sm dk">
+									<div class="progress-bar progress-bar-primary" style="width: 35%;"> </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!--/ SIDEBAR Content -->
+
+			<!--RIGHTBAR Content -->
+			<aside id="rightmenu">
+                <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#chat" aria-controls="chat" role="tab" data-toggle="tab">Chat</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#todo" aria-controls="todo" role="tab" data-toggle="tab">Todo</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="chat">
+                            <div class="search">
+                                <div class="form-group is-empty">
+                                    <input type="text" class="form-control underline-input" placeholder="Search...">
+                                    <span class="material-input"></span>
+                                </div>
+                            </div>
+                            <h6>Recent</h6>
+                            <ul>
+                                <li class="online">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button" tabindex="0">
+                                            <img class="media-object " src="assets/images/xs/avatar1.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <span class="name">Claire Sassu</span>
+                                            <span class="message"> If you are going to use a passage of Lorem Ipsum</span>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="online">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button" tabindex="0">
+                                            <img class="media-object " src="assets/images/xs/avatar8.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <div class="media-body">
+                                                <span class="name">Maggie jackson</span>
+                                                <span class="message">All the Lorem Ipsum generators on the Internet</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="online">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button" tabindex="0">
+                                            <img class="media-object " src="assets/images/xs/avatar3.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <div class="media-body">
+                                                <span class="name">Joel King</span>
+                                                <span class="message">The standard chunk of Lorem Ipsum used</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="online">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button" tabindex="0">
+                                            <img class="media-object " src="assets/images/xs/avatar6.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <div class="media-body">
+                                                <span class="name">Isabella</span>
+                                                <span class="message">There are many variations of passages of Lorem</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="online">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button" tabindex="0">
+                                            <img class="media-object " src="assets/images/xs/avatar5.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <div class="media-body">
+                                                <span class="name">Alexander</span>
+                                                <span class="message">Contrary to popular belief, Lorem Ipsum</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h6>Contacts</h6>
+                            <ul>
+                                <li class="offline">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button">
+                                            <img class="media-object " src="assets/images/xs/avatar5.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <div class="media-body">
+                                                <span class="name mt-5">Matthew</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="offline">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button">
+                                            <img class="media-object " src="assets/images/xs/avatar4.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <div class="media-body">
+                                                <span class="name mt-5">Aaliyah</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="offline">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button">
+                                            <img class="media-object " src="assets/images/xs/avatar8.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <div class="media-body">
+                                                <span class="name mt-5">Arianna</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="online">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button">
+                                            <img class="media-object " src="assets/images/xs/avatar9.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <div class="media-body">
+                                                <span class="name mt-5">Scarlett</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="offline">
+                                    <div class="media">
+                                        <a class="pull-left thumb thumb-sm" role="button">
+                                            <img class="media-object " src="assets/images/xs/avatar10.jpg" alt=""> </a>
+                                        <div class="media-body">
+                                            <div class="media-body">
+                                                <span class="name mt-5">David</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="todo">
+                            <div class="form-group">
+                                <input type="text" value="" placeholder="Create new task..." class="form-control" />
+                                <span class="fa fa-plus"></span>
+                            </div>
+                            <h6>Today</h6>
+                            <ul class="todo-list">
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes"> Initialize the project</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes"> Create the main structure</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes"> Create the main structure</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h6>Tomorrow</h6>
+                            <ul class="todo-list">
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes"> Initialize the project</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes"> Create the main structure</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes"> displayed in a normal space!</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="settings">
+                            <h6>Chat Settings</h6>
+                            <ul class="settings">
+                                <li>
+                                    <div class="form-group">
+                                        <label class="col-xs-8 control-label">Show Offline Users</label>
+                                        <div class="col-xs-4 control-label text-right">
+                                            <div class="togglebutton">
+                                                <label>
+                                                    <input type="checkbox" checked="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="col-xs-8 control-label">Show Fullname</label>
+                                        <div class="col-xs-4 control-label text-right">
+                                            <div class="togglebutton">
+                                                <label>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="col-xs-8 control-label">History Enable</label>
+                                        <div class="col-xs-4 control-label text-right">
+                                            <div class="togglebutton">
+                                                <label>
+                                                    <input type="checkbox" checked="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="col-xs-8 control-label">Show Locations</label>
+                                        <div class="col-xs-4 control-label text-right">
+                                            <div class="togglebutton">
+                                                <label>
+                                                    <input type="checkbox" checked="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="col-xs-8 control-label">Notifications</label>
+                                        <div class="col-xs-4 control-label text-right">
+                                            <div class="togglebutton">
+                                                <label>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="col-xs-8 control-label">Show Undread Count</label>
+                                        <div class="col-xs-4 control-label text-right">
+                                            <div class="togglebutton">
+                                                <label>
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+			<!--/ RIGHTBAR Content -->
+		</div>
+		<!--/ CONTROLS Content -->
+
+		<!--CONTENT  -->
+		<section id="content">
+			<div class="page profile-page">
+				<!-- page content -->
+				<div class="pagecontent">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12">
+							<section class="boxs">
+								<div class="profile-header">
+									<div class="profile_info">
+										<div class="profile-image">
+											<img src="assets/images/profile-photo.jpg" alt="">
+										</div>
+										<h4 class="mb-0"><strong>Alexander</strong></h4>
+										<span class="text-muted">Ui UX Designer</span>
+										<div class="mt-10">
+											<button class="btn btn-raised bg-blush btn-sm">Follow</button>
+											<button class="btn btn-raised bg-green btn-sm">Message</button>
+										</div>
+										<p class="m-0">
+											<a title="Twitter" href="#" class="icon-color p-5">
+												<i class="fa fa-twitter"></i>
+											</a>
+											<a title="Facebook" href="#" class="icon-color p-5">
+												<i class="fa fa-facebook"></i>
+											</a>
+											<a title="Google-plus" href="#" class="icon-color p-5">
+												<i class="fa fa-google-plus"></i>
+											</a>											
+											<a title="Behance" href="#" class="icon-color p-5">
+												<i class="fa fa-behance"></i>
+											</a>
+											<a title="Instagram" href="#" class="icon-color p-5">
+												<i class="fa fa-instagram "></i>
+											</a>
+										</p>
+									</div>
+								</div>
+								<div class="profile-sub-header">
+									<div class="box-list">
+										<ul class="text-center">
+											<li>
+												<a href="mail-inbox.html" class="">
+													<i class="fa fa-inbox"></i>
+													<p>My Inbox</p>
+												</a>
+											</li>
+											<li>
+												<a href="gallery.html" class="">
+													<i class="fa fa-photo"></i>
+													<p>Gallery</p>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-paperclip"></i>
+													<p>Collections</p>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-tasks "></i>
+													<p>Tasks</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<section class="boxs boxs-simple">
+								<div class="boxs-header">
+									<h3 class="custom-font hb-green">
+										<strong>About</strong> Me</h3>
+								</div>
+								<div class="boxs-body">
+									<p class="text-default">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+										dummy vived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+									<blockquote>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+										<small>Designer
+											<cite title="Source Title">Source Title</cite>
+										</small>
+									</blockquote>
+								</div>
+							</section>
+							<section class="boxs boxs-simple">
+								<div class="boxs-header">
+									<h3 class="custom-font hb-blue">
+										<strong>My</strong> Portfolio Status</h3>
+								</div>
+								<div class="boxs-body">
+									<ul class="list-unstyled">
+										<li>
+											<div class="row">
+												<div class="col-md-12">Behance</div>
+												<div class="col-md-12">
+													<div class="progress progress-striped0 mb-10">
+														<div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+														93% </div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="row">
+												<div class="col-md-12">Themeforest</div>
+												<div class="col-md-12">
+													<div class="progress progress-striped0 mb-10">
+														<div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100"
+														 style="width: 63%"> 63% </div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="row">
+												<div class="col-md-12">Dribbble</div>
+												<div class="col-md-12">
+													<div class="progress progress-striped0 mb-10">
+														<div class="progress-bar progress-bar-hotpink" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+														 style="width: 60%"> 60% </div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="row">
+												<div class="col-md-12">Pinterest</div>
+												<div class="col-md-12">
+													<div class="progress progress-striped0 mb-0">
+														<div class="progress-bar progress-bar-lightred" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"
+														 style="width: 76%"> 76% </div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+						</div>
+						<div class="col-md-8 col-sm-12">
+							<section class="boxs boxs-simple">
+								<div class="boxs-body p-0">
+									<div role="tabpanel">
+										<ul class="nav nav-tabs tabs-dark-t" role="tablist">
+											<li role="presentation" class="active">
+												<a href="#mypost" role="tab" data-toggle="tab">My Post</a>
+											</li>
+											<li role="presentation">
+												<a href="#timeline" role="tab" data-toggle="tab">Timeline</a>
+											</li>
+											<li role="presentation">
+												<a href="#setting" role="tab" data-toggle="tab">Setting</a>
+											</li>
+										</ul>
+										<div class="tab-content">
+											<div role="tabpanel" class="tab-pane active" id="mypost">
+												<div class="wrap-reset">
+													<div class="mypost-form">
+														<textarea class="form-control br-0-t" placeholder="What's up dude?" rows="5"></textarea>
+														<div class="post-toolbar-b">
+															<a href="#" class="btn btn-raised btn-primary btn-sm">
+																<i class="fa fa-paperclip"></i>
+															</a>
+															<a href="#" class="btn btn-raised btn-default btn-sm">
+																<i class="fa fa-camera"></i>
+															</a>
+															<a href="#" class="pull-right btn btn-raised btn-info btn-sm">
+																<i class="fa fa-share mr-10"></i>Post</a>
+														</div>
+													</div>
+													<div class="mypost-list mt-20">
+														<div class="post-box">																														<div class="post-img">
+																<img src="assets/images/puppy-1.jpg" class="img-responsive" alt />
+															</div>
+															<div class="panel panel-default">																
+																<h4 class="mt-20">Lorem Ipsum is simply dummy text of the printing</h4>
+																<p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+																	standard dummy text ever since the 1500s, </p>
+																<p class="mt-10 mb-0">
+																	<a href="javascript:void(0);" class="btn btn-raised bg-blue btn-sm">
+																		<i class="fa fa-heart-o text-inactive"></i> Like (5) </a>
+																	<a href="javascript:void(0);" class="btn btn-raised bg-soundcloud btn-sm">
+																		<i class="fa fa-mail-reply"></i> Reply</a>
+																</p>
+															</div>
+														</div>
+														<hr>
+														<div class="post-box">
+															<div class="post-img">
+																<img src="assets/images/puppy-2.jpg" class="img-responsive" alt />
+															</div>
+															<div class="panel panel-default">
+																<h4 class="mt-20">Lorem Ipsum is simply dummy text of the printing</h4>
+																<p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+																	standard dummy text ever since the 1500s, </p>
+																<p class="mt-10 mb-0">
+																	<a href="javascript:void(0);" class="btn btn-raised bg-blue btn-sm">
+																		<i class="fa fa-heart-o text-inactive"></i> Like (5) </a>
+																	<a href="javascript:void(0);" class="btn btn-raised bg-soundcloud btn-sm">
+																		<i class="fa fa-mail-reply"></i> Reply</a>
+																</p>
+															</div>
+														</div>
+														<hr>
+														<div class="post-box">
+															<div class="post-img">
+																<img src="assets/images/puppy-3.jpg" class="img-responsive" alt />
+															</div>
+															<div class="panel panel-default">
+																<h4 class="mt-20">Lorem Ipsum is simply dummy text of the printing</h4>
+																<p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+																	standard dummy text ever since the 1500s, </p>
+																<p class="mt-10 mb-0">
+																	<a href="javascript:void(0);" class="btn btn-raised bg-blue btn-sm">
+																		<i class="fa fa-heart-o text-inactive"></i> Like (5) </a>
+																	<a href="javascript:void(0);" class="btn btn-raised bg-soundcloud btn-sm">
+																		<i class="fa fa-mail-reply"></i> Reply</a>
+																</p>
+															</div>
+														</div>
+														<hr>
+														<div class="text-center">
+															<a href="#" class="btn btn-raised btn-default">Load More …</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div role="tabpanel" class="tab-pane" id="timeline">
+												<div class="timeline-body">
+													<div class="timeline m-border">
+														<div class="timeline-item">
+															<div class="item-content">
+																<div class="text-small">Just now</div>
+																<p>Finished task #features 4.</p>
+															</div>
+														</div>
+														<div class="timeline-item border-info">
+															<div class="item-content">
+																<div class="text-small">11:30</div>
+																<p>@Jessi retwit your post</p>
+															</div>
+														</div>
+														<div class="timeline-item border-warning border-l">
+															<div class="item-content">
+																<div class="text-small">10:30</div>
+																<p>Call to customer #Jacob and discuss the detail.</p>
+															</div>
+														</div>
+														<div class="timeline-item border-warning">
+															<div class="item-content">
+																<div class="text-small">3 days ago</div>
+																<p>Jessi commented your post.</p>
+															</div>
+														</div>
+														<div class="timeline-item border-danger">
+															<div class="item-content">
+																<div class="text--muted">Thu, 10 Mar</div>
+																<p>Trip to the moon</p>
+															</div>
+														</div>
+														<div class="timeline-item border-info">
+															<div class="item-content">
+																<div class="text-small">Sat, 5 Mar</div>
+																<p>Prepare for presentation</p>
+															</div>
+														</div>
+														<div class="timeline-item border-danger">
+															<div class="item-content">
+																<div class="text-small">Sun, 11 Feb</div>
+																<p>Jessi assign you a task #Mockup Design.</p>
+															</div>
+														</div>
+														<div class="timeline-item border-info">
+															<div class="item-content">
+																<div class="text-small">Thu, 17 Jan</div>
+																<p>Follow up to close deal</p>
+															</div>
+														</div>
+														<div class="timeline-item">
+															<div class="item-content">
+																<div class="text-small">Just now</div>
+																<p>Finished task #features 4.</p>
+															</div>
+														</div>
+														<div class="timeline-item border-info">
+															<div class="item-content">
+																<div class="text-small">11:30</div>
+																<p>@Jessi retwit your post</p>
+															</div>
+														</div>
+														<div class="timeline-item border-warning border-l">
+															<div class="item-content">
+																<div class="text-small">10:30</div>
+																<p>Call to customer #Jacob and discuss the detail.</p>
+															</div>
+														</div>
+														<div class="timeline-item border-warning">
+															<div class="item-content">
+																<div class="text-small">3 days ago</div>
+																<p>Jessi commented your post.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div role="tabpanel" class="tab-pane" id="setting">
+												<div class="wrap-reset">
+													<form class="profile-settings">
+														<div class="row">
+															<div class="form-group col-md-12 legend">
+																<h4>
+																	<strong>Security</strong> Settings</h4>
+																<p>Secure your account</p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6">
+																<label for="username">Username</label>
+																<input type="text" class="form-control" id="username" value="JonathanSmith" readonly>
+															</div>
+															<div class="form-group col-sm-6">
+																<label for="password">Current Password</label>
+																<input type="password" class="form-control" id="password" value="secretpassword" readonly>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6">
+																<label for="new-password">New Password</label>
+																<input type="password" class="form-control" id="new-password">
+															</div>
+															<div class="form-group col-sm-6">
+																<label for="new-password-repeat">New Password Repeat</label>
+																<input type="password" class="form-control" id="new-password-repeat">
+															</div>
+															<div class="form-group col-sm-12">
+																<button class="btn btn-raised btn-primary">Save Changes</button>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="form-group col-md-12 legend">
+																<h4>
+																	<strong>Account</strong> Settings</h4>
+																<p>Your personal account settings</p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6">
+																<label for="first-name">First Name</label>
+																<input type="text" class="form-control" id="first-name" value="Jonathan">
+															</div>
+															<div class="form-group col-sm-6">
+																<label for="last-name">Last Name</label>
+																<input type="text" class="form-control" id="last-name" value="Smith">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-12">
+																<label for="address1">Address Line 1</label>
+																<input type="text" class="form-control" id="address1" value="Lorem Ipsum 215">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-4">
+																<label for="city">City</label>
+																<input type="text" class="form-control" id="city" value="New Yourk">
+															</div>
+															<div class="form-group col-sm-4">
+																<label for="email">E-mail</label>
+																<input type="email" class="form-control" id="email" value="Jonathan.s@infowy.com" readonly>
+															</div>
+															<div class="form-group col-sm-4">
+																<label for="country">Country</label>
+																<select id="country" class="chosen-select" style="width: 100%;">
+																	<option>USA</option>
+																	<option>Canada</option>
+																	<option>UK</option>
+																	<option>India</option>
+																	<option>Japan</option>
+																</select>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="form-group col-md-12 legend">
+																<h4>
+																	<strong>Social</strong> Settings</h4>
+																<p>Connect with your social profiles</p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6">
+																<label for="facebook">Facebook</label>
+																<input type="text" class="form-control" id="facebook">
+															</div>
+															<div class="form-group col-sm-6">
+																<label for="dribbble">Dribbble</label>
+																<input type="text" class="form-control" id="dribbble">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6">
+																<label for="pinterest">Twitter</label>
+																<input type="text" class="form-control" id="Twitter">
+															</div>
+															<div class="form-group col-sm-6">
+																<label for="flickr">Instagram</label>
+																<input type="text" class="form-control" id="Instagram">
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-6">
+																<label for="pinterest">Pinterest</label>
+																<input type="text" class="form-control" id="pinterest">
+															</div>
+															<div class="form-group col-sm-6">
+																<label for="flickr">Behance</label>
+																<input type="text" class="form-control" id="Behance">
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-sm-12">
+																<div class="form-group checkbox mt-0">
+																	<label>
+																		<input type="checkbox" name="optionsCheckboxes"> Profile Visibility For Everyone
+																	</label>
+																</div>
+																<div class="form-group checkbox">
+																	<label>
+																		<input type="checkbox" name="optionsCheckboxes" checked> New task notifications
+																	</label>
+																</div>
+																<div class="form-group checkbox">
+																	<label>
+																		<input type="checkbox" name="optionsCheckboxes"> New friend request notifications
+																	</label>
+																</div>
+															</div>
+															<div class="col-sm-12">
+																<button class="btn btn-raised btn-default">Cancel</button>
+																<button class="btn btn-raised btn-primary">Save All</button>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /boxs body -->
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ CONTENT -->
+	</div>
+	<!--/ Application Content -->
+
+	<!-- Vendor JavaScripts  -->
+	<script src="assets/bundles/libscripts.bundle.js"></script>
+	<script src="assets/bundles/vendorscripts.bundle.js"></script>
+	<!--/ vendor javascripts -->
+
+	<!--  Custom JavaScripts  -->
+	<script src="assets/bundles/mainscripts.bundle.js"></script>
+</body>
+</html>

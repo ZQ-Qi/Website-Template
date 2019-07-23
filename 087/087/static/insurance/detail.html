@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../common/css/sapar.css" />
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/detail.css" />
+<script type="text/javascript" src="../../common/js/jquery.js"></script>
+<script type="text/javascript" src="../../common/js/sapar.js"></script>
+<script type="text/javascript" src="../../common/js/WdatePicker.js"></script>
+<title>保险购买明细</title>
+</head>
+
+<body>
+    <div id="saper-container">
+        <div id="saper-hd"></div>
+        <div id="saper-bd">
+            <div class="subfiled clearfix">
+                <h2>保险使用明细</h2>
+            </div>
+            <div class="subfiled-content">
+                <div class="search-box clearfix">
+                    <div class="kv-item clearfix">
+                        <label>保险单号：</label>
+                        <div class="kv-item-content">
+                            <input type="text" placeholder="保险单号">
+                        </div>
+                    </div>
+                     <div class="kv-item clearfix">
+                        <label>乘机人：</label>
+                        <div class="kv-item-content">
+                            <input type="text" placeholder="乘机人">
+                        </div>
+                    </div>
+                    <div class="kv-item clearfix">
+                        <label>航班日期：</label>
+                        <div class="kv-item-content time-select-wrap">
+                            <div class="time-select">
+                                <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" placeholder="开始时间">
+                                <i class="date-icon"></i>
+                            </div>
+                            <span class="line">-</span>
+                            <div class="time-select">
+                                <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" placeholder="结束时间">
+                                <i class="date-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="sapar-btn sapar-btn-recom query-btn">查询</a>
+                </div>
+                
+
+                <!--表格开始-->
+                <div class="table">
+
+                    <!--表格具体内容-->
+                    <div class="table-box">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>订单号</th>
+                                    <th>航班号</th>
+                                    <th>起飞时间</th>
+                                    <th>行程</th>
+                                    <th>人数</th>
+                                    <th>总价</th>
+                                    <th>操作人</th>
+                                    <th>申请时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="no-data"><td colspan="10">暂时没有数据</td></tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!--表格结束-->
+            </div>
+        </div>
+        <div id="saper-ft"></div>
+    </div>
+    
+</body>
+
+<script type="text/javascript">
+$('select').iSelect();
+</script>
+</html>

@@ -1,0 +1,116 @@
+/* ==========================================================================
+   #ICONS
+   ========================================================================== */
+
+/**
+ * USAGE:
+ *
+ * <span class="c-icon">
+ *   <i class="feather icon-info"></i>
+ * </span>
+ */
+
+/**
+ * Container of the icon
+ *
+ * 1. The icon itself, Neat uses feather icons.
+ */
+
+.c-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: $icon-width;
+	height: $icon-height;
+	border-radius: 100%;
+	background: $icon-background-color;
+
+	i { /* [1] */
+		color: $brand-color;
+		font-size: 18px;
+	}
+}
+
+.c-icon--transparent {
+	background: transparent;
+}
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-icon--xsmall {
+	width: $icon-xsmall-width;
+	height: $icon-xsmall-height;
+
+	i {
+		font-size: 10px; // icon
+	}
+}
+
+.c-icon--small {
+	width: $icon-small-width;
+	height: $icon-small-height;
+
+	i {
+		font-size: 14px; // icon
+	}
+}
+
+.c-icon--large {
+	width: $icon-large-width;
+	height: $icon-large-height;
+
+	i {
+		font-size: 22px; // icon
+	}
+}
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-icon--info {
+	@include linear-gradient(to bottom, $gradient-info);
+}
+
+.c-icon--success {
+	@include linear-gradient(to bottom, $gradient-success);
+}
+
+.c-icon--warning {
+	@include linear-gradient(to bottom, $gradient-warning);
+}
+
+.c-icon--danger {
+	@include linear-gradient(to bottom, $gradient-danger);
+}
+
+.c-icon--primary {
+	@include linear-gradient(to bottom, $gradient-primary);
+}
+
+.c-icon--secondary {
+	@include linear-gradient(to bottom, $gradient-secondary);
+}
+
+.c-icon--fancy {
+	@include linear-gradient(to bottom, $gradient-fancy);
+}
+
+
+/**
+ * 1. Set the color of icon to be white when it has a background color.
+ */
+
+.c-icon--info,
+.c-icon--success,
+.c-icon--warning,
+.c-icon--danger,
+.c-icon--primary,
+.c-icon--secondary,
+.c-icon--fancy {
+	i {
+		color: $color-white; /* [1] */
+	}
+}

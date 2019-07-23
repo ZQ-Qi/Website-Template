@@ -1,0 +1,370 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Pagination
+2. Card
+3. Nav
+	3.1 Nav Tabs
+	3.2 Nav Pills
+4. Table/Grid
+5. Responsive Table/Grid
+6. Dropdown
+7. Modal Variations
+
+-------------------------------------------------------------------*/
+
+
+
+
+
+/**************************************
+Pagination
+**************************************/
+.page-item{
+	&.active{
+		.page-link{
+			background-color: $gray-400;
+			border-color: $gray-500;
+			color: $gray-700;
+		}
+	}
+	.page-link{
+		color: $gray-600;
+		font-weight: 400;
+	}
+} 
+
+.badge{
+	font-weight: 400;
+}
+
+
+
+/**************************************
+Card
+**************************************/
+.card-header{
+	background-color: transparent;
+	font-weight: 400;
+	.nav-tabs{
+		margin-top: -2px;
+		margin-left: -1px;
+		.nav-link{
+			border-top-width: 2px;
+		}
+	}
+}
+
+div.card-header{
+	font-size: 1rem;
+}
+
+
+
+
+/**************************************
+Nav
+**************************************/
+
+@media only screen and (max-width:  map-get($grid-breakpoints, "md") ) {
+	.nav{
+		flex-wrap: nowrap;
+	    overflow-x: auto;
+	    overflow-y: hidden;
+	    white-space: nowrap;
+	}
+}
+
+
+
+/* Nav Tabs */
+.nav-tabs .nav-link.active{
+    background-color: #fff;
+}
+
+.nav-tabs{
+	&.nav-danger{
+		.nav-link{
+			&:not(.active){
+				color: theme-color("danger");
+			}
+			&.active{
+				border-top-color: theme-color("danger");
+			}
+		}
+	}
+	&.nav-primary{
+		.nav-link{
+			&:not(.active){
+				color: theme-color("primary");
+			}
+			&.active{
+				border-top-color: theme-color("primary");
+			}
+		}
+	}
+	&.nav-success{
+		.nav-link{
+			&:not(.active){
+				color: theme-color("success");
+			}
+			&.active{
+				border-top-color: theme-color("success");
+			}
+		}
+	}
+	&.nav-warning{
+		.nav-link{
+			&:not(.active){
+				color: theme-color("warning");
+			}
+			&.active{
+				border-top-color: theme-color("warning");
+			}
+		}
+	}
+	&.nav-info{
+		.nav-link{
+			&:not(.active){
+				color: theme-color("info");
+			}
+			&.active{
+				border-top-color: theme-color("info");
+			}
+		}
+	}
+
+	&.active-thik{
+		.nav-link{
+			border-top-width: 2px;
+		}
+	}
+
+}
+
+
+.card-header{
+	.nav-tabs{
+		margin-top: -2px;
+		margin-left: -1px;
+	}
+}
+
+
+
+
+
+/*Nav Pills*/
+.nav-pills{
+
+	.nav-link{
+		color: $body-color;
+	}
+
+	&.nav-danger{
+		.nav-link, .show{
+			&.active, > .nav-link{
+				background-color: theme-color("danger");
+			}
+		}
+	}
+	&.nav-warning{
+		.nav-link, .show{
+			&.active, > .nav-link{
+				background-color: theme-color("warning");
+			}
+		}
+	}
+	&.nav-success{
+		.nav-link, .show{
+			&.active, > .nav-link{
+				background-color: theme-color("success");
+			}
+		}
+	}
+	&.nav-info{
+		.nav-link, .show{
+			&.active, > .nav-link{
+				background-color: theme-color("info");
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+/**************************************
+Table/Grid
+**************************************/
+
+
+.table th{
+	font-weight: 400;
+	color: $gray-800;
+	&.resizeable{
+		resize: horizontal;
+    	overflow: auto;
+	}
+}
+
+.table td{
+	font-size: 14px;
+}
+
+
+
+.table{
+	th, td{
+		white-space: nowrap;
+	}
+}
+
+
+
+
+/**************************************
+Responsive Table/Grid
+**************************************/
+
+.responsive-table{
+	@media only screen and (max-width:  map-get($grid-breakpoints, "md") ) {
+		display:block;
+		border:none;
+		thead{
+			display:none;
+		}
+		tr, td, th, tbody{
+			display:flex;
+		}
+		tbody, tr{
+			flex-direction: column;
+		}
+		tr, tbody{
+			+ tr, ~ tbody{
+				border-top:$grid-gutter-width solid $body-bg;
+			}
+		}
+		td, th{
+			text-align: right;
+			align-items: center;
+			&:before{
+				content:attr(data-label);
+				flex: 1;
+    			text-align: left;
+			}
+		}
+		td ~ td, th ~ td{
+			margin-top: -1px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/**************************************
+Dropdown
+**************************************/
+
+.dropdown-menu{
+	&.dropdown-lg{
+		min-width: 20rem;
+	}
+	&.dropdown-xl{
+		min-width: 25rem;
+	}
+}
+
+
+
+
+
+
+/**************************************
+Modal Variations
+**************************************/
+
+.modal-title{
+	font-weight: 400;
+}
+
+.modal-open{
+    .wrapper{
+        @include transition(filter 0.5s);
+        filter:blur(4px);
+    }
+}
+
+
+.modal-backdrop{
+	+ .modal-backdrop{
+		z-index: 1050;
+	}
+}
+
+.modal{
+
+
+	.modal-content{
+		background-color: $body-bg;
+	}
+
+
+	/*From Right/Left */
+	&.leftright-slide{
+
+		display: flex !important;
+
+		pointer-events: none;
+		* {
+			pointer-events: none;
+		}
+
+		.modal-dialog{
+			margin: 0px;
+			display: flex;
+    		flex: auto;
+			transform: translate(25%, 0);
+			.modal-content{
+				border:none;
+				border-radius: 0px;
+			}
+
+		}
+
+		&.show{
+			pointer-events: auto;
+			* {
+				pointer-events: auto;
+			}
+			.modal-dialog{
+				transform: translate(0, 0);
+			}
+		}
+
+		&.right-align{
+			flex-direction: row-reverse;
+		}
+		&.left-align{
+			&:not(.show){
+				.modal-dialog{
+					transform: translate(-25%, 0);
+				}
+			}
+		}
+
+	}
+
+
+}
+

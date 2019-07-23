@@ -1,0 +1,212 @@
+/* ==========================================================================
+   #MODAL 
+   ========================================================================== */
+
+// bootstrap class for hiding scrollbar when modal is opened
+.modal-open {
+	overflow: hidden;
+}
+
+.c-modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0 $spacer-small;
+	outline: 0;
+	z-index: $z-index-500;
+
+	.modal-open & {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+}
+
+
+/**
+ * 1. Allow scrolling when content's height is larger than viewport's height.
+ * 2. Set the default width of the modal to be medium.
+ */
+
+.c-modal__dialog {
+	position: relative;
+	max-width: map-get($modal-width, medium);
+	margin: $modal-dialog-margin;
+
+	.c-modal.fade & {
+		animation-duration: 0.3s;
+		animation-fill-mode: both;
+	}
+
+	.c-modal.show & {
+		animation-name: scale;
+	}
+
+	// default size
+	.c-modal & {
+		max-width: map-get($modal-width, medium);
+	}
+
+	// different sizes
+	.c-modal--xsmall & {
+		max-width: map-get($modal-width, xsmall);
+	}
+
+	.c-modal--small & {
+		max-width: map-get($modal-width, small);
+	}
+
+	.c-modal--medium & {
+		max-width: map-get($modal-width, medium);
+	}
+
+	.c-modal--large & {
+		max-width: map-get($modal-width, large);
+	}
+
+	.c-modal--xlarge & {
+		max-width: map-get($modal-width, xlarge);
+	}
+
+	.c-modal--huge & {
+		max-width: map-get($modal-width, huge);
+	}
+}
+
+// Actual modal
+.c-modal__content {
+	position: relative;
+	width: 100%;
+	border-radius: $base-border-radius;
+	outline: 0;
+	text-align: center;
+	overflow: hidden; // make sure border radius is applied
+}
+
+.c-modal__header {
+	padding: 20px $spacer;
+	background-color: $color-white;
+}
+
+.c-modal__close {
+	position: absolute;
+	top: rem(20px);
+	right: $spacer;
+	color: $color-ink;
+	font-size: $h4-font-size;
+	cursor: pointer;
+	opacity: 0.8;
+
+	&:hover {
+		color: $color-ink-dark;
+	}
+}
+
+
+/**
+ * Use this clas to quicklu position the close icon relative 
+ * to its container, `c-modal__content`.
+ */
+
+.c-modal__close--absolute {
+	position: absolute;
+	top: $spacer;
+	right: $spacer;
+	z-index: $z-index-500; // ensure that it's always at the top
+
+	@include respond-to ($breakpoint-tablet) {
+		top: $spacer-small;
+	}
+}
+
+
+.c-modal__body {
+	padding: $modal-body-padding;
+	background-color: $modal-body-background-color;
+	overflow: hidden;
+}
+
+/**
+ * Apply max height to force the body of the modal to be scrolled. This class
+ * is used with (achievements) modal.
+ */
+
+.c-modal__body--maximized {
+	max-height: $modal-maximized-height;
+	overflow: auto;
+}
+
+.c-modal__footer {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	padding: $spacer-small $spacer;
+	border-top: $base-border-width solid $color-sky;
+	background-color: $body-background-color;
+}
+
+
+/** 
+ * Add a dark background to make modal dialog standout.
+ */
+
+// Modal background
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: $modal-backdrop-background-color;
+	z-index: $z-index-300;
+
+	// Fade for backdrop
+	&.fade {
+		opacity: 0;
+	}
+
+	&.show {
+		opacity: 0.9;
+	}
+}
+
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+
+/**
+ * Modal move animation
+ */
+
+@-webkit-keyframes scale {
+  	from {
+  		transform: scale(.6);
+		opacity: 0;
+  	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes scale {
+	from {
+		transform: scale(.6);
+		opacity: 0;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

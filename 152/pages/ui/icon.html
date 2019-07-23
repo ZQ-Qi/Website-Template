@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>AlphaAdmin</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/libs/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+    <style type="text/css" media="screen">
+        .bs-glyphicons-list li{ display: inline-block; float: none; width: 100px; height: 120px; margin: 2px; padding: 10px; text-align: center; background-color: #e6e6e6; }
+        </style>
+</head>
+
+<body>
+    <div class="skin-default" id="wrapper">
+        <header class="navbar-header">
+            <div class="brand">
+                <a class="navbar-brand" href="../../index.html" title="AlphaAdmin">ALPHA</a>
+            </div>
+            <div class="navbar">
+                <i class="sidebar-toggle iconfont icon-menu" data-toggle="push-menu" role="button">
+                </i>
+                <div class="navbar-menu pull-right">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown message">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="消息">
+                                <i class="iconfont icon-email"></i>
+                                <span class="badge">4</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">
+                                    您有4条消息
+                                </li>
+                                <li class="body">
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#" title="如何设置头部head...">
+                                                <div class="pull-left">
+                                                    <img class="img-circle" src="../../assets/avatars/avatars.png">
+                                                </div>
+                                                <h4 class="name">
+                                                    匿名用户
+                                                    <small class="pull-right">
+                                                        <i class="iconfont icon-time"></i>
+                                                        5分钟前
+                                                    </small>
+                                                </h4>
+                                                <p class="content">
+                                                    如何设置头部head的meta值
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="如何设置头部head...">
+                                                <div class="pull-left">
+                                                    <img class="img-circle" src="../../assets/avatars/avatars.png">
+                                                </div>
+                                                <h4 class="name">
+                                                    匿名用户
+                                                    <small class="pull-right">
+                                                        <i class="iconfont icon-time"></i>
+                                                        5分钟前
+                                                    </small>
+                                                </h4>
+                                                <p class="content">
+                                                    如何设置头部head的meta值
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="如何设置头部head...">
+                                                <div class="pull-left">
+                                                    <img class="img-circle" src="../../assets/avatars/avatars.png">
+                                                </div>
+                                                <h4 class="name">
+                                                    匿名用户
+                                                    <small class="pull-right">
+                                                        <i class="iconfont icon-time"></i>
+                                                        5分钟前
+                                                    </small>
+                                                </h4>
+                                                <p class="content">
+                                                    如何设置头部head的meta值
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="如何设置头部head...">
+                                                <div class="pull-left">
+                                                    <img class="img-circle" src="../../assets/avatars/avatars.png">
+                                                </div>
+                                                <h4 class="name">
+                                                    匿名用户
+                                                    <small class="pull-right">
+                                                        <i class="iconfont icon-time"></i>
+                                                        5分钟前
+                                                    </small>
+                                                </h4>
+                                                <p class="content">
+                                                    如何设置头部head的meta值
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#" title="查看所有消息">
+                                        查看所有消息
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown notify">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="通知">
+                                <i class="iconfont icon-bells"></i>
+                                <span class="badge">7</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">
+                                    您有7个通知
+                                </li>
+                                <li class="body">
+                                    <ul class="menu">
+                                        <li>
+                                            <a class="text-danger" href="#" title="系统发生一个未知错误">
+                                                <i class="iconfont icon-error pull-left"></i>
+                                                <p class="content">发生一个系统路径错误</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="text-warning" href="#" title="系统发出一个警告">
+                                                <i class="iconfont icon-alert pull-left"></i>
+                                                <p class="content">为安全起见,请删除install文件夹</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="text-success" href="#" title="修改成功">
+                                                <i class="iconfont icon-ok pull-left"></i>
+                                                <p class="content">您更新了个人资料</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="text-info" href="#" title="新成员">
+                                                <i class="iconfont icon-menu-user pull-left"></i>
+                                                <p class="content">3位新成员</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="text-muted" href="#" title="点赞">
+                                                <i class="iconfont icon-thumbs-up pull-left"></i>
+                                                <p class="content">5个点赞</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#" title="查看所有通知">
+                                        查看所有通知
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown user">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="用户">Alpha</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a data-toggle="modal" data-target=".menu-setpassword" href="#" title="个人信息">
+                                        <i class="iconfont icon-menu-user"></i>
+                                        修改密码
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="系统设置">
+                                        <i class="iconfont icon-setting"></i>
+                                        系统设置
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a data-toggle="modal" data-target=".menu-logout" href="#" title="登出">
+                                        <i class="iconfont icon-power"></i>
+                                        登出
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 左侧导航 -->
+        <aside class="main-sidebar">
+            <div class="user-panel">
+                <div class="image pull-left">
+                    <img src="../../assets/avatars/avatars.png" alt="">
+                </div>
+                <div class="info pull-right">
+                    <p class="title">Alpha</p>
+                    <strong>超级管理员</strong>
+                </div>
+            </div>
+            <section class="sidebar">
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li>
+                        <a href="../../index.html" title="仪表盘">
+                            <i class="iconfont icon-dashborad"></i>
+                            <small>仪表盘</small>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#" title="图表">
+                            <i class="iconfont icon-chart"></i>
+                            <small>图表</small>
+                            <span class=" pull-right">
+                                <i class="iconfont icon-menu-left-small"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active">
+                                <a href="../chart/chartjs.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>Chart.JS</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../chart/echartjs.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>EChart.JS</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#" title="表单">
+                            <i class="iconfont icon-form"></i>
+                            <small>表单</small>
+                            <span class=" pull-right">
+                                <i class="iconfont icon-menu-left-small"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../forms/form.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>简单表单</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../forms/advanced.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>高级表单</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../forms/editor.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>富文本</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview active">
+                        <a href="#" title="UI元素">
+                            <i class="iconfont icon-ui"></i>
+                            <small>UI元素</small>
+                            <span class=" pull-right">
+                                <i class="iconfont icon-menu-left-small"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="button.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>按钮</small>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="color.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>图标</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="other.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>其他</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="iconfont icon-table"></i>
+                            <small>表格</small>
+                            <span class=" pull-right">
+                                <i class="iconfont icon-menu-left-small"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../table/table.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>简单表格</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../table/data.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>数据表格</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="iconfont icon-folder"></i>
+                            <small>页面</small>
+                            <span class=" pull-right">
+                                <i class="iconfont icon-menu-left-small"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../page/login.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>登录页面</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../page/register.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>注册页面</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../page/404.html">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>404页面</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="iconfont icon-category"></i>
+                            <small>多级菜单</small>
+                            <span class=" pull-right">
+                                <i class="iconfont icon-menu-left-small"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>二级菜单</small>
+                                    <span class=" pull-right">
+                                        <i class="iconfont icon-menu-left-small"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li class="treeview">
+                                        <a href="#">
+                                            <i class="iconfont icon-circle-hollow"></i>
+                                            <small>三级菜单</small>
+                                            <span class=" pull-right">
+                                                <i class="iconfont icon-menu-left-small"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="iconfont icon-circle-hollow"></i>
+                                                    <small>四级菜单</small>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="iconfont icon-circle-hollow"></i>
+                                    <small>二级菜单</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <div class="page-wrapper">
+            <div class="page-header">
+                <h1 class="title">
+                    UI元素
+                    <small>图标</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="../../index.html" title="家">
+                            <i class="iconfont icon-home"></i>
+                            <small>家</small>
+                        </a>
+                    </li>
+                    <li>
+                        <small>
+                            UI元素
+                        </small>
+                    </li>
+                    <li class="active">
+                        <small>图标</small>
+                    </li>
+                </ol>
+            </div>
+            <section class="page-body">
+                <div class="row widget">
+                    <section class="col-md-12">
+                        <div class="box ui">
+                            <div class="box-header" >
+                                <h3 class="box-title">来自Glyphicons图标部分(可以使用Iconfont)</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="bs-glyphicons">
+                                    <ul class="bs-glyphicons-list">
+                                        <li>
+                                            <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-asterisk</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-plus</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-euro</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-eur" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-eur</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-minus</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-cloud</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-envelope</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-pencil</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-glass</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-music</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-search</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-heart</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-star</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-star-empty</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-user</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-film</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-th-large</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-th</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-th-list</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-ok</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-remove</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-zoom-in</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-zoom-out</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-off</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-signal</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-cog</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-trash</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-home</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-file</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-time</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-download-alt</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-question-sign</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-remove-circle</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-arrow-down</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-exclamation-sign</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-warning-sign</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-chevron-down</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-shopping-cart</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-folder-open</span>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>
+                                            <span class="glyphicon-class">glyphicon glyphicon-resize-vertical</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <!-- 修改密码模态框 -->
+        <div class="modal fade menu-setpassword" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">修改密码</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        旧密码
+                                    </th>
+                                    <td>
+                                        <input type="text" class="form-control" placeholder="请输入旧密码" name="js-oldPassword">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        新密码
+                                    </th>
+                                    <td>
+                                        <input type="text" class="form-control" placeholder="请输入新密码" name="js-newPassword">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        确认密码
+                                    </th>
+                                    <td>
+                                        <input type="text" class="form-control" placeholder="请再次输入新密码" name="js-verifyPassword">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 退出提示模态框 -->
+        <div class="modal fade menu-logout" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>是否确定退出</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">登出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../assets/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="../../assets/js/alpha.js"></script>
+    <script type="text/javascript">
+    $(function() {})
+    </script>
+</body>
+
+</html>

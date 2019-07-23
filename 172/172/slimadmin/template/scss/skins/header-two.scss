@@ -1,0 +1,86 @@
+// Bootstrap variable overrides
+@import "../bootstrap/variables";
+@import "../variables";
+
+@import "../../bower_components/bootstrap/scss/functions";
+@import "../../bower_components/bootstrap/scss/variables";
+@import "../../bower_components/bootstrap/scss/mixins";
+
+// Custom mixins for bootstrap
+@import "../bootstrap/mixins";
+
+.slim-header {
+  background-color: $gray-900;
+  border-bottom-width: 0;
+}
+
+.slim-logo a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.search-box {
+  border-width: 0;
+  background-color: #fff;
+
+  .btn {
+    background-color: $gray-900;
+  }
+}
+
+.logged-user {
+  color: rgba(#fff,.75);
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+
+  img { border-color: rgba(#fff, .5); }
+}
+
+.header-notification {
+  color: rgba(#fff, .75);
+
+  .indicator { background-color: $red; }
+
+  &:hover,
+  &:focus {
+    background-color: darken($gray-900, 5%);
+    color: #fff;
+  }
+}
+
+.slim-header-right {
+  .dropdown-a,
+  .dropdown-b {
+    &.show > a {
+      background-color: darken($gray-900, 5%);
+    }
+  }
+
+  .dropdown-c.show {
+    > a { color: #fff; }
+  }
+
+  .dropdown-menu { margin-top: 17px; }
+}
+
+.slim-navbar {
+  .nav-item {
+    .nav-link {
+      .icon { color: $body-color; }
+    }
+    
+    &.active {
+      .nav-link {
+        background-image: none;
+        background-color: transparent;
+        color: $blue;
+        border-width: 1px;
+
+        .icon { color: $blue; }
+      }
+    }
+  }
+}

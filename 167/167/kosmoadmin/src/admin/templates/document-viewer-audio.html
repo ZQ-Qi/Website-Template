@@ -1,0 +1,77 @@
+@@include('./_partials/header_start.html')
+    <link rel="stylesheet" type="text/css" href="assets/styles/apps/document-viewer.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container modal-open">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Document Audio Viewer</h3>
+            </section>
+        </div>
+        <div class="ks-page-content d-flex justify-content-center align-items-center">
+            <div class="ks-page-content-body d-flex">
+                <a href="document-viewer-audio.html" class="btn btn-primary btn-lg">Open Audio Document Viewer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ks-document-viewer ks-audio fade in modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <span class="ks-modal-title-icon la la-file-audio-o ks-color-purple"></span>
+                    file.mp3
+                </h5>
+                <div class="ks-controls">
+                    <button class="btn btn-outline-primary ks-light ks-no-text ks-download"><span class="la la-download ks-icon"></span></button>
+                    <button class="btn btn-outline-primary ks-light ks-no-text ks-remove"><span class="la la-trash-o ks-icon"></span></button>
+                </div>
+                <div class="ks-extra-controls">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="la la-close"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="ks-control">
+                    <span class="la la-play"></span>
+                </div>
+                <div class="ks-info">
+                    <div class="ks-header">
+                        <div class="ks-album-name">
+                            Ocean Drive <span>Original Mix</span>
+                        </div>
+                        <div class="ks-song-name">
+                            Duke Dumond
+                        </div>
+                    </div>
+                    <div class="ks-body">
+                        <div class="progress ks-progress-xs">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="ks-time">
+                            <span class="ks-current">1:25</span>
+                            <span class="ks-total">3:06</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+@@include('./_partials/scripts.html')
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        $('.ks-document-viewer').modal('show');
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

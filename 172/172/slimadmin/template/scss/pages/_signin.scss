@@ -1,0 +1,123 @@
+/* --------------------------------------- */
+/* ############### SIGN IN ############### */
+/* --------------------------------------- */
+
+.signin-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  @include media-breakpoint-up(sm) { padding: 30px; }
+}
+
+.signin-box {
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid $gray-400;
+  padding: 20px;
+
+  @media (min-width: 480px) { padding: 40px; }
+
+  .slim-logo {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  &.signup {
+    width: 500px;
+
+    .btn-signin { margin-bottom: 20px; }
+  }
+}
+
+.signin-title-primary {
+  font-weight: 300;
+  color: $gray-900;
+}
+
+.signin-title-secondary {
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.btn-signin {
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  border: 0;
+  min-height: 40px;
+  @include gradient-x($blue, $purple);
+}
+
+// Signin 2
+.signin-left,
+.signin-right {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
+
+  .signin-box {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.signin-left {
+  .signin-box { background-color: transparent; }
+}
+
+.signin-right { background-color: #fff; }
+
+.signup-separator {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top:  50%;
+    left: 0;
+    width:  100%;
+    height: 1px;
+    background-color: $gray-300;
+  }
+
+  span {
+    background-color: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.btn-facebook {
+  background-color: #4267B2;
+  color: #fff;
+}
+
+.btn-twitter {
+  background-color: #1DA1F2;
+  color: #fff;
+}
+
+
+/********** RTL SUPPORT **********/
+/*********************************/
+[dir="rtl"] {
+  .signin-box {
+    text-align: right;
+  }
+}

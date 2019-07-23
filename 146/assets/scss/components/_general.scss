@@ -1,0 +1,93 @@
+﻿body {
+    background-color: #f3f7f8;
+    @include transition(all .5s);
+    font-family: 'Work Sans', Arial, Tahoma, sans-serif;
+    font-weight:400;
+    font-size:15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+button,
+input,
+select,
+a {
+    outline: none !important;
+    &:hover, &:focus{
+        text-decoration: none;
+    }
+}
+
+.no-animate {
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+}
+
+section {
+    &.content {
+        margin:60px 0px 15px 250px;
+        @include transition(.5s);
+        z-index: 9;
+        position: relative;        
+        @include border-radius(3px);
+        padding: 0 10px;
+               
+    }
+}
+
+
+.g-bg-cyan{ background:linear-gradient(60deg, #136a8a, #379c94); color:#fff !important;}
+.g-bg-blue{background:linear-gradient(60deg, #00adef, #0094da); color:#fff !important;}
+.g-bg-gy{background:linear-gradient(60deg, #94d23b, #fcb711); color:#fff !important;}
+.g-bg-cgreen{background:linear-gradient(60deg, #16c99f, #12a682); color:#fff !important;}
+.g-bg-blush2{ background:linear-gradient(325deg, #dd5e89, #f7bb97); color:#fff !important;}
+.g-bg-soundcloud{background:linear-gradient(60deg, #f83600, #fe8c00); color:#fff !important;}
+.g-bg-soundcloud2{background:linear-gradient( 135deg, rgba(243,71,75,.9) 0%, rgba(255,152,0,.9) 100%); color:#fff !important;}
+
+
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+}
+.carousel-item {
+    position: relative;
+    display: none;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease,-webkit-transform .6s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+@media only screen and (max-width: 500px) {
+    section{
+        &.content{
+           margin-left:0 !important;
+           margin-right:0px;
+           padding:0;
+        }
+    }
+}

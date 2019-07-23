@@ -1,0 +1,197 @@
+/* ---------------------------------------- */
+/* ############### CONTACTS ############### */
+/* ---------------------------------------- */
+.manager-wrapper {
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.manager-header {
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slim-pageheader {
+    display: block;
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .slim-pagetitle {
+    margin-top: 10px;
+    @include media-breakpoint-up(xl) { margin-top: 0; }
+  }
+}
+
+.manager-left {
+  display: none;
+
+  @include media-breakpoint-up(xl) {
+    display: block;
+    width: 240px;
+  }
+
+  .btn-contact-new {
+    background-color: theme-color('primary');
+    color: #fff;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &:hover,
+    &:focus {
+      background-color: darken(theme-color('primary'), 3%);
+    }
+  }
+
+  .nav {
+    display: block;
+    border: 1px solid $gray-400;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    background-color: $gray-100;
+    color: $body-color;
+    position: relative;
+    padding: 0 20px;
+
+    + .nav-link { border-top: 1px solid $gray-300; }
+
+    span:last-child {
+      font-size: 13px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -1px;
+      width: 3px;
+      height: 100%;
+      background-color: $gray-400;
+      opacity: 0;
+      @include transition($transition-base);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: theme-color('primary');
+
+      &::before { opacity: 1; }
+    }
+
+    &.active {
+      background-color: #fff;
+      color: theme-color('primary');
+
+      &::before {
+        opacity: 1;
+        background-color: theme-color('primary');
+        @include gradient-y($blue, $purple);
+      }
+    }
+  }
+}
+
+.manager-right {
+  @include media-breakpoint-up(xl) {
+    flex: 1;
+    margin-left: 20px;
+  }
+}
+
+.card-contact {
+  padding: 25px;
+  background-color: #fff;
+  border: 1px solid $gray-400;
+
+  .card-img {
+    width: 120px;
+    @include border-radius(100%);
+    padding: 5px;
+    border: 2px solid theme-color('primary');
+    background-color: #fff;
+    @include transition($transition-base);
+
+    &:hover,
+    &:focus {
+      border-color: darken(theme-color('primary'), 2%);
+      box-shadow: 0 0 10px rgba(theme-color('primary'), .3);
+    }
+  }
+
+  .contact-name {
+    color: $gray-800;
+    &:hover,
+    &:focus { color: theme-color('primary'); }
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 8px 0;
+    border-top: 1px solid $gray-300;
+    font-size: 13px;
+
+    &:last-child { padding-bottom: 0; }
+  }
+
+  .contact-social {
+    font-size: 18px;
+
+    a {
+      display: inline-block;
+      + a { margin-left: 5px; }
+    }
+
+    .fa-facebook { color: $facebook-color; }
+    .fa-twitter { color: $twitter-color; }
+    .fa-google { color: $google-color; }
+  }
+}
+
+.contact-navicon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: $gray-400;
+  color: rgba(#fff,.75);
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: $gray-500;
+  }
+
+  @include media-breakpoint-up(xl) { display: none; }
+}
+
+
+/********** RTL SUPPORT **********/
+/*********************************/
+[dir="rtl"] {
+  .manager-right {
+    @include media-breakpoint-up(xl) {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+}

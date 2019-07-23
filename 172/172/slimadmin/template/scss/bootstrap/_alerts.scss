@@ -1,0 +1,60 @@
+/* -------------------------------------- */
+/* ############### Alerts ############### */
+/* -------------------------------------- */
+
+.alert {
+  border-radius: 0;
+  padding: 15px 20px;
+  position: relative;
+
+  .close { opacity: .25; }
+}
+
+.alert-icon {
+  opacity: .95;
+  line-height: 0;
+  margin-right: 10px;
+  position: relative;
+}
+
+// Basic Alerts
+.alert-success { @include alert-variant(lighten($green, 45%), $green, darken($green, 8%)); }
+.alert-info { @include alert-variant(lighten($cyan, 30%), $cyan, darken($cyan, 8%)); }
+.alert-warning { @include alert-variant(lighten($yellow, 36%), $yellow, darken($yellow, 12%)); }
+.alert-danger { @include alert-variant(lighten($red, 36%), $red, darken($red, 12%)); }
+
+.alert-outline {
+  background-color: transparent;
+}
+
+.alert-solid {
+  &.alert-success {
+    background-color: $green;
+    color: #fff;
+  }
+
+  &.alert-info {
+    background-color: $cyan;
+    color: #fff;
+  }
+
+  &.alert-warning {
+    background-color: $yellow;
+    color: #fff;
+  }
+
+  &.alert-danger {
+    background-color: $red;
+    color: #fff;
+  }
+}
+
+
+/*********************************/
+/********** RTL SUPPORT **********/
+
+[dir="rtl"] {
+  .alert {
+    text-align: right;
+  }
+}

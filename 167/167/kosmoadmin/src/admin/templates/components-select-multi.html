@@ -1,0 +1,57 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/select-multi/multi.min.css"> <!-- original -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Multi Select</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-full-height">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <select multiple="multiple" name="favorite_fruits" id="select-multi">
+                                    <option>Apple</option>
+                                    <option>Banana</option>
+                                    <option>Blueberry</option>
+                                    <option>Cherry</option>
+                                    <option>Coconut</option>
+                                    <option>Grapefruit</option>
+                                    <option>Kiwi</option>
+                                    <option>Lemon</option>
+                                    <option>Lime</option>
+                                    <option>Mango</option>
+                                    <option>Orange</option>
+                                    <option>Papaya</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/select-multi/multi.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        multi($('#select-multi').get(0), {
+            'enable_search': true,
+            'search_placeholder': 'Search...',
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

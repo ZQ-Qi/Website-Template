@@ -1,0 +1,165 @@
+.m-tasks {
+  min-height: calc(100vh - 52px);
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    padding: 0;
+    flex-grow: 1;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__columns {
+    font-size: 15px;
+    flex-grow: 1;
+    overflow-x: auto;
+    display: flex;
+  }
+
+  &__column {
+    width: 356px;
+    min-width: 356px;
+    margin-right: 20px;
+
+    &--new {
+      .m-tasks__column-icon {
+        color: #0094f2;
+      }
+    }
+
+    &--pending {
+      .m-tasks__column-icon {
+        color: #eb3b48;
+      }
+    }
+
+    &--in-progress {
+      .m-tasks__column-icon {
+        color: #f48221;
+      }
+    }
+
+    &--completed {
+      .m-tasks__column-icon {
+        color: #35ae47;
+      }
+    }
+
+    &:last-child {
+      .m-tasks__items {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__add-card {
+    margin-bottom: 20px;
+    border: 2px solid rgba(#35ae47, .5);
+    color: #35ae47;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+  }
+
+  &__column-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__column-name {
+    font-size: 20px;
+    color: #000;
+  }
+
+  &__column-icon {
+    color: #0094f2;
+    margin-right: 8px;
+    font-size: 16px;
+  }
+
+  &__item {
+    border: 1px solid #e4e6ea;
+    border-radius: 4px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      border-color: #0094f2;
+      transition: $transition-hover;
+
+      .m-tasks__item-control {
+        opacity: 1;
+        transition: $transition-hover;
+      }
+    }
+  }
+
+  &__item-priority {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #a1aab5;
+
+    &--normal {
+      color: #a1aab5;
+    }
+
+    &--high {
+      color: #eb3b48;
+    }
+
+    &--medium {
+      color: #4cc14c;
+    }
+  }
+
+  &__item-name {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+
+  &__item-desc {
+    color: #939daa;
+    margin-bottom: 10px;
+    line-height: 22px;
+  }
+
+  &__item-date {
+    font-size: 13px;
+    color: #939daa;
+  }
+
+  .sortable-ghost {
+    background: #F2FAFE;
+  }
+
+  &__item-control {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+  }
+
+  &__empty-column {
+    padding: 38px;
+    text-align: center;
+  }
+
+  &__empty-column-text {
+    margin-top: 14px;
+    color: #939daa;
+    line-height: 22px;
+  }
+}

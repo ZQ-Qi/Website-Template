@@ -1,0 +1,274 @@
+.m-datagrid {
+  display: flex;
+  flex-direction: row;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    &.m-content {
+      padding: 0;
+    }
+  }
+
+  &__header {
+    height: 70px;
+    border-bottom: 1px solid rgba(#939daa, .2);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  &__header-icon {
+    color: #939daa;
+    font-size: 20px;
+    margin-right: 15px;
+    line-height: 22px;
+    height: 22px;
+    position: relative;
+    top: 1px;
+  }
+
+  &__header-left-side,
+  &__header-right-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__header-heading {
+    font-size: 28px;
+    line-height: 22px;
+    color: #222;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__header-items-amount {
+    color: #939daa;
+    font-size: 15px;
+    line-height: 15px;
+    margin-left: 7px;
+  }
+
+  &__header-tabs {
+    margin: 0;
+
+    .btn {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+
+  &__header-search {
+    width: 356px;
+    margin-left: 17px;
+
+    .input-group {
+      margin: 0;
+    }
+
+    .form-control {
+      height: 35px;
+    }
+  }
+
+  &__controls {
+    padding: 20px;
+    border-bottom: 1px solid rgba(#939daa, .2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .input-group {
+      margin: 0;
+    }
+  }
+
+  &__controls-action {
+    background: #e9ebee;
+    padding: 8px 10px;
+    width: 36px;
+    height: 36px;
+    color: #939daa;
+    border-color: #e9ebee;
+
+    .btn-icon {
+      font-size: 15px;
+    }
+
+    &.is-active,
+    &:hover {
+      color: #fff;
+      background: #0094f2;
+      border-color: #0094f2;
+    }
+  }
+
+  &__controls-control {
+    & + & {
+      margin-left: 18px;
+    }
+  }
+
+  &__controls-datepicker,
+  &__controls-select {
+    width: 198px;
+  }
+
+  &__controls-right-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__body {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  &__footer {
+    height: 95px;
+    border-top: 1px solid rgba(#939daa, .2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  &__footer-controls {
+    display: flex;
+  }
+
+  &__footer-page-select {
+    width: 120px;
+  }
+
+  &__footer-pagination {
+    margin: 0;
+
+    .pagination {
+      margin: 0;
+    }
+  }
+
+  &__body-scrollpane {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__table {
+    border: none;
+    min-width: 560px;
+
+    th {
+      border-top: none;
+    }
+
+    thead {
+      background: #fbfcfd;
+    }
+  }
+
+  &__controls-view-mode {
+    margin-left: 18px;
+  }
+}
+
+@include mq(screen-lg, max) {
+  .m-datagrid {
+    flex-direction: column;
+
+    .m-nav {
+      width: 100%;
+    }
+
+    .m-nav__image {
+      display: none;
+    }
+
+    &__header {
+      height: auto;
+      min-height: 70px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__content {
+      min-height: 900px;
+
+      &.m-content {
+        margin-left: 0;
+      }
+    }
+
+    &__header-right-side,
+    &__controls-right-side {
+      margin-top: 20px;
+    }
+
+    &__controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+@include mq(tablet-small, max) {
+  .m-datagrid {
+    &__header-right-side {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &__header-search {
+      margin-left: 0;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    &__controls-right-side {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &__controls-view-mode {
+      margin-left: 0;
+    }
+
+    &__controls-control {
+      margin-top: 20px;
+    }
+
+    &__controls-datepicker {
+      width: 100%;
+    }
+
+    &__controls-select {
+      margin-left: 0;
+      width: 100%;
+
+      &.m-datagrid__controls-control {
+        margin-left: 0;
+      }
+    }
+
+    &__footer {
+      flex-direction: column;
+      min-height: 95px;
+      height: auto;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &__footer-pagination {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.file_manager{
+
+    .file{
+        @extend .padding-0;
+        border-radius: $border-radius-large;
+        position: relative;        
+        overflow: hidden;
+
+        .image, .icon{
+            max-height: 180px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: top;            
+        }
+
+        .hover{
+            @include transition(all .3s ease-in-out);
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: none;
+        }
+
+        &:hover{                
+            .hover{
+                @include transition(all .3s ease-in-out);
+                @extend .displayblock;
+            }
+        }
+
+        .icon {
+            @extend .align-center;
+            padding: 15px 10px;
+            display: table;
+            width: 100%;            
+
+            i {
+                color: $grey-600;
+                display: table-cell;
+                font-size: 30px;
+                vertical-align: middle;                
+                line-height: 100px;
+            }
+        }
+
+        .file-name {
+            padding: 10px;
+            border-top:1px solid $grey-100;
+
+            small{
+                @extend .displayblock;
+
+                .date{
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+.folder{    
+    @extend .displayblock;
+    color: $grey-600;
+    padding: 20px;
+
+    h6{
+        @extend .m-b-0;
+    }
+}
+
+@include max-screen($break-medium) {    
+    .file_manager{                
+        .nav-tabs{
+            padding-left: 0;
+            padding-right: 0;    
+            .nav-item{
+                display: inline-block;
+            }
+        }
+    }
+}

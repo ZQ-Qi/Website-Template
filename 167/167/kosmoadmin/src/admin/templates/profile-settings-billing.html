@@ -1,0 +1,349 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/stacktable/stacktable.css">
+<link rel="stylesheet" type="text/css" href="libs/select2/css/select2.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/select2/select2.min.css"> <!-- Customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/profile/settings.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Profile Settings</h3>
+                <div class="ks-controls">
+                    <button type="button" class="btn btn-outline-primary ks-light ks-profile-tabs-block-toggle" data-block-toggle=".ks-profile > .ks-tabs-container">Tabs</button>
+                    <button type="button" class="btn btn-outline-primary ks-light ks-settings-menu-block-toggle" data-block-toggle=".ks-settings-tab > .ks-menu">Menu</button>
+                </div>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-profile">
+                <div class="ks-profile-header">
+                    <div class="ks-profile-header-user">
+                        <img src="assets/img/avatars/ava-1.png" class="ks-avatar" width="100" height="100">
+                        <div class="ks-info">
+                            <div class="ks-name">Karen Lucas</div>
+                            <div class="ks-description">New York, USA</div>
+                            <div class="ks-rating">
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star-half-o ks-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ks-profile-header-statistics">
+                        <div class="ks-item">
+                            <div class="ks-amount">869</div>
+                            <div class="ks-text">orders</div>
+                        </div>
+                        <div class="ks-item">
+                            <div class="ks-amount">131</div>
+                            <div class="ks-text">reviews</div>
+                        </div>
+                        <div class="ks-item">
+                            <div class="ks-amount">$3,004</div>
+                            <div class="ks-text">rewand points</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator ks-full ks-light">
+                    <ul class="nav ks-nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#overview" aria-expanded="true">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#contacts" aria-expanded="false">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#orders" aria-expanded="false">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#wish-list" aria-expanded="false">Wish list</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#storecredit" aria-expanded="false">Store credit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#returns" aria-expanded="false">Returns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#reward-points" aria-expanded="false">Reward points</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#settings" aria-expanded="false">Settings</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="overview" role="tabpanel" aria-expanded="false">
+                            Content 1
+                        </div>
+                        <div class="tab-pane" id="contacts" role="tabpanel" aria-expanded="false">
+                            Content 2
+                        </div>
+                        <div class="tab-pane" id="orders" role="tabpanel" aria-expanded="true">
+                            Content 3
+                        </div>
+                        <div class="tab-pane" id="wish-list" role="tabpanel" aria-expanded="false">
+                            Content 1
+                        </div>
+                        <div class="tab-pane" id="storecredit" role="tabpanel" aria-expanded="false">
+                            Content 2
+                        </div>
+                        <div class="tab-pane" id="returns" role="tabpanel" aria-expanded="true">
+                            Content 3
+                        </div>
+                        <div class="tab-pane" id="reward-points" role="tabpanel" aria-expanded="false">
+                            Content 1
+                        </div>
+                        <div class="tab-pane active" id="settings" role="tabpanel" aria-expanded="false">
+                            <div class="ks-settings-tab">
+                                <div class="ks-menu">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-general.html">General</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-contact-info.html">Contact Info</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-experience.html">Experience</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-education.html">Education</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-organizations.html">Organizations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-notifications.html">Notifications</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="profile-settings-billing.html">Billing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ks-settings-form-wrapper">
+                                    <div class="ks-form ks-settings-tab-form ks-billing"> <!-- ks-uppercase ks-light -->
+                                        <h3 class="ks-main-form-header">Billing</h3>
+
+                                        <div class="card panel panel-default ks-information ks-light">
+                                            <h5 class="card-header">
+                                                <span class="ks-text">Payment method</span>
+                                                <a href="#" class="btn btn-outline-primary ks-light">Add New</a>
+                                            </h5>
+                                            <div class="card-block ks-payment-methods">
+                                                <div class="ks-payment-method">
+                                                    <img class="ks-method" src="assets/img/payment/visa.png">
+                                                    <span class="ks-number">**** **** **** 1234</span>
+                                                    <span class="ks-expire">exp 02/2017</span>
+
+                                                    <div class="ks-controls">
+                                                        <button type="button" class="btn btn-primary ks-light ks-no-text"><span class="la la-pencil ks-icon"></span></button>
+                                                        <button type="button" class="btn btn-primary ks-light ks-no-text"><span class="la la-trash-o ks-icon"></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="ks-payment-method">
+                                                    <img class="ks-method" src="assets/img/payment/ma.png">
+                                                    <span class="ks-number">**** **** **** 1234</span>
+                                                    <span class="ks-expire">exp 02/2017</span>
+
+                                                    <div class="ks-controls">
+                                                        <button type="button" class="btn btn-primary ks-light ks-no-text"><span class="la la-pencil ks-icon"></span></button>
+                                                        <button type="button" class="btn btn-primary ks-light ks-no-text"><span class="la la-trash-o ks-icon"></span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="ks-manage-payment">
+                                                    <div class="ks-manage-payment-header">New payment method</div>
+                                                    <form>
+                                                        <div class="form-group row">
+                                                            <div class="col-lg-3">
+                                                                <label>Card Number</label>
+                                                                <input type="text" class="form-control" placeholder="0000-0000-0000-0000">
+                                                            </div>
+                                                            <div class="col-lg-9">
+                                                            <span class="ks-card-type ks-active">
+                                                                <img src="assets/img/payment/visa.png">
+                                                            </span>
+                                                            <span class="ks-card-type">
+                                                                <img src="assets/img/payment/ma.png">
+                                                            </span>
+                                                            <span class="ks-card-type">
+                                                                <img src="assets/img/payment/ms.png">
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-lg-8">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3">
+                                                                        <label>CVV <span class="la la-question-circle ks-text-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></span></label>
+                                                                        <input type="text" class="form-control" placeholder="">
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <label>Exp. Month</label>
+                                                                        <select class="form-control ks-selectpicker">
+                                                                            <option value="">Month</option>
+                                                                            <option value='01'>January (01)</option>
+                                                                            <option value='02'>February (02)</option>
+                                                                            <option value='03'>March (03)</option>
+                                                                            <option value='04'>April (04)</option>
+                                                                            <option value='05'>May (05)</option>
+                                                                            <option value='06'>June (06)</option>
+                                                                            <option value='07'>July (07)</option>
+                                                                            <option value='08'>August (08)</option>
+                                                                            <option value='09'>September (09)</option>
+                                                                            <option value='10'>October (10)</option>
+                                                                            <option value='11'>November (11)</option>
+                                                                            <option value='12'>December (12)</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <label>Exp. Year</label>
+                                                                        <select class="form-control ks-selectpicker">
+                                                                            <option value="">Year</option>
+                                                                            <option value='2017'>2017</option>
+                                                                            <option value='2018'>2018</option>
+                                                                            <option value='2019'>2019</option>
+                                                                            <option value='2020'>2020</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="button" class="btn btn-primary">Save card</button>
+                                                            <a href="#" class="ks-cancel">Cancel</a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="ks-next-payment">
+                                                    <div>
+                                                        <span class="ks-bold">Next payment:</span> $8 on December 2016
+                                                    </div>
+                                                <span class="ks-auto-renew">
+                                                    Auto-renew:
+
+                                                    <label class="ks-checkbox-slider ks-on-off ks-primary">
+                                                        <input type="checkbox" value="1">
+                                                        <span class="ks-indicator"></span>
+                                                        <span class="ks-on">On</span>
+                                                        <span class="ks-off">Off</span>
+                                                    </label>
+                                                </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="ks-log-table">
+                                            <h3 class="ks-header ks-xs">
+                                                <span>Payment History</span>
+                                                <select class="ks-select-period ks-selectpicker">
+                                                    <option>September, 2016</option>
+                                                </select>
+                                            </h3>
+
+                                            <table class="table ks-payment-history ks-no-main-row">
+                                                <thead>
+                                                <tr>
+                                                    <th>Card</th>
+                                                    <th>Date</th>
+                                                    <th>Amount</th>
+                                                    <th>Invoice</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td width="1">
+                                                        <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+                                                    </td>
+                                                    <td>**** **** **** 1111</td>
+                                                    <td>September 8, 2016</td>
+                                                    <td class="ks-download">
+                                                        <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1">
+                                                        <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+                                                    </td>
+                                                    <td>**** **** **** 1111</td>
+                                                    <td>September 8, 2016</td>
+                                                    <td class="ks-download">
+                                                        <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1">
+                                                        <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+                                                    </td>
+                                                    <td>**** **** **** 1111</td>
+                                                    <td>September 8, 2016</td>
+                                                    <td class="ks-download">
+                                                        <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1">
+                                                        <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+                                                    </td>
+                                                    <td>**** **** **** 1111</td>
+                                                    <td>September 8, 2016</td>
+                                                    <td class="ks-download">
+                                                        <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1">
+                                                        <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+                                                    </td>
+                                                    <td>**** **** **** 1111</td>
+                                                    <td>September 8, 2016</td>
+                                                    <td class="ks-download">
+                                                        <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1">
+                                                        <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+                                                    </td>
+                                                    <td>**** **** **** 1111</td>
+                                                    <td>September 8, 2016</td>
+                                                    <td class="ks-download">
+                                                        <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/select2/js/select2.min.js"></script>
+<script src="libs/stacktable/stacktable.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('select').select2({
+            minimumResultsForSearch: Infinity
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+        $('.ks-payment-history').stacktable();
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

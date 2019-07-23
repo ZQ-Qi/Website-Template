@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Boo Admin - UI Elements - Buttons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+    <script src="assets/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body class="sidebar-left ">
+<div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="brand" href="javascript:void(0);"><img src="assets/img/demo/logo-brand.png"></a>
+                        <div class="search-global">
+                            <input id="globalSearch" class="search search-query input-medium" type="search">
+                            <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav user-menu visible-desktop">
+                                <li><a class="btn-glyph fontello-icon-edit tip-bc" href="javascript:void(0);" title="Messages"><span class="badge badge-important">8</span></a></li>
+                                <li><a class="btn-glyph fontello-icon-mail-1 tip-bc" href="javascript:void(0);" title="Emails"></a></li>
+                                <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Support"><span class="badge badge-important">4</span></a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li> <a href="dashboard-one.html">Dashboard</a> </li>
+                                <li class="active"> <a href="javascript:void(0);">Components</a> </li>
+                                <li> <a href="component-fullcalendar-demo.html"><span class="fontello-icon-calendar"></span>Calendar</a> </li>
+                                <li> <a href="javascript:void(0);"><span class="fontello-icon-users"></span>Contacts</a> </li>
+                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="component-form-demo.html">Demo Form</a></li>
+                                        <li><a href="component-widgets-remember.html">Remember</a></li>
+                                        <li><a href="component-widgets-users.html">User List</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">Next Update</li>
+                                        <li><a href="javascript:void(0);">Contacts</a></li>
+                                        <li><a href="javascript:void(0);">Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer">
+                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                <!-- // Resposive navigation -->
+                <div class="breadcrumbs-nav hidden-phone">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                        <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Table</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">Boo Admin </li>
+                    </ul>
+                </div>
+                <!-- // breadcrumbs --> 
+            </div>
+            <!-- // drawer --> 
+        </div>
+    </div>
+    <!-- // header-container -->
+    
+    <div id="main-container">
+        <div id="main-sidebar" class="sidebar sidebar-inverse">
+            <div class="sidebar-item">
+                <div class="media profile">
+                    <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
+                        <p class="data">Last Access: 16 May 15:30</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // sidebar item - profile -->
+            
+            <ul id="mainSideMenu" class="nav nav-list nav-side">
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor"></span> <i class="chevron fontello-icon-right-open-3"></i> Dashboards </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accDash">
+                        <li> <a href="dashboard-one.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 1 </a> </li>
+                        <li> <a href="dashboard-two.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 2 </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Dashboard -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon aweso-icon-list-alt"></span><i class="chevron fontello-icon-right-open-3"></i> Form </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accForms">
+                        <li> <a href="component-form-demo.html"> <i class="fontello-icon-right-dir"></i> Demo Form </a> </li>
+                        <li> <a href="component-form-elements.html"> <i class="fontello-icon-right-dir"></i> Form Element </a> </li>
+                        <li> <a href="component-form-extension.html"> <i class="fontello-icon-right-dir"></i> Form Extension</a> </li>
+                        <li> <a href="component-form-wizard.html"> <i class="fontello-icon-right-dir"></i> Form Wizard</a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Forms -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accComponents" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Components </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accComponents">
+                        <li> <a href="elements-notification.html"> <i class="fontello-icon-right-dir"></i> Notification </a> </li>
+                        <li> <a href="component-rangeslider.html"> <i class="fontello-icon-right-dir"></i> Rangeslider </a> </li>
+                        <li> <a href="component-file-upload.html"> <i class="fontello-icon-right-dir"></i> File upload </a> </li>
+                        <li> <a href="component-gallery.html"> <i class="fontello-icon-right-dir"></i> Gallery &amp; Image </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Components -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Tables </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accTables">
+                        <li> <a href="component-table.html"> <i class="fontello-icon-right-dir"></i> Base Table </a> </li>
+                        <li> <a href="component-table-boo.html"> <i class="fontello-icon-right-dir"></i> Boo Table </a> </li>
+                        <li> <a href="component-table-datatable.html"> <i class="fontello-icon-right-dir"></i> DataTable </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Tables -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accStatistics" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-chart"></span> <i class="chevron fontello-icon-right-open-3"></i> Statistics </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accStatistics">
+                        <li> <a href="statistic-flot.html"> <i class="fontello-icon-right-dir"></i> Charts </a> </li>
+                        <li> <a href="statistic-sparkline.html"> <i class="fontello-icon-right-dir"></i> Sparklines </a> </li>
+                        <li> <a href="statistic-circle.html"> <i class="fontello-icon-right-dir"></i> Circle </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Statistics -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accWidgets" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon  fontello-icon-window"></span> <i class="chevron fontello-icon-right-open-3"></i> Widgets </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accWidgets">
+                        <li> <a href="component-widget-style.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Style </a> </li>
+                        <li> <a href="component-widget-custom.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Custom </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Widgets -->
+                <li class="accordion-group">
+                    <div class="accordion-heading active"> <a href="#accButtons" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-puzzle"></span> <i class="chevron fontello-icon-right-open-3"></i> UI Elements </a> </div>
+                    <ul class="accordion-content nav nav-list collapse in" id="accButtons">
+                        <li class="active"> <a href="elements-button.html"> <i class="fontello-icon-right-dir"></i> Button </a> </li>
+                        <li> <a href="elements-icon-font.html"> <i class="fontello-icon-right-dir"></i> Iconic fonts </a> </li>
+                        <li> <a href="elements-icon-fugue-demo.html"> <i class="fontello-icon-right-dir"></i> Icon </a> </li>
+                        <li> <a href="elements-wells.html"> <i class="fontello-icon-right-dir"></i> Wells </a> </li>
+                        <li> <a href="elements-tabs.html"> <i class="fontello-icon-right-dir"></i> Tabs </a> </li>
+                        <li> <a href="elements-modals.html"> <i class="fontello-icon-right-dir"></i> Modal </a> </li>
+                        <li> <a href="elements-progressbar.html"> <i class="fontello-icon-right-dir"></i> Progressbar </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu UI Elements -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accCalendar" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Calendar </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accCalendar">
+                        <li> <a href="component-fullcalendar-demo.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Demo </a> </li>
+                        <li> <a href="component-fullcalendar.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Style </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Calendar -->
+            </ul>
+            <!-- // sidebar menu -->
+            
+            <div class="sidebar-item"></div>
+            <!-- // sidebar item --> 
+            
+        </div>
+        <!-- // sidebar -->
+        
+        <div id="main-content" class="main-content container-fluid">
+            <div class="row-fluid page-head">
+                <h2 class="page-title"><i class="fontello-icon-folder-2"></i> Tabbable & Tabs <small>Boo style</small></h2>
+                <div class="page-bar">
+                    <ul class="nav nav-tabs pull-right">
+                        <li class="active" id="button-tab"> <a href="#TabPage1" data-toggle="tab">Button & Button Group style</a> </li>
+                        <li id="info-tab"> <a href="#TabPage2" data-toggle="tab">Documentation</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // page head -->
+            
+            <div id="page-content" class="page-content tab-content">
+                <div class="tab-pane active" id="TabPage1">
+                    <h2><i class="fontello-icon-progress-0"></i> Button <small>.btn</small></h2>
+                    <p>This is a template for a simple marketing or informational website.</p>
+                    <hr class="strong margin-0x" />
+                    <div class="row-fluid">
+                        <section class="span12 margin-bottom30">
+                            <h3 class="simple-header">Buttons <small>default</small></h3>
+                            <ul class="btn-toolbar btn-demo margin-bottom30">
+                                <li><a class="btn" href="javascript:void(0);">Default</a></li>
+                                <li><a class="btn btn-primary" href="javascript:void(0);">Primary</a></li>
+                                <li><a class="btn btn-info" href="javascript:void(0);">Info</a></li>
+                                <li><a class="btn btn-success" href="javascript:void(0);">Success</a></li>
+                                <li><a class="btn btn-warning" href="javascript:void(0);">Warning</a></li>
+                                <li><a class="btn btn-danger" href="javascript:void(0);">Danger</a></li>
+                                <li><a class="btn btn-inverse" href="javascript:void(0);">Inverse</a></li>
+                            </ul>
+                            <h3 class="simple-header">Buttons <small>Boo</small></h3>
+                            <ul class="btn-toolbar btn-demo">
+                                <li><a class="btn btn-boo" href="javascript:void(0);">Boo</a></li>
+                                <li><a class="btn btn-blue" href="javascript:void(0);">Blue</a></li>
+                                <li><a class="btn btn-turgu" href="javascript:void(0);">Turgu</a></li>
+                                <li><a class="btn btn-green" href="javascript:void(0);">Green</a></li>
+                                <li><a class="btn btn-orange" href="javascript:void(0);">Orange</a></li>
+                                <li><a class="btn btn-red" href="javascript:void(0);">Red</a></li>
+                                <li><a class="btn btn-black" href="javascript:void(0);">Black</a></li>
+                            </ul>
+                            <ul class="btn-toolbar btn-demo margin-bottom30">
+                                <li><a class="btn btn-yellow" href="javascript:void(0);">Yellow</a></li>
+                                <li><a class="btn btn-sky" href="javascript:void(0);">Sky</a></li>
+                                <li><a class="btn btn-slategray" href="javascript:void(0);">Slategray</a></li>
+                                <li><a class="btn btn-redlight" href="javascript:void(0);">Redlight</a></li>
+                                <li><a class="btn btn-navi" href="javascript:void(0);">Navi</a></li>
+                            </ul>
+                            <h3 class="simple-header">Buttons <small>Brand</small></h3>
+                            <ul class="btn-toolbar btn-demo">
+                                <li><a class="btn btn-behance" href="javascript:void(0);">Behance</a></li>
+                                <li><a class="btn btn-dribbble" href="javascript:void(0);">Dribbble</a></li>
+                                <li><a class="btn btn-envato" href="javascript:void(0);">Envato</a></li>
+                                <li><a class="btn btn-facebook" href="javascript:void(0);"><i class="fontello-icon-facebook"></i> Facebook</a></li>
+                                <li><a class="btn btn-flickr" href="javascript:void(0);">Flickr</a></li>
+                                <li><a class="btn btn-github" href="javascript:void(0);"><i class="fontello-icon-github"></i> GitHub</a></li>
+                                <li><a class="btn btn-googlea" href="javascript:void(0);"><i class=" fontello-icon-googleplus-rect-1"></i> Google+</a></li>
+                            </ul>
+                            <ul class="btn-toolbar btn-demo margin-bottom30">
+                                <li><a class="btn btn-html" href="javascript:void(0);"> HTML5</a></li>
+                                <li><a class="btn btn-lastfm" href="javascript:void(0);"><i class="fontello-icon-lastfm"></i> LastFM</a></li>
+                                <li><a class="btn btn-linkedin" href="javascript:void(0);"><i class="fontello-icon-linkedin"></i> LinkedIn</a></li>
+                                <li><a class="btn btn-paypal" href="javascript:void(0);">PayPal</a></li>
+                                <li><a class="btn btn-skype" href="javascript:void(0);"><i class="fontello-icon-skype"></i> Skype</a></li>
+                                <li><a class="btn btn-wordpress" href="javascript:void(0);"><i class="fontello-icon-wordpress"></i> WordPress</a></li>
+                                <li><a class="btn btn-youtube" href="javascript:void(0);"><i class="fontello-icon-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <section class="span12 margin-bottom30">
+                            <h3 class="simple-header">Buttons <small>with text & icon</small></h3>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <div class="btn-toolbar btn-toolbar-demo"> <a class="btn btn-large" href="#">Button</a> <a class="btn btn-large" href="#"><i class="fontello-icon-publish"></i> Text with icon</a> <a class="btn btn-large btn-glyph" href="#"><i class="fontello-icon-publish"></i></a> <a class="btn btn-large btn-glyph" href="#"><i class="fontello-icon-cog-1"></i></a> </div>
+                                    <div class="btn-toolbar btn-toolbar-demo"> <a class="btn" href="#">Button</a> <a class="btn" href="#"><i class="fontello-icon-publish"></i> Text with icon</a> <a class="btn btn-glyph" href="#"><i class="fontello-icon-publish"></i></a> <a class="btn btn-glyph" href="#"><i class="fontello-icon-cog-1"></i></a> </div>
+                                    <div class="btn-toolbar btn-toolbar-demo"> <a class="btn btn-small" href="#">Button</a> <a class="btn btn-small" href="#"><i class="fontello-icon-publish"></i> Text with icon</a> <a class="btn btn-small btn-glyph" href="#"><i class="fontello-icon-publish"></i></a> <a class="btn btn-small btn-glyph" href="#"><i class="fontello-icon-cog-1"></i></a> </div>
+                                    <div class="btn-toolbar btn-toolbar-demo margin-bottom30"> <a class="btn btn-mini" href="#">Button</a> <a class="btn btn-mini" href="#"><i class="fontello-icon-publish"></i> Text with icon</a> <a class="btn btn-mini btn-glyph" href="#"><i class="fontello-icon-publish"></i></a> <a class="btn btn-mini btn-glyph" href="#"><i class="fontello-icon-cog-1"></i></a> </div>
+                                </div>
+                                <div class="span4 padding-top10"> <a class="btn btn-large btn-block" href="#">Button Block</a> <a class="btn btn-block" href="#"><i class="fontello-icon-publish"></i> Button Block with icon</a> <a class="btn btn-small btn-block" href="#">Button</a> <a class="btn btn-mini btn-block" href="#"><i class="fontello-icon-publish"></i> Text with icon</a> </div>
+                                <div class="span2 padding-top10"> <a class="btn btn-large btn-twitter btn-block" href="#"><i class="fontello-icon-twitter-bird-2"></i> Twitter</a> <a class="btn btn-facebook btn-block" href="#"><i class="fontello-icon-facebook-rect-2"></i> Facebook</a> <a class="btn btn-small btn-youtube btn-block" href="#"><i class="fontello-icon-youtube"></i> YouTube</a> <a class="btn btn-mini btn-yellow btn-block" href="#">Boo Boo Boo</a> </div>
+                            </div>
+                            <div class="widget-footer box-shadow-in">
+                                <div class="btn-toolbar padding-side"> <a class="btn btn-primary" href="#">View details <i class="fontello-icon-right-open-1"></i></a> <a class="btn btn-blue" href="#">View details <i class="fontello-icon-right-dir"></i></a> <a class="btn btn-sky" href="#"> View details &raquo;</a></div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <section class="span12 margin-bottom30">
+                            <h3 class="simple-header">Button dropdown menus <small>default</small></h3>
+                            <div class="btn-toolbar btn-group-demo">
+                                <div class="btn-group"> <a class="btn btn-large dropdown-toggle" data-toggle="dropdown" href="#"> Action <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-large"> Action </button>
+                                    <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-large btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i> <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-large btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar btn-group-demo">
+                                <div class="btn-group"> <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> Action <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn">Action</button>
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i> <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar btn-group-demo">
+                                <div class="btn-group"> <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#"> Action <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-small">Action</button>
+                                    <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-small btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i> <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-small btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar btn-group-demo">
+                                <div class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#"> Action <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-mini">Action</button>
+                                    <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-mini btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user"></i> <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-mini btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                            <div class="btn-toolbar pull-right">
+                                <div class="btn-group"> <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> Dropdown <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group dropup">
+                                    <button class="btn">Dropup</button>
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group dropup">
+                                    <button class="btn">Right dropup</button>
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group dropup"> <a class="btn btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i> <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <section class="span12 margin-bottom30">
+                            <h3 class="simple-header">Button group <small>default</small></h3>
+                            <div class="row-fluid">
+                                <div class="span10">
+                                    <div class="btn-toolbar btn-group-demo">
+                                        <div class="btn-group">
+                                            <button class="btn btn-large">Left</button>
+                                            <button class="btn btn-large">Middle</button>
+                                            <button class="btn btn-large">Right</button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-large btn-glyph"><i class="fontello-icon-align-right"></i></button>
+                                            <button class="btn btn-large btn-glyph"><i class="fontello-icon-align-center"></i></button>
+                                            <button class="btn btn-large btn-glyph"><i class="fontello-icon-align-left"></i></button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-large">fermentum massa</button>
+                                            <button class="btn btn-large btn-glyph"><i class="fontello-icon-cancel-4"></i></button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-large btn-glyph"><i class="fontello-icon-plus-circle"></i></button>
+                                            <button class="btn btn-large">fermentum massa</button>
+                                            <button class="btn btn-large btn-glyph"><i class="fontello-icon-cancel-4"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="btn-toolbar btn-group-demo">
+                                        <div class="btn-group"> <a class="btn">Left</a> <a class="btn">Middle</a> <a class="btn">Right</a> </div>
+                                        <div class="btn-group"> <a class="btn btn-glyph"><i class="fontello-icon-align-right"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-align-center"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-align-left"></i></a> </div>
+                                        <div class="btn-group"> <a class="btn">fermentum massa</a> <a class="btn btn-glyph"><i class="fontello-icon-cancel-4"></i></a> </div>
+                                        <div class="btn-group"> <a class="btn btn-glyph"><i class="fontello-icon-plus-circle"></i></a> <a class="btn">fermentum massa</a> <a class="btn btn-glyph"><i class="fontello-icon-cancel-4"></i></a> </div>
+                                    </div>
+                                    <div class="btn-toolbar btn-group-demo">
+                                        <div class="btn-group">
+                                            <button class="btn btn-small">Left</button>
+                                            <button class="btn btn-small">Middle</button>
+                                            <button class="btn btn-small">Right</button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-small btn-glyph"><i class="fontello-icon-align-right"></i></button>
+                                            <button class="btn btn-small btn-glyph"><i class="fontello-icon-align-center"></i></button>
+                                            <button class="btn btn-small btn-glyph"><i class="fontello-icon-align-left"></i></button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-small">fermentum massa</button>
+                                            <button class="btn btn-small btn-glyph"><i class="fontello-icon-cancel-4"></i></button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-small btn-glyph"><i class="fontello-icon-plus-circle"></i></button>
+                                            <button class="btn btn-small">fermentum massa</button>
+                                            <button class="btn btn-small btn-glyph"><i class="fontello-icon-cancel-4"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="btn-toolbar btn-group-demo">
+                                        <div class="btn-group">
+                                            <button class="btn btn-mini">Left</button>
+                                            <button class="btn btn-mini">Middle</button>
+                                            <button class="btn btn-mini">Right</button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-mini btn-glyph"><i class="fontello-icon-align-right"></i></button>
+                                            <button class="btn btn-mini btn-glyph"><i class="fontello-icon-align-center"></i></button>
+                                            <button class="btn btn-mini btn-glyph"><i class="fontello-icon-align-left"></i></button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-mini">fermentum massa</button>
+                                            <button class="btn btn-mini btn-glyph"><i class="fontello-icon-cancel-4"></i></button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-mini btn-glyph"><i class="fontello-icon-plus-circle-2"></i></button>
+                                            <button class="btn btn-mini">fermentum massa</button>
+                                            <button class="btn btn-mini btn-glyph"><i class="fontello-icon-cancel-4"></i></button>
+                                        </div>
+                                    </div>
+                                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                                    <div class="btn-toolbar btn-group-demo">
+                                        <div class="btn-group"> <a class="btn btn-large btn-glyph"><i class="fontello-icon-search-5"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-pencil-1"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-reply-1"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-upload"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-download"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-star-2"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-plus-1"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-check"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-cog"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-target-2"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-location-1"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-comment-3"></i></a> </div>
+                                    </div>
+                                    <div class="btn-toolbar btn-group-demo">
+                                        <div class="btn-group"> <a class="btn btn-glyph"><i class="fugue-magnifier"></i></a> <a class="btn btn-glyph"><i class="fugue-pencil"></i></a> <a class="btn btn-glyph"><i class="fugue-arrow-curve-180-left"></i></a> <a class="btn btn-glyph"><i class="fugue-upload-cloud"></i></a> <a class="btn btn-glyph"><i class="fugue-download-cloud"></i></a> <a class="btn btn-glyph"><i class="fugue-star"></i></a> <a class="btn btn-glyph"><i class="fugue-plus"></i></a> <a class="btn btn-glyph"><i class="fugue-tick-button"></i></a> <a class="btn btn-glyph"><i class="fugue-hammer"></i></a> <a class="btn btn-glyph"><i class="fugue-target"></i></a> <a class="btn btn-glyph"><i class="fugue-marker"></i></a> <a class="btn btn-glyph"><i class="fugue-balloon-left"></i></a> </div>
+                                    </div>
+                                    <div class="btn-toolbar btn-group-demo">
+                                        <div class="btn-group"> <a class="btn btn-glyph"><i class="fontello-icon-to-start-1"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-fast-bw-1"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-play-1"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-pause-1"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-stop-1"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-eject-1"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-fast-fw-1"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-to-end-1"></i></a> </div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-glyph"><i class="fontello-icon-plus-circle-2"></i></button>
+                                            <button class="btn">fermentum massa</button>
+                                            <button class="btn btn-glyph"><i class="fontello-icon-cancel-4"></i></button>
+                                        </div>
+                                        <div class="btn-group"> <a class="btn"><i class="fontello-icon-doc-2 opaci55"></i> 12456789_2012.doc</a> <a class="btn btn-glyph"><i class="fontello-icon-search-5"></i></a> <a class="btn btn-glyph"><i class="fontello-icon-download"></i></a> </div>
+                                        <div class="btn-group dropdown"> <span class="btn">filter is set to something</span> <a class="btn btn-glyph"><i class="fontello-icon-cog-2"></i></a> <a class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </a>
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="javascript:void(0);">Sample text</a></li>
+                                                <li><a href="javascript:void(0);">Sample text</a></li>
+                                                <li><a href="javascript:void(0);">Sample text</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span1">
+                                    <div class="btn-group btn-group-vertical"> <a class="btn btn-large btn-glyph"><i class="fontello-icon-facebook-rect-2"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-twitter-bird-2"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-googleplus-rect-1"></i></a> <a class="btn btn-large btn-glyph"><i class="fontello-icon-linkedin-rect-1"></i></a> </div>
+                                </div>
+                                <div class="span1">
+                                    <div class="btn-group btn-group-vertical">
+                                        <button class="btn"><i class="fontello-icon-align-right"></i></button>
+                                        <button class="btn"><i class="fontello-icon-align-center"></i></button>
+                                        <button class="btn"><i class="fontello-icon-align-left"></i></button>
+                                        <button class="btn"><i class="fontello-icon-align-left"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <section class="span12 margin-bottom30">
+                            <h3 class="simple-header">Buttons & Dropdown <small>color variations</small></h3>
+                            <div class="btn-toolbar"> <a class="btn btn-large btn-green" href="#">Button</a> <a class="btn btn-large btn-green" href="#"><i class="fontello-icon-publish"></i> Text with icon</a> <a class="btn btn-large btn-green btn-glyph" href="#"><i class="fontello-icon-publish"></i></a> <a class="btn btn-large btn-green btn-glyph" href="#"><i class="fontello-icon-cog-1"></i></a>
+                                <div class="btn-group">
+                                    <button class="btn btn-large btn-green">1</button>
+                                    <button class="btn btn-large btn-green">2</button>
+                                    <button class="btn btn-large btn-green">3</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-large btn-glyph btn-green"><i class="fontello-icon-user-5"></i></button>
+                                    <button class="btn btn-large btn-glyph btn-green"><i class="fontello-icon-users"></i></button>
+                                    <button class="btn btn-large btn-glyph btn-green"><i class="fontello-icon-calendar"></i></button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-large btn-green">fermentum massa</button>
+                                    <button class="btn btn-large btn-glyph btn-yellow"><i class="fontello-icon-cancel-4"></i></button>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-large btn-yellow dropdown-toggle" data-toggle="dropdown" href="#"> Action <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-large btn-yellow"> Action </button>
+                                    <button class="btn btn-large btn-green dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-large btn-glyph btn-green dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i> <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-large btn-green btn-glyph dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar"> <a class="btn btn-sky" href="#">Button</a> <a class="btn btn-sky" href="#"><i class="fontello-icon-publish"></i> Text with icon</a> <a class="btn btn-glyph btn-sky" href="#"><i class="fontello-icon-publish"></i></a> <a class="btn btn-glyph btn-sky" href="#"><i class="fontello-icon-cog-1"></i></a>
+                                <div class="btn-group">
+                                    <button class="btn btn-sky">Text</button>
+                                    <button class="btn btn-sky">Text</button>
+                                    <button class="btn btn-sky">Text</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-glyph btn-sky"><i class="fontello-icon-user-5"></i></button>
+                                    <button class="btn btn-glyph btn-sky"><i class="fontello-icon-users"></i></button>
+                                    <button class="btn btn-glyph btn-sky"><i class="fontello-icon-calendar"></i></button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-sky">fermentum massa justo</button>
+                                    <button class="btn btn-glyph btn-blue"><i class="fontello-icon-cancel-4"></i></button>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-sky dropdown-toggle" data-toggle="dropdown" href="#"> Action <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-sky">Action</button>
+                                    <button class="btn btn-blue dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-glyph btn-sky dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i> <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-glyph btn-sky dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar"> <a class="btn btn-small btn-boo" href="#">Button</a> <a class="btn btn-small btn-boo" href="#"><i class="fontello-icon-publish";></i> Text with icon</a> <a class="btn btn-small btn-boo btn-glyph" href="#"><i class="fontello-icon-publish"></i></a> <a class="btn btn-small btn-boo btn-glyph" href="#"><i class="fontello-icon-cog-1"></i></a>
+                                <div class="btn-group">
+                                    <button class="btn btn-small btn-boo">Text</button>
+                                    <button class="btn btn-small btn-boo">Text</button>
+                                    <button class="btn btn-small btn-boo">Text</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-small btn-glyph btn-boo"><i class="fontello-icon-user-5"></i></button>
+                                    <button class="btn btn-small btn-glyph btn-boo"><i class="fontello-icon-users"></i></button>
+                                    <button class="btn btn-small btn-glyph btn-boo"><i class="fontello-icon-calendar"></i></button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-small btn-boo">fermentum massa justo</button>
+                                    <button class="btn btn-small btn-glyph btn-red"><i class="fontello-icon-cancel-4"></i></button>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-small btn-boo dropdown-toggle" data-toggle="dropdown" href="#"> Action <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-small btn-boo">Action</button>
+                                    <button class="btn btn-small btn-red dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-small btn-glyph btn-boo dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i> <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-small btn-glyph btn-boo dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn-toolbar margin-bottom30"> <a class="btn btn-mini btn-black" href="#">Button</a> <a class="btn btn-mini btn-black" href="#"><i class="fontello-icon-publish"></i> Text with icon</a> <a class="btn btn-mini btn-glyph btn-black" href="#"><i class="fontello-icon-publish"></i></a> <a class="btn btn-mini btn-glyph btn-black" href="#"><i class="fontello-icon-cog-1"></i></a>
+                                <div class="btn-group">
+                                    <button class="btn btn-mini btn-black">Text</button>
+                                    <button class="btn btn-mini btn-black">Text</button>
+                                    <button class="btn btn-mini btn-black">Text</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-mini btn-glyph btn-black"><i class="fontello-icon-user"></i></button>
+                                    <button class="btn btn-mini btn-glyph btn-black"><i class="fontello-icon-users"></i></button>
+                                    <button class="btn btn-mini btn-glyph btn-black"><i class="fontello-icon-calendar"></i></button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-mini btn-navi">fermentum massa justo</button>
+                                    <button class="btn btn-mini btn-glyph btn-black"><i class="fontello-icon-cancel-4"></i></button>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-mini btn-black dropdown-toggle" data-toggle="dropdown" href="#"> Action <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-mini btn-black">Action</button>
+                                    <button class="btn btn-mini btn-yellow dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-mini btn-glyph btn-black dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user"></i> <span class="caret"></span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group"> <a class="btn btn-mini btn-glyph btn-black dropdown-toggle" data-toggle="dropdown" href="#"><i class="fontello-icon-user-5"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                        <li><a href="javascript:void(0);">Sample text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- // Example row --> 
+                </div>
+                <!-- // Tab 1 -->
+                
+                <div class="tab-pane" id="TabPage2">
+                    <div class="row-fluid"> 
+                        
+                        <!-- // widget --> 
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid"> 
+                        
+                        <!-- // widget --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid"> 
+                        
+                        <!-- // widget --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid"> 
+                        
+                        <!-- // widget --> 
+                        
+                    </div>
+                    <!-- // Example row --> 
+                </div>
+                <!-- // Tab 2 -->
+                
+                <div class="tab-pane" id="TabPage3">
+                    <div class="row-fluid"> </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid"> </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid"> </div>
+                    <!-- // Example row --> 
+                    
+                </div>
+                <!-- // Tab 3 --> 
+                
+            </div>
+            <!-- // page content --> 
+            
+        </div>
+        <!-- // main-content --> 
+        
+    </div>
+    <!-- // main-container  -->
+    
+    <footer id="footer-fix">
+        <div id="footer-sidebar" class="footer-sidebar">
+            <div class="navbar">
+                <div class="btn-toolbar"> <a class="btn btn-glyph btn-link" href="javascript:void(0);"><i class="fontello-icon-up-open-1"></i></a> </div>
+            </div>
+        </div>
+        <!-- // footer sidebar -->
+        
+        <div id="footer-content" class="footer-content">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <ul class="nav pull-left">
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnToggleSidebar" class="btn-glyph fontello-icon-resize-full-2 tip hidden-phone" href="javascript:void(0);" title="show hide sidebar"></a></li>
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnChangeSidebar" class="btn-glyph fontello-icon-login tip hidden-phone" href="javascript:void(0);" title="change sidebar position"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnChangeSidebarColor" class="btn-glyph fontello-icon-palette tip" href="javascript:void(0);" title="change sidebar color"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cw" href="javascript:void(0);"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="fontello-icon-home-3" href="dashboard-one.html"></a></li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-help-2 tip" href="javascript:void(0);" title="help to page"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cog-4 tip" href="javascript:void(0);" title="settings app"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnLogout" class="btn-glyph fontello-icon-logout-1 tip" href="javascript:void(0);" title="logout"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnScrollup" class="scrollup btn-glyph fontello-icon-up-open-1" href="javascript:void(0);"><span class="hidden-phone">Scroll</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // footer content --> 
+        
+    </footer>
+    <!-- // footer-fix  --> 
+    
+</div>
+<!-- // page-container  --> 
+
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/lib/jquery.js"></script> 
+<script src="assets/js/lib/jquery-ui.js"></script>
+<script src="assets/js/lib/jquery.cookie.js"></script> 
+<script src="assets/js/lib/jquery.date.js"></script> 
+<script src="assets/js/lib/jquery.mousewheel.js"></script> 
+<script src="assets/js/lib/jquery.load-image.min.js"></script>
+<script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+
+<!-- Plugins Bootstrap -->
+<script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+<script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script> 
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+<script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+<script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+<script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+<script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+<script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+<script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+ 
+
+<!-- Plugins Custom - Only example --> 
+<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>
+
+<!-- Plugins Custom - System --> 
+<script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+<script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+<!-- Plugins Custom - System info -->
+<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+<!-- Plugins Custom - Content -->
+<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+<!-- Plugins Custom - Component -->
+<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+<!-- Plugins Custom - Form -->
+<script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+<!-- Plugins Custom - Gallery --> 
+<script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+<script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+ 
+<!-- Plugins Tables --> 
+<script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+<!-- Plugins data visualization --> 
+<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+<script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/core.js"></script> 
+<script src="assets/js/application.js"></script> 
+
+<!-- Only This Demo Page --> 
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="bootstrap default admin template">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lockscreen</title>
+
+    <!-- START GLOBAL CSS -->
+    <link href="../../assets/global/plugins/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="../../assets/global/plugins/Waves/dist/waves.min.css" type="text/css" rel="stylesheet"/>
+    <!-- END GLOBAL CSS -->
+
+    <!-- START PAGE PLUG-IN CSS -->
+    <link rel="stylesheet" href="../../assets/icons_fonts/font-awesome/css/font-awesome.min.css"/>
+    <!-- END PAGE PLUG-IN CSS -->
+
+    <!-- START TEMPLATE GLOBAL CSS -->
+    <link href="../../assets/pages/lockscreen/css/user_lockscreen_v1.css" type="text/css" rel="stylesheet"/>
+    <!-- END TEMPLATE GLOBAL CSS -->
+
+    <!-- Start favicon ico -->
+    <link rel="icon" href="../../assets/favicon/prince.ico" type="image/x-icon"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon/prince-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/prince-180x180.png">
+    <!-- End favicon ico -->
+
+</head>
+<body>
+
+<div class="lockscreen-background">
+    <!--  START LOCKSCREEN -->
+    <div class="lockscreen-page">
+        <div class="main-lockscreen-contain">
+            <div class="lockscreen-form">
+                <img src="../../assets/global/images/prince_logo.png" alt="logo-image">
+                <h2>Welcome to the Prince</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing. Aenean ligula eget dolor aenean.</p>
+                <div class="lockscreen-me-bottom">
+                    <div class="goto-lockscreen">
+                        <div class="lockscreen-bottom-text">
+                            <p>Don't have an account?</p>
+                            <a href="#">Sign Up</a>
+                        </div>
+                        <button type="submit" onclick="openNav()" class="btn btn-lockscreen float-button-light">Unlock now</button>
+                    </div>
+                </div>
+
+                <div id="myNav" class="overlay">
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <div class="lockscreen-overlay-form">
+                        <div class="main-lockscreen-contain">
+                            <form id="form-validation" method="post">
+
+                                <div class="lockscreen-image">
+                                    <img src="../../assets/global/images/user2.jpg" alt="user image">
+                                    <h4>Joni Olenca</h4>
+                                </div>
+
+                                <div class="form-group">
+                                    <input required="required" type="password" id="input-password">
+                                    <label class="control-label" for="input-password">Enter Password</label><i class="bar"></i>
+                                </div>
+
+                                <div class="goto-lockscreen">
+                                    <div class="forgot-password-lockscreen">
+                                        <a href="#">
+                                            <i class="icon icon_lock"></i> Forgot password?
+                                        </a>
+                                    </div>
+                                    <button type="submit" class="btn btn-lockscreen float-button-light">Unlock</button>
+                                </div>
+
+                                <span class="media-text">Use another service</span>
+
+                                <div class="social-media-section">
+                                    <a class="social-hexagon">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a class="social-hexagon">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a class="social-hexagon">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  END LOCKSCREEN -->
+</div>
+
+<!-- START CORE JAVASCRIPT -->
+<script src="../../assets/global/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/global/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../assets/global/plugins/Waves/dist/waves.min.js"></script>
+<!-- END CORE JAVASCRIPT -->
+
+<!-- START PAGE JAVASCRIPT -->
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+
+    !(function ($) {
+        if (typeof Waves !== 'undefined') {
+            Waves.attach('.float-button-light', ['waves-button', 'waves-float', 'waves-light']);
+            Waves.init();
+        }
+    })(jQuery);
+</script>
+<!-- END PAGE JAVASCRIPT -->
+
+</body>
+</html>

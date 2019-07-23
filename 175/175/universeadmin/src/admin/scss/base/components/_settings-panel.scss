@@ -1,0 +1,96 @@
+/** BEGIN: settings panel */
+.settings-panel {
+  width: 290px;
+  box-shadow: -2px 0 5px 0 rgba(0,0,0,.06);
+  background: #fff;
+  position: fixed;
+  top: 0;
+  right: -290px;
+  height: 100%;
+  z-index: 9999;
+  transition: right $transition;
+
+  &.is-opened {
+    right: 0;
+  }
+
+  &__header {
+    position: relative;
+    padding: 21px 20px;
+    border-bottom: 1px solid rgba(#939daa, .15);
+  }
+
+  &__close {
+    color: #000;
+    font-size: 10px;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+  }
+
+  &__heading {
+    font-size: 20px;
+    margin-bottom: 3px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    color: #939daa;
+  }
+
+  &__layout-options {
+    padding: 20px;
+    border-bottom: 1px solid rgba(#939daa, .15);
+  }
+
+  &__theme-colors {
+    padding: 20px;
+  }
+
+  &__block-heading {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  &__layout-option {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.settings-panel-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  background: $color-lasur;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $box-shadow;
+  transition: background $transition;
+
+  &:hover {
+    background: darken($color-lasur, 5%);
+  }
+}
+
+.settings-panel-control__icon {
+  position: relative;
+  top: 1px;
+}
+
+@include mq(tablet, max) {
+  .settings-panel-control {
+    display: none;
+  }
+}
+/** END: settings panel */

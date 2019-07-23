@@ -1,0 +1,963 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/prism/prism.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/bootstrap-notify/bootstrap-notify.min.css"> <!-- customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Bootstrap Notify</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                <div class="container-fluid ks-rows-section">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="basic-example" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Basic Bootstrap Notify</h4>
+                                </div>
+                            </div>
+<div class="row">
+    <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify("Hello World");</code>
+</pre>
+    </div>
+</div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="passing-title" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4 class="demo-notify-header">Passing in a Title</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: "Welcome:",
+	message: "This plugin has been provided to you by ThemesAnytime"
+});</code>
+</pre>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="passing-html" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Passing HTML</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: "<strong>Welcome:</strong> ",
+	message: "This plugin has been provided to you by Robert McIntosh aka mouse0270"
+});</code>
+</pre>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-font-icon" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using a Font Icon</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	icon: 'la la-star',
+	message: "Everyone loves font icons! Use them in your notification!"
+});</code>
+</pre>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-image" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Image</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	icon: "img/growl_64x.png",
+	message: " I am using an image."
+},{
+	icon_type: 'image'
+});</code>
+</pre>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-url" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Url</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	message: "Check out my twitter account by clicking on this notification!",
+	url: "https://twitter.com/Mouse0270"
+});</code>
+</pre>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-primary" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Primary Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'primary'
+});</code>
+</pre>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-primary-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Primary Active Type</h4>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'primary-active'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-info" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Info Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'Bootstrap Notify uses Bootstrap Info Alert styling as its default setting.'
+},{
+	type: 'info'
+});</code>
+</pre>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-info-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Info Active Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'Bootstrap Notify uses Bootstrap Info Alert styling as its default setting.'
+},{
+	type: 'info-active'
+});</code>
+</pre>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-success" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Success Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'success'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-success-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Success Active Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'success-active'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-warning" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Warning Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'warning'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-warning-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Warning Active Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'warning-active'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-danger" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Danger Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'danger'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-danger-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Danger Active Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'danger-active'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-primary-solid" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Primary Solid Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'primary-solid'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-primary-solid-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Primary Solid Active Type</h4>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'primary-solid-active'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-info-solid" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Info Solid Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'Bootstrap Notify uses Bootstrap Info Alert styling as its default setting.'
+},{
+	type: 'info-solid'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-info-solid-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Info Solid Active Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'Bootstrap Notify uses Bootstrap Info Alert styling as its default setting.'
+},{
+	type: 'info-solid-active'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-success-solid" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Success Solid Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'success-solid'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-success-solid-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Success Active Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'success-solid-active'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-warning-solid" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Warning Solid Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'warning-solid'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row ">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-warning-solid-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Warning Solid Active Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'warning-solid-active'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-danger-solid" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Danger Solid Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'danger-solid'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button id="using-alert-danger-solid-active" class="btn btn-primary">Generate</button>
+                                </div>
+                                <div class="col-lg-10 d-flex align-items-center">
+                                    <h4>Using Bootstrap Alert Danger Solid Active Type</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+<pre>
+<code class="language-javascript">$.notify({
+	title: '<strong>Heads up!</strong>',
+	message: 'You can use any of bootstraps other alert styles as well by default.'
+},{
+	type: 'danger-solid-active'
+});</code>
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="libs/prism/prism.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('#basic-example').on('click', function() {
+            $.notify("Hello World", {
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#passing-title').on('click', function() {
+            $.notify({
+                title: "Welcome:",
+                message: "This plugin has been provided to you by ThemesAnytime"
+            }, {
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#passing-html').on('click', function() {
+            $.notify({
+                title: "<strong>Welcome:</strong> ",
+                message: "This plugin has been provided to you by ThemesAnytime"
+            }, {
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-font-icon').on('click', function() {
+            $.notify({
+                icon: 'la la-star',
+                message: "Everyone loves font icons! Use them in your notification!"
+            }, {
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-image').on('click', function() {
+            $.notify({
+                icon: "assets/img/laptop.png",
+                message: " I am using an image."
+            },{
+                icon_type: 'image',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-url').on('click', function() {
+            $.notify({
+                message: "Check out my twitter account by clicking on this notification!",
+                url: "https://twitter.com/Mouse0270"
+            }, {
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-primary').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'primary',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-primary-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'primary-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-primary-solid').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'primary-solid',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-primary-solid-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'primary-solid-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-info').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'Bootstrap Notify uses Bootstrap Info Alert styling as its default setting.'
+            },{
+                type: 'info',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-info-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'Bootstrap Notify uses Bootstrap Info Alert styling as its default setting.'
+            },{
+                type: 'info-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-info-solid').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'Bootstrap Notify uses Bootstrap Info Alert styling as its default setting.'
+            },{
+                type: 'info-solid',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-info-solid-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'Bootstrap Notify uses Bootstrap Info Alert styling as its default setting.'
+            },{
+                type: 'info-solid-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-success').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'success',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-success-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'success-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-success-solid').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'success-solid',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-success-solid-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'success-solid-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-warning').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'warning',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-warning-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'warning-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-warning-solid').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'warning-solid',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-warning-solid-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'warning-solid-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-danger').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'danger',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-danger-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'danger-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-danger-solid').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'danger-solid',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+
+        $('#using-alert-danger-solid-active').on('click', function() {
+            $.notify({
+                title: '<strong>Heads up!</strong>',
+                message: 'You can use any of bootstraps other alert styles as well by default.'
+            },{
+                type: 'danger-solid-active',
+                offset: {
+                    x: 20,
+                    y: 70
+                }
+            });
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

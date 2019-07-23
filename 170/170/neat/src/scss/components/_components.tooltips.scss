@@ -1,0 +1,131 @@
+/* ==========================================================================
+   #TOOLTIPS
+   ========================================================================== */
+
+/**
+ * Simple, css-only based tooltips.
+ *
+ * 1. Prevent other components from overrideing tooltip's line-height.
+ * 2. Get tooltip text from `aria-label` and place it using `content` property.
+ */
+
+.c-tooltip {
+	position: relative;
+
+	// tooltip content
+	&::after {
+		position: absolute;
+		max-height: $tooltip-max-height;
+		padding: $tooltip-padding;
+		transition: opacity 0.3s;
+		border-radius: $tooltip-border-radius;
+		background-color: $tooltip-background-color;
+		color: $tooltip-color;
+		font-size: $tooltip-font-size;
+		font-weight: $tooltip-font-weight;
+		line-height: 1.5; /* [1] */
+		text-align: center;
+		text-transform: none;
+		white-space: nowrap;
+		content: attr(aria-label); /* [2] */
+		opacity: 0;
+		overflow: hidden;
+		visibility: hidden;
+		z-index: 200;
+	}
+
+	// tooltip arrow
+	&::before {
+		position: absolute;
+		transition: opacity 0.3s;
+		border: $tooltip-arrow-border-width solid transparent;
+		content: " ";
+		opacity: 0;
+		visibility: hidden;
+		z-index: $z-index-200;
+	}
+
+	&:hover {
+		&::before,
+		&::after {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+
+/* Direction variants
+   ========================================================================== */
+
+.c-tooltip--top {
+
+	// tooltip content
+	&::after {
+		bottom: 100%;
+		left: 50%;
+		transform: translate(-50%, -12px);
+	}
+
+	// tooltip arrow
+	&::before {
+		bottom: 100%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		border-top-color: $tooltip-background-color;
+	}
+}
+
+.c-tooltip--bottom {
+
+	// tooltip content
+	&::after {
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, 12px);
+	}
+
+	// tooltip arrow
+	&::before {
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		border-bottom-color: $tooltip-background-color;
+	}
+}
+
+.c-tooltip--right {
+
+	// tooltip content
+	&::after {
+		top: 50%;
+		left: 100%;
+		transform: translate(12px, -50%);
+	}
+
+	// tooltip arrow
+	&::before {
+		top: 50%;
+		left: 100%;
+		transform: translate(0, -50%);
+		border-right-color: $tooltip-background-color;
+	}
+}
+
+.c-tooltip--left {
+
+	// tooltip content
+	&::after {
+		top: 50%;
+		right: 100%;
+		transform: translate(-12px, -50%);
+	}
+
+	// tooltip arrow
+	&::before {
+		top: 50%;
+		right: 100%;
+		transform: translate(0, -50%);
+		border-left-color: $tooltip-background-color;
+	}
+}

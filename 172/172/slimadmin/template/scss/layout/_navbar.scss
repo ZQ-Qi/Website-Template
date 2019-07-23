@@ -1,0 +1,324 @@
+/* ------------------------------------------------------ */
+/* ############### TEMPLATE NAVBAR STYLES ############### */
+/* ------------------------------------------------------ */
+
+.slim-navbar {
+  padding: 15px 0;
+  background-color: #fff;
+  border-bottom: 1px solid $gray-400;
+
+  .container { position: relative; }
+
+  .nav {
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  .nav-item {
+    flex: 1 1 0;
+    text-align: center;
+    position: static;
+
+    @include media-breakpoint-up(lg) {
+      flex: 1 1 auto;
+      position: relative;
+    }
+
+    @include media-breakpoint-up(xl) {
+      flex: 1 1 0;
+    }
+
+    &.active {
+      .nav-link {
+        background-color: theme-color('primary');
+        @include gradient-x($blue,lighten($darkblue,15%));
+        border-width: 0;
+        color: #fff;
+
+        .icon { color: #fff; }
+      }
+
+      + .nav-item {
+        .nav-link { border-left-width: 0; }
+      }
+    }
+
+    &:last-child {
+      .nav-link { border-right-width: 1px; }
+    }
+
+    &.with-sub {
+      > a {
+        &::after {
+          content: '\f107';
+          font-family: 'FontAwesome';
+          font-weight: 400;
+          margin-left: 4px;
+          margin-top: 0;
+          opacity: .7;
+
+          @include media-breakpoint-up(lg) {
+            margin-left: 8px;
+          }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        > .sub-item { display: block; }
+      }
+    }
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: .7px;
+    font-weight: 500;
+    color: darken($gray-600, 3%);
+    height: $slim-navbar-height;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid $gray-300;
+    border-right-width: 0;
+
+    .icon {
+      font-size: 24px;
+      line-height: 0;
+      color: theme-color('primary');
+
+      @include media-breakpoint-up(lg) {
+        margin-right: 8px;
+      }
+
+      &.ion-ios-analytics-outline {
+        font-size: 22px;
+        margin-top: -2px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $gray-800;
+      background-color: $gray-100;
+    }
+
+    &.active { border-color: theme-color('primary'); }
+
+    .square-8 {
+      margin-left: 3px;
+      background-color: theme-color('primary');
+      @include border-radius(100%);
+      @include media-breakpoint-up(lg) { margin-left: 5px; }
+    }
+
+    span:not(.square-8) {
+      display: none;
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+  }
+
+  .mega-dropdown {
+    position: static;
+
+    .sub-item {
+      padding: 25px;
+      width: 100%;
+
+      a {
+        padding: 5px 9px;
+        margin: 0;
+      }
+
+      .section-label {
+        color: theme-color('primary');
+        border-bottom: 1px solid $gray-200;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        font-size: 11px;
+        font-weight: 500;
+        font-family: $font-family-base;
+        text-align: left;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .sub-item {
+    background-color: #fff;
+    position: absolute;
+    top: $slim-navbar-height;
+    left: 0;
+    border: 1px solid $gray-400;
+    border-top: 0;
+    padding: 10px 0;
+    box-shadow: 0 2px 3px rgba($gray-600,.16);
+    width: 100%;
+    font-size: 13px;
+    font-weight: 400;
+    z-index: 1000;
+    display: none;
+
+    @include media-breakpoint-up(lg) { width: 200px; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+
+      a {
+        display: block;
+        padding: 6px 10px;
+        margin: 0 10px;
+        color: $gray-700;
+
+        &:hover,
+        &:focus {
+          color: theme-color('primary');
+          background-color: darken($gray-100, 2%);
+        }
+      }
+    }
+
+    .sub-with-sub {
+      position: relative;
+
+      &::after {
+        content: '\f125';
+        font-family: "Ionicons";
+        font-size: 10px;
+        position: absolute;
+        top: 9px;
+        right: 20px;
+        color: $gray-500;
+      }
+
+      ul {
+        display: none;
+        padding-left: 15px;
+
+        @include media-breakpoint-up(lg) {
+          padding-left: 0;
+          position: absolute;
+          top: 0;
+          right: -200px;
+          width: 200px;
+          background-color: #fff;
+          border:  1px solid $gray-400;
+          padding: 10px 0;
+          box-shadow: 0 2px 3px rgba($gray-600,.16);
+        }
+
+        a {
+          display: block;
+          padding: 6px 10px;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        ul { display: block; }
+      }
+    }
+  }
+}
+
+
+/*************************************/
+/************ RTL SUPPORT ************/
+
+[dir="rtl"] {
+  .slim-navbar {
+    .nav-item {
+      &.active {
+        + .nav-item {
+          .nav-link {
+            border-right-width: 0;
+          }
+        }
+      }
+
+      &:last-child {
+        .nav-link { border-left-width: 1px; }
+      }
+
+      &.with-sub {
+        > a {
+          &::after {
+            margin-left: 0;
+            margin-right: 4px;
+
+            @include media-breakpoint-up(lg) {
+              margin-right: 8px;
+            }
+          }
+        }
+
+        &:hover,
+        &:focus {
+          > .sub-item { display: block; }
+        }
+      }
+    }
+
+    .nav-link {
+      border-right-width: 1px;
+      border-left-width: 0;;
+
+      .icon {
+        @include media-breakpoint-up(lg) {
+          margin-right: 0;
+          margin-left: 8px;
+        }
+      }
+
+      .square-8 {
+        margin-left: 0;
+        margin-right: 3px;
+
+        @include media-breakpoint-up(lg) {
+          margin-left: 0;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .mega-dropdown {
+      .sub-item {
+        .section-label { text-align: right; }
+      }
+    }
+
+    .sub-item {
+      left: auto;
+      right: 0;
+
+      ul { text-align: right; }
+
+      .sub-with-sub {
+        &::after {
+          left: 20px;
+          right: auto;
+        }
+
+        ul {
+          padding-left: 0;
+          padding-right: 15px;
+
+          @include media-breakpoint-up(lg) {
+            padding-right: 0;
+            right: auto;
+            left: -200px;
+          }
+        }
+      }
+    }
+  }
+}

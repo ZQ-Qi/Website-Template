@@ -1,0 +1,56 @@
+/** BEGIN: tooltip */
+.tooltip {
+  font-size: 100%;
+
+  &.show {
+    opacity: 1;
+  }
+
+  &.bs-tooltip-top {
+    .arrow {
+      &::before {
+        border-top-color: $color-gray-dark;
+      }
+    }
+  }
+
+  &.bs-tooltip-bottom {
+    .arrow {
+      &::before {
+        border-bottom-color: $color-gray-dark;
+      }
+    }
+  }
+
+  &.bs-tooltip-left {
+    .arrow {
+      &::before {
+        border-left-color: $color-gray-dark;
+      }
+    }
+  }
+
+  &.bs-tooltip-right {
+    .arrow {
+      &::before {
+        border-right-color: $color-gray-dark;
+      }
+    }
+  }
+}
+
+.tooltip-inner {
+  max-width: 132px;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: $border-radius;
+  background-color: $color-gray-dark;
+  opacity: 1;
+}
+
+.tooltip-top {
+  .tooltip-inner {
+    transform: translateY(5px);
+  }
+}
+/** END: tooltip */

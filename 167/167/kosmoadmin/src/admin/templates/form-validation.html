@@ -1,0 +1,514 @@
+@@include('./_partials/header_start.html')
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Form Validation</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-content-nav">
+                <div class="ks-nav">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-basic-demo">Basic Demo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-length">Length</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-numbers">Numbers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-email">E-mail</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-url">Url</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-url">Date</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-alphanumeric">Alphanumeric</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-checkboxes-group">Checkboxes group</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-regexp">Regexp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-character-count-down">Character count down</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-display-help-text">Display help text</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-validation-input-suggestions">Input suggestions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ks-nav-body">
+                    <div class="ks-nav-body-wrapper">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h4 id="form-validation-basic-demo">Basic Demo</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>E-mail</label>
+                                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" data-validation="email">
+                                                    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>User Name</label>
+                                                    <input type="text"
+                                                           class="form-control"
+                                                           placeholder="Enter User Name"
+                                                           data-validation="length alphanumeric"
+                                                           data-validation-length="3-12"
+                                                           data-validation-error-msg="User name has to be an alphanumeric value (3-12 chars)">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Password</label>
+                                                    <input type="password"
+                                                           class="form-control"
+                                                           placeholder="Enter Password"
+                                                           data-validation="strength"
+                                                           data-validation-strength="2">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Password Repeat</label>
+                                                    <input type="password"
+                                                           class="form-control"
+                                                           placeholder="Repeat Password"
+                                                           data-validation="confirmation">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Birth date</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="Birth date"
+                                                           data-validation="birthdate"
+                                                           data-validation-help="yyyy-mm-dd">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Country</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="Birth date"
+                                                           data-validation="country">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Profile Image</label>
+                                                    <button class="btn btn-primary ks-btn-file">
+                                                        <span class="la la-cloud-upload ks-icon"></span>
+                                                        <span class="ks-text">Choose file</span>
+                                                        <input type="file"
+                                                               data-validation="mime size required"
+                                                               data-validation-allowing="jpg, png"
+                                                               data-validation-max-size="300kb"
+                                                               data-validation-error-msg-required="No image selected">
+                                                    </button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c1" type="checkbox" class="custom-control-input"
+                                                               data-validation="required"
+                                                               data-validation-error-msg="You have to agree to our terms">
+                                                        <label class="custom-control-label" for="c1">Custom checkbox</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-numbers">Numbers</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form action="">
+                                                <div class="form-group">
+                                                    <label>Any numerical value</label>
+                                                    <input class="form-control" type="text" data-validation="number">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Only allowing float values</label>
+                                                    <input class="form-control" type="text"
+                                                           data-validation="number"
+                                                           data-validation-allowing="float">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Allowing float values and negative values</label>
+                                                    <input class="form-control" type="text"
+                                                           data-validation="number"
+                                                           data-validation-allowing="float,negative">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Validate float number with comma separated decimals</label>
+                                                    <input class="form-control" type="text"
+                                                           data-validation="number"
+                                                           data-validation-allowing="float"
+                                                           data-validation-decimal-separator=",">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Only allowing numbers from 1 to 100</label>
+                                                    <input class="form-control" type="text"
+                                                           data-validation="number"
+                                                           data-validation-allowing="range[1;100]">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Only allowing numbers from -50 to 30</label>
+                                                    <input class="form-control" type="text"
+                                                           data-validation="number"
+                                                           data-validation-allowing="range[-50;30],negative">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Only allowing numbers from 0.05 to 0.5</label>
+                                                    <input class="form-control" type="text"
+                                                           data-validation="number"
+                                                           data-validation-allowing="range[0.05;0.5],float">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-checkboxes-group">Checkboxes Group Validator</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Require checkboxes in this group, min1</label>
+                                                    <div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c2" type="checkbox" class="custom-control-input" name="newsletters[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="min1">
+                                                            <label class="custom-control-label" for="c2">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-2">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c3" type="checkbox" class="custom-control-input" name="newsletters[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="min1">
+                                                            <label class="custom-control-label" for="c3">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Require checkboxes in this group, max3</label>
+                                                    <div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c4" type="checkbox" class="custom-control-input" name="tasks[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="max3">
+                                                            <label class="custom-control-label" for="c4">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-2">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c5" type="checkbox" class="custom-control-input" name="tasks[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="max3">
+                                                            <label class="custom-control-label" for="c5">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-2">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c6" type="checkbox" class="custom-control-input" name="tasks[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="max3">
+                                                            <label class="custom-control-label" for="c6">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-2">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c7" type="checkbox" class="custom-control-input" name="tasks[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="max3">
+                                                            <label class="custom-control-label" for="c7">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Require checkboxes in this group, min1, max3</label>
+                                                    <div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c8" type="checkbox" class="custom-control-input" name="labels[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="1-3">
+                                                            <label class="custom-control-label" for="c8">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-2">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c9" type="checkbox" class="custom-control-input" name="labels[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="1-3">
+                                                            <label class="custom-control-label" for="c9">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-2">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c10" type="checkbox" class="custom-control-input" name="labels[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="1-3">
+                                                            <label class="custom-control-label" for="c10">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-2">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input id="c11" type="checkbox" class="custom-control-input" name="labels[]"
+                                                                   data-validation="checkbox_group"
+                                                                   data-validation-qty="1-3">
+                                                            <label class="custom-control-label" for="c11">Custom checkbox</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-display-help-text">Display help text</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Why not?</label>
+                                                    <input name="why" class="form-control"
+                                                           data-validation-help="Please give us some more information">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-input-suggestions">Input suggestions</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>White, Green, Blue, Black, Brown?</label>
+                                                    <input name="why" class="form-control"
+                                                           data-suggestions="White, Green, Blue, Black, Brown">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4 id="form-validation-length">Length Validator</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Max 100 characters</label>
+                                                    <input type="text" class="form-control" data-validation="length" data-validation-length="max100">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Minimum 20 characters</label>
+                                                    <input type="text" class="form-control" data-validation="length" data-validation-length="min20">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>No less than 50 characters and no more than 200 characters</label>
+                                                    <input type="text" class="form-control" data-validation="length" data-validation-length="50-200">
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control" multiple="multiple" size="5"
+                                                            data-validation="length"
+                                                            data-validation-length="min2">
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-email">E-mail Validator</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>E-mail</label>
+                                                    <input type="email" class="form-control" data-validation="email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-url">Url Validator</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Url</label>
+                                                    <input type="text" class="form-control" data-validation="url">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-date">Date Validator</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Validate date formatted yyyy-mm-dd</label>
+                                                    <input type="text" class="form-control" data-validation="date">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Validate date formatted yyyy-mm-dd but don't require leading zeros</label>
+                                                    <input type="text" class="form-control"
+                                                           data-validation="date"
+                                                           data-validation-require-leading-zero="false">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Validate date formatted dd/mm/yyyy</label>
+                                                    <input type="text" class="form-control"
+                                                           data-validation="date"
+                                                           data-validation-format="dd/mm/yyyy">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-alphanumeric">Alphanumeric Validator</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>This input requires an answer that contains only letters a-z and/or numbers</label>
+                                                    <input type="text" class="form-control" data-validation="alphanumeric">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>This input requires the same as the one above but it also allows hyphen and underscore</label>
+                                                    <input type="text" class="form-control" data-validation="alphanumeric" data-validation-allowing="-_">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-regexp">Regexp Validator</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>This input would only allow lowercase letters a-z</label>
+                                                    <input type="text" class="form-control" data-validation="custom" data-validation-regexp="^([a-z]+)$">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-character-count-down">Character count down</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>History (<span id="ks-maxlength-label">50</span> characters left)</label>
+                                                    <textarea rows="3" id="ks-maxlength-area" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <h4 id="form-validation-ignoring-characters">Ignoring characters</h4>
+                                    <div class="card panel">
+                                        <div class="card-block">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Make it optional to end the amount with a dollar-sign</label>
+                                                    <input class="form-control"
+                                                           data-validation="number"
+                                                           data-validation-ignore="$">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                                    <button type="reset" class="btn btn-outline-primary ks-light">Reset</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/jquery-form-validator/jquery.form-validator.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $.validate({
+            modules : 'location, date, security, file, validate_strength',
+            onModulesLoaded : function() {
+
+            }
+        });
+        $('#ks-maxlength-area').restrictLength($('#ks-maxlength-label'));
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

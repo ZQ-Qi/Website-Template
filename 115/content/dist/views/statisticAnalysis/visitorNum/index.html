@@ -1,0 +1,40 @@
+<title>访问人数</title>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">列宽自动分配</div>
+                <div class="layui-card-body">
+                    <table class="layui-hide" id="test-table-autowidth"></table>
+                    <div style="margin-top: 20px;">
+                        <span style="margin-right: 20px;"><b>统计:</b></span>
+                        <span style="margin-right: 10px;">IP: 23500</span>
+                        <span style="margin-right: 10px;">用户浏览量(UV): 978</span>
+                        <span style="margin-right: 10px;">页面浏览量(PV): 345634545</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['admin', 'table'], function () {
+        var table = layui.table;
+
+        table.render({
+            elem: '#test-table-autowidth'
+            , url: './content/json/statisticAnalysis/stat.js'
+            , cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            , cols: [[
+                {field: 'id', title: 'ID', sort: true}
+                , {field: 'channel', title: '渠道'} //width 支持：数字、百分比和不填写。你还可以通过 minWidth 参数局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                , {field: 'ip', title: 'IP', sort: true, align: 'right'} //单元格内容水平居中
+                , {field: 'uv', title: '用户浏览量(UV)', sort: true, align: 'right'}
+                , {field: 'pv', title: '页面浏览量(PV)', sort: true, align: 'right'}
+            ]]
+        });
+
+    });
+</script>

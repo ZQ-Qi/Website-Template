@@ -1,0 +1,232 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Global Settings / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Global Settings</h2>
+    </div>
+  </div>
+  <div class="main-container container-heading-bordered">
+    <h2 class="container-heading">App Settings</h2>
+    <div class="container-body global-settings">
+      <div class="row global-settings__block">
+        <div class="col-lg-4">
+          <h5 class="global-settings__block-heading">System</h5>
+          <div class="global-settings__block-desc">
+            Configure external fees and email that will be used as default address for notifications.
+          </div>
+          <div class="global-settings__block-links">
+            <a href="#" class="global-settings__block-link link-info">Lorem Ipsum is simply dummy text?</a>
+            <a href="#" class="global-settings__block-link link-info">It is a long established fact that?</a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <form class="global-settings__form">
+            <h6 class="global-settings__form-heading">General Settings</h6>
+            <div class="form-group row">
+              <label for="gs-email" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" id="gs-email" placeholder="" value="settings@example.com">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="gs-commission-charges" class="col-sm-2 col-form-label">Commission Charges</label>
+              <div class="col-sm-10">
+                <div class="custom-control custom-checkbox">
+                  <input id="gs-commission-charges" type="checkbox" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="gs-commission-charges">Take into account App commission charges (30%)</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="gs-tracking-experience" class="col-sm-2 col-form-label">Tracking Experience</label>
+              <div class="col-sm-10">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <input type="email" class="form-control" id="gs-tracking-experience" placeholder="" value="$0.00">
+                  </div>
+                  <div class="col-sm-10 form-text-inline">
+                    per each install
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row global-settings__form-actions">
+              <div class="col-sm-2">
+                <button type="button" class="btn btn-info">Save Changes</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row global-settings__block">
+        <div class="col-lg-4">
+          <h5 class="global-settings__block-heading">Upload Files</h5>
+          <div class="global-settings__block-desc">
+            Last updated Aug 12, 2019 12:32 PM
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <form class="global-settings__form form-upload"> <!-- is-dragover -->
+            <div class="form-upload__drop-area">
+              <span class="ua-icon-form-upload-outline form-upload__drop-icon"></span>
+              <span>Drop document here or <a href="#" class="link-info">choose file</a> to upload app statistics</span>
+            </div>
+            <div class="form-upload__uploading-area">
+              <div class="form-upload__uploading-item">
+                <span class="ua-icon-form-upload-solid form-upload__uploading-item-icon"></span>
+                <div class="form-upload__uploading-item-content">
+                  <div class="form-upload__uploading-item-header">
+                    <div class="form-upload__uploading-item-name">Uploading report_file.csv</div>
+                    <div class="form-upload__uploading-item-during-time">&lt; 1 minute left</div>
+                  </div>
+                  <div class="progress progress-xs mb-0">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-upload__uploading-item">
+                <span class="ua-icon-form-upload-solid form-upload__uploading-item-icon"></span>
+                <div class="form-upload__uploading-item-content">
+                  <div class="form-upload__uploading-item-header">
+                    <div class="form-upload__uploading-item-name">Uploading report_file2.xls</div>
+                    <div class="form-upload__uploading-item-during-time">&lt; 3 minutes left</div>
+                  </div>
+                  <div class="progress progress-xs mb-0">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 25%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row global-settings__block">
+        <div class="col-lg-4">
+          <h5 class="global-settings__block-heading">Ads Accounts</h5>
+          <div class="global-settings__block-desc">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </div>
+          <div class="global-settings__block-links">
+            <a href="#" class="global-settings__block-link link-info">How to enable or disable ads account?</a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <form class="global-settings__form">
+            <div class="form-group mb-0">
+              <div class="row global-settings__form-row">
+                <div class="col-sm-10">
+                  <div class="global-settings__form-ads-account">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r1">
+                      <label class="custom-control-label" for="r1">Joshua Moody</label>
+                    </div>
+                    <div class="text-muted">Added May 21, 2017</div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <button type="button" class="btn btn-block btn-block btn-enabled">Enabled</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="global-settings__form-ads-account">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Bernard Rhodes</label>
+                    </div>
+                    <div class="text-muted">Added May 20, 2017</div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <button type="button" class="btn btn-block btn-block btn-disabled">Enabled</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row global-settings__block">
+        <div class="col-lg-4">
+          <h5 class="global-settings__block-heading">Billing</h5>
+          <div class="global-settings__block-desc">
+            Setup your billing data and payment details.
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <form class="global-settings__form">
+            <h6 class="global-settings__form-heading">Billing Information</h6>
+            <div class="form-group row">
+              <label for="gs-billing-fullname" class="col-sm-2 col-form-label">Full Name</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="gs-billing-fullname" placeholder="" value="Martin Fauler">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="gs-billing-phone" class="col-sm-2 col-form-label">Phone</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="gs-billing-phone" placeholder="" value="+1 (222) 555-555-5555">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="gs-billing-zipcode" class="col-sm-2 col-form-label">Zip Code</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="gs-billing-zipcode" placeholder="Enter Zip Code" value="">
+              </div>
+            </div>
+            <div class="form-group row global-settings__form-actions">
+              <div class="col-sm-2">
+                <button type="button" class="btn btn-info">Save Changes</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row global-settings__block">
+        <div class="col-lg-4">
+          <h5 class="global-settings__block-heading">Security Settings</h5>
+          <div class="global-settings__block-desc">
+            Do not use simple password. It must contains at least 6 characters.
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <form class="global-settings__form">
+            <h6 class="global-settings__form-heading">Password</h6>
+            <div class="form-group row">
+              <label for="gs-security-old-password" class="col-sm-2 col-form-label">Old Password</label>
+              <div class="col-sm-6">
+                <input type="password" class="form-control" id="gs-security-old-password" placeholder="Enter password" value="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="gs-security-new-password" class="col-sm-2 col-form-label">New Password</label>
+              <div class="col-sm-6">
+                <input type="password" class="form-control" id="gs-security-new-password" placeholder="At least 6 charachers" value="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="gs-security-confirm-new-password" class="col-sm-2 col-form-label">Confirm Password</label>
+              <div class="col-sm-6">
+                <input type="password" class="form-control" id="gs-security-confirm-new-password" placeholder="Re-enter the new above" value="">
+              </div>
+            </div>
+            <div class="form-group row global-settings__form-actions">
+              <div class="col-sm-2">
+                <button type="button" class="btn btn-info">Save Changes</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="js/preview/global-settings.min.js"></script>
+{% endblock %}

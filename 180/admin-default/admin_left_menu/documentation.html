@@ -1,0 +1,973 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="bootstrap default admin template">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Documentation | Prince Admin Template</title>
+
+
+    <!-- Start global css -->
+    <link rel="stylesheet" href="../../assets/global/plugins/Waves/dist/waves.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/icons_fonts/font-awesome/css/font-awesome.min.css"/>
+    <!-- End global css -->
+
+    <!-- Start page plugin css -->
+
+    <!-- End page plugin css -->
+
+    <!-- Start template global css -->
+    <link href="../../assets/global/css/components.min.css" type="text/css" rel="stylesheet"/>
+    <!-- End template global css -->
+
+    <!-- Start layout css -->
+    <link rel="stylesheet" href="../../assets/layouts/layouts_left_menu/left_menu_layout.min.css"/>
+    <!-- End layout css -->
+
+    <!-- Start favicon ico -->
+    <link rel="icon" href="../../assets/favicon/prince.ico" type="image/x-icon"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon/prince-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/prince-180x180.png">
+    <!-- End favicon ico -->
+
+</head>
+<body class="nav-medium">
+<div class="container body">
+    <div class="main_container">
+            <!-- Start Loader -->
+<div class="page-loader">
+    <div class="preloader loading">
+        <span class="slice"></span>
+        <span class="slice"></span>
+        <span class="slice"></span>
+        <span class="slice"></span>
+        <span class="slice"></span>
+        <span class="slice"></span>
+    </div>
+</div>
+<!-- End Loader -->
+
+<!-- Start Scroll Top -->
+<a href="javascript:" id="scroll" style="display: none;"><span></span></a>
+<!-- End Scroll Top -->
+
+<!-- start Left Menu-->
+<div class="col-md-3 left_color">
+    <div class="left_color scroll-view">
+        <div class="navbar nav_title">
+            <a href="index.html" class="medium-logo">
+                <img src="../../assets/global/images/prince_logo.png" alt="medium-logo">
+            </a>
+            <a href="index.html" class="small-logo">
+                <img src="../../assets/global/images/prince_logo2.png" alt="small-logo">
+            </a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                    <li><a class="waves-effect waves-light" href="index.html"><i class="fa fa-home"></i> Dashboard</a></li>
+                    <li><a class="waves-effect waves-light"><i class="fa fa-desktop"></i>Basic UI Elements <span
+                                    class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li> <a class="waves-effect waves-light" href="accordions.html">Accordions</a></li>
+                            <li> <a class="waves-effect waves-light" href="buttons.html">Buttons</a></li>
+                            <li> <a class="waves-effect waves-light" href="dropdowns.html">Dropdowns</a></li>
+                            <li> <a class="waves-effect waves-light" href="modals.html">Modals</a></li>
+                            <li> <a class="waves-effect waves-light" href="modals_animation.html">Modals Animation</a></li>
+                            <li><a class="waves-effect waves-light" href="list.html">List</a></li>
+                            <li> <a class="waves-effect waves-light" href="progressbar.html">Progress bar</a></li>
+                            <li> <a class="waves-effect waves-light" href="tabs.html">Tabs</a></li>
+                            <li> <a class="waves-effect waves-light" href="typography.html">Typography</a></li>
+                            <li> <a class="waves-effect waves-light" href="tooltip_popover.html">Tooltips & Popover</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="waves-effect waves-light"><i class="fa fa-cube"></i>Advanced Elements <span
+                                    class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li> <a class="waves-effect waves-light" href="alerts.html">Alerts</a></li>
+                            <li> <a class="waves-effect waves-light" href="custom_scroll.html">Custom scroll</a></li>
+                            <li> <a class="waves-effect waves-light" href="timeline.html">Timeline</a></li>
+                            <li> <a class="waves-effect waves-light" href="carousel.html">Carousel</a></li>
+                        </ul>
+                    </li>
+                    <li><a  class="waves-effect waves-light"><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a class="waves-effect waves-light" href="general_elements.html">General Elements</a></li>
+                            <li><a class="waves-effect waves-light" href="form_input.html">Form Input</a></li>
+                            <li><a class="waves-effect waves-light" href="form_validation.html">Form Validation</a></li>
+                            <li><a class="waves-effect waves-light" href="form_mask.html">Form Mask</a></li>
+                            <li><a class="waves-effect waves-light" href="form_layouts.html">Form Layouts</a></li>
+                            <li><a class="waves-effect waves-light" href="form_wizard.html">Form Wizard</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="waves-effect waves-light" href="sweetalerts.html"><i class="fa fa-window-maximize"></i> Popups</a></li>
+                    <li><a class="waves-effect waves-light"><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a class="waves-effect waves-light" href="basic_table.html">Basic Table</a></li>
+                            <li><a class="waves-effect waves-light" href="edit_table.html">Edit Table</a></li>
+                            <li><a class="waves-effect waves-light" href="basic_datatable.html">Basic Datatable</a></li>
+                            <li><a class="waves-effect waves-light" href="advanced_datatable.html">Advanced Datatable</a></li>
+                            <li><a class="waves-effect waves-light" href="api_datatable.html">API Datatable</a></li>
+                            <li><a class="waves-effect waves-light" href="styling_datatable.html">Styling Datatable</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="waves-effect waves-light"><i class="fa fa-bar-chart-o"></i> Charts <span
+                                    class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a class="waves-effect waves-light" href="morris_chart.html">Morris Chart</a></li>
+                            <li><a class="waves-effect waves-light" href="sparkline_chart.html">Sparkline Chart</a></li>
+                            <li><a class="waves-effect waves-light" href="chartist_chart.html">Chartist</a></li>
+                            <li><a class="waves-effect waves-light" href="chart_js.html">Chart.js</a></li>
+                            <li><a class="waves-effect waves-light" href="easy_pie_chart.html">Easy Pie Chart</a></li>
+                            <li><a class="waves-effect waves-light" href="rickshaw_chart.html">Rickshaw Chart</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_section">
+                <h3>Live On</h3>
+                <ul class="nav side-menu">
+                    <li><a class="waves-effect waves-light"><i class="fa fa-anchor"></i> Icons <span
+                                    class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a class="waves-effect waves-light" href="font_awesome.html">Font awesome</a></li>
+                            <li><a class="waves-effect waves-light" href="material_icon.html">Material icon</a></li>
+                            <li><a class="waves-effect waves-light" href="themify_icon.html">Themify icon</a></li>
+                            <li><a class="waves-effect waves-light" href="flag_icon.html">Flag icon</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="waves-effect waves-light"><i class="fa fa-map-marker"></i> Maps <span
+                                    class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a class="waves-effect waves-light" href="map-google.html">Google Maps</a></li>
+                            <li><a class="waves-effect waves-light" href="map-vector.html">Vector Map</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="waves-effect waves-light"><i class="fa fa-user-circle-o"></i> User Pages <span
+                                    class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a class="waves-effect waves-light" href="user_login_v1.html">Login 1</a></li>
+                            <li><a class="waves-effect waves-light" href="user_login_v2.html">Login 2</a></li>
+                            <li><a class="waves-effect waves-light" href="user_register_v1.html">Register 1</a></li>
+                            <li><a class="waves-effect waves-light" href="user_register_v2.html">Register 2</a></li>
+                            <li><a class="waves-effect waves-light" href="user_forgot_password_v1.html">Forgot 1</a></li>
+                            <li><a class="waves-effect waves-light" href="user_forgot_password_v2.html">Forgot 2</a></li>
+                            <li><a class="waves-effect waves-light" href="user_lockscreen_v1.html">Lockscreen 1</a></li>
+                            <li><a class="waves-effect waves-light" href="user_lockscreen_v2.html">Lockscreen 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="waves-effect waves-light"><i class="fa fa-exclamation-circle"></i> Error Pages <span
+                                    class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a class="waves-effect waves-light" href="user_404.html">Error 404</a></li>
+                            <li><a class="waves-effect waves-light" href="user_400.html">Error 400</a></li>
+                            <li><a class="waves-effect waves-light" href="user_403.html">Error 403</a></li>
+                            <li><a class="waves-effect waves-light" href="user_405.html">Error 405</a></li>
+                            <li><a class="waves-effect waves-light" href="user_500.html">Error 500</a></li>
+                            <li><a class="waves-effect waves-light" href="user_503.html">Error 503</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="waves-effect waves-light"><i class="fa fa-balance-scale"></i> General Pages <span
+                                    class="fa fa-chevron-right"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a class="waves-effect waves-light" href="faq.html">FAQ</a></li>
+                            <li><a class="waves-effect waves-light" href="userlist.html">User List</a></li>
+                            <li><a class="waves-effect waves-light" href="invoice.html">Invoice</a></li>
+                            <li><a class="waves-effect waves-light" href="blank.html">Blank</a></li>
+                            <li><a class="waves-effect waves-light" href="profile.html">Profile</a></li>
+                            <li><a class="waves-effect waves-light" href="gallery.html">Gallery</a></li>
+                            <li><a class="waves-effect waves-light" href="maintenance.html">Maintenance</a></li>
+                            <li><a class="waves-effect waves-light" href="draggable_grid.html">Draggable Grid</a></li>
+                            <li><a class="waves-effect waves-light" href="grids.html">Grids</a></li>
+                            <li><a class="waves-effect waves-light" href="search_results.html">Search result</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="waves-effect waves-light" href="documentation.html"><i class="fa fa-cogs"></i> Documentation</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- /sidebar menu -->
+
+        <!-- /menu footer buttons -->
+        <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="fa fa-cog" aria-hidden="true"></span>
+            </a>
+            <a class="toggle-fullscreen" data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="fa fa-arrows-alt" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="fa fa-lock" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="fa fa-power-off" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- /menu footer buttons -->
+    </div>
+</div>
+<!-- End Left Menu -->
+
+<!-- start top navigation -->
+<div class="top_nav">
+    <div class="nav_menu">
+        <nav>
+            <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                <div class="responsive-logo">
+                    <a href="index.html">
+                        <img src="../../assets/global/images/prince_logo.png" alt="main-logo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="topbar-right">
+                <div class="nav navbar-nav navbar-right">
+
+                    <div class="header-search right-icon">
+                        <form role="search" class="search-box">
+                            <input placeholder="Search..." class="form-control" type="text">
+                            <a href="javascript:">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </form>
+                    </div>
+
+                    <div class="dropdown header-notification right-icon">
+                        <a href="javascript:" class="dropdown-toggle waves-effect waves-light notification-icon"
+                           data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                            <span class="label label-danger">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="text-center">
+                                <p class="notification-title">Notification<span
+                                            class="label label-primary">4</span></p>
+                            </li>
+                            <li class="list-group default-scroll">
+                                <a href="javascript:;" class="list-group-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img src="../../assets/global/images/user1.jpg" alt="user">
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><span>Domance Den</span> posted a photo on
+                                                your wall.</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="list-group-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img src="../../assets/global/images/user2.jpg" alt="user">
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><span>Wikko Menta</span> commented on your
+                                                last video.</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="list-group-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img src="../../assets/global/images/user3.jpg" alt="user">
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><span>Jonny Sem</span> posted 4 comments
+                                                on your photo.</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="list-group-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img src="../../assets/global/images/user4.jpg" alt="user">
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><span>Doli Senga</span> posted a photo on
+                                                your wall.</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="list-group-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img src="../../assets/global/images/user5.jpg" alt="user">
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><span>Bhura Kenta</span> commented on your
+                                                last video.</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="list-group-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img src="../../assets/global/images/user6.jpg" alt="user">
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><span>Jolly Baby</span> posted 2 comments
+                                                on your photo.</h5>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <li class="all-notification">
+                                <a href="javascript:;" class="list-group-item text-right">
+                                    <small>See all notifications</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="header-fullscreen right-icon">
+                        <a href="javascript:" class="waves-effect waves-light toggle-fullscreen">
+                            <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <!--<div class="header-chat right-icon">
+                        <a href="javascript:" class="waves-effect waves-light">
+                            <i class="fa fa-comments-o" aria-hidden="true"></i>
+                        </a>
+                    </div>-->
+
+                    <div class="dropdown user-profile right-icon">
+                        <a href="javascript:" class="dropdown-toggle waves-effect waves-light"
+                           data-toggle="dropdown"
+                           aria-expanded="false">
+                            <img src="../../assets/global/images/user10.jpg" alt="user">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:" class="waves-effect waves-light">
+                                    <i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                            </li>
+                            <li><a href="javascript:" class="waves-effect waves-light">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>Settings</a>
+                            </li>
+                            <li><a href="javascript:" class="waves-effect waves-light">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>Lock screen</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="javascript:" class="waves-effect waves-light">
+                                    <i class="fa fa-power-off text-danger" aria-hidden="true"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="clearfix"></div>
+<!-- End top navigation -->
+    <!-- Start Contain Section -->
+    <div class="container-fluid right_color">
+        <div class="page-main-header">
+            <!-- Page Title -->
+            <h2 class="page-name-title">Documentation</h2>
+            <!--  Breadcrumb -->
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="text-info">Dashboard</li>
+                <li class="active">Documentation</li>
+            </ol>
+        </div>
+
+        <div class="contain-section">
+            <div class="contain-inner-section document-section">
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Introduction</h2>
+                        </div>
+                        <div class="section-body">
+                            <ul class="intro-section">
+                                <li>Prince Admin is a popular open source WebApp template for admin dashboards and control panels.</li>
+                                <li>Prince Admin template built with HTML 5, BOOTSTRAP 4, SCSS, CSS, JQUERY.</li>
+                                <li>Prince Admin is based on a modular design, which allows it to be easily customized and built upon.</li>
+                                <li>It's provide modern and flat user interface design which is easy to use and a fully responsive layout.</li>
+                                <li>This documentation will guide you through installing the template and exploring the various components that are bundled with the template.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Installation Guide</h2>
+                        </div>
+                        <div class="section-body">
+                            <ol class="install-section">
+                                <li>Download and install the latest <a href="https://nodejs.org/en/" target="_blank">Node.js</a> from its web site.</li>
+                                <li>Download and install the latest <a href="https://git-scm.com/" target="_blank">Git</a> from its web site.</li>
+                                <li>Open your console application (Terminal, Command Prompt etc.), run the following command and wait for it to finish:</li>
+                                <li class="code-bg"> npm install -g  bower</li>
+                                <li>Run the following command :</li>
+                                <li class="code-bg"> npm install grunt-npm-install</li>
+                                <li>Unzip the zip file that you have downloaded from Themeforest (prince.zip).</li>
+                                <li>Extract the contents of the zip file (prince.zip) into a folder that you will work within. </li>
+                                <li>Open your console application (Terminal, Command Prompt etc.), navigate into your work folder, run the following command. This node modules directory inside your work folder.</li>
+                                <li class="code-bg"> npm install</li>
+                                <li>Run the following command :</li>
+                                <li class="code-bg"> bower install</li>
+                                <li>While still in your work folder, run the following command for scss in the console application :</li>
+                                <li class="code-bg"> grunt sass:watch </li>
+                                <li>Run the following command for all CSS minify in the console application :</li>
+                                <li class="code-bg"> grunt cssmin </li>
+                                <li>Run the following command for all js minify in the console application :</li>
+                                <li class="code-bg"> grunt minify </li>
+                                <li>Thank you for installing now start Prince you will be able to navigate through the template.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Template Structure</h2>
+                            <p>All template files have fixed structure <code>Left Menu </code>, <code>Header </code>, <code>Notification </code>, <code>Profile </code>, <code>Content Part </code>, <code>Footer </code></p>
+                        </div>
+                        <div class="section-body">
+                            <img src="../../assets/global/images/document/template_structure.jpg" alt="sturcture">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Beginig of page</h2>
+                            <p>HTML code of page head shown below: </p>
+                        </div>
+                        <div class="section-body">
+                            <pre>&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html lang=&#x22;en&#x22;&#x3E;
+&#x3C;head&#x3E;
+    &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
+    &#x3C;meta name=&#x22;description&#x22; content=&#x22;bootstrap default admin template&#x22;&#x3E;
+    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1, shrink-to-fit=no&#x22;&#x3E;
+    &#x3C;title&#x3E;Documentation | Prince Admin Template&#x3C;/title&#x3E;
+    &#x3C;!-- Favicons --&#x3E;
+
+    &#x3C;!-- Start global css --&#x3E;
+    &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;../../assets/global/plugins/Waves/dist/waves.min.css&#x22;/&#x3E;
+    &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;../../assets/global/plugins/bootstrap/dist/css/bootstrap.min.css&#x22;/&#x3E;
+    &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;../../assets/icons_fonts/font-awesome/css/font-awesome.min.css&#x22;/&#x3E;
+    &#x3C;!-- End global css --&#x3E;
+
+    &#x3C;!-- Start page plugin css --&#x3E;
+
+    &#x3C;!-- End page plugin css --&#x3E;
+
+    &#x3C;!-- Start template global css --&#x3E;
+    &#x3C;link href=&#x22;../../assets/global/css/components.min.css&#x22; type=&#x22;text/css&#x22; rel=&#x22;stylesheet&#x22;/&#x3E;
+    &#x3C;!-- End template global css --&#x3E;
+
+    &#x3C;!-- Start layout css --&#x3E;
+    &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;../../assets/layouts/layouts_left_menu/left_menu_layout.min.css&#x22;/&#x3E;
+    &#x3C;!-- End layout css --&#x3E;
+
+    &#x3C;!-- Start favicon ico --&#x3E;
+    &#x3C;link rel=&#x22;icon&#x22; href=&#x22;../../assets/favicon/prince.ico&#x22; type=&#x22;image/x-icon&#x22;/&#x3E;
+    &#x3C;link rel=&#x22;icon&#x22; type=&#x22;image/png&#x22; sizes=&#x22;192x192&#x22; href=&#x22;../../assets/favicon/prince-192x192.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;180x180&#x22; href=&#x22;../../assets/favicon/prince-180x180.png&#x22;&#x3E;
+    &#x3C;!-- End favicon ico --&#x3E;
+
+&#x3C;/head&#x3E;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Page Loader</h2>
+                            <p>Below code is used for loading spinner for the template </p>
+                        </div>
+                        <div class="section-body">
+                            <pre>&#x3C;!-- Start Loader --&#x3E;
+&#x3C;div class=&#x22;page-loader&#x22;&#x3E;
+    &#x3C;div class=&#x22;preloader loading&#x22;&#x3E;
+        &#x3C;span class=&#x22;slice&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;span class=&#x22;slice&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;span class=&#x22;slice&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;span class=&#x22;slice&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;span class=&#x22;slice&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;span class=&#x22;slice&#x22;&#x3E;&#x3C;/span&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!-- End Loader --&#x3E;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Scroll Top</h2>
+                            <p>Below code is used for Scroll top for the template </p>
+                        </div>
+                        <div class="section-body">
+                            <pre>&#x3C;!-- Start Scroll Top --&#x3E;
+&#x3C;a href=&#x22;javascript:&#x22; id=&#x22;scroll&#x22; style=&#x22;display: none;&#x22;&#x3E;&#x3C;span&#x3E;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+&#x3C;!-- End Scroll Top --&#x3E;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Prince Logo</h2>
+                            <p>Below code is used for logo you can change it by text or image.</p>
+                        </div>
+                        <div class="section-body">
+                            <pre>&#x3C;a href=&#x22;index.html&#x22; class=&#x22;medium-logo&#x22;&#x3E;
+    &#x3C;img src=&#x22;../../assets/global/images/prince_logo.png&#x22; alt=&#x22;medium-logo&#x22;&#x3E;
+&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;index.html&#x22; class=&#x22;small-logo&#x22;&#x3E;
+    &#x3C;img src=&#x22;../../assets/global/images/prince_logo2.png&#x22; alt=&#x22;small-logo&#x22;&#x3E;
+&#x3C;/a&#x3E;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Left menu</h2>
+                            <p>Below code is used for Left menu for the template </p>
+                        </div>
+                        <div class="section-body">
+                            <pre>&#x3C;div class=&#x22;col-md-3 left_color&#x22;&#x3E;
+    &#x3C;div class=&#x22;left_color scroll-view&#x22;&#x3E;
+        &#x3C;div class=&#x22;navbar nav_title&#x22;&#x3E;
+            &#x3C;a href=&#x22;index.html&#x22; class=&#x22;medium-logo&#x22;&#x3E;
+                &#x3C;img src=&#x22;../../assets/global/images/prince_logo.png&#x22; alt=&#x22;medium-logo&#x22;&#x3E;
+            &#x3C;/a&#x3E;
+            &#x3C;a href=&#x22;index.html&#x22; class=&#x22;small-logo&#x22;&#x3E;
+                &#x3C;img src=&#x22;../../assets/global/images/prince_logo2.png&#x22; alt=&#x22;small-logo&#x22;&#x3E;
+            &#x3C;/a&#x3E;
+        &#x3C;/div&#x3E;
+
+        &#x3C;div class=&#x22;clearfix&#x22;&#x3E;&#x3C;/div&#x3E;
+
+        &#x3C;!-- sidebar menu --&#x3E;
+        &#x3C;div id=&#x22;sidebar-menu&#x22; class=&#x22;main_menu_side hidden-print main_menu&#x22;&#x3E;
+            &#x3C;div class=&#x22;menu_section&#x22;&#x3E;
+                &#x3C;h3&#x3E;General&#x3C;/h3&#x3E;
+                &#x3C;ul class=&#x22;nav side-menu&#x22;&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a class=&#x22;waves-effect waves-light&#x22; href=&#x22;index.php&#x22;&#x3E;&#x3C;i class=&#x22;fa fa-home&#x22;&#x3E;&#x3C;/i&#x3E; Dashboard&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a class=&#x22;waves-effect waves-light&#x22;&#x3E;&#x3C;i class=&#x22;fa fa-desktop&#x22;&#x3E;&#x3C;/i&#x3E;Basic UI Elements &#x3C;span
+                                    class=&#x22;fa fa-chevron-right&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+                        &#x3C;ul class=&#x22;nav child_menu&#x22;&#x3E;
+                            &#x3C;li&#x3E; &#x3C;a class=&#x22;waves-effect waves-light&#x22; href=&#x22;accordions.php&#x22;&#x3E;Accordions&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                            -
+                        &#x3C;/ul&#x3E;
+                    &#x3C;/li&#x3E;
+                &#x3C;/ul&#x3E;
+            &#x3C;/div&#x3E;
+
+        &#x3C;/div&#x3E;
+        &#x3C;!-- /sidebar menu --&#x3E;
+
+        &#x3C;!-- /menu footer buttons --&#x3E;
+        &#x3C;div class=&#x22;sidebar-footer hidden-small&#x22;&#x3E;
+            &#x3C;a data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;top&#x22; title=&#x22;Settings&#x22;&#x3E;
+                &#x3C;span class=&#x22;fa fa-cog&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+            &#x3C;/a&#x3E;
+            &#x3C;a class=&#x22;toggle-fullscreen&#x22; data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;top&#x22; title=&#x22;FullScreen&#x22;&#x3E;
+                &#x3C;span class=&#x22;fa fa-arrows-alt&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+            &#x3C;/a&#x3E;
+            &#x3C;a data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;top&#x22; title=&#x22;Lock&#x22;&#x3E;
+                &#x3C;span class=&#x22;fa fa-lock&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+            &#x3C;/a&#x3E;
+            &#x3C;a data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;top&#x22; title=&#x22;Logout&#x22; href=&#x22;login.html&#x22;&#x3E;
+                &#x3C;span class=&#x22;fa fa-power-off&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+            &#x3C;/a&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!-- /menu footer buttons --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Footer</h2>
+                            <p>Footer has default and sticky style. HTML code of default footer is as shown below: </p>
+                        </div>
+                        <div class="section-body">
+                            <pre>&#x3C;!-- Start Footer Section --&#x3E;
+    &#x3C;footer class=&#x22;footer&#x22;&#x3E;
+        &#xA9; 2018 All rights reserved. Template designed by &#x3C;a class=&#x22;text-primary&#x22; href=&#x22;javascript:&#x22;&#x3E;Prince&#x3C;/a&#x3E;
+    &#x3C;/footer&#x3E;
+&#x3C;!-- End Footer Section --&#x3E;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Breadcrumb</h2>
+                            <p>You can use page title and page path below code: </p>
+                        </div>
+                        <div class="section-body">
+                            <pre>&#x3C;div class=&#x22;page-main-header&#x22;&#x3E;
+    &#x3C;!-- Page Title --&#x3E;
+    &#x3C;h2 class=&#x22;page-name-title&#x22;&#x3E;Blank&#x3C;/h2&#x3E;
+    &#x3C;!--  Breadcrumb --&#x3E;
+    &#x3C;ol class=&#x22;breadcrumb&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;text-info&#x22;&#x3E;Components&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;active&#x22;&#x3E;Blank&#x3C;/li&#x3E;
+    &#x3C;/ol&#x3E;
+&#x3C;/div&#x3E;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>End Of Page (Plugins and javascripts)</h2>
+                            <p>Plugin and javascript files loaded at the end of page. </p>
+                        </div>
+                        <div class="section-body">
+                            <pre>&#x3C;!-- Start core js --&#x3E;
+&#x3C;script src=&#x22;../../assets/global/plugins/jquery/dist/jquery.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;../../assets/global/plugins/bootstrap/dist/js/bootstrap.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;../../assets/global/plugins/Waves/dist/waves.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;../../assets/global/plugins/screenfull.js/dist/screenfull.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;../../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;!-- Start core javascript --&#x3E;
+
+&#x3C;!-- Start global js --&#x3E;
+&#x3C;script src=&#x22;../../assets/global/js/left-menu.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;!-- End global js --&#x3E;
+
+&#x3C;!-- Start page plugin js --&#x3E;
+&#x3C;!-- End page plugin js --&#x3E;
+
+&#x3C;!-- Start page js --&#x3E;
+&#x3C;!-- End page js --&#x3E;
+&#x3C;/body&#x3E;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Font family</h2>
+                            <p>Change the font family of whole template by simply change the google font link.</p>
+                        </div>
+                        <div class="section-body">
+                            <pre>@import url(&#x22;https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&#x22;);</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Css</h2>
+                            <p>We made different SCSS files for customization.</p>
+                        </div>
+                        <div class="section-body">
+                            <pre>_variables.scss (this scss include all variables of the template)
+_mixin.scss (this scss include all browser support css of the template)
+components.scss (this scss include all file path of the template)
+_documentation.scss (this scss include pages css of the template)</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Change Theme Color</h2>
+                            <p>You can change theme color eash below code change.</p>
+                        </div>
+                        <div class="section-body">
+                            <pre>Start command "grunt sass:watch" then open _variables.scss file Change color code of
+$main-site-color: #4390ff !default;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Html Structure</h2>
+                            <p>You can use that html structure.</p>
+                        </div>
+                        <div class="section-body">
+                            <pre>&#x3C;div class=&#x22;container body&#x22;&#x3E;
+    &#x3C;div class=&#x22;main_container&#x22;&#x3E;
+            //Left Menu
+    &#x3C;!-- Start Contain Section --&#x3E;
+    &#x3C;div class=&#x22;container-fluid right_color&#x22;&#x3E;
+        &#x3C;div class=&#x22;page-main-header&#x22;&#x3E;
+            &#x3C;!-- Page Title --&#x3E;
+            &#x3C;h2 class=&#x22;page-name-title&#x22;&#x3E;Blank&#x3C;/h2&#x3E;
+            &#x3C;!--  Breadcrumb --&#x3E;
+            &#x3C;ol class=&#x22;breadcrumb&#x22;&#x3E;
+                &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;text-info&#x22;&#x3E;General Pages&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;active&#x22;&#x3E;Blank&#x3C;/li&#x3E;
+            &#x3C;/ol&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;contain-section&#x22;&#x3E;
+            &#x3C;div class=&#x22;contain-inner-section&#x22;&#x3E;
+                &#x3C;!-- Start container --&#x3E;
+                &#x3C;div class=&#x22;row&#x22;&#x3E;
+                    //Page contain
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+
+    &#x3C;/div&#x3E;
+    &#x3C;!-- End Contain Section --&#x3E;
+
+&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Css code Comment</h2>
+                            <p>You can easy to get css with comment like below:</p>
+                        </div>
+                        <div class="section-body">
+                            <pre>/*---------------------------
+
+Start button
+
+---------------------------*/
+
+ .btn{
+    margin-bottom: 8px;
+  }
+
+/*---------------------------
+
+End button
+
+---------------------------*/</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Structure</h2>
+                            <p>You can show folder structure below:</p>
+                        </div>
+                        <div class="section-body">
+                            <pre>
+      HTML
+      ├──
+      │   └── prince/
+      │       └── admin-default/
+      │            └── admin_top_menu/
+      │                   └── All Pages Files
+      │       └── assets/
+      │            └── global/
+      │                   └── All Files like css,fonts,images,js
+      │                         └── plugins/
+      │                             └── All Required bower plugins files
+      │       └── sass/
+      │            └── global/
+      │                  └── css/
+      │                     └── components/
+      │                         └── All pages scss file
+      │                     └── _variables.scss
+      │                             └── All variables of SCSS
+      │                     └── components.scss
+      │                             └── All Pages file define here
+      │
+      └──
+                </pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Creadits</h2>
+                            <p>Below is the list of plugins used in Prince admin template.</p>
+                        </div>
+                        <div class="section-body">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>URL</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>jQuery</td>
+                                    <td><a href="http://www.jquery.com" target="_blank">http://www.jquery.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bootstrap</td>
+                                    <td><a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>font-awesome</td>
+                                    <td><a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">https://github.com/FortAwesome/Font-Awesome</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>material-design-iconic-font</td>
+                                    <td><a href="https://github.com/zavoloklom/material-design-iconic-font" target="_blank">https://github.com/zavoloklom/material-design-iconic-font</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>themify-icons</td>
+                                    <td><a href="https://github.com/lykmapipo/themify-icons" target="_blank">https://github.com/lykmapipo/themify-icons</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>flag-icon-css</td>
+                                    <td><a href="https://github.com/lipis/flag-icon-css" target="_blank">https://github.com/lipis/flag-icon-css</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>animate.css</td>
+                                    <td><a href="https://daneden.github.io/animate.css/" target="_blank">https://daneden.github.io/animate.css/</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>chart.js</td>
+                                    <td><a href="https://www.chartjs.org/" target="_blank">https://www.chartjs.org/</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>chartist</td>
+                                    <td><a href="https://gionkunz.github.io/chartist-js/" target="_blank">https://gionkunz.github.io/chartist-js/</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>datatables</td>
+                                    <td><a href="https://github.com/DataTables/DataTables" target="_blank">https://github.com/DataTables/DataTables</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>editable-table</td>
+                                    <td><a href="https://github.com/mindmup/editable-table" target="_blank">https://github.com/mindmup/editable-table</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>gmaps</td>
+                                    <td><a href="https://github.com/hpneo/gmaps" target="_blank">https://github.com/hpneo/gmaps</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jquery-form-validator</td>
+                                    <td><a href="https://github.com/victorjonsson/jQuery-Form-Validator" target="_blank">https://github.com/victorjonsson/jQuery-Form-Validator</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jquery-mask-plugin</td>
+                                    <td><a href="https://github.com/igorescobar/jQuery-Mask-Plugin" target="_blank">https://github.com/igorescobar/jQuery-Mask-Plugin</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jquery-slimscroll</td>
+                                    <td><a href="https://github.com/rochal/jQuery-slimScroll" target="_blank">https://github.com/rochal/jQuery-slimScroll</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jquery.easy-pie-chart</td>
+                                    <td><a href="https://github.com/rendro/easy-pie-chart" target="_blank">https://github.com/rendro/easy-pie-chart</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jquery.scrollbar</td>
+                                    <td><a href="https://gromo.github.io/jquery.scrollbar/" target="_blank">https://gromo.github.io/jquery.scrollbar/</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jquery.sparkline</td>
+                                    <td><a href="https://github.com/gwatts/jquery.sparkline" target="_blank">https://github.com/gwatts/jquery.sparkline</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jquery.steps</td>
+                                    <td><a href="https://github.com/rstaib/jquery-steps" target="_blank">https://github.com/rstaib/jquery-steps</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jqvmap</td>
+                                    <td><a href="https://github.com/manifestinteractive/jqvmap" target="_blank">https://github.com/manifestinteractive/jqvmap</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>morris.js</td>
+                                    <td><a href="http://morrisjs.github.io/morris.js/" target="_blank">http://morrisjs.github.io/morris.js/</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>rickshaw</td>
+                                    <td><a href="https://github.com/shutterstock/rickshaw" target="_blank">https://github.com/shutterstock/rickshaw</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>screenfull.js</td>
+                                    <td><a href="https://github.com/sindresorhus/screenfull.js" target="_blank">https://github.com/sindresorhus/screenfull.js</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sweetalert2</td>
+                                    <td><a href="https://github.com/limonte/sweetalert2" target="_blank">https://github.com/limonte/sweetalert2</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Waves</td>
+                                    <td><a href="https://github.com/fians/Waves" target="_blank">https://github.com/fians/Waves</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-header">
+                            <h2>Support</h2>
+                        </div>
+                        <div class="section-body">
+                            <p class="support-text"><i class="fa fa-hand-o-right"></i> Once again, thanks for the purchasing Prince Admin template, If you need any help or feel any query Our support is always ready to help you. just mail me with licence key on <a>atri43theme@gmail.com</a> or ask any questions @ our <a>support desk</a>.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+<!--        atri43theme@gmail.com-->
+    </div>
+    <!-- End Contain Section -->
+    <!-- Start Footer Section -->
+    <footer class="footer">
+        © 2018 All rights reserved. Template designed by
+        <a class="text-primary" href="http://www.bootstrapmb.com/">Prince</a>
+    </footer>
+    <!-- End Footer Section -->
+</div>
+</div>
+
+<!-- Start core js -->
+<script src="../../assets/global/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/global/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../assets/global/plugins/Waves/dist/waves.min.js"></script>
+<script src="../../assets/global/plugins/screenfull.js/dist/screenfull.min.js"></script>
+<script src="../../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- Start core javascript -->
+
+<!-- Start global js -->
+<script src="../../assets/global/js/left-menu.min.js"></script>
+<!-- End global js -->
+
+<!-- Start page plugin js -->
+
+<!-- End page plugin js -->
+
+<!-- Start page js -->
+
+<!-- End page js -->
+
+
+</body>
+</html>

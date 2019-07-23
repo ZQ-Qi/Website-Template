@@ -1,0 +1,112 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Pricing and Plans / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="container-fh__content p-pricing-and-plans">
+    <h3 class="p-pricing-and-plans__heading">Plans & Pricing</h3>
+    <div class="radio-group radio-group--no-border p-pricing-and-plans__type">
+      <label class="radio-group__item">
+        <input type="radio" name="radio-group" class="radio-group__input">
+        <span class="radio-group__text">Month</span>
+      </label>
+      <label class="radio-group__item">
+        <input type="radio" name="radio-group" class="radio-group__input" checked>
+        <span class="radio-group__text">Year</span>
+      </label>
+    </div>
+
+    <div class="p-pricing-and-plans__plans">
+      <div class="p-pricing-and-plans__plan p-pricing-and-plans__plan--free">
+        <div class="p-pricing-and-plans__plan-body">
+          <h5 class="p-pricing-and-plans__plan-heading">Free</h5>
+          <div class="p-pricing-and-plans__plan-desc">
+            Our basic version for individuals or teams getting started
+          </div>
+          <a href="#" class="btn btn-info p-pricing-and-plans__plan-signup">Sign Up</a>
+        </div>
+        <div class="p-pricing-and-plans__plan-features">
+          <h6 class="p-pricing-and-plans__plan-features-heading">Included features:</h6>
+          <ul class="list-unstyled p-pricing-and-plans__plan-features-list">
+            <li class="p-pricing-and-plans__plan-feature">
+              <span class="ua-icon-check p-pricing-and-plans__plan-feature-icon"></span> Up to 10 users per library
+            </li>
+            <li class="p-pricing-and-plans__plan-feature">
+              <span class="ua-icon-check p-pricing-and-plans__plan-feature-icon"></span> Up to 100MB library storage
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-pricing-and-plans__plan p-pricing-and-plans__plan--plus">
+        <div class="p-pricing-and-plans__plan-body">
+          <h5 class="p-pricing-and-plans__plan-heading">Plus</h5>
+          <div class="p-pricing-and-plans__plan-price">$8.33</div>
+          <div class="p-pricing-and-plans__plan-desc p-pricing-and-plans__plan-desc--sm">
+            per user per month billed annually
+            <a href="#" class="p-pricing-and-plans__plan-desc-link">view monthly</a>
+          </div>
+          <a href="#" class="btn btn-plan-plus p-pricing-and-plans__plan-signup">Sign Up</a>
+        </div>
+        <div class="p-pricing-and-plans__plan-features">
+          <h6 class="p-pricing-and-plans__plan-features-heading">Included features:</h6>
+          <ul class="list-unstyled p-pricing-and-plans__plan-features-list">
+            <li class="p-pricing-and-plans__plan-feature">
+              <span class="ua-icon-check p-pricing-and-plans__plan-feature-icon"></span> Up to 10 users per library
+            </li>
+            <li class="p-pricing-and-plans__plan-feature">
+              <span class="ua-icon-check p-pricing-and-plans__plan-feature-icon"></span> Up to 100MB library storage
+            </li>
+            <li class="p-pricing-and-plans__plan-feature">
+              <span class="ua-icon-check p-pricing-and-plans__plan-feature-icon"></span> Up to 10GB library storage
+            </li>
+            <li class="p-pricing-and-plans__plan-feature">
+              <span class="ua-icon-check p-pricing-and-plans__plan-feature-icon"></span> Note archiving
+            </li>
+            <li class="p-pricing-and-plans__plan-feature">
+              <span class="ua-icon-check p-pricing-and-plans__plan-feature-icon"></span> Priority support
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-pricing-and-plans__plan p-pricing-and-plans__plan--premium">
+        <div class="p-pricing-and-plans__plan-body">
+          <h5 class="p-pricing-and-plans__plan-heading">Premium</h5>
+          <div class="p-pricing-and-plans__plan-price">$12.50</div>
+          <div class="p-pricing-and-plans__plan-desc p-pricing-and-plans__plan-desc--sm">
+            per user per month billed annually
+            <a href="#" class="p-pricing-and-plans__plan-desc-link">view monthly</a>
+          </div>
+          <a href="#" class="btn btn-plan-premium p-pricing-and-plans__plan-signup">Sign Up</a>
+        </div>
+        <div class="p-pricing-and-plans__plan-features">
+          <h6 class="p-pricing-and-plans__plan-features-heading">Included features:</h6>
+          <ul class="list-unstyled p-pricing-and-plans__plan-features-list">
+            <li class="p-pricing-and-plans__plan-feature">
+              <span class="ua-icon-check p-pricing-and-plans__plan-feature-icon"></span> End-to-end encryption
+            </li>
+            <li class="p-pricing-and-plans__plan-feature">
+              <span class="ua-icon-check p-pricing-and-plans__plan-feature-icon"></span> Team activity dashboard
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-pricing-and-plans__plan p-pricing-and-plans__plan--enterprise">
+        <div class="p-pricing-and-plans__plan-body">
+          <h5 class="p-pricing-and-plans__plan-heading">Free</h5>
+          <div class="p-pricing-and-plans__plan-desc">
+            Have a large team <br> or custom needs?
+          </div>
+          <a href="#" class="btn btn-plan-enterprise p-pricing-and-plans__plan-signup">Sign Up</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-pricing-and-plans__desc">
+      All plans come loaded with unlimited device sync, real-time colloborative aditing, Google login,
+      and integrations with Slack and G Suite.
+    </div>
+  </div>
+</div>
+{% endblock %}
+

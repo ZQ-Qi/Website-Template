@@ -1,0 +1,72 @@
+/* -------------------------------------------- */
+/* ############### MEDIA OBJECT ############### */
+/* -------------------------------------------- */
+
+.media-demo {
+  display: block;
+  padding: 20px;
+  border: 1px solid $gray-300;
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    padding: 40px;
+  }
+}
+
+.media-img-demo {
+  display: flex;
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 40px;
+    width: 150px;
+  }
+}
+
+.media-list-demo {
+  padding: 40px;
+  border: 1px solid $gray-300;
+  margin: 0;
+  list-style: none;
+
+  .media {
+    display: block;
+    @include media-breakpoint-up(sm) { display: flex; }
+
+    + .media { margin-top: 40px; }
+  }
+
+  .media-img {
+    margin-right: 30px;
+    width: 80px;
+    @include border-radius(100%);
+  }
+
+  .media-body {
+    align-self: center;
+    margin-top: 20px;
+    @include media-breakpoint-up(sm) { margin-top: 0; }
+  }
+}
+
+
+/********** RTL SUPPORT **********/
+/*********************************/
+
+[dir="rtl"] {
+  .media-demo { text-align: right; }
+  .media-img-demo {
+    @include media-breakpoint-up(sm) {
+      margin-right: 0;
+      margin-left: 40px;
+    }
+  }
+
+  .media-list-demo {
+    .media-body { text-align: right; }
+    .media-img {
+      margin-right: 0;
+      margin-left: 30px;
+    }
+  }
+}

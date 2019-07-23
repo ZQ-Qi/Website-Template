@@ -1,0 +1,183 @@
+.p-signup-a {
+  display: flex;
+  align-items: center;
+  min-height: 760px;
+  padding: 20px;
+
+  &__wrap {
+    margin-left: 292px;
+  }
+
+  &__form {
+    width: 410px;
+    min-width: 410px;
+    box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+    border-radius: 3px;
+    background-color: #ffffff;
+    padding: 21px 21px 21px 21px;
+
+    .form-group {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__form-heading {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__facebook {
+    background: #3b5998;
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    width: 270px;
+    height: 44px;
+    min-height: 44px;
+    align-items: center;
+    border-radius: 4px;
+    margin: 25px auto;
+
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+
+    &:hover {
+      color: #fff;
+      background: darken(#3b5998, 7%);
+    }
+  }
+
+  &__facebook-icon {
+    height: 44px;
+    width: 44px;
+    border-right: 1px solid rgba(#000, .08);
+    line-height: 44px;
+    text-align: center;
+
+    &:before {
+      position: relative;
+      left: 1px;
+      top: 1px;
+    }
+  }
+
+  &__facebook-text {
+    height: 44px;
+    border-left: 1px solid rgba(#fff, .08);
+    line-height: 44px;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  &__form-separator {
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: rgba(#939daa, .2);
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      top: 12px;
+    }
+
+    span {
+      color: #939daa;
+      font-size: 15px;
+      background: #fff;
+      padding: 0 8px;
+      z-index: 1;
+      position: relative;
+      text-transform: uppercase;
+    }
+  }
+
+  &__form-submit {
+    padding: 8px  50px;
+  }
+
+  &__form-terms {
+    display: block;
+    font-size: 14px;
+    color: #939daa;
+    width: 210px;
+    margin: 20px auto 10px auto;
+  }
+
+  &__form-terms-link {
+    font-weight: 700;
+    color: #939daa;
+  }
+
+  &__app-install {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    a {
+      opacity: .7;
+      transition: opacity $transition;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    a + a {
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
+}
+
+@include mq(desktop, max) {
+  .p-signup-a {
+    &__wrap {
+      margin-left: 92px;
+    }
+  }
+}
+
+@include mq(screen-lg, max) {
+  .p-signup-a {
+    &__image {
+      display: none;
+    }
+
+    &__wrap {
+      margin-left: 0;
+    }
+  }
+}
+
+@include mq(phone-wide, max) {
+  .p-signup-a {
+    &__form {
+      width: 100%;
+      min-width: 0;
+    }
+
+    &__app-install {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      a + a {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+}

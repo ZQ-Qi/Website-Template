@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>Simple Layout / Universe Admin</title>
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  
+    <link rel="stylesheet" href="../../admin/fonts/open-sans/style.min.css"> <!-- common font  styles  -->
+<link rel="stylesheet" href="../../admin/fonts/universe-admin/style.css"> <!-- universeadmin icon font styles -->
+<link rel="stylesheet" href="../../admin/fonts/mdi/css/materialdesignicons.css">
+<link rel="stylesheet" href="../../admin/vendor/simplebar/simplebar.css"> <!-- original simplebar plugin (scrollbar) styles  -->
+<link rel="stylesheet" href="../../admin/vendor/tippyjs/tippy.css"> <!-- original tippy plugin (tooltip) styles -->
+<link rel="stylesheet" href="../../admin/vendor/select2/css/select2.min.css"> <!-- original select2 plugin styles -->
+<link rel="stylesheet" href="../../admin/vendor/bootstrap/css/bootstrap.min.css"> <!-- original bootstrap styles -->
+<link rel="stylesheet" href="css/style.min.css" id="stylesheet"> <!-- universeadmin styles -->
+
+  
+
+  <script src="../../admin/js/ie.assign.fix.min.js"></script>
+</head>
+<body class="js-loading">
+<div class="page-preloader js-page-preloader">
+  <div class="page-preloader__logo">
+    <img src="../../admin/img/logo-black-lg.png" alt="" class="page-preloader__logo-image">
+  </div>
+  <div class="page-preloader__desc">Pro Edition</div>
+  <div class="page-preloader__loader">
+    <div class="page-preloader__loader-heading">System Loading</div>
+    <div class="page-preloader__loader-desc">Widgets update</div>
+    <div class="progress progress-rounded page-preloader__loader-progress">
+      <div id="page-loader-progress-bar" class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  <div class="page-preloader__copyright">ThemesAnytime, 2018</div>
+</div>
+
+
+
+  
+    <div class="sidebar js-disable-scrollbar">
+  <div class="sidebar__top-side">
+    <a href="#" class="sidebar__logo">
+      <img src="../../admin/img/logo.png" alt="" class="sidebar__brand-lg">
+      <img src="../../admin/img/logo-sm.png" alt="" class="sidebar__brand-sm">
+    </a>
+    <ul class="sidebar__menu">
+      <li class="sidebar__item is-active">
+        <a href="index.html" class="sidebar__link">
+          <span class="mdi mdi-view-dashboard sidebar__link-icon"></span>
+          <span class="sidebar__link-text">Dashboard</span>
+        </a>
+      </li>
+      <li class="sidebar__item">
+        <a href="customers.html" class="sidebar__link">
+          <span class="mdi mdi-account sidebar__link-icon"></span>
+          <span class="sidebar__link-text">Customers</span>
+        </a>
+      </li>
+      <li class="sidebar__item">
+        <a href="#" class="sidebar__link">
+          <span class="mdi mdi-star sidebar__link-icon"></span>
+          <span class="sidebar__link-text">Trainer</span>
+        </a>
+      </li>
+      <li class="sidebar__item">
+        <a href="#" class="sidebar__link">
+          <span class="mdi mdi-currency-usd sidebar__link-icon"></span>
+          <span class="sidebar__link-text">Payment</span>
+        </a>
+      </li>
+      <li class="sidebar__item">
+        <a href="settings.html" class="sidebar__link">
+          <span class="mdi mdi-settings sidebar__link-icon"></span>
+          <span class="sidebar__link-text">Settings</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="sidebar__bottom-side">
+    <img src="../../admin/img/users/user-19.png" alt="" class="rounded-circle sidebar__user-avatar">
+    <a href="#" class="sidebar__user-info">
+      <span class="sidebar__user-name">Diana Murray</span>
+      <span class="sidebar__user-desc">Branch Manager</span>
+    </a>
+  </div>
+</div>
+
+  
+
+  <div class="page">
+    
+<div class="page__header">
+  <div class="page__header-heading">
+    <div class="page__header-heading-text">Dashboard</div>
+    <a href="#" class="btn btn-info icon-left page__header-btn-link">
+      Add widget <span class="mdi mdi-plus-circle btn__icon"></span>
+    </a>
+  </div>
+  <div>
+    <div class="input-group input-group-icon icon-right page__header-search">
+      <input class="form-control page__header-search-input" type="text" placeholder="Search...">
+      <span class="input-icon ua-icon-search page__header-search-icon"></span>
+    </div>
+  </div>
+</div>
+<div class="page__body">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="widget widget-welcome">
+        <div class="widget-welcome__message">
+          <h4 class="widget-welcome__message-l1">Welcome back!</h4>
+          <h6 class="widget-welcome__message-l2">Your portfolio has a 5% growth for the last mounth</h6>
+        </div>
+        <div class="widget-welcome__stats">
+          <div class="widget-welcome__stats-item early-growth">
+            <span class="widget-welcome__stats-item-value">-$1,530</span>
+            <span class="widget-welcome__stats-item-desc">Yearly Growth</span>
+          </div>
+          <div class="widget-welcome__stats-item monthly-growth">
+            <span class="widget-welcome__stats-item-value">+$550</span>
+            <span class="widget-welcome__stats-item-desc">Monthly Growth</span>
+          </div>
+          <div class="widget-welcome__stats-item daily-growth">
+            <span class="widget-welcome__stats-item-value">96%</span>
+            <span class="widget-welcome__stats-item-desc">Daily Growth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-3 col-lg-3 col-md-6">
+      <div class="widget widget-alpha widget-alpha--color-amaranth">
+        <div>
+          <div class="widget-alpha__amount">278</div>
+          <div class="widget-alpha__description">New Projects</div>
+        </div>
+        <span class="widget-alpha__icon ua-icon-suitcase"></span>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6">
+      <div class="widget widget-alpha widget-alpha--color-green-jungle">
+        <div>
+          <div class="widget-alpha__amount">156</div>
+          <div class="widget-alpha__description">New Clients</div>
+        </div>
+        <span class="widget-alpha__icon ua-icon-user-outline"></span>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6">
+      <div class="widget widget-alpha widget-alpha--color-orange widget-alpha--donut">
+        <div>
+          <div class="widget-alpha__amount">64,87%</div>
+          <div class="widget-alpha__description">Conversion Rate</div>
+        </div>
+        <span class="widget-alpha__icon ua-icon-conversion-rate"></span>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6">
+      <div class="widget widget-alpha widget-alpha--color-java widget-alpha--help">
+        <div>
+          <div class="widget-alpha__amount">425</div>
+          <div class="widget-alpha__description">Support Tickets</div>
+        </div>
+        <span class="widget-alpha__icon ua-icon-ticket"></span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-f ecommerce-widget-f--purple">
+        <div class="ecommerce-widget-f__info">
+          <div class="ecommerce-widget-f__title">Total Views</div>
+          <div class="ecommerce-widget-f__value">645,948</div>
+        </div>
+        <div class="ecommerce-widget-f__label">
+          <div class="ua-icon-widget-binoculars ecommerce-widget-f__icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-f ecommerce-widget-f--orange">
+        <div class="ecommerce-widget-f__info">
+          <div class="ecommerce-widget-f__title">Total Orders</div>
+          <div class="ecommerce-widget-f__value">403</div>
+        </div>
+        <div class="ecommerce-widget-f__label">
+          <div class="ua-icon-widget-cart ecommerce-widget-f__icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-f ecommerce-widget-f--orange">
+        <div class="ecommerce-widget-f__info">
+          <div class="ecommerce-widget-f__title">Total Orders</div>
+          <div class="ecommerce-widget-f__value">$12,875</div>
+        </div>
+        <div class="ecommerce-widget-f__label">
+          <div class="ua-icon-widget-coins ecommerce-widget-f__icon"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-6 col-lg-12">
+      <div class="widget widget-tabs widget-index-chart">
+        <div class="widget-tabs__header">
+          <div>
+            Weight vs weather
+          </div>
+          <ul class="nav nav-tabs widget-tabs__tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#widget-ww-all-accounts">All Accounts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#widget-ww-all-account2">Account 2</a>
+            </li>
+          </ul>
+        </div>
+        <div class="widget-tabs__content">
+          <div class="tab-content">
+            <div class="tab-pane show active" id="widget-ww-all-accounts">
+              <div class="dropdown widget-index-chart__select-date">
+                <button class="btn btn-select btn-rounded dropdown-toggle" type="button" data-toggle="dropdown">Jan-Feb 2017</button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Jan-Feb 2017</a>
+                  <a class="dropdown-item" href="#">Feb-Apr 2017</a>
+                  <a class="dropdown-item" href="#">Apr-Dec 2017</a>
+                </div>
+              </div>
+              <div id="widget-index-chart-container" class="widget-index-chart__container"></div>
+              <div class="widget-index-chart__items">
+                <div class="widget-index-chart__item widget-index-chart__item--yellow">
+                  <span>Your index</span>
+                  <span>17%</span>
+                </div>
+                <div class="widget-index-chart__item widget-index-chart__item--green">
+                  <span>Another index</span>
+                  <span>25%</span>
+                </div>
+                <div class="widget-index-chart__item widget-index-chart__item--grey">
+                  <span>Foreign</span>
+                  <span>10%</span>
+                </div>
+                <div class="widget-index-chart__item widget-index-chart__item--orange">
+                  <span>US Bond</span>
+                  <span>7%</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="widget-ww-all-account2">Widget tab content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6 col-lg-12">
+      <div class="widget widget-controls widget-table widget-summary">
+        <div class="widget-controls__header">
+          <div>
+            Portfolio Summary
+          </div>
+          <div class="widget-controls__header-controls">
+            <span class="widget-controls__header-control ua-icon-settings"></span>
+          </div>
+        </div>
+        <div class="progress progress-lg">
+          <div class="progress-bar bg-emerland" role="progressbar" style="width: 55%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55%</div>
+          <div class="progress-bar bg-kournikova" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">35%</div>
+          <div class="progress-bar bg-coral-light" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">10%</div>
+        </div>
+        <div class="widget-controls__content js-scrollable">
+          <table class="table table-no-border table-striped">
+            <thead>
+            <tr>
+              <th>Assets class</th>
+              <th>Goals</th>
+              <th>Amount</th>
+              <th>Balance</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><span class="table__tag table__tag--green">Cash</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            <tr>
+              <td><span class="table__tag table__tag--orange">International Bonds</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            <tr>
+              <td><span class="table__tag table__tag--orange">US Bonds</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            <tr>
+              <td><span class="table__tag table__tag--yellow">International Stocks</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            <tr>
+              <td><span class="table__tag table__tag--blue">International Stocks</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            <tr>
+              <td><span class="table__tag table__tag--green">Cash</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            <tr>
+              <td><span class="table__tag table__tag--orange">International Bonds</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            <tr>
+              <td><span class="table__tag table__tag--orange">US Bonds</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            <tr>
+              <td><span class="table__tag table__tag--yellow">International Stocks</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            <tr>
+              <td><span class="table__tag table__tag--blue">International Stocks</span></td>
+              <td>17%</td>
+              <td>23%</td>
+              <td>$12,423</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="widget widget-controls widget-table widget-billing">
+        <div class="widget-controls__header">
+          <div>
+            Billing Notice
+          </div>
+          <div class="widget-controls__header-controls">
+            <a href="#" class="widget-controls__header-control">Learn More</a>
+          </div>
+        </div>
+        <div class="widget-billing__header">
+          <span class="widget-billing__card-number">
+            <img src="img/flags/de.png" alt="" width="24" height="24" class="widget-billing__card-country rounded-circle">
+            <span>Ending **** 5896</span>
+          </span>
+          <span class="widget-billing__card-expired">05/19</span>
+          <span class="widget-billing__card-type">Visa</span>
+        </div>
+        <div class="widget-controls__content js-scrollable">
+          <table class="table table-no-border">
+            <tbody>
+            <tr>
+              <td>PRO Package</td>
+              <td class="table__cell-text-light">Standart Payment</td>
+              <td class="table__cell-text-light text-right">19 Jan 2017</td>
+              <td class="table__cell-compact">
+                <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Job Posted</td>
+              <td class="table__cell-text-light">30-Days Recuring</td>
+              <td class="table__cell-text-light text-right">24 Nov 2016</td>
+              <td class="table__cell-compact">
+                <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>PRO Package</td>
+              <td class="table__cell-text-light">Gift</td>
+              <td class="table__cell-text-light text-right">7 Mar 2016</td>
+              <td class="table__cell-compact">
+                <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>PRO Package</td>
+              <td class="table__cell-text-light">Standart Payment</td>
+              <td class="table__cell-text-light text-right">19 Jan 2017</td>
+              <td class="table__cell-compact">
+                <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Job Posted</td>
+              <td class="table__cell-text-light">30-Days Recuring</td>
+              <td class="table__cell-text-light text-right">24 Nov 2016</td>
+              <td class="table__cell-compact">
+                <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>PRO Package</td>
+              <td class="table__cell-text-light">Gift</td>
+              <td class="table__cell-text-light text-right">7 Mar 2016</td>
+              <td class="table__cell-compact">
+                <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>PRO Package</td>
+              <td class="table__cell-text-light">Standart Payment</td>
+              <td class="table__cell-text-light text-right">19 Jan 2017</td>
+              <td class="table__cell-compact">
+                <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Job Posted</td>
+              <td class="table__cell-text-light">30-Days Recuring</td>
+              <td class="table__cell-text-light text-right">24 Nov 2016</td>
+              <td class="table__cell-compact">
+                <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>PRO Package</td>
+              <td class="table__cell-text-light">Gift</td>
+              <td class="table__cell-text-light text-right">7 Mar 2016</td>
+              <td class="table__cell-compact">
+                <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="widget widget-controls widget-content-tabs widget-activity">
+        <div class="widget-controls__header">
+          <div>
+            Activity
+          </div>
+          <div class="widget-controls__header-controls">
+            <a href="#" class="widget-controls__header-control">Learn More</a>
+          </div>
+        </div>
+        <div class="widget-controls__content widget-content-tabs__tabs">
+          <nav class="nav nav-tabs">
+            <a class="nav-item nav-link active" data-toggle="tab" href="#widget-activity-tab">Activity</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#widget-blocked-users-tab">Blocked Users</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#widget-nda-tab">NDAs</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#widget-customer-invoices-tab">Customers Invoices</a>
+          </nav>
+          <div class="tab-content">
+            <div class="tab-pane show active" id="widget-activity-tab">
+              <div class="tab-pane__content js-scrollable">
+                <div class="widget-activity__items">
+                  <span class="widget-activity__date">Today</span>
+                  <div class="widget-activity__item widget-activity__item--green">
+                    <div class="widget-activity__item-text">
+                      Prepared all declared documents for invoice confirmation
+                    </div>
+                    <span class="widget-activity__item-date">Johny Marquez - 9:24 PM</span>
+                  </div>
+                  <div class="widget-activity__item widget-activity__item--orange">
+                    <div class="widget-activity__item-text">
+                      Fulfill the necessary action plan for current deadlines
+                    </div>
+                    <span class="widget-activity__item-date">Johny Marquez - 9:24 PM</span>
+                  </div>
+                  <div class="widget-activity__item widget-activity__item--blue">
+                    <div class="widget-activity__item-text">
+                      Prepared all declared documents for invoice confirmation
+                    </div>
+                    <span class="widget-activity__item-date">Johny Marquez - 9:24 PM</span>
+                  </div>
+                  <div class="widget-activity__item widget-activity__item--green">
+                    <div class="widget-activity__item-text">
+                      Prepared all declared documents for invoice confirmation
+                    </div>
+                    <span class="widget-activity__item-date">Johny Marquez - 9:24 PM</span>
+                  </div>
+                  <span class="widget-activity__date">Yesterday</span>
+                  <div class="widget-activity__item widget-activity__item--green">
+                    <div class="widget-activity__item-text">
+                      Prepared all declared documents for invoice confirmation
+                    </div>
+                    <span class="widget-activity__item-date">Johny Marquez - 9:24 PM</span>
+                  </div>
+                  <div class="widget-activity__item widget-activity__item--green">
+                    <div class="widget-activity__item-text">
+                      Prepared all declared documents for invoice confirmation
+                    </div>
+                    <span class="widget-activity__item-date">Johny Marquez - 9:24 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="widget-blocked-users-tab">
+              <div class="widget-activity__blocked-users">Blocked Users</div>
+            </div>
+            <div class="tab-pane" id="widget-nda-tab">
+              <div class="widget-activity__nda">NDA</div>
+            </div>
+            <div class="tab-pane" id="widget-customer-invoices-tab">
+              <div class="widget-activity__customer-invoices">Customer Invoices</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="widget widget-controls widget-contacts widget-todo widget-controls--dark">
+        <div class="widget-controls__header">
+          <div>
+            <span class="widget-controls__header-icon ua-icon-todo"></span> Todo Lists
+          </div>
+        </div>
+        <div class="widget-controls__content js-scrollable">
+          <div class="widget-controls__content-wrap">
+            <span class="widget-todo__date">Today</span>
+            <div class="widget-todo__item is-completed">
+              <span class="widget-todo__item-icon">
+                <span class="ua-icon-check"></span>
+              </span>
+              <div class="widget-todo__item-info">
+                <span class="widget-todo__item-name">Consectetur Sem Sollicitudin</span>
+                <span class="widget-todo__item-date">08:22 AM</span>
+              </div>
+            </div>
+            <div class="widget-todo__item is-completed">
+              <span class="widget-todo__item-icon">
+                <span class="ua-icon-check"></span>
+              </span>
+              <div class="widget-todo__item-info">
+                <span class="widget-todo__item-name">Consectetur Sem Sollicitudin</span>
+                <span class="widget-todo__item-date">08:22 AM</span>
+              </div>
+            </div>
+            <span class="widget-todo__date">Tomorrow</span>
+            <div class="widget-todo__item">
+              <span class="textavatar widget-todo__item-avatar widget-todo__item-avatar--orange" data-width="40" data-height="40" data-name="Richard Hendrick" data-toggle="textavatar"></span>
+              <div class="widget-todo__item-info">
+                <span class="widget-todo__item-name">Porta Vevenatis Quam</span>
+                <span class="widget-todo__item-date">10:30 PM</span>
+              </div>
+            </div>
+            <div class="widget-todo__item">
+              <span class="textavatar widget-todo__item-avatar widget-todo__item-avatar--green" data-width="40" data-height="40" data-name="Deborah Allen" data-toggle="textavatar"></span>
+              <div class="widget-todo__item-info">
+                <span class="widget-todo__item-name">Nullam quis risus eget urna mollis ornare leo</span>
+                <span class="widget-todo__item-date">rebecca@masterskin.ru</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="widget-controls__footer">
+          <a href="#" class="widget-controls__footer-add-control">
+            <span class="icon ua-icon-plus-circle"></span>
+          </a>
+          <a href="#" class="widget-controls__footer-view-all">
+            <span class="widget-controls__footer-view-all-icon iconfont-arrow-circle-right"></span><span>View more</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+
+<script src="../../admin/vendor/echarts/echarts.min.js"></script>
+
+  <script src="../../admin/vendor/jquery/jquery.min.js"></script>
+<script src="../../admin/vendor/popper/popper.min.js"></script>
+<script src="../../admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../admin/vendor/select2/js/select2.full.min.js"></script>
+<script src="../../admin/vendor/simplebar/simplebar.js"></script>
+<script src="../../admin/vendor/text-avatar/jquery.textavatar.js"></script>
+<script src="../../admin/vendor/tippyjs/tippy.all.min.js"></script>
+<script src="../../admin/vendor/wnumb/wNumb.js"></script>
+<script src="../../admin/js/main.js"></script>
+
+
+<script src="../../admin/vendor/sparkline/jquery.sparkline.min.js"></script>
+<script src="../../admin/js/preview/default-dashboard.min.js"></script>
+
+
+<div class="sidebar-mobile-overlay"></div>
+</body>
+</html>

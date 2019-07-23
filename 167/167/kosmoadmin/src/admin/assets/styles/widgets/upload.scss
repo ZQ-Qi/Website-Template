@@ -1,0 +1,766 @@
+@import "../config/colors";
+@import "../config/ui";
+
+.btn-group {
+  .ks-upload-dropdown-menu {
+    .dropdown-item {
+      padding: 16px 35px 16px 28px;
+      font-size: 13px;
+      font-weight: 500;
+      color: $ks-color-primary;
+
+      .ks-icon {
+        font-size: 20px;
+        font-weight: normal;
+        color: $ks-color-primary;
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .ks-upload-custom-dropdown-menu {
+    width: 364px;
+
+    > .ks-body {
+      padding: 20px;
+
+      > .ks-block {
+        height: 120px;
+        border-radius: 2px;
+        background-color: rgba(57, 81, 155, 0.05);
+        border: dashed 1px rgba(57, 81, 155, 0.2);
+        padding: 20px;
+        text-align: center;
+
+        > .ks-icon {
+          font-size: 38px;
+          font-weight: normal;
+          color: rgba(58, 82, 155, 0.15);
+          display: block;
+        }
+
+        > .ks-description {
+          display: block;
+          font-weight: 500;
+          color: #333333;
+          margin-top: 8px;
+        }
+
+        > .ks-info {
+          font-size: 12px;
+          font-weight: normal;
+          color: rgba(51, 51, 51, 0.6);
+          margin-top: 4px;
+        }
+      }
+
+      > .ks-uploading-files {
+        list-style: none;
+        margin: 0;
+        margin-top: 15px;
+        padding: 0;
+
+        li {
+          list-style: none;
+          padding: 20px;
+          border-radius: 2px;
+          background-color: #ffffff;
+          border: solid 1px rgba(57, 81, 155, 0.15);
+          display: flex;
+
+          > .ks-body {
+            flex-grow: 1;
+
+            > .ks-header {
+              margin-bottom: 5px;
+
+              .ks-icon {
+                font-size: 16px;
+                display: inline-block;
+                margin-right: 7px;
+              }
+
+              .ks-filename {
+                font-weight: 500;
+              }
+            }
+
+            > .ks-uploading-progress {
+              font-size: 12px;
+              color: rgba(51, 51, 51, 0.6);
+              margin-top: 5px;
+
+              > .progress {
+                margin-bottom: 5px;
+              }
+            }
+          }
+
+          > .ks-uploading-cancel {
+            margin-left: 10px;
+
+            > .ks-icon {
+              font-size: 16px;
+              font-weight: normal;
+              color: rgba(58, 82, 155, 0.6);
+              display: inline-block;
+              margin-top: 20px;
+              cursor: pointer;
+
+              &:hover {
+                text-decoration: none;
+                color: rgba(58, 82, 155, 0.8);
+              }
+            }
+          }
+        }
+      }
+
+      > .ks-uploaded-files {
+        list-style: none;
+        margin: 0;
+        margin-top: 15px;
+        padding: 0;
+
+        li {
+          display: flex;
+          padding: 10px 20px;
+          border-radius: 2px;
+          background-color: #ffffff;
+          border: solid 1px rgba(57, 81, 155, 0.15);
+
+          > .ks-body {
+            flex-grow: 1;
+
+            > .ks-header {
+              > .ks-icon {
+                font-size: 16px;
+                display: inline-block;
+                margin-right: 7px;
+                position: relative;
+                top: 1px;
+              }
+
+              > .ks-filename {
+                font-weight: bold;
+                position: relative;
+                top: 1px;
+              }
+            }
+          }
+
+          > .ks-remove {
+            margin-left: 10px;
+
+            > .ks-icon {
+              font-size: 17px;
+              font-weight: normal;
+              color: rgba(58, 82, 155, 0.6);
+              display: inline-block;
+              cursor: pointer;
+              position: relative;
+              top: 1px;
+
+              &:hover {
+                text-decoration: none;
+                color: rgba(58, 82, 155, 0.8);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .ks-footer {
+      height: 65px;
+      background-color: rgba(57, 81, 155, 0.05);
+      padding: 15px 20px;
+      border-top: 1px solid rgba(57, 81, 155, 0.2);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      > .btn {
+        + .btn {
+          margin-left: 10px;
+        }
+      }
+    }
+
+
+  }
+}
+
+.ks-tabs-uploader-widget {
+  .ks-tab-upload-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    > .ks-icon {
+      font-size: 46px;
+      font-weight: normal;
+      color: rgba(58, 82, 155, 0.1);
+      margin-bottom: 15px;
+    }
+
+    > .ks-tab-upload-description {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.5;
+      color: rgba(51, 51, 51, 0.6);
+      margin-bottom: 15px;
+    }
+
+    > .ks-tab-upload-link {
+      margin-bottom: 15px;
+
+      > .form-control {
+        width: 240px;
+      }
+    }
+  }
+
+  > .tab-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.ks-tabs-vertical {
+    .ks-nav-tabs {
+      border-right: none;
+
+      .nav-item {
+        > .nav-link {
+          &.active {
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card {
+  .ks-tabs-uploader-widget {
+    border: none;
+
+
+  }
+}
+
+.ks-widget-attachments {
+  margin-bottom: 30px;
+
+  > .card-block {
+    > .ks-header {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  .ks-upload-block {
+    border-radius: 2px;
+    border: dashed 1px rgba(57, 81, 155, 0.2);
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+
+    > .ks-icon {
+      font-size: 34px;
+      font-weight: normal;
+      color: rgba(58, 82, 155, 0.15);
+      line-height: 24px;
+      margin-right: 20px;
+    }
+
+    > .ks-text {
+      font-size: 12px;
+      color: rgba(51, 51, 51, 0.6);
+      line-height: 12px;
+    }
+
+    > .ks-upload-btn {
+      > .ks-btn-separator {
+        font-size: 13px;
+        color: rgba(51, 51, 51, 0.6);
+        line-height: 12px;
+        display: inline-block;
+        margin-left: 10px;
+        position: relative;
+        top: 1px;
+      }
+
+      > .btn {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .ks-uploading-files-container {
+    display: none;
+  }
+
+  .ks-uploading-progress-block {
+    border-radius: 2px;
+    background-color: rgba(57, 81, 155, 0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(51, 51, 51, 0.6);
+    margin-bottom: 25px;
+
+    .ks-filename {
+      flex-grow: 1;
+      font-weight: 500;
+    }
+
+    .ks-progress {
+      margin: 0;
+      flex-grow: 3;
+
+      > .progress {
+        width: 100%;
+      }
+    }
+
+    .ks-cancel-block {
+      width: 10%;
+      text-align: right;
+      position: relative;
+      top: 2px;
+
+      > .ks-icon {
+        font-size: 16px;
+        color: rgba(58, 82, 155, 0.6);
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: none;
+          color: rgba(58, 82, 155, 0.8);
+        }
+      }
+    }
+  }
+
+  .ks-files {
+    height: auto;
+    overflow: hidden;
+    margin-bottom: -15px;
+
+    > ul {
+      margin: 0;
+      padding: 0;
+      height: auto;
+      overflow: hidden;
+      list-style: none;
+    }
+
+    .ks-file {
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      > .ks-thumb {
+        width: 64px;
+        height: 64px;
+        border: none;
+        border-radius: 2px;
+      }
+
+      .ks-icon {
+        font-size: 18px;
+        font-weight: normal;
+        color: rgba(58, 82, 155, 0.6);
+        display: inline-block;
+        margin-left: 5px;
+        position: relative;
+        top: 4px;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: none;
+          color: rgba(58, 82, 155, 0.8);
+        }
+      }
+    }
+  }
+}
+
+.ks-attach-files-widget {
+  margin-bottom: 30px;
+
+  .card-block {
+    padding: 0;
+  }
+
+  .ks-upload {
+    padding: 30px;
+    background-color: rgba(57, 81, 155, 0.05);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    > .ks-icon {
+      font-size: 34px;
+      color: rgba(58, 82, 155, 0.15);
+      margin-right: 20px;
+    }
+
+    > .ks-text {
+      margin-right: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(51, 51, 51, 0.6);
+    }
+
+    &.ks-dragover {
+      background-color: rgba(57, 81, 155, 0.08);
+
+      > .ks-icon {
+        color: rgba(58, 82, 155, 0.2);
+      }
+
+      > .ks-text {
+        color: rgba(51, 51, 51, 0.8);
+      }
+    }
+  }
+
+  .ks-uploading-files {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 15px 20px;
+      width: 100%;
+      border-bottom: 1px solid rgba(57, 81, 155, 0.2);
+
+      > .ks-icon {
+        font-size: 36px;
+        margin-right: 15px;
+      }
+
+      > .ks-body {
+        flex-grow: 1;
+
+        > .ks-header {
+          margin-bottom: 5px;
+
+          > .ks-filename {
+            font-size: 13px;
+            font-weight: 500;
+            color: #333333;
+          }
+        }
+
+        > .ks-progress {
+          font-size: 12px;
+          color: rgba(51, 51, 51, 0.6);
+
+          > .progress {
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      > .ks-cancel {
+        margin-left: 10px;
+        color: rgba(58, 82, 155, 0.6);
+        cursor: pointer;
+        position: relative;
+        top: 2px;
+
+        > .ks-icon {
+          font-size: 16px;
+          color: rgba(58, 82, 155, 0.6);
+
+          &:hover {
+            color: rgba(58, 82, 155, 0.8);
+            text-decoration: none;
+          }
+        }
+      }
+
+      &.ks-file-uploading-error {
+        > .ks-body {
+          > .ks-header {
+            > .ks-filename {
+              color: $ks-color-danger;
+            }
+          }
+
+          > .ks-progress {
+            > .ks-description {
+              color: $ks-color-danger;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ks-uploaded-files {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 15px 20px;
+      width: 100%;
+      border-bottom: 1px solid rgba(57, 81, 155, 0.2);
+
+      > .ks-icon {
+        font-size: 36px;
+        margin-right: 15px;
+      }
+
+      > .ks-body {
+        flex-grow: 1;
+
+        > .ks-header {
+          margin-bottom: 1px;
+        }
+
+        > .ks-filename {
+          font-size: 13px;
+          color: #333333;
+        }
+
+        > .ks-description {
+          font-size: 12px;
+          color: rgba(51, 51, 51, 0.6);
+        }
+      }
+
+      > .ks-remove {
+        margin-left: 10px;
+        cursor: pointer;
+
+        > .ks-icon {
+          font-size: 17px;
+          line-height: 17px;
+          color: rgba(58, 82, 155, 0.6);
+
+          &:hover {
+            color: rgba(58, 82, 155, 0.8);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-select-attachment {
+  height: 120px;
+  border-radius: 2px;
+  background: rgba(57, 81, 155, 0.05);
+  border: dashed 1px rgba(57, 81, 155, 0.2);
+  padding: 20px;
+  text-align: center;
+
+  > .ks-icon {
+    font-size: 36px;
+    font-weight: normal;
+    color: rgba(58, 82, 155, 0.15);
+    display: block;
+  }
+
+  > .ks-description {
+    display: block;
+    font-weight: 500;
+    color: #333333;
+    margin-top: 8px;
+  }
+
+  > .ks-info {
+    font-size: 12px;
+    font-weight: normal;
+    color: rgba(51, 51, 51, 0.6);
+    margin-top: 4px;
+  }
+}
+
+.ks-uploading-attachments {
+  list-style: none;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+
+  > li {
+    list-style: none;
+    overflow: hidden;
+    height: auto;
+    padding: 20px;
+    border-radius: 2px;
+    background: #ffffff;
+    border: solid 1px rgba(57, 81, 155, 0.15);
+    display: flex;
+
+    + li {
+      margin-top: 10px;
+    }
+
+    > .ks-body {
+      flex-grow: 1;
+
+      > .ks-header {
+        > .ks-icon {
+          font-size: 16px;
+          display: inline-block;
+          margin-right: 7px;
+        }
+
+        > .ks-name {
+          font-weight: 500;
+        }
+      }
+
+      > .ks-uploading-progress {
+        margin-top: 5px;
+
+        > .progress {
+          margin-bottom: 5px;
+        }
+
+        font-size: 12px;
+        color: rgba(51, 51, 51, 0.6);
+      }
+    }
+
+    > .ks-cancel {
+      margin-left: 10px;
+
+      > .ks-icon {
+        font-size: 16px;
+        font-weight: normal;
+        color: rgba(58, 82, 155, 0.6);
+        display: inline-block;
+        margin-top: 20px;
+        cursor: pointer;
+
+        &:hover {
+          color: rgba(58, 82, 155, 0.8);
+        }
+      }
+    }
+  }
+}
+
+.ks-uploaded-attachments {
+  list-style: none;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+
+  li {
+    overflow: hidden;
+    height: auto;
+    padding: 10px 20px;
+    border-radius: 2px;
+    background-color: #fff;
+    border: solid 1px rgba(57, 81, 155, 0.15);
+    display: flex;
+
+    > .ks-body {
+      flex-grow: 1;
+
+      .ks-header {
+        .ks-icon {
+          font-size: 16px;
+          display: inline-block;
+          margin-right: 7px;
+          position: relative;
+          top: 1px;
+        }
+
+        > .ks-name {
+          font-weight: 500;
+          position: relative;
+          top: 1px;
+        }
+      }
+      .ks-description {
+        font-size: 12px;
+        color: $text-color-light;
+        margin-top: 5px;
+      }
+    }
+
+    .ks-remove {
+      margin-left: 10px;
+
+      > .ks-icon {
+        font-size: 16px;
+        font-weight: normal;
+        color: rgba(58, 82, 155, 0.6);
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        top: 1px;
+
+        &:hover {
+          color: rgba(58, 82, 155, 0.8);
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-upload-dropzone {
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: dashed 1px rgba(23, 23, 23, 0.25);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border: dashed 1px rgba(23, 23, 23, 0.35);
+  }
+
+  &.ks-dragover {
+    background: rgba(23, 23, 23, 0.04);
+    border: dashed 1px rgba(23, 23, 23, 0.45);
+  }
+}
+
+.ks-widget-upload-dropzone-header {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ks-widget-upload-dropzone-description {
+  font-size: 12px;
+  text-align: center;
+  color: rgba(18, 18, 18, 0.6);
+
+  .ks-bold {
+    color: #333;
+  }
+}

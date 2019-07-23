@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Kharna-Admin Dashboard</title>
+
+		<!--favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+		<!--Bootstrap.min css-->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+		<!--mCustomScrollbar css-->
+		<link rel="stylesheet" href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css">
+
+		<!--Icons css-->
+		<link rel="stylesheet" href="assets/css/icons.css">
+
+		<!--Style css-->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!--Sidemenu css-->
+		<link rel="stylesheet" href="assets/plugins/toggle-menu/sidemenu.css">
+
+	</head>
+
+	<body class="app ">
+
+		<div id="spinner"></div>
+
+		<div id="app">
+			<div class="main-wrapper" >
+				<nav class="navbar navbar-expand-lg main-navbar">
+					<a class="header-brand" href="index.html">
+						<img src="assets/img/brand/logo.png" class="header-brand-img" alt="Kharna-Admin  logo">
+					</a>
+					<form class="form-inline mr-auto">
+						<ul class="navbar-nav mr-3">
+							<li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="ion ion-navicon-round"></i></a></li>
+							<li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-md-none navsearch"><i class="ion ion-search"></i></a></li>
+						</ul>
+						<div class="search-element">
+							<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-primary" type="submit"><i class="ion ion-search"></i></button>
+						</div>
+					</form>
+					<ul class="navbar-nav navbar-right">
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="ion-ios-email-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Messages
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-1.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Stewart Ball</b>
+													<p>Your template awesome</p>
+												</div>
+												<div class="time">6 hours ago</div>
+											</div>
+
+										</div>
+									</a>
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-2.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Jonathan North</b>
+													<p>Your Order Shipped.....</p>
+												</div>
+												<div class="time">45 mins ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-4.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Victor Taylor</b>
+													<p>Hi!, I' am web developer</p>
+												</div>
+												<div class="time"> 8 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-3.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Ruth	Arnold</b>
+													<p>Hi!, I' am web designer</p>
+												</div>
+												<div class="time"> 3 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-5.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Sam	Lyman</b>
+													<p>Hi!, I' am java developer</p>
+												</div>
+												<div class="time"> 15 mintues ago</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg beep"><i class="ion-ios-bell-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Notifications
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-exclamation-triangle text-danger"></i>
+										<div class="dropdown-item-desc">
+											<b>Error message occurred....</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-warning"></i>
+										<div class="dropdown-item-desc">
+											<b> Adding new people</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-shopping-cart text-success"></i>
+										<div class="dropdown-item-desc">
+											<b>Your items Arrived</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-comment text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>New Message received</b> <div class="float-right"><span class="badge badge-pill badge-danger badge-sm">67</span></div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle">
+							<a href="#" class="nav-link nav-link-lg full-screen-link">
+								<i class="ion-arrow-expand"  id="fullscreen-button"></i>
+							</a>
+						</li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+							<img src="assets/img/avatar/avatar-1.jpeg" alt="profile-user" class="rounded-circle w-32">
+							<div class="d-sm-none d-lg-inline-block">Jessica Lee</div></a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-android-person"></i> Profile
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion-android-drafts"></i> Messages
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-gear-a"></i> Settings
+								</a>
+								<a href="#" class="dropdown-item has-icon">
+									<i class="ion-ios-redo"></i> Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+
+				<aside class="app-sidebar">
+					<div class="app-sidebar__user">
+					    <div class="dropdown">
+							<a class="nav-link pl-2 pr-2 leading-none d-flex" data-toggle="dropdown" href="#">
+								<img alt="image" src="assets/img/avatar/avatar-1.jpeg" class=" avatar-md rounded-circle">
+								<span class="ml-2 d-lg-block">
+									<span class="text-white app-sidebar__user-name mt-5">Jessica Lee</span><br>
+									<span class="text-muted app-sidebar__user-name text-sm"> Web-Designer</span>
+								</span>
+							</a>
+						</div>
+					</div>
+					<ul class="side-menu">
+						<li class="slide">
+							<a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Dashboard</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a class="slide-item"  href="index.html"><span>Dashboard 01</span></a></li>
+								<li><a class="slide-item" href="index2.html"><span>Dashboard 02</span></a></li>
+								<li><a class="slide-item" href="index3.html"><span>Dashboard 03</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="side-menu__item" href="widgets.html"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">Widgets</span></a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tasks"></i><span class="side-menu__label">UI Elements</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="elements.html" class="slide-item"> Elements</a></li>
+								<li><a href="buttons.html" class="slide-item"> Buttons</a></li>
+								<li><a href="toastr.html" class="slide-item"> Toastr</a></li>
+								<li><a href="calender.html" class="slide-item"> Calendar</a></li>
+								<li><a href="rangesliders.html" class="slide-item"> Rangeslider</a></li>
+								<li><a href="modals.html" class="slide-item"> Modals</a></li>
+								<li><a href="timeline.html" class="slide-item"> Timeline</a></li>
+								<li><a href="invoice.html" class="slide-item"> Invoice</a></li>
+								<li><a href="users.html" class="slide-item"> Users List</a></li>
+								<li><a href="mailinbox.html" class="slide-item"> Mail-inbox</a></li>
+								<li><a href="mail-compose.html" class="slide-item"> Mail-Compose</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+						    <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-paw"></i><span class="side-menu__label">Icons</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="icons-ion.html" class="slide-item"> Ion Icons</a></li>
+								<li><a href="icons-fontawesome.html" class="slide-item"> Font Awesome</a></li>
+								<li><a href="icons-feather.html" class="slide-item"> Feather Awesome</a></li>
+								<li><a href="icons-materialdesign.html" class="slide-item"> Material Design</a></li>
+								<li><a href="icons-themify.html" class="slide-item"> Themify</a></li>
+								<li><a href="icons-simpleline.html" class="slide-item"> Simple line</a></li>
+								<li><a href="icons-pe7.html" class="slide-item"> pe7</a></li>
+								<li><a href="icons-flag.html" class="slide-item"> Flag Icons</a></li>
+								<li><a href="icons-weather.html" class="slide-item"> Weather Icons</a></li>
+								<li><a href="icons-typicons.html" class="slide-item"> Typicons</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-table"></i><span class="side-menu__label">Tables</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="table.html" class="slide-item">Basic Tables</a></li>
+								<li><a href="datatables.html" class="slide-item"> Data Tables</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-file-text"></i><span class="side-menu__label">Forms</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="formelements.html" class="slide-item"> Form Elements</a></li>
+								<li><a href="formadvanced.html" class="slide-item"> Advanced Form</a></li>
+								<li><a href="formeditor.html" class="slide-item"> Form Editor</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-bar-chart"></i><span class="side-menu__label">Charts</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="chartjs.html" class="slide-item">Chart Js</a></li>
+								<li><a href="flotcharts.html" class="slide-item"> Flot Charts</a></li>
+								<li><a href="barcharts.html" class="slide-item"> Bar Charts</a></li>
+								<li><a href="echart.html" class="slide-item"> ECharts</a></li>
+								<li><a href="chartist.html" class="slide-item"> Chartist</a></li>
+								<li><a href="morris.html" class="slide-item"> Morris Charts</a></li>
+								<li><a href="othercharts.html" class="slide-item"> Other Charts</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-map"></i><span class="side-menu__label">Maps</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="maps.html" class="slide-item"> Google Maps</a></li>
+								<li><a href="vector-map.html" class="slide-item">Vector Maps</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-pie-chart"></i><span class="side-menu__label">Pages</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="profile.html" class="slide-item"> Profile</a></li>
+								<li><a href="pricing-tables.html" class="slide-item"> Pricing Tables</a></li>
+								<li><a href="gallery.html" class="slide-item"> Gallery</a></li>
+								<li><a href="shop.html" class="slide-item"> Shop</a></li>
+								<li><a href="shop-cart.html" class="slide-item"> Shop Cart</a></li>
+								<li><a href="terms.html" class="slide-item"> Terms and Conditions</a></li>
+								<li><a href="register.html" class="slide-item"> Register</a></li>
+								<li><a href="login.html" class="slide-item"> Login</a></li>
+								<li><a href="forgot.html" class="slide-item"> Forgot Password</a></li>
+								<li><a href="reset.html" class="slide-item"> Reset Password</a></li>
+								<li><a href="under-construction.html" class="slide-item"> Under Construction</a></li>
+								<li><a href="lockscreen.html" class="slide-item"> Lock Screen</a></li>
+								<li><a href="404.html" class="slide-item"> 404</a></li>
+								<li><a href="505.html" class="slide-item"> 505</a></li>
+								<li><a href="emptypage.html" class="slide-item"> Empty  Page</a></li>
+							</ul>
+						</li>
+					</ul>
+				</aside>
+
+				<div class="app-content">
+					<section class="section">
+                    	<ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Icons</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Ion Icons</li>
+                        </ol>
+
+						<div class="section-body">
+							<div class="card">
+								<div class="card-header">
+									<h4>Ion Icons</h4>
+								</div>
+								<div class="card-body">
+									<ul id="icons" class="ionicons icons-item">
+										<li class="ion-ionic" data-toggle="tooltip" title="ion-ionic"></li>
+										<li class="ion-arrow-up-a" data-toggle="tooltip" title="ion-arrow-up-a"></li>
+										<li class="ion-arrow-right-a" data-toggle="tooltip" title="ion-arrow-right-a"></li>
+										<li class="ion-arrow-down-a" data-toggle="tooltip" title="ion-arrow-down-a"></li>
+										<li class="ion-arrow-left-a" data-toggle="tooltip" title="ion-arrow-left-a"></li>
+										<li class="ion-arrow-up-b" data-toggle="tooltip" title="ion-arrow-up-b"></li>
+										<li class="ion-arrow-right-b" data-toggle="tooltip" title="ion-arrow-right-b"></li>
+										<li class="ion-arrow-down-b" data-toggle="tooltip" title="ion-arrow-down-b"></li>
+										<li class="ion-arrow-left-b" data-toggle="tooltip" title="ion-arrow-left-b"></li>
+										<li class="ion-arrow-up-c" data-toggle="tooltip" title="ion-arrow-up-c"></li>
+										<li class="ion-arrow-right-c" data-toggle="tooltip" title="ion-arrow-right-c"></li>
+										<li class="ion-arrow-down-c" data-toggle="tooltip" title="ion-arrow-down-c"></li>
+										<li class="ion-arrow-left-c" data-toggle="tooltip" title="ion-arrow-left-c"></li>
+										<li class="ion-arrow-return-right" data-toggle="tooltip" title="ion-arrow-return-right"></li>
+										<li class="ion-arrow-return-left" data-toggle="tooltip" title="ion-arrow-return-left"></li>
+										<li class="ion-arrow-swap" data-toggle="tooltip" title="ion-arrow-swap"></li>
+										<li class="ion-arrow-shrink" data-toggle="tooltip" title="ion-arrow-shrink"></li>
+										<li class="ion-arrow-expand" data-toggle="tooltip" title="ion-arrow-expand"></li>
+										<li class="ion-arrow-move" data-toggle="tooltip" title="ion-arrow-move"></li>
+										<li class="ion-arrow-resize" data-toggle="tooltip" title="ion-arrow-resize"></li>
+										<li class="ion-chevron-up" data-toggle="tooltip" title="ion-chevron-up"></li>
+										<li class="ion-chevron-right" data-toggle="tooltip" title="ion-chevron-right"></li>
+										<li class="ion-chevron-down" data-toggle="tooltip" title="ion-chevron-down"></li>
+										<li class="ion-chevron-left" data-toggle="tooltip" title="ion-chevron-left"></li>
+										<li class="ion-navicon-round" data-toggle="tooltip" title="ion-navicon-round"></li>
+										<li class="ion-navicon" data-toggle="tooltip" title="ion-navicon"></li>
+										<li class="ion-drag" data-toggle="tooltip" title="ion-drag"></li>
+										<li class="ion-log-in" data-toggle="tooltip" title="ion-log-in"></li>
+										<li class="ion-log-out" data-toggle="tooltip" title="ion-log-out"></li>
+										<li class="ion-checkmark-round" data-toggle="tooltip" title="ion-checkmark-round"></li>
+										<li class="ion-checkmark" data-toggle="tooltip" title="ion-checkmark"></li>
+										<li class="ion-checkmark-circled" data-toggle="tooltip" title="ion-checkmark-circled"></li>
+										<li class="ion-close-round" data-toggle="tooltip" title="ion-close-round"></li>
+										<li class="ion-close" data-toggle="tooltip" title="ion-close"></li>
+										<li class="ion-close-circled" data-toggle="tooltip" title="ion-close-circled"></li>
+										<li class="ion-plus-round" data-toggle="tooltip" title="ion-plus-round"></li>
+										<li class="ion-plus" data-toggle="tooltip" title="ion-plus"></li>
+										<li class="ion-plus-circled" data-toggle="tooltip" title="ion-plus-circled"></li>
+										<li class="ion-minus-round" data-toggle="tooltip" title="ion-minus-round"></li>
+										<li class="ion-minus" data-toggle="tooltip" title="ion-minus"></li>
+										<li class="ion-minus-circled" data-toggle="tooltip" title="ion-minus-circled"></li>
+										<li class="ion-information" data-toggle="tooltip" title="ion-information"></li>
+										<li class="ion-information-circled" data-toggle="tooltip" title="ion-information-circled"></li>
+										<li class="ion-help" data-toggle="tooltip" title="ion-help"></li>
+										<li class="ion-help-circled" data-toggle="tooltip" title="ion-help-circled"></li>
+										<li class="ion-backspace-outline" data-toggle="tooltip" title="ion-backspace-outline"></li>
+										<li class="ion-backspace" data-toggle="tooltip" title="ion-backspace"></li>
+										<li class="ion-help-buoy" data-toggle="tooltip" title="ion-help-buoy"></li>
+										<li class="ion-asterisk" data-toggle="tooltip" title="ion-asterisk"></li>
+										<li class="ion-alert" data-toggle="tooltip" title="ion-alert"></li>
+										<li class="ion-alert-circled" data-toggle="tooltip" title="ion-alert-circled"></li>
+										<li class="ion-refresh" data-toggle="tooltip" title="ion-refresh"></li>
+										<li class="ion-loop" data-toggle="tooltip" title="ion-loop"></li>
+										<li class="ion-shuffle" data-toggle="tooltip" title="ion-shuffle"></li>
+										<li class="ion-home" data-toggle="tooltip" title="ion-home"></li>
+										<li class="ion-search" data-toggle="tooltip" title="ion-search"></li>
+										<li class="ion-flag" data-toggle="tooltip" title="ion-flag"></li>
+										<li class="ion-star" data-toggle="tooltip" title="ion-star"></li>
+										<li class="ion-heart" data-toggle="tooltip" title="ion-heart"></li>
+										<li class="ion-heart-broken" data-toggle="tooltip" title="ion-heart-broken"></li>
+										<li class="ion-gear-a" data-toggle="tooltip" title="ion-gear-a"></li>
+										<li class="ion-gear-b" data-toggle="tooltip" title="ion-gear-b"></li>
+										<li class="ion-toggle-filled" data-toggle="tooltip" title="ion-toggle-filled"></li>
+										<li class="ion-toggle" data-toggle="tooltip" title="ion-toggle"></li>
+										<li class="ion-settings" data-toggle="tooltip" title="ion-settings"></li>
+										<li class="ion-wrench" data-toggle="tooltip" title="ion-wrench"></li>
+										<li class="ion-hammer" data-toggle="tooltip" title="ion-hammer"></li>
+										<li class="ion-edit" data-toggle="tooltip" title="ion-edit"></li>
+										<li class="ion-trash-a" data-toggle="tooltip" title="ion-trash-a"></li>
+										<li class="ion-trash-b" data-toggle="tooltip" title="ion-trash-b"></li>
+										<li class="ion-document" data-toggle="tooltip" title="ion-document"></li>
+										<li class="ion-document-text" data-toggle="tooltip" title="ion-document-text"></li>
+										<li class="ion-clipboard" data-toggle="tooltip" title="ion-clipboard"></li>
+										<li class="ion-scissors" data-toggle="tooltip" title="ion-scissors"></li>
+										<li class="ion-funnel" data-toggle="tooltip" title="ion-funnel"></li>
+										<li class="ion-bookmark" data-toggle="tooltip" title="ion-bookmark"></li>
+										<li class="ion-email" data-toggle="tooltip" title="ion-email"></li>
+										<li class="ion-email-unread" data-toggle="tooltip" title="ion-email-unread"></li>
+										<li class="ion-folder" data-toggle="tooltip" title="ion-folder"></li>
+										<li class="ion-filing" data-toggle="tooltip" title="ion-filing"></li>
+										<li class="ion-archive" data-toggle="tooltip" title="ion-archive"></li>
+										<li class="ion-reply" data-toggle="tooltip" title="ion-reply"></li>
+										<li class="ion-reply-all" data-toggle="tooltip" title="ion-reply-all"></li>
+										<li class="ion-forward" data-toggle="tooltip" title="ion-forward"></li>
+										<li class="ion-share" data-toggle="tooltip" title="ion-share"></li>
+										<li class="ion-paper-airplane" data-toggle="tooltip" title="ion-paper-airplane"></li>
+										<li class="ion-link" data-toggle="tooltip" title="ion-link"></li>
+										<li class="ion-paperclip" data-toggle="tooltip" title="ion-paperclip"></li>
+										<li class="ion-compose" data-toggle="tooltip" title="ion-compose"></li>
+										<li class="ion-briefcase" data-toggle="tooltip" title="ion-briefcase"></li>
+										<li class="ion-medkit" data-toggle="tooltip" title="ion-medkit"></li>
+										<li class="ion-at" data-toggle="tooltip" title="ion-at"></li>
+										<li class="ion-pound" data-toggle="tooltip" title="ion-pound"></li>
+										<li class="ion-quote" data-toggle="tooltip" title="ion-quote"></li>
+										<li class="ion-cloud" data-toggle="tooltip" title="ion-cloud"></li>
+										<li class="ion-upload" data-toggle="tooltip" title="ion-upload"></li>
+										<li class="ion-more" data-toggle="tooltip" title="ion-more"></li>
+										<li class="ion-grid" data-toggle="tooltip" title="ion-grid"></li>
+										<li class="ion-calendar" data-toggle="tooltip" title="ion-calendar"></li>
+										<li class="ion-clock" data-toggle="tooltip" title="ion-clock"></li>
+										<li class="ion-compass" data-toggle="tooltip" title="ion-compass"></li>
+										<li class="ion-pinpoint" data-toggle="tooltip" title="ion-pinpoint"></li>
+										<li class="ion-pin" data-toggle="tooltip" title="ion-pin"></li>
+										<li class="ion-navigate" data-toggle="tooltip" title="ion-navigate"></li>
+										<li class="ion-location" data-toggle="tooltip" title="ion-location"></li>
+										<li class="ion-map" data-toggle="tooltip" title="ion-map"></li>
+										<li class="ion-lock-combination" data-toggle="tooltip" title="ion-lock-combination"></li>
+										<li class="ion-locked" data-toggle="tooltip" title="ion-locked"></li>
+										<li class="ion-unlocked" data-toggle="tooltip" title="ion-unlocked"></li>
+										<li class="ion-key" data-toggle="tooltip" title="ion-key"></li>
+										<li class="ion-arrow-graph-up-right" data-toggle="tooltip" title="ion-arrow-graph-up-right"></li>
+										<li class="ion-arrow-graph-down-right" data-toggle="tooltip" title="ion-arrow-graph-down-right"></li>
+										<li class="ion-arrow-graph-up-left" data-toggle="tooltip" title="ion-arrow-graph-up-left"></li>
+										<li class="ion-arrow-graph-down-left" data-toggle="tooltip" title="ion-arrow-graph-down-left"></li>
+										<li class="ion-stats-bars" data-toggle="tooltip" title="ion-stats-bars"></li>
+										<li class="ion-connection-bars" data-toggle="tooltip" title="ion-connection-bars"></li>
+										<li class="ion-pie-graph" data-toggle="tooltip" title="ion-pie-graph"></li>
+										<li class="ion-chatbubble" data-toggle="tooltip" title="ion-chatbubble"></li>
+										<li class="ion-chatbubble-working" data-toggle="tooltip" title="ion-chatbubble-working"></li>
+										<li class="ion-chatbubbles" data-toggle="tooltip" title="ion-chatbubbles"></li>
+										<li class="ion-chatbox" data-toggle="tooltip" title="ion-chatbox"></li>
+										<li class="ion-chatbox-working" data-toggle="tooltip" title="ion-chatbox-working"></li>
+										<li class="ion-chatboxes" data-toggle="tooltip" title="ion-chatboxes"></li>
+										<li class="ion-person" data-toggle="tooltip" title="ion-person"></li>
+										<li class="ion-person-add" data-toggle="tooltip" title="ion-person-add"></li>
+										<li class="ion-person-stalker" data-toggle="tooltip" title="ion-person-stalker"></li>
+										<li class="ion-woman" data-toggle="tooltip" title="ion-woman"></li>
+										<li class="ion-man" data-toggle="tooltip" title="ion-man"></li>
+										<li class="ion-female" data-toggle="tooltip" title="ion-female"></li>
+										<li class="ion-male" data-toggle="tooltip" title="ion-male"></li>
+										<li class="ion-transgender" data-toggle="tooltip" title="ion-transgender"></li>
+										<li class="ion-fork" data-toggle="tooltip" title="ion-fork"></li>
+										<li class="ion-knife" data-toggle="tooltip" title="ion-knife"></li>
+										<li class="ion-spoon" data-toggle="tooltip" title="ion-spoon"></li>
+										<li class="ion-soup-can-outline" data-toggle="tooltip" title="ion-soup-can-outline"></li>
+										<li class="ion-soup-can" data-toggle="tooltip" title="ion-soup-can"></li>
+										<li class="ion-beer" data-toggle="tooltip" title="ion-beer"></li>
+										<li class="ion-wineglass" data-toggle="tooltip" title="ion-wineglass"></li>
+										<li class="ion-coffee" data-toggle="tooltip" title="ion-coffee"></li>
+										<li class="ion-icecream" data-toggle="tooltip" title="ion-icecream"></li>
+										<li class="ion-pizza" data-toggle="tooltip" title="ion-pizza"></li>
+										<li class="ion-power" data-toggle="tooltip" title="ion-power"></li>
+										<li class="ion-mouse" data-toggle="tooltip" title="ion-mouse"></li>
+										<li class="ion-battery-full" data-toggle="tooltip" title="ion-battery-full"></li>
+										<li class="ion-battery-half" data-toggle="tooltip" title="ion-battery-half"></li>
+										<li class="ion-battery-low" data-toggle="tooltip" title="ion-battery-low"></li>
+										<li class="ion-battery-empty" data-toggle="tooltip" title="ion-battery-empty"></li>
+										<li class="ion-battery-charging" data-toggle="tooltip" title="ion-battery-charging"></li>
+										<li class="ion-wifi" data-toggle="tooltip" title="ion-wifi"></li>
+										<li class="ion-bluetooth" data-toggle="tooltip" title="ion-bluetooth"></li>
+										<li class="ion-calculator" data-toggle="tooltip" title="ion-calculator"></li>
+										<li class="ion-camera" data-toggle="tooltip" title="ion-camera"></li>
+										<li class="ion-eye" data-toggle="tooltip" title="ion-eye"></li>
+										<li class="ion-eye-disabled" data-toggle="tooltip" title="ion-eye-disabled"></li>
+										<li class="ion-flash" data-toggle="tooltip" title="ion-flash"></li>
+										<li class="ion-flash-off" data-toggle="tooltip" title="ion-flash-off"></li>
+										<li class="ion-qr-scanner" data-toggle="tooltip" title="ion-qr-scanner"></li>
+										<li class="ion-image" data-toggle="tooltip" title="ion-image"></li>
+										<li class="ion-images" data-toggle="tooltip" title="ion-images"></li>
+										<li class="ion-wand" data-toggle="tooltip" title="ion-wand"></li>
+										<li class="ion-contrast" data-toggle="tooltip" title="ion-contrast"></li>
+										<li class="ion-aperture" data-toggle="tooltip" title="ion-aperture"></li>
+										<li class="ion-crop" data-toggle="tooltip" title="ion-crop"></li>
+										<li class="ion-easel" data-toggle="tooltip" title="ion-easel"></li>
+										<li class="ion-paintbrush" data-toggle="tooltip" title="ion-paintbrush"></li>
+										<li class="ion-paintbucket" data-toggle="tooltip" title="ion-paintbucket"></li>
+										<li class="ion-monitor" data-toggle="tooltip" title="ion-monitor"></li>
+										<li class="ion-laptop" data-toggle="tooltip" title="ion-laptop"></li>
+										<li class="ion-ipad" data-toggle="tooltip" title="ion-ipad"></li>
+										<li class="ion-iphone" data-toggle="tooltip" title="ion-iphone"></li>
+										<li class="ion-ipod" data-toggle="tooltip" title="ion-ipod"></li>
+										<li class="ion-printer" data-toggle="tooltip" title="ion-printer"></li>
+										<li class="ion-usb" data-toggle="tooltip" title="ion-usb"></li>
+										<li class="ion-outlet" data-toggle="tooltip" title="ion-outlet"></li>
+										<li class="ion-bug" data-toggle="tooltip" title="ion-bug"></li>
+										<li class="ion-code" data-toggle="tooltip" title="ion-code"></li>
+										<li class="ion-code-working" data-toggle="tooltip" title="ion-code-working"></li>
+										<li class="ion-code-download" data-toggle="tooltip" title="ion-code-download"></li>
+										<li class="ion-fork-repo" data-toggle="tooltip" title="ion-fork-repo"></li>
+										<li class="ion-network" data-toggle="tooltip" title="ion-network"></li>
+										<li class="ion-pull-request" data-toggle="tooltip" title="ion-pull-request"></li>
+										<li class="ion-merge" data-toggle="tooltip" title="ion-merge"></li>
+										<li class="ion-xbox" data-toggle="tooltip" title="ion-xbox"></li>
+										<li class="ion-playstation" data-toggle="tooltip" title="ion-playstation"></li>
+										<li class="ion-steam" data-toggle="tooltip" title="ion-steam"></li>
+										<li class="ion-closed-captioning" data-toggle="tooltip" title="ion-closed-captioning"></li>
+										<li class="ion-videocamera" data-toggle="tooltip" title="ion-videocamera"></li>
+										<li class="ion-film-marker" data-toggle="tooltip" title="ion-film-marker"></li>
+										<li class="ion-disc" data-toggle="tooltip" title="ion-disc"></li>
+										<li class="ion-headphone" data-toggle="tooltip" title="ion-headphone"></li>
+										<li class="ion-music-note" data-toggle="tooltip" title="ion-music-note"></li>
+										<li class="ion-radio-waves" data-toggle="tooltip" title="ion-radio-waves"></li>
+										<li class="ion-speakerphone" data-toggle="tooltip" title="ion-speakerphone"></li>
+										<li class="ion-mic-a" data-toggle="tooltip" title="ion-mic-a"></li>
+										<li class="ion-mic-b" data-toggle="tooltip" title="ion-mic-b"></li>
+										<li class="ion-mic-c" data-toggle="tooltip" title="ion-mic-c"></li>
+										<li class="ion-volume-high" data-toggle="tooltip" title="ion-volume-high"></li>
+										<li class="ion-volume-medium" data-toggle="tooltip" title="ion-volume-medium"></li>
+										<li class="ion-volume-low" data-toggle="tooltip" title="ion-volume-low"></li>
+										<li class="ion-volume-mute" data-toggle="tooltip" title="ion-volume-mute"></li>
+										<li class="ion-levels" data-toggle="tooltip" title="ion-levels"></li>
+										<li class="ion-play" data-toggle="tooltip" title="ion-play"></li>
+										<li class="ion-pause" data-toggle="tooltip" title="ion-pause"></li>
+										<li class="ion-stop" data-toggle="tooltip" title="ion-stop"></li>
+										<li class="ion-record" data-toggle="tooltip" title="ion-record"></li>
+										<li class="ion-skip-forward" data-toggle="tooltip" title="ion-skip-forward"></li>
+										<li class="ion-skip-backward" data-toggle="tooltip" title="ion-skip-backward"></li>
+										<li class="ion-eject" data-toggle="tooltip" title="ion-eject"></li>
+										<li class="ion-bag" data-toggle="tooltip" title="ion-bag"></li>
+										<li class="ion-card" data-toggle="tooltip" title="ion-card"></li>
+										<li class="ion-cash" data-toggle="tooltip" title="ion-cash"></li>
+										<li class="ion-pricetag" data-toggle="tooltip" title="ion-pricetag"></li>
+										<li class="ion-pricetags" data-toggle="tooltip" title="ion-pricetags"></li>
+										<li class="ion-thumbsup" data-toggle="tooltip" title="ion-thumbsup"></li>
+										<li class="ion-thumbsdown" data-toggle="tooltip" title="ion-thumbsdown"></li>
+										<li class="ion-happy-outline" data-toggle="tooltip" title="ion-happy-outline"></li>
+										<li class="ion-happy" data-toggle="tooltip" title="ion-happy"></li>
+										<li class="ion-sad-outline" data-toggle="tooltip" title="ion-sad-outline"></li>
+										<li class="ion-sad" data-toggle="tooltip" title="ion-sad"></li>
+										<li class="ion-bowtie" data-toggle="tooltip" title="ion-bowtie"></li>
+										<li class="ion-tshirt-outline" data-toggle="tooltip" title="ion-tshirt-outline"></li>
+										<li class="ion-tshirt" data-toggle="tooltip" title="ion-tshirt"></li>
+										<li class="ion-trophy" data-toggle="tooltip" title="ion-trophy"></li>
+										<li class="ion-podium" data-toggle="tooltip" title="ion-podium"></li>
+										<li class="ion-ribbon-a" data-toggle="tooltip" title="ion-ribbon-a"></li>
+										<li class="ion-ribbon-b" data-toggle="tooltip" title="ion-ribbon-b"></li>
+										<li class="ion-university" data-toggle="tooltip" title="ion-university"></li>
+										<li class="ion-magnet" data-toggle="tooltip" title="ion-magnet"></li>
+										<li class="ion-beaker" data-toggle="tooltip" title="ion-beaker"></li>
+										<li class="ion-erlenmeyer-flask" data-toggle="tooltip" title="ion-erlenmeyer-flask"></li>
+										<li class="ion-egg" data-toggle="tooltip" title="ion-egg"></li>
+										<li class="ion-earth" data-toggle="tooltip" title="ion-earth"></li>
+										<li class="ion-planet" data-toggle="tooltip" title="ion-planet"></li>
+										<li class="ion-lightbulb" data-toggle="tooltip" title="ion-lightbulb"></li>
+										<li class="ion-cube" data-toggle="tooltip" title="ion-cube"></li>
+										<li class="ion-leaf" data-toggle="tooltip" title="ion-leaf"></li>
+										<li class="ion-waterdrop" data-toggle="tooltip" title="ion-waterdrop"></li>
+										<li class="ion-flame" data-toggle="tooltip" title="ion-flame"></li>
+										<li class="ion-fireball" data-toggle="tooltip" title="ion-fireball"></li>
+										<li class="ion-bonfire" data-toggle="tooltip" title="ion-bonfire"></li>
+										<li class="ion-umbrella" data-toggle="tooltip" title="ion-umbrella"></li>
+										<li class="ion-nuclear" data-toggle="tooltip" title="ion-nuclear"></li>
+										<li class="ion-no-smoking" data-toggle="tooltip" title="ion-no-smoking"></li>
+										<li class="ion-thermometer" data-toggle="tooltip" title="ion-thermometer"></li>
+										<li class="ion-speedometer" data-toggle="tooltip" title="ion-speedometer"></li>
+										<li class="ion-model-s" data-toggle="tooltip" title="ion-model-s"></li>
+										<li class="ion-plane" data-toggle="tooltip" title="ion-plane"></li>
+										<li class="ion-jet" data-toggle="tooltip" title="ion-jet"></li>
+										<li class="ion-load-a" data-toggle="tooltip" title="ion-load-a"></li>
+										<li class="ion-load-b" data-toggle="tooltip" title="ion-load-b"></li>
+										<li class="ion-load-c" data-toggle="tooltip" title="ion-load-c"></li>
+										<li class="ion-load-d" data-toggle="tooltip" title="ion-load-d"></li>
+										<li class="ion-ios-ionic-outline" data-toggle="tooltip" title="ion-ios-ionic-outline"></li>
+										<li class="ion-ios-arrow-back" data-toggle="tooltip" title="ion-ios-arrow-back"></li>
+										<li class="ion-ios-arrow-forward" data-toggle="tooltip" title="ion-ios-arrow-forward"></li>
+										<li class="ion-ios-arrow-up" data-toggle="tooltip" title="ion-ios-arrow-up"></li>
+										<li class="ion-ios-arrow-right" data-toggle="tooltip" title="ion-ios-arrow-right"></li>
+										<li class="ion-ios-arrow-down" data-toggle="tooltip" title="ion-ios-arrow-down"></li>
+										<li class="ion-ios-arrow-left" data-toggle="tooltip" title="ion-ios-arrow-left"></li>
+										<li class="ion-ios-arrow-thin-up" data-toggle="tooltip" title="ion-ios-arrow-thin-up"></li>
+										<li class="ion-ios-arrow-thin-right" data-toggle="tooltip" title="ion-ios-arrow-thin-right"></li>
+										<li class="ion-ios-arrow-thin-down" data-toggle="tooltip" title="ion-ios-arrow-thin-down"></li>
+										<li class="ion-ios-arrow-thin-left" data-toggle="tooltip" title="ion-ios-arrow-thin-left"></li>
+										<li class="ion-ios-circle-filled" data-toggle="tooltip" title="ion-ios-circle-filled"></li>
+										<li class="ion-ios-circle-outline" data-toggle="tooltip" title="ion-ios-circle-outline"></li>
+										<li class="ion-ios-checkmark-empty" data-toggle="tooltip" title="ion-ios-checkmark-empty"></li>
+										<li class="ion-ios-checkmark-outline" data-toggle="tooltip" title="ion-ios-checkmark-outline"></li>
+										<li class="ion-ios-checkmark" data-toggle="tooltip" title="ion-ios-checkmark"></li>
+										<li class="ion-ios-plus-empty" data-toggle="tooltip" title="ion-ios-plus-empty"></li>
+										<li class="ion-ios-plus-outline" data-toggle="tooltip" title="ion-ios-plus-outline"></li>
+										<li class="ion-ios-plus" data-toggle="tooltip" title="ion-ios-plus"></li>
+										<li class="ion-ios-close-empty" data-toggle="tooltip" title="ion-ios-close-empty"></li>
+										<li class="ion-ios-close-outline" data-toggle="tooltip" title="ion-ios-close-outline"></li>
+										<li class="ion-ios-close" data-toggle="tooltip" title="ion-ios-close"></li>
+										<li class="ion-ios-minus-empty" data-toggle="tooltip" title="ion-ios-minus-empty"></li>
+										<li class="ion-ios-minus-outline" data-toggle="tooltip" title="ion-ios-minus-outline"></li>
+										<li class="ion-ios-minus" data-toggle="tooltip" title="ion-ios-minus"></li>
+										<li class="ion-ios-information-empty" data-toggle="tooltip" title="ion-ios-information-empty"></li>
+										<li class="ion-ios-information-outline" data-toggle="tooltip" title="ion-ios-information-outline"></li>
+										<li class="ion-ios-information" data-toggle="tooltip" title="ion-ios-information"></li>
+										<li class="ion-ios-help-empty" data-toggle="tooltip" title="ion-ios-help-empty"></li>
+										<li class="ion-ios-help-outline" data-toggle="tooltip" title="ion-ios-help-outline"></li>
+										<li class="ion-ios-help" data-toggle="tooltip" title="ion-ios-help"></li>
+										<li class="ion-ios-search" data-toggle="tooltip" title="ion-ios-search"></li>
+										<li class="ion-ios-search-strong" data-toggle="tooltip" title="ion-ios-search-strong"></li>
+										<li class="ion-ios-star" data-toggle="tooltip" title="ion-ios-star"></li>
+										<li class="ion-ios-star-half" data-toggle="tooltip" title="ion-ios-star-half"></li>
+										<li class="ion-ios-star-outline" data-toggle="tooltip" title="ion-ios-star-outline"></li>
+										<li class="ion-ios-heart" data-toggle="tooltip" title="ion-ios-heart"></li>
+										<li class="ion-ios-heart-outline" data-toggle="tooltip" title="ion-ios-heart-outline"></li>
+										<li class="ion-ios-more" data-toggle="tooltip" title="ion-ios-more"></li>
+										<li class="ion-ios-more-outline" data-toggle="tooltip" title="ion-ios-more-outline"></li>
+										<li class="ion-ios-home" data-toggle="tooltip" title="ion-ios-home"></li>
+										<li class="ion-ios-home-outline" data-toggle="tooltip" title="ion-ios-home-outline"></li>
+										<li class="ion-ios-cloud" data-toggle="tooltip" title="ion-ios-cloud"></li>
+										<li class="ion-ios-cloud-outline" data-toggle="tooltip" title="ion-ios-cloud-outline"></li>
+										<li class="ion-ios-cloud-upload" data-toggle="tooltip" title="ion-ios-cloud-upload"></li>
+										<li class="ion-ios-cloud-upload-outline" data-toggle="tooltip" title="ion-ios-cloud-upload-outline"></li>
+										<li class="ion-ios-cloud-download" data-toggle="tooltip" title="ion-ios-cloud-download"></li>
+										<li class="ion-ios-cloud-download-outline" data-toggle="tooltip" title="ion-ios-cloud-download-outline"></li>
+										<li class="ion-ios-upload" data-toggle="tooltip" title="ion-ios-upload"></li>
+										<li class="ion-ios-upload-outline" data-toggle="tooltip" title="ion-ios-upload-outline"></li>
+										<li class="ion-ios-download" data-toggle="tooltip" title="ion-ios-download"></li>
+										<li class="ion-ios-download-outline" data-toggle="tooltip" title="ion-ios-download-outline"></li>
+										<li class="ion-ios-refresh" data-toggle="tooltip" title="ion-ios-refresh"></li>
+										<li class="ion-ios-refresh-outline" data-toggle="tooltip" title="ion-ios-refresh-outline"></li>
+										<li class="ion-ios-refresh-empty" data-toggle="tooltip" title="ion-ios-refresh-empty"></li>
+										<li class="ion-ios-reload" data-toggle="tooltip" title="ion-ios-reload"></li>
+										<li class="ion-ios-loop-strong" data-toggle="tooltip" title="ion-ios-loop-strong"></li>
+										<li class="ion-ios-loop" data-toggle="tooltip" title="ion-ios-loop"></li>
+										<li class="ion-ios-bookmarks" data-toggle="tooltip" title="ion-ios-bookmarks"></li>
+										<li class="ion-ios-bookmarks-outline" data-toggle="tooltip" title="ion-ios-bookmarks-outline"></li>
+										<li class="ion-ios-book" data-toggle="tooltip" title="ion-ios-book"></li>
+										<li class="ion-ios-book-outline" data-toggle="tooltip" title="ion-ios-book-outline"></li>
+										<li class="ion-ios-flag" data-toggle="tooltip" title="ion-ios-flag"></li>
+										<li class="ion-ios-flag-outline" data-toggle="tooltip" title="ion-ios-flag-outline"></li>
+										<li class="ion-ios-glasses" data-toggle="tooltip" title="ion-ios-glasses"></li>
+										<li class="ion-ios-glasses-outline" data-toggle="tooltip" title="ion-ios-glasses-outline"></li>
+										<li class="ion-ios-browsers" data-toggle="tooltip" title="ion-ios-browsers"></li>
+										<li class="ion-ios-browsers-outline" data-toggle="tooltip" title="ion-ios-browsers-outline"></li>
+										<li class="ion-ios-at" data-toggle="tooltip" title="ion-ios-at"></li>
+										<li class="ion-ios-at-outline" data-toggle="tooltip" title="ion-ios-at-outline"></li>
+										<li class="ion-ios-pricetag" data-toggle="tooltip" title="ion-ios-pricetag"></li>
+										<li class="ion-ios-pricetag-outline" data-toggle="tooltip" title="ion-ios-pricetag-outline"></li>
+										<li class="ion-ios-pricetags" data-toggle="tooltip" title="ion-ios-pricetags"></li>
+										<li class="ion-ios-pricetags-outline" data-toggle="tooltip" title="ion-ios-pricetags-outline"></li>
+										<li class="ion-ios-cart" data-toggle="tooltip" title="ion-ios-cart"></li>
+										<li class="ion-ios-cart-outline" data-toggle="tooltip" title="ion-ios-cart-outline"></li>
+										<li class="ion-ios-chatboxes" data-toggle="tooltip" title="ion-ios-chatboxes"></li>
+										<li class="ion-ios-chatboxes-outline" data-toggle="tooltip" title="ion-ios-chatboxes-outline"></li>
+										<li class="ion-ios-chatbubble" data-toggle="tooltip" title="ion-ios-chatbubble"></li>
+										<li class="ion-ios-chatbubble-outline" data-toggle="tooltip" title="ion-ios-chatbubble-outline"></li>
+										<li class="ion-ios-cog" data-toggle="tooltip" title="ion-ios-cog"></li>
+										<li class="ion-ios-cog-outline" data-toggle="tooltip" title="ion-ios-cog-outline"></li>
+										<li class="ion-ios-gear" data-toggle="tooltip" title="ion-ios-gear"></li>
+										<li class="ion-ios-gear-outline" data-toggle="tooltip" title="ion-ios-gear-outline"></li>
+										<li class="ion-ios-settings" data-toggle="tooltip" title="ion-ios-settings"></li>
+										<li class="ion-ios-settings-strong" data-toggle="tooltip" title="ion-ios-settings-strong"></li>
+										<li class="ion-ios-toggle" data-toggle="tooltip" title="ion-ios-toggle"></li>
+										<li class="ion-ios-toggle-outline" data-toggle="tooltip" title="ion-ios-toggle-outline"></li>
+										<li class="ion-ios-analytics" data-toggle="tooltip" title="ion-ios-analytics"></li>
+										<li class="ion-ios-analytics-outline" data-toggle="tooltip" title="ion-ios-analytics-outline"></li>
+										<li class="ion-ios-pie" data-toggle="tooltip" title="ion-ios-pie"></li>
+										<li class="ion-ios-pie-outline" data-toggle="tooltip" title="ion-ios-pie-outline"></li>
+										<li class="ion-ios-pulse" data-toggle="tooltip" title="ion-ios-pulse"></li>
+										<li class="ion-ios-pulse-strong" data-toggle="tooltip" title="ion-ios-pulse-strong"></li>
+										<li class="ion-ios-filing" data-toggle="tooltip" title="ion-ios-filing"></li>
+										<li class="ion-ios-filing-outline" data-toggle="tooltip" title="ion-ios-filing-outline"></li>
+										<li class="ion-ios-box" data-toggle="tooltip" title="ion-ios-box"></li>
+										<li class="ion-ios-box-outline" data-toggle="tooltip" title="ion-ios-box-outline"></li>
+										<li class="ion-ios-compose" data-toggle="tooltip" title="ion-ios-compose"></li>
+										<li class="ion-ios-compose-outline" data-toggle="tooltip" title="ion-ios-compose-outline"></li>
+										<li class="ion-ios-trash" data-toggle="tooltip" title="ion-ios-trash"></li>
+										<li class="ion-ios-trash-outline" data-toggle="tooltip" title="ion-ios-trash-outline"></li>
+										<li class="ion-ios-copy" data-toggle="tooltip" title="ion-ios-copy"></li>
+										<li class="ion-ios-copy-outline" data-toggle="tooltip" title="ion-ios-copy-outline"></li>
+										<li class="ion-ios-email" data-toggle="tooltip" title="ion-ios-email"></li>
+										<li class="ion-ios-email-outline" data-toggle="tooltip" title="ion-ios-email-outline"></li>
+										<li class="ion-ios-undo" data-toggle="tooltip" title="ion-ios-undo"></li>
+										<li class="ion-ios-undo-outline" data-toggle="tooltip" title="ion-ios-undo-outline"></li>
+										<li class="ion-ios-redo" data-toggle="tooltip" title="ion-ios-redo"></li>
+										<li class="ion-ios-redo-outline" data-toggle="tooltip" title="ion-ios-redo-outline"></li>
+										<li class="ion-ios-paperplane" data-toggle="tooltip" title="ion-ios-paperplane"></li>
+										<li class="ion-ios-paperplane-outline" data-toggle="tooltip" title="ion-ios-paperplane-outline"></li>
+										<li class="ion-ios-folder" data-toggle="tooltip" title="ion-ios-folder"></li>
+										<li class="ion-ios-folder-outline" data-toggle="tooltip" title="ion-ios-folder-outline"></li>
+										<li class="ion-ios-paper" data-toggle="tooltip" title="ion-ios-paper"></li>
+										<li class="ion-ios-paper-outline" data-toggle="tooltip" title="ion-ios-paper-outline"></li>
+										<li class="ion-ios-list" data-toggle="tooltip" title="ion-ios-list"></li>
+										<li class="ion-ios-list-outline" data-toggle="tooltip" title="ion-ios-list-outline"></li>
+										<li class="ion-ios-world" data-toggle="tooltip" title="ion-ios-world"></li>
+										<li class="ion-ios-world-outline" data-toggle="tooltip" title="ion-ios-world-outline"></li>
+										<li class="ion-ios-alarm" data-toggle="tooltip" title="ion-ios-alarm"></li>
+										<li class="ion-ios-alarm-outline" data-toggle="tooltip" title="ion-ios-alarm-outline"></li>
+										<li class="ion-ios-speedometer" data-toggle="tooltip" title="ion-ios-speedometer"></li>
+										<li class="ion-ios-speedometer-outline" data-toggle="tooltip" title="ion-ios-speedometer-outline"></li>
+										<li class="ion-ios-stopwatch" data-toggle="tooltip" title="ion-ios-stopwatch"></li>
+										<li class="ion-ios-stopwatch-outline" data-toggle="tooltip" title="ion-ios-stopwatch-outline"></li>
+										<li class="ion-ios-timer" data-toggle="tooltip" title="ion-ios-timer"></li>
+										<li class="ion-ios-timer-outline" data-toggle="tooltip" title="ion-ios-timer-outline"></li>
+										<li class="ion-ios-clock" data-toggle="tooltip" title="ion-ios-clock"></li>
+										<li class="ion-ios-clock-outline" data-toggle="tooltip" title="ion-ios-clock-outline"></li>
+										<li class="ion-ios-time" data-toggle="tooltip" title="ion-ios-time"></li>
+										<li class="ion-ios-time-outline" data-toggle="tooltip" title="ion-ios-time-outline"></li>
+										<li class="ion-ios-calendar" data-toggle="tooltip" title="ion-ios-calendar"></li>
+										<li class="ion-ios-calendar-outline" data-toggle="tooltip" title="ion-ios-calendar-outline"></li>
+										<li class="ion-ios-photos" data-toggle="tooltip" title="ion-ios-photos"></li>
+										<li class="ion-ios-photos-outline" data-toggle="tooltip" title="ion-ios-photos-outline"></li>
+										<li class="ion-ios-albums" data-toggle="tooltip" title="ion-ios-albums"></li>
+										<li class="ion-ios-albums-outline" data-toggle="tooltip" title="ion-ios-albums-outline"></li>
+										<li class="ion-ios-camera" data-toggle="tooltip" title="ion-ios-camera"></li>
+										<li class="ion-ios-camera-outline" data-toggle="tooltip" title="ion-ios-camera-outline"></li>
+										<li class="ion-ios-reverse-camera" data-toggle="tooltip" title="ion-ios-reverse-camera"></li>
+										<li class="ion-ios-reverse-camera-outline" data-toggle="tooltip" title="ion-ios-reverse-camera-outline"></li>
+										<li class="ion-ios-eye" data-toggle="tooltip" title="ion-ios-eye"></li>
+										<li class="ion-ios-eye-outline" data-toggle="tooltip" title="ion-ios-eye-outline"></li>
+										<li class="ion-ios-bolt" data-toggle="tooltip" title="ion-ios-bolt"></li>
+										<li class="ion-ios-bolt-outline" data-toggle="tooltip" title="ion-ios-bolt-outline"></li>
+										<li class="ion-ios-color-wand" data-toggle="tooltip" title="ion-ios-color-wand"></li>
+										<li class="ion-ios-color-wand-outline" data-toggle="tooltip" title="ion-ios-color-wand-outline"></li>
+										<li class="ion-ios-color-filter" data-toggle="tooltip" title="ion-ios-color-filter"></li>
+										<li class="ion-ios-color-filter-outline" data-toggle="tooltip" title="ion-ios-color-filter-outline"></li>
+										<li class="ion-ios-grid-view" data-toggle="tooltip" title="ion-ios-grid-view"></li>
+										<li class="ion-ios-grid-view-outline" data-toggle="tooltip" title="ion-ios-grid-view-outline"></li>
+										<li class="ion-ios-crop-strong" data-toggle="tooltip" title="ion-ios-crop-strong"></li>
+										<li class="ion-ios-crop" data-toggle="tooltip" title="ion-ios-crop"></li>
+										<li class="ion-ios-barcode" data-toggle="tooltip" title="ion-ios-barcode"></li>
+										<li class="ion-ios-barcode-outline" data-toggle="tooltip" title="ion-ios-barcode-outline"></li>
+										<li class="ion-ios-briefcase" data-toggle="tooltip" title="ion-ios-briefcase"></li>
+										<li class="ion-ios-briefcase-outline" data-toggle="tooltip" title="ion-ios-briefcase-outline"></li>
+										<li class="ion-ios-medkit" data-toggle="tooltip" title="ion-ios-medkit"></li>
+										<li class="ion-ios-medkit-outline" data-toggle="tooltip" title="ion-ios-medkit-outline"></li>
+										<li class="ion-ios-medical" data-toggle="tooltip" title="ion-ios-medical"></li>
+										<li class="ion-ios-medical-outline" data-toggle="tooltip" title="ion-ios-medical-outline"></li>
+										<li class="ion-ios-infinite" data-toggle="tooltip" title="ion-ios-infinite"></li>
+										<li class="ion-ios-infinite-outline" data-toggle="tooltip" title="ion-ios-infinite-outline"></li>
+										<li class="ion-ios-calculator" data-toggle="tooltip" title="ion-ios-calculator"></li>
+										<li class="ion-ios-calculator-outline" data-toggle="tooltip" title="ion-ios-calculator-outline"></li>
+										<li class="ion-ios-keypad" data-toggle="tooltip" title="ion-ios-keypad"></li>
+										<li class="ion-ios-keypad-outline" data-toggle="tooltip" title="ion-ios-keypad-outline"></li>
+										<li class="ion-ios-telephone" data-toggle="tooltip" title="ion-ios-telephone"></li>
+										<li class="ion-ios-telephone-outline" data-toggle="tooltip" title="ion-ios-telephone-outline"></li>
+										<li class="ion-ios-drag" data-toggle="tooltip" title="ion-ios-drag"></li>
+										<li class="ion-ios-location" data-toggle="tooltip" title="ion-ios-location"></li>
+										<li class="ion-ios-location-outline" data-toggle="tooltip" title="ion-ios-location-outline"></li>
+										<li class="ion-ios-navigate" data-toggle="tooltip" title="ion-ios-navigate"></li>
+										<li class="ion-ios-navigate-outline" data-toggle="tooltip" title="ion-ios-navigate-outline"></li>
+										<li class="ion-ios-locked" data-toggle="tooltip" title="ion-ios-locked"></li>
+										<li class="ion-ios-locked-outline" data-toggle="tooltip" title="ion-ios-locked-outline"></li>
+										<li class="ion-ios-unlocked" data-toggle="tooltip" title="ion-ios-unlocked"></li>
+										<li class="ion-ios-unlocked-outline" data-toggle="tooltip" title="ion-ios-unlocked-outline"></li>
+										<li class="ion-ios-monitor" data-toggle="tooltip" title="ion-ios-monitor"></li>
+										<li class="ion-ios-monitor-outline" data-toggle="tooltip" title="ion-ios-monitor-outline"></li>
+										<li class="ion-ios-printer" data-toggle="tooltip" title="ion-ios-printer"></li>
+										<li class="ion-ios-printer-outline" data-toggle="tooltip" title="ion-ios-printer-outline"></li>
+										<li class="ion-ios-game-controller-a" data-toggle="tooltip" title="ion-ios-game-controller-a"></li>
+										<li class="ion-ios-game-controller-a-outline" data-toggle="tooltip" title="ion-ios-game-controller-a-outline"></li>
+										<li class="ion-ios-game-controller-b" data-toggle="tooltip" title="ion-ios-game-controller-b"></li>
+										<li class="ion-ios-game-controller-b-outline" data-toggle="tooltip" title="ion-ios-game-controller-b-outline"></li>
+										<li class="ion-ios-americanfootball" data-toggle="tooltip" title="ion-ios-americanfootball"></li>
+										<li class="ion-ios-americanfootball-outline" data-toggle="tooltip" title="ion-ios-americanfootball-outline"></li>
+										<li class="ion-ios-baseball" data-toggle="tooltip" title="ion-ios-baseball"></li>
+										<li class="ion-ios-baseball-outline" data-toggle="tooltip" title="ion-ios-baseball-outline"></li>
+										<li class="ion-ios-basketball" data-toggle="tooltip" title="ion-ios-basketball"></li>
+										<li class="ion-ios-basketball-outline" data-toggle="tooltip" title="ion-ios-basketball-outline"></li>
+										<li class="ion-ios-tennisball" data-toggle="tooltip" title="ion-ios-tennisball"></li>
+										<li class="ion-ios-tennisball-outline" data-toggle="tooltip" title="ion-ios-tennisball-outline"></li>
+										<li class="ion-ios-football" data-toggle="tooltip" title="ion-ios-football"></li>
+										<li class="ion-ios-football-outline" data-toggle="tooltip" title="ion-ios-football-outline"></li>
+										<li class="ion-ios-body" data-toggle="tooltip" title="ion-ios-body"></li>
+										<li class="ion-ios-body-outline" data-toggle="tooltip" title="ion-ios-body-outline"></li>
+										<li class="ion-ios-person" data-toggle="tooltip" title="ion-ios-person"></li>
+										<li class="ion-ios-person-outline" data-toggle="tooltip" title="ion-ios-person-outline"></li>
+										<li class="ion-ios-personadd" data-toggle="tooltip" title="ion-ios-personadd"></li>
+										<li class="ion-ios-personadd-outline" data-toggle="tooltip" title="ion-ios-personadd-outline"></li>
+										<li class="ion-ios-people" data-toggle="tooltip" title="ion-ios-people"></li>
+										<li class="ion-ios-people-outline" data-toggle="tooltip" title="ion-ios-people-outline"></li>
+										<li class="ion-ios-musical-notes" data-toggle="tooltip" title="ion-ios-musical-notes"></li>
+										<li class="ion-ios-musical-note" data-toggle="tooltip" title="ion-ios-musical-note"></li>
+										<li class="ion-ios-bell" data-toggle="tooltip" title="ion-ios-bell"></li>
+										<li class="ion-ios-bell-outline" data-toggle="tooltip" title="ion-ios-bell-outline"></li>
+										<li class="ion-ios-mic" data-toggle="tooltip" title="ion-ios-mic"></li>
+										<li class="ion-ios-mic-outline" data-toggle="tooltip" title="ion-ios-mic-outline"></li>
+										<li class="ion-ios-mic-off" data-toggle="tooltip" title="ion-ios-mic-off"></li>
+										<li class="ion-ios-volume-high" data-toggle="tooltip" title="ion-ios-volume-high"></li>
+										<li class="ion-ios-volume-low" data-toggle="tooltip" title="ion-ios-volume-low"></li>
+										<li class="ion-ios-play" data-toggle="tooltip" title="ion-ios-play"></li>
+										<li class="ion-ios-play-outline" data-toggle="tooltip" title="ion-ios-play-outline"></li>
+										<li class="ion-ios-pause" data-toggle="tooltip" title="ion-ios-pause"></li>
+										<li class="ion-ios-pause-outline" data-toggle="tooltip" title="ion-ios-pause-outline"></li>
+										<li class="ion-ios-recording" data-toggle="tooltip" title="ion-ios-recording"></li>
+										<li class="ion-ios-recording-outline" data-toggle="tooltip" title="ion-ios-recording-outline"></li>
+										<li class="ion-ios-fastforward" data-toggle="tooltip" title="ion-ios-fastforward"></li>
+										<li class="ion-ios-fastforward-outline" data-toggle="tooltip" title="ion-ios-fastforward-outline"></li>
+										<li class="ion-ios-rewind" data-toggle="tooltip" title="ion-ios-rewind"></li>
+										<li class="ion-ios-rewind-outline" data-toggle="tooltip" title="ion-ios-rewind-outline"></li>
+										<li class="ion-ios-skipbackward" data-toggle="tooltip" title="ion-ios-skipbackward"></li>
+										<li class="ion-ios-skipbackward-outline" data-toggle="tooltip" title="ion-ios-skipbackward-outline"></li>
+										<li class="ion-ios-skipforward" data-toggle="tooltip" title="ion-ios-skipforward"></li>
+										<li class="ion-ios-skipforward-outline" data-toggle="tooltip" title="ion-ios-skipforward-outline"></li>
+										<li class="ion-ios-shuffle-strong" data-toggle="tooltip" title="ion-ios-shuffle-strong"></li>
+										<li class="ion-ios-shuffle" data-toggle="tooltip" title="ion-ios-shuffle"></li>
+										<li class="ion-ios-videocam" data-toggle="tooltip" title="ion-ios-videocam"></li>
+										<li class="ion-ios-videocam-outline" data-toggle="tooltip" title="ion-ios-videocam-outline"></li>
+										<li class="ion-ios-film" data-toggle="tooltip" title="ion-ios-film"></li>
+										<li class="ion-ios-film-outline" data-toggle="tooltip" title="ion-ios-film-outline"></li>
+										<li class="ion-ios-flask" data-toggle="tooltip" title="ion-ios-flask"></li>
+										<li class="ion-ios-flask-outline" data-toggle="tooltip" title="ion-ios-flask-outline"></li>
+										<li class="ion-ios-lightbulb" data-toggle="tooltip" title="ion-ios-lightbulb"></li>
+										<li class="ion-ios-lightbulb-outline" data-toggle="tooltip" title="ion-ios-lightbulb-outline"></li>
+										<li class="ion-ios-wineglass" data-toggle="tooltip" title="ion-ios-wineglass"></li>
+										<li class="ion-ios-wineglass-outline" data-toggle="tooltip" title="ion-ios-wineglass-outline"></li>
+										<li class="ion-ios-pint" data-toggle="tooltip" title="ion-ios-pint"></li>
+										<li class="ion-ios-pint-outline" data-toggle="tooltip" title="ion-ios-pint-outline"></li>
+										<li class="ion-ios-nutrition" data-toggle="tooltip" title="ion-ios-nutrition"></li>
+										<li class="ion-ios-nutrition-outline" data-toggle="tooltip" title="ion-ios-nutrition-outline"></li>
+										<li class="ion-ios-flower" data-toggle="tooltip" title="ion-ios-flower"></li>
+										<li class="ion-ios-flower-outline" data-toggle="tooltip" title="ion-ios-flower-outline"></li>
+										<li class="ion-ios-rose" data-toggle="tooltip" title="ion-ios-rose"></li>
+										<li class="ion-ios-rose-outline" data-toggle="tooltip" title="ion-ios-rose-outline"></li>
+										<li class="ion-ios-paw" data-toggle="tooltip" title="ion-ios-paw"></li>
+										<li class="ion-ios-paw-outline" data-toggle="tooltip" title="ion-ios-paw-outline"></li>
+										<li class="ion-ios-flame" data-toggle="tooltip" title="ion-ios-flame"></li>
+										<li class="ion-ios-flame-outline" data-toggle="tooltip" title="ion-ios-flame-outline"></li>
+										<li class="ion-ios-sunny" data-toggle="tooltip" title="ion-ios-sunny"></li>
+										<li class="ion-ios-sunny-outline" data-toggle="tooltip" title="ion-ios-sunny-outline"></li>
+										<li class="ion-ios-partlysunny" data-toggle="tooltip" title="ion-ios-partlysunny"></li>
+										<li class="ion-ios-partlysunny-outline" data-toggle="tooltip" title="ion-ios-partlysunny-outline"></li>
+										<li class="ion-ios-cloudy" data-toggle="tooltip" title="ion-ios-cloudy"></li>
+										<li class="ion-ios-cloudy-outline" data-toggle="tooltip" title="ion-ios-cloudy-outline"></li>
+										<li class="ion-ios-rainy" data-toggle="tooltip" title="ion-ios-rainy"></li>
+										<li class="ion-ios-rainy-outline" data-toggle="tooltip" title="ion-ios-rainy-outline"></li>
+										<li class="ion-ios-thunderstorm" data-toggle="tooltip" title="ion-ios-thunderstorm"></li>
+										<li class="ion-ios-thunderstorm-outline" data-toggle="tooltip" title="ion-ios-thunderstorm-outline"></li>
+										<li class="ion-ios-snowy" data-toggle="tooltip" title="ion-ios-snowy"></li>
+										<li class="ion-ios-moon" data-toggle="tooltip" title="ion-ios-moon"></li>
+										<li class="ion-ios-moon-outline" data-toggle="tooltip" title="ion-ios-moon-outline"></li>
+										<li class="ion-ios-cloudy-night" data-toggle="tooltip" title="ion-ios-cloudy-night"></li>
+										<li class="ion-ios-cloudy-night-outline" data-toggle="tooltip" title="ion-ios-cloudy-night-outline"></li>
+										<li class="ion-android-arrow-up" data-toggle="tooltip" title="ion-android-arrow-up"></li>
+										<li class="ion-android-arrow-forward" data-toggle="tooltip" title="ion-android-arrow-forward"></li>
+										<li class="ion-android-arrow-down" data-toggle="tooltip" title="ion-android-arrow-down"></li>
+										<li class="ion-android-arrow-back" data-toggle="tooltip" title="ion-android-arrow-back"></li>
+										<li class="ion-android-arrow-dropup" data-toggle="tooltip" title="ion-android-arrow-dropup"></li>
+										<li class="ion-android-arrow-dropup-circle" data-toggle="tooltip" title="ion-android-arrow-dropup-circle"></li>
+										<li class="ion-android-arrow-dropright" data-toggle="tooltip" title="ion-android-arrow-dropright"></li>
+										<li class="ion-android-arrow-dropright-circle" data-toggle="tooltip" title="ion-android-arrow-dropright-circle"></li>
+										<li class="ion-android-arrow-dropdown" data-toggle="tooltip" title="ion-android-arrow-dropdown"></li>
+										<li class="ion-android-arrow-dropdown-circle" data-toggle="tooltip" title="ion-android-arrow-dropdown-circle"></li>
+										<li class="ion-android-arrow-dropleft" data-toggle="tooltip" title="ion-android-arrow-dropleft"></li>
+										<li class="ion-android-arrow-dropleft-circle" data-toggle="tooltip" title="ion-android-arrow-dropleft-circle"></li>
+										<li class="ion-android-add" data-toggle="tooltip" title="ion-android-add"></li>
+										<li class="ion-android-add-circle" data-toggle="tooltip" title="ion-android-add-circle"></li>
+										<li class="ion-android-remove" data-toggle="tooltip" title="ion-android-remove"></li>
+										<li class="ion-android-remove-circle" data-toggle="tooltip" title="ion-android-remove-circle"></li>
+										<li class="ion-android-close" data-toggle="tooltip" title="ion-android-close"></li>
+										<li class="ion-android-cancel" data-toggle="tooltip" title="ion-android-cancel"></li>
+										<li class="ion-android-radio-button-off" data-toggle="tooltip" title="ion-android-radio-button-off"></li>
+										<li class="ion-android-radio-button-on" data-toggle="tooltip" title="ion-android-radio-button-on"></li>
+										<li class="ion-android-checkmark-circle" data-toggle="tooltip" title="ion-android-checkmark-circle"></li>
+										<li class="ion-android-checkbox-outline-blank" data-toggle="tooltip" title="ion-android-checkbox-outline-blank"></li>
+										<li class="ion-android-checkbox-outline" data-toggle="tooltip" title="ion-android-checkbox-outline"></li>
+										<li class="ion-android-checkbox-blank" data-toggle="tooltip" title="ion-android-checkbox-blank"></li>
+										<li class="ion-android-checkbox" data-toggle="tooltip" title="ion-android-checkbox"></li>
+										<li class="ion-android-done" data-toggle="tooltip" title="ion-android-done"></li>
+										<li class="ion-android-done-all" data-toggle="tooltip" title="ion-android-done-all"></li>
+										<li class="ion-android-menu" data-toggle="tooltip" title="ion-android-menu"></li>
+										<li class="ion-android-more-horizontal" data-toggle="tooltip" title="ion-android-more-horizontal"></li>
+										<li class="ion-android-more-vertical" data-toggle="tooltip" title="ion-android-more-vertical"></li>
+										<li class="ion-android-refresh" data-toggle="tooltip" title="ion-android-refresh"></li>
+										<li class="ion-android-sync" data-toggle="tooltip" title="ion-android-sync"></li>
+										<li class="ion-android-wifi" data-toggle="tooltip" title="ion-android-wifi"></li>
+										<li class="ion-android-call" data-toggle="tooltip" title="ion-android-call"></li>
+										<li class="ion-android-apps" data-toggle="tooltip" title="ion-android-apps"></li>
+										<li class="ion-android-settings" data-toggle="tooltip" title="ion-android-settings"></li>
+										<li class="ion-android-options" data-toggle="tooltip" title="ion-android-options"></li>
+										<li class="ion-android-funnel" data-toggle="tooltip" title="ion-android-funnel"></li>
+										<li class="ion-android-search" data-toggle="tooltip" title="ion-android-search"></li>
+										<li class="ion-android-home" data-toggle="tooltip" title="ion-android-home"></li>
+										<li class="ion-android-cloud-outline" data-toggle="tooltip" title="ion-android-cloud-outline"></li>
+										<li class="ion-android-cloud" data-toggle="tooltip" title="ion-android-cloud"></li>
+										<li class="ion-android-download" data-toggle="tooltip" title="ion-android-download"></li>
+										<li class="ion-android-upload" data-toggle="tooltip" title="ion-android-upload"></li>
+										<li class="ion-android-cloud-done" data-toggle="tooltip" title="ion-android-cloud-done"></li>
+										<li class="ion-android-cloud-circle" data-toggle="tooltip" title="ion-android-cloud-circle"></li>
+										<li class="ion-android-favorite-outline" data-toggle="tooltip" title="ion-android-favorite-outline"></li>
+										<li class="ion-android-favorite" data-toggle="tooltip" title="ion-android-favorite"></li>
+										<li class="ion-android-star-outline" data-toggle="tooltip" title="ion-android-star-outline"></li>
+										<li class="ion-android-star-half" data-toggle="tooltip" title="ion-android-star-half"></li>
+										<li class="ion-android-star" data-toggle="tooltip" title="ion-android-star"></li>
+										<li class="ion-android-calendar" data-toggle="tooltip" title="ion-android-calendar"></li>
+										<li class="ion-android-alarm-clock" data-toggle="tooltip" title="ion-android-alarm-clock"></li>
+										<li class="ion-android-time" data-toggle="tooltip" title="ion-android-time"></li>
+										<li class="ion-android-stopwatch" data-toggle="tooltip" title="ion-android-stopwatch"></li>
+										<li class="ion-android-watch" data-toggle="tooltip" title="ion-android-watch"></li>
+										<li class="ion-android-locate" data-toggle="tooltip" title="ion-android-locate"></li>
+										<li class="ion-android-navigate" data-toggle="tooltip" title="ion-android-navigate"></li>
+										<li class="ion-android-pin" data-toggle="tooltip" title="ion-android-pin"></li>
+										<li class="ion-android-compass" data-toggle="tooltip" title="ion-android-compass"></li>
+										<li class="ion-android-map" data-toggle="tooltip" title="ion-android-map"></li>
+										<li class="ion-android-walk" data-toggle="tooltip" title="ion-android-walk"></li>
+										<li class="ion-android-bicycle" data-toggle="tooltip" title="ion-android-bicycle"></li>
+										<li class="ion-android-car" data-toggle="tooltip" title="ion-android-car"></li>
+										<li class="ion-android-bus" data-toggle="tooltip" title="ion-android-bus"></li>
+										<li class="ion-android-subway" data-toggle="tooltip" title="ion-android-subway"></li>
+										<li class="ion-android-train" data-toggle="tooltip" title="ion-android-train"></li>
+										<li class="ion-android-boat" data-toggle="tooltip" title="ion-android-boat"></li>
+										<li class="ion-android-plane" data-toggle="tooltip" title="ion-android-plane"></li>
+										<li class="ion-android-restaurant" data-toggle="tooltip" title="ion-android-restaurant"></li>
+										<li class="ion-android-bar" data-toggle="tooltip" title="ion-android-bar"></li>
+										<li class="ion-android-cart" data-toggle="tooltip" title="ion-android-cart"></li>
+										<li class="ion-android-camera" data-toggle="tooltip" title="ion-android-camera"></li>
+										<li class="ion-android-image" data-toggle="tooltip" title="ion-android-image"></li>
+										<li class="ion-android-film" data-toggle="tooltip" title="ion-android-film"></li>
+										<li class="ion-android-color-palette" data-toggle="tooltip" title="ion-android-color-palette"></li>
+										<li class="ion-android-create" data-toggle="tooltip" title="ion-android-create"></li>
+										<li class="ion-android-mail" data-toggle="tooltip" title="ion-android-mail"></li>
+										<li class="ion-android-drafts" data-toggle="tooltip" title="ion-android-drafts"></li>
+										<li class="ion-android-send" data-toggle="tooltip" title="ion-android-send"></li>
+										<li class="ion-android-archive" data-toggle="tooltip" title="ion-android-archive"></li>
+										<li class="ion-android-delete" data-toggle="tooltip" title="ion-android-delete"></li>
+										<li class="ion-android-attach" data-toggle="tooltip" title="ion-android-attach"></li>
+										<li class="ion-android-share" data-toggle="tooltip" title="ion-android-share"></li>
+										<li class="ion-android-share-alt" data-toggle="tooltip" title="ion-android-share-alt"></li>
+										<li class="ion-android-bookmark" data-toggle="tooltip" title="ion-android-bookmark"></li>
+										<li class="ion-android-document" data-toggle="tooltip" title="ion-android-document"></li>
+										<li class="ion-android-clipboard" data-toggle="tooltip" title="ion-android-clipboard"></li>
+										<li class="ion-android-list" data-toggle="tooltip" title="ion-android-list"></li>
+										<li class="ion-android-folder-open" data-toggle="tooltip" title="ion-android-folder-open"></li>
+										<li class="ion-android-folder" data-toggle="tooltip" title="ion-android-folder"></li>
+										<li class="ion-android-print" data-toggle="tooltip" title="ion-android-print"></li>
+										<li class="ion-android-open" data-toggle="tooltip" title="ion-android-open"></li>
+										<li class="ion-android-exit" data-toggle="tooltip" title="ion-android-exit"></li>
+										<li class="ion-android-contract" data-toggle="tooltip" title="ion-android-contract"></li>
+										<li class="ion-android-expand" data-toggle="tooltip" title="ion-android-expand"></li>
+										<li class="ion-android-globe" data-toggle="tooltip" title="ion-android-globe"></li>
+										<li class="ion-android-chat" data-toggle="tooltip" title="ion-android-chat"></li>
+										<li class="ion-android-textsms" data-toggle="tooltip" title="ion-android-textsms"></li>
+										<li class="ion-android-hangout" data-toggle="tooltip" title="ion-android-hangout"></li>
+										<li class="ion-android-happy" data-toggle="tooltip" title="ion-android-happy"></li>
+										<li class="ion-android-sad" data-toggle="tooltip" title="ion-android-sad"></li>
+										<li class="ion-android-person" data-toggle="tooltip" title="ion-android-person "></li>
+										<li class="ion-android-people" data-toggle="tooltip" title="ion-android-people"></li>
+										<li class="ion-android-person-add" data-toggle="tooltip" title="ion-android-person-add"></li>
+										<li class="ion-android-contact" data-toggle="tooltip" title="ion-android-contact"></li>
+										<li class="ion-android-contacts" data-toggle="tooltip" title="ion-android-contacts"></li>
+										<li class="ion-android-playstore" data-toggle="tooltip" title="ion-android-playstore"></li>
+										<li class="ion-android-lock" data-toggle="tooltip" title="ion-android-lock"></li>
+										<li class="ion-android-unlock" data-toggle="tooltip" title="ion-android-unlock"></li>
+										<li class="ion-android-microphone" data-toggle="tooltip" title="ion-android-microphone"></li>
+										<li class="ion-android-microphone-off" data-toggle="tooltip" title="ion-android-microphone-off"></li>
+										<li class="ion-android-notifications-none" data-toggle="tooltip" title="ion-android-notifications-none"></li>
+										<li class="ion-android-notifications" data-toggle="tooltip" title="ion-android-notifications"></li>
+										<li class="ion-android-notifications-off" data-toggle="tooltip" title="ion-android-notifications-off"></li>
+										<li class="ion-android-volume-mute" data-toggle="tooltip" title="ion-android-volume-mute"></li>
+										<li class="ion-android-volume-down" data-toggle="tooltip" title="ion-android-volume-down"></li>
+										<li class="ion-android-volume-up" data-toggle="tooltip" title="ion-android-volume-up"></li>
+										<li class="ion-android-volume-off" data-toggle="tooltip" title="ion-android-volume-off"></li>
+										<li class="ion-android-hand" data-toggle="tooltip" title="ion-android-hand"></li>
+										<li class="ion-android-desktop" data-toggle="tooltip" title="ion-android-desktop"></li>
+										<li class="ion-android-laptop" data-toggle="tooltip" title="ion-android-laptop"></li>
+										<li class="ion-android-phone-portrait" data-toggle="tooltip" title="ion-android-phone-portrait"></li>
+										<li class="ion-android-phone-landscape" data-toggle="tooltip" title="ion-android-phone-landscape"></li>
+										<li class="ion-android-bulb" data-toggle="tooltip" title="ion-android-bulb"></li>
+										<li class="ion-android-sunny" data-toggle="tooltip" title="ion-android-sunny"></li>
+										<li class="ion-android-alert" data-toggle="tooltip" title="ion-android-alert"></li>
+										<li class="ion-android-warning" data-toggle="tooltip" title="ion-android-warning"></li>
+										<li class="ion-social-twitter" data-toggle="tooltip" title="ion-social-twitter"></li>
+										<li class="ion-social-twitter-outline" data-toggle="tooltip" title="ion-social-twitter-outline"></li>
+										<li class="ion-social-facebook" data-toggle="tooltip" title="ion-social-facebook"></li>
+										<li class="ion-social-facebook-outline" data-toggle="tooltip" title="ion-social-facebook-outline"></li>
+										<li class="ion-social-googleplus" data-toggle="tooltip" title="ion-social-googleplus"></li>
+										<li class="ion-social-googleplus-outline" data-toggle="tooltip" title="ion-social-googleplus-outline"></li>
+										<li class="ion-social-google" data-toggle="tooltip" title="ion-social-google"></li>
+										<li class="ion-social-google-outline" data-toggle="tooltip" title="ion-social-google-outline"></li>
+										<li class="ion-social-dribbble" data-toggle="tooltip" title="ion-social-dribbble"></li>
+										<li class="ion-social-dribbble-outline" data-toggle="tooltip" title="ion-social-dribbble-outline"></li>
+										<li class="ion-social-octocat" data-toggle="tooltip" title="ion-social-octocat"></li>
+										<li class="ion-social-github" data-toggle="tooltip" title="ion-social-github"></li>
+										<li class="ion-social-github-outline" data-toggle="tooltip" title="ion-social-github-outline"></li>
+										<li class="ion-social-instagram" data-toggle="tooltip" title="ion-social-instagram"></li>
+										<li class="ion-social-instagram-outline" data-toggle="tooltip" title="ion-social-instagram-outline"></li>
+										<li class="ion-social-whatsapp" data-toggle="tooltip" title="ion-social-whatsapp"></li>
+										<li class="ion-social-whatsapp-outline" data-toggle="tooltip" title="ion-social-whatsapp-outline"></li>
+										<li class="ion-social-snapchat" data-toggle="tooltip" title="ion-social-snapchat"></li>
+										<li class="ion-social-snapchat-outline" data-toggle="tooltip" title="ion-social-snapchat-outline"></li>
+										<li class="ion-social-foursquare" data-toggle="tooltip" title="ion-social-foursquare"></li>
+										<li class="ion-social-foursquare-outline" data-toggle="tooltip" title="ion-social-foursquare-outline"></li>
+										<li class="ion-social-pinterest" data-toggle="tooltip" title="ion-social-pinterest"></li>
+										<li class="ion-social-pinterest-outline" data-toggle="tooltip" title="ion-social-pinterest-outline"></li>
+										<li class="ion-social-rss" data-toggle="tooltip" title="ion-social-rss"></li>
+										<li class="ion-social-rss-outline" data-toggle="tooltip" title="ion-social-rss-outline"></li>
+										<li class="ion-social-tumblr" data-toggle="tooltip" title="ion-social-tumblr"></li>
+										<li class="ion-social-tumblr-outline" data-toggle="tooltip" title="ion-social-tumblr-outline"></li>
+										<li class="ion-social-wordpress" data-toggle="tooltip" title="ion-social-wordpress"></li>
+										<li class="ion-social-wordpress-outline" data-toggle="tooltip" title="ion-social-wordpress-outline"></li>
+										<li class="ion-social-reddit" data-toggle="tooltip" title="ion-social-reddit"></li>
+										<li class="ion-social-reddit-outline" data-toggle="tooltip" title="ion-social-reddit-outline"></li>
+										<li class="ion-social-hackernews" data-toggle="tooltip" title="ion-social-hackernews"></li>
+										<li class="ion-social-hackernews-outline" data-toggle="tooltip" title="ion-social-hackernews-outline"></li>
+										<li class="ion-social-designernews" data-toggle="tooltip" title="ion-social-designernews"></li>
+										<li class="ion-social-designernews-outline" data-toggle="tooltip" title="ion-social-designernews-outline"></li>
+										<li class="ion-social-yahoo" data-toggle="tooltip" title="ion-social-yahoo"></li>
+										<li class="ion-social-yahoo-outline" data-toggle="tooltip" title="ion-social-yahoo-outline"></li>
+										<li class="ion-social-buffer" data-toggle="tooltip" title="ion-social-buffer"></li>
+										<li class="ion-social-buffer-outline" data-toggle="tooltip" title="ion-social-buffer-outline"></li>
+										<li class="ion-social-skype" data-toggle="tooltip" title="ion-social-skype"></li>
+										<li class="ion-social-skype-outline" data-toggle="tooltip" title="ion-social-skype-outline"></li>
+										<li class="ion-social-linkedin" data-toggle="tooltip" title="ion-social-linkedin"></li>
+										<li class="ion-social-linkedin-outline" data-toggle="tooltip" title="ion-social-linkedin-outline"></li>
+										<li class="ion-social-vimeo" data-toggle="tooltip" title="ion-social-vimeo"></li>
+										<li class="ion-social-vimeo-outline" data-toggle="tooltip" title="ion-social-vimeo-outline"></li>
+										<li class="ion-social-twitch" data-toggle="tooltip" title="ion-social-twitch"></li>
+										<li class="ion-social-twitch-outline" data-toggle="tooltip" title="ion-social-twitch-outline"></li>
+										<li class="ion-social-youtube" data-toggle="tooltip" title="ion-social-youtube"></li>
+										<li class="ion-social-youtube-outline" data-toggle="tooltip" title="ion-social-youtube-outline"></li>
+										<li class="ion-social-dropbox" data-toggle="tooltip" title="ion-social-dropbox"></li>
+										<li class="ion-social-dropbox-outline" data-toggle="tooltip" title="ion-social-dropbox-outline"></li>
+										<li class="ion-social-apple" data-toggle="tooltip" title="ion-social-apple"></li>
+										<li class="ion-social-apple-outline" data-toggle="tooltip" title="ion-social-apple-outline"></li>
+										<li class="ion-social-android" data-toggle="tooltip" title="ion-social-android"></li>
+										<li class="ion-social-android-outline" data-toggle="tooltip" title="ion-social-android-outline"></li>
+										<li class="ion-social-windows" data-toggle="tooltip" title="ion-social-windows"></li>
+										<li class="ion-social-windows-outline" data-toggle="tooltip" title="ion-social-windows-outline"></li>
+										<li class="ion-social-html5" data-toggle="tooltip" title="ion-social-html5"></li>
+										<li class="ion-social-html5-outline" data-toggle="tooltip" title="ion-social-html5-outline"></li>
+										<li class="ion-social-css3" data-toggle="tooltip" title="ion-social-css3"></li>
+										<li class="ion-social-css3-outline" data-toggle="tooltip" title="ion-social-css3-outline"></li>
+										<li class="ion-social-javascript" data-toggle="tooltip" title="ion-social-javascript"></li>
+										<li class="ion-social-javascript-outline" data-toggle="tooltip" title="ion-social-javascript-outline"></li>
+										<li class="ion-social-angular" data-toggle="tooltip" title="ion-social-angular"></li>
+										<li class="ion-social-angular-outline" data-toggle="tooltip" title="ion-social-angular-outline"></li>
+										<li class="ion-social-nodejs" data-toggle="tooltip" title="ion-social-nodejs"></li>
+										<li class="ion-social-sass" data-toggle="tooltip" title="ion-social-sass"></li>
+										<li class="ion-social-python" data-toggle="tooltip" title="ion-social-python"></li>
+										<li class="ion-social-chrome" data-toggle="tooltip" title="ion-social-chrome"></li>
+										<li class="ion-social-chrome-outline" data-toggle="tooltip" title="ion-social-chrome-outline"></li>
+										<li class="ion-social-codepen" data-toggle="tooltip" title="ion-social-codepen"></li>
+										<li class="ion-social-codepen-outline" data-toggle="tooltip" title="ion-social-codepen-outline"></li>
+										<li class="ion-social-markdown" data-toggle="tooltip" title="ion-social-markdown"></li>
+										<li class="ion-social-tux" data-toggle="tooltip" title="ion-social-tux"></li>
+										<li class="ion-social-freebsd-devil" data-toggle="tooltip" title="ion-social-freebsd-devil"></li>
+										<li class="ion-social-usd" data-toggle="tooltip" title="ion-social-usd"></li>
+										<li class="ion-social-usd-outline" data-toggle="tooltip" title="ion-social-usd-outline"></li>
+										<li class="ion-social-bitcoin" data-toggle="tooltip" title="ion-social-bitcoin"></li>
+										<li class="ion-social-bitcoin-outline" data-toggle="tooltip" title="ion-social-bitcoin-outline"></li>
+										<li class="ion-social-yen" data-toggle="tooltip" title="ion-social-yen"></li>
+										<li class="ion-social-yen-outline" data-toggle="tooltip" title="ion-social-yen-outline"></li>
+										<li class="ion-social-euro" data-toggle="tooltip" title="ion-social-euro"></li>
+										<li class="ion-social-euro-outline" data-toggle="tooltip" title="ion-social-euro-outline"></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<footer class="main-footer">
+					<div class="text-center">
+						Copyright &copy;Kharna-Admin 2018. Design By<a href="https://spruko.com/"> Spruko</a>
+					</div>
+				</footer>
+
+			</div>
+		</div>
+
+		<!--Jquery.min js-->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!--popper js-->
+		<script src="assets/js/popper.js"></script>
+
+		<!--Tooltip js-->
+		<script src="assets/js/tooltip.js"></script>
+
+		<!--Bootstrap.min js-->
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--Jquery.nicescroll.min js-->
+		<script src="assets/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+
+		<!--Scroll-up-bar.min js-->
+		<script src="assets/plugins/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+
+		<!--mCustomScrollbar js-->
+		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+		<!--Sidemenu js-->
+		<script src="assets/plugins/toggle-menu/sidemenu.js"></script>
+
+		<!--Scripts js-->
+		<script src="assets/js/scripts.js"></script>
+
+
+	</body>
+</html>

@@ -1,0 +1,47 @@
+/* ------------------------------------------ */
+/* ############### ERROR PAGE ############### */
+/* --------------------------====------------ */
+
+.page-error-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+
+  .error-title {
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 0.7;
+    margin-bottom: 0;
+    border-bottom: 2px solid $gray-500;
+    padding: 0 50px;
+    margin-bottom: 10px;
+    color: $gray-800;
+
+    @include media-breakpoint-up(sm) { font-size: 130px; }
+  }
+
+  .btn-error {
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 2px solid theme-color('primary');
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: theme-color('primary');
+    }
+  }
+}
+
+.error-footer {
+  margin-bottom: 0;
+  font-size: 12px;
+  color: $gray-500;
+}

@@ -1,0 +1,130 @@
+/*---------------------------
+
+Start List
+
+---------------------------*/
+.list-group{
+    padding: $gaping-0;
+    margin-bottom: $gaping-10 - 3;
+    .list-group-item:first-child{
+        border-radius: $border-radius-0;
+    }
+    .list-group-item:last-child{
+        border-radius: $border-radius-0;
+    }
+}
+.list-group-item{
+    > .badge {
+        vertical-align: middle;
+        margin-top: $gaping-5 - 1;
+    }
+}
+a.list-group-item{
+    &:hover, &:focus{
+        border: 1px solid $normal-gray-text-color;
+    }
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: $main-site-color;
+    border-color: $main-site-color;
+}
+.custom-content{
+    .list-group-item{
+        .list-group-item-heading{
+            line-height: $gaping-30;
+        }
+        .list-group-item-text{
+            padding-bottom: $gaping-0;
+        }
+    }
+}
+.list-group-right-icon{
+    .list-group-item{
+        .icon-right{
+            float: $right-division;
+        }
+    }
+}
+.list-group-left-icon{
+    .icon-left{
+        margin-right: $gaping-15;
+    }
+}
+.list-group-background{
+    .list-group-item{
+        background: linear-gradient(to right, $purple-background-color, $pink-background-color);
+        color: $white-text-color;
+    }
+}
+.user-list{
+    .list-group-item{
+        img{
+            float: $left-division;
+            width: $gaping-50;
+            margin-right: $gaping-10;
+        }
+        h4{
+            font-size: 16px;
+            line-height: $gaping-20;
+        }
+        p{
+            font-size: 13px;
+            line-height: 17px;
+            padding-bottom: $gaping-0;
+        }
+    }
+    &.user-list-cicle{
+        .list-group-item{
+            img{
+                border-radius: 50px;
+                width: 40px;
+                margin-top: $gaping-5;
+            }
+        }
+    }
+}
+.notifications-list{
+    .list-group-item{
+        border: none;
+        i{
+            float: $left-division;
+            font-size: 25px;
+            margin-right: $gaping-10;
+        }
+        h4{
+            font-size: 20px;
+            line-height: $gaping-25;
+        }
+        p{
+            padding-bottom: $gaping-0
+        }
+    }
+}
+/*---- Start responsive list ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:479px) {
+
+}
+/*---- End responsive list ----*/
+
+/*---------------------------
+
+End List
+
+---------------------------*/

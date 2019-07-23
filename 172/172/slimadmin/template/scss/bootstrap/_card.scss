@@ -1,0 +1,241 @@
+/* ------------------------------------- */
+/* ############### Cards ############### */
+/* ------------------------------------- */
+
+.card {
+  border-radius: 0;
+}
+
+.card-header,
+.card-footer {
+  position: relative;
+  border-color: $gray-300;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card-header {
+  border-bottom: 0;
+  &:first-child { border-radius: 0; }
+}
+
+.card-title {
+  color: $gray-900;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.card-body { padding: 20px; }
+.card-body-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.card-footer {
+  border-top-width: 0;
+  border-radius: 0;
+}
+
+.card-deck-xs {
+  .card:not(:last-child),
+  .card:not(:first-child) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .card:first-child { margin-left: 0; }
+  .card:last-child { margin-right: 0; }
+}
+
+.card-deck-sm {
+  .card:not(:last-child),
+  .card:not(:first-child) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .card:first-child { margin-left: 0; }
+  .card:last-child { margin-right: 0; }
+}
+
+.card-deck-lg {
+  .card:not(:last-child),
+  .card:not(:first-child) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .card:first-child { margin-left: 0; }
+  .card:last-child { margin-right: 0; }
+}
+
+.card-deck {
+  @media (max-width: 799px) {
+    display: block;
+    .card {
+      &:not(:last-child),
+      &:not(:first-child) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      + .card { margin-top: 20px; }
+    }
+  }
+}
+
+.card-columns {
+  .card { margin-bottom: 20px; }
+
+  @include media-breakpoint-up(sm) { column-count: 2; }
+  @include media-breakpoint-up(lg) { column-count: 3; }
+
+  &.column-count-2 {
+    @include media-breakpoint-up(sm) { column-count: 2;}
+  }
+
+  &.column-count-4 {
+    @media (min-width: 480px) { column-count: 2; }
+    @include media-breakpoint-up(md) { column-count: 3;}
+    @include media-breakpoint-up(lg) { column-count: 4; }
+  }
+
+  &.column-count-5 {
+    @media (min-width: 480px) { column-count: 2; }
+    @include media-breakpoint-up(md) { column-count: 3;}
+    @include media-breakpoint-up(lg) { column-count: 4; }
+    @include media-breakpoint-up(xl) { column-count: 5; }
+  }
+
+  &.column-count-6 {
+    @media (min-width: 480px) { column-count: 2; }
+    @include media-breakpoint-up(md) { column-count: 3;}
+    @include media-breakpoint-up(lg) { column-count: 4; }
+    @include media-breakpoint-up(xl) { column-count: 6; }
+  }
+}
+
+.card-columns-sm {
+  margin-top: -10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  .card {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.card-columns-md {
+  margin-top: -20px;
+  -webkit-column-gap: 30px;
+  column-gap: 30px;
+  .card { margin-top: 20px; }
+}
+
+.card-columns-lg {
+  margin-top: -30px;
+  -webkit-column-gap: 40px;
+  column-gap: 40px;
+  .card { margin-top: 30px; }
+}
+
+.card-item-img {
+  margin-bottom: 0;
+
+  img {
+    opacity: 0.2;
+    @include transition($transition-base);
+  }
+
+  &:hover,
+  &:focus {
+    img { opacity: 0.5; }
+  }
+}
+
+
+// Card With Navigation
+.card-header-tabs {
+  margin-left: -5px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid $gray-400;
+  }
+
+  .nav-link {
+    height: 40px;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: rgba(#000, .05);
+    }
+
+    &.active {
+      background-color: #fff;
+      position: relative;
+      z-index: 5;
+      border-color: $gray-400;
+      border-bottom-color: #fff;
+    }
+  }
+
+  &.nav-tabs-for-dark {
+    &::before { display: none; }
+
+    .nav-link {
+      border: 0;
+
+      &.active {
+        &,
+        &:active,
+        &:hover,
+        &:focus { color: $gray-800; }
+      }
+    }
+  }
+}
+
+/************* RTL SUPPORT ************/
+/**************************************/
+[dir="rtl"] {
+  .card-deck-xs {
+    .card:first-child {
+      margin-left: 5px;
+      margin-right: 0;
+    }
+
+    .card:last-child {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+  }
+
+  .card-deck-sm {
+    .card:first-child {
+      margin-left: 10px;
+      margin-right: 0;
+    }
+
+    .card:last-child {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+
+  .card-deck-lg {
+    .card:first-child {
+      margin-left: 20px;
+      margin-right: 0;
+    }
+
+    .card:last-child {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+}

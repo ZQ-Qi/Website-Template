@@ -1,0 +1,22 @@
+//* ==========================================================================
+//   #REM
+// ========================================================================== */
+
+//
+// PX to REM 
+// Convert pixel based value into its rem equivalent, Typograpphy settings 
+// relies heavily on this tool.
+// 
+// It takes your `px` based value and divides it by `$base-font-size` then 
+// multiply it by `1rem`
+// 
+// EXAMPLE:
+// 
+// h1 {
+//     font-size: rem(36px);    >>>> 2.25rem
+// }
+//
+
+@function rem($px, $base: $base-font-size) {
+	@return ($px / $base) * 1rem;
+}

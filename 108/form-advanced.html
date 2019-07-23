@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>高级表单 - 默笙后台管理系统</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="这不仅仅是一个后台管理系统，它基于BT4，超强的自适应，简洁，高效，大方" />
+        <meta content="Mosheng" name="author" />
+
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        
+        <!-- plugins css-->
+        <link href="css/vendor/switchery.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/app.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <nav class="navbar-custom">
+
+                <div class="container-fluid">
+                    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fe-bell noti-icon"></i>
+                                <span class="badge badge-danger noti-icon-badge">2</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
+
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5 class="m-0">
+                                        <span class="float-right">
+                                            <a href="" class="text-dark">
+                                                <small>清除所有</small>
+                                            </a>
+                                        </span>通知</h5>
+                                </div>
+
+                                <div class="slimscroll noti-scroll">
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                        <div class="notify-icon">
+                                            <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                        <p class="notify-details">彼得</p>
+                                        <p class="text-muted mb-0 user-msg">
+                                            <small>嗨，你好吗？下次会议怎么样？</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-light">
+                                            <i class="mdi mdi-comment-account-outline"></i>
+                                        </div>
+                                        <p class="notify-details">Caleb Flakelar 管理员点评
+                                            <small class="text-muted">一分钟前</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon">
+                                            <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                        <p class="notify-details">凯伦·罗宾逊</p>
+                                        <p class="text-muted mb-0 user-msg">
+                                            <small>真的！这个管理员看起来不错，设计很棒。</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-light">
+                                            <i class="mdi mdi-account-plus"></i>
+                                        </div>
+                                        <p class="notify-details">新用户注册通知
+                                            <small class="text-muted">5小时之前</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-light">
+                                            <i class="mdi mdi-heart"></i>
+                                        </div>
+                                        <p class="notify-details">哦
+                                            <b>Admin</b>
+                                            <small class="text-muted">13天之前</small>
+                                        </p>
+                                    </a>
+                                </div>
+
+                                <!-- All-->
+                                <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                    查看全部
+                                    <i class="fi-arrow-right"></i>
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle nav-user mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                <small class="pro-user-name ml-1">
+                                    Admin
+                                </small>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">欢迎 !</h6>
+                                </div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-user"></i>
+                                    <span>我的账户</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-settings"></i>
+                                    <span>设置</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-lock"></i>
+                                    <span>锁定屏幕</span>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-log-out"></i>
+                                    <span>退出</span>
+                                </a>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <a href="index.html" class="logo">
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo.png" alt="" height="18">
+                                </span>
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="28">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="app-search">
+                            <form>
+                                <input type="text" placeholder="输入关键字以搜索..." class="form-control">
+                                <button type="submit" class="sr-only"></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+            <!-- end topbar-main -->
+
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="index.html">
+                                    <i class="fe-airplay"></i>仪表盘</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="fe-layers"></i>组件</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="components-elements.html">UI 界面元素</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-rangeslider.html">范围滑块</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-alerts.html">消息框</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-ribbons.html">文章块</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-sweet-alerts.html">弹窗</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-typography.html">排版</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-charts.html">统计图</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-maps.html">地图</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-bookmark"></i>表单</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="form-elements.html">一般表单元素</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-advanced.html">高级表单</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-grid"></i>表格</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="tables-basic.html">基本表格</a>
+                                    </li>
+                                    <li>
+                                        <a href="tables-advanced.html">高级表格</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-cpu"></i>图标</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="icons-feather.html">常用图标</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-mdi.html">材料设计图标</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-dripicons.html">其他图标</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-package"></i>页面</a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a href="pages-calendar.html">日历</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-timeline.html">时间轴</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-invoice.html">发票</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-contacts.html">联系人</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-starter.html">起始页</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-topbar-light.html">代码高亮</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a href="pages-login.html">登录</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-register.html">注册</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-recoverpw.html">找回密码</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-lock-screen.html">锁定屏幕</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-404.html">404错误页面</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <!-- End navigation menu -->
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end #navigation -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="#">默笙</a></li>
+                                    <li class="breadcrumb-item"><a href="#">表单</a></li>
+                                    <li class="breadcrumb-item active">高级表单</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">高级表单</h4>
+                        </div>
+                    </div>
+                </div>     
+                <!-- end page title --> 
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Nice 下拉框</h4>
+                                <p class="text-muted font-13">
+                                    一个轻量级的jQuery插件，用可定制的替换本地选择元素。
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label>缺省</label>
+
+                                            <br/>
+                                            
+                                            <select data-plugin="customselect">
+                                                <option value="1">选择1</option>
+                                                <option value="2">选择2</option>
+                                                <option value="3" disabled>不可选择3</option>
+                                                <option value="4">选择4</option>
+                                            </select>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label>显示文本</label> <br/>
+                                            <select data-plugin="customselect">
+                                                <option data-display="Select">不可选</option>
+                                                <option value="1">一些选择</option>
+                                                <option value="2">另一选择</option>
+                                                <option value="3" disabled>禁用选项</option>
+                                                <option value="4">马铃薯</option>
+                                            </select>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>自定义类宽</label> <br/>
+                                            <select class="wide" data-plugin="customselect">
+                                                <option value="0">没有东西</option>
+                                                <option value="1">一些选择</option>
+                                                <option value="2">另一选择</option>
+                                                <option value="3" disabled>禁用选项</option>
+                                                <option value="4">土豆</option>
+                                            </select>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>自定义类权限</label> <br/>
+                                            <select class="right" data-plugin="customselect">
+                                                <option value="0">没有东西</option>
+                                                <option value="1">一些选择</option>
+                                                <option value="2">另一选择</option>
+                                                <option value="3" disabled>禁用选项</option>
+                                                <option value="4">土豆</option>
+                                            </select>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-0">
+                                            <label>自定义类-小</label> <br/>
+                                            <select class="small" data-plugin="customselect">
+                                                <option value="0">没有东西</option>
+                                                <option value="1">一些选择</option>
+                                                <option value="2">另一选择</option>
+                                                <option value="3" disabled>禁用选项</option>
+                                                <option value="4">土豆</option>
+                                            </select>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card-->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">开关按钮</h4>
+                                <p class="text-muted font-13">
+                                    IOS 7风格的开关按钮
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label class="mb-1">基本</label>
+                                        <p class="text-muted font-13">
+                                            添加属性 <code>
+                                            data-plugin="switchery" data-color="@colors"</code>
+                                            到你的输入元素，它将转换为开关。
+                                        </p>
+            
+                                        <div class="switchery-demo">
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#039cfd"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#f1b53d"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#1bb99a"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#ff5d48"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#3db9dc"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#2b3d51"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#9261c6"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#ff7aa3"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#98a6ad"/>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <label class="mb-1">尺寸和二次色</label>
+                                        <p class="text-muted font-13">
+                                            添加属性 <code>
+                                            data-size="small",data-size="large"</code>
+                                            到你的输入元素，它将转换为开关。
+                                            添加属性 <code>
+                                            data-color="@color" data-secondary-color="@color"</code>
+                                            到你的输入元素，它将转换为开关。
+                                        </p>
+            
+                                        <div class="switchery-demo">
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" data-size="small"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#ff7aa3"/>
+                                            <input type="checkbox" checked data-plugin="switchery" data-color="#2b3d51" data-size="large"/>
+                                            <input type="checkbox" data-plugin="switchery" data-color="#1bb99a" data-secondary-color="#ff5d48" />
+                                            <input type="checkbox" data-plugin="switchery" data-color="#9261c6"  data-secondary-color="#ff7aa3" checked />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card-->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">下拉框2</h4>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="mb-1 mt-3 font-weight-bold text-muted">单选择</p>
+                                        <p class="text-muted font-13">
+                                            选择2可以采取这样的常规选择框…
+                                        </p>
+    
+                                        <select class="form-control select2" data-toggle="select2">
+                                            <option>选择</option>
+                                            <optgroup label="一级标题">
+                                                <option value="AK">选项</option>
+                                                <option value="HI">选项</option>
+                                            </optgroup>
+                                            <optgroup label="一级标题">
+                                                <option value="CA">选项</option>
+                                                <option value="NV">选项</option>
+                                                
+                                            </optgroup>
+                                            <optgroup label="一级标题">
+                                                <option value="AZ">选项</option>
+                                                <option value="CO">选项</option>
+                                                
+                                            </optgroup>
+                                            <optgroup label="一级标题">
+                                                <option value="AL">选项</option>
+                                                <option value="AR">选项</option>
+                                                
+                                            </optgroup>
+                                            <optgroup label="一级标题">
+                                                <option value="CT">选项</option>
+                                                
+                                            </optgroup>
+                                        </select>
+                                    </div> <!-- end col -->
+
+                                    <div class="col-md-6">
+                                        <p class="mb-1 mt-3 font-weight-bold text-muted">多重选择</p>
+                                        <p class="text-muted font-13">
+                                            选择2可以采取这样的常规选择框…
+                                        </p>
+    
+                                        <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" data-placeholder="Choose ...">
+                                             <optgroup label="一级标题">
+                                                <option value="CT">选项</option>
+                                                
+                                            </optgroup>
+                                             <optgroup label="一级标题">
+                                                <option value="CT">选项</option>
+                                                
+                                            </optgroup>
+                                             <optgroup label="一级标题">
+                                                <option value="CT">选项</option>
+                                                
+                                            </optgroup>
+                                             <optgroup label="一级标题">
+                                                <option value="CT">选项</option>
+                                                
+                                            </optgroup>
+                                             <optgroup label="一级标题">
+                                                <option value="CT">选项</option>
+                                                
+                                            </optgroup>
+                                        </select>
+                                    </div> <!-- end col -->
+                                </div> <!-- end row -->
+
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+                    </div> <!-- end col-->
+                </div> 
+                <!-- end row-->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Bootstrap最大长度</h4>
+    
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="mb-1 mt-3 font-weight-medium text-muted">默认使用</p>
+                                        <p class="text-muted font-13">
+                                            当剩余字符为10或更少时，徽章将默认显示出来：
+                                        </p>
+                                        <input type="text" class="form-control" maxlength="25" name="defaultconfig" id="defaultconfig" />
+    
+                                        <div>
+                                            <p class="mb-1 mt-4 font-weight-medium text-muted">阈值</p>
+                                            <p class="text-muted font-13">
+                                                当有20个字符或更少时，你想要徽章出现吗？使用 <code>threshold</code> 选项:
+                                            </p>
+                                            <input type="text" maxlength="25" name="thresholdconfig" class="form-control" id="thresholdconfig" />
+                                        </div>
+    
+                                        <div>
+                                            <p class="mb-1 mt-4 font-weight-medium text-muted">所有选项</p>
+                                            <p class="text-muted m-b-15 font-13">
+                                                请注意：如果 <code>alwaysShow</code> 选项启用 <code>threshold</code> 选项被忽略.
+                                            </p>
+                                            <input type="text" class="form-control" maxlength="25" name="alloptions" id="alloptions" />
+                                        </div>
+                                    </div> <!-- end col -->
+    
+                                    <div class="col-md-6">
+                                        <div class="">
+    
+                                            <p class="mb-1 mt-3 font-weight-medium text-muted">位置</p>
+                                            <p class="text-muted font-13">
+                                                您所需要做的就是指定 <code>placement</code> 选项，其中一个字符串。如果没有指定，定位将被拖欠到“底部”。
+                                            </p>
+                                            <input type="text" class="form-control" maxlength="25" name="placement" id="placement" />
+    
+                                            <div>
+                                                <p class="mb-1 mt-4 font-weight-medium text-muted">文本框</p>
+                                                <p class="text-muted font-13">
+                                                   Bootstrap Max支持TexTaReA以及输入。即使在旧的IE.
+                                                </p>
+                                                <textarea id="textarea" class="form-control" maxlength="225" rows="3" placeholder="这个文本有225个字符的限制。"></textarea>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end col -->
+                                </div>
+                                <!-- end row -->
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">日期范围选择器</h4>
+                                <p class="text-muted font-13">
+                                    一个用于选择日期范围、日期和时间的JavaScript组件。
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label>日期范围</label>
+                                            <input type="text" class="form-control date" id="singledaterange" data-toggle="date-picker" data-cancel-class="btn-warning">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label>日期范围选择器</label>
+                                            <input type="text" class="form-control date" id="daterangetime" data-toggle="date-picker" data-time-picker="true" data-locale="{'format': 'DD/MM hh:mm A'}">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>单一日期范围选择器</label>
+                                            <input type="text" class="form-control date" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>预定义日期范围</label>
+                                            <div id="reportrange" class="form-control" data-toggle="date-picker-range" data-target-display="#selectedValue"  data-cancel-class="btn-light">
+                                                <i class="mdi mdi-calendar"></i>&nbsp;
+                                                <span id="selectedValue"></span> <i class="mdi mdi-menu-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card-->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">固定格式</h4>
+                                <p class="text-muted font-13">
+                                    一个jQuery插件，用于在表单域和HTML元素上制作掩码。
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <form action="#">
+                                            <div class="form-group">
+                                                <label>日期</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="00/00/0000">
+                                                <span class="font-13 text-muted">例如 "DD/MM/YYYY"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>小时</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="00:00:00">
+                                                <span class="font-13 text-muted">例如 "HH:MM:SS"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>日期和时间</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="00/00/0000 00:00:00">
+                                                <span class="font-13 text-muted">例如 "DD/MM/YYYY HH:MM:SS"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>邮政编码</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="00000-000">
+                                                <span class="font-13 text-muted">例如 "xxxxx-xxx"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>疯狂邮政编码</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="0-00-00-00">
+                                                <span class="font-13 text-muted">例如 "x-xx-xx-xx"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>钱</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="000.000.000.000.000,00" data-reverse="true">
+                                                <span class="font-13 text-muted">例如 "你的钱"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>钱 2</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="#.##0,00" data-reverse="true">
+                                                <span class="font-13 text-muted">例如 "#.##0,00"</span>
+                                            </div>
+    
+                                        </form>
+                                    </div> <!-- end col -->
+
+                                    <div class="col-md-6">
+                                        <form action="#">
+                                            <div class="form-group">
+                                                <label>电话</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="0000-0000000">
+                                                <span class="font-13 text-muted">例如 "xxxx-xxxxxxx"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>带代码区的电话</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="(00) 0000-0000">
+                                                <span class="font-13 text-muted">例如 "(xx) xxxx-xxxx"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>中国电话</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="(0000) 000-0000">
+                                                <span class="font-13 text-muted">例如 "(xxx) xxxxxxx"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>圣保罗电话</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="(00) 00000-0000">
+                                                <span class="font-13 text-muted">例如 "(xx) xxxxx-xxxx"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>公积金</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="000.000.000-00" data-reverse="true">
+                                                <span class="font-13 text-muted">例如 "xxx.xxx.xxxx-xx"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>法人税号</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="00.000.000/0000-00" data-reverse="true">
+                                                <span class="font-13 text-muted">例如 "xx.xxx.xxx/xxxx-xx"</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>IP地址</label>
+                                                <input type="text" class="form-control" data-toggle="input-mask" data-mask-format="099.099.099.099" data-reverse="true">
+                                                <span class="font-13 text-muted">例如 "xxx.xxx.xxx.xxx"</span>
+                                            </div>
+    
+                                        </form>
+                                    </div> <!-- end col -->
+                                </div>
+                                <!-- end row -->
+
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div> <!-- end row -->   
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">形式验证</h4>
+
+                                <form class="needs-validation" novalidate>
+                                    <div class="form-group mb-3">
+                                        <label for="validationCustom01">名字</label>
+                                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="默笙" required>
+                                        <div class="valid-feedback">
+                                            看起来不错!
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="validationCustom02">姓</label>
+                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="默" required>
+                                        <div class="valid-feedback">
+                                            看起来不错!
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="validationCustomUsername">用户名</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="用户名" aria-describedby="inputGroupPrepend"
+                                                required>
+                                            <div class="invalid-feedback">
+                                                请选择用户名。
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="validationCustom03">城市</label>
+                                        <input type="text" class="form-control" id="validationCustom03" placeholder="城市名称" required>
+                                        <div class="invalid-feedback">
+                                            请提供一个有效的城市。
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="validationCustom04">状态</label>
+                                        <input type="text" class="form-control" id="validationCustom04" placeholder="输入一个状态吧" required>
+                                        <div class="invalid-feedback">
+                                            请提供有效的状态。
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="validationCustom05">邮政编码</label>
+                                        <input type="text" class="form-control" id="validationCustom05" placeholder="邮政编码" required>
+                                        <div class="invalid-feedback">
+                                            请提供有效的邮编。
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="custom-control custom-checkbox form-check">
+                                            <input type="checkbox" class="custom-control-input" id="invalidCheck" required>
+                                            <label class="custom-control-label" for="invalidCheck">同意条款和条件</label>
+                                            <div class="invalid-feedback">
+                                                在提交之前，你必须同意。
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">提交表单</button>
+                                </form>
+
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+                    </div> <!-- end col-->
+
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">形式验证（提示）</h4>
+
+                                <form class="needs-validation" novalidate>
+                                    <div class="form-group position-relative mb-3">
+                                        <label for="validationTooltip01">姓名</label>
+                                        <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="默笙" required>
+                                        <div class="valid-tooltip">
+                                            看起来不错!
+                                        </div>
+                                        <div class="invalid-tooltip">
+                                            请输入姓名。
+                                        </div>
+                                    </div>
+                                    <div class="form-group position-relative mb-3">
+                                        <label for="validationTooltip02">姓</label>
+                                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="默" required>
+                                        <div class="valid-tooltip">
+                                            看起来不错！
+                                        </div>
+                                        <div class="invalid-tooltip">
+                                            请输入姓氏。
+                                        </div>
+                                    </div>
+                                    <div class="form-group position-relative mb-3">
+                                        <label for="validationTooltipUsername">用户名</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend"
+                                                required>
+                                            <div class="invalid-tooltip">
+                                                请选择一个唯一且有效的用户名。
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group position-relative mb-3">
+                                        <label for="validationTooltip03">城市</label>
+                                        <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                                        <div class="invalid-tooltip">
+                                            请提供一个有效的城市。
+                                        </div>
+                                    </div>
+                                    <div class="form-group position-relative mb-3">
+                                        <label for="validationTooltip04">状态</label>
+                                        <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                                        <div class="invalid-tooltip">
+                                            请提供有效的状态。
+                                        </div>
+                                    </div>
+                                    <div class="form-group position-relative mb-3">
+                                        <label for="validationTooltip05">邮编</label>
+                                        <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                                        <div class="invalid-tooltip">
+                                            请提供有效的邮编。
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">提交表单</button>
+                                </form>
+                                
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+                    </div> <!-- end col-->
+                </div>
+                <!-- end row -->    
+
+                
+            </div> <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        Mosheng Admin &copy; 2018 - tecms.net
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-md-right footer-links d-none d-sm-block">
+                            <a href="#">关于我们</a>
+                            <a href="#">帮助</a>
+                            <a href="#">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+
+        <!-- App js -->
+        <script src="js/vendor.min.js"></script>
+        <script src="js/app.min.js"></script>
+
+        <!-- Plugins js -->
+        <script src="js/vendor/switchery.min.js"></script>
+        <script src="js/vendor/bootstrap-maxlength.min.js"></script>
+        <script src="js/pages/form-advanced.init.js"></script>
+
+    </body>
+</html>

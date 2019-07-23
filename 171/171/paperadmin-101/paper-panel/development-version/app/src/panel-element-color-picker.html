@@ -1,0 +1,125 @@
+<!-- partial:partials/_header.html -->
+<!-- partial -->
+<div class="page has-sidebar-left bg-light height-full">
+    <header class="blue accent-3 relative nav-sticky">
+        <div class="container-fluid text-white">
+            <div class="row">
+                <div class="col">
+                    <h3 class="my-3">
+                        <i class="icon icon-notifications_active"></i>
+                        Color Picker <span class="s-14"> <a class="btn btn-outline-primary btn-xs"
+                                                            href="https://farbelous.io/bootstrap-colorpicker/tutorial-Basics.html"
+                                                            target="_blank"> View Plugin Docs</a> </span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid my-3">
+        <div class="d-flex row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Simple usage</div>
+                            <input type="text" class="color-picker  form-control"/>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Setting the initial color</div>
+                            <div class="color-picker input-group">
+                                <input type="text" value="#00AABB" class="form-control"/>
+                                <span class="input-group-append">
+                        <span class="input-group-text add-on white">
+                            <i class="circle"></i>
+                      </span>
+                    </span>
+                            </div>
+                            <div class="color-picker input-group my-3">
+                                <input type="text" value="#e443b1" class="form-control"/>
+                                <span class="input-group-append">
+                        <span class="input-group-text add-on">
+                            <i></i>
+                      </span>
+                    </span>
+                            </div>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Automatic format detection</div>
+                            <div class="input-group color-picker" title="Using format option"
+                                 data-options='{"format": null}'>
+                                <input type="text" class="form-control input-lg" value="#305AA2"/>
+                                <span class="input-group-append">
+                        <span class="input-group-text add-on white">
+                            <i class="circle"></i>
+                      </span>
+                    </span>
+                            </div>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">RGBA Format</div>
+                            <div class="color-picker input-group"
+                                 data-options='{
+                                              "format":"rgba",
+                                               "color": "#16813D",
+                                               "autoInputFallback": false
+                                         }'>
+                                <input type="text" value="#00AABB" class="form-control"/>
+                                <span class="input-group-append">
+                                            <span class="input-group-text add-on white">
+                                                <i class="circle"></i>
+                                          </span>
+                                        </span>
+                            </div>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Color Picker Inline</div>
+                            <div class="color-picker"
+                                 data-options='{
+                                              "format":"rgba",
+                                               "color": "#00AABB",
+                                               "inline": true,
+                                               "container":true
+                                         }'>
+                            </div>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Color Picker Inline Horizontal</div>
+                            <div class="color-picker"
+                                 data-options='{
+                                              "horizontal":true,
+                                              "format":"rgba",
+                                               "color": "#00AABB",
+                                               "inline": true,
+                                               "container":true
+                                         }'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h3>Documentation</h3>
+                <hr>
+                <p>You can pass plugin options using data-options attribute. Please make sure to use valid json
+                    code.</p>
+                <a href="https://farbelous.io/bootstrap-colorpicker/tutorial-Basics.html" target="_blank"
+                   class="btn btn-xs btn-primary">Plugin Docs</a>
+                <a href="https://jsonformatter.org/" target="_blank" class="btn btn-outline-primary btn-xs">JSON
+                    Formatter</a>
+                <h4 class="mt-5">Code Example</h4>
+                <hr>
+                <pre><code>&lt;div class="color-picker"
+&nbsp;&nbsp;&nbsp;data-options='{
+&nbsp;&nbsp;&nbsp;"horizontal":true,
+&nbsp;&nbsp;&nbsp;"format":"rgba",
+&nbsp;&nbsp;&nbsp;"color": "#00AABB",
+&nbsp;&nbsp;&nbsp;"inline": true,
+&nbsp;&nbsp;&nbsp;"container":true
+&nbsp;&nbsp;&nbsp;}'&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial:partials/_foot.html -->
+<!-- partial -->

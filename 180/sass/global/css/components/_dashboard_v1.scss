@@ -1,0 +1,206 @@
+/*---------------------------
+
+Start Dashboard V1
+
+---------------------------*/
+.dashboard_v1{
+  .section-body{
+    background: $white-backgournd-color;
+  }
+  .section-header{
+    h2 {
+      font-size: 16px;
+      line-height: $gaping-20;
+      border-bottom: 1px solid $normal-light-text-color;
+      padding-block-end: 5px;
+    }
+  }
+  .tile-stats{
+    color:$white-text-color;
+    margin-bottom: $gaping-30;
+    box-shadow: 0 1px 2px transparent, 0 1px 4px rgba(0, 0, 0, 0.3);
+    &:hover{
+      .icon{
+        color: rgba(0,0,0,0.3);
+      }
+    }
+    .icon{
+      font-size: 60px;
+      float: $right-division;
+      padding-right: $gaping-15;
+    }
+    .count{
+      font-size: 40px;
+      font-weight: $bold-text;
+      padding-left: $gaping-15;
+      padding-top: $gaping-15;
+    }
+    h3{
+      font-size: 20px;
+      font-weight: $bold-text;
+      color: $normal-light-text-color;
+      padding-left: $gaping-15;
+    }
+    a{
+      p{
+        padding: 3px $gaping-15;
+        background: rgba(0,0,0,0.2);
+        color: $white-text-color;
+        font-weight: $bold-text;
+      }
+    }
+  }
+  .events{
+    margin-bottom: $gaping-15;
+    .date{
+      float: $left-division;
+      background: $normal-light-text-color;
+      width: 55px;
+      margin-right: $gaping-10;
+      border-radius: 8px;
+      padding: $gaping-5;
+      .month{
+        text-align: $text-center;
+        color: $white-text-color;
+        padding: $gaping-0;
+        line-height: $gaping-20;
+      }
+      .day{
+        color:$white-text-color;
+        text-align: $text-center;
+        font-size: 27px;
+        line-height: 27px;
+        font-weight: $bold-text;
+        padding: $gaping-0;
+      }
+    }
+    .event-body{
+      a{
+        font-weight: $bold-text;
+      }
+      p{
+        padding: $gaping-0;
+        line-height: 17px;
+        font-size: 12px;
+      }
+    }
+  }
+  .bottom-title{
+    text-align: $text-center;
+    margin-top: $gaping-10;
+    color: rgb(153, 153, 153);
+    font-size: 18px;
+    font-weight: $bold-text;
+  }
+  .testimonial{
+    text-align: $text-center;
+    background: $inverse-background-color;
+    color: $white-text-color;
+    padding: 47px;
+    .content{
+      img{
+        border-radius: 100px;
+        height: $gaping-60;
+        width: $gaping-60;
+        border: 2px solid;
+        padding: 3px;
+        margin-bottom: $gaping-10;
+      }
+      .author{
+        font-size: 16px;
+        font-weight: $bold-text;
+        margin-bottom: 3px;
+      }
+      .author-position{
+        font-size: 12px;
+        margin-top: -2px;
+        margin-bottom: $gaping-5;
+      }
+    }
+  }
+  .progress {
+    margin-bottom: 17.8px;
+  }
+  .user-card{
+    .stats{
+      > span{
+        width: 30%;
+        height: 71px;
+      }
+    }
+  }
+}
+.sparkbar{
+  canvas{
+    width: 100% !important;
+  }
+}
+
+/*---- Start responsive Dashboard V1 ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+  .dashboard_v1{
+    .tile-stats{
+      .icon {
+        font-size: 40px;
+      }
+      .count {
+        font-size: 30px;
+      }
+      h3 {
+        font-size: 15px;
+        line-height: 30px;
+      }
+      a{
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:479px) {
+  .dashboard_v1{
+    .bottom-title {
+      font-size: 15px;
+      line-height: 10px;
+      margin-bottom: $gaping-10;
+    }
+    .testimonial {
+      padding: $gaping-30;
+    }
+    .user-card{
+      margin: $gaping-0 auto $gaping-15;
+      .stats{
+        > span {
+          height: auto;
+        }
+        .value {
+          font-size: 16px;
+        }
+        .label {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+/*---- End responsive Dashboard V1 ----*/
+
+/*---------------------------
+
+End Dashboard V1
+
+---------------------------*/

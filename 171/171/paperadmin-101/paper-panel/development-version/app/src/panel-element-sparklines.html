@@ -1,0 +1,160 @@
+<!-- partial:partials/_header.html -->
+<!-- partial -->
+<div class="page has-sidebar-left">
+    <header class="blue accent-3 relative nav-sticky">
+        <div class="container-fluid text-white">
+            <div class="row p-t-b-10 ">
+                <div class="col">
+                    <h4>
+                        <i class="icon-map"></i>
+                        Sparkline
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="nav responsive-tab nav-material nav-material-white">
+                    <li>
+                        <a class="nav-link" href="panel-element-charts-js.html">
+                            <i class="icon icon-area-chart"></i>Charts.Js</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-morris.html">
+                            <i class="icon icon-bubble_chart"></i>Morris Charts</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-echarts.html">
+                            <i class="icon icon-bar-chart-o"></i>Echarts</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-easy-pie-charts.html">
+                            <i class="icon icon-area-chart"></i>Easy Pie Charts</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-jqvmap.html">
+                            <i class="icon icon-map"></i>Jqvmap</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link active" href="panel-element-sparklines.html">
+                            <i class="icon icon-line-chart2"></i>Sparklines</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid my-3">
+        <div class="row pb-3">
+            <div class="col-md-7">
+                <div class="card no-b">
+                    <div class="card-body b-b">
+                        <div class="card-title">
+                            <h4>Sparkline Bar Graphs</h4>
+                        </div>
+                     <span class="sparkline"
+                                            data-values="[2, 4, 3, 4, 5, 4, 5, 4, 3, 4, 5, 6, 4, 5, 6, 3, 5, 4, 5, 4, 5, 4, 3, 4, 5, 6, 7, 5, 4, 3, 5, 6]"
+                                            data-options='{
+                                          "type": "bar",
+                                          "height": "125",
+                                          "barWidth": 13,
+                                          "colorMap": {
+                                            "7": "#a1a1a1"
+                                          },
+                                          "barSpacing": 2,
+                                          "barColor": "#26B99A"
+                                        }'>
+
+                    </span>
+                    </div>
+                    <div class="card-body b-b">
+                        <div class="card-title">
+                            <h4>Sparkline Pie Graphs</h4>
+                        </div>
+                        <span class="sparkline"
+                              data-values="[2, 4, 3, 4, 5, 4, 5, 4, 3, 4, 5, 6, 7, 5, 4, 3, 5, 6]"
+                              data-options='{
+                                          "type": "pie",
+                                          "width": "500",
+                                          "height": "140",
+                                          "lineColor": "#26B99A",
+                                          "fillColor": "rgba(223, 223, 223, 0.57)",
+                                           "lineWidth": 4,
+                                          "spotColor": "#03a9f4",
+                                          "minSpotColor": "#03a9f4"
+                                        }'>
+
+                    </span>
+                    </div>
+                    <div class="card-body b-b">
+                        <div class="card-title">
+                            <h4>Sparkline Discrete Graphs</h4>
+                        </div>
+                        <span class="sparkline"
+                              data-values="[2, 4, 3, 4, 5, 4, 5, 4, 3, 4, 5, 6, 7, 5, 4, 3, 5, 6]"
+                              data-options='{
+                                          "type": "discrete",
+                                          "width": "500",
+                                          "height": "140",
+                                          "lineColor": "#26B99A",
+                                          "fillColor": "rgba(223, 223, 223, 0.57)",
+                                           "lineWidth": 4,
+                                          "spotColor": "#03a9f4",
+                                          "minSpotColor": "#03a9f4"
+                                        }'>
+
+                    </span>
+                    </div>
+                    <div class="card-body b-b">
+                        <div class="card-title">
+                            <h4>Sparkline Bar Graphs</h4>
+                        </div>
+                        <span class="sparkline"
+                              data-values="[2, 4, 3, 4, 5, 4, 5, 4, 3, 4, 5, 6, 7, 5, 4, 3, 5, 6]"
+                              data-options='{
+                                          "type": "line",
+                                          "width": "500",
+                                          "height": "140",
+                                          "lineColor": "#26B99A",
+                                          "fillColor": "rgba(223, 223, 223, 0.57)",
+                                           "lineWidth": 4,
+                                          "spotColor": "#03a9f4",
+                                          "minSpotColor": "#03a9f4"
+                                        }'>
+
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h3>Documentation</h3>
+                <hr>
+                <p>You can pass plugin options using data-options attribute. Please make sure to use valid json
+                    code.</p>
+                <a href="https://omnipotent.net/jquery.sparkline/" target="_blank"
+                   class="btn btn-xs btn-primary">Plugin Docs</a>
+                <a href="https://jsonformatter.org/" target="_blank" class="btn btn-outline-primary btn-xs">JSON
+                    Formatter</a>
+                <h4 class="mt-5">Code Example</h4>
+                <hr>
+                <pre><code>
+
+&lt;span class="sparkline"
+&nbsp;&nbsp;&nbsp;data-values="[2, 4, 3, 4, 5, 4, 5, 4, 3, 4, 5, 6, 4, 5, 6, 3, 5, 4, 5, 4, 5, 4, 3, 4, 5, 6, 7, 5, 4, 3, 5, 6]"
+&nbsp;&nbsp;&nbsp;data-options='{
+&nbsp;&nbsp;&nbsp;"type": "bar",
+&nbsp;&nbsp;&nbsp;"height": "125",
+&nbsp;&nbsp;&nbsp;"barWidth": 13,
+&nbsp;&nbsp;&nbsp;"colorMap": {
+&nbsp;&nbsp;&nbsp;"7": "#a1a1a1"
+&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;"barSpacing": 2,
+&nbsp;&nbsp;&nbsp;"barColor": "#26B99A"
+&nbsp;&nbsp;&nbsp;}'&gt;
+&lt;/span&gt;
+
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial:partials/_foot.html -->
+<!-- partial -->

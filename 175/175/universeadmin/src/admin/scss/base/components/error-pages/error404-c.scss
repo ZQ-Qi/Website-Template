@@ -1,0 +1,84 @@
+.error404-c {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__error-code {
+    letter-spacing: 4px;
+    color: #269af1;
+    font-size: 280px;
+    line-height: 280px;
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
+
+  &__heading {
+    font-size: 40px;
+    color: #000;
+    padding: 0 15px;
+  }
+
+  &__desc {
+    font-size: 20px;
+    color: #000;
+    padding: 0 15px;
+  }
+
+  &__link-wrap {
+    margin-top: 40px;
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 31px;
+  }
+}
+
+@include mq(tablet, max) {
+  .error404-c {
+    justify-content: center;
+    padding-bottom: 50px;
+
+    &__image-wrap {
+      margin-bottom: 50px;
+      padding-top: 20px;
+    }
+
+    &__heading {
+      font-size: 30px;
+      color: #000;
+    }
+
+    &__desc {
+      font-size: 16px;
+      color: #000;
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 16px;
+      padding: 11px 31px;
+    }
+  }
+}
+
+@include mq(tablet-small, max) {
+  .error404-c {
+    &__error-code {
+      font-size: 200px;
+      line-height: 200px;
+    }
+  }
+}
+
+@include mq(phone, max) {
+  .error404-c {
+    &__error-code {
+      font-size: 180px;
+      line-height: 180px;
+    }
+  }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>添加数据</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../../../../content/layui/rc/css/layui.css" media="all">
+    <style>
+        body {
+            padding: 10px;
+            font-size: 14px;
+            background: #fff;
+            width: 95%;
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 20px;
+            overflow: scroll;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        input {
+            border: 1px solid #999;
+            padding: 5px 10px;
+            margin: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-card-body" style="padding: 15px;">
+    <form class="layui-form" action="" lay-filter="operate-form-group">
+        <div class="layui-form-item">
+            <label class="layui-form-label">标题</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">平台</label>
+            <div class="layui-input-block">
+                <select name="platform">
+                    <option value="" >请选择</option>
+                    <option value="0">智汇魔方</option>
+                    <option value="1">汇贷客</option>
+                    <option value="2">公众号</option>
+                    <option value="3">web</option>
+                    <option value="4">pc</option>
+                    <option value="5">微信</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">地区</label>
+            <div class="layui-input-inline">
+                <select name="provid3a" id="provid3a" lay-filter="provid3a">
+                    <option value="">请选择省</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <select name="cityid3a" id="cityid3a" lay-filter="cityid3a">
+                    <option value="">请选择市</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <select name="xianid3a" id="xianid3a" lay-filter="xianid3a">
+                    <option value="">请选择县</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">是否热门</label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="hotStatus" value="1" title="是" checked>
+                    <input type="radio" name="hotStatus" value="0" title="否" >
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">是否原创</label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="originalStatus" value="1" title="是" checked>
+                    <input type="radio" name="originalStatus" value="0" title="否" >
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">发布状态</label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="publishStatus" value="1" title="是" checked>
+                    <input type="radio" name="publishStatus" value="0" title="否" >
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">阅读量</label>
+            <div class="layui-input-block">
+                <input type="number" name="readnumber" lay-verify="title" autocomplete="off" placeholder="请输入阅读量" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">分享数</label>
+            <div class="layui-input-block">
+                <input type="number" name="readnumber" lay-verify="title" autocomplete="off" placeholder="请输入分享数" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">点赞数</label>
+            <div class="layui-input-block">
+                <input type="number" name="readnumber" lay-verify="title" autocomplete="off" placeholder="请输入点赞数" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">修改时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="modifyTime" id="LAY-informationAdd-modifyTime" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <div class="layui-footer">
+                    <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">新增</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../../../../content/layui/rc/layui.js"></script>
+<script>
+    layui.extend({
+        cityselect:'./../../../controller/cityselect'
+    }).use(['layer','form', 'laydate','upload','cityselect'], function(){
+        var $ = layui.$
+            ,layer = layui.layer
+            ,index = parent.layer.getFrameIndex(window.name) //获取窗口索引
+            ,element = layui.element
+            ,laydate = layui.laydate
+            ,upload = layui.upload
+            ,cityselect = layui.cityselect
+            ,form = layui.form;
+
+        setTimeout(function () {
+            cityselect.render({
+                elem: ["#provid3a", "#cityid3a", "#xianid3a"],
+                elembox: 'operate-form-group',
+                url: './../../../../json/select/address.json',
+                setValues: ["70", "7002", "700212"]
+            });
+        },600);
+
+
+        form.render(null, 'operate-form-group');
+        laydate.render({
+            elem: '#LAY-informationAdd-modifyTime'
+        });
+
+        /* 自定义验证规则 */
+        form.verify({
+            title: function(value){
+                if(value.length < 5){
+                    return '标题至少得5个字符啊';
+                }
+            }
+            ,pass: [/(.+){6,12}$/, '密码必须6到12位']
+            ,content: function(value){
+                layedit.sync(editIndex);
+            }
+        });
+
+        /* 监听提交 */
+        form.on('submit(component-form-demo1)', function(data){
+            console.log(JSON.stringify(data.field));
+            var oldData =  parent.layui.table.cache["LAY-app-table-all"];
+            var data1=JSON.stringify(data.field);
+            oldData.push(data1);
+            parent.layui.table.reload('LAY-app-table-all',{
+                data : oldData
+            });
+
+            parent.layer.close(index);
+            return false;
+        });
+
+        $('.layui-btn-container .layui-btn').on('click', function(){
+            var othis = $(this)
+                ,type = othis.data('type');
+            active[type] && active[type].call(this);
+        });
+    });
+</script>
+</body>
+</html>

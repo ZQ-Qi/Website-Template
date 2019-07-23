@@ -1,0 +1,39 @@
+@import "../config/colors";
+
+/* BEGIN UIKIT PROGRESS */
+.progress {
+  width: 100%;
+  border-radius: 2px;
+  height: 16px;
+  background-color: rgba(57, 81, 155, 0.1);
+  font-size: 12px;
+
+  &.ks-rounded {
+    border-radius: 12px;
+  }
+
+  &.ks-progress-sm {
+    height: 10px;
+  }
+
+  &.ks-progress-xs {
+    height: 6px;
+  }
+
+  > .progress-bar {
+    background-color: $ks-color-primary;
+  }
+}
+
+.ks-progress {
+  &.ks-progress-inline {
+    display: flex;
+    align-items: center;
+
+    > .ks-amount {
+      margin-left: 10px;
+      font-size: 12px;
+    }
+  }
+}
+/* END UIKIT PROGRESS */

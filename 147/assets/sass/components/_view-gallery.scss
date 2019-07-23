@@ -1,0 +1,49 @@
+.page-gallery{
+	.gallery-col{
+		a{
+			display:inline-block;
+			width: 24.7%;
+			padding: 3px;
+		}
+	}
+	.leftmenu-widget{
+		.tag-list{
+			a{
+				display: inline-block;
+				margin: 3px;
+				padding:5px 15px;
+				color:$slategray;
+				font-weight:$font-weight-normal;
+				border: 1px solid rgba(0,0,0,0.1);
+				font-size:90%;
+				text-transform: capitalize;
+				-webkit-border-radius: 2px;
+				&:hover{
+					text-decoration:none;
+					background:linear-gradient(45deg, #49cdd0, #45e5c3);
+					color:#fff;
+				}				
+			}
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.page-gallery{
+		.gallery-col{
+			a{
+				width: 49%;
+			}
+		}
+	}
+	
+}
+@media only screen and (max-width: 414px) {
+	.page-gallery{
+		.gallery-col{
+			a{
+				width: 100%;
+			}
+		}
+	}
+	
+}

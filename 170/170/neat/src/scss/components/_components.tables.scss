@@ -1,0 +1,264 @@
+/* ==========================================================================
+   #TABLES
+   ========================================================================== */
+
+/**
+ * 1. The border-collapse CSS property specifies that the table's borders are 
+ *    collapsed and it means that adjacent cells share borders.
+ */
+
+.c-table {
+	display: table;
+	width: 100%;
+	max-width: 100%;
+	border: $table-border-width solid $table-border-color;
+	border-radius: $table-border-radius;
+	background-color: $table-background-color;
+	border-collapse: collapse; /* [1] */
+	box-shadow: $card-box-shadow;
+}
+
+
+/**
+ * Responsive Tables
+ *
+ * Wrap any table with one of these classes to make it responsive at certain
+ * breakpoint.
+ *
+ * 1. Wrap your table with this class `c-table-responsive` if the table's width 
+ * is larger than 1200px.
+ */
+
+.c-table-responsive { /* [1] */
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+
+	.c-table {
+		display: block;
+		overflow-y: hidden;
+	}
+}
+
+@media (max-width: $breakpoint-mobile) {
+	.c-table-responsive\@mobile {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+
+		.c-table {
+			display: block;
+			overflow-y: hidden;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-tablet) {
+	.c-table-responsive\@tablet {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+
+		.c-table {
+			display: block;
+			overflow-y: hidden;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-desktop) {
+	.c-table-responsive\@desktop {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+
+		.c-table {
+			display: block;
+			overflow-y: hidden;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-wide) {
+	.c-table-responsive\@wide {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+
+		.c-table {
+			display: block;
+			overflow-y: hidden;
+		}
+	}
+}
+
+/**
+ * Use `c-table--zebra` to add zebra-styling to table rows inside the table.
+ */
+
+.c-table--zebra {
+	tbody tr:nth-of-type(odd) {
+		background-color: $table-zebra-row-background-color;
+	}
+}
+
+
+/**
+ * Highlight table row on hover.
+ */
+
+.c-table--highlight {
+	tbody tr:hover {
+		background-color: $table-highlight-row-background-color;
+	}
+}
+
+
+.c-table--fixed {
+	table-layout: fixed;
+}
+
+/**
+ * Table title/caption
+ * <caption> 
+ */
+
+.c-table__title {
+	position: relative;
+	padding: 25px 30px;
+	border: $base-border-width solid $color-ink-light;
+	border-bottom: 0;
+	border-radius: 4px 4px 0 0;
+	background-color: $table-title-background-color;
+	color: $table-title-color;
+	font-size: 24px;
+	text-align: left;
+
+	small {
+		display: inline-block;
+		margin-left: 10px;
+		color: $color-ink;
+		font-size: 14px;
+
+		// divider
+		&::before {
+			display: inline-block;
+			position: relative;
+			bottom: -2px;
+			width: 1px;
+			height: 14px;
+			margin-right: 12px;
+			background-color: #DFE3E9;
+			content: "";
+		}
+	}
+}
+
+/**
+ * A small icon in table title used to perform general action on table like
+ * downloading table content as a report.
+ */
+
+.c-table__title-action {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	color: #AFB4BB;
+	font-size: 22px;
+}
+
+/**
+ * Table Head
+ *
+ * Slimmer version of table's head with less sapcing and darker background
+ */
+
+.c-table__head {
+	padding: 0;
+	background-color: $table-head-slim-background-color;
+
+	.c-table__cell--head {
+		padding: 10px 0 10px 30px;
+		color: $color-ink;
+	}
+}
+
+
+/**
+ * Table Row
+ */
+
+.c-table__row {
+	border-top: $table-border-width solid $table-border-color; /* [1] */
+	border-bottom: $table-border-width solid $table-border-color; /* [1] */
+
+	&:last-child {
+		border-bottom: 0;
+	}
+}
+
+.c-table__row--success,
+.c-table__row--danger,
+.c-table__row--info,
+.c-table__row--warning {
+	border-left: 3px solid;
+}
+
+.c-table__row--success {
+	border-left-color: $color-success;
+}
+
+.c-table__row--danger {
+	border-left-color: $color-danger;
+}
+
+.c-table__row--info {
+	border-left-color: $color-info;
+}
+
+.c-table__row--warning {
+	border-left-color: $color-warning;
+}
+
+
+/**
+ * Table Cell
+ */
+
+.c-table__cell {
+	padding: $table-cell-padding;
+	color: $table-cell-color;
+	font-size: $table-cell-font-size;
+	font-weight: $table-cell-font-weight;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: middle;
+
+	&:last-child {
+		padding-right: $spacer;
+	}
+}
+
+.c-table__cell--head {
+	color: $color-ink;
+	font-size: $text-font-size;
+	font-weight: $font-weight-semibold;
+}
+
+
+/**
+ * Table cell with image
+ *
+ * 2. Use flexbox to make sure all table-cell content is vertically centered.
+ */
+
+.c-table__cell--img {
+	display: flex; /* [2] */
+	flex-wrap: wrap;
+	align-items: center;
+}

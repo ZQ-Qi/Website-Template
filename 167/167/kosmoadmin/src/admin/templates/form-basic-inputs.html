@@ -1,0 +1,330 @@
+@@include('./_partials/header_start.html')
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Basic Form Inputs</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 ks-panels-column-section">
+                                <div class="card">
+                                    <div class="card-block">
+                                        <h5 class="card-title">Basic</h5>
+                                        <form>
+                                            <div class="form-group row">
+                                                <label for="default-input" class="col-sm-2 form-control-label">Default input</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="default-input" placeholder="Default input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="disabled-input" class="col-sm-2 form-control-label">Disabled input</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" disabled id="disabled-input" placeholder="Disabled input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="readonly-input" class="col-sm-2 form-control-label">Readonly input</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" readonly id="readonly-input" placeholder="Readonly input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="active-input" class="col-sm-2 form-control-label">Active input</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control active" id="active-input" placeholder="Active">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-2 form-control-label">Static</label>
+                                                <div class="col-sm-10">
+                                                    <p class="form-control-static">email@example.com</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="default-input-rounded" class="col-sm-2 form-control-label">Default input</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control ks-rounded" id="default-input-rounded" placeholder="Default rounded input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="default-input-rounded" class="col-sm-2 form-control-label">Textarea</label>
+                                                <div class="col-sm-10">
+                                                    <textarea class="form-control" placeholder="Textarea"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="default-input-rounded" class="col-sm-2 form-control-label">Select</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control">
+                                                        <option>Select</option>
+                                                        <option>Select</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="default-input-rounded" class="col-sm-2 form-control-label">File Input</label>
+                                                <div class="col-sm-10">
+                                                    <label class="btn btn-primary ks-btn-file">
+                                                        <span class="la la-cloud-upload ks-icon"></span>
+                                                        <span class="ks-text">Choose file</span>
+                                                        <input type="file">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-2 form-control-label p-t-0">Checkboxes</label>
+                                                <div class="col-sm-10">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c1" type="checkbox" class="custom-control-input">
+                                                        <label class="custom-control-label" for="c1">Custom checkbox</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox mt-3">
+                                                        <input id="c2" type="checkbox" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="c2">Custom checkbox</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox mt-3">
+                                                        <input id="c3" type="checkbox" class="custom-control-input" disabled>
+                                                        <label class="custom-control-label" for="c3">Custom checkbox</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-2 form-control-label p-t-0">Radios</label>
+                                                <div class="col-sm-10">
+                                                    <div class="custom-control custom-radio">
+                                                        <input id="c4" name="radio" type="radio" class="custom-control-input">
+                                                        <label class="custom-control-label" for="c4">Custom radio</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio mt-3">
+                                                        <input id="c5" name="radio" type="radio" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="c5">Custom radio</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio mt-3">
+                                                        <input id="c6" name="radio" type="radio" class="custom-control-input" disabled>
+                                                        <label class="custom-control-label" for="c6">Custom radio</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-block">
+                                        <h5 class="card-title">Sizes</h5>
+                                        <div>
+                                            <div class="form-group">
+                                                <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" placeholder="Default input">
+                                            </div>
+                                            <div>
+                                                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 ks-panels-column-section">
+                                <div class="card">
+                                    <div class="card-block">
+                                        <h5 class="card-title">Groups</h5>
+                                        <div>
+                                            <div class="form-group row">
+                                                <label for="input-group-text" class="col-sm-2 form-control-label">Input group text</label>
+                                                <div class="col-sm-10">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                                        </div>
+                                                        <input id="input-group-text" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Text">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text">.00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="input-group-icon-email" class="col-sm-2 form-control-label">Input group icon</label>
+                                                <div class="col-sm-5">
+                                                    <div class="input-group icon icon-lg icon-color-primary">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">
+                                                                <span class="la la-at"></span>
+                                                            </span>
+                                                        </div>
+                                                        <input id="input-group-icon-email" type="text" class="form-control" placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <div class="input-group icon icon-lg icon-color-primary">
+                                                        <input id="input-group-icon" type="password" class="form-control" placeholder="Password">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text">
+                                                                <span class="la la-key"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="input-group-icon-site" class="col-sm-2 form-control-label">&nbsp;</label>
+                                                <div class="col-sm-5">
+                                                    <div class="input-icon icon-left icon-lg icon-color-primary">
+                                                        <input id="input-group-icon-site" type="text" class="form-control" placeholder="http://">
+                                                        <span class="icon-addon">
+                                                            <span class="la la-key"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <div class="input-icon icon-right icon icon-lg icon-color-primary">
+                                                        <input id="input-group-icon-text" type="text" class="form-control" placeholder="Text">
+                                                        <span class="icon-addon">
+                                                            <span class="la la-paper-plane"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="input-group-text" class="col-sm-2 form-control-label">Input group button</label>
+                                                <div class="col-sm-10">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Search for...">
+                                                        <span class="input-group-append">
+                                                            <button class="btn btn-primary" type="button">Search!</button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="input-group-text" class="col-sm-2 form-control-label">Input group checkbox</label>
+                                                <div class="col-sm-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <span class="custom-control custom-checkbox ks-no-description">
+                                                                    <input id="c7" type="checkbox" class="custom-control-input">
+                                                                    <label class="custom-control-label" for="c7"></label>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <input type="text" class="form-control" aria-label="Text input with checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="input-group-text" class="col-sm-2 form-control-label">Input group radio</label>
+                                                <div class="col-sm-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <span class="custom-control custom-radio ks-no-description">
+                                                                    <input id="c8" name="radio" type="radio" class="custom-control-input">
+                                                                    <label class="custom-control-label" for="c8"></label>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <input type="text" class="form-control" aria-label="Text input with checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="input-group-text" class="col-sm-2 form-control-label">Input group dropdown</label>
+                                                <div class="col-sm-5">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <button type="button" class="btn btn-outline-secondary ks-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                            </div>
+                                                        </div>
+                                                        <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Dropdown and text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Dropdown and text">
+                                                        <div class="input-group-append">
+                                                            <button type="button" class="btn btn-outline-secondary ks-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-block">
+                                        <h5 class="card-title">Validation</h5>
+                                        <div>
+                                            <fieldset class="form-group has-success">
+                                                <label class="form-control-label" for="inputSuccess1">Input with success</label>
+                                                <input type="text" class="form-control form-control-success" id="inputSuccess1">
+                                            </fieldset>
+                                            <fieldset class="form-group has-warning">
+                                                <label class="form-control-label" for="inputWarning1">Input with warning</label>
+                                                <input type="text" class="form-control form-control-warning" id="inputWarning1">
+                                            </fieldset>
+                                            <fieldset class="form-group has-danger">
+                                                <label class="form-control-label" for="inputDanger1">Input with danger</label>
+                                                <input type="text" class="form-control form-control-danger" id="inputDanger1">
+                                            </fieldset>
+
+                                            <div class="checkbox has-success mt-3 m-b-1">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c9" type="checkbox" class="custom-control-input">
+                                                    <label class="custom-control-label" for="c9">Custom checkbox</label>
+                                                </div>
+                                            </div>
+                                            <div class="checkbox has-warning mt-3 m-b-1">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c10" type="checkbox" class="custom-control-input">
+                                                    <label class="custom-control-label" for="c10">Custom checkbox</label>
+                                                </div>
+                                            </div>
+                                            <div class="checkbox has-danger mt-3">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c11" type="checkbox" class="custom-control-input">
+                                                    <label class="custom-control-label" for="c11">Custom checkbox</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+@@include('./_partials/footer.html')

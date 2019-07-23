@@ -1,0 +1,92 @@
+@@include('./_partials/header_start.html')
+    <link rel="stylesheet" type="text/css" href="assets/styles/apps/document-viewer.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container modal-open">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Document Image Viewer</h3>
+            </section>
+        </div>
+        <div class="ks-page-content d-flex justify-content-center align-items-center">
+            <div class="ks-page-content-body d-flex">
+                <a href="document-viewer-image.html" class="btn btn-primary btn-lg">Open Image Document Viewer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ks-document-viewer fade in modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <span class="ks-modal-title-icon la la-file-picture-o ks-color-info"></span>
+                    Image.jpg
+                </h5>
+                <div class="ks-controls">
+                    <div class="btn-group ks-zoom">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <button class="btn btn-outline-primary ks-light ks-no-text" type="button">
+                                    <span class="la la-search-plus ks-icon"></span>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" value="100%">
+                            <span class="input-group-append">
+                                <button class="btn btn-outline-primary ks-light ks-no-text" type="button">
+                                    <span class="la la-search-minus ks-icon"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn-group ks-rotate">
+                        <button type="button" class="btn btn-outline-primary ks-light ks-no-text">
+                            <span class="la la-undo ks-icon"></span>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary ks-light ks-no-text">
+                            <span class="la la-repeat ks-icon"></span>
+                        </button>
+                    </div>
+                    <button class="btn btn-outline-primary ks-light ks-download">
+                        <span class="la la-download ks-icon"></span>
+                        <span class="ks-text">Download</span>
+                    </button>
+                    <button class="btn btn-outline-primary ks-light ks-no-text ks-print"><span class="la la-print ks-icon"></span></button>
+                    <button class="btn btn-outline-primary ks-light ks-no-text ks-remove"><span class="la la-trash-o ks-icon"></span></button>
+                    <button class="btn btn-outline-primary ks-light ks-no-text ks-view-toggle"><span class="la la-expand ks-icon"></span></button>
+                </div>
+                <div class="ks-extra-controls">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="la la-close"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="ks-arrow ks-left-arrow">
+                    <a><span class="la la-long-arrow-left"></span></a>
+                </div>
+                <div class="ks-image-content">
+                    <img src="assets/img/walrus.jpg" class="embed-responsive">
+                </div>
+                <div class="ks-arrow ks-right-arrow">
+                    <a><span class="la la-long-arrow-right"></span></a>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+@@include('./_partials/scripts.html')
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        $('.ks-document-viewer').modal('show');
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

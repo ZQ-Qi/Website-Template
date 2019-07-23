@@ -1,0 +1,48 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Simple Layout / Universe Admin{% endblock %}
+
+{% block page_content %}
+<div class="page__header">
+  <div class="page__header-heading">
+    <div class="page__header-heading-text">Customers</div>
+    <a href="#" class="btn btn-info icon-left page__header-btn-link">
+      Add new customer <span class="mdi mdi-plus-circle btn__icon"></span>
+    </a>
+  </div>
+  <div>
+    <div class="input-group input-group-icon icon-right page__header-search">
+      <input class="form-control page__header-search-input" type="text" placeholder="Search...">
+      <span class="input-icon ua-icon-search page__header-search-icon"></span>
+    </div>
+  </div>
+</div>
+<div class="page__panel">
+  <div class="page__panel-name">Recently checked in</div>
+  <div class="dropdown dropdown__filter page__panel-control">
+    <a class="dropdown-toggle dropdown__filter-toggle" href="#" data-toggle="dropdown">
+      <span class="dropdown__filter-toggle-name">Sort:</span>
+      <span class="dropdown__filter-toggle-text">Recently checked in</span>
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+  <div class="dropdown dropdown__filter page__panel-control">
+    <a class="dropdown-toggle dropdown__filter-toggle" href="#" data-toggle="dropdown">
+      <span class="dropdown__filter-toggle-name">Filter:</span>
+      <span class="dropdown__filter-toggle-text">None</span>
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</div>
+<div class="page__body page__body--container">
+  asfasf
+</div>
+{% endblock %}

@@ -1,0 +1,122 @@
+/** BEGIN: tabs */
+.nav-tabs {
+  margin-bottom: 6px;
+  border: 0;
+
+  .nav-link {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    color: #939daa;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    position: relative;
+    z-index: 1;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-width: 2px;
+
+    &:hover,
+    &.active {
+      border-bottom-width: 2px;
+      border-color: $color-lasur;
+      color: $color-black;
+    }
+  }
+
+  &__link-amount {
+    color: #fff;
+    background-color: #939daa;
+    display: inline-block;
+    width: 18px;
+    height: 19px;
+    text-align: center;
+    font-size: 13px;
+    border-radius: $border-radius;
+    margin-left: 6px;
+    line-height: 18px;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.tab-pane {
+  font-size: 15px;
+}
+
+.tabs-alpha {
+  &.main-container {
+    padding: 20px 0 0 0;
+
+    .tab-pane {
+      padding: 20px;
+    }
+  }
+
+  &__tab-close-icon,
+  &__tab-add-icon {
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    margin-left: 5px;
+    color: #939daa;
+  }
+
+  &__tab-add-icon {
+    margin-left: 0;
+  }
+
+  &__nav-tabs {
+    margin: 0;
+    padding: 0 20px;
+
+    .nav-item {
+      margin-right: 3px;
+    }
+
+    .nav-link {
+      margin-bottom: 0;
+      padding: 7px 16px;
+      border-top: 1px solid #d3d9dd;
+      border-left: 1px solid #d3d9dd;
+      border-right: 1px solid #d3d9dd;
+      border-bottom: none;
+      color: #939daa;
+
+      &.active {
+        background: $color-lasur;
+        color: #fff;
+      }
+
+      &:not(.active):hover {
+        border-top: 1px solid darken(#d3d9dd, 7%);
+        border-left: 1px solid darken(#d3d9dd, 7%);
+        border-right: 1px solid darken(#d3d9dd, 7%);
+        border-bottom: none;
+        color: #939daa;
+      }
+    }
+  }
+
+  &__link.active &__tab-add-icon,
+  &__link.active &__tab-close-icon {
+    color: #fff;
+  }
+
+  &__tab-content {
+    border-top: 3px solid $color-lasur;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__tab-add {
+    &.nav-link {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+/** END: tabs */

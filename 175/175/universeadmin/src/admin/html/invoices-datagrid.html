@@ -1,0 +1,503 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Invoices DataTable / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh m-datagrid">
+  <div class="m-nav">
+    <div class="m-nav__top">
+      <a href="#" class="btn btn-info btn-block icon-left m-nav__add">
+        Create New <span class="btn-icon ua-icon-plus"></span>
+      </a>
+
+      <h5 class="m-nav__heading">Documents</h5>
+      <ul class="m-nav__menu">
+        <li class="m-nav__menu-item is-active">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-invoices m-nav__menu-icon"></span>Invoices
+          </a>
+        </li>
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-cart m-nav__menu-icon"></span>Purchase Orders
+          </a>
+        </li>
+      </ul>
+      <h5 class="m-nav__heading">Clients</h5>
+      <ul class="m-nav__menu">
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-company-outline m-nav__menu-icon"></span>Companies
+          </a>
+        </li>
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-individual m-nav__menu-icon"></span>Individuals
+          </a>
+        </li>
+      </ul>
+      <h5 class="m-nav__heading">Help</h5>
+      <ul class="m-nav__menu">
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-support m-nav__menu-icon"></span>Support
+          </a>
+        </li>
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-faq m-nav__menu-icon"></span>FAQ
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="m-nav__bottom">
+      <div class="m-nav__image">
+        <img src="img/invoices.png" alt="" class="embed-responsive">
+      </div>
+    </div>
+  </div>
+  <div class="m-content m-datagrid__content">
+    <div class="m-datagrid__header">
+      <div class="m-datagrid__header-left-side">
+        <span class="ua-icon-invoices-lg m-datagrid__header-icon"></span>
+        <h3 class="m-datagrid__header-heading">Invoice List<span class="m-datagrid__header-items-amount">(24)</span></h3>
+      </div>
+      <div class="m-datagrid__header-right-side">
+        <div class="btn-group btn-group-info btn-collection m-datagrid__header-tabs">
+          <button class="btn active" type="button">Purchase</button>
+          <button class="btn" type="button">Sales</button>
+        </div>
+        <div class="m-datagrid__header-search">
+          <div class="input-group input-group-icon icon-right">
+            <input class="form-control" type="text" placeholder="Search">
+            <span class="input-icon ua-icon-search"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="m-datagrid__controls">
+      <div class="m-datagrid__controls-actions">
+        <button class="btn m-datagrid__controls-action m-datagrid__controls-control" type="button">
+          <span class="btn-icon ua-icon-table-edit"></span>
+        </button>
+        <button class="btn m-datagrid__controls-action m-datagrid__controls-control" type="button">
+          <span class="btn-icon ua-icon-table-refresh"></span>
+        </button>
+        <button class="btn m-datagrid__controls-action m-datagrid__controls-control" type="button">
+          <span class="btn-icon ua-icon-table-download"></span>
+        </button>
+        <button class="btn m-datagrid__controls-action m-datagrid__controls-control" type="button">
+          <span class="btn-icon ua-icon-table-print"></span>
+        </button>
+      </div>
+      <div class="m-datagrid__controls-right-side">
+        <div class="input-group input-group-icon icon-right m-datagrid__controls-datepicker m-datagrid__controls-control">
+          <input class="form-control js-datepicker" type="text" placeholder="Select date">
+          <span class="input-icon ua-icon-datepicker"></span>
+        </div>
+        <div class="m-datagrid__controls-control m-datagrid__controls-select m-datagrid__controls-control">
+          <select>
+            <option value="" selected>All Invoices</option>
+            <option value="">Pending Invoices</option>
+            <option value="">Paid Invoices</option>
+          </select>
+        </div>
+
+        <div class="m-datagrid__controls-view-mode">
+          <button class="btn m-datagrid__controls-action m-datagrid__controls-control is-active" type="button">
+            <span class="btn-icon ua-icon-table-grid"></span>
+          </button>
+
+          <button class="btn m-datagrid__controls-action m-datagrid__controls-control" type="button">
+            <span class="btn-icon ua-icon-table-list"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="m-datagrid__body p-invoices-datagrid">
+      <div class="m-datagrid__body-scrollpane js-scrollable">
+        <table class="table m-datagrid__table">
+          <thead>
+          <tr>
+            <th>Invoices</th>
+            <th class="p-invoices-datagrid__price">Price</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: Draft</span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-danger">Overdue</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-success">Paid</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: Draft</span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-danger">Overdue</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-success">Paid</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: Draft</span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-danger">Overdue</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-success">Paid</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: Draft</span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-danger">Overdue</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-success">Paid</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: Draft</span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-danger">Overdue</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-success">Paid</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: Draft</span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-danger">Overdue</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-invoices-datagrid__info">
+              <div class="table__cell-widget">
+                <a href="#" class="table__cell-widget-name"><strong>Rhys House</strong> – Minerva Business Park. PE26FT United Kingdom</a>
+                <span class="table__cell-widget-description">
+                  <span class="table__cell-widget-desc-item">Type: <span class="color-success">Paid</span></span>
+                  <span class="table__cell-widget-desc-item">Category: Sale</span>
+                  <span class="table__cell-widget-desc-item">Issue date: Mar 8th, 2024</span>
+                </span>
+              </div>
+            </td>
+            <td class="p-invoices-datagrid__price">
+              <div class="table__cell-widget">
+                <span class="table__cell-widget-name"><strong>$ 2,421.00</strong></span>
+                <span class="table__cell-widget-description">Tax: $248,01</span>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="m-datagrid__footer">
+      <div class="m-datagrid__footer-controls">
+        <div class="m-datagrid__footer-page-select">
+          <select>
+            <option value="10" selected>Show: 15</option>
+            <option value="10">Show: 50</option>
+            <option value="10">Show: 100</option>
+          </select>
+        </div>
+      </div>
+      <nav class="m-datagrid__footer-pagination">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link active" href="#" aria-label="Previous">
+              <span aria-hidden="true">«</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">...</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">6</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">»</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

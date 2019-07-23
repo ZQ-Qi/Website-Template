@@ -1,0 +1,251 @@
+//default colors
+$header-default: $header-bg;
+$leftmenu-default: $leftmenu-bg;
+$active-default: $active-el;
+//define colors
+$theme-black: #1c2b36;
+$theme-drank: $header-bg;
+$theme-blush: $blush;
+$theme-cyan: $cyan;
+$theme-amethyst: $amethyst;
+$theme-light: #fff;
+$theme-light-color: $transparent-white-8;
+.color-themes {
+    a.theme-black {
+        background-color: $theme-black;
+    }
+    a.theme-drank {
+        background-color: $theme-drank;
+    }
+    a.theme-blush {
+        background-color: $theme-blush;
+    }
+    a.theme-cyan {
+        background-color: $theme-cyan;
+    }
+    a.theme-amethyst {
+        background-color: $theme-amethyst;
+    }
+    a.theme-light {
+        background-color: $theme-light;
+    }
+}
+
+.leftmenu-sm,
+.leftmenu-xs {
+    #leftmenu.theme-black,
+    #leftmenu.theme-drank,
+    #leftmenu.theme-blush,
+    #leftmenu.theme-cyan,
+    #leftmenu.theme-amethyst,
+    #leftmenu.theme-light {
+        background-color: transparent!important;
+    }
+}
+
+//theme-light
+#header.theme-light {
+    background-color: $theme-light;
+}
+
+#header .branding.theme-light,
+#leftmenu.theme-light,
+#leftmenu.theme-light #navigation,
+#leftmenu.theme-light #leftmenu-wrap:before,
+#header.theme-light li.toggle-right-leftmenu>a {
+    background-color: $theme-light!important;
+}
+
+#header.theme-light {
+    @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05));
+    .nav-right>li>a,
+    .nav-left>li>a {
+        color: $slategray;
+        &:hover {
+            color: $transparent-black-9;
+        }
+    }
+    .nav-left>li.divided-right {
+        border-color: $transparent-black-1;
+    }
+    .search {
+        .form-control {
+            color: $transparent-black-5;
+            border-color: $transparent-black-2;
+            @include placeholder {
+                color: $transparent-black-3;
+            }
+            &:focus {
+                border-color: $transparent-black-5;
+                @include placeholder {
+                    color: $transparent-black-5;
+                }
+            }
+        }
+        &:after {
+            color: $transparent-black-3;
+        }
+    }
+    li.toggle-right-leftmenu>a {
+        /* border-left: 1px solid $transparent-black-1; -shashi*/
+    }
+}
+
+#header .branding.theme-light {
+    border-right: 1px solid $transparent-black-1;
+    .brand {
+        color: $font-color-dark;
+        background-image: url(../images/falcon-logo-color.png);
+    }
+}
+
+#leftmenu.theme-light,
+#leftmenu.theme-light #leftmenu-wrap:before {
+    border-right: 1px solid $transparent-black-15;
+    accordion {
+        .panel-group {
+            .panel {
+                >.panel-heading {
+                    .panel-title {
+                        border-bottom: 1px solid $transparent-black-1;
+                        >a {
+                            color: $transparent-black-5;
+                            &:hover {
+                                color: $transparent-black-8;
+                            }
+                        }
+                    }
+                }
+                &.closed {
+                    >.panel-heading {
+                        background-color: $transparent-black-05;
+                        .panel-title {
+                            >a {
+                                color: $transparent-black-8;
+                                &:hover {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+                .panel-body {
+                    color: $transparent-black-7;
+                }
+            }
+        }
+    }
+    .summary {
+        .media {
+            .media-body {
+                color: $transparent-black-3;
+                .media-heading {
+                    color: $transparent-black-5;
+                }
+            }
+        }
+    }
+}
+
+#leftmenu.theme-light #navigation {
+    >li {
+        &.open,
+        &:hover {
+            >a {
+                background-color: $transparent-black-05;
+                color: $transparent-black-7;
+            }
+            >i {
+                color: $transparent-black-7;
+            }
+        }
+        &.active {
+            >a {
+                background-color: $active-el;
+                color: white;
+            }
+            >i {
+                color: white;
+            }
+        }
+        a {
+            color: $transparent-black-5;
+        }
+    }
+    .dropdown {
+        >ul {
+            background-color: $transparent-black-1;
+            li {
+                &:hover,
+                &.active {
+                    >a {
+                        color: $active-el;
+                    }
+                }
+            }
+        }
+    }
+    .submenu {
+        &.open {
+            >a {
+                color: $transparent-black-7!important;
+            }
+        }
+        >ul {
+            background-color: transparent;
+        }
+    }
+}
+
+.main_Wrapper.light-theme-color #navigation>li.active>a {
+    background-color: $transparent-white-1;
+}
+
+.main_Wrapper.light-theme-color #loading-bar .bar {
+    background-color: $active-el;
+}
+
+.main_Wrapper.light-theme-color #loading-bar-spinner .spinner-icon {
+    border-top-color: $active-el;
+    border-left-color: $active-el;
+}
+
+.main_Wrapper.light-theme-color #loading-bar .peg {
+    @include box-shadow($active-el 1px 0 6px 1px);
+}
+
+.main_Wrapper.light-theme-color {
+    #navigation .dropdown>ul li {
+        &:hover,
+        &.active {
+            a {
+                color: $theme-light-color;
+            }
+        }
+    }
+    .header-page .page-bar .breadcrumb>li:not(:first-child)>a:hover {
+        color: $theme-light-color;
+    }
+}
+
+.leftmenu-sm,
+.leftmenu-xs,
+.hz-menu {
+    #leftmenu.theme-light {
+        border-right: 0;
+        #navigation {
+            border-right: 1px solid rgba(0, 0, 0, 0.15);
+            li {
+                >a {
+                    font-weight: $font-weight-normal;
+                }
+                &.dropdown,
+                &.submenu {
+                    >ul {
+                        background-color: darken($theme-light, 5%);
+                    }
+                }
+            }
+        }
+    }
+}

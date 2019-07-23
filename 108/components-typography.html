@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>布局 - 默笙后台管理系统</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="这不仅仅是一个后台管理系统，它基于BT4，超强的自适应，简洁，高效，大方" />
+        <meta content="Mosheng" name="author" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/app.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <nav class="navbar-custom">
+
+                <div class="container-fluid">
+                    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fe-bell noti-icon"></i>
+                                <span class="badge badge-danger noti-icon-badge">2</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
+
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5 class="m-0">
+                                        <span class="float-right">
+                                            <a href="" class="text-dark">
+                                                <small>清除所有</small>
+                                            </a>
+                                        </span>通知</h5>
+                                </div>
+
+                                <div class="slimscroll noti-scroll">
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                        <div class="notify-icon">
+                                            <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                        <p class="notify-details">彼得</p>
+                                        <p class="text-muted mb-0 user-msg">
+                                            <small>嗨，你好吗？下次会议怎么样？</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-light">
+                                            <i class="mdi mdi-comment-account-outline"></i>
+                                        </div>
+                                        <p class="notify-details">Caleb Flakelar 管理员点评
+                                            <small class="text-muted">一分钟前</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon">
+                                            <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                        <p class="notify-details">凯伦·罗宾逊</p>
+                                        <p class="text-muted mb-0 user-msg">
+                                            <small>真的！这个管理员看起来不错，设计很棒。</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-light">
+                                            <i class="mdi mdi-account-plus"></i>
+                                        </div>
+                                        <p class="notify-details">新用户注册通知
+                                            <small class="text-muted">5小时之前</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-light">
+                                            <i class="mdi mdi-heart"></i>
+                                        </div>
+                                        <p class="notify-details">哦
+                                            <b>Admin</b>
+                                            <small class="text-muted">13天之前</small>
+                                        </p>
+                                    </a>
+                                </div>
+
+                                <!-- All-->
+                                <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                    查看全部
+                                    <i class="fi-arrow-right"></i>
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle nav-user mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                <small class="pro-user-name ml-1">
+                                    Admin
+                                </small>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">欢迎 !</h6>
+                                </div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-user"></i>
+                                    <span>我的账户</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-settings"></i>
+                                    <span>设置</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-lock"></i>
+                                    <span>锁定屏幕</span>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-log-out"></i>
+                                    <span>退出</span>
+                                </a>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <a href="index.html" class="logo">
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo.png" alt="" height="18">
+                                </span>
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="28">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="app-search">
+                            <form>
+                                <input type="text" placeholder="输入关键字以搜索..." class="form-control">
+                                <button type="submit" class="sr-only"></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+            <!-- end topbar-main -->
+
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="index.html">
+                                    <i class="fe-airplay"></i>仪表盘</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="fe-layers"></i>组件</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="components-elements.html">UI 界面元素</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-rangeslider.html">范围滑块</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-alerts.html">消息框</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-ribbons.html">文章块</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-sweet-alerts.html">弹窗</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-typography.html">排版</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-charts.html">统计图</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-maps.html">地图</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-bookmark"></i>表单</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="form-elements.html">一般表单元素</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-advanced.html">高级表单</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-grid"></i>表格</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="tables-basic.html">基本表格</a>
+                                    </li>
+                                    <li>
+                                        <a href="tables-advanced.html">高级表格</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-cpu"></i>图标</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="icons-feather.html">常用图标</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-mdi.html">材料设计图标</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-dripicons.html">其他图标</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-package"></i>页面</a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a href="pages-calendar.html">日历</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-timeline.html">时间轴</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-invoice.html">发票</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-contacts.html">联系人</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-starter.html">起始页</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-topbar-light.html">代码高亮</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a href="pages-login.html">登录</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-register.html">注册</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-recoverpw.html">找回密码</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-lock-screen.html">锁定屏幕</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-404.html">404错误页面</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <!-- End navigation menu -->
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end #navigation -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="#">默笙</a></li>
+                                    <li class="breadcrumb-item"><a href="#">组件</a></li>
+                                    <li class="breadcrumb-item active">布局</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">布局</h4>
+                        </div>
+                    </div>
+                </div>     
+                <!-- end page title --> 
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">显示标题</h4>
+                                <p class="text-muted">
+                                    传统的标题元素被设计成在页面内容的肉类中发挥最佳作用。当您需要一个标题突出时，考虑使用显示标题——一个更大的、稍微有点自以为是的标题样式。
+                                </p>
+
+                                <h1 class="display-1">示例 1</h1>
+                                <p class="text-muted">这里你可以随便写点什么东西</p>
+
+                                <div class="clearfix"></div>
+
+                                <h1 class="display-2">示例 1</h1>
+                                <p class="text-muted">这里你可以随便写点什么东西</p>
+
+                                <div class="clearfix"></div>
+
+                                <h1 class="display-3">示例 3</h1>
+                                <p class="text-muted">这里你可以随便写点什么东西</p>
+
+                                <div class="clearfix"></div>
+
+                                <h1 class="display-4">示例 4</h1>
+                                <p class="text-muted mb-0">这里你可以随便写点什么东西</p>
+                                
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card -->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">标题</h4>
+                                <p class="text-muted">
+                                    所有HTML标题， <code class="highlighter-rouge">&lt;h1&gt;</code> 通过
+                                    <code>&lt;h6&gt;</code>,是可用的。 <code>.h1</code> 通过 <code>.h6</code>
+                                    也可以使用类，当您希望匹配标题的字体样式时但仍然希望文本显示为内联。
+                                </p>
+
+                                <h1>这是一个标题1</h1>
+                                <p class="text-muted">这里你可以随便写点什么东西</p>
+
+                                <div class="clearfix"></div>
+
+                                <h2>这是一个标题2</h2>
+                                <p class="text-muted">这里你可以随便写点什么东西</p>
+
+                                <div class="clearfix"></div>
+
+                                <h3>这是一个标题 3</h3>
+                                <p class="text-muted">这里你可以随便写点什么东西</p>
+
+                                <div class="clearfix"></div>
+
+                                <h4>这是一个标题 4</h4>
+                                <p class="text-muted">这里你可以随便写点什么东西</p>
+
+                                <div class="clearfix"></div>
+
+                                <h5>这是一个标题 5</h5>
+                                <p class="text-muted">这里你可以随便写点什么东西</p>
+
+                                <div class="clearfix"></div>
+
+                                <h6>这是一个标题 6</h6>
+                                <p class="text-muted mb-0">这里你可以随便写点什么东西</p>
+
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card -->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4 class="header-title">内联文本元素</h4>
+                                        <p class="text-muted">
+                                            你在这里写的文字真的很棒。
+                                        </p>
+
+                                        <p class="lead">
+                                            你的标题在这里。
+                                        </p>
+
+                                        <p>您可以使用<mark>highlight</mark>标记 文本.</p>
+                                        <p><del>这一行文本被视为删除文本。</del></p>
+                                        <p><s>这段文字的意思是被认为不再准确。</s></p>
+                                        <p><ins>这一行文本是作为文档的附加部分来处理的。</ins></p>
+                                        <p><u>这行文本将呈现为下划线。</u></p>
+                                        <p><small>这一行文字的意思是被视为精美的印刷品。</small></p>
+                                        <p><strong>这行以粗体文字呈现。</strong></p>
+                                        <p><em>这条线用斜体字表示。</em></p>
+                                    </div>
+
+                                    <div class="col-sm-6 m-t-sm-50">
+                                        <h4 class="header-title">上下文文本颜色</h4>
+                                        <p class="text-muted">
+                                            你在这里写的文字真的很棒。
+                                        </p>
+
+                                        <p class="text-muted">
+                                            这就是一行文本
+                                        </p>
+                                        <p class="text-primary">
+                                            这是一行带颜色的文本
+                                        </p>
+                                        <p class="text-success">
+                                            这是一条成功提示的文本
+                                        </p>
+                                        <p class="text-info">
+                                             这是一条提示的文本
+                                        </p>
+                                        <p class="text-warning">
+                                            这是一条带警告的文本
+                                        </p>
+                                        <p class="text-danger">
+                                            这是一条带危险提示的文本
+                                        </p>
+                                        <p class="text-dark">
+                                            这是一条带黑色的文本
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card -->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h4 class="header-title">无序的</h4>
+                                        <p class="text-muted">
+                                            顺序不明确的项目列表。
+                                        </p>
+
+                                        <ul>
+                                            <li>
+                                                无须列表文本
+                                            </li>
+                                            <li>
+                                                无须列表文本1
+                                            </li>
+                                            <li>
+                                                无须列表文本2
+                                            </li>
+                                            <li>
+                                                无须列表文本3
+                                            </li>
+                                            <li>
+                                                无须列表文本4
+                                                <ul>
+                                                    <li>
+                                                        无须列表文本4.1
+                                                    </li>
+                                                    <li>
+                                                        无须列表文本4.2
+                                                    </li>
+                                                    <li>
+                                                        无须列表文本4.3
+                                                    </li>
+                                                    <li>
+                                                        无须列表文本4.4
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                无须列表文本5
+                                            </li>
+                                            <li>
+                                                无须列表文本6
+                                            </li>
+                                            <li>
+                                                无须列表文本7
+                                            </li>
+                                        </ul>
+
+                                    </div> <!-- end col-->
+
+                                    <div class="col-sm-4">
+                                        <h4 class="header-title">整齐排序</h4>
+                                        <p class="text-muted">
+                                           一个项目列表，其中的顺序显然是重要的。
+                                        </p>
+
+                                        <ol>
+                                            <li>
+                                                有序列表
+                                            </li>
+                                            <li>
+                                                有序列表1
+                                            </li>
+                                            <li>
+                                                有序列表2
+                                            </li>
+                                            <li>
+                                                有序列表3
+                                            </li>
+                                            <li>
+                                                有序列表4
+                                                <ol>
+                                                    <li>
+                                                        有序列表4.1
+                                                    </li>
+                                                    <li>
+                                                        有序列表4.2
+                                                    </li>
+                                                    <li>
+                                                        有序列表4.3
+                                                    </li>
+                                                    <li>
+                                                        有序列表4.4
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li>
+                                                有序列表5
+                                            </li>
+                                            <li>
+                                                有序列表6
+                                            </li>
+                                            <li>
+                                               有序列表7
+                                            </li>
+                                        </ol>
+                                    </div> <!-- end col -->
+
+                                    <div class="col-sm-4">
+                                        <h4 class="header-title">非风格化的</h4>
+                                        <p class="text-muted">
+                                            <strong>这只适用于子系。列表项</strong>, 这意味着您还需要为任何嵌套列表添加类。
+                                        </p>
+
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                列表
+                                            </li>
+                                            <li>
+                                                列表1
+                                                <ul>
+                                                    <li>
+                                                        列表1.1
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                列表2
+                                            </li>
+                                            <li>
+                                                列表3
+                                            </li>
+                                        </ul>
+
+                                        <h5>内联的</h5>
+                                        <p class="text-muted m-b-15">
+                                            将所有列表项放置在同一行上 <code>
+                                            display: inline-block;</code>
+                                            
+                                        </p>
+
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                列表
+                                            </li>
+                                            <li class="list-inline-item">
+                                                列表1
+                                            </li>
+                                            <li class="list-inline-item">
+                                                列表2
+                                            </li>
+                                        </ul>
+
+                                    </div> <!-- end col-->
+                                </div>
+                                <!-- end row -->
+                                
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card -->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4 class="header-title">其他样式</h4>
+                                        <p class="text-muted">
+                                            你写的文字真的很好
+                                        </p>
+
+                                        <blockquote class="blockquote">
+                                            <p class="mb-0">这是一行文本</p>
+                                            <footer class="blockquote-footer">著名的人<cite title="Source Title">源标题</cite></footer>
+                                        </blockquote>
+
+                                        <p class="text-muted m-b-15">
+                                            根据需要使用文本实用工具来更改对齐方式。
+                                        </p>
+
+                                        <blockquote class="blockquote text-center">
+                                            <p class="mb-0">这是一行文本</p>
+                                            <footer class="blockquote-footer">著名的人 <cite title="Source Title">源标题</cite></footer>
+                                        </blockquote>
+
+                                        <blockquote class="blockquote text-right">
+                                            <p class="mb-0">这是一行文本</p>
+                                            <footer class="blockquote-footer">著名的人 <cite title="Source Title">源标题</cite></footer>
+                                        </blockquote>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <h4 class="header-title">描述列表</h4>
+                                        <p class="text-muted">
+                                            使用网格系统的预定义类（或语义混合），水平对齐术语和描述。对于较长的术语，您可以选择添加 <code class="highlighter-rouge">.text-truncate</code> 类用省略号截断文本。
+                                        </p>
+
+                                        <dl class="row">
+                                            <dt class="col-sm-3">描述列表</dt>
+                                            <dd class="col-sm-9">描述列表对于定义术语是完美的。</dd>
+
+                                            <dt class="col-sm-3">标题</dt>
+                                            <dd class="col-sm-9">
+                                                <p>内容.</p>
+                                                <p>内容.</p>
+                                            </dd>
+
+                                            <dt class="col-sm-3">标题</dt>
+                                            <dd class="col-sm-9">这是一个巨大的生命。</dd>
+
+                                            <dt class="col-sm-3 text-truncate">截断项被截断</dt>
+                                            <dd class="col-sm-9">内容</dd>
+
+                                            <dt class="col-sm-3">嵌套</dt>
+                                            <dd class="col-sm-9">
+                                                <dl class="row">
+                                                    <dt class="col-sm-4">嵌套定义列表</dt>
+                                                    <dd class="col-sm-8">内容</dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card -->
+
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->    
+
+                
+            </div> <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        Mosheng Admin &copy; 2018 - tecms.net
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-md-right footer-links d-none d-sm-block">
+                            <a href="#">关于我们</a>
+                            <a href="#">帮助</a>
+                            <a href="#">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+
+        <!-- App js -->
+        <script src="js/vendor.min.js"></script>
+        <script src="js/app.min.js"></script>
+
+    </body>
+</html>

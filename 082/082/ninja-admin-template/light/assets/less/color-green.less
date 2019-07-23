@@ -1,0 +1,411 @@
+/*
+Version 2.0[Table of contents]
+-------------------------------------------------------------------------
+1. Globally Applied Styles
+2. Header
+3. User Main Menu
+4. Navigation
+5. Menu Active
+6. Fixed Navbar7. Footer
+8. Box Content
+9. Data Tables
+10. Inbox List
+11. Menu Mobile Button
+12. Notice
+13. Search Form
+14. Mail
+15. Login, Register, ... Form
+16. Pricing Plan
+17. Gallery
+-------------------------------------------------------------------------*/
+@import url(variables.less);
+@main : rgb(76,175,80);
+@main_hover: rgb(38,141,41);
+@main_hover_2: rgb(255,255,255);
+@mobile_bg: rgb(94,198,98);
+
+
+
+
+/*-----------------------------------------------------------------------
+1. Globally Applied Styles
+*/
+a{
+	color: @main;
+	&:hover,&:active,&:focus{
+		color: @main_hover;
+	}
+}
+.fa-hover{
+	&:hover{
+		background: @main;
+		color: @white;
+		.ico,.fa{
+			color: @white;
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+2. Header
+*/
+.header{
+	.logo{
+		color: @white;
+		background: @main_hover;
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+3. User Main Menu
+*/
+.user{
+	.control-list{
+		a{	
+			color: @dark;
+			&:hover{
+				color: @main;
+			}
+		}
+	}
+	.name{
+		a{	
+			color: @dark;
+			&:hover{
+				color: @main;
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+4. Navigation
+*/
+.navigation{
+	.menu{
+		a{
+			@media (min-width: 1025px) { &:hover{ color: @main; 
+				i{ color: @main; }
+			} }
+			&.active,&.current{ color: @main; }
+		}
+		> li{
+			&.current{
+				> a{
+					background: @main;
+					color: @white;
+					> i{
+						color: @white;
+					}
+				}
+				.current > a{
+					color: @main;
+				}
+			}
+		}
+		.waves-ripple{
+			background: -webkit-radial-gradient(rgba(76,175,80, 0.2) 0, rgba(76,175,80, 0.3) 40%, rgba(76,175,80, 0.4) 50%, rgba(76,175,80, 0.5) 60%, rgba(76,175,80, 0) 70%);
+			background: -o-radial-gradient(rgba(76,175,80, 0.2) 0, rgba(76,175,80, 0.3) 40%, rgba(76,175,80, 0.4) 50%, rgba(76,175,80, 0.5) 60%, rgba(76,175,80, 0) 70%);
+			background: -moz-radial-gradient(rgba(76,175,80, 0.2) 0, rgba(76,175,80, 0.3) 40%, rgba(76,175,80, 0.4) 50%, rgba(76,175,80, 0.5) 60%, rgba(76,175,80, 0) 70%);
+			background: radial-gradient(rgba(76,175,80, 0.2) 0, rgba(76,175,80, 0.3) 40%, rgba(76,175,80, 0.4) 50%, rgba(76,175,80, 0.5) 60%, rgba(76,175,80, 0) 70%);
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+5. Menu Active
+*/
+@media(min-width: 800px){
+	.menu-active{
+		.header{
+			.logo{
+				color: @main_hover;
+				&:before{
+					background: @main_hover;
+				}
+				&:after{
+					background: @white;
+				}
+			}
+		}
+		.navigation{
+			.menu{
+				> li{
+					&:hover{
+						> a{
+							background: @main;
+							color: @white;
+							i{
+								color: @white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+6. Fixed Navbar
+*/
+.fixed-navbar{
+	background: @main;
+	color: @white;
+	.ico-item{
+		color: @main_hover_2;
+		@media (min-width: 1025px) { &:hover{color: @white;  } }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------------
+7. Footer
+*/
+.footer{
+	color: rgba(0, 0, 0, 0.7);
+	a{ color: rgba(0, 0, 0, 0.7); 
+		@media (min-width: 1025px) { &:hover{ color: @main; } }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+8. Box Content
+*/
+.box-content{
+	.dropdown.js__drop_down{
+		.sub-menu{
+			background: @white;
+			a{
+				color: @dark;
+				@media (min-width: 1025px) { &:hover{ color: @main; }}
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+9. Data Tables
+*/
+.dataTables_wrapper{
+	.dataTable{
+		.group{
+			background-color: @main !important;
+			color: @white !important;
+		}
+	}
+}
+table.focus-on tbody tr.focused th, table.focus-on tbody tr.focused td{
+	background: @main!important;
+	color: @white!important;
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+10. Inbox List
+*/
+.inbox-list{
+	.name{
+		color: @main;
+		@media (min-width: 1025px) { &:hover{ color: @main_hover; } }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+11. Menu Mobile Button
+*/
+.menu-mobile-button{
+	color: @white;
+	background: @mobile_bg;
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+12. Notice
+*/
+/* Notice List */
+.notice-list{
+	.name{
+		color: #212121;
+		@media (min-width: 1025px) { &:hover{ color: @main; } }
+	}
+}
+
+/* Notice Popup */
+.notice-popup{
+	background: @white;
+	.notice-read-more{
+		color: #212121;
+		&:hover{
+			color: @main;
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+13. Search Form
+*/
+.searchform{
+	.button-search{
+		@media (min-width: 1025px) { &:hover{ color: @main; } }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+14. Mail
+*/
+.box-body {
+	.nav{ 
+		li.active a{
+			background: @white;
+			color: @main;
+		}
+		a{
+			color: #212121;
+			&:hover{
+				background: @white;
+				color: @main;
+			}
+		}
+	}
+}
+.mailbox-messages{
+	.unread{
+		> td:first-of-type{ border-left-color: @main;}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+15. Login, Register, ... Form
+*/
+.frm-single{
+	.frm-input{
+		.frm-inp{
+			&:focus{
+				border-color: @main;
+			}
+		}
+	}
+	.frm-submit{
+		background: @main;
+		color: @white;
+		@media (min-width: 1025px) { &:hover{ background: @main_hover; } }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+16. Pricing Plan
+*/
+.pricing-table{
+	.thead{
+		background: @main;
+		color: #fff;
+		&.bg-main-2{background-color: @main}
+		&.bg-blue-1{background-color: #2444f9}
+		&.bg-blue-2{background-color: #1e3def}
+		&.bg-blue-3{background-color: @main}
+	}
+	.td{
+		.fa-check{
+			color: @main;
+		}
+	}
+	.col-featured{
+		.td{
+			.btn-order{ background: @main; }
+		}
+	}
+	@media(min-width: 1025px){
+		.td .btn-order:hover{background: @main}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+17. Gallery
+*/
+.isotope-filter{
+	.filter-controls{
+		a{
+			color: @dark;
+			@media (min-width: 1025px) { &:hover{ color: @main; } }
+		}
+		.js__active{ color: @main; }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+18. User Info
+*/
+.user-info{
+	a{
+		color: @main;
+		&:hover{
+			color: @main_hover;
+		}
+	}
+}
+/*---------------------------------------------------------------------*/

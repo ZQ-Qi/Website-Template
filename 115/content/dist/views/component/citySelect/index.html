@@ -1,0 +1,63 @@
+<title>城市选择-三级联动</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>城市选择-三级联动</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid" id="LAY-app-table">
+    <div class="layui-card" >
+        <form class="">
+            <div class=" layui-form-item layui-form" lay-filter="cityselect2">
+                <label class="layui-form-label">选择地区</label>
+                <div class="layui-input-inline">
+                    <select name="provid2" id="provid2" lay-filter="provid2">
+                        <option value="">请选择省</option>
+                    </select>
+                </div>
+                <div class="layui-input-inline">
+                    <select name="cityid2" id="cityid2" lay-filter="cityid2">
+                        <option value="">请选择市</option>
+                    </select>
+                </div>
+                <div class="layui-input-inline">
+                    <select name="xianid2" id="xianid2" lay-filter="xianid2">
+                        <option value="">请选择县</option>
+                    </select>
+                </div>
+                <button class="layui-btn layui-btn-normal" id="btnSave2" lay-filter="btnSave2" lay-submit>提交</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+<script>
+    layui.use(['cityselect'], function () {
+        var cityselect = layui.cityselect;
+        /*
+        * @elem 渲染的ID选择器，依次传入省份、城市、县。注意：请将该元素的id名与其lay-filter的值保持一致（目前只支持二级联动省市和三级联动省市县）
+        * @url json地址
+        * @elembox  所在的盒子内包含有layui-form 的class名的元素的lay-filter的值
+        * @setValues 初始值，数据结构与json保持一致,分别传入省，市，县的code码，无的话传入空值（""）；
+        * @render 渲染 */
+        cityselect.render({
+            elem: ["#provid2", "#cityid2", "#xianid2"],
+            elembox: 'cityselect2',
+            url: './content/json/select/address.json',
+            setValues: ["70", "7002", "700212"]
+        });
+        setTimeout(function () {
+                //注意。若在一个表单需要多组城市选择请加在演示器内
+        }, 500);
+        //点击提交
+        form.on('submit(btnSave2)', function (data) {//可获取选取的城市的value值
+            console.log(data.field, 'cityvalue');
+            return false;
+        });
+    });
+
+</script>

@@ -1,0 +1,143 @@
+/** BEGIN: form wizard (b) */
+.form-wizard-b {
+  &.main-container {
+    padding: 0;
+  }
+
+  &__steps {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(#939daa, .2);
+  }
+
+  &__step {
+    padding: 21px;
+    display: flex;
+    align-items: center;
+    width: 322px;
+    cursor: pointer;
+
+    &.is-current {
+      background: rgba(#939daa, .1);
+
+      .form-wizard-b__step-point {
+        color: #269af1;
+      }
+    }
+
+    &.is-completed {
+      .form-wizard-b__step-point-value {
+        display: none;
+      }
+
+      .form-wizard-b__step-point-completed-icon {
+        display: block;
+      }
+    }
+  }
+
+  &__step-point-completed-icon {
+    display: none;
+    font-size: 50px;
+    line-height: 50px;
+    color: #92cf5c;
+    position: relative;
+    top: 2px;
+  }
+
+  &__step-point {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    border-radius: 50%;
+    color: #939daa;
+    font-size: 24px;
+    background: #f4f5f6;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 52px;
+  }
+
+  &__step-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__step-name {
+    font-size: 20px;
+    color: #000;
+  }
+
+  &__step-desc {
+    font-size: 14px;
+    color: #939daa;
+    margin-top: 1px;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    padding: 20px 20px 0 20px;
+  }
+
+  &__step-content {
+    display: none;
+    min-width: 100%;
+
+    &.is-current {
+      display: block;
+    }
+  }
+
+  &__controls {
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__control-next {
+    margin-left: 15px;
+  }
+}
+
+@include mq(screen-lg, max) {
+  .form-wizard-b {
+    &__controls {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__tip {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+@include mq(tablet, max) {
+  .form-wizard-b {
+    &__step {
+      justify-content: center;
+    }
+
+    &__step-info {
+      display: none;
+    }
+
+    &__step-point {
+      margin-right: 0;
+    }
+
+    &__controls-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
+/** END: form wizard (b) */

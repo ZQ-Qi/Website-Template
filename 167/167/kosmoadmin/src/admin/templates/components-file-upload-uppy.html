@@ -1,0 +1,99 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/uppy/uppy.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/uppy/uppy.min.css"> <!-- Customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>File Upload</h3>
+
+                <div class="ks-controls">
+                    <nav class="breadcrumb ks-default">
+                        <a class="breadcrumb-item ks-breadcrumb-icon" href="index.html">
+                            <span class="la la-home ks-icon"></span>
+                        </a>
+                        <a href="#" class="breadcrumb-item">Components</a>
+                        <span class="breadcrumb-item active" href="#">File Upload</span>
+                    </nav>
+                </div>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <!--<button class="btn btn-primary ks-uppy-modal-opener">Opener</button>-->
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h5>With auto upload</h5>
+                                <div class="ks-uppy-dashboard-container ks-autoproceed">
+                                    <div class="ks-uppy-file-upload-progress"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <h5>Without auto upload</h5>
+                                <div class="ks-uppy-dashboard-container ks-no-autoproceed">
+                                    <div class="ks-uppy-file-upload-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/uppy/uppy.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        var uppyAutoproceed = new Uppy.Core({debug: false, autoProceed: true});
+        uppyAutoproceed.use(Uppy.Dashboard, {
+            inline: true,
+            target: '.ks-uppy-dashboard-container.ks-autoproceed'
+        });
+        uppyAutoproceed.use(Uppy.Tus10, {endpoint: '//tusd.tus.io/files/', resume: true});
+        uppyAutoproceed.use(Uppy.Informer, {target: Uppy.Dashboard});
+        uppyAutoproceed.use(Uppy.MetaData, {
+            fields: [
+                { id: 'resizeTo', name: 'Resize to', value: 1200, placeholder: 'specify future image size' },
+                { id: 'description', name: 'Description', value: 'none', placeholder: 'describe what the file is for' }
+            ]
+        });
+        uppyAutoproceed.use(Uppy.ProgressBar, {target: '.ks-uppy-dashboard-container.ks-autoproceed .ks-uppy-file-upload-progress'});
+        uppyAutoproceed.use(Uppy.GoogleDrive, {target: Uppy.Dashboard, host: 'asfafs'});
+        uppyAutoproceed.use(Uppy.Dropbox, {target: Uppy.Dashboard, host: 'asfafs'});
+        uppyAutoproceed.use(Uppy.Webcam, {target: Uppy.Dashboard, host: 'asfafs'});
+        uppyAutoproceed.run();
+
+        var uppyNoAutoproceed = new Uppy.Core({debug: false, autoProceed: false});
+        uppyNoAutoproceed.use(Uppy.Dashboard, {
+            inline: true,
+            target: '.ks-uppy-dashboard-container.ks-no-autoproceed'
+        });
+        uppyNoAutoproceed.use(Uppy.Tus10, {endpoint: '//tusd.tus.io/files/', resume: true});
+        uppyNoAutoproceed.use(Uppy.Informer, {target: Uppy.Dashboard});
+        uppyNoAutoproceed.use(Uppy.MetaData, {
+            fields: [
+                { id: 'resizeTo', name: 'Resize to', value: 1200, placeholder: 'specify future image size' },
+                { id: 'description', name: 'Description', value: 'none', placeholder: 'describe what the file is for' }
+            ]
+        });
+        uppyNoAutoproceed.use(Uppy.ProgressBar, {target: '.ks-uppy-dashboard-container.ks-no-autoproceed .ks-uppy-file-upload-progress'});
+        uppyNoAutoproceed.use(Uppy.GoogleDrive, {target: Uppy.Dashboard, host: 'asfafs'});
+        uppyNoAutoproceed.use(Uppy.Dropbox, {target: Uppy.Dashboard, host: 'asfafs'});
+        uppyNoAutoproceed.use(Uppy.Webcam, {target: Uppy.Dashboard, host: 'asfafs'});
+        uppyNoAutoproceed.run();
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

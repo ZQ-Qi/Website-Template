@@ -1,0 +1,553 @@
+@@include('./_partials/header_start.html')
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Tabs</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-tabs-page-container">
+                <div class="ks-tabs-container-description">
+                    <h3>My Worklist</h3>
+                    <p>Last updated today at 12:00 AM</p>
+                </div>
+                <ul class="nav ks-nav-tabs ks-tabs-page-default ks-tabs-full-page">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-toggle="tab" data-target="#in-patient">
+                            In-Patient
+                            <span class="badge badge-info badge-pill">15</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="tab" data-target="#discharged">
+                            Discharged
+                            <span class="badge badge-pink badge-pill">25</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="tab" data-target="#reconciliation">
+                            Reconciliation
+                            <span class="badge badge-danger-outline badge-pill">132</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active ks-column-section" id="in-patient" role="tabpanel">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab1">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab2">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab3">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab3" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-with-separator ks-tabs-header-default">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab6">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab4" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab5" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab6" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab2">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab3">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab3" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator ks-tabs-vertical">
+                                    <ul class="nav ks-nav-tabs nav-stacked">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab1">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab2">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab3">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab3" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-with-separator ks-tabs-header-default ks-tabs-vertical">
+                                    <ul class="nav ks-nav-tabs nav-stacked">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab6">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab4" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab5" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab6" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-pills">
+                                    <ul class="nav nav-pills">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab6">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab4" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab5" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab6" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator ks-tabs-vertical ks-tabs-vertical-right demo-tabs-vertical">
+                                    <ul class="nav ks-nav-tabs nav-stacked">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab1">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab2">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab3">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab3" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-with-separator ks-tabs-header-default ks-tabs-vertical ks-tabs-vertical-right">
+                                    <ul class="nav ks-nav-tabs nav-stacked">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab6">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab4" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab5" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab6" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab1">
+                                                <span class="ks-icon la la-envelope-o text-info"></span>
+                                                Tab 1
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab2">
+                                                <span class="ks-icon la la-camera text-success"></span>
+                                                Tab 2
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab3">
+                                                <span class="ks-icon la la-file-text-o text-danger"></span>
+                                                Tab 3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab3" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator ks-tabs-bottom">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab3" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab1">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab2">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab3">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-with-separator ks-tabs-header-default ks-tabs-bottom">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab4" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab5" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab6" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab6">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator icon-top">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab1">
+                                                <span class="ks-icon la la-envelope-o text-info"></span>
+                                                Tab 1
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab2">
+                                                <span class="ks-icon la la-camera text-success"></span>
+                                                Tab 2
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab3">
+                                                <span class="ks-icon la la-file-text-o text-danger"></span>
+                                                Tab 3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab3" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator ks-tabs-icons">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab1">
+                                                <span class="ks-icon la la-envelope-o text-info"></span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab2">
+                                                <span class="ks-icon la la-camera text-success"></span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab3">
+                                                <span class="ks-icon la la-file-text-o text-danger"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab3" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator ks-tabs-icons-vertical">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab1">
+                                                <span class="ks-icon la la-envelope-o text-info"></span>
+                                                Tab 1
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab2">
+                                                <span class="ks-icon la la-camera text-success"></span>
+                                                Tab 2
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab3">
+                                                <span class="ks-icon la la-file-text-o text-danger"></span>
+                                                Tab 3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab3" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-with-separator ks-tabs-header-default ks-tabs-primary">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">
+                                                <span class="ks-icon la la-envelope-o text-info"></span>
+                                                Tab 1
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">
+                                                <span class="ks-icon la la-camera text-success"></span>
+                                                Tab 2
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab6">
+                                                <span class="ks-icon la la-file-text-o text-danger"></span>
+                                                Tab 3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab4" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab5" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab6" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-with-separator ks-tabs-header-default ks-tabs-primary tabs-bordered">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">
+                                                <span class="ks-icon la la-envelope-o text-info"></span>
+                                                Tab 1
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">
+                                                <span class="ks-icon la la-camera text-success"></span>
+                                                Tab 2
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab6">
+                                                <span class="ks-icon la la-file-text-o text-danger"></span>
+                                                Tab 3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab4" role="tabpanel">
+                                            Content 1
+                                        </div>
+                                        <div class="tab-pane" id="tab5" role="tabpanel">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="tab6" role="tabpanel">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="discharged" role="tabpanel">
+                        Discharged
+                    </div>
+                    <div class="tab-pane" id="reconciliation" role="tabpanel">
+                        Reconciliation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('a[data-toggle="tab"]').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

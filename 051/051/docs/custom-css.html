@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Boo Custom CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+<!-- Navbar
+    ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="brand" href="./index.html">Boo Admin</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class=""> <a href="./index.html">Home</a> </li>
+                    <li class=""> <a href="./getting-started.html">Get started</a> </li>
+                    <li class=""> <a href="./scaffolding.html">Scaffolding</a> </li>
+                    <li class=""> <a href="./base-css.html">CSS</a> </li>
+                    <li class="active"> <a href="./custom-css.html">Custom CSS</a> </li>
+                    <li class=""> <a href="./javascript.html">JavaScript</a> </li>
+                    <li class=""> <a href="./changelog.html">Boo Changelog</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron boo subhead" id="overview">
+    <div class="container">
+        <h1>Custom CSS and HTML</h1>
+        <p class="lead">Use and application of CSS classes and HTML to components</p>
+    </div>
+</header>
+<div class="container"> 
+    
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+        <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+            	<li><a href="#components"><i class="icon-chevron-right"></i> Bootstrap components</a></li>
+                <li><a href="#wells"><i class="icon-chevron-right"></i> Wels</a></li>
+                <li><a href="#widgets"><i class="icon-chevron-right"></i> Widgets</a></li>
+                <li><a href="#pagination"><i class="icon-chevron-right"></i> Pagination</a></li>
+            </ul>
+        </div>
+        <div class="span9"> 
+            
+            <!-- Complnent 
+            ================================================== -->
+            <section id="components">
+                <div class="page-header doc">
+                    <h1>Bootstrap Components</h1>
+                </div>
+                <p class="alert alert-info">Detailed documentation for components, see <a class="btn" href="../_bootstrap/docs/components.html" target="_blank">bootstrap documentation</a></p>
+                <ul class="the-50 clearfix">
+                    <li><a href="../_bootstrap/docs/components.html#dropdowns"><i class="icon-chevron-right"></i> Dropdowns</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#buttonGroups"><i class="icon-chevron-right"></i> Button groups</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#buttonDropdowns"><i class="icon-chevron-right"></i> Button dropdowns</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#navs"><i class="icon-chevron-right"></i> Navs</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#pagination"><i class="icon-chevron-right"></i> Pagination</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#labels-badges"><i class="icon-chevron-right"></i> Labels and badges</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#thumbnails"><i class="icon-chevron-right"></i> Thumbnails</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#media"><i class="icon-chevron-right"></i> Media object</a></li>
+                    <li><a href="../_bootstrap/docs/components.html#misc"><i class="icon-chevron-right"></i> Misc</a></li>
+                </ul>
+                
+            </section>
+           
+            <!-- Wells 
+            ================================================== -->
+            <section id="wells">
+            	<p class="lead">Examples of how to compile your code block. <br>Use bootstrap standard features only add class Boo</p>
+                <hr class="bs-docs-separator">
+                <div class="page-header doc">
+                    <h1>Wells</h1>
+                </div>
+                <h2>Classes</h2>
+                <table class="table table-bordered">
+                        <colgroup>
+                        <col class="col20">
+                        <col class="col80">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.well</code></td>
+                                <td>Default bootatrap class <code>class="well"</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.well-nice</code></td>
+                                <td>Add style to element <code>class="well well-nice"</code> (combine class)</td>
+                            </tr>
+                            <tr>
+                                <td><code>.well-impressed</code></td>
+                                <td>Add style to element <code>class="well well-impressed"</code> (combine class)</td>
+                            </tr>
+                            <tr>
+                                <td><code>.well-black</code></td>
+                                <td>Add style to element <code>class="well well-black"</code> (combine class)</td>
+                            </tr>
+                            <tr>
+                                <td><code>.well-box</code></td>
+                                <td>Use well as block with navigation, menubar, table ...   <code>class="well well-box"</code> (combine class)</td>
+                            </tr>
+                            <tr>
+                                <td><code>.simple-header</code></td>
+                                <td>Basic header for well <code>&lt;h3 class="simple-header"&gt;</code> (combine class)</td>
+                            </tr>
+                            <tr>
+                                <td><code>.header-small</code></td>
+                                <td>Basic small header for well <code>&lt;h6 class="simple-header header-small"&gt;</code> (combine class)</td>
+                            </tr>
+                            <tr>
+                                <td><code>.section-content</code></td>
+                                <td>Content for well-box <code>class="section-content"</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.item</code></td>
+                                <td>Class for the content if you want more blocks below  <code>class="section-content item"</code> (combine class). Do not apply on the last block</td>
+                            </tr>
+                            <tr>
+                                <td><code>.bg-</code></td>
+                                <td>For color background Use the class <code>.bg-</code> see coloring <code>class="well bg-blue-light"</code> (combine class). Possible use also on content.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                <h2>Use</h2>    
+                <h3>Base headings for wells</h3>
+                <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available. Combine with <code>.simple-header</code> to display simple header to be well </p>
+                <div class="bs-docs-example">
+                    <div class="well">
+                        <h4 class="simple-header">h4. Heading 4</h4>
+                        <p>looks like a simple header for div with class <code>.well</code> </p>
+                    </div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class="well"&gt;
+    &lt;h4 class="simple-header"&gt;h4. Heading 4&lt;/h4&gt;
+    &lt;p&gt;looks like a simple header for div with class &lt;code&gt;.well&lt;/code&gt; &lt;/p&gt;
+&lt;/div&gt;</pre>
+				<hr class="bs-docs-separator">
+                <h3>Well Nice</h3>
+                <p>A little well improve on class <code>.well-nice</code></p>
+                <div class="bs-docs-example">
+                    <div class="well well-nice">
+                        <h3 class="simple-header">h3. Heading 3</h3>
+                        <p>and ... it looks better (Boo has a different background :)) </p>
+                    </div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class="well well-nice"&gt;
+    &lt;h3 class="simple-header"&gt;h4. Heading 3&lt;/h3&gt;
+    &lt;p&gt;and ... it looks better (Boo has a different background :)) &lt;/p&gt;
+&lt;/div&gt;</pre>
+				<hr class="bs-docs-separator">
+                <h3>Well Black</h3>
+                <p>... or <code>.well-black</code></p>
+                <div class="bs-docs-example">
+                    <div class="well well-black">
+                        <h3 class="simple-header">h3. Heading 3</h3>
+                        <p>we needed a contrasting element </p>
+                    </div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class="well well-black"&gt;
+    &lt;h3 class="simple-header"&gt;h4. Heading 3&lt;/h3&gt;
+    &lt;p&gt;we needed a contrasting element &lt;/p&gt;
+&lt;/div&gt;</pre>
+				<hr class="bs-docs-separator">
+                <h3>Well Impressed & color</h3>
+                <p>... or use background staining and extruded type for well <code>.well-impressed .bg-blue-medium</code></p>
+                <div class="bs-docs-example">
+                    <div class="well well-impressed bg-blue-medium">
+                        <h3 class="simple-header">h3. Heading 3</h3>
+                        <p>and a color ... </p>
+                    </div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class="well well-impressed bg-blue-medium"&gt;
+    &lt;h3 class="simple-header"&gt;h4. Heading 3&lt;/h3&gt;
+    &lt;p&gt;and a color ... &lt;/p&gt;
+&lt;/div&gt;</pre>
+				<hr class="bs-docs-separator">
+				<h3>Combine well and navbar - well-box</h3>
+				<div class="bs-docs-example">
+                    <div class="well well-box well-nice">
+                        <div class="navbar margin-00">
+                            <div class="navbar-inner">
+                                <h4 class="title">Navbar</h4>
+                                <ul class="nav pull-right">
+                                    <li><a href="#">Link</a></li>
+                                    <li class="divider-vertical"></li>
+                                    <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- // nav --> 
+                            </div>
+                        </div>
+                        <div class="section-content item">
+                            <div class="statistic-group">
+                                <h3 class="statistic-values">$22,903 <sup>84%</sup></h3>
+                                <p class="help-block">The content below are loaded</p>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="statistic-group">
+                                <h3 class="statistic-values">$22,903 <sup>84%</sup></h3>
+                                <p class="help-block">The content below are loaded</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // well-box -->
+                </div>
+                <pre class="prettyprint">
+&lt;div class="well well-box well-nice"&gt;
+    &lt;div class="navbar"&gt;
+        &lt;div class="navbar-inner"&gt;
+            &lt;h4 class="title"&gt;Navbar&lt;/h4&gt;
+            &lt;ul class="nav pull-right"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="divider-vertical"&gt;&lt;/li&gt;
+                &lt;li&gt; ... &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!-- // nav --&gt; 
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="section-content item"&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class="section-content"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // well-box --&gt;</pre>
+
+                
+			</section>
+            
+            <!-- Widgets 
+            ================================================== -->
+            <section id="widgets">
+                <div class="page-header doc">
+                    <h1>Widgets</h1>
+                </div>
+                <p>Boo offers three types of styles to display the widget</p>
+                
+                <h2>Classes</h2>
+                <table class="table table-bordered">
+                    <colgroup>
+                    <col class="col20">
+                    <col class="col80">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.widget</code></td>
+                            <td>Used construction but is without design - clean block <code>class="widget"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.widget-simple </code></td>
+                            <td>Well is similar in style and design but has more options to apply styles, elements, js. <code>class="widget widget-simple"</code> (combine class)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.widget-box</code></td>
+                            <td>Box has the appearance of a separate head <code>class="widget widget-box"</code> (combine class)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.widget-table</code></td>
+                            <td>Use only wrapped table to <code>.widger-box</code> <code>class="widget widget-box widget-table"</code> (combine class)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.widget-header</code></td>
+                            <td>First block in widget <code>class="widger-header"</code>. Head for where to place the widget title and menubar (.btn-toolbar)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.widget-content</code></td>
+                            <td>Content for the widget. Required if you use tabs <code>class="widget-content tab-content"</code> (combine class)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.widget-body</code></td>
+                            <td>Next content for the widget.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.widget-footer</code></td>
+                            <td>Footer for action bar. </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h2>Use</h2>
+                <h3>Widget</h3>
+                <p>Use only class <code>.widget</code> to element.</p>
+                <div class="bs-docs-example">
+                    <div class="widget">
+                        <div class="widget-header">
+                            <h4>Widget header SIMPLE</h4>
+                        </div>
+                        <div class="widget-content">
+                            <div class="widget-body">
+                                <p>Widget Body</p>
+                            </div>
+                        </div>
+                        <div class="widget-footer">
+                            <p>Widget footer</p>
+                        </div>
+                    </div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class="widget"&gt;
+    &lt;div class="widget-header"&gt;
+        &lt;h4&gt; ... &lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class="widget-content"&gt;
+        &lt;div class="widget-body"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- content --&gt;
+    &lt;div class="widget-footer"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</pre>
+                <pre class="prettyprint">
+&lt;div class="widget"&gt;
+    &lt;div class="widget-header"&gt;
+        &lt;h4&gt; ... &lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class="widget-content"&gt;
+        &lt;div class="widget-body"&gt; ... &lt;/div&gt;
+        &lt;div class="widget-footer"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- content --&gt;
+&lt;/div&gt;</pre>
+
+                <h3>Widget Simple</h3>
+                <p>Use combine class <code>.widget .widget-simple</code> to element.</p>
+                <div class="bs-docs-example">
+                    <div class="widget widget-simple">
+                        <div class="widget-header">
+                            <h4>Widget header SIMPLE</h4>
+                        </div>
+                        <div class="widget-content">
+                            <div class="widget-body">
+                                <p>Widget Body</p>
+                            </div>
+                        </div>
+                        <div class="widget-footer">
+                            <p>Widget footer</p>
+                        </div>
+                    </div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class="widget widget-simple"&gt;
+    ...
+&lt;/div&gt;</pre>
+                
+                <h3>Widget Box</h3>
+                <p>Use combine class <code>.widget .widget-box</code> to element.</p>
+                <div class="bs-docs-example">
+                    <div class="widget widget-box">
+                        <div class="widget-header">
+                            <h4>Widget header BOX</h4>
+                        </div>
+                        <div class="widget-content">
+                            <div class="widget-body">
+                                <p>Widget Body</p>
+                            </div>
+                        </div>
+                        <div class="widget-footer">
+                            <p>Widget footer</p>
+                        </div>
+                    </div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class="widget widget-box"&gt;
+    ...
+&lt;/div&gt;</pre>
+                <p>You may only use content widget without body tag but maybe for tabs is necessary to use packaging points. The <code>.content</code> are also bound by other classes for correct rendering block.</p>
+            </section>
+            
+            <!-- Pagination
+        	================================================== -->
+            <section id="pagination">
+                <div class="page-header doc">
+                    <h1>Pagination </h1>
+                </div>
+                <table class="table table-bordered">
+                        <colgroup>
+                        <col class="col20">
+                        <col class="col80">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.pagination</code></td>
+                                <td>Default bootatrap class </td>
+                            </tr>
+                            <tr>
+                                <td><code>.pagination-btn</code></td>
+                                <td>Add style as btn <code>class="pagination pagination-btn"</code> (combine class)</td>
+                            </tr>
+                            <tr>
+                                <td><code>.pagination-boo</code></td>
+                                <td>Add style as btn-boo <code>class="pagination pagination-boo"</code> (combine class)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <h2>Example</h2>
+                <div class="bs-docs-example">
+                    <div class="pagination">
+                        <ul>
+                            <li><a href="#">&laquo;</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                    <div class="pagination pagination-btn">
+                        <ul>
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="active"><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                    <div class="pagination pagination-boo">
+                        <ul>
+                            <li><a href="#">&laquo;</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination pagination-btn"&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div class="pagination pagination-boo"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+                
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Footer
+    ================================================== -->
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <ul class="unstyled">
+            <li>Created: <strong>08.12.2012</strong> </li>
+            <li> Latest Update: <strong>09.01.2013</strong> </li>
+            <li> By: Petr Marasek</li>
+            <li> email: gootoboo@gmail.com </li>
+        </ul>
+        <ul class="footer-links">
+            <li><a href="http://themeforest.net/">Themeforest</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://themes.yac.cz/boo/dashboard-one.html">Demo</a></li>
+            <li class="muted">&middot;</li>
+            <li class="muted">Built on Twitter Bootstrap documentation</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script> 
+<script src="assets/js/bootstrap-carousel.js"></script> 
+<script src="assets/js/bootstrap-typeahead.js"></script> 
+<script src="assets/js/bootstrap-affix.js"></script> 
+<!-- main js --> 
+<script src="assets/js/application.js"></script>
+</body>
+</html>

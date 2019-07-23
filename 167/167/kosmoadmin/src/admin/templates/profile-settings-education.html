@@ -1,0 +1,219 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/profile/settings.min.css">
+<link rel="stylesheet" type="text/css" href="libs/flatpickr/flatpickr.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/flatpickr/flatpickr.min.css"> <!-- customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Profile Settings</h3>
+                <div class="ks-controls">
+                    <button type="button" class="btn btn-outline-primary ks-light ks-profile-tabs-block-toggle" data-block-toggle=".ks-profile > .ks-tabs-container">Tabs</button>
+                    <button type="button" class="btn btn-outline-primary ks-light ks-settings-menu-block-toggle" data-block-toggle=".ks-settings-tab > .ks-menu">Menu</button>
+                </div>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-profile">
+                <div class="ks-profile-header">
+                    <div class="ks-profile-header-user">
+                        <img src="assets/img/avatars/ava-1.png" class="ks-avatar" width="100" height="100">
+                        <div class="ks-info">
+                            <div class="ks-name">Karen Lucas</div>
+                            <div class="ks-description">New York, USA</div>
+                            <div class="ks-rating">
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star-half-o ks-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ks-profile-header-statistics">
+                        <div class="ks-item">
+                            <div class="ks-amount">869</div>
+                            <div class="ks-text">orders</div>
+                        </div>
+                        <div class="ks-item">
+                            <div class="ks-amount">131</div>
+                            <div class="ks-text">reviews</div>
+                        </div>
+                        <div class="ks-item">
+                            <div class="ks-amount">$3,004</div>
+                            <div class="ks-text">rewand points</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator ks-full ks-light">
+                    <ul class="nav ks-nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#overview" aria-expanded="true">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#contacts" aria-expanded="false">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#orders" aria-expanded="false">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#wish-list" aria-expanded="false">Wish list</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#storecredit" aria-expanded="false">Store credit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#returns" aria-expanded="false">Returns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#reward-points" aria-expanded="false">Reward points</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#settings" aria-expanded="false">Settings</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="overview" role="tabpanel" aria-expanded="false">
+                            Content 1
+                        </div>
+                        <div class="tab-pane" id="contacts" role="tabpanel" aria-expanded="false">
+                            Content 2
+                        </div>
+                        <div class="tab-pane" id="orders" role="tabpanel" aria-expanded="true">
+                            Content 3
+                        </div>
+                        <div class="tab-pane" id="wish-list" role="tabpanel" aria-expanded="false">
+                            Content 1
+                        </div>
+                        <div class="tab-pane" id="storecredit" role="tabpanel" aria-expanded="false">
+                            Content 2
+                        </div>
+                        <div class="tab-pane" id="returns" role="tabpanel" aria-expanded="true">
+                            Content 3
+                        </div>
+                        <div class="tab-pane" id="reward-points" role="tabpanel" aria-expanded="false">
+                            Content 1
+                        </div>
+                        <div class="tab-pane active" id="settings" role="tabpanel" aria-expanded="false">
+                            <div class="ks-settings-tab">
+                                <div class="ks-menu">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-general.html">General</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-contact-info.html">Contact Info</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-experience.html">Experience</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="profile-settings-education.html">Education</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-organizations.html">Organizations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-notifications.html">Notifications</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-settings-billing.html">Billing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ks-settings-form-wrapper">
+                                    <form class="ks-form ks-settings-tab-form ks-education"> <!-- ks-uppercase ks-light -->
+                                        <h3 class="ks-main-form-header">Education</h3>
+
+                                        <div class="ks-form-group">
+                                            <div class="form-group row">
+                                                <div class="col-lg-4">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <label>Year Started</label>
+                                                            <div class="input-icon icon-right icon icon-lg icon-color-primary">
+                                                                <input id="input-group-icon-text" type="text" class="form-control ks-datepicker">
+                                                            <span class="icon-addon">
+                                                                <span class="la la-calendar-o"></span>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <label>Year Ended</label>
+                                                            <div class="input-icon icon-right icon icon-lg icon-color-primary">
+                                                                <input type="text" class="form-control ks-datepicker" placeholder="">
+                                                            <span class="icon-addon">
+                                                                <span class="la la-calendar-o"></span>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="custom-control custom-checkbox ks-fh-control-position-fix">
+                                                        <input id="c1" type="checkbox" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="c1">Currently enrolled</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-8">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <label>Degree</label>
+                                                            <input type="text" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <label>Field of Study</label>
+                                                            <input type="text" class="form-control" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-8">
+                                                    <label>Description</label>
+                                                    <textarea class="form-control" rows="4" placeholder="Type something..."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group ks-remove-position">
+                                                <button type="button" class="btn btn-outline-danger ks-light">
+                                                    <span class="la la-trash ks-icon"></span>
+                                                    <span class="text ks-text">Remove this position</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="ks-form-group">
+                                            <button type="button" class="btn btn-success">
+                                                <span class="la la-plus ks-icon"></span>
+                                                <span class="ks-text">Add school</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/flatpickr/flatpickr.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $(".ks-datepicker").flatpickr();
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

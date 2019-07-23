@@ -1,0 +1,36 @@
+{% extends "./common/auth.html" %}
+
+{% block title %}Sign In / Universe Admin{% endblock %}
+
+{% block sidebar %}{% endblock %}
+{% block bodyClass %}p-front{% endblock %}
+
+{% block content %}
+<div class="p-signin">
+  <form class="p-signin__form">
+    <h2 class="p-signin__form-heading">Login to our app</h2>
+    <div class="p-signin__form-content">
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="p-signin-work-email">Work Email</label>
+          <input type="email" class="form-control" id="p-signin-work-email" placeholder="you@yourcompany.com">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="p-signin-set-password">Password</label>
+          <input type="email" class="form-control" id="p-signin-set-password" placeholder="Password">
+        </div>
+      </div>
+      <div>
+        <button type="button" class="btn btn-info btn-block btn-lg p-signin__form-submit">Get Started!</button>
+      </div>
+      <div class="p-signin__form-links">
+        <div class="p-signin__form-link">
+          Don't have an account? <a href="signup.html" class="link-info">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

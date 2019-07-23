@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layer iframe 示例</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../../../../content/layui/rc/css/layui.css" media="all">
+    <style>
+        body {
+            padding: 10px;
+            font-size: 14px;
+            background: #fff;
+            width: 95%;
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 20px;
+            overflow: scroll;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        input {
+            border: 1px solid #999;
+            padding: 5px 10px;
+            margin: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="layui-card-body" style="padding: 15px;">
+    <form class="layui-form" action="" lay-filter="operate-form-group">
+        <div class="layui-form-item">
+            <label class="layui-form-label">标题内容</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属平台</label>
+            <div class="layui-input-block">
+                <input type="text" name="platform" lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属位置</label>
+            <div class="layui-input-block">
+                <!--<select name="location" lay-filter="aihao">-->
+                    <!--<option value=""></option>-->
+                    <!--<option value="郑州">郑州</option>-->
+                    <!--<option value="开封" selected="">开封</option>-->
+                    <!--<option value="南阳">南阳</option>-->
+                    <!--<option value="海南">海南</option>-->
+                    <!--<option value="珠海">珠海</option>-->
+                <!--</select>-->
+                <div id="viewLocal"></div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="date" id="LAY-component-form-group-date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">阅读数</label>
+            <div class="layui-input-block">
+                <!--<textarea name="viewnum" placeholder="请输入内容" class="layui-textarea"></textarea>-->
+                <input type="text" name="viewNum" lay-verify="number" autocomplete="off" placeholder="阅读数" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <div class="layui-footer">
+                    <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">保存</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../../../../content/layui/rc/layui.js"></script>
+
+<script type="text/html" id="localtion">
+    <div>
+        <select name="location" lay-filter="aihao">
+            {{#  layui.each(d.list, function(index, item){ }}
+            <option value="{{item.loaction}}">{{item.loaction}}</option>
+            {{#  }); }}
+        </select>
+    </div>
+</script>
+<script>
+    layui.use(['layer','form', 'laydate','laytpl'], function(){
+        var $ = layui.$
+            ,layer = layui.layer
+            ,index = parent.layer.getFrameIndex(window.name) //获取窗口索引
+            ,element = layui.element
+            ,laydate = layui.laydate
+            ,form = layui.form
+            ,laytpl = layui.laytpl;
+
+        var active = {
+
+        };
+
+        // 此处是假数据，真实情况调接口数据
+        var data = { //数据
+            "title":"Layui常用模块"
+            ,"list":[{"loaction":"郑州"},{"loaction":"开封"},{"loaction":"南阳"},{"loaction":"珠海"},{"loaction":"北京"}]
+        };
+
+//        admin.req({
+//            url: './content/json/table/tableSelectData.js', //实际使用请改成服务端真实接口
+//            type:'get'
+//            ,data: obj.field
+//            ,success: function(res){
+//                console.log(res)
+//
+//
+//
+//            }
+//        });
+
+        var getTpl = $("#localtion")[0].innerHTML
+            ,view = $("#viewLocal")[0];
+            console.log(data)
+        laytpl(getTpl).render(data, function(html){
+            view.innerHTML = html;
+        }); // 渲染下拉菜单的数据
+
+        form.render(null, 'operate-form-group');
+
+        laydate.render({
+            elem: '#LAY-component-form-group-date'
+        });
+        /* 自定义验证规则 */
+        form.verify({
+            title: function(value){
+                if(value.length < 5){
+                    return '标题至少得5个字符啊';
+                }
+            }
+            ,pass: [/(.+){6,12}$/, '密码必须6到12位']
+            ,content: function(value){
+                layedit.sync(editIndex);
+            }
+        });
+
+        /* 监听提交 */
+        form.on('submit(component-form-demo1)', function(data){
+            console.log(JSON.stringify(data.field));
+            parent.layui.updateitem(JSON.stringify(data.field));
+            parent.layer.close(index);
+            return false;
+        });
+
+        $('.layui-btn-container .layui-btn').on('click', function(){
+            var othis = $(this)
+                ,type = othis.data('type');
+            active[type] && active[type].call(this);
+        });
+    });
+</script>
+</body>
+</html>

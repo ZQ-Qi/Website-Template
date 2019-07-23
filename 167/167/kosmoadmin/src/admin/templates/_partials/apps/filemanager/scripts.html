@@ -1,0 +1,98 @@
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        var ksNavigationTree = $('.ks-filemanager-page .ks-navigation .ks-tree');
+        var ksNavigationMenu = $('.ks-filemanager-page .ks-navigation .ks-menu');
+        var ksContentItemsCheckboxes = $('.ks-filemanager-page .ks-content .ks-item :checkbox');
+        var ksInfo = $('.ks-filemanager-page > .ks-info');
+        var ksInfoCancel = $('.ks-filemanager-page > .ks-info .ks-info-cancel');
+
+        ksNavigationTree.on('click', 'li > a', function() {
+            var $parent = $(this).parent();
+            var isNested = $parent.parents('.ks-submenu').size();
+
+            ksNavigationMenu.find('li.ks-active').removeClass('ks-active');
+
+            if (!isNested) {
+                if ($parent.hasClass('ks-open')) {
+                    $parent.removeClass('ks-open');
+                } else {
+                    ksNavigationTree.find('.ks-open').removeClass('ks-open');
+                    $parent.addClass('ks-open');
+                }
+            } else {
+                if ($parent.hasClass('ks-open')) {
+                    $parent.removeClass('ks-open');
+                } else {
+                    if (!$parent.hasClass('ks-has-submenu')) {
+                        $parent.addClass('ks-active');
+                    }
+
+                    $parent.addClass('ks-open');
+                }
+            }
+        });
+
+        ksNavigationMenu.on('click', 'li > a', function() {
+            var $parent = $(this).parent();
+
+            ksNavigationTree.find('li.ks-active').removeClass('ks-active');
+
+            if ($parent.hasClass('ks-active')) {
+                $parent.removeClass('ks-active');
+            } else {
+                ksNavigationMenu.find('li.ks-active').removeClass('ks-active');
+                $parent.addClass('ks-active');
+            }
+        });
+
+        ksContentItemsCheckboxes.on('click', function() {
+            var $parent = $(this).closest('.ks-item');
+
+            if ($parent.hasClass('ks-checked')) {
+                $parent.removeClass('ks-checked');
+            } else {
+                $parent.addClass('ks-checked');
+            }
+        });
+
+        /*$('.fmb-list-content td').on('click', function() {
+         var $parent = $(this).closest('tr');
+
+         if ($parent.hasClass('ks-selected')) {
+         $parent.removeClass('ks-selected');
+         } else {
+         $('.fmb-list-content tr.selected').removeClass('ks-selected');
+         $parent.addClass('ks-selected');
+         }
+         });
+
+         $('.fmb-list-content .checkbox-column :checkbox').on('click', function(e) {
+         var $parent = $(this).closest('tr');
+
+         if ($parent.hasClass('ks-checked')) {
+         $parent.removeClass('ks-checked');
+         } else {
+         $parent.addClass('ks-checked');
+         }
+         });*/
+
+        $('.ks-dropdown-menu-sortable .dropdown-item').on('click', function() {
+            var $this = $(this);
+
+            if ($this.hasClass('dropdown-item-checked')) {
+                $this.removeClass('dropdown-item-checked');
+            } else {
+                $this.closest('.dropdown-menu-sortable').find('.dropdown-item-checked').removeClass('dropdown-item-checked');
+                $this.closest('.dropdown-menu-sortable').find(':radio').removeAttr('checked');
+                $this.addClass('dropdown-item-checked');
+                $this.find(':radio').attr('checked', true);
+            }
+        });
+
+        ksInfoCancel.on('click', function () {
+            ksInfo.removeClass('ks-open');
+        });
+    });
+})(jQuery);
+</script>

@@ -1,0 +1,64 @@
+{% extends "./common/auth.html" %}
+
+{% block title %}Sign Up / Universe Admin{% endblock %}
+
+{% block sidebar %}{% endblock %}
+{% block bodyClass %}p-front p-signup-helper{% endblock %}
+
+{% block content %}
+<div class="p-signup">
+  <form class="p-signup__form">
+    <h2 class="p-signup__form-heading">Try our app free for 30 Days</h2>
+    <div class="p-signup__form-content">
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="p-signup-first-name">First Name</label>
+          <input type="text" class="form-control" id="p-signup-first-name" placeholder="First Name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="p-signup-last-name">Last Name</label>
+          <input type="password" class="form-control" id="p-signup-last-name" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="p-signup-work-email">Work Email</label>
+          <input type="email" class="form-control" id="p-signup-work-email" placeholder="you@yourcompany.com">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="p-signup-set-password">Set Password</label>
+          <input type="email" class="form-control" id="p-signup-set-password" placeholder="Password (min 8 characters)">
+        </div>
+      </div>
+      <!--<div class="row">
+        <div class="form-group col-md-12">
+          <label for="p-signup-repeat-password" class="col-form-label">Repeat Password</label>
+          <input type="email" class="form-control" id="p-signup-repeat-password" placeholder="Repeat Password (min 8 characters)">
+        </div>
+      </div>-->
+
+      <ul class="form-group p-signup__form-password-hints">
+        <li>One lowercase character</li>
+        <li>One number</li>
+        <li>One uppercase character</li>
+        <li>8 characters minimum</li>
+      </ul>
+
+      <div>
+        <button type="button" class="btn btn-info btn-block btn-lg p-signup__form-submit">Get Started!</button>
+      </div>
+
+      <div class="p-signup__form-links">
+        <div class="p-signup__form-link">
+          By creating an account, you agree to our <a href="#" class="link-info">Terms</a>
+        </div>
+        <div class="p-signup__form-link">
+          Already have an account? <a href="signin.html" class="link-info">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

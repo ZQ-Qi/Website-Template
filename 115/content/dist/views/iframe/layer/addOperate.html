@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>添加数据</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../../../../content/layui/rc/css/layui.css" media="all">
+    <style>
+        body {
+            padding: 10px;
+            font-size: 14px;
+            background: #fff;
+            width: 95%;
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 20px;
+            overflow: scroll;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        input {
+            border: 1px solid #999;
+            padding: 5px 10px;
+            margin: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="layui-card-body" style="padding: 15px;">
+    <form class="layui-form" action="" lay-filter="operate-form-group">
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓名</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入姓名" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属部门</label>
+            <div class="layui-input-block">
+                <input type="text" name="platform" lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属职位</label>
+            <div class="layui-input-block">
+                <select name="location" lay-filter="aihao">
+                    <option value=""></option>
+                    <option value="前端">前端</option>
+                    <option value="设计" selected="">设计</option>
+                    <option value="产品经理">产品经理</option>
+                    <option value="销售">销售</option>
+                    <option value="客服">客服</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">入职日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="date" id="LAY-component-form-group-date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <div class="layui-footer">
+                    <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">新增</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../../../../content/layui/rc/layui.js"></script>
+<script>
+    layui.use(['layer','form', 'laydate'], function(){
+        var $ = layui.$
+            ,layer = layui.layer
+            ,index = parent.layer.getFrameIndex(window.name) //获取窗口索引
+            ,element = layui.element
+            ,laydate = layui.laydate
+            ,form = layui.form;
+
+        form.render(null, 'operate-form-group');
+        laydate.render({
+            elem: '#LAY-component-form-group-date'
+        });
+        /* 自定义验证规则 */
+        form.verify({
+            title: function(value){
+                if(value.length < 5){
+                    return '标题至少得5个字符啊';
+                }
+            }
+            ,pass: [/(.+){6,12}$/, '密码必须6到12位']
+            ,content: function(value){
+                layedit.sync(editIndex);
+            }
+        });
+
+        /* 监听提交 */
+        form.on('submit(component-form-demo1)', function(data){
+            console.log(JSON.stringify(data.field));
+            var oldData =  parent.layui.table.cache["LAY-app-table-all"];
+            var data1=JSON.stringify(data.field);
+            oldData.push(data1);
+            parent.layui.table.reload('LAY-app-table-all',{
+                data : oldData
+            });
+
+            parent.layer.close(index);
+            return false;
+        });
+
+        $('.layui-btn-container .layui-btn').on('click', function(){
+            var othis = $(this)
+                ,type = othis.data('type');
+            active[type] && active[type].call(this);
+        });
+    });
+</script>
+</body>
+</html>

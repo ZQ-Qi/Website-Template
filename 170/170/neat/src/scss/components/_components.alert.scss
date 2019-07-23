@@ -1,0 +1,87 @@
+/* ==========================================================================
+   #ALERTS
+   ========================================================================== */
+
+.c-alert {
+	position: relative;
+	width: 100%;
+	padding: $alert-padding;
+	border-top: $alert-border-width solid transparent;
+	border-bottom-left-radius: $alert-border-radius;
+	border-bottom-right-radius: $alert-border-radius;
+	background-color: $alert-background-color;
+	box-shadow: $alert-box-shadow;
+
+	.c-close {
+		position: absolute;
+		top: $spacer-small;
+		right: $spacer;
+		color: $color-ink-light;
+	}
+}
+
+/**
+ * 1. Equals the padding of `c-alert`.
+ */
+
+.c-alert__icon {
+	display: inline-flex;
+	position: absolute;
+	left: $spacer-small; /* [1] */
+	align-items: center;
+	justify-content: center;
+	width: $alert-icon-width;
+	height: $alert-icon-height;
+	border-radius: 100%;
+	background-color: $color-info;
+	color: $alert-icon-color;
+}
+
+/**
+ * 1. Equals the padding of `c-alert`.
+ */
+
+.c-alert__content {
+	padding-left: $alert-content-padding-left; /* [1] */
+}
+
+.c-alert__title {
+	margin-bottom: $alert-title-margin-bottom;
+	font-size: $alert-title-font-size;
+}
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-alert--info {
+	border-color: $color-info;
+
+	.c-alert__icon {
+		background-color: $color-info;
+	}
+}
+
+.c-alert--success {
+	border-color: $color-success;
+
+	.c-alert__icon {
+		background-color: $color-success;
+	}
+}
+
+.c-alert--warning {
+	border-color: $color-warning;
+
+	.c-alert__icon {
+		background-color: $color-warning;
+	}
+}
+
+.c-alert--danger {
+	border-color: $color-danger;
+
+	.c-alert__icon {
+		background-color: $color-danger;
+	}
+}

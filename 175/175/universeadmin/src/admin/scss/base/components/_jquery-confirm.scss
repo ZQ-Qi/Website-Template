@@ -1,0 +1,96 @@
+/** BEGIN: jquery confirm */
+.jconfirm {
+  .form-group {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.jconfirm.jconfirm-light .jconfirm-box,
+.jconfirm.jconfirm-white .jconfirm-box {
+  box-shadow: $box-shadow;
+  border-radius: 3px;
+  padding: 20px 20px 16px 20px;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons {
+  padding-bottom: 0;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c {
+  font-size: 20px;
+  padding-bottom: 18px;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button {
+  padding: 8px 20px;
+  border-radius: $border-radius;
+
+  + .btn {
+    margin-left: 10px;
+  }
+}
+
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons button,
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons button {
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-title-c .jconfirm-icon-c,
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-title-c .jconfirm-icon-c {
+  font-size: 17px;
+  position: relative;
+  top: 1px;
+}
+
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons button.btn-default,
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons button.btn-default {
+  color: $color-black-light;
+  border: 1px solid #d3d9dd;
+  background: none;
+
+  &:hover {
+    background: none;
+
+    &:enabled {
+      color: $color-black-medium;
+      background: $color-secondary-hover;
+      border-color: darken(#d3d9dd, 4%);
+    }
+  }
+
+  &:active {
+    background-color: $color-secondary-hover;
+  }
+}
+
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons,
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons {
+  float: left;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon {
+  font-size: 30px !important;
+  color: #fff;
+
+  &::after {
+    position: absolute;
+    content: $icon-circle-close;
+    font-family: $font-icon;
+    color: #455161;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-red {
+  border-top: 5px solid $color-danger;
+}
+/** END: jquery confirm */

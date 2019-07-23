@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mobile first web app theme | first</title>
+  <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="navbar">    
+    <ul class="nav navbar-nav navbar-avatar pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">            
+          <span class="hidden-sm-only">Mika Sokeil</span>
+          <span class="thumb-small avatar inline"><img src="images/avatar.jpg" alt="Mika Sokeil" class="img-circle"></span>
+          <b class="caret hidden-sm-only"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#"><span class="badge bg-danger pull-right">3</span>Notifications</a></li>
+          <li class="divider"></li>
+          <li><a href="docs.html">Help</a></li>
+          <li><a href="signin.html">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="navbar-brand" href="#">first</a>
+    <button type="button" class="btn btn-link pull-left nav-toggle hidden-lg" data-toggle="class:show" data-target="#nav">
+      <i class="icon-reorder icon-xlarge text-default"></i>
+    </button>
+    <ul class="nav navbar-nav hidden-sm">
+      <li>
+        <div class="m-t m-b-small" id="panel-notifications">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-comment-alt icon-xlarge text-default"></i><b class="badge badge-notes bg-danger count-n">2</b></a>
+          <section class="dropdown-menu m-l-small m-t-mini">
+            <section class="panel panel-large arrow arrow-top">
+              <header class="panel-heading bg-white"><span class="h5"><strong>You have <span class="count-n">2</span> notifications</strong></span></header>
+              <div class="list-group list-group-flush m-t-n">
+                <a href="#" class="media list-group-item">
+                  <span class="pull-left thumb-small"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
+                  <span class="media-body block m-b-none">
+                    Moved to Bootstrap 3.0<br>
+                    <small class="text-muted">23 June 13</small>
+                  </span>
+                </a>
+                <a href="#" class="media list-group-item">
+                  <span class="media-body block m-b-none">
+                    first v.1 (Bootstrap 2.3 based) released<br>
+                    <small class="text-muted">19 June 13</small>
+                  </span>
+                </a>
+              </div>
+              <footer class="panel-footer text-small">
+                <a href="#" class="pull-right"><i class="icon-cog"></i></a>
+                <a href="#">See all the notifications</a>
+              </footer>
+            </section>
+          </section>
+        </div>
+      </li>
+      <li><div class="m-t-small"><a class="btn btn-small btn-info" data-toggle="modal" href="#modal"><i class="icon-plus"></i> POST</a></div></li>
+      <li class="dropdown shift" data-toggle="shift:appendTo" data-target=".nav-primary .nav">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-xlarge visible-sm visible-sm-inline"></i>Settings <b class="caret hidden-sm-only"></b></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#" data-toggle="class:navbar-fixed" data-target='body'>Navbar 
+              <span class="text-active">auto</span>
+              <span class="text">fixed</span>
+            </a>
+          </li>
+          <li class="visible-lg">
+            <a href="#" data-toggle="class:nav-vertical" data-target="#nav">Nav 
+              <span class="text-active">vertical</span>
+              <span class="text">horizontal</span>
+            </a>
+          </li>
+          <li class="divider hidden-sm"></li>
+          <li class="dropdown-header">Colors</li>
+          <li>
+            <a href="#" data-toggle="class:bg bg-black" data-target='.navbar'>Navbar 
+              <span class="text-active">white</span>
+              <span class="text">inverse</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-toggle="class:bg-light" data-target='#nav'>Nav 
+              <span class="text-active">inverse</span>
+              <span class="text">light</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form pull-left shift" action="" data-toggle="shift:appendTo" data-target=".nav-primary">
+      <i class="icon-search text-muted"></i>
+      <input type="text" class="input-small form-control" placeholder="Search">
+    </form>
+  </header>
+  <!-- / header -->
+  <!-- nav -->
+  <nav id="nav" class="nav-primary visible-lg nav-vertical">
+    <ul class="nav" data-spy="affix" data-offset-top="50">
+      <li><a href="index.html"><i class="icon-dashboard icon-xlarge"></i>Dashboard</a></li>
+      <li class="dropdown-submenu active">
+        <a href="#"><i class="icon-th icon-xlarge"></i>Elements</a>
+        <ul class="dropdown-menu">
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="icons.html"><b class="badge pull-right">302</b>Icons</a></li>            
+          <li><a href="grid.html">Grid</a></li>
+          <li><a href="widgets.html"><b class="badge bg-primary pull-right">8</b>Widgets</a></li>
+          <li><a href="components.html"><b class="badge pull-right">18</b>Components</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="#"><i class="icon-list icon-xlarge"></i>Lists</a>
+        <ul class="dropdown-menu">
+          <li><a href="list.html">List groups</a></li>
+          <li><a href="table.html">Table</a></li>
+        </ul>
+      </li>
+      <li><a href="form.html"><i class="icon-edit icon-xlarge"></i>Form</a></li>
+      <li><a href="chart.html"><i class="icon-signal icon-xlarge"></i>Chart</a></li>
+      <li class="dropdown-submenu">
+        <a href="#"><i class="icon-link icon-xlarge"></i>Others</a>
+        <ul class="dropdown-menu">
+          <li><a href="signin.html">Signin page</a></li>
+          <li><a href="signup.html">Signup page</a></li>
+          <li><a href="404.html">404 page</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- / nav -->
+  <section id="content">
+    <section class="main padder">
+      <div class="clearfix">
+        <h4><i class="icon-magic"></i>Widgets</h4>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-6">
+              <section class="panel text-center">
+                <a class="btn btn-circle btn-twitter btn-large"><i class="icon-twitter"></i></a>
+                <div class="h4">TWITTER</div>
+                <div class="line m-l m-r"></div>
+                <h4 class="text-success"><strong>45321</strong></h4>
+                <small>FOLLOWERS</small>
+              </section>
+            </div>
+            <div class="col-6">
+              <section class="panel text-center">
+                <a class="btn btn-circle btn-facebook btn-large"><i class="icon-facebook"></i></a>
+                <div class="h4">FACEBOOK</div>
+                <div class="line m-l m-r"></div>
+                <h4 class="text-info"><strong>3145</strong></h4>
+                <small>FOLLOWERS</small>
+              </section>
+            </div>
+          </div>
+          <!-- .scrollable -->
+          <section class="panel">
+            <header class="panel-heading">
+              <ul class="nav nav-pills pull-right">
+                <li>
+                  <a href="#" class="panel-toggle text-muted"><i class="icon-caret-down icon-large text-active"></i><i class="icon-caret-up icon-large text"></i></a>
+                </li>
+              </ul>
+              <span class="label label-large bg-default">15</span> Inbox
+            </header>
+            <section style="height:200px" class="panel-content scrollbar scroll-y">
+              <article class="media">
+                <span class="pull-left thumb-small"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
+                <div class="media-body">
+                  <div class="pull-right media-mini text-center text-muted">
+                    <strong class="h4">12:18</strong><br>
+                    <small class="label bg-light">pm</small>
+                  </div>
+                  <a href="#" class="h4">Bootstrap 3.0 is comming</a>
+                  <small class="block"><a href="#" class="">John Smith</a> <span class="label label-success">Circle</span></small>
+                  <small class="block">Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.</small>
+                </div>
+              </article>
+              <div class="line pull-in"></div>
+              <article class="media">
+                <span class="pull-left thumb-small"><i class="icon-user icon-2x text-muted"></i></span>                
+                <div class="media-body">
+                  <div class="pull-right media-mini text-center text-muted">
+                    <strong class="h4">17</strong><br>
+                    <small class="label bg-light">feb</small>
+                  </div>
+                  <a href="#" class="h4">Bootstrap documents</a>
+                  <small class="block"><a href="#" class="">John Smith</a> <span class="label label-info">Friends</span></small>
+                  <small class="block">There are a few easy ways to quickly get started with Bootstrap, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</small>
+                </div>
+              </article>
+              <div class="line pull-in"></div>
+              <article class="media">
+                <div class="media-body">
+                  <div class="pull-right media-mini text-center text-muted">
+                    <strong class="h4">09</strong><br>
+                    <small class="label bg-light">jan</small>
+                  </div>
+                  <a href="#" class="h4 text-success">Mobile first html/css framework</a>
+                  <small class="block">Bootstrap, Ratchet</small>
+                </div>
+              </article>
+            </section>
+          </section>
+          <!-- / scrollable -->
+          <!-- .scrollable -->
+          <section class="panel">
+            <header class="panel-heading">
+              <span class="label bg-info pull-right">32</span>
+              News
+            </header>
+            <section class="panel-content">
+              <article class="media">
+                <div class="pull-left thumb-small">
+                  <span class="icon-stack">
+                    <i class="icon-circle text-success icon-stack-base"></i>
+                    <i class="icon-flag icon-light"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <div class="pull-right media-mini text-center text-muted">
+                    <strong class="h4">12:18</strong><br>
+                    <small class="label bg-light">pm</small>
+                  </div>
+                  <a href="#" class="h4">Bootstrap 3.0 is comming</a>
+                  <small class="block">Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.</small>
+                </div>
+              </article>
+              <div class="line pull-in"></div>
+              <article class="media">
+                <div class="pull-left thumb-small">
+                  <span class="icon-stack">
+                    <i class="icon-circle text-danger icon-stack-base"></i>
+                    <i class="icon-file icon-light"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <div class="pull-right media-mini text-center text-muted">
+                    <strong class="h4">17</strong><br>
+                    <small class="label bg-light">feb</small>
+                  </div>
+                  <a href="#" class="h4">Bootstrap documents</a>
+                  <small class="block">There are a few easy ways to quickly get started with Bootstrap, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</small>
+                </div>
+              </article>
+              <div class="line pull-in"></div>
+              <article class="media">
+                <div class="pull-left thumb-small">
+                  <span class="icon-stack">
+                    <i class="icon-circle text-warning icon-stack-base"></i>
+                    <i class="icon-star icon-light"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <div class="pull-right media-mini text-center text-muted">
+                    <strong class="h4">09</strong><br>
+                    <small class="label bg-light">jan</small>
+                  </div>
+                  <a href="#" class="h4 text-success">Mobile first html/css framework</a>
+                  <small class="block">Bootstrap, Ratchet</small>
+                </div>
+              </article>
+            </section>
+          </section>
+          <!-- / scrollable -->
+          <section class="panel">
+            <header class="panel-heading bg bg-default">
+              <div class="input-group">
+                <input type="text" class="input-small form-control" placeholder="Search">
+                <span class="input-group-btn">
+                  <button class="btn btn-small btn-white" type="button">Go!</button>
+                </span>                
+              </div>
+            </header>
+            <ul class="list-group list-group-flush m-t-n">
+              <li class="list-group-item">
+                <div class="media">
+                  <span class="pull-left thumb-small"><img src="images/avatar.jpg" alt="John said" class="img-rounded"></span>
+                  <div class="pull-right text-success m-t-small">
+                    <i class="icon-circle"></i>
+                  </div>
+                  <div class="media-body">
+                    <div><a href="#" class="h5">Chris Fox</a></div>
+                    <small class="text-muted">about 2 minutes ago</small>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item bg">
+                <div class="media">
+                  <span class="pull-left thumb-small"><img src="images/avatar.jpg" alt="John said" class="img-rounded"></span>
+                  <div class="pull-right text-success m-t-small">
+                    <i class="icon-circle"></i>
+                  </div>
+                  <div class="media-body">
+                    <div><a href="#" class="h5">Amanda Conlan</a></div>
+                    <small class="text-muted">about 2 hours ago</small>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="media">
+                  <span class="pull-left thumb-small"><img src="images/avatar.jpg" alt="John said" class="img-rounded"></span>
+                  <div class="pull-right text-warning m-t-small">
+                    <i class="icon-circle"></i>
+                  </div>
+                  <div class="media-body">
+                    <div><a href="#" class="h5">Dan Doorack</a></div>
+                    <small class="text-muted">3 days ago</small>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item bg">
+                <div class="media">
+                  <span class="pull-left thumb-small"><img src="images/avatar.jpg" alt="John said" class="img-rounded"></span>
+                  <div class="pull-right text-danger m-t-small">
+                    <i class="icon-circle"></i>
+                  </div>
+                  <div class="media-body">
+                    <div><a href="#" class="h5">Lauren Taylor</a></div>
+                    <small class="text-muted">about 2 minutes ago</small>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="btn-group pull-right m-t-n-mini m-r-n-mini" data-toggle="buttons">
+                <label class="btn btn-small btn-white  btn-on active">
+                  <input type="radio" name="options" id="option1"> ON
+                </label>
+                <label class="btn btn-small btn-white">
+                  <input type="radio" name="options" id="option2"> OFF
+                </label>
+              </div>
+              <i class="icon-link"></i> Copy link
+            </li>
+            <li class="list-group-item">
+              <div class="btn-group pull-right m-t-n-mini m-r-n-mini" data-toggle="buttons">
+                <label class="btn btn-small btn-white btn-on">
+                  <input type="radio" name="options" id="option1"> ON
+                </label>
+                <label class="btn btn-small btn-white active">
+                  <input type="radio" name="options" id="option2"> OFF
+                </label>
+              </div>
+              <i class="icon-cloud-upload"></i> Cloud upload
+            </li>
+            <li class="list-group-item">
+              <div class="btn-group pull-right m-t-n-mini m-r-n-mini" data-toggle="buttons">
+                <label class="btn btn-small btn-white btn-on active">
+                  <input type="radio" name="options" id="option1"> ON
+                </label>
+                <label class="btn btn-small btn-white">
+                  <input type="radio" name="options" id="option2"> OFF
+                </label>
+              </div>
+              <i class="icon-microphone"></i> Voice search         
+            </li>
+            <li class="list-group-item">
+              <i class="icon-chevron-right"></i>
+              <i class="icon-bookmark"></i> Bookmarks
+            </li>
+            <li class="list-group-item">
+              <i class="icon-chevron-right"></i>
+              <i class="icon-bell"></i> Notifications
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <section class="panel">
+            <header class="panel-heading">
+              <span class="label bg-danger pull-right">4 left</span>
+              Tasks
+            </header>
+            <div class="pull-out">
+              <table class="table table-striped m-b-none text-small">
+                <thead>
+                  <tr>
+                    <th>Progress</th>
+                    <th>Item</th>                    
+                    <th width="70"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>                    
+                    <td>
+                      <div class="progress progress-small progress-striped active m-t-mini m-b-none">
+                        <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="80%" style="width: 80%"></div>
+                      </div>
+                    </td>
+                    <td>App prototype design</td>
+                    <td class="text-right">
+                      <div class="btn-group">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-pencil"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="progress progress-mini m-t-mini m-b-none">
+                        <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="40%" style="width: 40%"></div>
+                      </div>
+                    </td>
+                    <td>Design documents</td>
+                    <td class="text-right">
+                      <div class="btn-group">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-pencil"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="progress progress-mini m-t-mini m-b-none">
+                        <div class="progress-bar progress-bar-warning" data-toggle="tooltip" data-original-title="20%" style="width: 20%"></div>
+                      </div>
+                    </td>
+                    <td>UI toolkit</td>
+                    <td class="text-right">
+                      <div class="btn-group">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-pencil"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="progress progress-mini m-t-mini m-b-none">
+                        <div class="progress-bar progress-bar-danger" data-toggle="tooltip" data-original-title="15%" style="width: 15%"></div>
+                      </div>
+                    </td>
+                    <td>Testing</td>
+                    <td class="text-right">
+                      <div class="btn-group">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-pencil"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="panel">
+            <header class="panel-heading">Stats</header>
+            <div class="pull-out">
+              <table class="table table-striped m-b-none text-small">
+                <thead>
+                  <tr>
+                    <th>Graph</th>
+                    <th>Item</th>                    
+                    <th width="70"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>                    
+                    <td>
+                      <div class="sparkline" data-bar-color="#5cb85c" data-type="bar"><!--20,10,15,21,12,5,21,30,24,15,8,19--></div>
+                    </td>
+                    <td>App downloads</td>
+                    <td class="text-success">
+                      <i class="icon-level-up"></i> 40%
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="sparkline" data-bar-color="#61a1e1" data-type="bar"><!--,5,21,30,24,15,8,19,20,10,15,21,12--></div>
+                    </td>
+                    <td>Social connection</td>
+                    <td class="text-success">
+                      <i class="icon-level-up"></i> 20%
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="sparkline" data-bar-color="#999900" data-type="bar"><!--200,400,500,100,90,1200,1500,1000,800,500,80,50--></div>
+                    </td>
+                    <td>Revenue</td>
+                    <td class="text-warning">
+                      <i class="icon-level-down"></i> 5%
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="sparkline" data-bar-color="#ff5f5f" data-type="bar"><!--15,21,30,24,15,8,19,20,10,15,21,12--></div>
+                    </td>
+                    <td>Customer increase</td>
+                    <td class="text-danger">
+                      <i class="icon-level-down"></i> 20%
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="panel">
+            <header class="panel-heading">Chat</header>
+            <section class="chat-list">
+              <article id="chat-id-1" class="chat-item media arrow arrow-left">
+                <a href="#" class="pull-left thumb-small avatar"><img src="images/avatar.jpg" class="img-circle"></a>
+                <section class="media-body">
+                  <div class="panel bg-lighter text-small m-b-none">Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                  <small class="text-muted"><i class="icon-ok text-success"></i> 2 minutes ago</small>
+                </section>
+              </article>
+              <article id="chat-id-1" class="chat-item media arrow arrow-right">
+                <a class="pull-right thumb-small"><span class="btn btn-circle btn-mini"><i class="icon-user"></i></span></a>
+                <section class="media-body">
+                  <div class="panel text-small m-b-none">Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                  <small class="text-muted"><i class="icon-ok text-success"></i> 1 minutes ago</small>
+                </section>
+              </article>
+              <!-- chat form -->
+              <article class="chat-item media" id="chat-form">
+                <a class="pull-left thumb-small avatar"><img src="images/avatar.jpg" class="img-circle"></a>
+                <section class="media-body">
+                  <form action="" class="m-b-none">
+                    <div class="input-group">
+                      <input type="text" placeholder="Say something" class="form-control">
+                      <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">SEND</button>
+                      </span>
+                    </div>
+                  </form>
+                </section>
+              </article>
+            </section>
+          </section>
+          <!-- .comment-list -->
+          <section class="comment-list block">
+            <article id="comment-id-1" class="comment-item media arrow arrow-left">
+              <a class="pull-left thumb-small avatar"><img src="images/avatar.jpg" class="img-circle"></a>
+              <section class="media-body panel">
+                <header class="panel-heading clearfix">
+                  <a href="#">John smith</a><label class="label bg-info m-l-mini">Editor</label> <span class="text-muted m-l-small pull-right"><i class="icon-time"></i>24 minutes ago</span>
+                </header>
+                <div>Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                <div class="comment-action m-t-small">
+                  <a href="#" data-toggle="class" class="btn btn-white btn-mini active"><i class="icon-star-empty text-muted text"></i><i class="icon-star text-danger text-active"></i>Like</a>
+                  <a href="#comment-form" class="btn btn-white btn-mini"><i class="icon-mail-reply text-muted"></i>Reply</a>
+                </div>
+              </section>
+            </article>
+            <!-- .comment-reply -->
+            <article id="comment-id-2" class="comment-item comment-reply media arrow arrow-left">
+              <a class="pull-left thumb-small"><span class="btn btn-circle btn-white btn-mini"><i class="icon-user"></i></span></a>
+              <section class="media-body panel text-small">
+                  <a href="#">Mika Sam</a><label class="label bg-inverse m-l-mini">Admin</label> Report this comment is helpful <span class="text-muted m-l-small pull-right"><i class="icon-time"></i>10 minutes ago</span>
+              </section>
+            </article>
+            <!-- / .comment-reply -->
+            <article id="comment-id-3" class="comment-item media arrow arrow-left">
+              <a class="pull-left thumb-small avatar"><img src="images/avatar.jpg" class="img-circle"></a>
+              <section class="media-body panel">
+                <header class="panel-heading clearfix">
+                  <a href="#">By me</a><label class="label bg-default m-l-mini">User</label> <span class="text-muted m-l-small pull-right"><i class="icon-time"></i>about 1 hour ago</span>
+                </header>
+                <div>This comment was posted by you.</div>
+                <div class="comment-action m-t-small">
+                  <a href="#comment-id-3" data-dismiss="alert" class="btn btn-white btn-mini"><i class="icon-trash text-muted"></i>Remove</a>
+                </div>
+              </section>
+            </article>
+            <article id="comment-id-4" class="comment-item media arrow arrow-left">
+              <a class="pull-left thumb-small avatar"><img src="images/avatar.jpg" class="img-circle"></a>
+              <section class="media-body panel">
+                <header class="panel-heading clearfix">
+                  <a href="#">Peter</a><label class="label bg-primary m-l-mini">Vip</label> <span class="text-muted m-l-small pull-right"><i class="icon-time"></i>2 hours ago</span>
+                </header>
+                <blockquote>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                </blockquote>
+                <div>Lorem ipsum dolor sit amet, consecteter adipiscing elit...</div>
+                <div class="comment-action m-t-small">
+                  <a href="#" data-toggle="class" class="btn btn-white btn-mini"><i class="icon-star-empty text-muted text"></i><i class="icon-star text-danger text-active"></i>Like</a>
+                  <a href="#comment-form" class="btn btn-white btn-mini"><i class="icon-mail-reply text-muted"></i>Reply</a>
+                </div>
+              </section>
+            </article>
+            <!-- comment form -->
+            <article class="comment-item media" id="comment-form">
+              <a class="pull-left thumb-small avatar"><img src="images/avatar.jpg" class="img-circle"></a>
+              <section class="media-body">
+                <form action="" class="m-b-none">
+                  <div class="input-group">
+                    <input type="text" placeholder="Input your comment here" class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-primary" type="button">POST</button>
+                    </span>
+                  </div>
+                </form>
+              </section>
+            </article>
+          </section>
+          <!-- / .comment-list -->
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- footer -->
+  <footer id="footer">
+    <div class="text-center padder clearfix">
+      <p>
+        <small>&copy; first 2013, Mobile first web app framework base on Bootstrap  更多模板：<a href="http://www.aspku.com/" target="_blank">源码之家</a></small><br><br>
+        <a href="#" class="btn btn-mini btn-circle btn-twitter"><i class="icon-twitter"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-facebook"><i class="icon-facebook"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-gplus"><i class="icon-google-plus"></i></a>
+      </p>
+    </div>
+  </footer>
+  <!-- / footer -->
+	<script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- app -->
+  <script src="js/app.js"></script>
+  <script src="js/app.plugin.js"></script>
+  <script src="js/app.data.js"></script>  
+  <!-- Sparkline Chart -->
+  <script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
+  <!-- Easy Pie Chart -->
+  <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+</body>
+</html>

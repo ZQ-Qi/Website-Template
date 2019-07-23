@@ -1,0 +1,26 @@
+/* ------------------------------------------- */
+/* ############### Input Group ############### */
+/* ------------------------------------------- */
+
+.input-group-prepend,
+.input-group-append {
+  @include border-radius(0);
+}
+
+.input-group-text { @include border-radius(0); }
+
+/********* RTL SUPPORT **********/
+/********************************/
+[dir="rtl"] {
+  .input-group {
+    .form-control {
+      &:first-child { border-left: 0; }
+      &:last-child { border-right: 0; }
+
+      &:not(:first-child):not(:last-child) {
+        border-left: 0;
+        border-right: 0;
+      }
+    }
+  }
+}

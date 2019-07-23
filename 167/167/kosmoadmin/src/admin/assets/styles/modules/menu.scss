@@ -1,0 +1,87 @@
+@import "../config/ui";
+
+.m-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 30px;
+    font-size: 13px;
+    color: #333;
+    position: relative;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+      background-color: rgba(57, 81, 155, 0.06);
+    }
+  }
+
+  &__item.is-active > &__toggle {
+    background-color: #ebeef5;
+  }
+
+  &__menu-item {
+    padding: 11px 30px;
+    font-size: 13px;
+    color: #333;
+    position: relative;
+    font-weight: 400;
+    cursor: pointer;
+    padding-left: 50px;
+    flex-direction: column;
+
+    &.is-active {
+      background-color: rgba(57, 81, 155, .06);
+    }
+
+    &:hover {
+      color: #333;
+      background-color: rgba(57, 81, 155, 0.06);
+    }
+  }
+
+  &.is-collapsed &__toggle {
+    &:after {
+      content: "\f110";
+      border: none;
+      font-family: $ks-icon-font-name;
+      font-size: 11px;
+      height: 6px;
+      line-height: 6px;
+      width: 10px;
+      margin-left: 11px;
+      padding: 0;
+      margin-right: -10px;
+      position: relative;
+      float: right;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  &.is-collapsed &__menu {
+    display: none;
+  }
+
+  &.is-collapsed &__item.is-active > &__menu {
+    display: flex;
+  }
+
+  &.is-collapsed &__item.is-active > &__toggle {
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+}

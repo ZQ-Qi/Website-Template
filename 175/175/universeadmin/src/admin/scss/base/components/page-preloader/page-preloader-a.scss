@@ -1,0 +1,55 @@
+$preloader-width: 60px !default;
+$preloader-height: 60px !default;
+
+/** BEGIN: preloader */
+.page-preloader-a {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  z-index: 10002;
+
+  &__loader {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__indicator {
+    width: $preloader-width;
+    height: $preloader-height;
+    position: relative;
+
+    &::before {
+      @include pseudo-preloader($preloader-width, $preloader-height, $color-info);
+    }
+
+    &::after {
+      @include pseudo-preloader($preloader-width, $preloader-height, $color-info, 1.2s, -.6s);
+    }
+  }
+
+  &__label-text {
+    font-size: 18px;
+    color: $color-gray;
+  }
+}
+
+@keyframes preloading {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1)
+  }
+}
+/** END: preloader */

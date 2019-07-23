@@ -1,0 +1,50 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Scheduler / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/fullcalendar/fullcalendar.min.css">
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid m-scheduler">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Scheduler</h2>
+    </div>
+  </div>
+  <div class="main-container m-scheduler__container">
+    <div class="m-scheduler__header">
+      <div class="m-scheduler__header-item">
+        <h5 class="m-scheduler__heading">Events</h5>
+        <span class="m-scheduler__time">21:40</span>
+      </div>
+      <div class="m-scheduler__header-item">
+        <div class="m-scheduler__progress">
+          <span>Capacity 173/230</span>
+          <div class="progress progress-sm progress-rounded mb-0">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <a href="#" class="m-scheduler__add-event"><span class="ua-icon-plus-circle-lg"></span></a>
+      </div>
+    </div>
+    <div id="m-scheduler-calendar" class="m-scheduler__calendar"></div>
+    <div class="m-scheduler__footer">
+      <a href="#" class="m-scheduler__footer-add-event"><span class="ua-icon-plus-circle-outline"></span> Add Event</a>
+      <div class="input-group input-group-icon iconfont icon-left m-scheduler__footer-search">
+        <input class="form-control" type="text" placeholder="Search">
+        <span class="input-icon ua-icon-search"></span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/momentjs/moment.min.js"></script>
+<script src="vendor/fullcalendar/fullcalendar.min.js"></script>
+<script src="js/preview/scheduler.min.js"></script>
+{% endblock %}

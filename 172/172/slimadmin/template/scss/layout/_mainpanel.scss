@@ -1,0 +1,61 @@
+/* ------------------------------------------ */
+/* ############### MAIN PANEL ############### */
+/* ------------------------------------------ */
+
+.slim-pageheader {
+  padding: 15px 0;
+
+  @include media-breakpoint-up(sm) {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+
+.slim-pagetitle {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: $gray-800;
+  padding-left: 10px;
+  border-left: 4px solid $slim-primary;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: .5px;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.slim-breadcrumb {
+  margin-bottom: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 12px;
+
+  @include media-breakpoint-up(sm) { font-size: 14px; }
+
+  .breadcrumb-item {
+    + .breadcrumb-item::before {
+      color: $gray-400;
+    }
+  }
+}
+
+
+/*********************************/
+/********** RTL SUPPORT **********/
+
+[dir="rtl"] {
+  .slim-pagetitle {
+    padding-left: 0;
+    padding-right: 10px;
+    border-left: 0;
+    border-right: 4px solid $slim-primary;
+  }
+}

@@ -1,0 +1,432 @@
+/** BEGIN: Alerts Component */
+.alert {
+  position: relative;
+  font-size: 14px;
+  color: $color-white;
+  border: 0;
+  border-radius: $border-radius;
+  padding-top: 6px;
+
+  strong {
+    font-weight: normal;
+  }
+
+  p {
+    font-size: inherit;
+  }
+
+  &__close {
+    right: 9px;
+    transform: translateY(-45%);
+    opacity: .8;
+    position: absolute;
+    color: #fff;
+    text-shadow: none;
+    font-size: 14px;
+    top: 50%;
+
+    &:hover {
+      opacity: 1;
+      color: #fff;
+    }
+  }
+}
+
+.alert-icon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.alert-success {
+  background-color: #36af48;
+}
+
+.alert-info {
+  background-color: #1990ea;
+}
+
+.alert-warning {
+  background-color: #f7971c;
+}
+
+.alert-danger {
+  background-color: #ed1b24;
+}
+
+.alert-message {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 12px 35px 12px 15px;
+  font-size: 14px;
+  color: $color-black;
+  background: none;
+  border: 1px solid;
+  border-radius: $border-radius;
+
+  .close {
+    top: 9px;
+    right: 9px;
+    transform: translateY(0);
+    opacity: .9;
+    position: absolute;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  p {
+    &:nth-last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alert-message-heading {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 1.111;
+}
+
+.alert-message-blue {
+  border-color: $color-lasur;
+  background-color: #f2fafe;
+
+  .close {
+    color: $color-lasur;
+  }
+}
+
+.alert-message-red {
+  border-color: #f59da3;
+  background-color: #fef5f6;
+
+  .close {
+    color: #f48221;
+  }
+}
+
+.alert-message-orange {
+  border-color: #f9c090;
+  background-color: #fef9f4;
+
+  .close {
+    color: #eb3b48;
+  }
+}
+
+.alert-message-gray {
+  border-color: #a2a8b0;
+  background-color: #f6f6f7;
+
+  .close {
+    color: $color-gray-dark;
+  }
+}
+
+.has-page-alert {
+  .navbar {
+    top: 37px;
+  }
+
+  .sidebar {
+    top: 89px;
+  }
+
+  .sidebar-section {
+    top: 89px;
+  }
+
+  .page-content {
+    padding-top: 89px;
+  }
+}
+
+.page-alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 12px;
+  position: fixed;
+  height: 37px;
+  top: 0;
+  background-color: #4cbfec;
+  color: #fff;
+  width: 100%;
+  font-size: 15px;
+  z-index: 10;
+  line-height: 25px;
+  box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+
+  &__text-icon {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    margin-right: 6px;
+    position: relative;
+    top: 1px;
+  }
+
+  &__close {
+    cursor: pointer;
+    transition: opacity .2s;
+  }
+
+  &__close-icon {
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  &--inline {
+    position: static;
+  }
+
+  &--danger {
+    background: #f9696a;
+  }
+
+  &--dandelion {
+    background: #ffe066;
+    color: #000000;
+  }
+
+  &--fountain-blue-light {
+    background: $color-fountain-blue-light;
+  }
+
+  &--french-lilac {
+    background: $color-french-lilac;
+    color: #000000;
+  }
+}
+
+.action-alert {
+  padding: 20px;
+  font-size: 15px;
+  color: #fff;
+
+  &.has-btn {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  .action-alert.has-btn &__message {
+    position: relative;
+    top: 1px;
+  }
+
+  &__action-message {
+    font-weight: 700;
+  }
+
+  &__btn {
+    background: #fff;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+
+  &__close {
+    right: 15px;
+    opacity: .8;
+    position: absolute;
+    color: #fff;
+    text-shadow: none;
+    font-size: 14px;
+    top: 23px;
+
+    &:hover {
+      opacity: 1;
+      color: #fff;
+    }
+  }
+
+  &__link {
+    border-bottom: 1px solid rgba(#fff, .8);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &--danger {
+    background-image: linear-gradient(to right, #ff7a59 0%, #f2557d 100%);
+  }
+
+  &--danger &__btn {
+    color: #f96a69;
+  }
+
+  &--success {
+    background-image: linear-gradient(to right, #19e2ae 0%, #baea79 99%, #baea79 100%);
+  }
+
+  &--success &__btn {
+    color: #47ca7b;
+  }
+
+  &--info {
+    background-image: linear-gradient(to right, #48c6ef 0%, #6e87d6 100%);
+  }
+
+  &--info &__btn {
+    color: #59aae4;
+  }
+
+  &--purple {
+    background-image: linear-gradient(to right, #574694 0%, #316a95 100%);
+  }
+
+  &--purple &__btn {
+    color: #465694;
+  }
+
+  &--purple-light {
+    background-image: linear-gradient(to right, #a6c0ee 0%, #fac5ec 100%);
+  }
+
+  &--purple-light &__btn {
+    color: #b0a6d7;
+  }
+}
+
+.content-alert {
+  color: #000000;
+  font-size: 15px;
+  display: flex;
+  padding: 0;
+
+  &__info {
+    width: 56px;
+    min-width: 56px;
+    text-align: center;
+    border-radius: 3px 0 0 3px;
+    padding-top: 15px;
+  }
+
+  &__info-icon {
+    font-size: 18px;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding: 16px 20px 18px 20px;
+  }
+
+  &__heading {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  &__message {
+    line-height: 20px;
+  }
+
+  &__link {
+    color: #269af1;
+
+    &:hover {
+      color: darken(#269af1, 6%);
+    }
+  }
+
+  &__close {
+    font-size: 11px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+  }
+
+  &__actions {
+    margin-top: 16px;
+  }
+
+  &__make-action {
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__action-link {
+    margin-left: 20px;
+    color: #269af1;
+
+    &:hover {
+      color: darken(#269af1, 6%);
+    }
+  }
+
+  &--warning {
+    background: #fff9db;
+  }
+
+  &--warning &__info {
+    background: #ffe066;
+  }
+
+  &--warning &__info-icon {
+    color: #fbc025;
+  }
+
+  &--danger {
+    background: #ffece2;
+  }
+
+  &--danger &__info {
+    background: #ff886a;
+  }
+
+  &--danger &__info-icon {
+    color: #fff;
+  }
+
+  &--info {
+    background: #e1f7ff;
+  }
+
+  &--info &__info {
+    background: #4cbfec;
+  }
+
+  &--info &__info-icon {
+    color: #fff;
+  }
+
+  &--purple {
+    background: #efecfa;
+  }
+
+  &--purple &__info {
+    background: #8f81c2;
+  }
+
+  &--purple &__info-icon {
+    color: #fff;
+  }
+
+  &--purple-light {
+    background: #f5eaf9;
+  }
+
+  &--purple-light &__info {
+    background: #e2c4ed;
+  }
+
+  &--purple-light &__info-icon {
+    color: #fff;
+  }
+
+  &--success {
+    background-color: #daf3f0;
+  }
+
+  &--success &__info {
+    background-color: #54c3b4;
+  }
+
+  &--success &__info-icon {
+    color: #fff;
+  }
+}
+/** END: Alerts Component */

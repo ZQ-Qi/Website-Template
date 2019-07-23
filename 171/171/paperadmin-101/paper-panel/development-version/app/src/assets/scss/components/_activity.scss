@@ -1,0 +1,46 @@
+//activity widget
+.activity-item {
+  border-left: 2px solid $brand-border;
+  padding-bottom: 1px;
+  padding-left: 24px;
+  position: relative;
+}
+.activity-item::before {
+  color: $brand-primary;
+  background: #fff;
+  content: "\f10c";
+  left: -7px;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  font-family: 'paperIcons';
+}
+.activity-item:last-child::after {
+  border-radius: 100%;
+  bottom: 0;
+  content: "";
+  height: 6px;
+  left: -3px;
+  position: absolute;
+  width: 6px;
+}
+.activity-item .activity-content i {
+  font-size: 12px;
+}
+.activity-item .activity-content small {
+  position: relative;
+  top: -4px;
+}
+.activity-item .activity-content p {
+  padding-bottom: 4px;
+  position: relative;
+}
+.activity-success::before {
+  color: $brand-success;
+}
+.activity-warning::before {
+  color: $brand-warning;
+}
+.activity-warning::before{
+  color: $brand-danger;
+}

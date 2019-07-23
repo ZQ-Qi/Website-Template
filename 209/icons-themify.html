@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Kharna-Admin Dashboard</title>
+
+		<!--favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+		<!--Bootstrap.min css-->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+		<!--mCustomScrollbar css-->
+		<link rel="stylesheet" href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css">
+
+		<!--Style css-->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!--Icons css-->
+		<link rel="stylesheet" href="assets/css/icons.css">
+
+		<!--Sidemenu css-->
+		<link rel="stylesheet" href="assets/plugins/toggle-menu/sidemenu.css">
+
+	</head>
+
+	<body class="app ">
+
+		<div id="spinner"></div>
+
+		<div id="app">
+			<div class="main-wrapper" >
+				<nav class="navbar navbar-expand-lg main-navbar">
+					<a class="header-brand" href="index.html">
+						<img src="assets/img/brand/logo.png" class="header-brand-img" alt="Kharna-Admin  logo">
+					</a>
+					<form class="form-inline mr-auto">
+						<ul class="navbar-nav mr-3">
+							<li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="ion ion-navicon-round"></i></a></li>
+							<li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-md-none navsearch"><i class="ion ion-search"></i></a></li>
+						</ul>
+						<div class="search-element">
+							<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-primary" type="submit"><i class="ion ion-search"></i></button>
+						</div>
+					</form>
+					<ul class="navbar-nav navbar-right">
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="ion-ios-email-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Messages
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-1.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Stewart Ball</b>
+													<p>Your template awesome</p>
+												</div>
+												<div class="time">6 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-2.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Jonathan North</b>
+													<p>Your Order Shipped.....</p>
+												</div>
+												<div class="time">45 mins ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-4.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Victor Taylor</b>
+													<p>Hi!, I' am web developer</p>
+												</div>
+												<div class="time"> 8 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-3.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Ruth	Arnold</b>
+													<p>Hi!, I' am web designer</p>
+												</div>
+												<div class="time"> 3 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-5.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Sam	Lyman</b>
+													<p>Hi!, I' am java developer</p>
+												</div>
+												<div class="time"> 15 mintues ago</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg beep"><i class="ion-ios-bell-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Notifications
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-exclamation-triangle text-danger"></i>
+										<div class="dropdown-item-desc">
+											<b>Error message occurred....</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-warning"></i>
+										<div class="dropdown-item-desc">
+											<b> Adding new people</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-shopping-cart text-success"></i>
+										<div class="dropdown-item-desc">
+											<b>Your items Arrived</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-comment text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>New Message received</b> <div class="float-right"><span class="badge badge-pill badge-danger badge-sm">67</span></div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle">
+							<a href="#" class="nav-link nav-link-lg full-screen-link">
+								<i class="ion-arrow-expand"  id="fullscreen-button"></i>
+							</a>
+						</li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+							<img src="assets/img/avatar/avatar-1.jpeg" alt="profile-user" class="rounded-circle w-32">
+							<div class="d-sm-none d-lg-inline-block">Jessica Lee</div></a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-android-person"></i> Profile
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion-android-drafts"></i> Messages
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-gear-a"></i> Settings
+								</a>
+								<a href="#" class="dropdown-item has-icon">
+									<i class="ion-ios-redo"></i> Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+
+				<aside class="app-sidebar">
+					<div class="app-sidebar__user">
+					    <div class="dropdown">
+							<a class="nav-link pl-2 pr-2 leading-none d-flex" data-toggle="dropdown" href="#">
+								<img alt="image" src="assets/img/avatar/avatar-1.jpeg" class=" avatar-md rounded-circle">
+								<span class="ml-2 d-lg-block">
+									<span class="text-white app-sidebar__user-name mt-5">Jessica Lee</span><br>
+									<span class="text-muted app-sidebar__user-name text-sm"> Web-Designer</span>
+								</span>
+							</a>
+						</div>
+					</div>
+					<ul class="side-menu">
+						<li class="slide">
+							<a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Dashboard</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a class="slide-item"  href="index.html"><span>Dashboard 01</span></a></li>
+								<li><a class="slide-item" href="index2.html"><span>Dashboard 02</span></a></li>
+								<li><a class="slide-item" href="index3.html"><span>Dashboard 03</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="side-menu__item" href="widgets.html"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">Widgets</span></a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tasks"></i><span class="side-menu__label">UI Elements</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="elements.html" class="slide-item"> Elements</a></li>
+								<li><a href="buttons.html" class="slide-item"> Buttons</a></li>
+								<li><a href="toastr.html" class="slide-item"> Toastr</a></li>
+								<li><a href="calender.html" class="slide-item"> Calendar</a></li>
+								<li><a href="rangesliders.html" class="slide-item"> Rangeslider</a></li>
+								<li><a href="modals.html" class="slide-item"> Modals</a></li>
+								<li><a href="timeline.html" class="slide-item"> Timeline</a></li>
+								<li><a href="invoice.html" class="slide-item"> Invoice</a></li>
+								<li><a href="users.html" class="slide-item"> Users List</a></li>
+								<li><a href="mailinbox.html" class="slide-item"> Mail-inbox</a></li>
+								<li><a href="mail-compose.html" class="slide-item"> Mail-Compose</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+						    <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-paw"></i><span class="side-menu__label">Icons</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="icons-ion.html" class="slide-item"> Ion Icons</a></li>
+								<li><a href="icons-fontawesome.html" class="slide-item"> Font Awesome</a></li>
+								<li><a href="icons-feather.html" class="slide-item"> Feather Awesome</a></li>
+								<li><a href="icons-materialdesign.html" class="slide-item"> Material Design</a></li>
+								<li><a href="icons-themify.html" class="slide-item"> Themify</a></li>
+								<li><a href="icons-simpleline.html" class="slide-item"> Simple line</a></li>
+								<li><a href="icons-pe7.html" class="slide-item"> pe7</a></li>
+								<li><a href="icons-flag.html" class="slide-item"> Flag Icons</a></li>
+								<li><a href="icons-weather.html" class="slide-item"> Weather Icons</a></li>
+								<li><a href="icons-typicons.html" class="slide-item"> Typicons</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-table"></i><span class="side-menu__label">Tables</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="table.html" class="slide-item">Basic Tables</a></li>
+								<li><a href="datatables.html" class="slide-item"> Data Tables</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-file-text"></i><span class="side-menu__label">Forms</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="formelements.html" class="slide-item"> Form Elements</a></li>
+								<li><a href="formadvanced.html" class="slide-item"> Advanced Form</a></li>
+								<li><a href="formeditor.html" class="slide-item"> Form Editor</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-bar-chart"></i><span class="side-menu__label">Charts</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="chartjs.html" class="slide-item">Chart Js</a></li>
+								<li><a href="flotcharts.html" class="slide-item"> Flot Charts</a></li>
+								<li><a href="barcharts.html" class="slide-item"> Bar Charts</a></li>
+								<li><a href="echart.html" class="slide-item"> ECharts</a></li>
+								<li><a href="chartist.html" class="slide-item"> Chartist</a></li>
+								<li><a href="morris.html" class="slide-item"> Morris Charts</a></li>
+								<li><a href="othercharts.html" class="slide-item"> Other Charts</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-map"></i><span class="side-menu__label">Maps</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="maps.html" class="slide-item"> Google Maps</a></li>
+								<li><a href="vector-map.html" class="slide-item">Vector Maps</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-pie-chart"></i><span class="side-menu__label">Pages</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="profile.html" class="slide-item"> Profile</a></li>
+								<li><a href="pricing-tables.html" class="slide-item"> Pricing Tables</a></li>
+								<li><a href="gallery.html" class="slide-item"> Gallery</a></li>
+								<li><a href="shop.html" class="slide-item"> Shop</a></li>
+								<li><a href="shop-cart.html" class="slide-item"> Shop Cart</a></li>
+								<li><a href="terms.html" class="slide-item"> Terms and Conditions</a></li>
+								<li><a href="register.html" class="slide-item"> Register</a></li>
+								<li><a href="login.html" class="slide-item"> Login</a></li>
+								<li><a href="forgot.html" class="slide-item"> Forgot Password</a></li>
+								<li><a href="reset.html" class="slide-item"> Reset Password</a></li>
+								<li><a href="under-construction.html" class="slide-item"> Under Construction</a></li>
+								<li><a href="lockscreen.html" class="slide-item"> Lock Screen</a></li>
+								<li><a href="404.html" class="slide-item"> 404</a></li>
+								<li><a href="505.html" class="slide-item"> 505</a></li>
+								<li><a href="emptypage.html" class="slide-item"> Empty  Page</a></li>
+							</ul>
+						</li>
+					</ul>
+				</aside>
+
+				<div class="app-content">
+					<section class="section">
+                    	<ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Icons</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Themify Icons</li>
+                        </ol>
+
+						<div class="section-body">
+							<div class="card">
+								<div class="card-header">
+									<h4>Themify Icons</h4>
+								</div>
+								<div class="card-body">
+									<ul id="icons" class="icons icons-item">
+										<li class="ti-arrow-up" data-toggle="tooltip" title="ti-arrow-up"></li>
+										<li class="ti-arrow-right" data-toggle="tooltip" title="ti-arrow-right"></li>
+										<li class="ti-arrow-left" data-toggle="tooltip" title="ti-arrow-left"></li>
+										<li class="ti-arrow-down" data-toggle="tooltip" title="ti-arrow-down"></li>
+										<li class="ti-arrows-vertical" data-toggle="tooltip" title="ti-arrows-vertical"></li>
+										<li class="ti-arrows-horizontal" data-toggle="tooltip" title="ti-arrows-horizontal"></li>
+										<li class="ti-angle-up" data-toggle="tooltip" title="ti-angle-up"></li>
+										<li class="ti-angle-right" data-toggle="tooltip" title="ti-angle-right"></li>
+										<li class="ti-angle-left" data-toggle="tooltip" title="ti-angle-left"></li>
+										<li class="ti-angle-down" data-toggle="tooltip" title="ti-angle-down"></li>
+										<li class="ti-angle-double-up" data-toggle="tooltip" title="ti-angle-double-up"></li>
+										<li class="ti-angle-double-right" data-toggle="tooltip" title="ti-angle-double-right"></li>
+										<li class="ti-angle-double-left" data-toggle="tooltip" title="ti-angle-double-left"></li>
+										<li class="ti-angle-double-down" data-toggle="tooltip" title="ti-angle-double-down"></li>
+										<li class="ti-move" data-toggle="tooltip" title="ti-move"></li>
+										<li class="ti-fullscreen" data-toggle="tooltip" title="ti-fullscreen"></li>
+										<li class="ti-arrow-top-right" data-toggle="tooltip" title="ti-arrow-top-right"></li>
+										<li class="ti-arrow-top-left" data-toggle="tooltip" title="ti-arrow-top-left"></li>
+										<li class="ti-arrow-circle-up" data-toggle="tooltip" title="ti-arrow-circle-up"></li>
+										<li class="ti-arrow-circle-right" data-toggle="tooltip" title="ti-arrow-circle-right"></li>
+										<li class="ti-arrow-circle-left" data-toggle="tooltip" title="ti-arrow-circle-left"></li>
+										<li class="ti-arrow-circle-down" data-toggle="tooltip" title="ti-arrow-circle-down"></li>
+										<li class="ti-arrows-corner" data-toggle="tooltip" title="ti-arrows-corner"></li>
+										<li class="ti-split-v" data-toggle="tooltip" title="ti-split-v"></li>
+										<li class="ti-split-v-alt" data-toggle="tooltip" title="ti-split-v-alt"></li>
+										<li class="ti-split-h" data-toggle="tooltip" title="ti-split-h"></li>
+										<li class="ti-hand-point-up" data-toggle="tooltip" title="ti-hand-point-up"></li>
+										<li class="ti-hand-point-right" data-toggle="tooltip" title="ti-hand-point-right"></li>
+										<li class="ti-hand-point-left" data-toggle="tooltip" title="ti-hand-point-left"></li>
+										<li class="ti-hand-point-down" data-toggle="tooltip" title="ti-hand-point-down"></li>
+										<li class="ti-back-right" data-toggle="tooltip" title="ti-back-right"></li>
+										<li class="ti-back-left" data-toggle="tooltip" title="ti-back-left"></li>
+										<li class="ti-exchange-vertical" data-toggle="tooltip" title="ti-exchange-vertical"></li>
+										<li class="ti-wand" data-toggle="tooltip" title="ti-wand"></li>
+										<li class="ti-save" data-toggle="tooltip" title="ti-save"></li>
+										<li class="ti-save-alt" data-toggle="tooltip" title="ti-save-alt"></li>
+										<li class="ti-direction" data-toggle="tooltip" title="ti-direction"></li>
+										<li class="ti-direction-alt" data-toggle="tooltip" title="ti-direction-alt"></li>
+										<li class="ti-user" data-toggle="tooltip" title="ti-user"></li>
+										<li class="ti-link" data-toggle="tooltip" title="ti-link"></li>
+										<li class="ti-unlink" data-toggle="tooltip" title="ti-unlink"></li>
+										<li class="ti-trash" data-toggle="tooltip" title="ti-trash"></li>
+										<li class="ti-target" data-toggle="tooltip" title="ti-target"></li>
+										<li class="ti-tag" data-toggle="tooltip" title="ti-tag"></li>
+										<li class="ti-desktop" data-toggle="tooltip" title="ti-desktop"></li>
+										<li class="ti-tablet" data-toggle="tooltip" title="ti-tablet"></li>
+										<li class="ti-mobile" data-toggle="tooltip" title="ti-mobile"></li>
+										<li class="ti-email" data-toggle="tooltip" title="ti-email"></li>
+										<li class="ti-star" data-toggle="tooltip" title="ti-star"></li>
+										<li class="ti-spray" data-toggle="tooltip" title="ti-spray"></li>
+										<li class="ti-signal" data-toggle="tooltip" title="ti-signal"></li>
+										<li class="ti-shopping-cart" data-toggle="tooltip" title="ti-shopping-cart"></li>
+										<li class="ti-shopping-cart-full" data-toggle="tooltip" title="ti-shopping-cart-full"></li>
+										<li class="ti-settings" data-toggle="tooltip" title="ti-settings"></li>
+										<li class="ti-search" data-toggle="tooltip" title="ti-search"></li>
+										<li class="ti-zoom-in" data-toggle="tooltip" title="ti-zoom-in"></li>
+										<li class="ti-zoom-out" data-toggle="tooltip" title="ti-zoom-out"></li>
+										<li class="ti-cut" data-toggle="tooltip" title="ti-cut"></li>
+										<li class="ti-ruler" data-toggle="tooltip" title="ti-ruler"></li>
+										<li class="ti-ruler-alt-2" data-toggle="tooltip" title="ti-ruler-alt-2"></li>
+										<li class="ti-ruler-pencil" data-toggle="tooltip" title="ti-ruler-pencil"></li>
+										<li class="ti-ruler-alt" data-toggle="tooltip" title="ti-ruler-alt"></li>
+										<li class="ti-bookmark" data-toggle="tooltip" title="ti-bookmark"></li>
+										<li class="ti-bookmark-alt" data-toggle="tooltip" title="ti-bookmark-alt"></li>
+										<li class="ti-reload" data-toggle="tooltip" title="ti-reload"></li>
+										<li class="ti-plus" data-toggle="tooltip" title="ti-plus"></li>
+										<li class="ti-minus" data-toggle="tooltip" title="ti-minus"></li>
+										<li class="ti-close" data-toggle="tooltip" title="ti-close"></li>
+										<li class="ti-pin" data-toggle="tooltip" title="ti-pin"></li>
+										<li class="ti-pencil" data-toggle="tooltip" title="ti-pencil"></li>
+										<li class="ti-pencil-alt" data-toggle="tooltip" title="ti-pencil-alt"></li>
+										<li class="ti-paint-roller" data-toggle="tooltip" title="ti-paint-roller"></li>
+										<li class="ti-paint-bucket" data-toggle="tooltip" title="ti-paint-bucket"></li>
+										<li class="ti-na" data-toggle="tooltip" title="ti-na"></li>
+										<li class="ti-medall" data-toggle="tooltip" title="ti-medall"></li>
+										<li class="ti-medall-alt" data-toggle="tooltip" title="ti-medall-alt"></li>
+										<li class="ti-marker" data-toggle="tooltip" title="ti-marker"></li>
+										<li class="ti-marker-alt" data-toggle="tooltip" title="ti-marker-alt"></li>
+										<li class="ti-lock" data-toggle="tooltip" title="ti-lock"></li>
+										<li class="ti-unlock" data-toggle="tooltip" title="ti-unlock"></li>
+										<li class="ti-location-arrow" data-toggle="tooltip" title="ti-location-arrow"></li>
+										<li class="ti-layout" data-toggle="tooltip" title="ti-layout"></li>
+										<li class="ti-layers" data-toggle="tooltip" title="ti-layers"></li>
+										<li class="ti-layers-alt" data-toggle="tooltip" title="ti-layers-alt"></li>
+										<li class="ti-key" data-toggle="tooltip" title="ti-key"></li>
+										<li class="ti-image" data-toggle="tooltip" title="ti-image"></li>
+										<li class="ti-heart" data-toggle="tooltip" title="ti-heart"></li>
+										<li class="ti-heart-broken" data-toggle="tooltip" title="ti-heart-broken"></li>
+										<li class="ti-hand-stop" data-toggle="tooltip" title="ti-hand-stop"></li>
+										<li class="ti-hand-open" data-toggle="tooltip" title="ti-hand-open"></li>
+										<li class="ti-hand-drag" data-toggle="tooltip" title="ti-hand-drag"></li>
+										<li class="ti-flag" data-toggle="tooltip" title="ti-flag"></li>
+										<li class="ti-flag-alt" data-toggle="tooltip" title="ti-flag-alt"></li>
+										<li class="ti-flag-alt-2" data-toggle="tooltip" title="ti-flag-alt-2"></li>
+										<li class="ti-eye" data-toggle="tooltip" title="ti-eye"></li>
+										<li class="ti-import" data-toggle="tooltip" title="ti-import"></li>
+										<li class="ti-export" data-toggle="tooltip" title="ti-export"></li>
+										<li class="ti-cup" data-toggle="tooltip" title="ti-cup"></li>
+										<li class="ti-crown" data-toggle="tooltip" title="ti-crown"></li>
+										<li class="ti-comments" data-toggle="tooltip" title="ti-comments"></li>
+										<li class="ti-comment" data-toggle="tooltip" title="ti-comment"></li>
+										<li class="ti-comment-alt" data-toggle="tooltip" title="ti-comment-alt"></li>
+										<li class="ti-thought" data-toggle="tooltip" title="ti-thought"></li>
+										<li class="ti-clip" data-toggle="tooltip" title="ti-clip"></li>
+										<li class="ti-check" data-toggle="tooltip" title="ti-check"></li>
+										<li class="ti-check-box" data-toggle="tooltip" title="ti-check-box"></li>
+										<li class="ti-camera" data-toggle="tooltip" title="ti-camera"></li>
+										<li class="ti-announcement" data-toggle="tooltip" title="ti-announcement"></li>
+										<li class="ti-brush" data-toggle="tooltip" title="ti-brush"></li>
+										<li class="ti-brush-alt" data-toggle="tooltip" title="ti-brush-alt"></li>
+										<li class="ti-palette" data-toggle="tooltip" title="ti-palette"></li>
+										<li class="ti-briefcase" data-toggle="tooltip" title="ti-briefcase"></li>
+										<li class="ti-bolt" data-toggle="tooltip" title="ti-bolt"></li>
+										<li class="ti-bolt-alt" data-toggle="tooltip" title="ti-bolt-alt"></li>
+										<li class="ti-blackboard" data-toggle="tooltip" title="ti-blackboard"></li>
+										<li class="ti-bag" data-toggle="tooltip" title="ti-bag"></li>
+										<li class="ti-world" data-toggle="tooltip" title="ti-world"></li>
+										<li class="ti-wheelchair" data-toggle="tooltip" title="ti-wheelchair"></li>
+										<li class="ti-car" data-toggle="tooltip" title="ti-car"></li>
+										<li class="ti-truck" data-toggle="tooltip" title="ti-truck"></li>
+										<li class="ti-timer" data-toggle="tooltip" title="ti-timer"></li>
+										<li class="ti-ticket" data-toggle="tooltip" title="ti-ticket"></li>
+										<li class="ti-thumb-up" data-toggle="tooltip" title="ti-thumb-up"></li>
+										<li class="ti-thumb-down" data-toggle="tooltip" title="ti-thumb-down"></li>
+										<li class="ti-stats-up" data-toggle="tooltip" title="ti-stats-up"></li>
+										<li class="ti-stats-down" data-toggle="tooltip" title="ti-stats-down"></li>
+										<li class="ti-shine" data-toggle="tooltip" title="ti-shine"></li>
+										<li class="ti-shift-right" data-toggle="tooltip" title="ti-shift-right"></li>
+										<li class="ti-shift-left" data-toggle="tooltip" title="ti-shift-left"></li>
+										<li class="ti-shift-right-alt" data-toggle="tooltip" title="ti-shift-right-alt"></li>
+										<li class="ti-shift-left-alt" data-toggle="tooltip" title="ti-shift-left-alt"></li>
+										<li class="ti-shield" data-toggle="tooltip" title="ti-shield"></li>
+										<li class="ti-notepad" data-toggle="tooltip" title="ti-notepad"></li>
+										<li class="ti-server" data-toggle="tooltip" title="ti-server"></li>
+										<li class="ti-pulse" data-toggle="tooltip" title="ti-pulse"></li>
+										<li class="ti-printer" data-toggle="tooltip" title="ti-printer"></li>
+										<li class="ti-power-off" data-toggle="tooltip" title="ti-power-off"></li>
+										<li class="ti-plug" data-toggle="tooltip" title="ti-plug"></li>
+										<li class="ti-pie-chart" data-toggle="tooltip" title="ti-pie-chart"></li>
+										<li class="ti-panel" data-toggle="tooltip" title="ti-panel"></li>
+										<li class="ti-package" data-toggle="tooltip" title="ti-package"></li>
+										<li class="ti-music" data-toggle="tooltip" title="ti-music"></li>
+										<li class="ti-music-alt" data-toggle="tooltip" title="ti-music-alt"></li>
+										<li class="ti-mouse" data-toggle="tooltip" title="ti-mouse"></li>
+										<li class="ti-mouse-alt" data-toggle="tooltip" title="ti-mouse-alt"></li>
+										<li class="ti-money" data-toggle="tooltip" title="ti-money"></li>
+										<li class="ti-microphone" data-toggle="tooltip" title="ti-microphone"></li>
+										<li class="ti-menu" data-toggle="tooltip" title="ti-menu"></li>
+										<li class="ti-menu-alt" data-toggle="tooltip" title="ti-menu-alt"></li>
+										<li class="ti-map" data-toggle="tooltip" title="ti-map"></li>
+										<li class="ti-map-alt" data-toggle="tooltip" title="ti-map-alt"></li>
+										<li class="ti-location-pin" data-toggle="tooltip" title="ti-location-pin"></li>
+										<li class="ti-light-bulb" data-toggle="tooltip" title="ti-light-bulb"></li>
+										<li class="ti-info" data-toggle="tooltip" title="ti-info"></li>
+										<li class="ti-infinite" data-toggle="tooltip" title="ti-infinite"></li>
+										<li class="ti-id-badge" data-toggle="tooltip" title="ti-id-badge"></li>
+										<li class="ti-hummer" data-toggle="tooltip" title="ti-hummer"></li>
+										<li class="ti-home" data-toggle="tooltip" title="ti-home"></li>
+										<li class="ti-help" data-toggle="tooltip" title="ti-help"></li>
+										<li class="ti-headphone" data-toggle="tooltip" title="ti-headphone"></li>
+										<li class="ti-harddrives" data-toggle="tooltip" title="ti-harddrives"></li>
+										<li class="ti-harddrive" data-toggle="tooltip" title="ti-harddrive"></li>
+										<li class="ti-gift" data-toggle="tooltip" title="ti-gift"></li>
+										<li class="ti-game" data-toggle="tooltip" title="ti-game"></li>
+										<li class="ti-filter" data-toggle="tooltip" title="ti-filter"></li>
+										<li class="ti-files" data-toggle="tooltip" title="ti-files"></li>
+										<li class="ti-file" data-toggle="tooltip" title="ti-file"></li>
+										<li class="ti-zip" data-toggle="tooltip" title="ti-zip"></li>
+										<li class="ti-folder" data-toggle="tooltip" title="ti-folder"></li>
+										<li class="ti-envelope" data-toggle="tooltip" title="ti-envelope"></li>
+										<li class="ti-dashboard" data-toggle="tooltip" title="ti-dashboard"></li>
+										<li class="ti-cloud" data-toggle="tooltip" title="ti-cloud"></li>
+										<li class="ti-cloud-up" data-toggle="tooltip" title="ti-cloud-up"></li>
+										<li class="ti-cloud-down" data-toggle="tooltip" title="ti-cloud-down"></li>
+										<li class="ti-clipboard" data-toggle="tooltip" title="ti-clipboard"></li>
+										<li class="ti-calendar" data-toggle="tooltip" title="ti-calendar"></li>
+										<li class="ti-book" data-toggle="tooltip" title="ti-book"></li>
+										<li class="ti-bell" data-toggle="tooltip" title="ti-bell"></li>
+										<li class="ti-basketball" data-toggle="tooltip" title="ti-basketball"></li>
+										<li class="ti-bar-chart" data-toggle="tooltip" title="ti-bar-chart"></li>
+										<li class="ti-bar-chart-alt" data-toggle="tooltip" title="ti-bar-chart-alt"></li>
+										<li class="ti-archive" data-toggle="tooltip" title="ti-archive"></li>
+										<li class="ti-anchor" data-toggle="tooltip" title="ti-anchor"></li>
+										<li class="ti-alert" data-toggle="tooltip" title="ti-alert"></li>
+										<li class="ti-alarm-clock" data-toggle="tooltip" title="ti-alarm-clock"></li>
+										<li class="ti-agenda" data-toggle="tooltip" title="ti-agenda"></li>
+										<li class="ti-write" data-toggle="tooltip" title="ti-write"></li>
+										<li class="ti-wallet" data-toggle="tooltip" title="ti-wallet"></li>
+										<li class="ti-video-clapper" data-toggle="tooltip" title="ti-video-clapper"></li>
+										<li class="ti-video-camera" data-toggle="tooltip" title="ti-video-camera"></li>
+										<li class="ti-vector" data-toggle="tooltip" title="ti-vector"></li>
+										<li class="ti-support" data-toggle="tooltip" title="ti-support"></li>
+										<li class="ti-stamp" data-toggle="tooltip" title="ti-stamp"></li>
+										<li class="ti-slice" data-toggle="tooltip" title="ti-slice"></li>
+										<li class="ti-shortcode" data-toggle="tooltip" title="ti-shortcode"></li>
+										<li class="ti-receipt" data-toggle="tooltip" title="ti-receipt"></li>
+										<li class="ti-pin2" data-toggle="tooltip" title="ti-pin2"></li>
+										<li class="ti-pin-alt" data-toggle="tooltip" title="ti-pin-alt"></li>
+										<li class="ti-pencil-alt2" data-toggle="tooltip" title="ti-pencil-alt2"></li>
+										<li class="ti-eraser" data-toggle="tooltip" title="ti-eraser"></li>
+										<li class="ti-more" data-toggle="tooltip" title="ti-more"></li>
+										<li class="ti-more-alt" data-toggle="tooltip" title="ti-more-alt"></li>
+										<li class="ti-microphone-alt" data-toggle="tooltip" title="ti-microphone-alt"></li>
+										<li class="ti-magnet" data-toggle="tooltip" title="ti-magnet"></li>
+										<li class="ti-line-double" data-toggle="tooltip" title="ti-line-double"></li>
+										<li class="ti-line-dotted" data-toggle="tooltip" title="ti-line-dotted"></li>
+										<li class="ti-line-dashed" data-toggle="tooltip" title="ti-line-dashed"></li>
+										<li class="ti-ink-pen" data-toggle="tooltip" title="ti-ink-pen"></li>
+										<li class="ti-info-alt" data-toggle="tooltip" title="ti-info-alt"></li>
+										<li class="ti-help-alt" data-toggle="tooltip" title="ti-help-alt"></li>
+										<li class="ti-headphone-alt" data-toggle="tooltip" title="ti-headphone-alt"></li>
+										<li class="ti-gallery" data-toggle="tooltip" title="ti-gallery"></li>
+										<li class="ti-face-smile" data-toggle="tooltip" title="ti-face-smile"></li>
+										<li class="ti-face-sad" data-toggle="tooltip" title="ti-face-sad"></li>
+										<li class="ti-credit-card" data-toggle="tooltip" title="ti-credit-card"></li>
+										<li class="ti-comments-smiley" data-toggle="tooltip" title="ti-comments-smiley"></li>
+										<li class="ti-time" data-toggle="tooltip" title="ti-time"></li>
+										<li class="ti-share" data-toggle="tooltip" title="ti-share"></li>
+										<li class="ti-share-alt" data-toggle="tooltip" title="ti-share-alt"></li>
+										<li class="ti-rocket" data-toggle="tooltip" title="ti-rocket"></li>
+										<li class="ti-new-window" data-toggle="tooltip" title="ti-new-window"></li>
+										<li class="ti-rss" data-toggle="tooltip" title="ti-rss"></li>
+										<li class="ti-rss-alt" data-toggle="tooltip" title="ti-rss-alt"></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<footer class="main-footer">
+					<div class="text-center">
+						Copyright &copy;Kharna-Admin 2018. Design By<a href="https://spruko.com/"> Spruko</a>
+					</div>
+				</footer>
+
+			</div>
+		</div>
+
+		<!--Jquery.min js-->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!--popper js-->
+		<script src="assets/js/popper.js"></script>
+
+		<!--Tooltip js-->
+		<script src="assets/js/tooltip.js"></script>
+
+		<!--Bootstrap.min js-->
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--Jquery.nicescroll.min js-->
+		<script src="assets/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+
+		<!--Scroll-up-bar.min js-->
+		<script src="assets/plugins/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+
+		<!--mCustomScrollbar js-->
+		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+		<!--Sidemenu js-->
+		<script src="assets/plugins/toggle-menu/sidemenu.js"></script>
+
+		<!--Scripts js-->
+		<script src="assets/js/scripts.js"></script>
+
+
+	</body>
+</html>

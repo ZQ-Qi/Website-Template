@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Installation | Neat</title>
+        <meta name="description" content=" Get started with Neat, Web Application kit and dashboard template. ">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        
+
+        
+        <link rel="stylesheet" href="../../css/neat.min.css">
+
+    </head>
+    <body>
+        
+
+        <div class="o-page">
+            
+
+<aside class="o-page__sidebar js-page-sidebar">
+    <div class="c-sidebar c-sidebar--docs c-sidebar--light u-border-right">
+
+        <a class="c-sidebar__brand u-pl-medium" href="../../">
+            <img class="c-sidebar__brand-img" src="../../img/logo.png" alt="Neat">
+            <span class="u-text-dark">Docs</span>
+        </a>
+        
+        <h4 class="c-sidebar__title u-text-bold u-text-small">
+            Getting Started
+        </h4>
+
+        <ul class="c-sidebar__list">
+            
+                
+                <li class="c-sidebar__item">
+                    <a class="c-sidebar__link " href="../../getting-started/"> Getting Started</a>
+                </li>
+                
+            
+                
+                <li class="c-sidebar__item">
+                    <a class="c-sidebar__link is-active" href="../../getting-started/installation/"> Installation</a>
+                </li>
+                
+            
+                
+                <li class="c-sidebar__item">
+                    <a class="c-sidebar__link " href="../../getting-started/build-system/"> Build System</a>
+                </li>
+                
+            
+                
+                <li class="c-sidebar__item">
+                    <a class="c-sidebar__link " href="../../getting-started/vendors/"> Vendors</a>
+                </li>
+                
+            
+        </ul>
+    </div>
+</aside>
+
+<div class="o-page__content">
+
+    
+<div class="c-navbar c-navbar--transparent">
+    <button class="c-sidebar-toggle js-sidebar-toggle">
+        <i class="feather icon-align-left"></i>
+    </button>
+
+
+    
+
+    <ol class="c-breadcrumb">
+      
+      
+        
+      
+        
+      
+      <li class="c-breadcrumb__item ">
+        
+          <a href="../../">Docs</a>
+        
+      </li>
+    
+      
+      <li class="c-breadcrumb__item ">
+        
+          <a href="../../getting-started/">Getting Started</a>
+        
+      </li>
+    
+      
+      <li class="c-breadcrumb__item is-active">
+        
+          Installation
+        
+      </li>
+    
+    </ol>
+
+    <a href="https://themeforest.net/user/zawia/portfolio" class="c-btn c-btn--info u-ml-auto u-hidden-down@mobile">
+        <i class="feather icon-shopping-cart u-mr-xsmall"></i>Buy Now
+    </a>
+    
+    <a href="mailto:support@zawiastudio.com" class="c-btn c-btn--secondary u-ml-small u-hidden-down@mobile">
+        <i class="feather icon-mail u-mr-xsmall"></i>Contact
+    </a>
+</div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 u-pr-zero">
+                <article class="c-doc-article">
+                    
+
+<h1 id="installation">Installation</h1>
+
+<p>Follow these simple steps to get up and running with Neat.</p>
+
+<h3 id="1-install-nodejs">1. Install NodeJS</h3>
+
+<p><a href="https://nodejs.org/en/">Download and install NodeJS</a> as Neat uses
+NodeJS &amp; npm to manage its dependencies.</p>
+
+
+
+
+<div class="c-snippet">
+    <div class="c-snippet__code c-snippet__code--shell">
+        <span class="c-snippet__copy u-mb-small c-tooltip c-tooltip--left" data-clipboard-action="copy" data-clipboard-target="#s1" aria-label="Copy">
+            <i class="feather icon-copy"></i>
+        </span>
+
+        <pre><code class="shell" id="s1">node -v</code></pre>
+    </div>
+</div>
+
+
+
+<h3 id="2-update-npm">2. Update NPM</h3>
+
+<p>Node comes with npm installed so you should have a version of npm. However, npm
+gets updated more frequently than Node does, so you’ll want to make sure it’s
+the latest version.</p>
+
+
+
+
+<div class="c-snippet">
+    <div class="c-snippet__code c-snippet__code--shell">
+        <span class="c-snippet__copy u-mb-small c-tooltip c-tooltip--left" data-clipboard-action="copy" data-clipboard-target="#s2" aria-label="Copy">
+            <i class="feather icon-copy"></i>
+        </span>
+
+        <pre><code class="shell" id="s2">npm install npm@latest -g</code></pre>
+    </div>
+</div>
+
+
+
+<h3 id="3-install-gulpjs">3. Install GulpJS</h3>
+
+<p>Neat uses GulpJS as its main build system, read more about <a href="https://zawiastudio.com/neat/docs/getting-started/build-system">how we use gulpJS</a>.</p>
+
+
+
+
+<div class="c-snippet">
+    <div class="c-snippet__code c-snippet__code--shell">
+        <span class="c-snippet__copy u-mb-small c-tooltip c-tooltip--left" data-clipboard-action="copy" data-clipboard-target="#s3" aria-label="Copy">
+            <i class="feather icon-copy"></i>
+        </span>
+
+        <pre><code class="shell" id="s3">npm install -g gulp</code></pre>
+    </div>
+</div>
+
+
+
+<h3 id="4-install-neat-s-dependencies">4. Install Neat&rsquo;s dependencies</h3>
+
+<p>Navigate to the root <code>/neat</code> directory and run the following command
+to install our local dependencies listed in <code>package.json</code>.</p>
+
+
+
+
+<div class="c-snippet">
+    <div class="c-snippet__code c-snippet__code--shell">
+        <span class="c-snippet__copy u-mb-small c-tooltip c-tooltip--left" data-clipboard-action="copy" data-clipboard-target="#s4" aria-label="Copy">
+            <i class="feather icon-copy"></i>
+        </span>
+
+        <pre><code class="shell" id="s4">npm install</code></pre>
+    </div>
+</div>
+
+
+
+<h3 id="5-you-re-ready-to-go">5. You&rsquo;re ready to go</h3>
+
+<p>Make sure you are at the root <code>/neat</code> directory and run the following
+command to run your project.</p>
+
+
+
+
+<div class="c-snippet">
+    <div class="c-snippet__code c-snippet__code--shell">
+        <span class="c-snippet__copy u-mb-small c-tooltip c-tooltip--left" data-clipboard-action="copy" data-clipboard-target="#s5" aria-label="Copy">
+            <i class="feather icon-copy"></i>
+        </span>
+
+        <pre><code class="shell" id="s5">gulp</code></pre>
+    </div>
+</div>
+
+
+
+
+
+<div class="c-snippet ">
+    <div class="c-snippet__render u-border-bottom-zero"><img src="../../img/getting-started.png" alt="Getting Started" /></div>
+</div>
+
+
+
+<p>Open <a href="http://localhost:3000">http://localhost:3000</a> in your browser, and 🚀</p>
+
+<hr />
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+
+<p>If you encounter problems with installing dependencies or running GulpJS commands,
+first delete the <code>/node_modules</code> directory generated by npm. Then, rerun <code>npm install</code>.</p>
+
+                </article>
+            </div>
+
+            <div class="col-lg-3 u-hidden-down@desktop">
+            	<div class="c-toc">
+	<strong class="u-opacity-medium u-text-uppercase u-text-xsmall u-mb-small u-block">
+		Contents:
+	</strong>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#installation">Installation</a>
+<ul>
+<li>
+<ul>
+<li><a href="#1-install-nodejs">1. Install NodeJS</a></li>
+<li><a href="#2-update-npm">2. Update NPM</a></li>
+<li><a href="#3-install-gulpjs">3. Install GulpJS</a></li>
+<li><a href="#4-install-neat-s-dependencies">4. Install Neat&rsquo;s dependencies</a></li>
+<li><a href="#5-you-re-ready-to-go">5. You&rsquo;re ready to go</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js" type="text/javascript"></script>
+        <script src="../../js/main.min.js" type="text/javascript"></script>
+
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88739867-4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-88739867-4');
+        </script>
+    </body>
+</html>

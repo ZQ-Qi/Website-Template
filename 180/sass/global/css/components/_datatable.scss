@@ -1,0 +1,119 @@
+/*---------------------------
+
+Start Datatable
+
+---------------------------*/
+
+.dataTables_wrapper{
+  .dataTables_paginate{
+    .paginate_button{
+      border-radius: $border-radius-0;
+      padding: $gaping-0 2px;
+      outline: none;
+      &:hover{
+        border: 1px solid transparent;
+        padding: $gaping-0 2px;
+        background: transparent;
+      }
+    }
+  }
+}
+.pagination{
+  > li{
+   &:last-child, &:first-child{
+     > a, > span{
+       border-radius: $border-radius-0;
+     }
+   }
+  }
+}
+.data-table-section{
+  .pagination{
+    > li{
+      > a, > span {
+        margin-left: -3px;
+      }
+    }
+  }
+}
+
+table.dataTable.display tbody tr.odd > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+  background-color: $white-backgournd-color;
+}
+table.dataTable.display tbody tr:hover > .sorting_1, table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
+  background-color: #f6f6f6;
+}
+table.dataTable{
+  tfoot{
+    th, td {
+      border-top: 1px solid $normal-light-text-color;
+    }
+  }
+}
+div.dataTables_wrapper{
+  div.dataTables_filter{
+    input {
+      border-radius: $border-radius-0;
+    }
+  }
+  div.dataTables_length{
+    select {
+      border-radius: $border-radius-0;
+    }
+  }
+}
+table.dataTable{
+  border: 1px solid $normal-light-text-color;
+  thead{
+    th, td {
+      border-bottom: 1px solid $normal-light-text-color;
+    }
+  }
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  background-color: $main-site-color;
+  border-color: $main-site-color;
+}
+
+td.highlight {
+  font-weight: bold;
+  color: $main-site-color;
+}
+tfoot{
+  input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+}
+/*---- Start responsive Datatable ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+  table.dataTable {
+    display: block;
+    overflow-x: auto;
+    width: 100% !important;
+  }
+}
+
+@media (max-width:479px) {
+
+}
+/*---- End responsive Datatable ----*/
+
+/*---------------------------
+
+End Datatable
+
+---------------------------*/

@@ -1,0 +1,285 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/sweetalert/sweetalert.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/sweetalert/sweetalert.min.css"> <!-- customization -->
+<link rel="stylesheet" type="text/css" href="libs/prism/prism.css"> <!-- original -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>SweetAlert</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                <div class="container-fluid">
+                    <h4>Basic example</h4>
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <p><button class="btn btn-primary sweet-1">Try It</button></p>
+                        </div>
+                        <div class="col-xl-10">
+<pre class="code">
+<code class="language-javascript">swal("Here's a message!")</code>
+</pre>
+                        </div>
+                    </div>
+
+                    <h4>A title with a text under</h4>
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <p><button class="btn btn-primary sweet-2">Try It</button></p>
+                        </div>
+                        <div class="col-xl-10">
+<pre>
+<code class="language-javascript">swal("Here's a message!", "It's pretty, isn't it?")</code></pre>
+                        </div>
+                    </div>
+
+                    <h4>A success message!</h4>
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <p><button class="btn btn-primary sweet-3">Try It</button></p>
+                        </div>
+                        <div class="col-xl-10">
+                            <pre><code class="language-javascript">swal("Good job!", "You clicked the button!", "success")</code></pre>
+                        </div>
+                    </div>
+
+                    <h4>A warning message, with a function attached to the "Confirm" button...</h4>
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <p><button class="btn btn-primary sweet-4">Try It</button></p>
+                        </div>
+                        <div class="col-xl-10">
+<pre>
+<code class="language-javascript">swal({
+  title: "Are you sure?",
+  text: "Your will not be able to recover this imaginary file!",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonClass: "btn-danger",
+  confirmButtonText: "Yes, delete it!",
+  closeOnConfirm: false
+},
+function(){
+  swal("Deleted!", "Your imaginary file has been deleted.", "success");
+});</code>
+</pre>
+                        </div>
+                    </div>
+
+                    <h4>...and by passing a parameter, you can execute something else for "Cancel".</h4>
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <p><button class="btn btn-primary sweet-5">Try It</button></p>
+                        </div>
+                        <div class="col-xl-10">
+<pre><code class="language-javascript">swal({
+  title: "Are you sure?",
+  text: "You will not be able to recover this imaginary file!",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonClass: "btn-danger",
+  confirmButtonText: "Yes, delete it!",
+  cancelButtonText: "No, cancel plx!",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm) {
+  if (isConfirm) {
+    swal("Deleted!", "Your imaginary file has been deleted.", "success");
+  } else {
+    swal("Cancelled", "Your imaginary file is safe :)", "error");
+  }
+});</code></pre>
+                        </div>
+                    </div>
+
+                    <h4>A message with a custom icon</h4>
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <p><button class="btn btn-primary sweet-6">Try It</button></p>
+                        </div>
+                        <div class="col-xl-10">
+<pre>
+<code class="language-javascript">
+swal({
+  title: "Sweet!",
+  text: "Here's a custom image.",
+  imageUrl: 'thumbs-up.jpg'
+});</code></pre>
+                        </div>
+                    </div>
+
+                    <h4>A replacement for the "prompt" function</h4>
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <p><button class="btn btn-primary sweet-7">Try It</button></p>
+                        </div>
+                        <div class="col-xl-10">
+<pre>
+    <code class="language-javascript">swal({
+  title: "An input!",
+  text: "Write something interesting:",
+  type: "input",
+  showCancelButton: true,
+  closeOnConfirm: false,
+  inputPlaceholder: "Write something"
+}, function (inputValue) {
+  if (inputValue === false) return false;
+  if (inputValue === "") {
+    swal.showInputError("You need to write something!");
+    return false
+  }
+  swal("Nice!", "You wrote: " + inputValue, "success");
+});</code></pre>
+                        </div>
+                    </div>
+
+                    <h4>With a loader (for a AJAX requests)</h4>
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <p><button class="btn btn-primary sweet-8">Try It</button></p>
+                        </div>
+                        <div class="col-xl-10">
+<pre class="code"><code class="language-javascript">swal({
+  title: "Ajax request example",
+  text: "Submit to run ajax request",
+  type: "info",
+  showCancelButton: true,
+  closeOnConfirm: false,
+  showLoaderOnConfirm: true
+}, function () {
+  setTimeout(function () {
+    swal("Ajax request finished!");
+  }, 2000);
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/sweetalert/sweetalert.min.js"></script>
+<script src="libs/prism/prism.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        document.querySelector('.sweet-1').onclick = function(){
+            swal("Here's a message!");
+        };
+
+        document.querySelector('.sweet-2').onclick = function(){
+            swal("Here's a message!", "It's pretty, isn't it?")
+        };
+
+        document.querySelector('.sweet-3').onclick = function(){
+            swal({
+                title: "Good Job!",
+                text: "You clicked the button!",
+                type: "success",
+                confirmButtonClass: 'btn-success',
+                confirmButtonText: "Success"
+            });
+        };
+
+        document.querySelector('.sweet-4').onclick = function(){
+            swal({
+                    title: "Are you sure?",
+                    text: "You will not be able to recover this imaginary file!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: 'btn-warning',
+                    confirmButtonText: 'Yes, delete it!',
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function(){
+                    swal({
+                        title: "Deleted!",
+                        text: "Your imaginary file has been deleted!",
+                        type: "success",
+                        confirmButtonClass: 'btn-success',
+                        confirmButtonText: "Success"
+                    });
+                });
+        };
+
+        document.querySelector('.sweet-5').onclick = function(){
+            swal({
+                    title: "Are you sure?",
+                    text: "You will not be able to recover this imaginary file!",
+                    type: "error",
+                    showCancelButton: true,
+                    confirmButtonClass: 'btn-danger',
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: "No, cancel plx!",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function(isConfirm){
+                    if (isConfirm){
+                        swal("Deleted!", "Your imaginary file has been deleted!", "success");
+                    } else {
+                        swal("Cancelled", "Your imaginary file is safe :)", "error");
+                    }
+                });
+        };
+
+        document.querySelector('.sweet-6').onclick = function(){
+            swal({
+                title: "Sweet!",
+                text: "Here's a custom image.",
+                imageUrl: 'assets/img/thumbs-up.jpg'
+            });
+        };
+
+        document.querySelector('.sweet-7').onclick = function () {
+            swal({
+                title: "An input!",
+                text: "Write something interesting:",
+                type: "input",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                animation: "slide-from-top",
+                inputPlaceholder: "Write something"
+            }, function (inputValue) {
+                if (inputValue === false) return false;
+                if (inputValue === "") {
+                    swal.showInputError("You need to write something!");
+                    return false
+                }
+                swal("Nice!", "You wrote: " + inputValue, "success");
+            });
+        };
+
+        document.querySelector('.sweet-8').onclick = function () {
+            swal({
+                title: "Ajax request example",
+                text: "Submit to run ajax request",
+                type: "info",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true,
+                confirmButtonClass: 'btn-info',
+                confirmButtonText: 'Submit'
+            }, function () {
+                setTimeout(function () {
+                    swal("Ajax request finished!");
+                }, 2000);
+            });
+        };
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

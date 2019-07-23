@@ -1,0 +1,520 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/izi-modal/css/iziModal.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/izi-modal/izi-modal.min.css"> <!-- Original -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Modal</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card ">
+                                    <div class="card-block ks-card-block-table">
+                                        <h5 class="card-title">Jquery IZIMODAL</h5>
+
+                                        <table class="table ks-cells-vertical-align-middle">
+                                            <tr>
+                                                <td width="200">Default Modal</td>
+                                                <td>
+                                                    <button class="btn btn-outline-primary ks-izi-modal-trigger" data-target="#ks-izi-modal-basic">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Video Modal (Iframe)</td>
+                                                <td>
+                                                    <button class="btn btn-outline-primary ks-izi-modal-trigger" data-target="#ks-izi-modal-video">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Alert Top Modal</td>
+                                                <td>
+                                                    <button class="btn btn-outline-primary ks-izi-modal-trigger" data-target="#ks-izi-modal-alert">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Alert Center Modal</td>
+                                                <td>
+                                                    <button class="btn btn-outline-primary ks-izi-modal-trigger" data-target="#ks-izi-modal-alert2">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Large Text Modal</td>
+                                                <td>
+                                                    <button class="btn btn-outline-primary ks-izi-modal-trigger" data-target="#ks-izi-modal-large">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="ks-table-row-separator">
+                                                <td colspan="2"><span class="ks-bold">Color Variations</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Primary Modal</td>
+                                                <td>
+                                                    <button class="btn btn-outline-primary ks-izi-modal-trigger" data-target="#ks-izi-modal-primary">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Primary Alert</td>
+                                                <td>
+                                                    <button class="btn btn-outline-primary ks-izi-modal-trigger" data-target="#ks-izi-modal-alert-primary">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Success Modal</td>
+                                                <td>
+                                                    <button class="btn btn-outline-success ks-izi-modal-trigger" data-target="#ks-izi-modal-success">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Success Alert</td>
+                                                <td>
+                                                    <button class="btn btn-outline-success ks-izi-modal-trigger" data-target="#ks-izi-modal-alert-success">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Info Modal</td>
+                                                <td>
+                                                    <button class="btn btn-outline-info ks-izi-modal-trigger" data-target="#ks-izi-modal-info">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Info Alert</td>
+                                                <td>
+                                                    <button class="btn btn-outline-info ks-izi-modal-trigger" data-target="#ks-izi-modal-alert-info">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Warning Modal</td>
+                                                <td>
+                                                    <button class="btn btn-outline-warning ks-izi-modal-trigger" data-target="#ks-izi-modal-warning">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Warning Alert</td>
+                                                <td>
+                                                    <button class="btn btn-outline-warning ks-izi-modal-trigger" data-target="#ks-izi-modal-alert-warning">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Danger Modal</td>
+                                                <td>
+                                                    <button class="btn btn-outline-danger ks-izi-modal-trigger" data-target="#ks-izi-modal-danger">Launch</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Danger Alert</td>
+                                                <td>
+                                                    <button class="btn btn-outline-danger ks-izi-modal-trigger" data-target="#ks-izi-modal-alert-danger">Launch</button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-block ks-card-block-table">
+                                        <h5 class="card-title">Default bootstrap modals</h5>
+
+                                        <table class="table ks-cells-vertical-align-middle">
+                                            <tr>
+                                                <td width="200">Default Modal</td>
+                                                <td><button class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Launch</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Small modal</td>
+                                                <td><button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Launch</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Long content Modal</td>
+                                                <td><button class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg-content">Launch</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200">Horizontal Form Modal</td>
+                                                <td><button class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-horizontal-form">Launch</button></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BEGIN BOOTSTRAP MODALS -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
+                </p>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary ks-light" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bd-example-modal-lg-content" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary ks-light" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bd-example-modal-horizontal-form" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Text</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="Artisanal kale" id="example-text-input" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-search-input" class="col-2 col-form-label">Search</label>
+                        <div class="col-10">
+                            <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-email-input" class="col-2 col-form-label">Email</label>
+                        <div class="col-10">
+                            <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-url-input" class="col-2 col-form-label">URL</label>
+                        <div class="col-10">
+                            <input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
+                        <div class="col-10">
+                            <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+                        </div>
+                    </div>
+                    <fieldset class="form-group row">
+                        <legend class="col-form-legend col-sm-2">Radios</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                    Option one is this and that&mdash;be sure to include why it's great
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                    Option two can be something else and selecting it will deselect option one
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                                    Option three is disabled
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Checkbox</label>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox"> Check me out
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END BOOTSTRAP MODALS -->
+
+<!-- BEGIN IZI MODALS -->
+<div id="ks-izi-modal-basic"
+     class="ks-izi-modal"
+     data-iziModal-fullscreen="true"
+     data-iziModal-title="Welcome to the iziModal"
+     data-iziModal-subtitle="Elegant, responsive, flexible and lightweight modal plugin with jQuery."
+     data-iziModal-icon="la la-home"
+     data-iziModal-padding="20"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#3a529b">
+    Modal Content
+</div>
+<div id="ks-izi-modal-video" class="ks-izi-modal"></div>
+<div id="ks-izi-modal-alert"></div>
+<div id="ks-izi-modal-alert2"></div>
+<div id="ks-izi-modal-large"
+     class="ks-izi-modal">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore.</p>
+    <hr>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore. Dolorum perferendis, non nisi quisquam animi iusto, officiis eligendi eos, fugit, dolore corporis provident accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ea ad aspernatur, temporibus iusto cum autem repudiandae, delectus non voluptas corporis facere cumque! Qui accusantium ratione eum eligendi maiores velit ea porro voluptatibus architecto dolore.</p>
+</div>
+<div id="ks-izi-modal-primary"
+     class="ks-izi-modal"
+     data-iziModal-fullscreen="true"
+     data-iziModal-title="Welcome to the iziModal"
+     data-iziModal-icon="la la-home"
+     data-iziModal-padding="20"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#3a529b"
+     data-iziModal-transitionIn="comingIn"
+>
+    Modal Content
+</div>
+<div id="ks-izi-modal-alert-primary"
+     data-iziModal-title="Your message has been sent successfully"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#3a529b"
+     data-iziModal-width="600"
+     data-iziModal-timeout="10000"
+     data-iziModal-timeoutProgressbar="true"
+     data-iziModal-attached="top"
+></div>
+<div id="ks-izi-modal-success"
+     class="ks-izi-modal"
+     data-iziModal-fullscreen="true"
+     data-iziModal-title="Welcome to the iziModal"
+     data-iziModal-subtitle="Elegant, responsive, flexible and lightweight modal plugin with jQuery."
+     data-iziModal-icon="la la-home"
+     data-iziModal-padding="20"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#2ecc71">
+    Modal Content
+</div>
+<div id="ks-izi-modal-alert-success"
+     data-iziModal-title="Your message has been sent successfully"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#2ecc71"
+     data-iziModal-width="600"
+     data-iziModal-timeout="10000"
+     data-iziModal-timeoutProgressbar="true"
+     data-iziModal-attached="top"
+></div>
+<div id="ks-izi-modal-info"
+     class="ks-izi-modal"
+     data-iziModal-fullscreen="true"
+     data-iziModal-title="Welcome to the iziModal"
+     data-iziModal-subtitle="Elegant, responsive, flexible and lightweight modal plugin with jQuery."
+     data-iziModal-icon="la la-home"
+     data-iziModal-padding="20"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#22a7f0">
+    Modal Content
+</div>
+<div id="ks-izi-modal-alert-info"
+     data-iziModal-title="Your message has been sent successfully"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#22a7f0"
+     data-iziModal-width="600"
+     data-iziModal-timeout="10000"
+     data-iziModal-timeoutProgressbar="true"
+     data-iziModal-attached="top"
+></div>
+<div id="ks-izi-modal-warning"
+     class="ks-izi-modal"
+     data-iziModal-fullscreen="true"
+     data-iziModal-title="Welcome to the iziModal"
+     data-iziModal-subtitle="Elegant, responsive, flexible and lightweight modal plugin with jQuery."
+     data-iziModal-icon="la la-home"
+     data-iziModal-padding="20"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#debb0c">
+    Modal Content
+</div>
+<div id="ks-izi-modal-alert-warning"
+     data-iziModal-title="Your message has been sent successfully"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#debb0c"
+     data-iziModal-width="600"
+     data-iziModal-timeout="10000"
+     data-iziModal-timeoutProgressbar="true"
+     data-iziModal-attached="top"
+></div>
+<div id="ks-izi-modal-danger"
+     class="ks-izi-modal"
+     data-iziModal-fullscreen="true"
+     data-iziModal-title="Welcome to the iziModal"
+     data-iziModal-subtitle="Elegant, responsive, flexible and lightweight modal plugin with jQuery."
+     data-iziModal-icon="la la-home"
+     data-iziModal-padding="20"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#ec644b">
+    Modal Content
+</div>
+<div id="ks-izi-modal-alert-danger"
+     data-iziModal-title="Your message has been sent successfully"
+     data-iziModal-autoopen="false"
+     data-iziModal-headercolor="#ec644b"
+     data-iziModal-width="600"
+     data-iziModal-timeout="10000"
+     data-iziModal-timeoutProgressbar="true"
+     data-iziModal-attached="top"
+></div>
+<!-- END IZI MODALS -->
+
+@@include('./_partials/scripts.html')
+<script src="libs/izi-modal/js/iziModal.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        $('#ks-izi-modal-basic').iziModal();
+        $('#ks-izi-modal-primary').iziModal();
+        $('#ks-izi-modal-alert-primary').iziModal();
+        $('#ks-izi-modal-success').iziModal();
+        $('#ks-izi-modal-alert-success').iziModal();
+        $('#ks-izi-modal-info').iziModal();
+        $('#ks-izi-modal-alert-info').iziModal();
+        $('#ks-izi-modal-warning').iziModal();
+        $('#ks-izi-modal-alert-warning').iziModal();
+        $('#ks-izi-modal-danger').iziModal();
+        $('#ks-izi-modal-alert-danger').iziModal();
+
+        $('#ks-izi-modal-large').iziModal({
+            autoOpen: false,
+            padding: 20,
+            headerColor: '#3a529b',
+            restoreDefaultContent: true,
+            title: "Welcome to the iziModal",
+            fullscreen: true,
+            subtitle: 'Elegant, responsive, flexible and lightweight modal plugin with jQuery.',
+            transitionIn: 'fadeInDown'
+        });
+
+        $("#ks-izi-modal-alert").iziModal({
+            title: "Your message has been sent successfully",
+            icon: 'la la-check',
+            headerColor: '#00af66',
+            width: 600,
+            timeout: 10000,
+            timeoutProgressbar: true,
+            transitionIn: 'fadeInUp',
+            transitionOut: 'fadeOutDown',
+            attached: 'top',
+            pauseOnHover: true,
+            autoOpen: false
+        });
+
+        $("#ks-izi-modal-alert2").iziModal({
+            title: "Attention",
+            subtitle: 'you are being disconnected..',
+            icon: 'la la-home',
+            headerColor: '#BD5B5B',
+            width: 600,
+            timeout: 5000,
+            timeoutProgressbar: true,
+            transitionIn: 'fadeInDown',
+            transitionOut: 'fadeOutDown',
+            pauseOnHover: true,
+            autoOpen: false
+        });
+
+        $("#ks-izi-modal-video").iziModal({
+            headerColor: '#000',
+            title: 'iziModal with iframe',
+            subtitle: 'Video example using the Vimeo embed.',
+            icon: 'icon-settings_system_daydream',
+            overlayClose: true,
+            iframe : true,
+            iframeURL: 'https://player.vimeo.com/video/22439234?autoplay=1',
+            fullscreen: true,
+            openFullscreen: false,
+            autoOpen: false
+        });
+
+        $('.ks-izi-modal-trigger').on('click', function (e) {
+            $($(this).data('target')).iziModal('open');
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

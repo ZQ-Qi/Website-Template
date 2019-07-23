@@ -1,0 +1,251 @@
+/* ==========================================================================
+   #FULL CALENDAR CUSTOM
+   ========================================================================== */
+
+// sass-lint:disable-all
+
+/**
+ * Instead of modifying `_fullcalendar.scss` directly, we add Dashboard's custom
+ * styles for fullcanlendar plugin here.
+ */
+
+/**
+ * Calendar Wrapper
+ */
+
+.fc-view-container {
+	background-color: $color-white;
+}
+
+
+/**
+ * Calendar Header
+ *
+ * 1. These classes aren't created by fullcalendar plugin, but it's used to 
+ *    customize the header of the calender to suit Dashboard's original design.
+ */
+
+.fc-header { /* [1] */
+	height: 50px;
+	border-top-left-radius: $base-border-radius;
+	border-top-right-radius: $base-border-radius;
+	line-height: 50px;
+	background-color: $color-primary;
+}
+
+.fc-header-title { /* [1] */
+	margin: 0 0 0 30px;
+	color: $color-white;
+	font-size: $h6-font-size;
+}
+
+.fc-toolbar.fc-header-toolbar {
+	position: relative;
+	height: 50px;
+	line-height: 50px; // center vertically any text inside it
+	padding: 0 7px;
+	margin: 0;
+	background-color: $color-ink;
+}
+
+.fc-right .fc-button-group {
+	position: relative;
+	top: -50px;
+	right: 10px;
+	height: 50px;
+	border: none;
+	border-radius: 0;
+}
+
+.fc-button,
+.fc-state-default,
+.fc-agendaDay-button,
+.fc-agendaWeek-button {
+	padding: 0 20px !important;
+	height: 50px !important; // same height of `fc-button-group`
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+	color: #F0F3F8;
+	font-size: $text-font-size !important;
+	text-shadow: none;
+	background-image: none;
+	border: 0;
+	outline: none;
+	border-radius: 0;
+
+	&.fc-state-active {
+		border-bottom: 3px solid $color-info;
+		border-radius: 0;
+	}
+}
+
+.fc-month-button,
+.fc-agendaDay-button,
+.fc-agendaWeek-button  {
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
+
+
+// .fc-right,
+// .fc-left {
+// 	float: none !important;
+// }
+
+.fc-toolbar .fc-center {
+	display: block;
+    width: 100px;
+    margin: 0 auto;
+
+    h2 {
+		color: $color-white;
+		font-size: $text-font-size;
+	}
+}
+
+/**
+ * Prev / Next Arrows (Buttons)
+ */
+
+.fc-left .fc-button-group .fc-button {
+	margin: 0;
+}
+
+.fc-state-default.fc-prev-button,
+.fc-state-default.fc-next-button {
+	border-radius: 100% !important;
+}
+
+.fc-prev-button,
+.fc-next-button {
+	position: absolute !important;
+	top: 11px;
+	padding: 0 !important;
+	height: 28px !important; 
+	width: 28px;
+	background-color: $color-ink-dark;
+	box-shadow: none;
+	color: $color-white;
+	font-size: 8px !important;
+	text-shadow: none;
+	background-image: none;
+	border: 0;
+}
+
+.fc-prev-button {
+	left: 30px;
+}
+
+.fc-next-button {
+	right: 30px;
+}
+
+
+/**
+ * Days of the week - table header
+ */
+
+.fc th {
+	padding: 12px 0;
+	border: 0;
+	color: #ADAFB2;
+	text-transform: uppercase;
+	font-size: $text-small-font-size;
+	font-weight: $font-weight-bold;
+}
+
+/**
+ * Days Number - (table cell)
+ */
+
+.fc-day-number {
+	padding: 15px 15px 0 0 !important;
+	color: $text-color;
+	font-size: $h6-font-size;
+	font-weight: $font-weight-bold;
+}
+
+.fc-unthemed td {
+	border-color: $color-sky;
+}
+
+/**
+ * Current Day
+ */
+
+.fc-unthemed td.fc-today {
+	background: none;
+}
+
+.fc-today .fc-day-number {
+	background-color: $brand-color;
+	padding: 0 !important;
+	margin: 10px 10px 8px 0;
+	width: 28px;
+	height: 28px;
+	line-height: 28px; // height of the box
+	border-radius: 100%;
+	text-align: center;
+	color: #fff;
+	//@include linear-gradient(to bottom, $btn-gradient--blue);
+}
+
+
+/**
+ * Event
+ */
+
+.fc-event {
+	margin: 2px 0 0 0;
+	color: $color-ink-dark;
+	font-size: $text-font-size;
+	background-color: $color-sky;
+	border: 0;
+	border-radius: 0;
+	border-left: 2px solid $color-ink-light;
+
+	&:hover {
+		color: $text-color;
+	}
+}
+
+.fc-event .fc-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 8px 8px 12px;
+}
+
+.fc-title {
+	order: 1;
+}
+
+.fc-time {
+	order: 2;
+	text-transform: uppercase;
+	color: #354052;
+	font-size: $text-small-font-size;
+	font-weight: $font-weight-normal !important;
+}
+
+
+/**
+ * Event Color Variations
+ */
+
+.fc-event--blue {
+	background-color: $color-info-light; // fallback
+	border-color: $color-info;
+}
+
+.fc-event--orange {
+	background-color: $color-warning-light; // fallback
+	border-color: $color-warning;
+}
+
+.fc-event--green {
+	background-color: $color-success-light; // fallback
+	border-color: $color-success;
+}

@@ -1,0 +1,404 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/widgets/upload.min.css">
+<link rel="stylesheet" type="text/css" href="libs/noty/noty.css">
+<link rel="stylesheet" type="text/css" href="libs/jquery-confirm/jquery-confirm.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/jquery-confirm/jquery.confirm.min.css"> <!-- original -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>File Upload / Jquery File Upload</h3>
+
+                <div class="ks-controls">
+                    <nav class="breadcrumb ks-default">
+                        <a class="breadcrumb-item ks-breadcrumb-icon" href="index.html">
+                            <span class="la la-home ks-icon"></span>
+                        </a>
+                        <a href="#" class="breadcrumb-item">Components</a>
+                        <span class="breadcrumb-item active" href="#">File Upload</span>
+                    </nav>
+                </div>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>Upload any file</h4>
+                                <div id="ks-attach-files-widget" class="card panel ks-attach-files-widget">
+                                    <h5 class="card-header">Attached files</h5>
+                                    <div class="card-block">
+                                        <ul class="ks-uploading-files"></ul>
+                                        <ul class="ks-uploaded-files">
+                                            <li>
+                                                <span class="ks-icon la la-file-pdf-o ks-color-danger"></span>
+                                                <div class="ks-body">
+                                                    <div class="ks-header">
+                                                        <span class="ks-filename">file.pdf</span>
+                                                    </div>
+                                                    <div class="ks-description">
+                                                        Uploaded by Administrator on April 21, 2016 at 10:28 AM
+                                                    </div>
+                                                </div>
+                                                <div class="ks-remove">
+                                                    <a class="ks-icon la la-trash"></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div id="ks-file-upload-dropzone" class="ks-upload">
+                                            <span class="ks-icon la la-cloud-upload"></span>
+                                            <span class="ks-text">Drag &amp; drop files here to attach them or</span>
+                                            <span class="ks-upload-btn">
+                                                <button class="btn btn-primary ks-btn-file">
+                                                    <span class="la la-cloud-upload ks-icon"></span>
+                                                    <span class="ks-text">Choose file</span>
+                                                    <input id="ks-file-upload-widget-input" type="file" name="files[]" data-url="http://themesanytime.com/uploads/file.php" multiple>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <h4>Upload images only.</h4>
+                                <div id="ks-widget-attachments-images-only" class="card panel ks-widget-attachments">
+                                    <div class="card-block">
+                                        <h5 class="ks-header">Add an image</h5>
+
+                                        <div id="ks-file-upload-dropzone-images-only" class="ks-upload-block">
+                                            <span class="ks-icon la la-cloud-upload"></span>
+                                            <span class="ks-text">Drag &amp; drop files here</span>
+                                            <span class="ks-upload-btn">
+                                                <span class="ks-btn-separator">or</span>
+                                                <button class="btn btn-primary ks-btn-file">
+                                                    <span class="la la-cloud-upload ks-icon"></span>
+                                                    <span class="ks-text">Choose file</span>
+                                                    <input id="ks-file-upload-widget-images-input" type="file" name="files[]" data-url="http://themesanytime.com/uploads/file.php" multiple>
+                                                </button>
+                                            </span>
+                                        </div>
+
+                                        <div class="ks-uploading-files-container">
+                                            <h5 class="ks-header">Uploading images</h5>
+
+                                            <div class="ks-uploading-files"></div>
+                                        </div>
+
+                                        <h5 class="ks-header">Uploaded images</h5>
+
+                                        <div class="ks-files">
+                                            <ul>
+                                                <li class="ks-file">
+                                                    <img class="ks-thumb" src="assets/img/thumbs/ph-1.png">
+                                                    <a class="ks-icon la la-trash ks-remove"></a>
+                                                </li>
+                                                <li class="ks-file">
+                                                    <img class="ks-thumb" src="assets/img/placeholders/placeholder-256x256.png">
+                                                    <a class="ks-icon la la-trash ks-remove"></a>
+                                                </li>
+                                                <li class="ks-file">
+                                                    <img class="ks-thumb" src="assets/img/thumbs/ph-5.png">
+                                                    <a class="ks-icon la la-trash ks-remove"></a>
+                                                </li>
+                                                <li class="ks-file">
+                                                    <img class="ks-thumb" src="assets/img/thumbs/ph-4.png">
+                                                    <a class="ks-icon la la-trash ks-remove"></a>
+                                                </li>
+                                                <li class="ks-file">
+                                                    <img class="ks-thumb" src="assets/img/thumbs/ph-3.png">
+                                                    <a class="ks-icon la la-trash ks-remove"></a>
+                                                </li>
+                                                <li class="ks-file">
+                                                    <img class="ks-thumb" src="assets/img/thumbs/ph-2.png">
+                                                    <a class="ks-icon la la-trash ks-remove"></a>
+                                                </li>
+                                                <li class="ks-file">
+                                                    <img class="ks-thumb" src="assets/img/thumbs/ph-1.png">
+                                                    <a class="ks-icon la la-trash ks-remove"></a>
+                                                </li>
+                                                <li class="ks-file">
+                                                    <img class="ks-thumb" src="assets/img/thumbs/ph-5.png">
+                                                    <a class="ks-icon la la-trash ks-remove"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/jquery-file-upload/js/load-image.all.min.js"></script>
+<script src="libs/jquery-file-upload/js/canvas-to-blob.min.js"></script>
+<script src="libs/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="libs/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+<script src="libs/jquery-file-upload/js/jquery.fileupload.js"></script>
+<script src="libs/jquery-file-upload/js/jquery.fileupload-process.js"></script>
+<script src="libs/jquery-file-upload/js/jquery.fileupload-image.js"></script>
+<script src="libs/jquery-file-upload/js/jquery.fileupload-audio.js"></script>
+<script src="libs/jquery-file-upload/js/jquery.fileupload-video.js"></script>
+<script src="libs/jquery-file-upload/js/jquery.fileupload-validate.js"></script>
+<script src="libs/noty/noty.min.js"></script>
+<script src="libs/jquery-confirm/jquery-confirm.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        function bytesToSize(bytes) {
+            var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+            if (bytes == 0) return '0 Byte';
+            var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+            return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+        }
+
+        // Upload any file
+        $('#ks-file-upload-widget-input').fileupload({
+            dropZone: $('#ks-file-upload-dropzone'),
+            autoUpload: false,
+            dataType: 'json',
+            singleFileUploads: true,
+            add: function (e, data) {
+                var jqXHR;
+
+                $.each(data.files, function (index, file) {
+                    var fileUploadInfo = '<li id="file-uploading-' + file.lastModified + '"> \
+                            <span class="ks-icon la la-file-word-o ks-color-info"></span> \
+                            <div class="ks-body"> \
+                            <div class="ks-header"> \
+                            <span class="ks-filename">' + file.name + '</span> \
+                            </div> \
+                            <div class="ks-progress"> \
+                            <div class="progress ks-progress-sm"> \
+                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div> \
+                            </div> \
+                            <div class="ks-description"> \
+                               \
+                            </div> \
+                            </div> \
+                            </div> \
+                            <div class="ks-cancel"> \
+                            <a class="ks-icon la la-close"></a> \
+                            </div> \
+                            </li>';
+                    data.context = $(fileUploadInfo).appendTo($('#ks-attach-files-widget .ks-uploading-files'));
+
+                    $(data.context).find(".ks-cancel").click(function() {
+                        jqXHR.abort();
+                        data.context.remove();
+                    })
+                });
+
+                data.process().done(function () {
+                    jqXHR = data.submit();
+                });
+            },
+            progress: function (e, data) {
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+                var size = data.files[0].size;
+                var uploadedBytes = (size / 100) * progress;
+                var id = 'file-uploading-' + data.files[0].lastModified;
+
+                size = bytesToSize(size);
+                uploadedBytes = bytesToSize(uploadedBytes);
+
+                $('#' + id).find('.progress-bar').css('width', progress + '%');
+                $('#' + id).find('.ks-description').text(uploadedBytes + ' of ' + size);
+            },
+            done: function (e, data) {
+                $.each(data.files, function (index, file) {
+                    var id = 'file-uploading-' + data.files[0].lastModified;
+                    $('#' + id).remove();
+                });
+
+                var uploadedFileInfo = '<li> \
+                            <span class="ks-icon la la-file-pdf-o ks-color-danger"></span> \
+                            <div class="ks-body"> \
+                            <div class="ks-header"> \
+                            <span class="ks-filename">' + data.result.file.name + '</span> \
+                            </div> \
+                            <div class="ks-description"> \
+                                '+ data.result.file.uploadedBy +' \
+                            </div> \
+                            </div> \
+                            <div class="ks-remove"> \
+                            <a class="ks-icon la la-trash"></a> \
+                            </div> \
+                            </li>';
+                $(uploadedFileInfo).appendTo($('#ks-attach-files-widget .ks-uploaded-files'));
+
+                new Noty({
+                    text: 'File ' + data.result.file.name + ' has been uploaded successfully!',
+                    type   : 'success',
+                    theme  : 'mint',
+                    layout : 'topRight',
+                    timeout: 2000
+                }).show();
+            },
+            fail: function (e, data) {
+                $.each(data.files, function (index, file) {
+                    var id = 'file-uploading-' + data.files[0].lastModified;
+                    $('#' + id).addClass('ks-file-uploading-error');
+                });
+
+                new Noty({
+                    text: 'Uploading error! Please try again later.',
+                    type   : 'error',
+                    theme  : 'mint',
+                    layout : 'topRight',
+                    timeout: 2000
+                }).show();
+            }
+        });
+        $(document).on('click', '#ks-attach-files-widget .ks-uploaded-files .ks-remove', function () {
+            var file = $(this).closest('li');
+
+            $.confirm({
+                title: 'Danger!',
+                content: 'Are you sure you want to remove this file?',
+                type: 'danger',
+                buttons: {
+                    confirm: {
+                        text: 'Yes, remove',
+                        btnClass: 'btn-danger',
+                        action: function() {
+                            file.remove();
+                        }
+                    },
+                    cancel: function () {}
+                }
+            });
+        });
+
+        // DropZone implementation
+        $(".ks-attach-files-widget .ks-upload").on('dragover', function (e) {
+             $(this).addClass('ks-dragover');
+        }).on('dragleave', function (e) {
+            $(this).removeClass('ks-dragover');
+        }).on('drop', function (e) {
+             $(this).removeClass('ks-dragover');
+        });
+
+        $(document).bind('drop dragover', function (e) {
+            e.preventDefault();
+        });
+
+        // Upload images only
+        $('#ks-file-upload-widget-images-input').fileupload({
+            dropZone: $('#ks-file-upload-dropzone-images-only'),
+            autoUpload: false,
+            dataType: 'json',
+            singleFileUploads: true,
+            acceptFileTypes:  /(jpeg)|(png)|(gif)|(jpg)$/i,
+            add: function (e, data) {
+                $('#ks-widget-attachments-images-only .ks-uploading-files-container').show();
+                var jqXHR;
+
+                $.each(data.files, function (index, file) {
+                    var fileUploadInfo = '<div id="file-uploading-' + file.lastModified + '" class="ks-uploading-progress-block"> \
+                            <span class="ks-filename">' + file.name + '</span> \
+                            <div class="ks-progress ks-progress-inline"> \
+                            <div class="progress ks-progress-sm"> \
+                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 0" aria-valuenow="00" aria-valuemin="0" aria-valuemax="100"></div> \
+                            </div> \
+                            <span class="ks-amount">0%</span> \
+                            </div> \
+                            <div class="ks-cancel-block"> \
+                                <a class="ks-icon la la-close"></a> \
+                            </div> \
+                    </div>';
+                    data.context = $(fileUploadInfo).appendTo($('#ks-widget-attachments-images-only .ks-uploading-files'));
+
+                    $(data.context).find(".ks-cancel-block").click(function() {
+                        jqXHR.abort();
+                        data.context.remove();
+                    })
+                });
+
+                data.process().done(function () {
+                    jqXHR = data.submit();
+                });
+            },
+            progress: function (e, data) {
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+                var size = data.files[0].size;
+                var uploadedBytes = (size / 100) * progress;
+                var id = 'file-uploading-' + data.files[0].lastModified;
+
+                $('#' + id).find('.progress-bar').css('width', progress + '%');
+                $('#' + id).find('.ks-amount').text(progress + '%');
+            },
+            stop: function (e) {
+                $('#ks-widget-attachments-images-only .ks-uploading-files-container').hide();
+            },
+            done: function (e, data) {
+                $.each(data.files, function (index, file) {
+                    var id = 'file-uploading-' + data.files[0].lastModified;
+                    $('#' + id).remove();
+                });
+
+                var uploadedFileInfo = '<li class="ks-file"> \
+                        <img class="ks-thumb" src="assets/img/thumbs/ph-1.png"> \
+                            <a class="ks-icon la la-trash ks-remove"></a> \
+                        </li>';
+                $(uploadedFileInfo).appendTo($('#ks-widget-attachments-images-only .ks-files ul'));
+
+                new Noty({
+                    text: 'File ' + data.result.file.name + ' has been uploaded successfully!',
+                    type   : 'success',
+                    theme  : 'mint',
+                    layout : 'topRight',
+                    timeout: 2000
+                }).show();
+            },
+            fail: function (e, data) {
+                $.each(data.files, function (index, file) {
+                    var id = 'file-uploading-' + data.files[0].lastModified;
+                    $('#' + id).addClass('ks-file-uploading-error');
+                });
+
+                new Noty({
+                    text: 'Uploading error! Please try again later.',
+                    type   : 'error',
+                    theme  : 'mint',
+                    layout : 'topRight',
+                    timeout: 2000
+                }).show();
+            }
+        });
+
+        $(document).on('click', '#ks-widget-attachments-images-only .ks-files .ks-remove', function () {
+            var file = $(this).closest('li');
+
+            $.confirm({
+                title: 'Danger!',
+                content: 'Are you sure you want to remove this file?',
+                type: 'danger',
+                buttons: {
+                    confirm: {
+                        text: 'Yes, remove',
+                        btnClass: 'btn-danger',
+                        action: function() {
+                            file.remove();
+                        }
+                    },
+                    cancel: function () {}
+                }
+            });
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

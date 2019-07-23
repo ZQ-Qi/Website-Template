@@ -1,0 +1,24 @@
+//- =========================================================================
+	File Name: color-palette-amber.jade
+	Description:  Bootstrap 4 Amber Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle   = "Amber Color Page"
+	- var pageSubTitle = "Amber Color Options"
+	- var description  = "Amber Color Palette with background & border color."
+	- var activeMenu  = "color-palette-amber"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Amber Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-amber.html

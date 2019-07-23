@@ -1,0 +1,57 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Date Range Picker / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/date-range-picker/daterangepicker.css">
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Date Range Picker</h2>
+    </div>
+  </div>
+  <div class="main-container container-fh__content">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="img/preview/date-range.png" alt="" class="embed-responsive">
+      </div>
+      <div class="col-lg-6">
+        <img src="img/preview/date-range-custom.png" alt="" class="embed-responsive">
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label for="select-date-ex1">Date Range</label>
+              <input id="select-date-ex1" type="text" placeholder="Select Date" class="js-date-range form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label for="custom-ranges">Date Custom Ranges</label>
+              <input id="custom-ranges" type="text" placeholder="Select Date" class="js-date-custom-ranges form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/momentjs/moment-with-locales.min.js"></script>
+<script src="vendor/date-range-picker/daterangepicker.js"></script>
+<script src="js/preview/date-range-picker.min.js"></script>
+{% endblock %}

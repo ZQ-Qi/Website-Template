@@ -1,0 +1,368 @@
+
+<title>人事管理</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>人事管理</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid" id="LAY-app-table">
+    <div class="layui-card layui-row layui-col-space15" style="padding: 15px;">
+        <div class="orgbox layui-col-md2">
+            <ul id="demo1"></ul>
+        </div>
+        <div class="site-tips layui-col-md10" id="demo2-view">
+            <!--<table class="layui-hide" id="test"></table>-->
+            <div class="layui-tab-content" >
+                <div class="layui-btn-group demoTable lay-mb15">
+                    <button class="layui-btn" data-type="getCheckData">获取选中行数据</button>
+                    <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>
+                    <button class="layui-btn" data-type="isAll">验证是否全选</button>
+                    <button class="layui-btn" data-type="add" lay-event="add">新增(iframe弹窗)</button>
+                    <button class="layui-btn" data-type="addOther" lay-event="addOther">新增(页面内弹窗)</button>
+                </div>
+                <table id="LAY-app-table-all"  lay-filter="LAY-app-table-all"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--查看-->
+<script type="text/html" id="viewTr">
+    <ul class="viewInfo">
+        <li>
+            <span>编号：</span>{{d.title}}
+        </li>
+        <li>
+            <span>所属部门：</span>{{d.platform}}
+        </li>
+        <li>
+            <span>所属职位：</span>{{d.location}}
+        </li>
+        <li>
+            <span>状态：</span>{{d.status}}
+        </li>
+        <li>
+            <span>时间：</span>{{layui.util.timeAgo(d.date)}}
+        </li>
+    </ul>
+</script>
+
+<!--添加-->
+<script type="text/html" id="addTr">
+    <div class="lay-alert-pad">
+        <form class="layui-form" action="" lay-filter="component-new-group">
+            <div class="layui-form-item">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入姓名" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">所属部门</label>
+                <div class="layui-input-block">
+                    <input type="text" name="platform" lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <div class="layui-footer">
+                        <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">新增</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+
+<style>
+    .orgbox{
+        display: inline-block;
+        /*width: 180px;*/
+        height: 510px;
+        border: 1px solid #ddd;
+        overflow: auto;
+    }
+    .site-tips{
+        display: inline-block;
+        /*padding: 0 10px;*/
+        /*margin-left: 10px;*/
+        vertical-align: top;
+    }
+
+    .viewInfo{
+        padding:30px;
+        font-size: 14px;
+        color: #666;
+    }
+    .viewInfo li{
+        margin-bottom: 15px;
+    }
+    .viewInfo li span{
+        display: inline-block;
+        width: 15%;
+        text-align: right;
+        margin-right: 15px;
+        font-weight: bold;
+    }
+</style>
+<script>
+    layui.use(['tree','layer','table','util','form','laydate','laytpl'], function(){
+        var $ = layui.$
+            ,layer = layui.layer
+            ,admin = layui.admin
+            ,table = layui.table
+            ,element = layui.element
+            ,form = layui.form
+            ,laydate = layui.laydate
+            ,laytpl = layui.laytpl;
+        element.render();
+
+        // 操作内容模板
+        var tplOperate = function(d){
+
+            return '<div class="opetate"><a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail" lay-filter="test1">查看</a>' +
+                '<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>' +
+                '<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>' +
+                '</div>';
+        };
+
+        //全部消息
+        table.render({
+            elem: '#LAY-app-table-all'
+            ,url: './content/json/table/operate.js' //模拟接口
+            ,cellMinWidth: 80 //全局定义常规单元格的最小宽度
+            ,page: true // 开启分页
+            ,cols: [[ // 表头
+                {type: 'checkbox', fixed: 'left'}
+                ,{field: 'title', title: '编号', templet: '<div>{{d.title}}</div>'}
+                ,{field: 'platform', title: '所属部门', event: 'setSign', templet: '<div>{{d.platform}}</div>'}
+                ,{field: 'location', title: '所属职位', templet: '<div>{{d.location}}</div>'}
+                ,{field: 'status', title: '状态', edit: 'text', templet: '<div>{{d.status}}</div>'}
+                ,{field: 'date', title: '时间',  templet: '<div>{{ layui.util.timeAgo(d.date) }}</div>'}
+                ,{field: 'operate', title: '操作', templet: tplOperate}
+            ]]
+            ,skin: 'line'
+            ,done: function(res, curr, count){
+                //无论是异步请求数据，还是直接赋值数据，都会触发该回调。可以利用该回调做一些表格以外元素的渲染。
+                //如果是异步请求数据方式，res即为你接口返回的信息。
+                //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                console.log(res);
+
+                //得到当前页码
+                console.log(curr);
+
+                //得到数据总量
+                console.log(count);
+            }
+        });
+
+        //监听单元格编辑——方法二
+        table.on('edit(LAY-app-table-all)', function(obj){
+            var value = obj.value //得到修改后的值
+                ,data = obj.data //得到所在行所有键值
+                ,field = obj.field; //得到字段
+            layer.msg('[ID: '+ data.id +'] ' + field + ' 字段更改为：'+ value);
+        });
+
+        table.on('tool(LAY-app-table-all)', function(obj){
+            layui.updateitem = function(item){
+                obj.update(JSON.parse(item));
+            };
+            var data = obj.data;
+            if(obj.event === 'detail'){
+                // layer.msg('ID：'+ data.id + ' 的查看操作');
+                layer.open({
+                    title:'查看',
+                    type: 1,
+                    //skin: 'layui-layer-rim',
+                    shadeClose: true,
+                    area: admin.screen() < 2 ? ['80%', '300px'] : ['700px', '350px'],
+                    content: '<div id="view"></div>'
+                });
+                console.log(obj)
+                console.log(JSON.stringify(data))
+                console.log(data.operate)
+                obj.update({
+                    status:"非热门",
+                })
+
+
+                var getTpl = $("#viewTr")[0].innerHTML,view = $("#view")[0];
+                laytpl(getTpl).render(data, function(html){
+                    view.innerHTML = html;
+                });
+            }
+            else if(obj.event === 'del'){
+                layer.confirm('真的删除行么', function(index){
+                    obj.del();
+                    layer.close(index);
+                });
+            }
+            else if(obj.event === 'edit'){ // 编辑方法一
+                layer.open({
+                    type: 2,
+                    area: ['700px', '550px'],
+                    fixed: false,
+                    maxmin: true,
+                    content: layui.setter.base + 'views/iframe/layer/operateTable.html'
+                }); // 打开弹窗
+            }
+            else if(obj.event === 'setSign'){ // 编辑方法三
+                layer.prompt({
+                    formType: 2
+                    ,title: '编辑 ['+ data.id +'] 的所属平台'
+                    ,value: data.platform
+                }, function(value, index){
+                    layer.close(index);
+
+                    //这里一般是发送修改的Ajax请求
+
+                    //同步更新表格和缓存对应的值
+                    obj.update({
+                        platform: value
+                    });
+                });
+            }
+        }); // 操作
+
+        var  active = {
+            getCheckData: function(){ //获取选中数据
+                var checkStatus = table.checkStatus('LAY-app-table-all')
+                    ,data = checkStatus.data;
+                active.getId(data)
+
+                layer.alert(JSON.stringify(data));
+            }
+            ,getId:function (data) {
+                var idArr = [];
+                for(var i=0; i<data.length; i++){
+                    console.log(data[i].id)
+                    idArr.push(data[i].id)
+                }
+                console.log(idArr)
+            }
+            ,getCheckLength: function(){ //获取选中数目
+                var checkStatus = table.checkStatus('LAY-app-table-all')
+                    ,data = checkStatus.data;
+                layer.msg('选中了：'+ data.length + ' 个');
+            }
+            ,isAll: function(){ //验证是否全选
+                var checkStatus = table.checkStatus('LAY-app-table-all');
+                layer.msg(checkStatus.isAll ? '全选': '未全选')
+            }
+            ,add: function () { // 增加一条列表
+                layer.open({
+                    title:'新增',
+                    type: 2,
+                    //skin: 'layui-layer-rim',
+                    shadeClose: false,
+                    area: admin.screen() < 2 ? ['80%', '300px'] : ['700px', '600px'],
+                    content: layui.setter.base + 'views/iframe/layer/addOperate.html'
+                });
+            }
+            ,addOther: function () { // 增加一条列表
+                layer.open({
+                    title:'新增',
+                    type: 1,
+                    //skin: 'layui-layer-rim',
+                    shadeClose: false,
+                    area: admin.screen() < 2 ? ['80%', '300px'] : ['700px', '600px'],
+                    content: '<div id="addContent"></div>'
+                });
+
+                var addTpl = $("#addTr")[0].innerHTML;
+                $("#addContent").append(addTpl);
+
+                form.render(null, 'component-new-group');
+
+            }
+        };
+
+        form.on('submit(component-form-demo1)', function(data){
+            console.log(data)
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            })
+            return false;
+        });
+
+
+        $('.layui-fluid .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+        layui.tree({
+            elem: '#demo1' //指定元素
+            ,target: '_blank' //是否新选项卡打开（比如节点返回href才有效）
+            ,click: function(item){ //点击节点回调
+//                $('#demo2-view').html('当前节名称：'+ item.name + '<br>全部参数：'+ JSON.stringify(item));
+                var demoReload = $('#test');
+
+                //执行表格重载
+                table.reload('test', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+//                        key: {
+//                            id: item
+//                        }
+                    }
+                });
+
+            }
+            ,nodes: [ //节点
+                {
+                    name: '常用文件夹'
+                    ,id: 1
+                    ,alias: 'changyong'
+                    ,children: [
+                    {
+                        name: '所有未读（设置跳转）'
+                        ,id: 11
+                        ,href: 'http://www.layui.com/'
+                        ,alias: 'weidu'
+                    }, {
+                        name: '置顶邮件'
+                        ,id: 12
+                    }, {
+                        name: '标签邮件'
+                        ,id: 13
+                    }
+                ]
+                }, {
+                    name: '事业部'
+                    ,id: 2
+                    ,spread: true
+                    ,children: [
+                        {
+                            name: '研发部'
+                            ,id: 21
+                            ,spread: true
+                            ,children: [
+                            {
+                                name: '前端'
+                                ,id: 211
+                            }, {
+                                name: '所有'
+                                ,id: 212
+                            }
+                        ]
+                        }, {
+                            name: '产品部'
+                            ,id: 22
+                        }
+                    ]
+                }
+            ]
+        });
+
+
+    });
+</script>

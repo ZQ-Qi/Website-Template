@@ -1,0 +1,62 @@
+.float-aside {
+  position: fixed;
+  top: 104px;
+  z-index: 0;
+  width: 375px;
+  right: -375px;
+  box-shadow: -2px 0 3px 0 rgba(0,0,0,.05);
+  background: #ffffff;
+  height: calc(100vh - 104px);
+  transition: right $transition;
+  padding: 20px;
+
+  &__scrollpane {
+    @include mx-scrollpane();
+  }
+
+  &__body {
+    padding: 20px;
+  }
+
+  &__text {
+    padding-right: 34px;
+  }
+
+  &.is-opened {
+    right: 0;
+  }
+
+  &.is-opened &__toggler-icon {
+    transform: rotate(-180deg);
+  }
+
+  &__toggler {
+    position: absolute;
+    width: 15px;
+    box-shadow: -2px 0 3px 0 rgba(0,0,0,.05);
+    background: #fff;
+    height: 70px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #c3c7ce;
+    left: -15px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: calc(50% - 35px);
+    cursor: pointer;
+
+    &-icon {
+      transition: transfrom $transition;
+    }
+  }
+
+  &__heading {
+    font-size: 17px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+
+}

@@ -1,0 +1,186 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/select2/css/select2.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/select2/select2.min.css"> <!-- Customization -->
+<link rel="stylesheet" type="text/css" href="libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css"> <!-- load original styles -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/touchspin/touchspin.min.css"> <!-- load theme customization styles -->
+<link rel="stylesheet" type="text/css" href="assets/styles/form/steps/column.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Form Steps</h3>
+                <button class="btn btn-outline-primary ks-light ks-form-steps-column-steps-block-toggle" data-block-toggle=".ks-form-steps-column-page > .ks-steps">Steps</button>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-form-steps-column-page">
+                <div class="ks-form-column-steps">
+                    <h3 class="ks-form-column-steps-header">New Campaign</h3>
+                    <div class="ks-form-column-steps-description">
+                        Track and modify your existing campaigns, or create a new one
+                    </div>
+
+                    <div class="ks-form-column-steps-items">
+                        <a href="#" class="ks-completed ks-form-column-steps-item"><span class="ks-point"><span>1</span></span> Story</a>
+                        <a href="#" class="ks-current ks-form-column-steps-item"><span class="ks-point"><span>2</span></span> E-mail</a>
+                        <a href="#" class="ks-invalid ks-form-column-steps-item"><span class="ks-point"><span>3</span></span> Code</a>
+                        <a href="#" class="ks-form-column-steps-item"><span class="ks-point"><span>4</span></span> Results</a>
+                    </div>
+                </div>
+                <div class="ks-form-column-steps-wrapper">
+                    <div class="ks-form-column-steps-content">
+                        <div class="ks-form-column-steps-description">
+                            <h3 class="ks-form-column-steps-content-header">The story</h3>
+                            <div class="ks-form-column-steps-content-text">
+                                If a user signs up and doesn't create a campaign and has previously
+                                visited site more than 2 times then send an email after 30 days
+                            </div>
+                        </div>
+                        <div class="ks-form-column-steps-body ks-scrollable">
+                            <div class="ks-scroll-wrapper">
+                                <form class="ks-form">
+                                    <div class="form-group">
+                                        <label for="if-user">If user</label>
+                                        <div class="row">
+                                            <div class="col-xl-3">
+                                                <select id="if-user" class="form-control ks-selectpicker">
+                                                    <option>Sign up</option>
+                                                    <option>Sign in</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>and</label>
+                                        <div class="row">
+                                            <div class="col-xl-2 col-lg-4">
+                                                <select class="form-control ks-selectpicker">
+                                                    <option>doesn't</option>
+                                                    <option>doesn't</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <select class="form-control ks-selectpicker">
+                                                    <option>create a campaign</option>
+                                                    <option>create a campaign</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-1 col-lg-2">
+                                                <button type="button" class="btn btn-danger ks-light ks-no-text">
+                                                    <span class="la la-trash-o ks-icon"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>and</label>
+                                        <div class="row">
+                                            <div class="col-xl-2">
+                                                <select class="form-control ks-selectpicker">
+                                                    <option>has previously</option>
+                                                    <option>has previously</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-2">
+                                                <select class="form-control ks-selectpicker">
+                                                    <option>cheched out</option>
+                                                    <option>cheched out</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-2">
+                                                <select class="form-control ks-selectpicker">
+                                                    <option>more then</option>
+                                                    <option>more then</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-1">
+                                                <input type="text" value="2" class="form-control touchspin-default ks-times">
+                                            </div>
+                                            <div class="col-xl-1">
+                                                <button type="button" class="btn btn-danger ks-light ks-no-text">
+                                                    <span class="la la-trash-o ks-icon"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-success ks-light ks-no-text">
+                                            <span class="la la-plus ks-icon"></span>
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>then send an e-mail</label>
+                                        <div class="row">
+                                            <div class="col-xl-2">
+                                                <select class="form-control ks-selectpicker">
+                                                    <option>after</option>
+                                                    <option>after</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-1">
+                                                <input type="text" value="2" class="form-control touchspin-default ks-times">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ks-separator"></div>
+                                    <div class="form-group">
+                                        <h6>Track conversions</h6>
+                                        <div class="row">
+                                            <div class="col-xl-7">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c1" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c1">Track opens and clicks. All URLs will be re-written when this feature is enabled. Disabling this removes some statistics from the results page</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>I convert when user</label>
+                                        <div class="row">
+                                            <div class="col-xl-3">
+                                                <select class="form-control ks-selectpicker">
+                                                    <option>create a campaign</option>
+                                                    <option>create a campaign</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ks-form-column-steps-controls ks-space-between">
+                        <button class="btn btn-outline-primary ks-light ks-previous">Previous</button>
+                        <button class="btn btn-primary ks-next">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/select2/js/select2.min.js"></script>
+<script src="libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('select').select2({
+            minimumResultsForSearch: Infinity
+        });
+
+        $('.ks-times').TouchSpin({
+            verticalbuttons: true,
+            verticalupclass: 'la la-plus',
+            verticaldownclass: 'la la-minus'
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

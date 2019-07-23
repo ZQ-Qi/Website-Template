@@ -1,0 +1,59 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Menu and Content / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh l-2column">
+  <div class="m-nav">
+    <div class="m-nav__side-top">
+      <a href="#" class="btn btn-info btn-block icon-left m-nav__add">
+        Create New <span class="btn-icon ua-icon-plus m-nav__add-icon"></span>
+      </a>
+      <h5 class="m-nav__heading">Documents</h5>
+      <ul class="m-nav__menu">
+        <li class="m-nav__menu-item is-active">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-invoices m-nav__menu-icon"></span>Invoices
+          </a>
+        </li>
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-cart m-nav__menu-icon"></span>Purchase Orders
+          </a>
+        </li>
+      </ul>
+      <h5 class="m-nav__heading">Clients</h5>
+      <ul class="m-nav__menu">
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-company-outline m-nav__menu-icon"></span>Companies
+          </a>
+        </li>
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-individual m-nav__menu-icon"></span>Individuals
+          </a>
+        </li>
+      </ul>
+      <h5 class="m-nav__heading">Help</h5>
+      <ul class="m-nav__menu">
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-support m-nav__menu-icon"></span>Support
+          </a>
+        </li>
+        <li class="m-nav__menu-item">
+          <a href="#" class="m-nav__menu-link">
+            <span class="ua-icon-faq-question m-nav__menu-icon"></span>FAQ
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="m-content">
+    Content
+  </div>
+</div>
+{% endblock %}
+
+

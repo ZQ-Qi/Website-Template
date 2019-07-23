@@ -1,0 +1,359 @@
+/** BEGIN: medical widgets */
+.widget-patient {
+  height: 407px;
+  padding: 0;
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 238px;
+  }
+
+  &__avatar {
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+
+  &__name {
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: #222222;
+  }
+
+  &__location {
+    color: #939daa;
+  }
+
+  &__params {
+    border-top: 1px solid rgba(#000, .05);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__param {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px;
+    border-right: 1px solid rgba(#000, .06);
+    border-bottom: 1px solid rgba(#000, .06);
+
+    &:nth-child(2n) {
+      border-right: none;
+    }
+
+    &:nth-child(3n),
+    &:nth-child(4n) {
+      border-bottom: none;
+    }
+  }
+
+  &__param-value {
+    color: #222222;
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+
+  &__param-name {
+    color: #939daa;
+  }
+}
+
+.widget-rate {
+  flex-grow: 1;
+  min-height: 407px;
+  padding: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    opacity: .1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 23px;
+    margin-bottom: 72px;
+  }
+
+  &__value {
+    display: flex;
+    align-items: flex-start;
+    font-size: 17px;
+  }
+
+  &__label {
+    color: #939daa;
+    margin-bottom: 7px;
+    margin-top: -4px;
+  }
+
+  &__icon {
+    font-size: 24px;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    top: 4px;
+  }
+
+  &__amount {
+    color: #222;
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: 8px;
+    position: relative;
+    top: 1px;
+  }
+
+  &__chart {
+    height: 74px;
+    padding: 0 23px;
+  }
+
+  &__params {
+    border-top: 1px solid rgba(#000, .05);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 75px;
+  }
+
+  &__param {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px;
+    flex-grow: 1;
+    border-right: 1px solid rgba(#000, .06);
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__param-value {
+    color: #222222;
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+
+  &__param-name {
+    color: #939daa;
+  }
+
+  &--male {
+    &::after {
+      opacity: .16;
+      background: #fff url(../img/medical-dashboard/male.png) no-repeat center bottom;
+    }
+
+    .widget-rate__icon {
+      color: #38c5d8;
+    }
+  }
+
+  &--female {
+    &::after {
+      background: #fff url(../img/medical-dashboard/female.png) no-repeat center bottom;
+    }
+
+    .widget-rate__icon {
+      color: #fe6f60;
+    }
+  }
+
+  &--blood-pressure {
+    min-height: 202px;
+
+    .widget-rate__info {
+      margin-bottom: 10px;
+    }
+
+    .widget-rate__icon {
+      color: #fe6f60;
+    }
+  }
+}
+
+.widget-patient-info {
+  min-height: 361px;
+  padding: 0;
+
+  &__heading {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 0;
+    padding: 22px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(#000, .05);
+  }
+
+  &__list-item {
+    border-bottom: 1px solid rgba(#000, .05);
+    padding: 14px 22px;
+    color: #939daa;
+  }
+
+  &__controls {
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__add {
+    margin-right: 20px;
+  }
+
+  &__edit {
+    span {
+      font-size: 10px;
+      display: inline-block;
+      margin-left: 2px;
+    }
+  }
+}
+
+.widget-temperature {
+  padding: 0;
+  display: flex;
+  min-height: 206px;
+
+  &__item {
+    width: 50%;
+    border-right: 1px solid rgba(#000, .05);
+    padding: 22px;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__item-label {
+    color: #939daa;
+    margin-bottom: 10px;
+  }
+
+  &__item-value {
+    display: flex;
+    align-items: flex-start;
+    font-size: 17px;
+  }
+
+  &__item-amount {
+    font-size: 30px;
+    line-height: 30px;
+    color: #222222;
+    margin-right: 8px;
+    position: relative;
+    top: 1px;
+  }
+
+  &__chart {
+    height: 66px;
+    margin-top: 34px;
+  }
+}
+
+.widget-body-activity {
+  display: flex;
+  min-height: 209px;
+  padding: 22px;
+
+  &__heading {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 14px;
+    margin-top: -4px;
+  }
+
+  &__label {
+    background-color: #fe6f60;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__desc {
+    color: #939daa;
+  }
+
+  &__image {
+    margin-left: 60px;
+  }
+}
+
+.widget-levels {
+  min-height: 315px;
+  padding: 22px;
+
+  &__heading {
+    color: #222222;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__chart {
+    height: 200px;
+  }
+
+  &__items {
+    display: flex;
+    font-size: 12px;
+    color: #939daa;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+    margin-left: -12px;
+    margin-right: -12px;
+
+    li {
+      width: 20%;
+      text-align: center;
+    }
+  }
+}
+
+.widget-med-recent-activity {
+  min-height: 312px;
+  padding: 22px;
+
+  &__heading {
+    color: #222222;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__chart {
+    height: 230px;
+  }
+}
+/** END: medical widgets */

@@ -1,0 +1,434 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}E-commerce Widgets / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">E-commerce Widgets</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-f ecommerce-widget-f--purple">
+        <div class="ecommerce-widget-f__info">
+          <div class="ecommerce-widget-f__title">Total Views</div>
+          <div class="ecommerce-widget-f__value">645,948</div>
+        </div>
+        <div class="ecommerce-widget-f__label">
+          <div class="ua-icon-widget-binoculars ecommerce-widget-f__icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-f ecommerce-widget-f--orange">
+        <div class="ecommerce-widget-f__info">
+          <div class="ecommerce-widget-f__title">Total Orders</div>
+          <div class="ecommerce-widget-f__value">403</div>
+        </div>
+        <div class="ecommerce-widget-f__label">
+          <div class="ua-icon-widget-cart ecommerce-widget-f__icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-f ecommerce-widget-f--orange">
+        <div class="ecommerce-widget-f__info">
+          <div class="ecommerce-widget-f__title">Total Orders</div>
+          <div class="ecommerce-widget-f__value">$12,875</div>
+        </div>
+        <div class="ecommerce-widget-f__label">
+          <div class="ua-icon-widget-coins ecommerce-widget-f__icon"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-9">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="ecommerce-widget ecommerce-widget-b" style="background-image: url(img/widgets/06.png)">
+            <div class="ecommerce-widget-b__title">Completed orders <div class="ecommerce-widget-b__percent">2%</div></div>
+            <div class="ecommerce-widget-b__desc"><span class="ecommerce-widget-b__desc-amount">212</span> / 320 total orders</div>
+            <div class="ecommerce-widget-b__day">Today</div>
+            <div class="ecommerce-widget-b__date">12 April 2018</div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="ecommerce-widget ecommerce-widget-b" style="background-image: url(img/widgets/07.png)">
+            <div class="ecommerce-widget-b__title">Completed orders <div class="ecommerce-widget-b__percent">4%</div></div>
+            <div class="ecommerce-widget-b__desc"><span class="ecommerce-widget-b__desc-amount">212</span> / 320 total orders</div>
+            <div class="ecommerce-widget-b__day">Today</div>
+            <div class="ecommerce-widget-b__date">12 April 2018</div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="ecommerce-widget ecommerce-widget-b" style="background-image: url(img/widgets/08.png)">
+            <div class="ecommerce-widget-b__title">Completed orders <div class="ecommerce-widget-b__percent">5%</div></div>
+            <div class="ecommerce-widget-b__desc"><span class="ecommerce-widget-b__desc-amount">212</span> / 320 total orders</div>
+            <div class="ecommerce-widget-b__day">Today</div>
+            <div class="ecommerce-widget-b__date">12 April 2018</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="ecommerce-widget ecommerce-widget-d">
+            <div class="ecommerce-widget-d__header">Order Chart</div>
+            <div class="ecommerce-widget-d__body">
+              <div id="ecommerce-widget-d-chart" class="ecommerce-widget-d__chart"></div>
+            </div>
+            <div class="ecommerce-widget-d__footer">
+              <span class="badge-circle badge-circle-xs badge-circle--mandys-pink ecommerce-widget-d__status">Completed</span>
+              <span class="badge-circle badge-circle-xs badge-circle--heliotrope ecommerce-widget-d__status">Pending</span>
+              <span class="badge-circle badge-circle-xs badge-circle--carissma ecommerce-widget-d__status">Abadon</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="ecommerce-widget ecommerce-widget-e">
+            <div class="ecommerce-widget-e__header">Order Distribution</div>
+            <div class="ecommerce-widget-e__body">
+              <div id="ecommerce-widget-e-chart" class="ecommerce-widget-e__chart"></div>
+            </div>
+            <div class="ecommerce-widget-e__footer">
+              <span class="badge-circle badge-circle-xs badge-circle--danger ecommerce-widget-e__status">Completed</span>
+              <span class="badge-circle badge-circle-xs badge-circle--info ecommerce-widget-e__status">Pending</span>
+              <span class="badge-circle badge-circle-xs badge-circle--success ecommerce-widget-e__status">Abadon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="ecommerce-widget ecommerce-widget-c">
+        <div class="ecommerce-widget-c__header">Activity Log</div>
+        <div class="ecommerce-widget-c__body">
+          <div class="ecommerce-widget-c__scrollpane js-scrollable">
+            <div class="ecommerce-widget-c__items">
+              <div class="ecommerce-widget-c__item">
+                <img src="img/users/user-4.png" alt="" class="ecommerce-widget-c__item-avatar rounded-circle">
+                <div class="ecommerce-widget-c__item-info">
+                  <a href="#" class="ecommerce-widget-c__item-name">Gabriel Saunders</a>
+                  <div class="ecommerce-widget-c__item-desc">
+                    <span class="ecommerce-widget-c__item-action">Placed an new order</span>
+                    <span class="ecommerce-widget-c__item-date">4 minutes ago</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ecommerce-widget-c__item">
+                <img src="img/users/user-6.png" alt="" class="ecommerce-widget-c__item-avatar rounded-circle">
+                <div class="ecommerce-widget-c__item-info">
+                  <a href="#" class="ecommerce-widget-c__item-name">Gabriel Saunders</a>
+                  <div class="ecommerce-widget-c__item-desc">
+                    <span class="ecommerce-widget-c__item-action">Placed an new order</span>
+                    <span class="ecommerce-widget-c__item-date">4 minutes ago</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ecommerce-widget-c__item">
+                <img src="img/users/user-8.png" alt="" class="ecommerce-widget-c__item-avatar rounded-circle">
+                <div class="ecommerce-widget-c__item-info">
+                  <a href="#" class="ecommerce-widget-c__item-name">Gabriel Saunders</a>
+                  <div class="ecommerce-widget-c__item-desc">
+                    <span class="ecommerce-widget-c__item-action">Placed an new order</span>
+                    <span class="ecommerce-widget-c__item-date">4 minutes ago</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ecommerce-widget-c__item">
+                <img src="img/users/user-1.png" alt="" class="ecommerce-widget-c__item-avatar rounded-circle">
+                <div class="ecommerce-widget-c__item-info">
+                  <a href="#" class="ecommerce-widget-c__item-name">Gabriel Saunders</a>
+                  <div class="ecommerce-widget-c__item-desc">
+                    <span class="ecommerce-widget-c__item-action">Placed an new order</span>
+                    <span class="ecommerce-widget-c__item-date">4 minutes ago</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ecommerce-widget-c__item">
+                <img src="img/users/user-4.png" alt="" class="ecommerce-widget-c__item-avatar rounded-circle">
+                <div class="ecommerce-widget-c__item-info">
+                  <a href="#" class="ecommerce-widget-c__item-name">Gabriel Saunders</a>
+                  <div class="ecommerce-widget-c__item-desc">
+                    <span class="ecommerce-widget-c__item-action">Placed an new order</span>
+                    <span class="ecommerce-widget-c__item-date">4 minutes ago</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ecommerce-widget-c__item">
+                <img src="img/users/user-6.png" alt="" class="ecommerce-widget-c__item-avatar rounded-circle">
+                <div class="ecommerce-widget-c__item-info">
+                  <a href="#" class="ecommerce-widget-c__item-name">Gabriel Saunders</a>
+                  <div class="ecommerce-widget-c__item-desc">
+                    <span class="ecommerce-widget-c__item-action">Placed an new order</span>
+                    <span class="ecommerce-widget-c__item-date">4 minutes ago</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ecommerce-widget-c__item">
+                <img src="img/users/user-8.png" alt="" class="ecommerce-widget-c__item-avatar rounded-circle">
+                <div class="ecommerce-widget-c__item-info">
+                  <a href="#" class="ecommerce-widget-c__item-name">Gabriel Saunders</a>
+                  <div class="ecommerce-widget-c__item-desc">
+                    <span class="ecommerce-widget-c__item-action">Placed an new order</span>
+                    <span class="ecommerce-widget-c__item-date">4 minutes ago</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ecommerce-widget-c__item">
+                <img src="img/users/user-1.png" alt="" class="ecommerce-widget-c__item-avatar rounded-circle">
+                <div class="ecommerce-widget-c__item-info">
+                  <a href="#" class="ecommerce-widget-c__item-name">Gabriel Saunders</a>
+                  <div class="ecommerce-widget-c__item-desc">
+                    <span class="ecommerce-widget-c__item-action">Placed an new order</span>
+                    <span class="ecommerce-widget-c__item-date">4 minutes ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ecommerce-widget-c__footer">
+          <a href="#" class="btn btn-info btn-block">View all logs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="ecommerce-widget ecommerce-widget-a ecommerce-widget-a--info">
+        <div class="ecommerce-widget-a__currency">$</div>
+        <div class="ecommerce-widget-a__content">
+          <div class="ecommerce-widget-a__title">Collected Revenue</div>
+          <div class="ecommerce-widget-a__price">48 000 <span class="ecommerce-widget-a__price-sub">LKR</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="ecommerce-widget ecommerce-widget-a ecommerce-widget-a--danger">
+        <div class="ecommerce-widget-a__currency">$</div>
+        <div class="ecommerce-widget-a__content">
+          <div class="ecommerce-widget-a__title">Pending Revenue</div>
+          <div class="ecommerce-widget-a__price">14,463 <span class="ecommerce-widget-a__price-sub">LKR</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="ecommerce-widget ecommerce-widget-a ecommerce-widget-a--success">
+        <div class="ecommerce-widget-a__currency">$</div>
+        <div class="ecommerce-widget-a__content">
+          <div class="ecommerce-widget-a__title">Dropped Revenue</div>
+          <div class="ecommerce-widget-a__price">14, 000 <span class="ecommerce-widget-a__price-sub">LKR</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="ecommerce-widget ecommerce-widget-a ecommerce-widget-a--purple">
+        <div class="ecommerce-widget-a__currency">$</div>
+        <div class="ecommerce-widget-a__content">
+          <div class="ecommerce-widget-a__title">Revenue Factor</div>
+          <div class="ecommerce-widget-a__price">14% <span class="ecommerce-widget-a__price-sub">Increased</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="ecommerce-widget ecommerce-widget-g">
+        <div class="ecommerce-widget-g__header">Average Revenue</div>
+        <div class="ecommerce-widget-g__value color-mountain-meadow">$3,948.40</div>
+        <div class="ecommerce-widget-g__desc">Since last month</div>
+        <span class="ua-icon-widget-bar-chart-up ecommerce-widget-g__icon"></span>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="ecommerce-widget ecommerce-widget-g">
+        <div class="ecommerce-widget-g__header">Forecasted Revenue</div>
+        <div class="ecommerce-widget-g__value color-waterlemon">$3,948.40</div>
+        <div class="ecommerce-widget-g__desc">Since last month</div>
+        <span class="ua-icon-widget-money-bag ecommerce-widget-g__icon"></span>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="ecommerce-widget ecommerce-widget-g">
+        <div class="ecommerce-widget-g__header">Average Revenue</div>
+        <div class="ecommerce-widget-g__value color-portage">+34%</div>
+        <div class="ecommerce-widget-g__desc">Since last month</div>
+        <span class="ua-icon-widget-wallet ecommerce-widget-g__icon"></span>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="ecommerce-widget ecommerce-widget-g">
+        <div class="ecommerce-widget-g__header">Forecasted Revenue</div>
+        <div class="ecommerce-widget-g__value color-cerulean">$23,948.40</div>
+        <div class="ecommerce-widget-g__desc">Since last month</div>
+        <span class="ua-icon-widget-line-chart-up ecommerce-widget-g__icon"></span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ecommerce-widget ecommerce-widget-j">
+        <div class="ecommerce-widget-j__header">Sales Statistic</div>
+        <div class="ecommerce-widget-j__body">
+          <div class="ecommerce-widget-j__item">
+            <div class="ecommerce-widget-j__item-heading">Direct</div>
+            <div class="ecommerce-widget-j__item-content">
+              <div class="ecommerce-widget-j__item-stats">
+                <div class="ua-icon-arrow_sans_up ecommerce-widget-j__item-stats-icon ecommerce-widget-j__item-stats-icon--up"></div>
+                <div class="ecommerce-widget-j__item-stats-text">+37%</div>
+              </div>
+              <div class="ecommerce-widget-j__item-value">$2,931</div>
+            </div>
+            <div class="ecommerce-widget-j__item-desc">Look Up In The Sky</div>
+          </div>
+          <div class="ecommerce-widget-j__item">
+            <div class="ecommerce-widget-j__item-heading">Mail</div>
+            <div class="ecommerce-widget-j__item-content">
+              <div class="ecommerce-widget-j__item-stats">
+                <div class="ua-icon-arrow_sans_down ecommerce-widget-j__item-stats-icon ecommerce-widget-j__item-stats-icon--down"></div>
+                <div class="ecommerce-widget-j__item-stats-text">-37%</div>
+              </div>
+              <div class="ecommerce-widget-j__item-value">$1,231</div>
+            </div>
+            <div class="ecommerce-widget-j__item-desc">Look Up In The Sky</div>
+          </div>
+          <div class="ecommerce-widget-j__item">
+            <div class="ecommerce-widget-j__item-heading">Social Media</div>
+            <div class="ecommerce-widget-j__item-content">
+              <div class="ecommerce-widget-j__item-stats">
+                <div class="ua-icon-arrow_sans_up ecommerce-widget-j__item-stats-icon ecommerce-widget-j__item-stats-icon--up"></div>
+                <div class="ecommerce-widget-j__item-stats-text">-37%</div>
+              </div>
+              <div class="ecommerce-widget-j__item-value">$545</div>
+            </div>
+            <div class="ecommerce-widget-j__item-desc">Choose The Perfect</div>
+          </div>
+          <div class="ecommerce-widget-j__item">
+            <div class="ecommerce-widget-j__item-heading">Other</div>
+            <div class="ecommerce-widget-j__item-content">
+              <div class="ecommerce-widget-j__item-stats">
+                <div class="ua-icon-arrow_sans_up ecommerce-widget-j__item-stats-icon ecommerce-widget-j__item-stats-icon--up"></div>
+                <div class="ecommerce-widget-j__item-stats-text">+37%</div>
+              </div>
+              <div class="ecommerce-widget-j__item-value">$332</div>
+            </div>
+            <div class="ecommerce-widget-j__item-desc">How to cook</div>
+          </div>
+          <div class="ecommerce-widget-j__item">
+            <div class="ecommerce-widget-j__item-heading">Customers</div>
+            <div class="ecommerce-widget-j__item-content">
+              <div class="ecommerce-widget-j__item-stats">
+                <div class="ua-icon-arrow_sans_up ecommerce-widget-j__item-stats-icon ecommerce-widget-j__item-stats-icon--up"></div>
+                <div class="ecommerce-widget-j__item-stats-text">+37%</div>
+              </div>
+              <div class="ecommerce-widget-j__item-value">$332</div>
+            </div>
+            <div class="ecommerce-widget-j__item-desc">How to cook</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-h">
+        <div class="ecommerce-widget-h__title">Invoice Pending</div>
+        <div class="ecommerce-widget-h__value">$50,000.00</div>
+        <div class="ecommerce-widget-h__desc">$5,000 from Last Month</div>
+        <img src="img/widgets/002.png" alt="" class="ecommerce-widget-h__image">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-h ecommerce-widget-h--pink">
+        <div class="ecommerce-widget-h__title">Customers</div>
+        <div class="ecommerce-widget-h__value">4356</div>
+        <div class="ecommerce-widget-h__desc">
+          <span class="ecommerce-widget-h__desc-item">
+            <strong>56</strong> New <span class="ua-icon-widget-arrow-thin-up ecommerce-widget-h__desc-icon"></span>
+          </span>
+          <span class="ecommerce-widget-h__desc-item">
+            <strong>4300</strong> Old <span class="ua-icon-widget-arrow-thin-down ecommerce-widget-h__desc-icon"></span>
+          </span>
+        </div>
+        <img src="img/widgets/003.png" alt="" class="ecommerce-widget-h__image">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-h ecommerce-widget-h--purple">
+        <div class="ecommerce-widget-h__title">Rating & Reviews</div>
+        <div class="ecommerce-widget-h__value">4.5 / 400</div>
+        <div class="ecommerce-widget-h__desc">
+          <span class="ecommerce-widget-h__desc-item">
+            <strong>0.9</strong> <span class="ua-icon-widget-arrow-thin-up ecommerce-widget-h__desc-icon"></span>
+          </span>
+          <span class="ecommerce-widget-h__desc-item">
+            <strong>20</strong> <span class="ua-icon-widget-arrow-thin-down ecommerce-widget-h__desc-icon"></span>
+          </span>
+        </div>
+        <img src="img/widgets/001.png" alt="" class="ecommerce-widget-h__image">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-h ecommerce-widget-h--macaroni">
+        <div class="ecommerce-widget-h__title">Vodafone 88001234563</div>
+        <div class="ecommerce-widget-h__value">$35.8</div>
+        <div class="ecommerce-widget-h__desc">Due on 9th Sep, 2017</div>
+        <div class="ecommerce-widget-h__desc2">Billing Month: Aug 2017</div>
+        <a href="#" class="btn ecommerce-widget-h__link">Pay Now</a>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-h ecommerce-widget-h--macaroni">
+        <div class="ecommerce-widget-h__title">Act Internet</div>
+        <div class="ecommerce-widget-h__value">$120</div>
+        <div class="ecommerce-widget-h__desc">Due on 9th Sep, 2017</div>
+        <div class="ecommerce-widget-h__desc2">Billing Month: Aug 2017</div>
+        <a href="#" class="btn ecommerce-widget-h__link">Pay Now</a>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-h ecommerce-widget-h--green">
+        <div class="ecommerce-widget-h__title">Rating & Reviews</div>
+        <div class="ecommerce-widget-h__value">$50</div>
+        <div class="ecommerce-widget-h__desc">Due on 9th Sep, 2017</div>
+        <div class="ecommerce-widget-h__desc2">Billing Month: Aug 2017</div>
+        <span class="ua-icon-circle-check ecommerce-widget-h__icon"></span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-i ecommerce-widget-i--green">
+        <div class="ecommerce-widget-i__title">System Dollar</div>
+        <div class="ecommerce-widget-i__value">$421.980</div>
+        <img src="img/widgets/004.png" alt="" class="ecommerce-widget-i__image">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-i ecommerce-widget-i--pink">
+        <div class="ecommerce-widget-i__title">System Dollar</div>
+        <div class="ecommerce-widget-i__value">$421.980</div>
+        <img src="img/widgets/004.png" alt="" class="ecommerce-widget-i__image">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="ecommerce-widget ecommerce-widget-i ecommerce-widget-i--purple">
+        <div class="ecommerce-widget-i__title">System Dollar</div>
+        <div class="ecommerce-widget-i__value">$421.980</div>
+        <img src="img/widgets/004.png" alt="" class="ecommerce-widget-i__image">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="vendor/echarts/echarts.min.js"></script>
+{{ super() }}
+<script src="js/preview/widgets-ecommerce.min.js"></script>
+{% endblock %}

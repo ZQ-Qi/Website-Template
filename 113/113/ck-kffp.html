@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>库房分配</title>
+<link  type="text/css" rel="stylesheet"  href="css/style.css"/>
+<link  type="text/css" rel="stylesheet"  href="css/index.css"/>
+<script  src="js/jquery.min.js"></script>
+<!-- 动态菜单JS -->
+<script type="text/javascript"  src="js/menu.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+ <div class="cont-top">
+  <div class="companyname">首耀照明</div>
+  <div class="cont-top-middle">
+   <ul>
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon.png">
+      </div>
+       <div class="top-txt">购物单</div>
+     </a>
+    </li>
+    
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+   
+   </ul>
+  </div>
+  <div class="cont-top-rg">
+   <ul class="advanced-menu">
+    <li>
+     <div class="top-search">
+      <div class="t-s-l">
+       <span class="left-line"></span>
+       <input type="text" value="搜库存" class="search-type" disabled>
+       <span class="triangle-bottom"></span>
+      </div>
+      <div class="t-s-l">
+       <input type="text" placeholder="请输入商品编码或名称" class="search-dt" autocomplete="off"> 
+       <span class="right-line"></span>
+       <span class="right-icon"><img src="img/search-icon.png"></span>
+      </div>
+     </div>
+    </li>
+    <li class="default" style="position:relative;">
+     <span class="user"><img src="img/user.png"></span>
+     <a  href="#" class="special">小丫头 <i><img src="img/xl.png"></i></a>
+     <div class="drop-down-wrap" style="width:180px;left:15px;display: none;">
+      <div class="drop-down">
+       <span class="triangle-border"></span>
+       <span class="triangle-bg"></span>
+       <ul class="del-ul">
+        <li><a href="#" class="hot">首耀照明</a></li>
+        <li><a href="#">小丫头</a></li>
+        <li><a href="#">操作日志</a></li>       
+       </ul>
+      </div>
+     </div>
+    </li>    
+   </ul>
+   <ul class="advanced-menu">
+    <li>
+     <a href="#"><img  src="img/top-icon1.png"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="img/top-icon2.png"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="img/top-icon3.png"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="img/top-icon4.png"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="img/top-icon5.png"></a>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <div class="left-menu" style="height:949px;">
+  <div class="menu-list">
+   <ul>
+    <li class="menu-list-01" >
+     <a href="ck-kffp.html">
+     <p class="fumenu">库房管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd5">入库单</p>
+      <p class="zcd" id="zcd6">出库单</p>
+      <p class="zcd" id="zcd7">库存余额表</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-02">
+     <a  href="ckgl.html">
+     <p class="fumenu">产品管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd5">产品库存</p>
+      <p class="zcd" id="zcd6">产品成本</p>
+      <p class="zcd" id="zcd7">产品属性管理</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-01" >
+    <a href="dd-ddgl.html">
+     <p class="fumenu">订单管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd8">下单账户</p>
+      <p class="zcd" id="zcd9">所属员工</p>
+      <p class="zcd" id="zcd10">订单成本</p>
+      <p class="zcd" id="zcd1">订单成本费用</p>
+      <p class="zcd" id="zcd12">订单总支付金额</p>
+      <p class="zcd" id="zcd3">订单商品</p>
+      <p class="zcd" id="zcd14">手动增加订单</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-02">
+     <a href="cj-ckd.html">
+     <p class="fumenu">财务管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd15">记录出款和入款</p>
+      <p class="zcd" id="zcd16">计算一段时间的利润</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-01" >
+    <a  href="kh-khgl.html">
+     <p class="fumenu">客户管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd17">客户基本信息</p>
+      <p class="zcd" id="zcd18">客户VIP登记管理</p>
+      <p class="zcd" id="zcd19">客户信息管理</p>
+      <p class="zcd" id="zcd20">客户订单管理</p>
+      <p class="zcd" id="zcd21">转移客户</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-02">
+    <a href="yg-jbxx.html">
+     <p class="fumenu">员工管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd22">员工基本信息</p>
+      <p class="zcd" id="zcd23">员工权限</p>
+       <p class="zcd" id="zcd24">开通新客户</p>
+      <p class="zcd" id="zcd25">销售额管理</p>
+     </div>
+    </li>
+   </ul>
+  </div>
+ </div>
+ 
+ <div class="right-menu">
+  <div class="main-hd">
+   <div class="page-teb" >
+    <div class="l-tab-links">
+     <ul style="left:0;">
+      <li class="l-select">
+       <a href="#" style="padding:0px 25px;">首页</a>
+      </li>
+       <li class="l-select">
+       <a href="#">库房分配</a>
+       <span class="close"></span>
+      </li>
+     </ul>
+    </div>
+
+    <div class="l-tab-content" style="background:#fff;">
+     <div class="tab-content-item">
+      <div class="home">
+      <!--库房分配   开始-->
+        <div class="kufang-box">
+         <div class="kufang">
+         <div class="kf-fl">
+          <ul>
+           <li>价格方式：<span>库存成本价</span></li>
+           <li style="display:none;">仓库：<span>天津站</span></li>
+           <li  style="display:none;">时间：<span>2016-08-15至2017-08-25</span></li>
+          </ul>
+         </div>
+         
+         <div class="kf-rg">
+          <ul>
+           <li>
+            <span><input type="checkbox" value="true" >显示停用仓库</span>
+           </li>
+           <li>
+            <span><input type="checkbox" value="true" >显示停用商品</span>
+           </li>
+           <li>
+            <span>过滤
+             <select class="kf-in">
+              <option>显示全部</option>
+              <option>不显示各仓库数量和金额都为0</option>
+             </select>
+            </span>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+        
+       <div class="kf-tab">
+        <div class="headerbar-kf">
+         <table class="headerbar" border="0" cellpadding="0" cellspacing="1" >
+          <tbody>
+           <tr class="headerrow-kf">
+            <td class="caption-kf" style="overflow:hidden;" align="center" rowspan="2" width="40">
+             <div class="caotion-kf-txt1">序号</div>
+            </td>
+            <td class="caption-kf" style="overflow:hidden;" align="center" colspan="6">
+             <div class="caotion-kf-txt">商品信息</div>
+            </td>
+            <td class="caption-kf" style="overflow:hidden;" align="center" colspan="2">
+             <div class="caotion-kf-txt">总仓库</div>
+            </td>
+             <td class="caption-kf" style="overflow:hidden;" align="center" colspan="2">
+             <div class="caotion-kf-txt">库房-北京站</div>
+            </td>
+             <td class="caption-kf" style="overflow:hidden;" align="center" colspan="2">
+             <div class="caotion-kf-txt">库房-北京站</div>
+            </td>
+             <td class="caption-kf" style="overflow:hidden;" align="center" colspan="2">
+             <div class="caotion-kf-txt">库房-北京站</div>
+            </td>
+             <td class="caption-kf" style="overflow:hidden;" align="center" colspan="2">
+             <div class="caotion-kf-txt">合计</div>
+            </td>
+           </tr>
+           <tr  class="headerrow-kf">
+           
+            <td class="caption cao-l"  >
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;" >产品编号</div>
+            </td>
+             <td class="caption cao-l">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:169px;">商品名称</div>
+            </td>
+             <td class="caption cao-l" >
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">规格</div>
+            </td>
+             <td class="caption cao-l">
+             <div class="caotion-kf-txt"  style="overflow:hidden;text-align:center;width:85px;">型号</div>
+            </td>
+             <td class="caption cao-l" >
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">产地</div>
+            </td>
+             <td class="caption cao-l" >
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">单位</div>
+            </td>
+             <td class="caption cao-l"  colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">数量</div>
+            </td>
+             <td class="caption cao-l"  colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:80px;">金额</div>
+            </td> 
+            <td class="caption cao-l" colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">数量</div>
+            </td>
+             <td class="caption cao-l" colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">金额</div>
+            </td>
+             <td class="caption cao-l" colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">数量</div>
+            </td>
+             <td class="caption cao-l" colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">金额</div>
+            </td>
+               <td class="caption cao-l" colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">数量</div>
+            </td>
+               <td class="caption cao-l" colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center; width:85px;">金额</div>
+            </td>
+               <td class="caption cao-l" colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center;width:85px;">数量</div>
+            </td>
+              <td class="caption cao-l" colspan="1" rowspan="1">
+             <div class="caotion-kf-txt" style="overflow:hidden;text-align:center; width:85px;">金额</div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </div>
+        <div class="kfbody" tabindex="0">
+         <table border="0" cellpadding="0" cellspacing="1" class="fkbody-rows">
+          <tbody>
+           <tr class="fkbody-s" _rowindex="0">
+             <td class="caption-kf" style="overflow:hidden;" align="center" rowspan="2" width="40">
+             <div class="caotion-kf-txt1">1</div>
+            </td>
+            <td class="bodyrow-list"  _columnindex="0"  >
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:85px;">a710032</div>
+            </td>
+             <td class="bodyrow-list"_columnindex="1">
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:169px;">a五位荧光开光</div>
+            </td>
+             <td class="bodyrow-list" _columnindex="2" >
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:85px;">20*11</div>
+            </td>
+             <td class="bodyrow-list" _columnindex="3" >
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:85px;">w12265d</div>
+            </td>
+             <td class="bodyrow-list" _columnindex="4">
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:85px;">中国</div>
+            </td>
+            
+             <td class="bodyrow-list"  _columnindex="5">
+             <div class="bodytxt"  style="overflow:hidden;text-align: center; width:85px;">个</div>
+            </td>
+             <td class="bodyrow-list" _columnindex="6">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">120</div>
+            </td> 
+            <td class="bodyrow-list" align _columnindex="7">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:80px;">9600</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="8">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="9">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td> 
+            <td class="bodyrow-list" align _columnindex="10">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="11">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="12">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="13">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td> 
+            <td class="bodyrow-list" align _columnindex="14">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="15" >
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </div>
+        <div class="kfbody11" tabindex="0">
+         <table border="0" cellpadding="0" cellspacing="1" class="fkbody-rows">
+          <tbody>
+           <tr class="fkbody-s" _rowindex="0">
+             <td class="caption-kf" style="overflow:hidden;" align="center" rowspan="2" width="40">
+             <div class="caotion-kf-txt1">0</div>
+            </td>
+            <td class="bodyrow-list"  _columnindex="0"  >
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:85px;"></div>
+            </td>
+             <td class="bodyrow-list"_columnindex="1">
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:169px;"></div>
+            </td>
+             <td class="bodyrow-list" _columnindex="2" >
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:85px;"></div>
+            </td>
+             <td class="bodyrow-list" _columnindex="3" >
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:85px;"></div>
+            </td>
+             <td class="bodyrow-list" _columnindex="4">
+             <div class="bodytxt"  style="overflow:hidden;text-align:center; width:85px;"></div>
+            </td>
+            
+             <td class="bodyrow-list"  _columnindex="5">
+             <div class="bodytxt"  style="overflow:hidden;text-align: center; width:85px;"></div>
+            </td>
+             <td class="bodyrow-list" _columnindex="6">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">120</div>
+            </td> 
+            <td class="bodyrow-list" align _columnindex="7">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:80px;">9600</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="8">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="9">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td> 
+            <td class="bodyrow-list" align _columnindex="10">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="11">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="12">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="13">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td> 
+            <td class="bodyrow-list" align _columnindex="14">
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+             <td class="bodyrow-list" align _columnindex="15" >
+             <div class="bodytxt"  style="overflow:hidden;text-align:right; width:85px;">0</div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </div>
+        <div class="lu"> 共<i>1</i>条记录</div>
+        
+       </div> 
+       <div class="tab-btn">
+        <div class="bt-f">
+        <ul>
+         <li>
+          <button class="button-li">查询条件</button>
+         </li>
+          <li>
+          <button class="button-li">明细账本</button>
+         </li>
+          <li>
+          <button class="button-li">价格方式</button>
+         </li>
+        </ul>
+        </div>
+        <div class="bt-rg">
+         <ul>
+          <li><button>打印</button></li>
+          <li><button>退出</button></li>
+         </ul>
+        </div>
+       </div>
+      <!--库房分配   结束-->
+      </div>      
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+  
+</body>
+</html>

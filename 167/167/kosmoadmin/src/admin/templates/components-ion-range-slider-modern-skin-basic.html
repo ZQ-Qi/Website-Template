@@ -1,0 +1,562 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/prism/prism.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="libs/ion-range-slider/css/ion.rangeSlider.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/ion-range-slider/modern-skin/primary.min.css"> <!-- customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/ion-range-slider/modern-skin/danger.min.css"> <!-- customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/ion-range-slider/modern-skin/info.min.css"> <!-- customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/ion-range-slider/modern-skin/success.min.css"> <!-- customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/ion-range-slider/modern-skin/warning.min.css"> <!-- customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Sliders - Modern UI Skin</h3>
+                <button class="btn btn-outline-primary ks-light ks-content-nav-toggle" data-block-toggle=".ks-content-nav > .ks-nav">Menu</button>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-content-nav">
+                <div class="ks-nav">
+                    @@include('./_partials/components/ion-range-slider/navigation.html')
+                </div>
+                <div class="ks-nav-body">
+                    <div class="ks-nav-body-wrapper">
+                        <div class="container-fluid">
+                            <h4>Simple start and customising basic params</h4>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Start without params</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-without-params").ionRangeSlider();</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-without-params-primary"></div>
+                                    <div class="ks-irs-slider-modern-danger"><input id="ion-range-slider-without-params-danger"></div>
+                                    <div class="ks-irs-slider-modern-info"><input id="ion-range-slider-without-params-info"></div>
+                                    <div class="ks-irs-slider-modern-success"><input id="ion-range-slider-without-params-success"></div>
+                                    <div class="ks-irs-slider-modern-warning"><input id="ion-range-slider-without-params-warning"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Set min value, max value and start point</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-min-max-from").ionRangeSlider({
+    min: 100,
+    max: 1000,
+    from: 550
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-min-max-from"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Set type to double and specify range, also showing grid and adding prefix "$"</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-double-grid").ionRangeSlider({
+    type: "double",
+    grid: true,
+    min: 0,
+    max: 1000,
+    from: 200,
+    to: 800,
+    prefix: "$"
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-double-grid"></div>
+                                </div>
+                            </div>
+
+                            <h4>Set up range and step</h4>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Set up range with negative values</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-range-nagative-values").ionRangeSlider({
+    type: "double",
+    grid: true,
+    min: -1000,
+    max: 1000,
+    from: -500,
+    to: 500
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-range-nagative-values"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Using step 250</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-range-using-step").ionRangeSlider({
+    type: "double",
+    grid: true,
+    min: -1000,
+    max: 1000,
+    from: -500,
+    to: 500,
+    step: 250
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-range-using-step"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Set up range with fractional values, using fractional step</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-fractional-values-steps").ionRangeSlider({
+    type: "double",
+    grid: true,
+    min: -12.8,
+    max: 12.8,
+    from: -3.2,
+    to: 3.2,
+    step: 0.1
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-fractional-values-steps"></div>
+                                </div>
+                            </div>
+
+                            <h4>Using custom values array</h4>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Set up you own numbers</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-you-own-numbers").ionRangeSlider({
+    type: "double",
+    grid: true,
+    from: 1,
+    to: 5,
+    values: [0, 10, 100, 1000, 10000, 100000, 1000000]
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-you-own-numbers"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Set up you own numbers</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-string-as-values").ionRangeSlider({
+    grid: true,
+    from: 5,
+    values: [
+        "zero", "one",
+        "two", "three",
+        "four", "five",
+        "six", "seven",
+        "eight", "nine",
+        "ten"
+    ]
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-string-as-values"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>One more example with strings</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-months").ionRangeSlider({
+    grid: true,
+    from: 3,
+    values: [
+        "January", "February", "March",
+        "April", "May", "June",
+        "July", "August", "September",
+        "October", "November", "December"
+    ]
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-months"></div>
+                                </div>
+                            </div>
+
+                            <h4>Prettify visual look of numbers</h4>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>No prettify. Big numbers are ugly and unreadable</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-no-prettify-numbers").ionRangeSlider({
+    grid: true,
+    min: 1000,
+    max: 1000000,
+    from: 100000,
+    step: 1000,
+    prettify_enabled: false
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-no-prettify-numbers"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Prettify enabled. Much better!</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-prettify-enabled").ionRangeSlider({
+    grid: true,
+    min: 1000,
+    max: 1000000,
+    from: 200000,
+    step: 1000,
+    prettify_enabled: true
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-prettify-enabled"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Don't like space as separator? Use anything you like!</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-prettify-no-space-separator").ionRangeSlider({
+    grid: true,
+    min: 1000,
+    max: 1000000,
+    from: 300000,
+    step: 1000,
+    prettify_enabled: true,
+    prettify_separator: "."
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-prettify-no-space-separator"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>You don't like default prettify function? Use your own!</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-prettify-as-function").ionRangeSlider({
+    grid: true,
+    min: 1000,
+    max: 1000000,
+    from: 400000,
+    step: 1000,
+    prettify_enabled: true,
+    prettify: function (num) {
+        return (Math.random() * num).toFixed(0);
+    }
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-prettify-as-function"></div>
+                                </div>
+                            </div>
+
+                            <h4>Decorating numbers</h4>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Using prefixes</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-prettify-using-prefix").ionRangeSlider({
+    type: "double",
+    grid: true,
+    min: 0,
+    max: 10000,
+    from: 1000,
+    step: 1000,
+    prefix: "$"
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-prettify-using-prefix"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Using postfix</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-prettify-using-postfix").ionRangeSlider({
+    type: "single",
+    grid: true,
+    min: -90,
+    max: 90,
+    from: 0,
+    postfix: "°"
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-prettify-using-postfix"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Max postfix</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-prettify-max-postfix").ionRangeSlider({
+    grid: true,
+    min: 18,
+    max: 70,
+    from: 30,
+    prefix: "Age ",
+    max_postfix: "+"
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-prettify-max-postfix"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Connect two values</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-prettify-connect-two-values").ionRangeSlider({
+    type: "double",
+    min: 100,
+    max: 200,
+    from: 145,
+    to: 155,
+    prefix: "Weight: ",
+    postfix: " million pounds",
+    decorate_both: true
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-prettify-connect-two-values"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Remove double decoration</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-prettify-remove-double-decoration").ionRangeSlider({
+    type: "double",
+    min: 100,
+    max: 200,
+    from: 145,
+    to: 155,
+    prefix: "Weight: ",
+    postfix: " million pounds",
+    decorate_both: false
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-prettify-remove-double-decoration"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Use your own separator symbol with values_separator option. Like →</h5>
+                            <pre class="language-javascript">
+<code>$("#ion-range-slider-prettify-use-values-separator").ionRangeSlider({
+    type: "double",
+    min: 100,
+    max: 200,
+    from: 148,
+    to: 152,
+    prefix: "Weight: ",
+    postfix: " million pounds",
+    values_separator: " → "
+});</code>
+</pre>
+                                    <div class="ks-irs-slider-modern-primary"><input id="ion-range-slider-prettify-use-values-separator"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/prism/prism.js"></script>
+<script src="libs/ion-range-slider/js/ion.rangeSlider.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $("#ion-range-slider-without-params-primary, " +
+            "#ion-range-slider-without-params-danger, " +
+            "#ion-range-slider-without-params-info, " +
+            "#ion-range-slider-without-params-success, " +
+            "#ion-range-slider-without-params-warning").ionRangeSlider();
+
+        $("#ion-range-slider-min-max-from").ionRangeSlider({
+            min: 100,
+            max: 1000,
+            from: 550
+        });
+
+        $("#ion-range-slider-double-grid").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: 0,
+            max: 1000,
+            from: 200,
+            to: 800,
+            prefix: "$"
+        });
+
+        $("#ion-range-slider-range-nagative-values").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: -1000,
+            max: 1000,
+            from: -500,
+            to: 500
+        });
+
+        $("#ion-range-slider-range-using-step").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: -1000,
+            max: 1000,
+            from: -500,
+            to: 500,
+            step: 250
+        });
+
+        $("#ion-range-slider-fractional-values-steps").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: -12.8,
+            max: 12.8,
+            from: -3.2,
+            to: 3.2,
+            step: 0.1
+        });
+
+        $("#ion-range-slider-you-own-numbers").ionRangeSlider({
+            type: "double",
+            grid: true,
+            from: 1,
+            to: 5,
+            values: [0, 10, 100, 1000, 10000, 100000, 1000000]
+        });
+
+        $("#ion-range-slider-string-as-values").ionRangeSlider({
+            grid: true,
+            from: 5,
+            values: [
+                "zero", "one",
+                "two", "three",
+                "four", "five",
+                "six", "seven",
+                "eight", "nine",
+                "ten"
+            ]
+        });
+
+        $("#ion-range-slider-months").ionRangeSlider({
+            grid: true,
+            from: 3,
+            values: [
+                "January", "February", "March",
+                "April", "May", "June",
+                "July", "August", "September",
+                "October", "November", "December"
+            ]
+        });
+
+        $("#ion-range-slider-no-prettify-numbers").ionRangeSlider({
+            grid: true,
+            min: 1000,
+            max: 1000000,
+            from: 100000,
+            step: 1000,
+            prettify_enabled: false
+        });
+
+        $("#ion-range-slider-prettify-enabled").ionRangeSlider({
+            grid: true,
+            min: 1000,
+            max: 1000000,
+            from: 200000,
+            step: 1000,
+            prettify_enabled: true
+        });
+
+        $("#ion-range-slider-prettify-no-space-separator").ionRangeSlider({
+            grid: true,
+            min: 1000,
+            max: 1000000,
+            from: 300000,
+            step: 1000,
+            prettify_enabled: true,
+            prettify_separator: "."
+        });
+
+        $("#ion-range-slider-prettify-as-function").ionRangeSlider({
+            grid: true,
+            min: 1000,
+            max: 1000000,
+            from: 400000,
+            step: 1000,
+            prettify_enabled: true,
+            prettify: function (num) {
+                return (Math.random() * num).toFixed(0);
+            }
+        });
+
+        $("#ion-range-slider-prettify-using-prefix").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: 0,
+            max: 10000,
+            from: 1000,
+            step: 1000,
+            prefix: "$"
+        });
+
+        $("#ion-range-slider-prettify-using-postfix").ionRangeSlider({
+            type: "single",
+            grid: true,
+            min: -90,
+            max: 90,
+            from: 0,
+            postfix: "°"
+        });
+
+        $("#ion-range-slider-prettify-max-postfix").ionRangeSlider({
+            grid: true,
+            min: 18,
+            max: 70,
+            from: 30,
+            prefix: "Age ",
+            max_postfix: "+"
+        });
+
+        $("#ion-range-slider-prettify-connect-two-values").ionRangeSlider({
+            type: "double",
+            min: 100,
+            max: 200,
+            from: 145,
+            to: 155,
+            prefix: "Weight: ",
+            postfix: " million pounds",
+            decorate_both: true
+        });
+
+        $("#ion-range-slider-prettify-remove-double-decoration").ionRangeSlider({
+            type: "double",
+            min: 100,
+            max: 200,
+            from: 145,
+            to: 155,
+            prefix: "Weight: ",
+            postfix: " million pounds",
+            decorate_both: false
+        });
+
+        $("#ion-range-slider-prettify-use-values-separator").ionRangeSlider({
+            type: "double",
+            min: 100,
+            max: 200,
+            from: 148,
+            to: 152,
+            prefix: "Weight: ",
+            postfix: " million pounds",
+            values_separator: " → "
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

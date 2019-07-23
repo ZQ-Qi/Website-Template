@@ -1,0 +1,77 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Toast Style
+    1.2 Toast Positions
+
+-------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/* placement = right, left, center */
+/* alignment = top, bottom */
+.toast{
+    position: fixed;
+    z-index: 1022;
+    bottom: 2rem;
+    right: 2rem;
+    max-width: 280px;
+    border-radius: 0.25rem;
+    
+
+    > .alert{
+        box-shadow: 0px 0px 1rem rgba(0,0,0,0.15);
+    }
+
+    > *:last-child{
+        margin-bottom:0px;
+    }
+
+
+
+    &.top-right{
+        bottom: auto;
+        top: 2rem;
+    }
+    &.bottom-right{
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+
+    &.top-left{
+        bottom: auto;
+        top: 2rem;
+        left: 2rem;
+        right: auto;
+    }
+    &.bottom-left{
+        bottom: 2rem;
+        left: 2rem;
+        right: auto;
+    }
+
+
+    &.top-center{
+        bottom: auto;
+        top: 2rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    &.bottom-center{
+        bottom: 2rem;
+        top: auto;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+    
+
+}

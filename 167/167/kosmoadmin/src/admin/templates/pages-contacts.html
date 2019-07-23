@@ -1,0 +1,99 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/pages/contacts.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Contacts</h3>
+                <button class="btn btn-outline-primary ks-light ks-contact-form-block-toggle" data-block-toggle=".ks-contacts-page > .ks-contacts">Contact Form</button>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-contacts-page">
+                <div class="ks-map">
+                    <div id="ks-map"></div>
+                    <div class="ks-locations">
+                        <a href="#" class="ks-active ks-location">Boston</a>
+                        <a href="#" class="ks-location">New York</a>
+                        <a href="#" class="ks-location">Washington</a>
+                    </div>
+                </div>
+                <div class="ks-contacts">
+                    <div class="ks-box ks-connect">
+                        <h5 class="ks-header">Connect</h5>
+                        <div>
+                            <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-facebook ks-icon"></span></a>
+                            <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-twitter ks-icon"></span></a>
+                            <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-linkedin ks-icon"></span></a>
+                            <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-google-plus ks-icon"></span></a>
+                            <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-instagram ks-icon"></span></a>
+                        </div>
+                    </div>
+                    <div class="ks-box ks-contact-form">
+                        <h5 class="ks-header">Send a message</h5>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="ks-box ks-other-way">
+                        <h5 class="ks-header">Other way</h5>
+                        <table class="ks-table-info">
+                            <tr>
+                                <td class="ks-icon">
+                                    <span class="la la-phone ks-text-primary"></span>
+                                </td>
+                                <td>
+                                    222-333-444
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ks-icon">
+                                    <span class="la la-envelope-o ks-text-primary"></span>
+                                </td>
+                                <td>
+                                    <a href="mailto:hello@example.com">hello@example.com</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB44HB_FwRXlGfcvsB7dyTVcmBZm5kV49s"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map($('#ks-map').get(0), {
+            zoom: 4,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

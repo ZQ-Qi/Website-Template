@@ -1,0 +1,102 @@
+/* ----------------------------------------- */
+/* ############### ACCORDION ############### */
+/* ----------------------------------------- */
+
+.accordion-one {
+  .card {
+    + .card { margin-top: 5px; }
+  }
+
+  .card-header {
+    padding: 0;
+    background-color: transparent;
+    font-weight: 500;
+
+    a {
+      display: block;
+      padding: 18px 20px;
+      color: theme-color('primary');
+      position: relative;
+      border-bottom: 1px solid $gray-400;
+
+      &::before {
+        content: '\f106';
+        font-family: "FontAwesome";
+        position: absolute;
+        top: 20px;
+        right: 25px;
+      }
+
+      &:hover,
+      &:focus {
+        color: theme-color('primary');
+      }
+
+      &.collapsed {
+        color: $gray-800;
+        background-color: $gray-100;
+        border-bottom-color: transparent;
+
+        &::before { content: '\f107'; }
+
+        &:hover,
+        &:focus {
+          color: theme-color('primary');
+        }
+      }
+    }
+  }
+
+  .card-body { padding: 20px; }
+}
+
+// Accordion One Variant
+.accordion-one-primary { @include accordion-one-variant(theme-color('primary')); }
+.accordion-one-success { @include accordion-one-variant(theme-color('success')); }
+.accordion-one-warning { @include accordion-one-variant(theme-color('warning')); }
+.accordion-one-danger  { @include accordion-one-variant(theme-color('danger')); }
+.accordion-one-info    { @include accordion-one-variant(theme-color('info')); }
+
+
+.accordion-two {
+  .card {
+    background-color: $gray-100;
+
+    + .card { border-top: 0; }
+  }
+
+  .card-header {
+    padding: 0;
+    background-color: transparent;
+
+    a {
+      display: block;
+      padding: 18px 20px 18px 40px;
+      border-bottom: 1px solid $gray-400;
+      background-color: $gray-200;
+      font-weight: 500;
+
+      &::before {
+        content: '\f462';
+        font-family: "Ionicons";
+        font-size: 20px;
+        position: absolute;
+        top: 14px;
+        left: 20px;
+      }
+
+      &.collapsed {
+        border-bottom-color: transparent;
+        background-color: #fff;
+
+        &::before { content: '\f489'; }
+      }
+    }
+  }
+}
+
+.accordion-two-primary { @include accordion-two-variant($blue, lighten($blue, 45%)); }
+.accordion-two-success { @include accordion-two-variant($green, lighten($green, 55%)); }
+.accordion-two-warning { @include accordion-two-variant($yellow, lighten($yellow, 45%)); }
+.accordion-two-danger  { @include accordion-two-variant($red, lighten($red, 44%)); }
+.accordion-two-info    { @include accordion-two-variant($cyan, lighten($cyan, 36%)); }

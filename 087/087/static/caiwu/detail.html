@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../common/css/sapar.css" />
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/detail.css" />
+<script type="text/javascript" src="../../common/js/jquery.js"></script>
+<script type="text/javascript" src="../../common/js/sapar.js"></script>
+<script type="text/javascript" src="../../common/js/WdatePicker.js"></script>
+<title>预存款明细</title>
+</head>
+
+<body>
+    <div id="saper-container">
+        <div id="saper-hd"></div>
+        <div id="saper-bd">
+            <div class="subfiled clearfix">
+                <h2>保险使用明细</h2>
+            </div>
+            <div class="subfiled-content">
+                <div class="search-box clearfix">
+                    <div class="kv-item clearfix">
+                        <label>选择类型：</label>
+                        <div class="kv-item-content">
+                            <select>
+                                <option>选择类型</option>
+                                <option>收入</option>
+                                <option>支出</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="kv-item clearfix">
+                        <label>款项事由：</label>
+                        <div class="kv-item-content">
+                            <select name="flp_act_id" id="flp_act_id">
+                                <option value="">请选择请选择</option>
+                                    <optgroup label="扣款">
+                                    <option value="118">行程单购买</option>
+                                    <option value="131">保险购买</option>
+                                    <option value="132">送票费</option>
+                                    <option value="133">改期费</option>
+                                    <option value="134">购买短信</option>
+                                    <option value="135">快件费扣款</option>
+                                    <option value="136">其他原因扣款</option>
+                                    <option value="137">余额提现</option>
+                                    <option value="138">行程单押金</option>
+                                    <option value="139">行程单邮费</option>
+                                    <option value="207">保单邮寄费</option>
+                                    <option value="212">订单支付</option>
+                                    <option value="236">应收款收回</option>
+                                    <option value="248">应付款确认</option>
+                                    <option value="264">转账下级</option>
+                                    <option value="283">手机充值</option>
+                                    </optgroup>
+                                    <optgroup label="退款">
+                                         <option value="119">退票退款</option>
+                                         <option value="225">取消开票</option>
+                                         <option value="268">快钱退款</option>
+                                         <option value="215">废票退款</option>
+                                         <option value="216">问题票退款</option>
+                                         <option value="217">快件费退款</option>
+                                         <option value="218">重复扣款退款</option>
+                                         <option value="219">保险退款</option>
+                                         <option value="220">行程单退款</option>
+                                         <option value="221">短信退款</option>
+                                         <option value="222">银行到账充值</option>
+                                         <option value="223">同行返佣</option>
+                                         <option value="224">同行返点</option>
+                                         <option value="282">充值失败</option>
+                                     </optgroup>
+                                     <optgroup label="充值">
+                                        <option value="120">银行线下充值</option>
+                                         <option value="140">下级机票返佣</option>
+                                         <option value="141">下级保险返佣</option>
+                                         <option value="185">信用卡无卡支付</option>
+                                         <option value="214">支付宝在线充值</option>
+                                         <option value="267">快钱充值</option>
+                                     </optgroup>
+                                    </select>
+                        </div>
+                    </div>
+                    <div class="kv-item clearfix">
+                        <label>操作时间：</label>
+                        <div class="kv-item-content time-select-wrap">
+                            <div class="time-select">
+                                <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" placeholder="开始时间">
+                                <i class="date-icon"></i>
+                            </div>
+                            <span class="line">-</span>
+                            <div class="time-select">
+                                <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" placeholder="结束时间">
+                                <i class="date-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="sapar-btn sapar-btn-recom query-btn">查询</a>
+                </div>
+                
+
+                <!--表格开始-->
+                <div class="table">
+                    <!--表格操作-->
+                    <div class="table-operate ue-clear">
+                        <a href="javascript:;" class="check">导出excel</a>
+                    </div>
+                    <!--表格具体内容-->
+                    <div class="table-box">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>订单号</th>
+                                    <th>航班号</th>
+                                    <th>起飞时间</th>
+                                    <th>行程</th>
+                                    <th>人数</th>
+                                    <th>总价</th>
+                                    <th>操作人</th>
+                                    <th>申请时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="no-data"><td colspan="10">暂时没有数据</td></tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!--表格结束-->
+            </div>
+        </div>
+        <div id="saper-ft"></div>
+    </div>
+    
+</body>
+
+<script type="text/javascript">
+$('select').iSelect();
+</script>
+</html>

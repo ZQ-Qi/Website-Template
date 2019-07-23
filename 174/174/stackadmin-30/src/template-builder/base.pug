@@ -1,0 +1,88 @@
+//- ===============================================================================================
+	File Name: base.pug
+	Description: A base file for all templates, each template will inherit base template blocks 
+				 to append the content.
+	----------------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	================================================================================================ -//
+
+
+- var menuFlipped        = false			//-Default menu left aligned
+- var boxedLayout        = false			//-Default boxedLayout is false
+- var isContentMenu      = false			//- Default isContentMenu is false
+- var navbarFixed        = true			//- OPTIONS:- true, false
+- var contentLayout      = "2-columns"	//- Default contentLayout is 2-columns
+- var pageClass			 = ''
+- var logoType           = 'dark'		//- Default dark.
+- var menuOpen           = "click"			//- OPTIONS: click, hover
+- var navbarHideOnScroll = false
+- var footerHideOnScroll = false
+- var blankPage          = false
+- var bodyCustom         = ''
+- var starterKit         = false
+
+
+include includes/mixins
+
+
+//-Template name class to support tamplates specific scss
+block templateConfig
+block pageConfig
+block navbarConfig
+block verticalMenuConfig
+block horizontalMenuConfig
+block footerConfig
+
+
+
+doctype html
+html(lang="en" class="loading" data-textdirection=useDirection)
+	head
+		block meta
+			include includes/head.pug
+		block styles
+			if starterKit == false
+				include includes/styles.pug
+			else
+				include includes/sk-styles.pug
+	body(class=templateCustom + ' ' + contentLayout + ' ' + pageClass + ' ' + bodyCustom, class=(menuFlipped == true ? 'menu-flipped' : ''), class=(menuCollapsed == true ? 'menu-collapsed' : 'menu-expanded'), class=(boxedLayout == true ? 'container boxed-layout' : ''), class=(blankPage == true ? 'blank-page' : ''), class=(navbarFixed == true ? 'fixed-navbar' : ''), class=(blankPage == true ? 'blank-page' : '') , data-open=menuOpen, data-menu=dataMenu, data-col=contentLayout)
+
+
+		//- Show header, footer & menu if blank page equaks to false
+		if blankPage != true
+
+			//- START HEADER
+			= '\n'
+			block header
+			= '\n'
+			//-  END HEADER
+
+		// ////////////////////////////////////////////////////////////////////////////
+		//- START CONTAINER
+
+		//-Call page layouts mixins
+		+pageLayouts(contentLayout, sidebarSticky, sidebarFixed, isContentMenu)
+
+		//- END CONTAINER
+
+		// ////////////////////////////////////////////////////////////////////////////
+		= '\n'
+
+		if blankPage != true
+
+			if starterKit == false
+				//- block customizer
+				//- 	include includes/customizer.pug
+
+			= '\n'
+			block footer
+			= '\n'
+
+		block scripts
+			if starterKit == false
+				include includes/scripts.pug
+			else
+				include includes/sk-scripts.pug

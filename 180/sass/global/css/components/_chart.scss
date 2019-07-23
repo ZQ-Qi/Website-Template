@@ -1,0 +1,90 @@
+/*---------------------------
+
+Start Chart
+
+---------------------------*/
+.jqstooltip{
+  box-sizing: content-box;
+}
+
+.bullet_chart_margin canvas{
+  margin-bottom: $gaping-5;
+}
+.chart-height {
+  height: 350px !important;
+}
+
+/*--- easy Pie Chart ---*/
+.easyPieChart {
+  position: $position-relative;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  margin: $gaping-0 $gaping-10 $gaping-10 $gaping-0;
+  text-align: $text-center;
+  .percent {
+    display: inline-block;
+    line-height: 110px;
+    font-size: 20px;
+  }
+  canvas {
+    position: $position-absolute;
+    top: $gaping-0;
+    left: $gaping-0;
+  }
+  .percent{
+    img {
+      width: 70px;
+      transform: translateY(-2px);
+      border-radius: $border-radius-circle;
+    }
+    i{
+      font-size: 50px;
+      transform: translateY(10px);
+    }
+  }
+}
+/*--- chartist ---*/
+#y_axis_chart {
+  position: $position-relative;
+  left: $gaping-35;
+}
+#y_axis {
+  position: $position-absolute;
+  top: $gaping-50;
+  bottom: $gaping-0;
+  width: $gaping-35;
+}
+
+/*---- Start responsive Chart ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+  .morris_height{
+    height: 200px;
+  }
+  .chart-height {
+    height: 250px !important;
+  }
+}
+
+@media (max-width:479px) {
+
+}
+/*---- End responsive Chart ----*/
+
+/*---------------------------
+
+End Chart
+
+---------------------------*/

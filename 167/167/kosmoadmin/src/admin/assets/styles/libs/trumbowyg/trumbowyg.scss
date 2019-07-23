@@ -1,0 +1,42 @@
+@import "../../config/colors";
+@import "../../config/ui";
+
+.trumbowyg-box {
+  margin: 0;
+  border-color: $ks-default-border-color;
+}
+
+.trumbowyg-button-pane {
+  background: #f7f7f7;
+  border-bottom-color: $ks-default-border-color;
+}
+
+.trumbowyg-modal-box {
+  .trumbowyg-modal-button {
+    border-radius: $ks-default-border-radius !important;
+
+    &.trumbowyg-modal-submit {
+      background: $ks-color-success;
+
+      &:focus {
+        background: $ks-color-success;
+      }
+
+      &:hover {
+        background: $ks-color-success-hover;
+      }
+    }
+
+    &.trumbowyg-modal-reset {
+      background: $ks-color-secondary;
+
+      &:focus {
+        background: $ks-color-secondary;
+      }
+
+      &:hover {
+        background: $ks-color-secondary-hover;
+      }
+    }
+  }
+}

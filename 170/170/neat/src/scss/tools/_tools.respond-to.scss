@@ -1,0 +1,21 @@
+//* ==========================================================================
+//   #RESPOND TO
+// ========================================================================== */
+
+// sass-lint:disable-all
+
+//
+// A mixin to handle midea queries, it responds to the specified breakpoint and 
+// down.
+//
+// USAGE: 
+//
+// @include responde-to($breakpoint-tablet){
+//	 .. styles will apply from tablet breakpoint and down ..
+// }
+//
+@mixin respond-to($max-breakpoint) {
+	@media (max-width:$max-breakpoint) {
+		@content;
+	}
+}

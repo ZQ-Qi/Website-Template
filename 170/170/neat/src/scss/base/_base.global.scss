@@ -1,0 +1,107 @@
+/* ==========================================================================
+   #BASE GLOBAL
+   ========================================================================== */
+
+/**
+ * Resets, unclassed (bare) elements.
+ *
+ * 1. Ensure the page always fills at least the entire height of the viewport.
+ *
+ * 2. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ *
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+	height: 100%; /* [1] */
+	min-height: 100%; /* [1] */
+	font-family: $base-font-family;
+	font-size: $base-font-size; /* [2] */
+	line-height: $base-line-height / $base-font-size; /* [2] */
+	text-size-adjust: 100%; /* [3] */
+}
+
+body {
+	height: 100%; /* [1] */
+	min-height: 100%; /* [1] */
+	margin: 0;
+	background-color: $body-background-color;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: $base-font-family;
+}
+
+/**
+ * Simple reset
+ */
+
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+	margin:  0;
+	padding: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main {
+	display: block;
+}
+
+button {
+	cursor: pointer;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+/**
+ * Remove trailing margins from nested lists.
+ */
+
+li > {
+	ol,
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+}
+
+textarea {
+	display: block;
+	margin: 0;
+	outline: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	appearance: none;
+}

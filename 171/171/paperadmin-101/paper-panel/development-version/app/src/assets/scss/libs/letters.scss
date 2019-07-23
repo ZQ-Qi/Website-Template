@@ -1,0 +1,393 @@
+.avatar,.avatar-letter {
+    position: relative;
+    margin-bottom: 0;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    border-radius: 4rem;
+    vertical-align: middle;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fff;
+    color: #fff;
+}
+.avatar-xxl {
+    width: 8rem;
+    height: 8rem;
+    font-size: 7rem;
+    line-height: 8rem;
+}
+.avatar-xl {
+    width: 5rem;
+    height: 5rem;
+    font-size: 4rem;
+    line-height: 5rem;
+}
+.avatar-lg {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+.avatar-md {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+}
+
+.avatar-sm {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: .5rem;
+    line-height: 1.5rem;
+}
+
+.avatar-xs {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: .25rem;
+    line-height: 1.25rem;
+}
+
+.avatar {
+    &.dropdown {
+        .dropdown-menu {
+            min-width: 6rem;
+        }
+        &.focus .avatar-badge > .oi:before, &.show .avatar-badge > .oi:before, &:focus .avatar-badge > .oi:before, &:hover .avatar-badge > .oi:before {
+            content: "";
+        }
+        &.focus .avatar-badge > .fa:before, &.show .avatar-badge > .fa:before, &:focus .avatar-badge > .fa:before, &:hover .avatar-badge > .fa:before {
+            content: "";
+        }
+        &.focus .offline, &.show .offline, &:focus .offline, &:hover .offline {
+            color: #fff;
+        }
+    }
+    > a {
+        color: inherit;
+        outline: 0;
+        &:focus, &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    audio, canvas, img, video,.avatar-letter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4rem;
+    }
+}
+
+a.avatar {
+    &:focus, &:hover {
+        outline: 0;
+    }
+    &:focus {
+        -webkit-box-shadow: 0 0 0 3px #346cb0;
+        box-shadow: 0 0 0 3px #346cb0;
+    }
+}
+
+.avatar-lg .avatar-badge {
+    right: 5px;
+}
+
+.avatar-sm .avatar-badge, .avatar-xs .avatar-badge {
+    right: -2px;
+}
+
+.avatar-floated {
+    margin-top: -2.5rem;
+    -webkit-box-shadow: 0 0 0 2px #fff;
+    box-shadow: 0 0 0 2px #fff;
+    z-index: 2;
+    &.avatar-lg {
+        margin-top: -0.5rem;
+    }
+}
+
+.avatar-group {
+    display: inline-block;
+    .avatar {
+        -webkit-box-shadow: 0 0 0 2px #fff;
+        box-shadow: 0 0 0 2px #fff;
+        &:focus, &:hover {
+            z-index: 2;
+        }
+        + .avatar {
+            display: inline-block;
+            margin-left: -0.5em;
+        }
+    }
+}
+
+.avatar-badge {
+    position: absolute;
+    right: 1px;
+    bottom: 0;
+    display: block;
+    width: 8px;
+    height: 8px;
+    line-height: 1;
+    text-align: center;
+    font-size: 8px;
+    color: #fff;
+    background-color: #a9acb0;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 0 2px #fff;
+    box-shadow: 0 0 0 2px #fff;
+    z-index: 2;
+    &.has-indicator {
+        width: 10px;
+        height: 10px;
+    }
+    &.online {
+        background-color: $brand-success;
+    }
+    &.idle,&.away {
+        background-color: $brand-warning;
+    }
+    &.busy {
+        background-color: $brand-danger;
+    }
+    &.offline {
+        color: #a9acb0;
+        background-color: #a9acb0;
+    }
+    .fa,.icon {
+        line-height: 10px;
+        padding: 0;
+    }
+}
+
+
+
+
+.avatar-letter-a:before {
+    content: "\0061";
+}
+
+.avatar-letter-b:before {
+    content: "\0062";
+}
+
+.avatar-letter-c:before {
+    content: "\0063";
+}
+
+.avatar-letter-d:before {
+    content: "\0064";
+}
+
+.avatar-letter-e:before {
+    content: "\0065";
+}
+
+.avatar-letter-f:before {
+    content: "\0066";
+}
+
+.avatar-letter-g:before {
+    content: "\0067";
+}
+
+.avatar-letter-h:before {
+    content: "\0068";
+}
+
+.avatar-letter-i:before {
+    content: "\0069";
+}
+
+.avatar-letter-j:before {
+    content: "\006A";
+}
+
+.avatar-letter-k:before {
+    content: "\006B";
+}
+
+.avatar-letter-l:before {
+    content: "\006C";
+}
+
+.avatar-letter-m:before {
+    content: "\006D";
+}
+
+.avatar-letter-n:before {
+    content: "\006E";
+}
+
+.avatar-letter-o:before {
+    content: "\006F";
+}
+
+.avatar-letter-p:before {
+    content: "\0070";
+}
+
+.avatar-letter-q:before {
+    content: "\0071";
+}
+
+.avatar-letter-r:before {
+    content: "\0072";
+}
+
+.avatar-letter-s:before {
+    content: "\0073";
+}
+
+.avatar-letter-t:before {
+    content: "\0074";
+}
+
+.avatar-letter-u:before {
+    content: "\0075";
+}
+
+.avatar-letter-v:before {
+    content: "\0076";
+}
+
+.avatar-letter-w:before {
+    content: "\0077";
+}
+
+.avatar-letter-x:before {
+    content: "\0078";
+}
+
+.avatar-letter-y:before {
+    content: "\0079";
+}
+
+.avatar-letter-z:before {
+    content: "\007A";
+}
+
+
+.avatar-letter-0 {
+    background-color: #1abc9c;
+}
+
+.avatar-letter-a {
+    background-color: #2ecc71;
+}
+
+.avatar-letter-b {
+    background-color: #3498db;
+}
+
+.avatar-letter-c {
+    background-color: #9b59b6;
+}
+
+.avatar-letter-d {
+    background-color: #34495e;
+}
+
+.avatar-letter-e {
+    background-color: #16a085;
+}
+
+.avatar-letter-f {
+    background-color: #27ae60;
+}
+
+.avatar-letter-g {
+    background-color: #2980b9;
+}
+
+.avatar-letter-h {
+    background-color: #2c3e50;
+}
+
+.avatar-letter-i {
+    background-color: #f1c40f;
+}
+
+.avatar-letter-j {
+    background-color: #e67e22;
+}
+
+.avatar-letter-k {
+    background-color: #e74c3c;
+}
+
+.avatar-letter-l {
+    background-color: #95a5a6;
+}
+
+.avatar-letter-m {
+    background-color: #f39c12;
+}
+
+.avatar-letter-n {
+    background-color: #ebcb15;
+}
+
+.avatar-letter-o {
+    background-color: #006699;
+}
+
+.avatar-letter-p {
+    background-color: #0066cc;
+}
+
+.avatar-letter-q {
+    background-color: #0066ff;
+}
+
+.avatar-letter-r {
+    background-color: #009900;
+}
+
+.avatar-letter-s {
+    background-color: #009933;
+}
+
+.avatar-letter-t {
+    background-color: #009966;
+}
+
+.avatar-letter-u {
+    background-color: #009999;
+}
+
+.avatar-letter-v {
+    background-color: #0099cc;
+}
+
+.avatar-letter-w {
+    background-color: #0099ff;
+}
+
+.avatar-letter-x {
+    background-color: #00cc00;
+}
+
+.avatar-letter-y {
+    background-color: #38934f;
+}
+
+.avatar-letter-z {
+    background-color: #77cc00ad;
+
+}
+
+.avatar-plain {
+    text-shadow: none;
+}

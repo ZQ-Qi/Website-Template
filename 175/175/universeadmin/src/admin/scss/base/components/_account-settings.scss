@@ -1,0 +1,96 @@
+/** BEGIN: account settings component */
+.settings-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__avatar {
+    margin-right: 20px;
+  }
+
+  &__name {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 4px;
+  }
+
+  &__email {
+    font-size: 15px;
+    color: #939daa;
+    margin-bottom: 7px;
+  }
+
+  &__remove-account {
+    color: #939daa;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(#939daa, .5);
+    line-height: 17px;
+
+    &:hover {
+      border-bottom-color: #222;
+    }
+  }
+
+  &__change-avatar {
+    color: #0094f2;
+    border-bottom: 1px dashed rgba(#0094f2, .5);
+
+    &:hover {
+      color: $color-info-hover;
+    }
+  }
+}
+
+.settings-social {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    color: #939daa;
+
+    label {
+      margin-left: 21px;
+    }
+  }
+
+  &__icon {
+    font-size: 48px;
+    height: 48px;
+    line-height: 48px;
+    color: #bfc8cf;
+    margin-right: 15px;
+  }
+
+  &__item-name {
+    display: block;
+    font-size: 15px;
+    line-height: 24px;
+    color: #939daa;
+  }
+
+  &__item-desc {
+    color: #010101;
+    font-size: 15px;
+  }
+}
+/** END: account settings component */

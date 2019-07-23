@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scaffolding · Boo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+<!-- Navbar
+    ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="brand" href="./index.html">Boo Bootstrap</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class=""> <a href="./index.html">Home</a> </li>
+                    <li class=""> <a href="./getting-started.html">Get started</a> </li>
+                    <li class="active"> <a href="./scaffolding.html">Scaffolding</a> </li>
+                    <li class=""> <a href="./base-css.html">CSS</a> </li>
+                    <li class=""> <a href="./custom-css.html">Custom CSS</a> </li>
+                    <li class=""> <a href="./javascript.html">JavaScript</a> </li>
+                    <li class=""> <a href="./changelog.html">Boo Changelog</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron boo subhead" id="overview">
+    <div class="container">
+        <h1>Scaffolding</h1>
+        <p class="lead">Boo grids, layouts, and components. Built on Twitter Bootstrap</p>
+    </div>
+</header>
+<div class="container"> 
+    
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+        <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+                <li><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
+                <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Fluid grid system</a></li>
+                <li><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
+                <li><a href="#responsive"><i class="icon-chevron-right"></i> Responsive design</a></li>
+            </ul>
+        </div>
+        <div class="span9"> 
+            
+            <!-- Global Bootstrap settings
+        ================================================== -->
+            <section id="global">
+                <div class="page-header doc">
+                    <h1>Global settings</h1>
+                </div>
+                <h3>Requires HTML5 doctype</h3>
+                <p>Boo makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+                <pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;!--[if lt IE 7 ]&gt; &lt;html class="ie6"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7 ]&gt;    &lt;html class="ie7"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8 ]&gt;    &lt;html class="ie8"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 9 ]&gt;    &lt;html class="ie9"&gt; &lt;![endif]--&gt;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;
+&lt;html&gt;
+&lt;!--&lt;![endif]--&gt;
+
+&lt;head&gt; ... &lt;/head&gt;
+</pre>
+				
+                <h3>Support for HTML5 and CSS3</h3>
+                <p><strong>html5shiv</strong> allows you to use HTML5 sectioning elements in legacy Internet Explorer, as well as default HTML5 styling in Internet Explorer 6 - 9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.</p>
+                <p><strong>Selectivizr</strong> is a JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8.</p>
+                <pre class="prettyprint linenums">
+&lt;head&gt;
+&lt;!-- Le HTML5 shim, for IE6-8 support of HTML5 elements --&gt;
+&lt;!--[if lt IE 9]&gt;
+    &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/plugins/selectivizr/selectivizr-min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/plugins/flot/excanvas.min.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;/head&gt;
+</pre>
+				
+            </section>
+            
+            <!-- Fluid grid system
+        	================================================== -->
+            <section id="fluidGridSystem">
+                <div class="page-header doc">
+                    <h1>Fluid grid system</h1>
+                </div>
+                <h2>Live fluid grid example</h2>
+                <p>The fluid grid system uses percents instead of pixels for column widths. It has the same responsive capabilities as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.</p>
+                <div class="bs-docs-grid">
+                    <div class="row-fluid show-grid">
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row-fluid show-grid">
+                        <div class="span4">4</div>
+                        <div class="span4">4</div>
+                        <div class="span4">4</div>
+                    </div>
+                    <div class="row-fluid show-grid">
+                        <div class="span4">4</div>
+                        <div class="span8">8</div>
+                    </div>
+                    <div class="row-fluid show-grid">
+                        <div class="span6">6</div>
+                        <div class="span6">6</div>
+                    </div>
+                    <div class="row-fluid show-grid">
+                        <div class="span12">12</div>
+                    </div>
+                </div>
+                <h3>Basic fluid grid HTML</h3>
+                <p>Make any row "fluid" by changing <code>.row</code> to <code>.row-fluid</code>. The column classes stay the exact same, making it easy to flip between fixed and fluid grids.</p>
+                <pre class="prettyprint linenums">
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                <h2>Fluid offsetting</h2>
+                <p>Operates the same way as the fixed grid system offsetting: add <code>.offset*</code> to any column to offset by that many columns.</p>
+                <div class="bs-docs-grid">
+                    <div class="row-fluid show-grid">
+                        <div class="span4">4</div>
+                        <div class="span4 offset4">4 offset 4</div>
+                    </div>
+                    <!-- /row -->
+                    <div class="row-fluid show-grid">
+                        <div class="span3 offset3">3 offset 3</div>
+                        <div class="span3 offset3">3 offset 3</div>
+                    </div>
+                    <!-- /row -->
+                    <div class="row-fluid show-grid">
+                        <div class="span6 offset6">6 offset 6</div>
+                    </div>
+                    <!-- /row --> 
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span4 offset2"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                <h2>Fluid nesting</h2>
+                <p>Nesting with fluid grids is a bit different: the number of nested columns should not match the parent's number of columns. Instead, each level of nested columns are reset because each row takes up 100% of the parent column.</p>
+                <div class="row-fluid show-grid">
+                    <div class="span12"> Fluid 12
+                        <div class="row-fluid show-grid">
+                            <div class="span6"> Fluid 6 </div>
+                            <div class="span6"> Fluid 6 </div>
+                        </div>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span12"&gt;
+    Fluid 12
+    &lt;div class="row-fluid"&gt;
+      &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+      &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </section>
+            
+            <!-- Layouts (Default and fluid)
+        ================================================== -->
+            <section id="layouts">
+                <div class="page-header doc">
+                    <h1>Layouts</h1>
+                </div>
+                
+                <pre class="prettyprint linenums">
+&lt;div class="page-container"&gt;
+    &lt;div id="header-container"&gt;
+        &lt;div id="header"&gt;
+            &lt;div class="navbar navbar-inverse navbar-fixed-top"&gt; ... &lt;/div&gt;
+            &lt;div class="header-drawer"&gt; ... &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- // header-container --&gt;
+    &lt;div id="main-container"&gt;
+        &lt;div id="main-sidebar" class="sidebar sidebar-inverse"&gt; ... &lt;/div&gt;
+        &lt;!-- // sidebar --&gt;
+        &lt;div id="main-content" class="main-content container-fluid"&gt; ... &lt;/div&gt;
+        &lt;!-- // main-content --&gt; 
+    &lt;/div&gt;
+    &lt;!-- // main-container  --&gt;
+    &lt;footer id="footer-fix"&gt; ... &lt;/footer&gt;
+&lt;/div&gt;
+&lt;!-- // page-container  --&gt; 
+              </pre>
+                <div class="mini-layout fluid">
+                    <div class="mini-layout-sidebar"></div>
+                    <div class="mini-layout-body"></div>
+                </div>
+<pre class="prettyprint linenums">
+&lt;div id="main-container"&gt;
+    &lt;div id="main-sidebar" class="sidebar sidebar-inverse"&gt; ... &lt;/div&gt;
+    &lt;!-- // sidebar --&gt;
+    &lt;div id="main-content" class="main-content container-fluid"&gt; ... &lt;/div&gt;
+    &lt;!-- // main-content --&gt; 
+&lt;/div&gt;
+&lt;!-- // main-container  --&gt;</pre>
+              <div class="mini-layout fluid">
+                    <div class="mini-layout-body left"></div>
+                    <div class="mini-layout-sidebar right"></div>
+                </div>
+                <p>Setting the sidebar to the right or left side (integrated jquery):</p>
+                <pre class="prettyprint linenums">
+    &lt;body class="sidebar-left panel-side"&gt; ... &lt;/body&gt;
+              </pre>
+              <p>Setting the sidebar bacground color (integrated jquery):</p>
+                <pre class="prettyprint linenums">
+    &lt;div id="main-sidebar" class="sidebar"&gt; ... &lt;/div&gt;
+    or
+    &lt;div id="main-sidebar" class="sidebar sidebar-inverse"&gt; ... &lt;/div&gt;    
+              </pre>
+              <p>Bloc code for the sidebar:</p>
+                <pre class="prettyprint linenums">
+&lt;div id="main-sidebar" class="sidebar sidebar-inverse"&gt;
+    &lt;div class="sidebar-item"&gt; ... &lt;/div&gt;
+    &lt;!-- // sidebar item - profile --&gt;
+    &lt;ul id="mainSideMenu" class="nav nav-list nav-side"&gt;
+        &lt;li class="accordion-group"&gt;
+            &lt;div class="accordion-heading active"&gt;&lt;/div&gt;
+            &lt;ul class="accordion-content nav nav-list collapse in" id="accDash"&gt;
+                &lt;li class="active"&gt; &lt;a href="dashboard-one.html"&gt; &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;!-- // item accordionMenu Dashboard --&gt;
+        &lt;li class="accordion-group"&gt; 
+            ... 
+        &lt;/li&gt;
+        &lt;!-- // item accordionMenu Dashboard --&gt;
+    &lt;/ul&gt;
+    &lt;!-- // sidebar menu --&gt;
+    &lt;div class="sidebar-item"&gt;&lt;/div&gt;
+    &lt;!-- // sidebar item --&gt; 
+&lt;/div&gt;
+&lt;!-- // sidebar --&gt;
+              </pre>
+            </section>
+            
+            <!-- Responsive design
+        ================================================== -->
+            <section id="responsive">
+                <div class="page-header doc">
+                    <h1>Responsive design</h1>
+                </div>
+                <h2>Enabling responsive features</h2>
+                <p>Turn on responsive CSS in your project by including the proper meta tag and additional stylesheet within the <code>&lt;head&gt;</code> of your document. If you've compiled Boo from the Customize page, you need only include the meta tag.</p>
+                <pre class="prettyprint linenums">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link href="assets/css/bootstrap-responsive.css" rel="stylesheet"&gt;
+</pre>
+                <h2>Supported devices</h2>
+                <p>Boo supports a handful of media queries in a single file to help make your projects more appropriate on different devices and screen resolutions. Here's what's included:</p>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Label</th>
+                            <th>Layout width</th>
+                            <th>Column width</th>
+                            <th>Gutter width</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Large display</td>
+                            <td>1200px and up</td>
+                            <td>70px</td>
+                            <td>30px</td>
+                        </tr>
+                        <tr>
+                            <td>Default</td>
+                            <td>980px and up</td>
+                            <td>60px</td>
+                            <td>20px</td>
+                        </tr>
+                        <tr>
+                            <td>Portrait tablets</td>
+                            <td>768px and above</td>
+                            <td>42px</td>
+                            <td>20px</td>
+                        </tr>
+                        <tr>
+                            <td>Phones to tablets</td>
+                            <td>767px and below</td>
+                            <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
+                        </tr>
+                        <tr>
+                            <td>Phones</td>
+                            <td>480px and below</td>
+                            <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
+                        </tr>
+                    </tbody>
+                    
+                    <tbody>
+                        <tr>
+                            <th><code>.grider</code></th>
+                             <td>979px and below</td>
+                            <td class="muted" colspan="2">Use in combination with span* if you want to display as a block element </td>
+                        </tr>
+                        <tr>
+                            <th><code>.grider-item</code></th>
+                             <td>1200px and below</td>
+                            <td class="muted" colspan="2">Use in combination with span* if you want to display as a block element</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <pre class="prettyprint linenums">
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
+
+/* Griter - element as block */
+@media (max-width: 979px) { ... }
+
+/* Griter-item - element as block */
+@media (max-width: 1200px) { ... }
+</pre>
+                <h2>Responsive utility classes</h2>
+                <p>For faster mobile-friendly development, use these utility classes for showing and hiding content by device. Below is a table of the available classes and their effect on a given media query layout (labeled by device). They can be found in <code>responsive.less</code>.</p>
+                <table class="table table-bordered table-striped responsive-utilities">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Phones <small>767px and below</small></th>
+                            <th>Tablets <small>979px to 768px</small></th>
+                            <th>Desktops <small>Default</small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th><code>.visible-phone</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                        </tr>
+                        <tr>
+                            <th><code>.visible-tablet</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                        </tr>
+                        <tr>
+                            <th><code>.visible-desktop</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                        </tr>
+                        <tr>
+                            <th><code>.hidden-phone</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                        </tr>
+                        <tr>
+                            <th><code>.hidden-tablet</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                        </tr>
+                        <tr>
+                            <th><code>.hidden-desktop</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>When to use</h3>
+                <p>Use on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. Responsive utilities should not be used with tables, and as such are not supported.</p>
+                <h3>Responsive utilities test case</h3>
+                <p>Resize your browser or load on different devices to test the above classes.</p>
+                <h4>Visible on...</h4>
+                <p>Green checkmarks indicate that class is visible in your current viewport.</p>
+                <ul class="responsive-utilities-test">
+                    <li>Phone<span class="visible-phone">&#10004; Phone</span></li>
+                    <li>Tablet<span class="visible-tablet">&#10004; Tablet</span></li>
+                    <li>Desktop<span class="visible-desktop">&#10004; Desktop</span></li>
+                </ul>
+                <h4>Hidden on...</h4>
+                <p>Here, green checkmarks indicate that class is hidden in your current viewport.</p>
+                <ul class="responsive-utilities-test hidden-on">
+                    <li>Phone<span class="hidden-phone">&#10004; Phone</span></li>
+                    <li>Tablet<span class="hidden-tablet">&#10004; Tablet</span></li>
+                    <li>Desktop<span class="hidden-desktop">&#10004; Desktop</span></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Footer
+    ================================================== -->
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <ul class="unstyled">
+            <li>Created: <strong>08.12.2012</strong> </li>
+            <li> Latest Update: <strong>09.01.2013</strong> </li>
+            <li> By: Petr Marasek</li>
+            <li> email: gootoboo@gmail.com </li>
+        </ul>
+        <ul class="footer-links">
+            <li><a href="http://themeforest.net/">Themeforest</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://themes.yac.cz/boo/dashboard-one.html">Demo</a></li>
+            <li class="muted">&middot;</li>
+            <li class="muted">Built on Twitter Bootstrap documentation</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script> 
+<script src="assets/js/bootstrap-carousel.js"></script> 
+<script src="assets/js/bootstrap-typeahead.js"></script> 
+<script src="assets/js/bootstrap-affix.js"></script> 
+<!-- main js --> 
+<script src="assets/js/application.js"></script>
+</body>
+</html>

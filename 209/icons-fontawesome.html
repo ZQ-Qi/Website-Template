@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Kharna-Admin Dashboard</title>
+
+		<!--favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+		<!--Bootstrap.min css-->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+		<!--mCustomScrollbar css-->
+		<link rel="stylesheet" href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css">
+
+		<!--Style css-->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!--Icons css-->
+		<link rel="stylesheet" href="assets/css/icons.css">
+
+		<!--Sidemenu css-->
+		<link rel="stylesheet" href="assets/plugins/toggle-menu/sidemenu.css">
+
+	</head>
+
+	<body class="app ">
+
+		<div id="spinner"></div>
+
+		<div id="app">
+			<div class="main-wrapper" >
+				<nav class="navbar navbar-expand-lg main-navbar">
+					<a class="header-brand" href="index.html">
+						<img src="assets/img/brand/logo.png" class="header-brand-img" alt="Kharna-Admin  logo">
+					</a>
+					<form class="form-inline mr-auto">
+						<ul class="navbar-nav mr-3">
+							<li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="ion ion-navicon-round"></i></a></li>
+							<li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-md-none navsearch"><i class="ion ion-search"></i></a></li>
+						</ul>
+						<div class="search-element">
+							<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-primary" type="submit"><i class="ion ion-search"></i></button>
+						</div>
+					</form>
+					<ul class="navbar-nav navbar-right">
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="ion-ios-email-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Messages
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-1.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Stewart Ball</b>
+													<p>Your template awesome</p>
+												</div>
+												<div class="time">6 hours ago</div>
+											</div>
+
+										</div>
+									</a>
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-2.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Jonathan North</b>
+													<p>Your Order Shipped.....</p>
+												</div>
+												<div class="time">45 mins ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-4.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Victor Taylor</b>
+													<p>Hi!, I' am web developer</p>
+												</div>
+												<div class="time"> 8 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-3.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Ruth	Arnold</b>
+													<p>Hi!, I' am web designer</p>
+												</div>
+												<div class="time"> 3 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-5.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Sam	Lyman</b>
+													<p>Hi!, I' am java developer</p>
+												</div>
+												<div class="time"> 15 mintues ago</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg beep"><i class="ion-ios-bell-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Notifications
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-exclamation-triangle text-danger"></i>
+										<div class="dropdown-item-desc">
+											<b>Error message occurred....</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-warning"></i>
+										<div class="dropdown-item-desc">
+											<b> Adding new people</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-shopping-cart text-success"></i>
+										<div class="dropdown-item-desc">
+											<b>Your items Arrived</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-comment text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>New Message received</b> <div class="float-right"><span class="badge badge-pill badge-danger badge-sm">67</span></div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle">
+							<a href="#" class="nav-link nav-link-lg full-screen-link">
+								<i class="ion-arrow-expand"  id="fullscreen-button"></i>
+							</a>
+						</li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+							<img src="assets/img/avatar/avatar-1.jpeg" alt="profile-user" class="rounded-circle w-32">
+							<div class="d-sm-none d-lg-inline-block">Jessica Lee</div></a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-android-person"></i> Profile
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion-android-drafts"></i> Messages
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-gear-a"></i> Settings
+								</a>
+								<a href="#" class="dropdown-item has-icon">
+									<i class="ion-ios-redo"></i> Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+
+				<aside class="app-sidebar">
+					<div class="app-sidebar__user">
+					    <div class="dropdown">
+							<a class="nav-link pl-2 pr-2 leading-none d-flex" data-toggle="dropdown" href="#">
+								<img alt="image" src="assets/img/avatar/avatar-1.jpeg" class=" avatar-md rounded-circle">
+								<span class="ml-2 d-lg-block">
+									<span class="text-white app-sidebar__user-name mt-5">Jessica Lee</span><br>
+									<span class="text-muted app-sidebar__user-name text-sm"> Web-Designer</span>
+								</span>
+							</a>
+						</div>
+					</div>
+					<ul class="side-menu">
+						<li class="slide">
+							<a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Dashboard</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a class="slide-item"  href="index.html"><span>Dashboard 01</span></a></li>
+								<li><a class="slide-item" href="index2.html"><span>Dashboard 02</span></a></li>
+								<li><a class="slide-item" href="index3.html"><span>Dashboard 03</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="side-menu__item" href="widgets.html"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">Widgets</span></a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tasks"></i><span class="side-menu__label">UI Elements</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="elements.html" class="slide-item"> Elements</a></li>
+								<li><a href="buttons.html" class="slide-item"> Buttons</a></li>
+								<li><a href="toastr.html" class="slide-item"> Toastr</a></li>
+								<li><a href="calender.html" class="slide-item"> Calendar</a></li>
+								<li><a href="rangesliders.html" class="slide-item"> Rangeslider</a></li>
+								<li><a href="modals.html" class="slide-item"> Modals</a></li>
+								<li><a href="timeline.html" class="slide-item"> Timeline</a></li>
+								<li><a href="invoice.html" class="slide-item"> Invoice</a></li>
+								<li><a href="users.html" class="slide-item"> Users List</a></li>
+								<li><a href="mailinbox.html" class="slide-item"> Mail-inbox</a></li>
+								<li><a href="mail-compose.html" class="slide-item"> Mail-Compose</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+						    <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-paw"></i><span class="side-menu__label">Icons</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="icons-ion.html" class="slide-item"> Ion Icons</a></li>
+								<li><a href="icons-fontawesome.html" class="slide-item"> Font Awesome</a></li>
+								<li><a href="icons-feather.html" class="slide-item"> Feather Awesome</a></li>
+								<li><a href="icons-materialdesign.html" class="slide-item"> Material Design</a></li>
+								<li><a href="icons-themify.html" class="slide-item"> Themify</a></li>
+								<li><a href="icons-simpleline.html" class="slide-item"> Simple line</a></li>
+								<li><a href="icons-pe7.html" class="slide-item"> pe7</a></li>
+								<li><a href="icons-flag.html" class="slide-item"> Flag Icons</a></li>
+								<li><a href="icons-weather.html" class="slide-item"> Weather Icons</a></li>
+								<li><a href="icons-typicons.html" class="slide-item"> Typicons</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-table"></i><span class="side-menu__label">Tables</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="table.html" class="slide-item">Basic Tables</a></li>
+								<li><a href="datatables.html" class="slide-item"> Data Tables</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-file-text"></i><span class="side-menu__label">Forms</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="formelements.html" class="slide-item"> Form Elements</a></li>
+								<li><a href="formadvanced.html" class="slide-item"> Advanced Form</a></li>
+								<li><a href="formeditor.html" class="slide-item"> Form Editor</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-bar-chart"></i><span class="side-menu__label">Charts</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="chartjs.html" class="slide-item">Chart Js</a></li>
+								<li><a href="flotcharts.html" class="slide-item"> Flot Charts</a></li>
+								<li><a href="barcharts.html" class="slide-item"> Bar Charts</a></li>
+								<li><a href="echart.html" class="slide-item"> ECharts</a></li>
+								<li><a href="chartist.html" class="slide-item"> Chartist</a></li>
+								<li><a href="morris.html" class="slide-item"> Morris Charts</a></li>
+								<li><a href="othercharts.html" class="slide-item"> Other Charts</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-map"></i><span class="side-menu__label">Maps</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="maps.html" class="slide-item"> Google Maps</a></li>
+								<li><a href="vector-map.html" class="slide-item">Vector Maps</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-pie-chart"></i><span class="side-menu__label">Pages</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="profile.html" class="slide-item"> Profile</a></li>
+								<li><a href="pricing-tables.html" class="slide-item"> Pricing Tables</a></li>
+								<li><a href="gallery.html" class="slide-item"> Gallery</a></li>
+								<li><a href="shop.html" class="slide-item"> Shop</a></li>
+								<li><a href="shop-cart.html" class="slide-item"> Shop Cart</a></li>
+								<li><a href="terms.html" class="slide-item"> Terms and Conditions</a></li>
+								<li><a href="register.html" class="slide-item"> Register</a></li>
+								<li><a href="login.html" class="slide-item"> Login</a></li>
+								<li><a href="forgot.html" class="slide-item"> Forgot Password</a></li>
+								<li><a href="reset.html" class="slide-item"> Reset Password</a></li>
+								<li><a href="under-construction.html" class="slide-item"> Under Construction</a></li>
+								<li><a href="lockscreen.html" class="slide-item"> Lock Screen</a></li>
+								<li><a href="404.html" class="slide-item"> 404</a></li>
+								<li><a href="505.html" class="slide-item"> 505</a></li>
+								<li><a href="emptypage.html" class="slide-item"> Empty  Page</a></li>
+							</ul>
+						</li>
+					</ul>
+				</aside>
+
+				<div class="app-content">
+					<section class="section">
+                    	<ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Icons</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Font-Awesome Icons</li>
+                        </ol>
+
+						<div class="section-body">
+							<div class="card">
+								<div class="card-header">
+									<h4>Font-Awesome Icons</h4>
+								</div>
+								<div class="card-body">
+									<ul id="icons" class="icons-item">
+										<li class=""><i class="fa fa-adjust" data-toggle="tooltip" title="fa-adjust"></i></li>
+										<li class=""><i class="fa fa-anchor" data-toggle="tooltip" title="fa-anchor"></i></li>
+										<li class=""><i class="fa fa-archive" data-toggle="tooltip" title=" fa-archive"></i></li>
+										<li class=""><i class="fa fa-area-chart" data-toggle="tooltip" title="fa-area-chart"></i></li>
+										<li class=""><i class="fa fa-arrows" data-toggle="tooltip" title=" fa-arrows"></i></li>
+										<li class=""><i class="fa fa-arrows-h" data-toggle="tooltip" title="fa-arrows-h"></i></li>
+										<li class=""><i class="fa fa-arrows-v" data-toggle="tooltip" title="fa-arrows-v"></i></li>
+										<li class=""><i class="fa fa-asterisk" data-toggle="tooltip" title="fa-asterisk"></i></li>
+										<li class=""><i class="fa fa-at" data-toggle="tooltip" title=" fa-at"></i></li>
+										<li class=""><i class="fa fa-automobile" data-toggle="tooltip" title=" fa-automobile"></i></li>
+										<li class=""><i class="fa fa-ban" data-toggle="tooltip" title=" fa-ban"></i></li>
+										<li class=""><i class="fa fa-bank" data-toggle="tooltip" title="fa-bank "></i></li>
+										<li class=""><i class="fa fa-bar-chart" data-toggle="tooltip" title=" fa-bar-chart"></i></li>
+										<li class=""><i class="fa fa-bar-chart-o" data-toggle="tooltip" title="fa-bar-chart-o "></i></li>
+										<li class=""><i class="fa fa-barcode" data-toggle="tooltip" title="fa-barcode"></i></li>
+										<li class=""><i class="fa fa-bars" data-toggle="tooltip" title="fa-bars"></i></li>
+										<li class=""><i class="fa fa-beer" data-toggle="tooltip" title=" fa-beer"></i></li>
+										<li class=""><i class="fa fa-bell" data-toggle="tooltip" title="fa-bell"></i></li>
+										<li class=""><i class="fa fa-bell-o" data-toggle="tooltip" title="fa-bell-o"></i></li>
+										<li class=""><i class="fa fa-bell-slash" data-toggle="tooltip" title="fa-bell-slash"></i></li>
+										<li class=""><i class="fa fa-bell-slash-o" data-toggle="tooltip" title="fa-bell-slash-o"></i></li>
+										<li class=""><i class="fa fa-bicycle" data-toggle="tooltip" title="fa-bicycle"></i></li>
+										<li class=""><i class="fa fa-binoculars" data-toggle="tooltip" title=" fa-binoculars"></i></li>
+										<li class=""><i class="fa fa-birthday-cake" data-toggle="tooltip" title=" fa-birthday-cake"></i></li>
+										<li class=""><i class="fa fa-bolt" data-toggle="tooltip" title="fa-bolt"></i></li>
+										<li class=""><i class="fa fa-bomb" data-toggle="tooltip" title="fa-bomb"></i></li>
+										<li class=""><i class="fa fa-book" data-toggle="tooltip" title="fa-book"></i></li>
+										<li class=""><i class="fa fa-bookmark" data-toggle="tooltip" title=" fa-bookmark"></i></li>
+										<li class=""><i class="fa fa-bookmark-o" data-toggle="tooltip" title=" fa-bookmark-o"></i></li>
+										<li class=""><i class="fa fa-briefcase" data-toggle="tooltip" title=" fa-briefcase"></i></li>
+										<li class=""><i class="fa fa-bug" data-toggle="tooltip" title=" fa-bug"></i></li>
+										<li class=""><i class="fa fa-building" data-toggle="tooltip" title="fa-building"></i></li>
+										<li class=""><i class="fa fa-building-o" data-toggle="tooltip" title="fa-building-o"></i></li>
+										<li class=""><i class="fa fa-bullhorn" data-toggle="tooltip" title="fa-bullhorn"></i></li>
+										<li class=""><i class="fa fa-bullseye" data-toggle="tooltip" title="fa-bullseye"></i></li>
+										<li class=""><i class="fa fa-bus" data-toggle="tooltip" title=" fa-bus"></i></li>
+										<li class=""><i class="fa fa-cab" data-toggle="tooltip" title="fa-cab "></i></li>
+										<li class=""><i class="fa fa-calculator" data-toggle="tooltip" title=" fa-calculator"></i></li>
+										<li class=""><i class="fa fa-calendar" data-toggle="tooltip" title="fa-calendar"></i></li>
+										<li class=""><i class="fa fa-calendar-o" data-toggle="tooltip" title="fa-calendar-o"></i></li>
+										<li class=""><i class="fa fa-camera" data-toggle="tooltip" title=" fa-camera"></i></li>
+										<li class=""><i class="fa fa-camera-retro" data-toggle="tooltip" title="fa-camera-retro"></i></li>
+										<li class=""><i class="fa fa-car" data-toggle="tooltip" title=" fa-car"></i></li>
+										<li class=""><i class="fa fa-caret-square-o-down" data-toggle="tooltip" title="fa-caret-square-o-down"></i></li>
+										<li class=""><i class="fa fa-caret-square-o-left" data-toggle="tooltip" title="fa-caret-square-o-left"></i></li>
+										<li class=""><i class="fa fa-caret-square-o-right" data-toggle="tooltip" title=" fa-caret-square-o-right"></i></li>
+										<li class=""><i class="fa fa-caret-square-o-up" data-toggle="tooltip" title=" fa-caret-square-o-up"></i></li>
+										<li class=""><i class="fa fa-cc" data-toggle="tooltip" title=" fa-cc"></i></li>
+										<li class=""><i class="fa fa-certificate" data-toggle="tooltip" title="fa-certificate"></i></li>
+										<li class=""><i class="fa fa-check" data-toggle="tooltip" title=" fa-check"></i></li>
+										<li class=""><i class="fa fa-check-circle" data-toggle="tooltip" title="fa-check-circle"></i></li>
+										<li class=""><i class="fa fa-check-circle-o" data-toggle="tooltip" title="fa-check-circle-o"></i></li>
+										<li class=""><i class="fa fa-check-square" data-toggle="tooltip" title="fa-check-square"></i></li>
+										<li class=""><i class="fa fa-check-square-o" data-toggle="tooltip" title="fa-check-square-o"></i></li>
+										<li class=""><i class="fa fa-child" data-toggle="tooltip" title="fa-child"></i></li>
+										<li class=""><i class="fa fa-circle" data-toggle="tooltip" title="fa-circle"></i></li>
+										<li class=""><i class="fa fa-circle-o" data-toggle="tooltip" title="fa-circle-o"></i></li>
+										<li class=""><i class="fa fa-circle-o-notch" data-toggle="tooltip" title="fa-circle-o-notch"></i></li>
+										<li class=""><i class="fa fa-circle-thin" data-toggle="tooltip" title="fa-circle-thin"></i></li>
+										<li class=""><i class="fa fa-clock-o" data-toggle="tooltip" title="fa-clock-o"></i></li>
+										<li class=""><i class="fa fa-close" data-toggle="tooltip" title="fa-close"></i></li>
+										<li class=""><i class="fa fa-cloud" data-toggle="tooltip" title="fa-cloud"></i></li>
+										<li class=""><i class="fa fa-cloud-download" data-toggle="tooltip" title="fa-cloud-download"></i></li>
+										<li class=""><i class="fa fa-cloud-upload" data-toggle="tooltip" title=" fa-cloud-upload"></i></li>
+										<li class=""><i class="fa fa-code" data-toggle="tooltip" title=" fa-code"></i></li>
+										<li class=""><i class="fa fa-code-fork" data-toggle="tooltip" title=" fa-code-fork"></i></li>
+										<li class=""><i class="fa fa-coffee" data-toggle="tooltip" title=" fa-coffee"></i></li>
+										<li class=""><i class="fa fa-cog" data-toggle="tooltip" title="fa-cog"></i></li>
+										<li class=""><i class="fa fa-cogs" data-toggle="tooltip" title="fa-cogs"></i></li>
+										<li class=""><i class="fa fa-comment" data-toggle="tooltip" title="fa-comment"></i></li>
+										<li class=""><i class="fa fa-comment-o" data-toggle="tooltip" title="fa-comment-o"></i></li>
+										<li class=""><i class="fa fa-comments" data-toggle="tooltip" title="fa-comments"></i></li>
+										<li class=""><i class="fa fa-comments-o" data-toggle="tooltip" title=" fa-comments-o"></i></li>
+										<li class=""><i class="fa fa-compass" data-toggle="tooltip" title="fa-compass"></i></li>
+										<li class=""><i class="fa fa-copyright" data-toggle="tooltip" title="fa-copyright"></i></li>
+										<li class=""><i class="fa fa-credit-card" data-toggle="tooltip" title="fa-credit-card"></i></li>
+										<li class=""><i class="fa fa-crop" data-toggle="tooltip" title="fa-crop"></i></li>
+										<li class=""><i class="fa fa-crosshairs" data-toggle="tooltip" title=" fa-crosshairs"></i></li>
+										<li class=""><i class="fa fa-cube" data-toggle="tooltip" title="fa-cube"></i></li>
+										<li class=""><i class="fa fa-cubes" data-toggle="tooltip" title="fa-cubes"></i></li>
+										<li class=""><i class="fa fa-cutlery" data-toggle="tooltip" title="fa-cutlery"></i></li>
+										<li class=""><i class="fa fa-dashboard" data-toggle="tooltip" title="fa-dashboard "></i></li>
+										<li class=""><i class="fa fa-database" data-toggle="tooltip" title="fa-database"></i></li>
+										<li class=""><i class="fa fa-desktop" data-toggle="tooltip" title="fa-desktop"></i></li>
+										<li class=""><i class="fa fa-dot-circle-o" data-toggle="tooltip" title=" fa-dot-circle-o"></i></li>
+										<li class=""><i class="fa fa-download" data-toggle="tooltip" title="fa-download"></i></li>
+										<li class=""><i class="fa fa-edit" data-toggle="tooltip" title="fa-edit"></i></li>
+										<li class=""><i class="fa fa-ellipsis-h" data-toggle="tooltip" title="fa-ellipsis-h"></i></li>
+										<li class=""><i class="fa fa-ellipsis-v" data-toggle="tooltip" title="fa-ellipsis-v"></i></li>
+										<li class=""><i class="fa fa-envelope" data-toggle="tooltip" title="fa-envelope"></i></li>
+										<li class=""><i class="fa fa-envelope-o" data-toggle="tooltip" title="fa-envelope-o"></i></li>
+										<li class=""><i class="fa fa-envelope-square" data-toggle="tooltip" title="fa-envelope-square"></i></li>
+										<li class=""><i class="fa fa-eraser" data-toggle="tooltip" title="fa-eraser"></i></li>
+										<li class=""><i class="fa fa-exchange" data-toggle="tooltip" title="fa-exchange"></i></li>
+										<li class=""><i class="fa fa-exclamation" data-toggle="tooltip" title="fa-exclamation"></i></li>
+										<li class=""><i class="fa fa-exclamation-circle" data-toggle="tooltip" title="fa-exclamation-circle"></i></li>
+										<li class=""><i class="fa fa-exclamation-triangle" data-toggle="tooltip" title="fa-exclamation-triangle"></i></li>
+										<li class=""><i class="fa fa-external-link" data-toggle="tooltip" title="fa-external-link"></i></li>
+										<li class=""><i class="fa fa-external-link-square" data-toggle="tooltip" title="fa-external-link-square"></i></li>
+										<li class=""><i class="fa fa-eye" data-toggle="tooltip" title="fa-eye"></i></li>
+										<li class=""><i class="fa fa-eye-slash" data-toggle="tooltip" title="fa-fa-eye-slash"></i></li>
+										<li class=""><i class="fa fa-eyedropper" data-toggle="tooltip" title=" fa-eyedropper"></i></li>
+										<li class=""><i class="fa fa-fax" data-toggle="tooltip" title="fa-fax"></i></li>
+										<li class=""><i class="fa fa-female" data-toggle="tooltip" title=" fa-female"></i></li>
+										<li class=""><i class="fa fa-fighter-jet" data-toggle="tooltip" title="fa-fighter-jet"></i></li>
+										<li class=""><i class="fa fa-file-archive-o" data-toggle="tooltip" title="fa-file-archive-o"></i></li>
+										<li class=""><i class="fa fa-file-audio-o" data-toggle="tooltip" title="fa-file-audio-o"></i></li>
+										<li class=""><i class="fa fa-file-code-o" data-toggle="tooltip" title="fa-file-code-o"></i></li>
+										<li class=""><i class="fa fa-file-excel-o" data-toggle="tooltip" title="fa-file-excel-o"></i></li>
+										<li class=""><i class="fa fa-file-image-o" data-toggle="tooltip" title="fa-file-image-o"></i></li>
+										<li class=""><i class="fa fa-file-movie-o" data-toggle="tooltip" title="fa-file-movie-o "></i></li>
+										<li class=""><i class="fa fa-file-pdf-o" data-toggle="tooltip" title="fa-file-pdf-o"></i></li>
+										<li class=""><i class="fa fa-file-photo-o" data-toggle="tooltip" title=" fa-file-photo-o"></i></li>
+										<li class=""><i class="fa fa-file-picture-o" data-toggle="tooltip" title="fa-file-picture-o "></i></li>
+										<li class=""><i class="fa fa-file-powerpoint-o" data-toggle="tooltip" title=" fa-file-powerpoint-o"></i></li>
+										<li class=""><i class="fa fa-file-sound-o" data-toggle="tooltip" title="fa-file-sound-o"></i></li>
+										<li class=""><i class="fa fa-file-video-o" data-toggle="tooltip" title="fa-file-video-o"></i></li>
+										<li class=""><i class="fa fa-file-word-o" data-toggle="tooltip" title="fa-file-word-o"></i></li>
+										<li class=""><i class="fa fa-file-zip-o" data-toggle="tooltip" title="fa-file-zip-o "></i></li>
+										<li class=""><i class="fa fa-film" data-toggle="tooltip" title="fa-film"></i></li>
+										<li class=""><i class="fa fa-filter" data-toggle="tooltip" title="fa-filter"></i></li>
+										<li class=""><i class="fa fa-fire" data-toggle="tooltip" title="fa-fire"></i></li>
+										<li class=""><i class="fa fa-fire-extinguisher" data-toggle="tooltip" title="fa-fire-extinguisher"></i></li>
+										<li class=""><i class="fa fa-flag" data-toggle="tooltip" title="fa-flag"></i></li>
+										<li class=""><i class="fa fa-flag-checkered" data-toggle="tooltip" title="fa-flag-checkered"></i></li>
+										<li class=""><i class="fa fa-flag-o" data-toggle="tooltip" title="fa-flag-o"></i></li>
+										<li class=""><i class="fa fa-flash" data-toggle="tooltip" title="fa-flash "></i></li>
+										<li class=""><i class="fa fa-flask" data-toggle="tooltip" title="fa-flask"></i></li>
+										<li class=""><i class="fa fa-folder" data-toggle="tooltip" title="fa-folder"></i></li>
+										<li class=""><i class="fa fa-folder-o" data-toggle="tooltip" title=" fa-folder-o"></i></li>
+										<li class=""><i class="fa fa-folder-open" data-toggle="tooltip" title="fa-folder-open"></i></li>
+										<li class=""><i class="fa fa-folder-open-o" data-toggle="tooltip" title="fa-folder-open-o"></i></li>
+										<li class=""><i class="fa fa-frown-o" data-toggle="tooltip" title="fa-frown-o"></i></li>
+										<li class=""><i class="fa fa-futbol-o" data-toggle="tooltip" title=" fa-futbol-o"></i></li>
+										<li class=""><i class="fa fa-gamepad" data-toggle="tooltip" title="fa-gamepad"></i></li>
+										<li class=""><i class="fa fa-gavel" data-toggle="tooltip" title="fa-gavel"></i></li>
+										<li class=""><i class="fa fa-gear" data-toggle="tooltip" title="fa-gear "></i></li>
+										<li class=""><i class="fa fa-gears" data-toggle="tooltip" title=" fa-gears "></i></li>
+										<li class=""><i class="fa fa-gift" data-toggle="tooltip" title="fa-gift"></i></li>
+										<li class=""><i class="fa fa-glass" data-toggle="tooltip" title="fa-glass"></i></li>
+										<li class=""><i class="fa fa-globe" data-toggle="tooltip" title="fa-globe"></i></li>
+										<li class=""><i class="fa fa-graduation-cap" data-toggle="tooltip" title="fa-graduation-cap"></i></li>
+										<li class=""><i class="fa fa-group" data-toggle="tooltip" title=" fa-group "></i></li>
+										<li class=""><i class="fa fa-hdd-o" data-toggle="tooltip" title=" fa-hdd-o"></i></li>
+										<li class=""><i class="fa fa-headphones" data-toggle="tooltip" title=" fa-headphones"></i></li>
+										<li class=""><i class="fa fa-heart" data-toggle="tooltip" title="fa-heart"></i></li>
+										<li class=""><i class="fa fa-heart-o" data-toggle="tooltip" title="fa-heart-o"></i></li>
+										<li class=""><i class="fa fa-history" data-toggle="tooltip" title=" fa-history"></i></li>
+										<li class=""><i class="fa fa-home" data-toggle="tooltip" title=" fa-home"></i></li>
+										<li class=""><i class="fa fa-image" data-toggle="tooltip" title=" fa-image "></i></li>
+										<li class=""><i class="fa fa-inbox" data-toggle="tooltip" title="fa-inbox"></i></li>
+										<li class=""><i class="fa fa-info" data-toggle="tooltip" title="fa-info"></i></li>
+										<li class=""><i class="fa fa-info-circle" data-toggle="tooltip" title=" fa-info-circle"></i></li>
+										<li class=""><i class="fa fa-institution" data-toggle="tooltip" title="fa-institution"></i></li>
+										<li class=""><i class="fa fa-key" data-toggle="tooltip" title="fa-key"></i></li>
+										<li class=""><i class="fa fa-keyboard-o" data-toggle="tooltip" title=" fa-keyboard-o"></i></li>
+										<li class=""><i class="fa fa-language" data-toggle="tooltip" title="fa-language"></i></li>
+										<li class=""><i class="fa fa-laptop" data-toggle="tooltip" title="fa-laptop"></i></li>
+										<li class=""><i class="fa fa-leaf" data-toggle="tooltip" title=" fa-leaf"></i></li>
+										<li class=""><i class="fa fa-legal" data-toggle="tooltip" title="fa-legal"></i></li>
+										<li class=""><i class="fa fa-lemon-o" data-toggle="tooltip" title=" fa-lemon-o"></i></li>
+										<li class=""><i class="fa fa-level-down" data-toggle="tooltip" title="fa-level-down"></i></li>
+										<li class=""><i class="fa fa-level-up" data-toggle="tooltip" title="fa-level-up"></i></li>
+										<li class=""><i class="fa fa-life-bouy" data-toggle="tooltip" title="fa-life-bouy"></i></li>
+										<li class=""><i class="fa fa-life-buoy" data-toggle="tooltip" title="fa-life-buoy "></i></li>
+										<li class=""><i class="fa fa-life-ring" data-toggle="tooltip" title="fa-life-ring"></i></li>
+										<li class=""><i class="fa fa-life-saver" data-toggle="tooltip" title=" fa-life-saver"></i></li>
+										<li class=""><i class="fa fa-lightbulb-o" data-toggle="tooltip" title=" fa-lightbulb-o"></i></li>
+										<li class=""><i class="fa fa-line-chart" data-toggle="tooltip" title="fa-line-chart"></i></li>
+										<li class=""><i class="fa fa-location-arrow" data-toggle="tooltip" title=" fa-location-arrow"></i></li>
+										<li class=""><i class="fa fa-lock" data-toggle="tooltip" title="fa-lock"></i></li>
+										<li class=""><i class="fa fa-magic" data-toggle="tooltip" title=" fa-magic"></i></li>
+										<li class=""><i class="fa fa-magnet" data-toggle="tooltip" title=" fa-magnet"></i></li>
+										<li class=""><i class="fa fa-mail-forward" data-toggle="tooltip" title="fa-mail-forward "></i></li>
+										<li class=""><i class="fa fa-mail-reply" data-toggle="tooltip" title="fa-mail-reply"></i></li>
+										<li class=""><i class="fa fa-mail-reply-all" data-toggle="tooltip" title="fa-mail-reply-all "></i></li>
+										<li class=""><i class="fa fa-male" data-toggle="tooltip" title="fa-male"></i></li>
+										<li class=""><i class="fa fa-map-marker" data-toggle="tooltip" title="fa-map-marker"></i></li>
+										<li class=""><i class="fa fa-meh-o" data-toggle="tooltip" title=" fa-meh-o"></i></li>
+										<li class=""><i class="fa fa-microphone" data-toggle="tooltip" title="fa-microphone"></i></li>
+										<li class=""><i class="fa fa-microphone-slash" data-toggle="tooltip" title="fa-microphone-slash"></i></li>
+										<li class=""><i class="fa fa-minus" data-toggle="tooltip" title="fa-minus"></i></li>
+										<li class=""><i class="fa fa-minus-circle" data-toggle="tooltip" title="fa-minus-circle"></i></li>
+										<li class=""><i class="fa fa-minus-square" data-toggle="tooltip" title=" fa-minus-square"></i></li>
+										<li class=""><i class="fa fa-minus-square-o" data-toggle="tooltip" title="fa-minus-square-o"></i></li>
+										<li class=""><i class="fa fa-mobile" data-toggle="tooltip" title="fa-mobile"></i></li>
+										<li class=""><i class="fa fa-mobile-phone" data-toggle="tooltip" title="fa-mobile-phone"></i></li>
+										<li class=""><i class="fa fa-money" data-toggle="tooltip" title="fa-money"></i></li>
+										<li class=""><i class="fa fa-moon-o" data-toggle="tooltip" title="fa-moon-o"></i></li>
+										<li class=""><i class="fa fa-mortar-board" data-toggle="tooltip" title="fa-mortar-board "></i></li>
+										<li class=""><i class="fa fa-music" data-toggle="tooltip" title="fa-music"></i></li>
+										<li class=""><i class="fa fa-navicon" data-toggle="tooltip" title=" fa-navicon "></i></li>
+										<li class=""><i class="fa fa-newspaper-o" data-toggle="tooltip" title="fa-newspaper-o"></i></li>
+										<li class=""><i class="fa fa-paint-brush" data-toggle="tooltip" title="fa-paint-brush"></i></li>
+										<li class=""><i class="fa fa-paper-plane" data-toggle="tooltip" title="fa-paper-plane"></i></li>
+										<li class=""><i class="fa fa-paper-plane-o" data-toggle="tooltip" title="fa-paper-plane-o"></i></li>
+										<li class=""><i class="fa fa-paw" data-toggle="tooltip" title=" fa-paw"></i></li>
+										<li class=""><i class="fa fa-pencil" data-toggle="tooltip" title=" fa-pencil"></i></li>
+										<li class=""><i class="fa fa-pencil-square" data-toggle="tooltip" title="fa-pencil-square"></i></li>
+										<li class=""><i class="fa fa-pencil-square-o" data-toggle="tooltip" title="fa-pencil-square-o"></i></li>
+										<li class=""><i class="fa fa-phone" data-toggle="tooltip" title="fa-phone"></i></li>
+										<li class=""><i class="fa fa-phone-square" data-toggle="tooltip" title=" fa-phone-square"></i></li>
+										<li class=""><i class="fa fa-photo" data-toggle="tooltip" title="fa-photo "></i></li>
+										<li class=""><i class="fa fa-picture-o" data-toggle="tooltip" title="fa-picture-o"></i></li>
+										<li class=""><i class="fa fa-pie-chart" data-toggle="tooltip" title=" fa-pie-chart"></i></li>
+										<li class=""><i class="fa fa-plane" data-toggle="tooltip" title=" fa-plane"></i></li>
+										<li class=""><i class="fa fa-plug" data-toggle="tooltip" title="fa-plug"></i></li>
+										<li class=""><i class="fa fa-plus" data-toggle="tooltip" title=" fa-plus"></i></li>
+										<li class=""><i class="fa fa-plus-circle" data-toggle="tooltip" title="fa-plus-circle"></i></li>
+										<li class=""><i class="fa fa-plus-square" data-toggle="tooltip" title=" fa-plus-square"></i></li>
+										<li class=""><i class="fa fa-plus-square-o" data-toggle="tooltip" title="fa-plus-square-o"></i></li>
+										<li class=""><i class="fa fa-power-off" data-toggle="tooltip" title="fa-power-off"></i></li>
+										<li class=""><i class="fa fa-print" data-toggle="tooltip" title="fa-print"></i></li>
+										<li class=""><i class="fa fa-puzzle-piece" data-toggle="tooltip" title=" fa-puzzle-piece"></i></li>
+										<li class=""><i class="fa fa-qrcode" data-toggle="tooltip" title="fa-qrcode"></i></li>
+										<li class=""><i class="fa fa-question" data-toggle="tooltip" title=" fa-question"></i></li>
+										<li class=""><i class="fa fa-question-circle" data-toggle="tooltip" title=" fa-question-circle"></i></li>
+										<li class=""><i class="fa fa-quote-left" data-toggle="tooltip" title="fa-quote-left"></i></li>
+										<li class=""><i class="fa fa-quote-right" data-toggle="tooltip" title="fa-quote-right"></i></li>
+										<li class=""><i class="fa fa-random" data-toggle="tooltip" title=" fa-random"></i></li>
+										<li class=""><i class="fa fa-recycle" data-toggle="tooltip" title="fa-recycle"></i></li>
+										<li class=""><i class="fa fa-refresh" data-toggle="tooltip" title="fa-refresh"></i></li>
+										<li class=""><i class="fa fa-remove" data-toggle="tooltip" title="fa-remove "></i></li>
+										<li class=""><i class="fa fa-reorder" data-toggle="tooltip" title=" fa-reorder"></i></li>
+										<li class=""><i class="fa fa-reply" data-toggle="tooltip" title=" fa-reply"></i></li>
+										<li class=""><i class="fa fa-reply-all" data-toggle="tooltip" title="fa-reply-all"></i></li>
+										<li class=""><i class="fa fa-retweet" data-toggle="tooltip" title="fa-retweet"></i></li>
+										<li class=""><i class="fa fa-road" data-toggle="tooltip" title="fa-road"></i></li>
+										<li class=""><i class="fa fa-rocket" data-toggle="tooltip" title="fa-rocket"></i></li>
+										<li class=""><i class="fa fa-rss" data-toggle="tooltip" title="fa-rss"></i></li>
+										<li class=""><i class="fa fa-rss-square" data-toggle="tooltip" title=" fa-rss-square"></i></li>
+										<li class=""><i class="fa fa-search" data-toggle="tooltip" title="fa-search"></i></li>
+										<li class=""><i class="fa fa-search-minus" data-toggle="tooltip" title="fa-search-minus"></i></li>
+										<li class=""><i class="fa fa-search-plus" data-toggle="tooltip" title="fa-search-plus"></i></li>
+										<li class=""><i class="fa fa-send" data-toggle="tooltip" title="fa-send "></i></li>
+										<li class=""><i class="fa fa-send-o" data-toggle="tooltip" title="fa-send-o "></i></li>
+										<li class=""><i class="fa fa-share" data-toggle="tooltip" title="fa-share"></i></li>
+										<li class=""><i class="fa fa-share-alt" data-toggle="tooltip" title="fa-share-alt"></i></li>
+										<li class=""><i class="fa fa-share-alt-square" data-toggle="tooltip" title="fa-share-alt-square"></i></li>
+										<li class=""><i class="fa fa-share-square" data-toggle="tooltip" title="fa-share-square"></i></li>
+										<li class=""><i class="fa fa-share-square-o" data-toggle="tooltip" title="fa-share-square-o"></i></li>
+										<li class=""><i class="fa fa-shield" data-toggle="tooltip" title="fa-shield"></i></li>
+										<li class=""><i class="fa fa-shopping-cart" data-toggle="tooltip" title="fa-shopping-cart"></i></li>
+										<li class=""><i class="fa fa-sign-in" data-toggle="tooltip" title="fa-sign-in"></i></li>
+										<li class=""><i class="fa fa-sign-out" data-toggle="tooltip" title=" fa-sign-out"></i></li>
+										<li class=""><i class="fa fa-signal" data-toggle="tooltip" title=" fa-signal"></i></li>
+										<li class=""><i class="fa fa-sitemap" data-toggle="tooltip" title="fa-sitemap"></i></li>
+										<li class=""><i class="fa fa-sliders" data-toggle="tooltip" title="fa-sliders"></i></li>
+										<li class=""><i class="fa fa-smile-o" data-toggle="tooltip" title="fa-smile-o"></i></li>
+										<li class=""><i class="fa fa-soccer-ball-o" data-toggle="tooltip" title="fa-soccer-ball-o"></i></li>
+										<li class=""><i class="fa fa-sort" data-toggle="tooltip" title="fa-sort"></i></li>
+										<li class=""><i class="fa fa-sort-alpha-asc" data-toggle="tooltip" title="fa-sort-alpha-asc"></i></li>
+										<li class=""><i class="fa fa-sort-alpha-desc" data-toggle="tooltip" title="fa-sort-alpha-desc"></i></li>
+										<li class=""><i class="fa fa-sort-amount-asc" data-toggle="tooltip" title="fa-sort-amount-asc"></i></li>
+										<li class=""><i class="fa fa-sort-amount-desc" data-toggle="tooltip" title="fa-sort-amount-desc"></i></li>
+										<li class=""><i class="fa fa-sort-asc" data-toggle="tooltip" title="fa-sort-asc"></i></li>
+										<li class=""><i class="fa fa-sort-desc" data-toggle="tooltip" title="fa-sort-desc"></i></li>
+										<li class=""><i class="fa fa-sort-down" data-toggle="tooltip" title="fa-sort-down "></i></li>
+										<li class=""><i class="fa fa-sort-numeric-asc" data-toggle="tooltip" title="fa-sort-numeric-asc"></i></li>
+										<li class=""><i class="fa fa-sort-numeric-desc" data-toggle="tooltip" title="fa-sort-numeric-desc"></i></li>
+										<li class=""><i class="fa fa-sort-up" data-toggle="tooltip" title=" fa-sort-up"></i></li>
+										<li class=""><i class="fa fa-space-shuttle" data-toggle="tooltip" title="fa-space-shuttle"></i></li>
+										<li class=""><i class="fa fa-spinner" data-toggle="tooltip" title=" fa-spinner"></i></li>
+										<li class=""><i class="fa fa-spoon" data-toggle="tooltip" title="fa-spoon"></i></li>
+										<li class=""><i class="fa fa-square" data-toggle="tooltip" title="fa-square"></i></li>
+										<li class=""><i class="fa fa-square-o" data-toggle="tooltip" title="fa-square-o"></i></li>
+										<li class=""><i class="fa fa-star" data-toggle="tooltip" title="fa-star"></i></li>
+										<li class=""><i class="fa fa-star-half" data-toggle="tooltip" title=" fa-star-half"></i></li>
+										<li class=""><i class="fa fa-star-half-empty" data-toggle="tooltip" title="fa-star-half-empty "></i></li>
+										<li class=""><i class="fa fa-star-half-full" data-toggle="tooltip" title="fa-star-half-full "></i></li>
+										<li class=""><i class="fa fa-star-half-o" data-toggle="tooltip" title="fa-star-half-o"></i></li>
+										<li class=""><i class="fa fa-star-o" data-toggle="tooltip" title="fa-star-o"></i></li>
+										<li class=""><i class="fa fa-suitcase" data-toggle="tooltip" title="fa-suitcase"></i></li>
+										<li class=""><i class="fa fa-sun-o" data-toggle="tooltip" title="fa-sun-o"></i></li>
+										<li class=""><i class="fa fa-support" data-toggle="tooltip" title=" fa-support "></i></li>
+										<li class=""><i class="fa fa-tablet" data-toggle="tooltip" title="fa-tablet"></i></li>
+										<li class=""><i class="fa fa-tachometer" data-toggle="tooltip" title="fa-tachometer"></i></li>
+										<li class=""><i class="fa fa-tag" data-toggle="tooltip" title="fa-tag"></i></li>
+										<li class=""><i class="fa fa-tags" data-toggle="tooltip" title="fa-tags"></i></li>
+										<li class=""><i class="fa fa-tasks" data-toggle="tooltip" title="fa-tasks"></i></li>
+										<li class=""><i class="fa fa-taxi" data-toggle="tooltip" title=" fa-taxi"></i></li>
+										<li class=""><i class="fa fa-terminal" data-toggle="tooltip" title=" fa-terminal"></i></li>
+										<li class=""><i class="fa fa-thumb-tack" data-toggle="tooltip" title="fa-thumb-tack"></i></li>
+										<li class=""><i class="fa fa-thumbs-down" data-toggle="tooltip" title="fa-thumbs-down"></i></li>
+										<li class=""><i class="fa fa-thumbs-o-down" data-toggle="tooltip" title="fa-thumbs-o-down"></i></li>
+										<li class=""><i class="fa fa-thumbs-o-up" data-toggle="tooltip" title="fa-thumbs-o-up"></i></li>
+										<li class=""><i class="fa fa-thumbs-up" data-toggle="tooltip" title="fa-thumbs-up"></i></li>
+										<li class=""><i class="fa fa-ticket" data-toggle="tooltip" title=" fa-ticket"></i></li>
+										<li class=""><i class="fa fa-times" data-toggle="tooltip" title="fa-times"></i></li>
+										<li class=""><i class="fa fa-times-circle" data-toggle="tooltip" title=" fa-times-circle"></i></li>
+										<li class=""><i class="fa fa-times-circle-o" data-toggle="tooltip" title=" fa-times-circle-o"></i></li>
+										<li class=""><i class="fa fa-tint" data-toggle="tooltip" title="fa-tint"></i></li>
+										<li class=""><i class="fa fa-toggle-down" data-toggle="tooltip" title="fa-toggle-down"></i></li>
+										<li class=""><i class="fa fa-toggle-left" data-toggle="tooltip" title="fa-toggle-left"></i></li>
+										<li class=""><i class="fa fa-toggle-off" data-toggle="tooltip" title="fa-toggle-off"></i></li>
+										<li class=""><i class="fa fa-toggle-on" data-toggle="tooltip" title=" fa-toggle-on"></i></li>
+										<li class=""><i class="fa fa-toggle-right" data-toggle="tooltip" title="fa-toggle-right "></i></li>
+										<li class=""><i class="fa fa-toggle-up" data-toggle="tooltip" title=" fa-toggle-up "></i></li>
+										<li class=""><i class="fa fa-trash" data-toggle="tooltip" title="fa-trash"></i></li>
+										<li class=""><i class="fa fa-trash-o" data-toggle="tooltip" title="fa-trash-o"></i></li>
+										<li class=""><i class="fa fa-tree" data-toggle="tooltip" title="fa-tree"></i></li>
+										<li class=""><i class="fa fa-trophy" data-toggle="tooltip" title="fa-trophy"></i></li>
+										<li class=""><i class="fa fa-truck" data-toggle="tooltip" title="fa-truck"></i></li>
+										<li class=""><i class="fa fa-tty" data-toggle="tooltip" title="fa-tty"></i></li>
+										<li class=""><i class="fa fa-umbrella" data-toggle="tooltip" title="fa-umbrella"></i></li>
+										<li class=""><i class="fa fa-university" data-toggle="tooltip" title="fa-university"></i></li>
+										<li class=""><i class="fa fa-unlock" data-toggle="tooltip" title="fa-unlock"></i></li>
+										<li class=""><i class="fa fa-unlock-alt" data-toggle="tooltip" title="fa-unlock-alt"></i></li>
+										<li class=""><i class="fa fa-unsorted" data-toggle="tooltip" title="fa-unsorted"></i></li>
+										<li class=""><i class="fa fa-upload" data-toggle="tooltip" title=" fa-upload"></i></li>
+										<li class=""><i class="fa fa-user" data-toggle="tooltip" title="fa-user"></i></li>
+										<li class=""><i class="fa fa-users" data-toggle="tooltip" title="fa-users"></i></li>
+										<li class=""><i class="fa fa-video-camera" data-toggle="tooltip" title="fa-video-camera"></i></li>
+										<li class=""><i class="fa fa-volume-down" data-toggle="tooltip" title=" fa-volume-down"></i></li>
+										<li class=""><i class="fa fa-volume-off" data-toggle="tooltip" title="fa-volume-off"></i></li>
+										<li class=""><i class="fa fa-volume-up" data-toggle="tooltip" title="fa-volume-up"></i></li>
+										<li class=""><i class="fa fa-warning" data-toggle="tooltip" title="fa-warning"></i></li>
+										<li class=""><i class="fa fa-wheelchair" data-toggle="tooltip" title="fa-wheelchair"></i></li>
+										<li class=""><i class="fa fa-wifi" data-toggle="tooltip" title="fa-wifi"></i></li>
+										<li class=""><i class="fa fa-wrench" data-toggle="tooltip" title="fa-wrench"></i></li>
+										<li class=""><i class="fa fa-angle-double-down" data-toggle="tooltip" title="fa-angle-double-down"></i></li>
+										<li class=""><i class="fa fa-angle-double-left" data-toggle="tooltip" title="fa-angle-double-left"></i></li>
+										<li class=""><i class="fa fa-angle-double-right" data-toggle="tooltip" title="fa-angle-double-right"></i></li>
+										<li class=""><i class="fa fa-angle-double-up" data-toggle="tooltip" title="fa-angle-double-up"></i></li>
+										<li class=""><i class="fa fa-angle-down" data-toggle="tooltip" title="fa-angle-down"></i></li>
+										<li class=""><i class="fa fa-angle-left" data-toggle="tooltip" title="fa-angle-left"></i></li>
+										<li class=""><i class="fa fa-angle-right" data-toggle="tooltip" title="fa-angle-right"></i></li>
+										<li class=""><i class="fa fa-angle-up" data-toggle="tooltip" title="fa-angle-up"></i></li>
+										<li class=""><i class="fa fa-arrow-circle-down" data-toggle="tooltip" title="fa-arrow-circle-down"></i></li>
+										<li class=""><i class="fa fa-arrow-circle-left" data-toggle="tooltip" title="fa-arrow-circle-left"></i></li>
+										<li class=""><i class="fa fa-arrow-circle-o-down" data-toggle="tooltip" title="fa-arrow-circle-o-down"></i></li>
+										<li class=""><i class="fa fa-arrow-circle-o-left" data-toggle="tooltip" title="fa-arrow-circle-o-left"></i></li>
+										<li class=""><i class="fa fa-arrow-circle-o-right" data-toggle="tooltip" title="fa-arrow-circle-o-right"></i></li>
+										<li class=""><i class="fa fa-arrow-circle-o-up" data-toggle="tooltip" title="fa-arrow-circle-o-up"></i></li>
+										<li class=""><i class="fa fa-arrow-circle-right" data-toggle="tooltip" title="fa-arrow-circle-right"></i></li>
+										<li class=""><i class="fa fa-arrow-circle-up" data-toggle="tooltip" title="fa-arrow-circle-up"></i></li>
+										<li class=""><i class="fa fa-arrow-down" data-toggle="tooltip" title="fa-arrow-down"></i></li>
+										<li class=""><i class="fa fa-arrow-left" data-toggle="tooltip" title="fa-arrow-left"></i></li>
+										<li class=""><i class="fa fa-arrow-right" data-toggle="tooltip" title="fa-arrow-right"></i></li>
+										<li class=""><i class="fa fa-arrow-up" data-toggle="tooltip" title="fa-arrow-up"></i></li>
+										<li class=""><i class="fa fa-arrows" data-toggle="tooltip" title="fa-arrows"></i></li>
+										<li class=""><i class="fa fa-arrows-alt" data-toggle="tooltip" title="fa-arrows-alt"></i></li>
+										<li class=""><i class="fa fa-arrows-h" data-toggle="tooltip" title="fa-arrows-h"></i></li>
+										<li class=""><i class="fa fa-arrows-v" data-toggle="tooltip" title="fa-arrows-v"></i></li>
+										<li class=""><i class="fa fa-caret-down" data-toggle="tooltip" title="fa-caret-down"></i></li>
+										<li class=""><i class="fa fa-caret-left" data-toggle="tooltip" title="fa-caret-left"></i></li>
+										<li class=""><i class="fa fa-caret-right" data-toggle="tooltip" title="fa-caret-right"></i></li>
+										<li class=""><i class="fa fa-caret-square-o-down" data-toggle="tooltip" title="fa-caret-square-o-down"></i></li>
+										<li class=""><i class="fa fa-caret-square-o-left" data-toggle="tooltip" title="fa-caret-square-o-left"></i></li>
+										<li class=""><i class="fa fa-caret-square-o-right" data-toggle="tooltip" title="fa-caret-square-o-right"></i></li>
+										<li class=""><i class="fa fa-caret-square-o-up" data-toggle="tooltip" title="fa-caret-square-o-up"></i></li>
+										<li class=""><i class="fa fa-caret-up" data-toggle="tooltip" title="fa-caret-up"></i></li>
+										<li class=""><i class="fa fa-chevron-circle-down" data-toggle="tooltip" title="fa-chevron-circle-down"></i></li>
+										<li class=""><i class="fa fa-chevron-circle-left" data-toggle="tooltip" title="fa-chevron-circle-left"></i></li>
+										<li class=""><i class="fa fa-chevron-circle-right" data-toggle="tooltip" title="fa-chevron-circle-right"></i></li>
+										<li class=""><i class="fa fa-chevron-circle-up" data-toggle="tooltip" title="fa-chevron-circle-up"></i></li>
+										<li class=""><i class="fa fa-chevron-down" data-toggle="tooltip" title=" fa-chevron-down"></i></li>
+										<li class=""><i class="fa fa-chevron-left" data-toggle="tooltip" title="fa-chevron-left"></i></li>
+										<li class=""><i class="fa fa-chevron-right" data-toggle="tooltip" title="fa-chevron-right"></i></li>
+										<li class=""><i class="fa fa-chevron-up" data-toggle="tooltip" title="fa-chevron-up"></i></li>
+										<li class=""><i class="fa fa-hand-o-down" data-toggle="tooltip" title=" fa-hand-o-down"></i></li>
+										<li class=""><i class="fa fa-hand-o-left" data-toggle="tooltip" title="fa-hand-o-left"></i></li>
+										<li class=""><i class="fa fa-hand-o-right" data-toggle="tooltip" title="fa-hand-o-right"></i></li>
+										<li class=""><i class="fa fa-hand-o-up" data-toggle="tooltip" title="fa-hand-o-up"></i></li>
+										<li class=""><i class="fa fa-long-arrow-down" data-toggle="tooltip" title="fa-long-arrow-down"></i></li>
+										<li class=""><i class="fa fa-long-arrow-left" data-toggle="tooltip" title=" fa-long-arrow-left"></i></li>
+										<li class=""><i class="fa fa-long-arrow-right" data-toggle="tooltip" title="fa-long-arrow-right"></i></li>
+										<li class=""><i class="fa fa-long-arrow-up" data-toggle="tooltip" title="fa-long-arrow-up"></i></li>
+										<li class=""><i class="fa fa-toggle-down" data-toggle="tooltip" title="fa-toggle-down"></i></li>
+										<li class=""><i class="fa fa-toggle-left" data-toggle="tooltip" title="fa-toggle-left"></i></li>
+										<li class=""><i class="fa fa-toggle-right" data-toggle="tooltip" title="fa-toggle-right"></i></li>
+										<li class=""><i class="fa fa-arrows-alt" data-toggle="tooltip" title="fa-arrows-alt"></i></li>
+										<li class=""><i class="fa fa-backward" data-toggle="tooltip" title="fa-backward"></i></li>
+										<li class=""><i class="fa fa-compress" data-toggle="tooltip" title="fa-compress"></i></li>
+										<li class=""><i class="fa fa-eject" data-toggle="tooltip" title="fa-eject"></i></li>
+										<li class=""><i class="fa fa-expand" data-toggle="tooltip" title="fa-expand"></i></li>
+										<li class=""><i class="fa fa-fast-backward" data-toggle="tooltip" title="fa-fast-backward"></i></li>
+										<li class=""><i class="fa fa-fast-forward" data-toggle="tooltip" title="fa-fast-forward"></i></li>
+										<li class=""><i class="fa fa-forward" data-toggle="tooltip" title="fa-forward"></i></li>
+										<li class=""><i class="fa fa-pause" data-toggle="tooltip" title=" fa-pause"></i></li>
+										<li class=""><i class="fa fa-play" data-toggle="tooltip" title="fa-play"></i></li>
+										<li class=""><i class="fa fa-play-circle" data-toggle="tooltip" title="fa-play-circle"></i></li>
+										<li class=""><i class="fa fa-play-circle-o" data-toggle="tooltip" title="fa-play-circle-o"></i></li>
+										<li class=""><i class="fa fa-step-backward" data-toggle="tooltip" title="fa-step-backward"></i></li>
+										<li class=""><i class="fa fa-step-forward" data-toggle="tooltip" title="fa-step-forward"></i></li>
+										<li class=""><i class="fa fa-stop" data-toggle="tooltip" title="fa-stop"></i></li>
+										<li class=""><i class="fa fa-youtube-play" data-toggle="tooltip" title="fa-youtube-play"></i></li>
+										<li class=""><i class="fa fa-adn" data-toggle="tooltip" title="fa-adn"></i></li>
+										<li class=""><i class="fa fa-android" data-toggle="tooltip" title="fa-android"></i></li>
+										<li class=""><i class="fa fa-angellist" data-toggle="tooltip" title="fa-angellist"></i></li>
+										<li class=""><i class="fa fa-apple" data-toggle="tooltip" title="fa-apple"></i></li>
+										<li class=""><i class="fa fa-behance" data-toggle="tooltip" title="fa-behance"></i></li>
+										<li class=""><i class="fa fa-behance-square" data-toggle="tooltip" title="fa-behance-square"></i></li>
+										<li class=""><i class="fa fa-bitbucket" data-toggle="tooltip" title="fa-bitbucket"></i></li>
+										<li class=""><i class="fa fa-bitbucket-square" data-toggle="tooltip" title="fa-bitbucket-square"></i></li>
+										<li class=""><i class="fa fa-bitcoin" data-toggle="tooltip" title="fa-bitcoin"></i></li>
+										<li class=""><i class="fa fa-btc" data-toggle="tooltip" title="fa-btc"></i></li>
+										<li class=""><i class="fa fa-cc-amex" data-toggle="tooltip" title="fa-cc-amex"></i></li>
+										<li class=""><i class="fa fa-cc-discover" data-toggle="tooltip" title="fa-cc-discover"></i></li>
+										<li class=""><i class="fa fa-cc-mastercard" data-toggle="tooltip" title="fa-cc-paypal"></i></li>
+										<li class=""><i class="fa fa-cc-paypal" data-toggle="tooltip" title="fa-th"></i> </li>
+										<li class=""><i class="fa fa-cc-stripe" data-toggle="tooltip" title="fa-cc-stripe"></i></li>
+										<li class=""><i class="fa fa-cc-visa" data-toggle="tooltip" title="fa-cc-visa"></i></li>
+										<li class=""><i class="fa fa-codepen" data-toggle="tooltip" title="fa-codepen&gt;&lt;/i&gt; &lt;/li&gt; &lt;li class="><i class="fa fa-css3" data-toggle="tooltip" title="fa-css3"></i></i></li>
+										<li class=""><i class="fa fa-delicious" data-toggle="tooltip" title="fa-delicious"></i></li>
+										<li class=""><i class="fa fa-deviantart" data-toggle="tooltip" title="fa-deviantart"></i></li>
+										<li class=""><i class="fa fa-digg" data-toggle="tooltip" title="fa-digg"></i></li>
+										<li class=""><i class="fa fa-dribbble" data-toggle="tooltip" title="fa-dribbble"></i></li>
+										<li class=""><i class="fa fa-dropbox" data-toggle="tooltip" title="fa-dropbox"></i></li>
+										<li class=""><i class="fa fa-drupal" data-toggle="tooltip" title="fa-drupal"></i></li>
+										<li class=""><i class="fa fa-empire" data-toggle="tooltip" title=" fa-empire"></i></li>
+										<li class=""><i class="fa fa-facebook" data-toggle="tooltip" title="fa-facebook"></i></li>
+										<li class=""><i class="fa fa-facebook-square" data-toggle="tooltip" title="fa-facebook-square"></i></li>
+										<li class=""><i class="fa fa-flickr" data-toggle="tooltip" title="fa-flickr"></i></li>
+										<li class=""><i class="fa fa-foursquare" data-toggle="tooltip" title=" fa-foursquare"></i></li>
+										<li class=""><i class="fa fa-ge" data-toggle="tooltip" title="fa-ge"></i></li>
+										<li class=""><i class="fa fa-git" data-toggle="tooltip" title="fa-git"></i></li>
+										<li class=""><i class="fa fa-git-square" data-toggle="tooltip" title="fa-git-square"></i></li>
+										<li class=""><i class="fa fa-github" data-toggle="tooltip" title="fa-github"></i></li>
+										<li class=""><i class="fa fa-github-alt" data-toggle="tooltip" title="fa-github-alt"></i></li>
+										<li class=""><i class="fa fa-github-square" data-toggle="tooltip" title="fa-github-square"></i></li>
+										<li class=""><i class="fa fa-gittip" data-toggle="tooltip" title="fa-gittip"></i></li>
+										<li class=""><i class="fa fa-google" data-toggle="tooltip" title="fa-google"></i></li>
+										<li class=""><i class="fa fa-google-plus" data-toggle="tooltip" title="fa-google-plus"></i></li>
+										<li class=""><i class="fa fa-google-plus-square" data-toggle="tooltip" title="fa-google-plus-square"></i></li>
+										<li class=""><i class="fa fa-google-wallet" data-toggle="tooltip" title="fa-hacker-news"></i></li>
+										<li class=""><i class="fa fa-hacker-news" data-toggle="tooltip" title="fa-hacker-news"></i></li>
+										<li class=""><i class="fa fa-html5" data-toggle="tooltip" title="fa-html5"></i></li>
+										<li class=""><i class="fa fa-instagram" data-toggle="tooltip" title="fa-instagram"></i></li>
+										<li class=""><i class="fa fa-ioxhost" data-toggle="tooltip" title="fa-ioxhost"></i></li>
+										<li class=""><i class="fa fa-joomla" data-toggle="tooltip" title="fa-joomla"></i></li>
+										<li class=""><i class="fa fa-jsfiddle" data-toggle="tooltip" title="fa-jsfiddle"></i></li>
+										<li class=""><i class="fa fa-lastfm" data-toggle="tooltip" title="fa-lastfm"></i></li>
+										<li class=""><i class="fa fa-lastfm-square" data-toggle="tooltip" title="fa-lastfm-square"></i></li>
+										<li class=""><i class="fa fa-linkedin" data-toggle="tooltip" title="fa-linkedin"></i></li>
+										<li class=""><i class="fa fa-linkedin-square" data-toggle="tooltip" title="fa-linkedin-square"></i></li>
+										<li class=""><i class="fa fa-linux" data-toggle="tooltip" title="fa-linux"></i></li>
+										<li class=""><i class="fa fa-maxcdn" data-toggle="tooltip" title="fa-maxcdn"></i></li>
+										<li class=""><i class="fa fa-meanpath" data-toggle="tooltip" title="fa-meanpath"></i></li>
+										<li class=""><i class="fa fa-openid" data-toggle="tooltip" title="fa-openid"></i></li>
+										<li class=""><i class="fa fa-pagelines" data-toggle="tooltip" title=" fa-pagelines"></i></li>
+										<li class=""><i class="fa fa-paypal" data-toggle="tooltip" title="fa-paypal"></i></li>
+										<li class=""><i class="fa fa-pied-piper" data-toggle="tooltip" title="fa-pied-piper"></i></li>
+										<li class=""><i class="fa fa-pied-piper-alt" data-toggle="tooltip" title="fa-pied-piper-alt"></i></li>
+										<li class=""><i class="fa fa-pinterest" data-toggle="tooltip" title="fa-pinterest"></i></li>
+										<li class=""><i class="fa fa-pinterest-square" data-toggle="tooltip" title=" fa-pinterest-square"></i></li>
+										<li class=""><i class="fa fa-qq" data-toggle="tooltip" title="fa-qq"></i></li>
+										<li class=""><i class="fa fa-ra" data-toggle="tooltip" title="fa-ra"></i></li>
+										<li class=""><i class="fa fa-rebel" data-toggle="tooltip" title="fa-rebel"></i></li>
+										<li class=""><i class="fa fa-reddit" data-toggle="tooltip" title="fa-reddit"></i></li>
+										<li class=""><i class="fa fa-reddit-square" data-toggle="tooltip" title="fa-reddit-square"></i></li>
+										<li class=""><i class="fa fa-renren" data-toggle="tooltip" title="fa-renren"></i></li>
+										<li class=""><i class="fa fa-share-alt" data-toggle="tooltip" title="fa-share-alt"></i></li>
+										<li class=""><i class="fa fa-share-alt-square" data-toggle="tooltip" title="fa-share-alt-square"></i></li>
+										<li class=""><i class="fa fa-skype" data-toggle="tooltip" title="fa-skype"></i></li>
+										<li class=""><i class="fa fa-slack" data-toggle="tooltip" title="fa-slack"></i></li>
+										<li class=""><i class="fa fa-slideshare" data-toggle="tooltip" title="fa-slideshare"></i></li>
+										<li class=""><i class="fa fa-soundcloud" data-toggle="tooltip" title="fa-soundcloud"></i></li>
+										<li class=""><i class="fa fa-spotify" data-toggle="tooltip" title="fa-spotify"></i></li>
+										<li class=""><i class="fa fa-stack-exchange" data-toggle="tooltip" title="fa-stack-exchange"></i></li>
+										<li class=""><i class="fa fa-stack-overflow" data-toggle="tooltip" title=" fa-stack-overflow"></i></li>
+										<li class=""><i class="fa fa-steam" data-toggle="tooltip" title="fa-steam"></i></li>
+										<li class=""><i class="fa fa-steam-square" data-toggle="tooltip" title="fa-steam-square"></i></li>
+										<li class=""><i class="fa fa-stumbleupon" data-toggle="tooltip" title="fa-stumbleupon"></i></li>
+										<li class=""><i class="fa fa-stumbleupon-circle" data-toggle="tooltip" title="fa-stumbleupon-circle"></i></li>
+										<li class=""><i class="fa fa-tencent-weibo" data-toggle="tooltip" title="fa-tencent-weibo"></i></li>
+										<li class=""><i class="fa fa-trello" data-toggle="tooltip" title=" fa-trello"></i></li>
+										<li class=""><i class="fa fa-tumblr" data-toggle="tooltip" title="fa-tumblr"></i></li>
+										<li class=""><i class="fa fa-tumblr-square" data-toggle="tooltip" title="fa-tumblr-square"></i></li>
+										<li class=""><i class="fa fa-twitch" data-toggle="tooltip" title="fa-twitch"></i></li>
+										<li class=""><i class="fa fa-twitter" data-toggle="tooltip" title="fa-twitter"></i></li>
+										<li class=""><i class="fa fa-twitter-square" data-toggle="tooltip" title="fa-twitter-square"></i></li>
+										<li class=""><i class="fa fa-vimeo-square" data-toggle="tooltip" title="fa-vimeo-square"></i></li>
+										<li class=""><i class="fa fa-vine" data-toggle="tooltip" title="fa-vine"></i></li>
+										<li class=""><i class="fa fa-vk" data-toggle="tooltip" title="fa-vk"></i></li>
+										<li class=""><i class="fa fa-wechat" data-toggle="tooltip" title="fa-wechat"></i></li>
+										<li class=""><i class="fa fa-weibo" data-toggle="tooltip" title="fa-weibo"></i></li>
+										<li class=""><i class="fa fa-weixin" data-toggle="tooltip" title="fa-weixin"></i></li>
+										<li class=""><i class="fa fa-windows" data-toggle="tooltip" title="fa-windows"></i></li>
+										<li class=""><i class="fa fa-wordpress" data-toggle="tooltip" title=" fa-wordpress"></i></li>
+										<li class=""><i class="fa fa-xing" data-toggle="tooltip" title="fa-xing"></i></li>
+										<li class=""><i class="fa fa-xing-square" data-toggle="tooltip" title="fa-xing-square"></i></li>
+										<li class=""><i class="fa fa-yahoo" data-toggle="tooltip" title="fa-yahoo"></i></li>
+										<li class=""><i class="fa fa-yelp" data-toggle="tooltip" title="fa-yelp"></i></li>
+										<li class=""><i class="fa fa-youtube" data-toggle="tooltip" title="fa-youtube"></i></li>
+										<li class=""><i class="fa fa-youtube-play" data-toggle="tooltip" title="fa-youtube-play"></i></li>
+										<li class=""><i class="fa fa-youtube-square" data-toggle="tooltip" title="fa-youtube-square"></i></li>
+										<li class=""><i class="fa fa-ambulance" data-toggle="tooltip" title="fa-ambulance"></i></li>
+										<li class=""><i class="fa fa-h-square" data-toggle="tooltip" title="fa-h-square"></i></li>
+										<li class=""><i class="fa fa-hospital-o" data-toggle="tooltip" title="fa-hospital-o"></i></li>
+										<li class=""><i class="fa fa-medkit" data-toggle="tooltip" title="fa-medkit"></i></li>
+										<li class=""><i class="fa fa-plus-square" data-toggle="tooltip" title="fa-plus-square"></i></li>
+										<li class=""><i class="fa fa-stethoscope" data-toggle="tooltip" title="fa-stethoscope"></i></li>
+										<li class=""><i class="fa fa-user-md" data-toggle="tooltip" title="fa-user-md"></i></li>
+										<li class=""><i class="fa fa-wheelchair" data-toggle="tooltip" title=" fa-wheelchair"></i></li>
+										<li class=""><i class="fa fa-file" data-toggle="tooltip" title="fa-file"></i></li>
+										<li class=""><i class="fa fa-file-archive-o" data-toggle="tooltip" title="fa-file-archive-o"></i></li>
+										<li class=""><i class="fa fa-file-audio-o" data-toggle="tooltip" title="fa-file-audio-o"></i></li>
+										<li class=""><i class="fa fa-file-code-o" data-toggle="tooltip" title="fa-file-code-o"></i></li>
+										<li class=""><i class="fa fa-file-excel-o" data-toggle="tooltip" title="fa-file-excel-o"></i></li>
+										<li class=""><i class="fa fa-file-image-o" data-toggle="tooltip" title="fa-file-image-o"></i></li>
+										<li class=""><i class="fa fa-file-movie-o" data-toggle="tooltip" title="fa-file-movie-o"></i></li>
+										<li class=""><i class="fa fa-file-o" data-toggle="tooltip" title="fa-file-o"></i></li>
+										<li class=""><i class="fa fa-file-pdf-o" data-toggle="tooltip" title="fa-file-pdf-o"></i></li>
+										<li class=""><i class="fa fa-file-photo-o" data-toggle="tooltip" title="fa-file-photo-o"></i></li>
+										<li class=""><i class="fa fa-file-picture-o" data-toggle="tooltip" title="fa-file-picture-o"></i></li>
+										<li class=""><i class="fa fa-file-powerpoint-o" data-toggle="tooltip" title="fa-file-powerpoint-o"></i></li>
+										<li class=""><i class="fa fa-file-sound-o" data-toggle="tooltip" title="fa-file-sound-o"></i></li>
+										<li class=""><i class="fa fa-file-text" data-toggle="tooltip" title="fa-file-text"></i></li>
+										<li class=""><i class="fa fa-file-text-o" data-toggle="tooltip" title="fa-file-text-o"></i></li>
+										<li class=""><i class="fa fa-file-video-o" data-toggle="tooltip" title="fa-file-video-o"></i></li>
+										<li class=""><i class="fa fa-file-word-o" data-toggle="tooltip" title=" fa-file-word-o"></i></li>
+										<li class=""><i class="fa fa-file-zip-o" data-toggle="tooltip" title="fa-file-zip-o"></i></li>
+										<li class=""><i class="fa fa-align-center" data-toggle="tooltip" title="fa-align-center"></i></li>
+										<li class=""><i class="fa fa-align-justify" data-toggle="tooltip" title="fa-align-justify"></i></li>
+										<li class=""><i class="fa fa-align-left" data-toggle="tooltip" title=" fa-align-left"></i></li>
+										<li class=""><i class="fa fa-align-right" data-toggle="tooltip" title="fa-align-right"></i></li>
+										<li class=""><i class="fa fa-bold" data-toggle="tooltip" title="fa-bold"></i></li>
+										<li class=""><i class="fa fa-chain" data-toggle="tooltip" title=" fa-chain"></i></li>
+										<li class=""><i class="fa fa-chain-broken" data-toggle="tooltip" title="fa-chain-broken"></i></li>
+										<li class=""><i class="fa fa-clipboard" data-toggle="tooltip" title=" fa-clipboard"></i></li>
+										<li class=""><i class="fa fa-columns" data-toggle="tooltip" title="fa-columns"></i></li>
+										<li class=""><i class="fa fa-copy" data-toggle="tooltip" title="fa-copy"></i></li>
+										<li class=""><i class="fa fa-cut" data-toggle="tooltip" title="fa-cut"></i></li>
+										<li class=""><i class="fa fa-dedent" data-toggle="tooltip" title="fa-dedent"></i></li>
+										<li class=""><i class="fa fa-eraser" data-toggle="tooltip" title=" fa-eraser"></i></li>
+										<li class=""><i class="fa fa-file" data-toggle="tooltip" title="fa-file"></i></li>
+										<li class=""><i class="fa fa-file-o" data-toggle="tooltip" title="fa-file-o"></i></li>
+										<li class=""><i class="fa fa-file-text" data-toggle="tooltip" title=" fa-file-text"></i></li>
+										<li class=""><i class="fa fa-file-text-o" data-toggle="tooltip" title="fa-file-text-o"></i></li>
+										<li class=""><i class="fa fa-files-o" data-toggle="tooltip" title="fa-files-o"></i></li>
+										<li class=""><i class="fa fa-floppy-o" data-toggle="tooltip" title="fa-floppy-o"></i></li>
+										<li class=""><i class="fa fa-font" data-toggle="tooltip" title="fa-font"></i></li>
+										<li class=""><i class="fa fa-header" data-toggle="tooltip" title="fa-header"></i></li>
+										<li class=""><i class="fa fa-indent" data-toggle="tooltip" title=" fa-indent"></i></li>
+										<li class=""><i class="fa fa-italic" data-toggle="tooltip" title=" fa-italic"></i></li>
+										<li class=""><i class="fa fa-link" data-toggle="tooltip" title=" fa-link"></i></li>
+										<li class=""><i class="fa fa-list" data-toggle="tooltip" title="fa-list"></i></li>
+										<li class=""><i class="fa fa-list-alt" data-toggle="tooltip" title="fa-list-alt"></i></li>
+										<li class=""><i class="fa fa-list-ol" data-toggle="tooltip" title="fa-list-ol"></i></li>
+										<li class=""><i class="fa fa-list-ul" data-toggle="tooltip" title="fa-list-ul"></i></li>
+										<li class=""><i class="fa fa-outdent" data-toggle="tooltip" title="fa-outdent"></i></li>
+										<li class=""><i class="fa fa-paperclip" data-toggle="tooltip" title="fa-paperclip"></i></li>
+										<li class=""><i class="fa fa-paragraph" data-toggle="tooltip" title="fa-paragraph"></i></li>
+										<li class=""><i class="fa fa-paste" data-toggle="tooltip" title="fa-paste"></i></li>
+										<li class=""><i class="fa fa-repeat" data-toggle="tooltip" title="fa-repeat"></i></li>
+										<li class=""><i class="fa fa-rotate-left" data-toggle="tooltip" title="fa-rotate-left"></i></li>
+										<li class=""><i class="fa fa-rotate-right" data-toggle="tooltip" title="fa-rotate-right"></i></li>
+										<li class=""><i class="fa fa-save" data-toggle="tooltip" title=" fa-save"></i></li>
+										<li class=""><i class="fa fa-scissors" data-toggle="tooltip" title=" fa-scissors"></i></li>
+										<li class=""><i class="fa fa-strikethrough" data-toggle="tooltip" title=" fa-strikethrough"></i></li>
+										<li class=""><i class="fa fa-subscript" data-toggle="tooltip" title="fa-subscript"></i></li>
+										<li class=""><i class="fa fa-superscript" data-toggle="tooltip" title=" fa-superscript"></i></li>
+										<li class=""><i class="fa fa-table" data-toggle="tooltip" title="fa-table"></i></li>
+										<li class=""><i class="fa fa-text-height" data-toggle="tooltip" title="fa-text-height"></i></li>
+										<li class=""><i class="fa fa-text-width" data-toggle="tooltip" title="fa-text-width"></i></li>
+										<li class=""><i class="fa fa-th" data-toggle="tooltip" title="fa-th"></i></li>
+										<li class=""><i class="fa fa-th-large" data-toggle="tooltip" title="fa-th-large"></i></li>
+										<li class=""><i class="fa fa-th-list" data-toggle="tooltip" title="fa-th-list"></i></li>
+										<li class=""><i class="fa fa-underline" data-toggle="tooltip" title=" fa-underline"></i></li>
+										<li class=""><i class="fa fa-undo" data-toggle="tooltip" title="fa-undo"></i></li>
+										<li class=""><i class="fa fa-unlink" data-toggle="tooltip" title=" fa-unlink"></i></li>
+										<li class=""><i class="fa fa-check-square" data-toggle="tooltip" title="fa-check-square"></i></li>
+										<li class=""><i class="fa fa-check-square-o" data-toggle="tooltip" title="fa-check-square-o"></i></li>
+										<li class=""><i class="fa fa-circle" data-toggle="tooltip" title="fa-circle"></i></li>
+										<li class=""><i class="fa fa-circle-o" data-toggle="tooltip" title="fa-circle-o"></i></li>
+										<li class=""><i class="fa fa-dot-circle-o" data-toggle="tooltip" title="fa-dot-circle-o"></i></li>
+										<li class=""><i class="fa fa-minus-square" data-toggle="tooltip" title="fa-minus-square"></i></li>
+										<li class=""><i class="fa fa-minus-square-o" data-toggle="tooltip" title="fa-minus-square-o"></i></li>
+										<li class=""><i class="fa fa-plus-square" data-toggle="tooltip" title="fa-plus-square"></i></li>
+										<li class=""><i class="fa fa-plus-square-o" data-toggle="tooltip" title="fa-plus-square-o"></i></li>
+										<li class=""><i class="fa fa-square" data-toggle="tooltip" title="fa-square"></i></li>
+										<li class=""><i class="fa fa-square-o" data-toggle="tooltip" title=" fa-square-o"></i></li>
+										<li class=""><i class="fa fa-circle-o-notch" data-toggle="tooltip" title="fa-circle-o-notch"></i></li>
+										<li class=""><i class="fa fa-cog" data-toggle="tooltip" title="fa-cog"></i></li>
+										<li class=""><i class="fa fa-gear" data-toggle="tooltip" title="fa-gear "></i></li>
+										<li class=""><i class="fa fa-refresh" data-toggle="tooltip" title=" fa-refresh"></i></li>
+										<li class=""><i class="fa fa-spinner" data-toggle="tooltip" title="fa-spinner"></i> </li>
+										<li class=""><i class="fa fa-cc-amex" data-toggle="tooltip" title="fa-cc-amex"></i></li>
+										<li class=""><i class="fa fa-cc-discover" data-toggle="tooltip" title="fa-cc-discover"></i></li>
+										<li class=""><i class="fa fa-cc-mastercard" data-toggle="tooltip" title="fa-cc-mastercard"></i></li>
+										<li class=""><i class="fa fa-cc-paypal" data-toggle="tooltip" title="fa-cc-paypal"></i></li>
+										<li class=""><i class="fa fa-cc-stripe" data-toggle="tooltip" title=" fa-cc-stripe"></i></li>
+										<li class=""><i class="fa fa-cc-visa" data-toggle="tooltip" title="fa-cc-visa"></i></li>
+										<li class=""><i class="fa fa-credit-card" data-toggle="tooltip" title="fa-credit-card"></i></li>
+										<li class=""><i class="fa fa-google-wallet" data-toggle="tooltip" title="fa-google-wallet"></i></li>
+										<li class=""><i class="fa fa-paypal" data-toggle="tooltip" title="fa-paypal"></i></li>
+										<li class=""><i class="fa fa-area-chart" data-toggle="tooltip" title="fa-area-chart"></i></li>
+										<li class=""><i class="fa fa-bar-chart" data-toggle="tooltip" title="fa-bar-chart"></i></li>
+										<li class=""><i class="fa fa-bar-chart-o" data-toggle="tooltip" title="fa-bar-chart-o "></i></li>
+										<li class=""><i class="fa fa-line-chart" data-toggle="tooltip" title="fa-line-chart"></i></li>
+										<li class=""><i class="fa fa-pie-chart" data-toggle="tooltip" title="fa-pie-chart"></i></li>
+										<li class=""><i class="fa fa-bitcoin" data-toggle="tooltip" title="fa-bitcoin"></i></li>
+										<li class=""><i class="fa fa-btc" data-toggle="tooltip" title=" fa-btc"></i></li>
+										<li class=""><i class="fa fa-cny" data-toggle="tooltip" title="fa-cny"></i></li>
+										<li class=""><i class="fa fa-dollar" data-toggle="tooltip" title="fa-dollar"></i></li>
+										<li class=""><i class="fa fa-eur" data-toggle="tooltip" title="fa-eur"></i> </li>
+										<li class=""><i class="fa fa-euro" data-toggle="tooltip" title="fa-euro"></i></li>
+										<li class=""><i class="fa fa-gbp" data-toggle="tooltip" title="fa-gbp"></i></li>
+										<li class=""><i class="fa fa-ils" data-toggle="tooltip" title=" fa-ils"></i></li>
+										<li class=""><i class="fa fa-inr" data-toggle="tooltip" title="fa-inr"></i></li>
+										<li class=""><i class="fa fa-jpy" data-toggle="tooltip" title="fa-jpy"></i></li>
+										<li class=""><i class="fa fa-krw" data-toggle="tooltip" title=" fa-krw"></i></li>
+										<li class=""><i class="fa fa-money" data-toggle="tooltip" title="fa-money"></i></li>
+										<li class=""><i class="fa fa-rmb" data-toggle="tooltip" title="fa-rmb "></i></li>
+										<li class=""><i class="fa fa-rouble" data-toggle="tooltip" title="fa-rouble"></i></li>
+										<li class=""><i class="fa fa-rub" data-toggle="tooltip" title="fa-rub"></i></li>
+										<li class=""><i class="fa fa-ruble" data-toggle="tooltip" title="fa-ruble"></i></li>
+										<li class=""><i class="fa fa-rupee" data-toggle="tooltip" title="fa-rupee "></i></li>
+										<li class=""><i class="fa fa-shekel" data-toggle="tooltip" title="fa-shekel"></i></li>
+										<li class=""><i class="fa fa-sheqel" data-toggle="tooltip" title=" fa-sheqel"></i></li>
+										<li class=""><i class="fa fa-try" data-toggle="tooltip" title="fa-try"></i></li>
+										<li class=""><i class="fa fa-turkish-lira" data-toggle="tooltip" title="fa-turkish-lira"></i></li>
+										<li class=""><i class="fa fa-usd" data-toggle="tooltip" title="fa-usd"></i></li>
+										<li class=""><i class="fa fa-won" data-toggle="tooltip" title="fa-won"></i></li>
+										<li class=""><i class="fa fa-yen" data-toggle="tooltip" title="fa fa-yen"></i></li>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+
+					</section>
+				</div>
+
+				<footer class="main-footer">
+					<div class="text-center">
+						Copyright &copy;Kharna-Admin 2018. Design By<a href="https://spruko.com/"> Spruko</a>
+					</div>
+				</footer>
+
+			</div>
+		</div>
+
+		<!--Jquery.min js-->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!--popper js-->
+		<script src="assets/js/popper.js"></script>
+
+		<!--Tooltip js-->
+		<script src="assets/js/tooltip.js"></script>
+
+		<!--Bootstrap.min js-->
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--Jquery.nicescroll.min js-->
+		<script src="assets/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+
+		<!--Scroll-up-bar.min js-->
+		<script src="assets/plugins/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+
+		<!--mCustomScrollbar js-->
+		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+		<!--Sidemenu js-->
+		<script src="assets/plugins/toggle-menu/sidemenu.js"></script>
+
+		<!--Scripts js-->
+		<script src="assets/js/scripts.js"></script>
+
+	</body>
+</html>

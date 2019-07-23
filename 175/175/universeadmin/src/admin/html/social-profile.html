@@ -1,0 +1,390 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Social Profile / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="main-container container-fh__content m-social-profile">
+    <div class="m-social-profile__cover" style="background-image: url('img/social-profile/8.png');">
+      <div class="m-social-profile__profile-image">
+        <img src="img/users/user-20.png" alt="" class=" rounded-circle">
+      </div>
+    </div>
+    <div class="m-social-profile__content">
+      <div class="m-social-profile__info">
+        <div class="m-social-profile__info-user">
+          <div class="m-social-profile__info-username">John Doe</div>
+          <div class="m-social-profile__info-user-actions">
+            <button class="btn btn-success m-social-profile__info-user-action">Follow</button>
+            <button class="btn btn-info m-social-profile__info-user-action">Message</button>
+          </div>
+        </div>
+        <div class="m-social-profile__info-block">
+          <h5 class="m-social-profile__info-block-heading">About me</h5>
+          <div class="m-social-profile__info-block-content">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip.
+          </div>
+        </div>
+        <div class="m-social-profile__info-block">
+          <h5 class="m-social-profile__info-block-heading">Statistics</h5>
+          <div class="m-social-profile__info-block-content">
+            <ul class="m-social-profile__stats">
+              <li class="m-social-profile__stats-item">
+                <span class="m-social-profile__stats-badge">332</span>
+                Followers
+              </li>
+              <li class="m-social-profile__stats-item">
+                <span class="m-social-profile__stats-badge">332</span>
+                Following
+              </li>
+              <li class="m-social-profile__stats-item">
+                <span class="m-social-profile__stats-badge">332</span>
+                Likes
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="m-social-profile__info-block">
+          <h5 class="m-social-profile__info-block-heading">Social</h5>
+          <div class="m-social-profile__info-block-content">
+            <ul class="m-social-profile__social">
+              <li class="m-social-profile__social-item">
+                <a href="#">
+                  <span class="m-social-profile__social-icon ua-icon-social-twitter"></span>
+                  @rebeccaharis
+                </a>
+              </li>
+              <li class="m-social-profile__social-item">
+                <a href="#">
+                  <span class="m-social-profile__social-icon ua-icon-social-facebook"></span>
+                  Rebeca Harris
+                </a>
+              </li>
+              <li class="m-social-profile__social-item">
+                <a href="#">
+                  <span class="m-social-profile__social-icon ua-icon-social-dribble"></span>
+                  Rebeca Harris
+                </a>
+              </li>
+              <li class="m-social-profile__social-item">
+                <a href="#">
+                  <span class="m-social-profile__social-icon ua-icon-social-linkedin"></span>
+                  Rebeca Harris
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="m-social-profile__tabs">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item m-social-profile__tab-item">
+            <a class="nav-link m-social-profile__tab-link active" id="home-tab" data-toggle="tab" href="#social-profile-activities" role="tab" aria-controls="home" aria-selected="true">Activities</a>
+          </li>
+          <li class="nav-item m-social-profile__tab-item">
+            <a class="nav-link m-social-profile__tab-link" id="profile-tab" data-toggle="tab" href="#social-profile-followers" role="tab" aria-controls="profile" aria-selected="false">Followers</a>
+          </li>
+          <li class="nav-item m-social-profile__tab-item">
+            <a class="nav-link m-social-profile__tab-link" id="contact-tab" data-toggle="tab" href="#social-profile-following" role="tab" aria-controls="contact" aria-selected="false">Following</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="social-profile-activities">
+            <div class="m-social-profile__activities">
+              <div class="m-social-profile__activity-item">
+                <div class="m-social-profile__activity-item-header">
+                  <img src="img/users/user-15.png" alt="" class="m-social-profile__activity-item-avatar rounded-circle" width="56" height="56">
+                  <div class="m-social-profile__activity-item-info">
+                    <div>
+                      <a href="#" class="link-info">Francesca S.</a> <span class="m-social-profile__activity-item-event">created a new event</span>
+                    </div>
+                    <div>
+                      <span class="m-social-profile__activity-item-date">
+                        <span class="ua-icon-datepicker m-social-profile__activity-item-icon"></span> <span>09:12 pm</span>
+                      </span>
+                      <span class="m-social-profile__activity-item-location">
+                        <span class="ua-icon-map m-social-profile__activity-item-icon"></span> <span>Las Vegas</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="m-social-profile__activity-item-controls">
+                    <a href="#" class="m-social-profile__activity-item-reply m-social-profile__activity-item-control"><span class="ua-icon-reply icon"></span> Reply</a>
+                    <div class="dropdown no-arrow m-social-profile__activity-item-dropdown m-social-profile__activity-item-control">
+                      <span class="dropdown-toggle ua-icon-dots-vertical" data-toggle="dropdown"></span>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">I don’t want to see this</a>
+                        <a class="dropdown-item" href="#">Unfollow Antonius</a>
+                        <a class="dropdown-item" href="#">Get Notification</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-social-profile__activity-item-content">
+                  <div class="m-social-profile__activity-item-document">
+                    <span class="ua-icon-social-document m-social-profile__activity-item-document-icon"></span>
+                    <div class="m-social-profile__activity-item-document-desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper ligula augue, eget eleifend nisl varius eu. Proin semper tellus magna, vel venenatis justo mattis eu. Duis maximus urna a scelerisque rhoncus.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper ligula augue, eget eleifend nisl varius eu. Proin semper tellus magna, vel venenatis justo mattis eu. Duis maximus urna a scelerisque rhoncus.
+                    </div>
+                    <a href="#" class="btn btn-outline-secondary m-social-profile__activity-item-document-read">Read now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="m-social-profile__activity-item">
+                <div class="m-social-profile__activity-item-header">
+                  <img src="img/users/user-15.png" alt="" class="m-social-profile__activity-item-avatar rounded-circle" width="56" height="56">
+                  <div class="m-social-profile__activity-item-info">
+                    <div>
+                      <a href="#" class="link-info">Antonius</a> <span class="m-social-profile__activity-item-event">started following</span>
+                      <a href="#" class="link-info">Jack Bay</a> <span class="color-gray">2m ago</span>
+                    </div>
+                    <div>
+                      <span class="m-social-profile__activity-item-date">
+                        <span class="ua-icon-datepicker m-social-profile__activity-item-icon"></span> <span>Today 08:30 am - 02.05.2024</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="m-social-profile__activity-item-controls">
+                    <a href="#" class="m-social-profile__activity-item-reply m-social-profile__activity-item-control"><span class="ua-icon-reply icon"></span> Reply</a>
+                    <div class="dropdown no-arrow m-social-profile__activity-item-dropdown m-social-profile__activity-item-control">
+                      <span class="dropdown-toggle ua-icon-dots-vertical" data-toggle="dropdown"></span>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">I don’t want to see this</a>
+                        <a class="dropdown-item" href="#">Unfollow Antonius</a>
+                        <a class="dropdown-item" href="#">Get Notification</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-social-profile__activity-item">
+                <div class="m-social-profile__activity-item-header">
+                  <img src="img/users/user-15.png" alt="" class="m-social-profile__activity-item-avatar rounded-circle" width="56" height="56">
+                  <div class="m-social-profile__activity-item-info">
+                    <div>
+                      <a href="#" class="link-info">Francesca S.</a> <span class="m-social-profile__activity-item-event">created a new event</span>
+                    </div>
+                    <div>
+                      <span class="m-social-profile__activity-item-date">
+                        <span class="ua-icon-datepicker m-social-profile__activity-item-icon"></span> <span>09:12 pm</span>
+                      </span>
+                      <span class="m-social-profile__activity-item-location">
+                        <span class="ua-icon-map m-social-profile__activity-item-icon"></span> <span>Las Vegas</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="m-social-profile__activity-item-controls">
+                    <a href="#" class="m-social-profile__activity-item-reply m-social-profile__activity-item-control"><span class="ua-icon-reply icon"></span> Reply</a>
+                    <div class="dropdown no-arrow m-social-profile__activity-item-dropdown m-social-profile__activity-item-control">
+                      <span class="dropdown-toggle ua-icon-dots-vertical" data-toggle="dropdown"></span>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">I don’t want to see this</a>
+                        <a class="dropdown-item" href="#">Unfollow Antonius</a>
+                        <a class="dropdown-item" href="#">Get Notification</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-social-profile__activity-item-content">
+                  <div class="m-social-profile__activity-item-blockquote">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                      culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="m-social-profile__activity-item">
+                <div class="m-social-profile__activity-item-header">
+                  <img src="img/users/user-15.png" alt="" class="m-social-profile__activity-item-avatar rounded-circle" width="56" height="56">
+                  <div class="m-social-profile__activity-item-info">
+                    <div>
+                      <a href="#" class="link-info">Francesca S.</a> <span class="m-social-profile__activity-item-event">has uploaded photo</span>
+                      <a href="#" class="link-info">Jack Bay</a> <span class="color-gray">yesterday</span>
+                    </div>
+                    <div>
+                      <span class="m-social-profile__activity-item-date">
+                        <span class="ua-icon-datepicker m-social-profile__activity-item-icon"></span> <span>Today 08:30 am - 02.05.2024</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="m-social-profile__activity-item-controls">
+                    <a href="#" class="m-social-profile__activity-item-reply m-social-profile__activity-item-control"><span class="ua-icon-reply icon"></span> Reply</a>
+                    <div class="dropdown no-arrow m-social-profile__activity-item-dropdown m-social-profile__activity-item-control">
+                      <span class="dropdown-toggle ua-icon-dots-vertical" data-toggle="dropdown"></span>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">I don’t want to see this</a>
+                        <a class="dropdown-item" href="#">Unfollow Antonius</a>
+                        <a class="dropdown-item" href="#">Get Notification</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-social-profile__activity-item-content">
+                  <div class="m-social-profile__activity-item-images">
+                    <div class="m-social-profile__activity-item-image">
+                      <img src="img/social-profile/9.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="m-social-profile__load-more-block">
+                <a href="#" class="btn btn-outline-secondary icon-left mr-3">
+                  Load More Activities <span class="btn-icon ua-icon-update"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="social-profile-followers">
+            <div class="m-social-profile__followers">
+              <div class="m-social-profile__follower">
+                <img src="img/users/user-15.png" alt="" class="m-social-profile__follower-avatar rounded-circle" width="56" height="56">
+                <div class="m-social-profile__follower-info">
+                  <div>
+                    <a href="#" class="link-info">Antonius</a>
+                  </div>
+                  <div class="m-social-profile__follower-info-desc">
+                    @antonius
+                  </div>
+                </div>
+                <div class="m-social-profile__follower-actions">
+                  <a href="#" class="btn btn-success">Following</a>
+                </div>
+              </div>
+              <div class="m-social-profile__follower">
+                <img src="img/users/user-16.png" alt="" class="m-social-profile__follower-avatar rounded-circle" width="56" height="56">
+                <div class="m-social-profile__follower-info">
+                  <div>
+                    <a href="#" class="link-info">Antonius</a>
+                  </div>
+                  <div class="m-social-profile__follower-info-desc">
+                    @antonius
+                  </div>
+                </div>
+                <div class="m-social-profile__follower-actions">
+                  <a href="#" class="btn btn-outline-secondary icon-left">
+                    Follow <span class="btn-icon ua-icon-plus"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="m-social-profile__follower">
+                <img src="img/users/user-17.png" alt="" class="m-social-profile__follower-avatar rounded-circle" width="56" height="56">
+                <div class="m-social-profile__follower-info">
+                  <div>
+                    <a href="#" class="link-info">Antonius</a>
+                  </div>
+                  <div class="m-social-profile__follower-info-desc">
+                    @antonius
+                  </div>
+                </div>
+                <div class="m-social-profile__follower-actions">
+                  <a href="#" class="btn btn-outline-secondary icon-left">
+                    Follow <span class="btn-icon ua-icon-plus"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="m-social-profile__follower">
+                <img src="img/users/user-18.png" alt="" class="m-social-profile__follower-avatar rounded-circle" width="56" height="56">
+                <div class="m-social-profile__follower-info">
+                  <div>
+                    <a href="#" class="link-info">Antonius</a>
+                  </div>
+                  <div class="m-social-profile__follower-info-desc">
+                    @antonius
+                  </div>
+                </div>
+                <div class="m-social-profile__follower-actions">
+                  <a href="#" class="btn btn-danger">Unfollow</a>
+                </div>
+              </div>
+              <div class="m-social-profile__load-more-block">
+                <a href="#" class="btn btn-outline-secondary icon-left">
+                  Load More Followers <span class="btn-icon ua-icon-update"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="social-profile-following">
+            <div class="m-social-profile__followers">
+              <div class="m-social-profile__follower">
+                <img src="img/users/user-15.png" alt="" class="m-social-profile__follower-avatar rounded-circle" width="56" height="56">
+                <div class="m-social-profile__follower-info">
+                  <div>
+                    <a href="#" class="link-info">Antonius</a>
+                  </div>
+                  <div class="m-social-profile__follower-info-desc">
+                    @antonius
+                  </div>
+                </div>
+                <div class="m-social-profile__follower-actions">
+                  <a href="#" class="btn btn-success">Following</a>
+                </div>
+              </div>
+              <div class="m-social-profile__follower">
+                <img src="img/users/user-16.png" alt="" class="m-social-profile__follower-avatar rounded-circle" width="56" height="56">
+                <div class="m-social-profile__follower-info">
+                  <div>
+                    <a href="#" class="link-info">Antonius</a>
+                  </div>
+                  <div class="m-social-profile__follower-info-desc">
+                    @antonius
+                  </div>
+                </div>
+                <div class="m-social-profile__follower-actions">
+                  <a href="#" class="btn btn-outline-secondary icon-left">
+                    Follow <span class="btn-icon ua-icon-plus"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="m-social-profile__follower">
+                <img src="img/users/user-17.png" alt="" class="m-social-profile__follower-avatar rounded-circle" width="56" height="56">
+                <div class="m-social-profile__follower-info">
+                  <div>
+                    <a href="#" class="link-info">Antonius</a>
+                  </div>
+                  <div class="m-social-profile__follower-info-desc">
+                    @antonius
+                  </div>
+                </div>
+                <div class="m-social-profile__follower-actions">
+                  <a href="#" class="btn btn-outline-secondary icon-left">
+                    Follow <span class="btn-icon ua-icon-plus"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="m-social-profile__follower">
+                <img src="img/users/user-18.png" alt="" class="m-social-profile__follower-avatar rounded-circle" width="56" height="56">
+                <div class="m-social-profile__follower-info">
+                  <div>
+                    <a href="#" class="link-info">Antonius</a>
+                  </div>
+                  <div class="m-social-profile__follower-info-desc">
+                    @antonius
+                  </div>
+                </div>
+                <div class="m-social-profile__follower-actions">
+                  <a href="#" class="btn btn-danger">Unfollow</a>
+                </div>
+              </div>
+              <div class="m-social-profile__load-more-block">
+                <a href="#" class="btn btn-outline-secondary icon-left">
+                  Load More Followers <span class="btn-icon ua-icon-update"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+/* ==========================================================================
+   #BREADCRUMB
+   ========================================================================== */
+
+.c-breadcrumb {
+	display: flex;
+}
+
+.c-breadcrumb__item {
+	color: $color-ink-dark;
+
+	&:not(:last-child)::after {
+		margin: 0 $spacer-xsmall;
+		color: $color-ink-light;
+		content: "/";
+	}
+}
+
+.c-breadcrumb__link {
+	color: $color-ink-light;
+}

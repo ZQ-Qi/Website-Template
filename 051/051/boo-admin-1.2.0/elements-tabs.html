@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Boo Admin - UI Elements - Tabs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+    <script src="assets/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body class="sidebar-left ">
+<div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="brand" href="javascript:void(0);"><img src="assets/img/demo/logo-brand.png"></a>
+                        <div class="search-global">
+                            <input id="globalSearch" class="search search-query input-medium" type="search">
+                            <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav user-menu visible-desktop">
+                                <li><a class="btn-glyph fontello-icon-edit tip-bc" href="javascript:void(0);" title="Messages"><span class="badge badge-important">8</span></a></li>
+                                <li><a class="btn-glyph fontello-icon-mail-1 tip-bc" href="javascript:void(0);" title="Emails"></a></li>
+                                <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Support"><span class="badge badge-important">4</span></a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li> <a href="dashboard-one.html">Dashboard</a> </li>
+                                <li class="active"> <a href="javascript:void(0);">Components</a> </li>
+                                <li> <a href="component-fullcalendar-demo.html"><span class="fontello-icon-calendar"></span>Calendar</a> </li>
+                                <li> <a href="javascript:void(0);"><span class="fontello-icon-users"></span>Contacts</a> </li>
+                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="component-form-demo.html">Demo Form</a></li>
+                                        <li><a href="component-widgets-remember.html">Remember</a></li>
+                                        <li><a href="component-widgets-users.html">User List</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">Next Update</li>
+                                        <li><a href="javascript:void(0);">Contacts</a></li>
+                                        <li><a href="javascript:void(0);">Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer">
+                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                <!-- // Resposive navigation -->
+                <div class="breadcrumbs-nav hidden-phone">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                        <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Table</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">Boo Admin </li>
+                    </ul>
+                </div>
+                <!-- // breadcrumbs --> 
+            </div>
+            <!-- // drawer --> 
+        </div>
+    </div>
+    <!-- // header-container -->
+    
+    <div id="main-container">
+        <div id="main-sidebar" class="sidebar sidebar-inverse">
+            <div class="sidebar-item">
+                <div class="media profile">
+                    <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
+                        <p class="data">Last Access: 16 May 15:30</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // sidebar item - profile -->
+            
+            <ul id="mainSideMenu" class="nav nav-list nav-side">
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor"></span> <i class="chevron fontello-icon-right-open-3"></i> Dashboards </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accDash">
+                        <li> <a href="dashboard-one.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 1 </a> </li>
+                        <li> <a href="dashboard-two.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 2 </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Dashboard -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon aweso-icon-list-alt"></span><i class="chevron fontello-icon-right-open-3"></i> Form </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accForms">
+                        <li> <a href="component-form-demo.html"> <i class="fontello-icon-right-dir"></i> Demo Form </a> </li>
+                        <li> <a href="component-form-elements.html"> <i class="fontello-icon-right-dir"></i> Form Element </a> </li>
+                        <li> <a href="component-form-extension.html"> <i class="fontello-icon-right-dir"></i> Form Extension</a> </li>
+                        <li> <a href="component-form-wizard.html"> <i class="fontello-icon-right-dir"></i> Form Wizard</a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Forms -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accComponents" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Components </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accComponents">
+                        <li> <a href="elements-notification.html"> <i class="fontello-icon-right-dir"></i> Notification </a> </li>
+                        <li> <a href="component-rangeslider.html"> <i class="fontello-icon-right-dir"></i> Rangeslider </a> </li>
+                        <li> <a href="component-file-upload.html"> <i class="fontello-icon-right-dir"></i> File upload </a> </li>
+                        <li> <a href="component-gallery.html"> <i class="fontello-icon-right-dir"></i> Gallery &amp; Image </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Components -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Tables </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accTables">
+                        <li> <a href="component-table.html"> <i class="fontello-icon-right-dir"></i> Base Table </a> </li>
+                        <li> <a href="component-table-boo.html"> <i class="fontello-icon-right-dir"></i> Boo Table </a> </li>
+                        <li> <a href="component-table-datatable.html"> <i class="fontello-icon-right-dir"></i> DataTable </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Tables -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accStatistics" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-chart"></span> <i class="chevron fontello-icon-right-open-3"></i> Statistics </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accStatistics">
+                        <li> <a href="statistic-flot.html"> <i class="fontello-icon-right-dir"></i> Charts </a> </li>
+                        <li> <a href="statistic-sparkline.html"> <i class="fontello-icon-right-dir"></i> Sparklines </a> </li>
+                        <li> <a href="statistic-circle.html"> <i class="fontello-icon-right-dir"></i> Circle </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Statistics -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accWidgets" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon  fontello-icon-window"></span> <i class="chevron fontello-icon-right-open-3"></i> Widgets </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accWidgets">
+                        <li> <a href="component-widget-style.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Style </a> </li>
+                        <li> <a href="component-widget-custom.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Custom </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Widgets -->
+                <li class="accordion-group">
+                    <div class="accordion-heading active"> <a href="#accButtons" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-puzzle"></span> <i class="chevron fontello-icon-right-open-3"></i> UI Elements </a> </div>
+                    <ul class="accordion-content nav nav-list collapse in" id="accButtons">
+                        <li> <a href="elements-button.html"> <i class="fontello-icon-right-dir"></i> Button </a> </li>
+                        <li> <a href="elements-icon-font.html"> <i class="fontello-icon-right-dir"></i> Iconic fonts </a> </li>
+                        <li> <a href="elements-icon-fugue-demo.html"> <i class="fontello-icon-right-dir"></i> Icon </a> </li>
+                        <li> <a href="elements-wells.html"> <i class="fontello-icon-right-dir"></i> Wells </a> </li>
+                        <li class="active"> <a href="elements-tabs.html"> <i class="fontello-icon-right-dir"></i> Tabs </a> </li>
+                        <li> <a href="elements-modals.html"> <i class="fontello-icon-right-dir"></i> Modal </a> </li>
+                        <li> <a href="elements-progressbar.html"> <i class="fontello-icon-right-dir"></i> Progressbar </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu UI Elements -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accCalendar" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Calendar </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accCalendar">
+                        <li> <a href="component-fullcalendar-demo.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Demo </a> </li>
+                        <li> <a href="component-fullcalendar.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Style </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Calendar -->
+            </ul>
+            <!-- // sidebar menu -->
+            
+            <div class="sidebar-item"></div>
+            <!-- // sidebar item --> 
+            
+        </div>
+        <!-- // sidebar -->
+        
+        <div id="main-content" class="main-content container-fluid">
+            <div class="row-fluid page-head">
+                <h2 class="page-title"><i class="fontello-icon-folder-2"></i> Tabbable & Tabs <small>Boo style</small></h2>
+                <div class="page-bar">
+                    <ul class="nav nav-tabs pull-right">
+                        <li class="active" id="server-tab"> <a href="#TabPage1" data-toggle="tab">Default & Bordered</a> </li>
+                        <li id="monitor-tab"> <a href="#TabPage2" data-toggle="tab">in Box & Coloring</a> </li>
+                        <li id="incidents-tab"> <a href="#TabPage3" data-toggle="tab">Tabs Custom </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // page head -->
+            
+            <div id="page-content" class="page-content tab-content">
+                <div class="tab-pane active" id="TabPage1">
+                    <h2>Default Tab <small>.tabbable & .tabbable-bordered</small></h2>
+                    <p>This is a template for a simple marketing or informational website.</p>
+                    <hr class="strong margin-0x">
+                    <div class="row-fluid">
+                        <div class="span12"> 
+                            <!-- Base Tabs - use only .tabbable -->
+                            <div class="tabbable tabbable-bordered tabs-top">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#TabTop1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabTop2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabTop3" data-toggle="tab">Section 3</a></li>
+                                    <li class="disabled"><a href="#TabTop4" data-toggle="tab">Disabled tab</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabTop1">
+                                        <h5 class="simple-header f16">TABS TOP 1</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetuer tellus justo sed fermentum ut. 
+                                            Ridiculus leo vitae cursus Pellentesque lacus rutrum odio Nam amet pede. 
+                                            Tempus elit sodales ligula pretium dis sapien Aenean Nullam platea ac. 
+                                            Nunc odio id tortor mollis In platea semper metus id amet. Arcu accumsan massa 
+                                            Morbi mauris Ut tortor consectetuer adipiscing interdum tortor. 
+                                            Hendrerit faucibus venenatis sagittis Curabitur orci pellentesque metus sit ridiculus interdum. Orci.</p>
+                                        <p>In orci fringilla Nulla ac et ligula libero faucibus massa interdum. Malesuada vel et Nulla 
+                                            Quisque habitasse augue est pellentesque id justo. Leo laoreet ullamcorper ante vel dui 
+                                            eget Phasellus amet magna justo. Nulla pretium eros Pellentesque semper eget dolor 
+                                            Vestibulum pellentesque Nam sem. Neque consectetuer vel wisi cursus enim quis tristique 
+                                            urna orci justo. Consequat neque sodales Phasellus sit malesuada arcu tempus orci 
+                                            venenatis ornare. Morbi elit.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetuer tellus justo sed fermentum ut. 
+                                            Ridiculus leo vitae cursus Pellentesque lacus rutrum odio Nam amet pede. 
+                                            Tempus elit sodales ligula pretium dis sapien Aenean Nullam platea ac. 
+                                            Nunc odio id tortor mollis In platea semper metus id amet. Arcu accumsan massa 
+                                            Morbi mauris Ut tortor consectetuer adipiscing interdum tortor. 
+                                            Hendrerit faucibus venenatis sagittis Curabitur orci pellentesque metus sit ridiculus interdum. Orci.</p>
+                                        <p>In orci fringilla Nulla ac et ligula libero faucibus massa interdum. Malesuada vel et Nulla 
+                                            Quisque habitasse augue est pellentesque id justo. Leo laoreet ullamcorper ante vel dui 
+                                            eget Phasellus amet magna justo. Nulla pretium eros Pellentesque semper eget dolor 
+                                            Vestibulum pellentesque Nam sem. Neque consectetuer vel wisi cursus enim quis tristique 
+                                            urna orci justo. Consequat neque sodales Phasellus sit malesuada arcu tempus orci 
+                                            venenatis ornare. Morbi elit.</p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabTop2">
+                                        <table class="table table-striped table-condensed table-hover bg-grey-light">
+                                            <caption>
+                                            Default Table in Tabs <span>Here text in span</span>
+                                            </caption>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col" class="hidden-phone">City</th>
+                                                    <th scope="col" class="hidden-tablet hidden-phone">Email</th>
+                                                    <th scope="col">Date of birth</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Colin Nixon</td>
+                                                    <td class="hidden-phone">Long Beach</td>
+                                                    <td class="hidden-tablet hidden-phone">semper@diamSeddiam.edu</td>
+                                                    <td>02/10/1986</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Naida Bennett</td>
+                                                    <td class="hidden-phone">Lockport</td>
+                                                    <td class="hidden-tablet hidden-phone">commodo@conseque.ca</td>
+                                                    <td>04/21/1959</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Danielle Myers</td>
+                                                    <td class="hidden-phone">Bentonville</td>
+                                                    <td class="hidden-tablet hidden-phone">nunc.sed@liberoInteger.ca</td>
+                                                    <td>12/11/1971</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Whitney Jones</td>
+                                                    <td class="hidden-phone">Troy</td>
+                                                    <td class="hidden-tablet hidden-phone">Nunc@sedliberoProin.edu</td>
+                                                    <td>08/09/1976</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Marvin Bell</td>
+                                                    <td class="hidden-phone">Cody</td>
+                                                    <td class="hidden-tablet hidden-phone">aliquet@Craspellentesque.com</td>
+                                                    <td>10/17/1979</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabTop3">
+                                        <h5 class="simple-header f16">TABS TOP 3</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetuer tellus justo sed fermentum ut. 
+                                            Ridiculus leo vitae cursus Pellentesque lacus rutrum odio Nam amet pede.</p>
+                                        <p><a class="btn btn-grey" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                            </div>
+                            <!-- // Tabs TOP - .tabbable-bordered -->
+                            <hr class="margin-xxx">
+                        </div>
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="tabbable tabbable-bordered tabs-below">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabBottom1">
+                                        <h5 class="simple-header f16">TABS BOTTOM 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-grey" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabBottom2">
+                                        <h5 class="simple-header f16">TABS BOTTOM 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabBottom3">
+                                        <h5 class="simple-header f16">TABS BOTTOM 3</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-blue" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#TabBottom1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabBottom2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabBottom3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                            </div>
+                            <!-- // Tabs BOTTOM - Base -->
+                            <hr class="margin-xxx">
+                        </div>
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="tabbable tabs-left">
+                                <ul class="nav nav-tabs">
+                                    <li><a href="#TabLeft1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabLeft2" data-toggle="tab">Section 2</a></li>
+                                    <li class="active"><a href="#TabLeft3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="TabLeft1">
+                                        <h5 class="simple-header f16">TABS LEFT 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 1 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabLeft2">
+                                        <h5 class="simple-header f16">TABS LEFT 2</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetuer tellus justo sed fermentum ut. 
+                                            Ridiculus leo vitae cursus Pellentesque lacus rutrum odio Nam amet pede. 
+                                            Tempus elit sodales ligula pretium dis sapien Aenean Nullam platea ac. 
+                                            Nunc odio id tortor mollis In platea semper metus id amet. Arcu accumsan massa 
+                                            Morbi mauris Ut tortor consectetuer adipiscing interdum tortor. 
+                                            Hendrerit faucibus venenatis sagittis Curabitur orci pellentesque metus sit ridiculus interdum. Orci.</p>
+                                        <p>In orci fringilla Nulla ac et ligula libero faucibus massa interdum. Malesuada vel et Nulla 
+                                            Quisque habitasse augue est pellentesque id justo. Leo laoreet ullamcorper ante vel dui 
+                                            eget Phasellus amet magna justo. Nulla pretium eros Pellentesque semper eget dolor 
+                                            Vestibulum pellentesque Nam sem. Neque consectetuer vel wisi cursus enim quis tristique 
+                                            urna orci justo. Consequat neque sodales Phasellus sit malesuada arcu tempus orci 
+                                            venenatis ornare. Morbi elit.</p>
+                                        <p><a class="btn btn-cyan" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane active" id="TabLeft3">
+                                        <div class="well well-nice">
+                                            <table class="table boo-table table-striped table-condensed bg-blue-medium">
+                                                <caption>
+                                                TABS LEFT - Boo Table in Tabs <span>Long content</span>
+                                                </caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">ID</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col" class="hidden-phone">City</th>
+                                                        <th scope="col" class="hidden-tablet hidden-phone">Email</th>
+                                                        <th scope="col">Date of birth</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Colin Nixon</td>
+                                                        <td class="hidden-phone">Long Beach</td>
+                                                        <td class="hidden-tablet hidden-phone">semper@diamSeddiam.edu</td>
+                                                        <td>02/10/1986</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Naida Bennett</td>
+                                                        <td class="hidden-phone">Lockport</td>
+                                                        <td class="hidden-tablet hidden-phone">commodo@conseque.ca</td>
+                                                        <td>04/21/1959</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Danielle Myers</td>
+                                                        <td class="hidden-phone">Bentonville</td>
+                                                        <td class="hidden-tablet hidden-phone">nunc.sed@liberoInteger.ca</td>
+                                                        <td>12/11/1971</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Whitney Jones</td>
+                                                        <td class="hidden-phone">Troy</td>
+                                                        <td class="hidden-tablet hidden-phone">Nunc@sedliberoProin.edu</td>
+                                                        <td>08/09/1976</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Marvin Bell</td>
+                                                        <td class="hidden-phone">Cody</td>
+                                                        <td class="hidden-tablet hidden-phone">aliquet@Craspellentesque.com</td>
+                                                        <td>10/17/1979</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                            </div>
+                            <!-- // Tabs LEFT - Base -->
+                            <hr class="margin-xxx">
+                        </div>
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="tabbable tabs-right">
+                                <ul class="nav nav-tabs">
+                                    <li><a href="#TabRight1" data-toggle="tab">Long tab label - Section 1</a></li>
+                                    <li><a href="#TabRight2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabRight3" data-toggle="tab">Section 3</a></li>
+                                    <li class="active"><a href="#TabRight4" data-toggle="tab">Section 4</a></li>
+                                    <li class="disabled"><a href="#TabRight5" data-toggle="tab">Disabled tab 5</a></li>
+                                    <li class="disabled"><a href="#TabRight6" data-toggle="tab">Disabled tab 6</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="TabRight1">
+                                        <h5 class="simple-header f16">TABS RIGHT 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-yellow" href="javascript:void(0);">View details 1 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabRight2">
+                                        <h5 class="simple-header f16">TABS RIGHT 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-red" href="javascript:void(0);">View details 2 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabRight3">
+                                        <h5 class="simple-header f16">TABS RIGHT 3</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetuer tellus justo sed fermentum ut. 
+                                            Ridiculus leo vitae cursus Pellentesque lacus rutrum odio Nam amet pede. 
+                                            Tempus elit sodales ligula pretium dis sapien Aenean Nullam platea ac. 
+                                            Nunc odio id tortor mollis In platea semper metus id amet. Arcu accumsan massa 
+                                            Morbi mauris Ut tortor consectetuer adipiscing interdum tortor. 
+                                            Hendrerit faucibus venenatis sagittis Curabitur orci pellentesque metus sit ridiculus interdum. Orci.</p>
+                                        <p>In orci fringilla Nulla ac et ligula libero faucibus massa interdum. Malesuada vel et Nulla 
+                                            Quisque habitasse augue est pellentesque id justo. Leo laoreet ullamcorper ante vel dui 
+                                            eget Phasellus amet magna justo. Nulla pretium eros Pellentesque semper eget dolor 
+                                            Vestibulum pellentesque Nam sem. Neque consectetuer vel wisi cursus enim quis tristique 
+                                            urna orci justo. Consequat neque sodales Phasellus sit malesuada arcu tempus orci 
+                                            venenatis ornare. Morbi elit.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetuer tellus justo sed fermentum ut. 
+                                            Ridiculus leo vitae cursus Pellentesque lacus rutrum odio Nam amet pede. 
+                                            Tempus elit sodales ligula pretium dis sapien Aenean Nullam platea ac. 
+                                            Nunc odio id tortor mollis In platea semper metus id amet. Arcu accumsan massa 
+                                            Morbi mauris Ut tortor consectetuer adipiscing interdum tortor. 
+                                            Hendrerit faucibus venenatis sagittis Curabitur orci pellentesque metus sit ridiculus interdum. Orci.</p>
+                                        <p>In orci fringilla Nulla ac et ligula libero faucibus massa interdum. Malesuada vel et Nulla 
+                                            Quisque habitasse augue est pellentesque id justo. Leo laoreet ullamcorper ante vel dui 
+                                            eget Phasellus amet magna justo. Nulla pretium eros Pellentesque semper eget dolor 
+                                            Vestibulum pellentesque Nam sem. Neque consectetuer vel wisi cursus enim quis tristique 
+                                            urna orci justo. Consequat neque sodales Phasellus sit malesuada arcu tempus orci 
+                                            venenatis ornare. Morbi elit.</p>
+                                        <p><a class="btn btn-info" href="javascript:void(0);">View details 3 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 -->
+                                    
+                                    <div class="tab-pane active" id="TabRight4">
+                                        <div class="tabbable tabbable-bordered tabs-top">
+                                            <h5 class="simple-header f16">TABS RIGHT 4 - TABS IN TABS</h5>
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a href="#TabTopIn1" data-toggle="tab">Section 1</a></li>
+                                                <li><a href="#TabTopIn2" data-toggle="tab">Section 2</a></li>
+                                                <li><a href="#TabTopIn3" data-toggle="tab">Section 3</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="TabTopIn1">
+                                                    <h5>TABS TOP 1</h5>
+                                                    <p>Lorem ipsum dolor sit amet consectetuer tellus justo sed fermentum ut. 
+                                                        Ridiculus leo vitae cursus Pellentesque lacus rutrum odio Nam amet pede. 
+                                                        Tempus elit sodales ligula pretium dis sapien Aenean Nullam platea ac. 
+                                                        Nunc odio id tortor mollis In platea semper metus id amet. Arcu accumsan massa 
+                                                        Morbi mauris Ut tortor consectetuer adipiscing interdum tortor. 
+                                                        Hendrerit faucibus venenatis sagittis Curabitur orci pellentesque metus sit ridiculus interdum. Orci.</p>
+                                                    <p>In orci fringilla Nulla ac et ligula libero faucibus massa interdum. Malesuada vel et Nulla 
+                                                        Quisque habitasse augue est pellentesque id justo. Leo laoreet ullamcorper ante vel dui 
+                                                        eget Phasellus amet magna justo. Nulla pretium eros Pellentesque semper eget dolor 
+                                                        Vestibulum pellentesque Nam sem. Neque consectetuer vel wisi cursus enim quis tristique 
+                                                        urna orci justo. Consequat neque sodales Phasellus sit malesuada arcu tempus orci 
+                                                        venenatis ornare. Morbi elit.</p>
+                                                </div>
+                                                <!-- // tab in 1 -->
+                                                
+                                                <div class="tab-pane" id="TabTopIn2">
+                                                    <table class="table">
+                                                        <caption>
+                                                        Default Table in Tabs <small>Here text in small</small>
+                                                        </caption>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">ID</th>
+                                                                <th scope="col">Name</th>
+                                                                <th scope="col" class="hidden-phone">City</th>
+                                                                <th scope="col" class="hidden-tablet hidden-phone">Email</th>
+                                                                <th scope="col">Date of birth</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>Colin Nixon</td>
+                                                                <td class="hidden-phone">Long Beach</td>
+                                                                <td class="hidden-tablet hidden-phone">semper@diamSeddiam.edu</td>
+                                                                <td>02/10/1986</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>Naida Bennett</td>
+                                                                <td class="hidden-phone">Lockport</td>
+                                                                <td class="hidden-tablet hidden-phone">commodo@conseque.ca</td>
+                                                                <td>04/21/1959</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>Danielle Myers</td>
+                                                                <td class="hidden-phone">Bentonville</td>
+                                                                <td class="hidden-tablet hidden-phone">nunc.sed@liberoInteger.ca</td>
+                                                                <td>12/11/1971</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>Whitney Jones</td>
+                                                                <td class="hidden-phone">Troy</td>
+                                                                <td class="hidden-tablet hidden-phone">Nunc@sedliberoProin.edu</td>
+                                                                <td>08/09/1976</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5</td>
+                                                                <td>Marvin Bell</td>
+                                                                <td class="hidden-phone">Cody</td>
+                                                                <td class="hidden-tablet hidden-phone">aliquet@Craspellentesque.com</td>
+                                                                <td>10/17/1979</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- // tab in 2 -->
+                                                
+                                                <div class="tab-pane" id="TabTopIn3">
+                                                    <h5>TABS TOP 3</h5>
+                                                    <p>Lorem ipsum dolor sit amet consectetuer tellus justo sed fermentum ut. 
+                                                        Ridiculus leo vitae cursus Pellentesque lacus rutrum odio Nam amet pede.</p>
+                                                    <p><a class="btn btn-grey" href="javascript:void(0);">View details &raquo;</a></p>
+                                                </div>
+                                                <!-- // tab in 3 --> 
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- // tabable in --> 
+                                        
+                                    </div>
+                                    <!-- // tab 4 tab in --> 
+                                </div>
+                            </div>
+                            <!-- // Tabs RIGHT - Base --> 
+                            
+                        </div>
+                    </div>
+                    <!-- // Example row --> 
+                </div>
+                <!-- // Tab 1 -->
+                
+                <div class="tab-pane" id="TabPage2">
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-box">
+                            <div class="tabbable tabs-top">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#TabBoxTop1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabBoxTop2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabBoxTop3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabBoxTop1">
+                                        <h5 class="simple-header f16">Tabs TOP 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-grey" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxTop2">
+                                        <h5 class="simple-header f16">Tabs TOP 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxTop3">
+                                        <h5 class="simple-header f16">Tabs TOP 3</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-blue" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                            </div>
+                            <!-- // Tabs TOP in BOX --> 
+                        </div>
+                        <!-- // widget -->
+                        
+                        <div class="span6 widget widget-box">
+                            <div class="tabbable tabs-top bg-blue">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#TabBoxColorTop1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabBoxColorTop2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabBoxColorTop3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabBoxColorTop1">
+                                        <h5 class="simple-header f16">Tabs TOP 1 - Coloring</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-grey" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxColorTop2">
+                                        <h5 class="simple-header f16">Tabs TOP 2 - Coloring</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxColorTop3">
+                                        <h5 class="simple-header f16">Tabs TOP 3 - Coloring</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-blue" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                            </div>
+                            <!-- // Tabs TOP in BOX Coloring BLUE --> 
+                        </div>
+                        <!-- // widget --> 
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-box">
+                            <div class="tabbable tabs-below">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabBoxBottom1">
+                                        <h5 class="simple-header f16">Tabs BOTTOM 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 1 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxBottom2">
+                                        <h5 class="simple-header f16">Tabs BOTTOM 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 2 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxBottom3">
+                                        <h5 class="simple-header f16">Tabs BOTTOM 3</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 3 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                                <ul class="nav nav-tabs" style="margin-bottom:0px">
+                                    <li class="active"><a href="#TabBoxBottom1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabBoxBottom2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabBoxBottom3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                            </div>
+                            <!-- // Tabs BOTTOM in BOX --> 
+                        </div>
+                        <!-- // widget -->
+                        
+                        <div class="span6 widget widget-box">
+                            <div class="tabbable tabs-below bg-green">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabBoxColorBottom1">
+                                        <h5 class="simple-header f16">Tabs BOTTOM 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 1 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxColorBottom2">
+                                        <h5 class="simple-header f16">Tabs BOTTOM 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 2 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxColorBottom3">
+                                        <h5 class="simple-header f16">Tabs BOTTOM 3</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 3 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                                <ul class="nav nav-tabs" style="margin-bottom:0px">
+                                    <li class="active"><a href="#TabBoxColorBottom1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabBoxColorBottom2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabBoxColorBottom3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                            </div>
+                            <!-- // Tabs BOTTOM in BOX Coloring GREEN --> 
+                        </div>
+                        <!-- // widget --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-box">
+                            <div class="tabbable tabs-right">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#TabBoxRight1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabBoxRight2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabBoxRight3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabBoxRight1">
+                                        <h5 class="simple-header f16">Tabs RIGHT 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 1 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxRight2">
+                                        <h5 class="simple-header f16">Tabs RIGHT 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 2 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxRight3">
+                                        <h5 class="simple-header f16">Tabs RIGHT 3</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 3 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                            </div>
+                            <!-- // Tabs RIGHT in BOX --> 
+                        </div>
+                        <!-- // widget -->
+                        
+                        <div class="span6 widget widget-box">
+                            <div class="tabbable tabs-right bg-yellow">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#TabBoxColorRight1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabBoxColorRight2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabBoxColorRight3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabBoxColorRight1">
+                                        <h5 class="simple-header f16">Tabs RIGHT 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 1 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxColorRight2">
+                                        <h5 class="simple-header f16">Tabs RIGHT 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 2 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxColorRight3">
+                                        <h5 class="simple-header f16">Tabs RIGHT 3</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 3 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                            </div>
+                            <!-- // Tabs RIGHT in BOX Coloring YELLOW --> 
+                        </div>
+                        <!-- // widget --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-box">
+                            <div class="tabbable tabs-left">
+                                <ul class="nav nav-tabs" style="margin-right:0px">
+                                    <li class="active"><a href="#TabBoxLeft1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabBoxLeft2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabBoxLeft3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabBoxLeft1">
+                                        <h5 class="simple-header f16">Tabs LEFT 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 1 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxLeft2">
+                                        <h5 class="simple-header f16">Tabs LEFT 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 2 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxLeft3">
+                                        <h5 class="simple-header f16">Tabs LEFT 3</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,</p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 3 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                            </div>
+                            <!-- // Tabs LEFT in BOX --> 
+                        </div>
+                        <!-- // widget -->
+                        
+                        <div class="span6 widget widget-box">
+                            <div class="tabbable tabs-left bg-grey">
+                                <ul class="nav nav-tabs" style="margin-right:0px">
+                                    <li class="active"><a href="#TabBoxColorLeft1" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#TabBoxColorLeft2" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#TabBoxColorLeft3" data-toggle="tab">Section 3</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="TabBoxColorLeft1">
+                                        <h5 class="simple-header f16">Tabs LEFT 1</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 1 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxColorLeft2">
+                                        <h5 class="simple-header f16">Tabs LEFT 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 2 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="tab-pane" id="TabBoxColorLeft3">
+                                        <h5 class="simple-header f16">Tabs LEFT 3</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,</p>
+                                        <p><a class="btn" href="javascript:void(0);">View details 3 &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                            </div>
+                            <!-- // Tabs LEFT in BOX Coloring GREY --> 
+                        </div>
+                        <!-- // widget --> 
+                        
+                    </div>
+                    <!-- // Example row --> 
+                </div>
+                <!-- // Tab 2 -->
+                
+                <div class="tab-pane" id="TabPage3">
+                    <div class="row-fluid">
+                        <div class="span12 widget widget-box">
+                            <div class="widget-title">
+                                <h6>Boo Box - <small>title to box</small></h6>
+                            </div>
+                            <div class="tabbable tabs-top">
+                                <ul class="nav nav-tabs">
+                                    <li class="pull-right">
+                                        <ul class="btn-toolbar margin-side">
+                                            <li><a class="btn btn-glyph btn-small"><i class="fugue-table"></i></a></li>
+                                            <li><a class="btn btn-glyph btn-small"><i class="fugue-table-pencil"></i></a></li>
+                                            <li><a class="btn btn-glyph btn-small"><i class="fugue-table-plus"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="active"><a href="#tab5" data-toggle="tab">Section 1</a></li>
+                                    <li><a href="#tab6" data-toggle="tab">Section 2</a></li>
+                                    <li><a href="#tab7" data-toggle="tab">Section 3</a></li>
+                                    <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Dropdown <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another action</a></li>
+                                            <li><a href="javascript:void(0);">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="javascript:void(0);">Separated link</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="content-inner tab-pane active" id="tab5">
+                                        <h5 class="simple-header f16">Simple Header</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 1 -->
+                                    
+                                    <div class="content-inner tab-pane" id="tab6">
+                                        <h5 class="simple-header f16">Heading 2</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 2 -->
+                                    
+                                    <div class="content-inner tab-pane" id="tab7">
+                                        <h5 class="simple-header f16">Heading 3</h5>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                    </div>
+                                    <!-- // tab 3 --> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // widget --> 
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="widget widget-box">
+                                <div class="widget-header">
+                                    <h4 class="f18">Tabs in Box</h4>
+                                </div>
+                                <div class="tabbable tabs-below">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tabb1">
+                                            <h5 class="simple-header f16">Heading 1</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. </p>
+                                            <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 -->
+                                        
+                                        <div class="tab-pane" id="tabb2">
+                                            <h5 class="simple-header f16">Heading 2</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.</p>
+                                            <p><a class="btn btn-yellow" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 2 -->
+                                        
+                                        <div class="tab-pane" id="tabb3">
+                                            <h5 class="simple-header f16">Heading 3</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. </p>
+                                            <p><a class="btn btn-blue" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 3 --> 
+                                        
+                                    </div>
+                                    <ul class="nav nav-tabs" style="margin-bottom:0px">
+                                        <li class="active"><a href="#tabb1" data-toggle="tab">Section 1</a></li>
+                                        <li><a href="#tabb2" data-toggle="tab">Section 2</a></li>
+                                        <li><a href="#tabb3" data-toggle="tab">Section 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // Tabs BOTTOM in BOX and Header --> 
+                        </div>
+                        <div class="span4">
+                            <div class="widget widget-box">
+                                <div class="widget-header">
+                                    <h4 class="f18">h4 f18</h4>
+                                </div>
+                                <div class="widget-title">
+                                    <h6>Boo widget-box - <span>title to widget</span></h6>
+                                </div>
+                                <div class="tabbable tabs-left">
+                                    <ul class="nav nav-tabs" style="margin-right:0px">
+                                        <li class="active"><a href="#tabl1" data-toggle="tab">Section 1</a></li>
+                                        <li><a href="#tabl2" data-toggle="tab">Section 2</a></li>
+                                        <li><a href="#tabl3" data-toggle="tab">Section 3</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tabl1">
+                                            <h5 class="simple-header f16">Heading 1</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. </p>
+                                            <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 -->
+                                        
+                                        <div class="tab-pane" id="tabl2">
+                                            <h5 class="simple-header f16">Heading 2</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-yellow" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 2 -->
+                                        
+                                        <div class="tab-pane" id="tabl3">
+                                            <h5 class="simple-header f16">Heading 3</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-blue" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 3 --> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Tabs LEFT in BOX and Header --> 
+                        </div>
+                        <div class="span4">
+                            <div class="widget widget-box">
+                                <div class="widget-header">
+                                    <h4 class="f18">h4 f18</h4>
+                                </div>
+                                <div class="tabbable tabs-right">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tabr1" data-toggle="tab">Section 1</a></li>
+                                        <li><a href="#tabr2" data-toggle="tab">Section 2</a></li>
+                                        <li><a href="#tabr3" data-toggle="tab">Section 3</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tabr1">
+                                            <h5 class="simple-header f16">Heading 1</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 -->
+                                        
+                                        <div class="tab-pane" id="tabr2">
+                                            <h5 class="simple-header f16">Heading 2</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-yellow" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 -->
+                                        
+                                        <div class="tab-pane" id="tabr3">
+                                            <h5 class="simple-header f16">Heading 3</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-blue" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 --> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Tabs RIGHT in BOX and Header --> 
+                        </div>
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="well well-nice">
+                                <div class="tabbable tabbable-bordered tabs-below">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tabw1">
+                                            <h5 class="simple-header f16">Heading 1</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. </p>
+                                            <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 -->
+                                        
+                                        <div class="tab-pane" id="tabw2">
+                                            <h5 class="simple-header f16">Heading 2</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.</p>
+                                            <p><a class="btn btn-yellow" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 2 -->
+                                        
+                                        <div class="tab-pane" id="tabw3">
+                                            <h5 class="simple-header f16">Heading 3</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. </p>
+                                            <p><a class="btn btn-blue" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 3 --> 
+                                        
+                                    </div>
+                                    <ul class="nav nav-tabs" style="margin-bottom:0px">
+                                        <li class="active"><a href="#tabw1" data-toggle="tab">Section 1</a></li>
+                                        <li><a href="#tabw2" data-toggle="tab">Section 2</a></li>
+                                        <li><a href="#tabw3" data-toggle="tab">Section 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // Tabs BOTTOM in BOX and Header --> 
+                        </div>
+                        <div class="span4">
+                            <div class="well well-nice">
+                                <div class="tabbable tabbable-bordered tabs-left">
+                                    <ul class="nav nav-tabs" style="margin-right:0px">
+                                        <li class="active"><a href="#tabw4" data-toggle="tab">Section 1</a></li>
+                                        <li><a href="#tabw5" data-toggle="tab">Section 2</a></li>
+                                        <li><a href="#tabw6" data-toggle="tab">Section 3</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tabw4">
+                                            <h5 class="simple-header f16">Heading 1</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. </p>
+                                            <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 -->
+                                        
+                                        <div class="tab-pane" id="tabw5">
+                                            <h5 class="simple-header f16">Heading 2</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-yellow" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 2 -->
+                                        
+                                        <div class="tab-pane" id="tabw6">
+                                            <h5 class="simple-header f16">Heading 3</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-blue" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 3 --> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Tabs LEFT in BOX and Header --> 
+                        </div>
+                        <div class="span4">
+                            <div class="well well-nice">
+                                <div class="tabbable tabbable-bordered tabs-right">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tabw7" data-toggle="tab">Section 1</a></li>
+                                        <li><a href="#tabw8" data-toggle="tab">Section 2</a></li>
+                                        <li><a href="#tabw9" data-toggle="tab">Section 3</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tabw7">
+                                            <h5 class="simple-header f16">Heading 1</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-green" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 -->
+                                        
+                                        <div class="tab-pane" id="tabw8">
+                                            <h5 class="simple-header f16">Heading 2</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-yellow" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 -->
+                                        
+                                        <div class="tab-pane" id="tabw9">
+                                            <h5 class="simple-header f16">Heading 3</h5>
+                                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                            <p><a class="btn btn-blue" href="javascript:void(0);">View details &raquo;</a></p>
+                                        </div>
+                                        <!-- // tab 1 --> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Tabs RIGHT in BOX and Header --> 
+                        </div>
+                    </div>
+                    <!-- // Example row --> 
+                    
+                </div>
+                <!-- // Tab 3 --> 
+                
+            </div>
+            <!-- // page content --> 
+            
+        </div>
+        <!-- // main-content --> 
+        
+    </div>
+    <!-- // main-container  -->
+    
+    <footer id="footer-fix">
+        <div id="footer-sidebar" class="footer-sidebar">
+            <div class="navbar">
+                <div class="btn-toolbar"> <a class="btn btn-glyph btn-link" href="javascript:void(0);"><i class="fontello-icon-up-open-1"></i></a> </div>
+            </div>
+        </div>
+        <!-- // footer sidebar -->
+        
+        <div id="footer-content" class="footer-content">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <ul class="nav pull-left">
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnToggleSidebar" class="btn-glyph fontello-icon-resize-full-2 tip hidden-phone" href="javascript:void(0);" title="show hide sidebar"></a></li>
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnChangeSidebar" class="btn-glyph fontello-icon-login tip hidden-phone" href="javascript:void(0);" title="change sidebar position"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnChangeSidebarColor" class="btn-glyph fontello-icon-palette tip" href="javascript:void(0);" title="change sidebar color"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cw" href="javascript:void(0);"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="fontello-icon-home-3" href="dashboard-one.html"></a></li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-help-2 tip" href="javascript:void(0);" title="help to page"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cog-4 tip" href="javascript:void(0);" title="settings app"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnLogout" class="btn-glyph fontello-icon-logout-1 tip" href="javascript:void(0);" title="logout"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnScrollup" class="scrollup btn-glyph fontello-icon-up-open-1" href="javascript:void(0);"><span class="hidden-phone">Scroll</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // footer content --> 
+        
+    </footer>
+    <!-- // footer-fix  --> 
+    
+</div>
+<!-- // page-container  --> 
+
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/lib/jquery.js"></script> 
+<script src="assets/js/lib/jquery-ui.js"></script>
+<script src="assets/js/lib/jquery.cookie.js"></script> 
+<script src="assets/js/lib/jquery.date.js"></script> 
+<script src="assets/js/lib/jquery.mousewheel.js"></script> 
+<script src="assets/js/lib/jquery.load-image.min.js"></script>
+<script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+
+<!-- Plugins Bootstrap -->
+<script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+<script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script> 
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+<script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+<script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+<script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+<script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+<script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+<script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+ 
+
+<!-- Plugins Custom - Only example --> 
+<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>
+
+<!-- Plugins Custom - System --> 
+<script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+<script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+<!-- Plugins Custom - System info -->
+<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+<!-- Plugins Custom - Content -->
+<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+<!-- Plugins Custom - Component -->
+<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+<!-- Plugins Custom - Form -->
+<script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+<!-- Plugins Custom - Gallery --> 
+<script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+<script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+ 
+<!-- Plugins Tables --> 
+<script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+<!-- Plugins data visualization --> 
+<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+<script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/core.js"></script> 
+<script src="assets/js/application.js"></script>  
+
+<!-- Only This Demo Page --> 
+</body>
+</html>

@@ -1,0 +1,292 @@
+@import "../../config/colors";
+
+.ks-crm-contact-user-column {
+  .ks-crm-contact-user-column-main-info {
+    border-bottom: 1px solid $ks-default-border-color;
+    padding: 30px;
+
+    > section {
+      &:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .ks-crm-contact-user-name,
+    .ks-crm-contact-user-location,
+    .ks-crm-contact-user-rating {
+      text-align: center;
+    }
+
+    .ks-crm-contact-user-name {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .ks-crm-contact-user-location {
+      font-size: 12px;
+      margin-top: 2px;
+      color: $ks-default-text-color-light;
+    }
+
+    .ks-crm-contact-user-rating {
+      margin-top: 5px;
+
+       .ks-star {
+         font-size: 18px;
+         color: #debb0c;
+         display: inline-block;
+
+         + .ks-star {
+           margin-left: 5px;
+         }
+       }
+    }
+
+    .ks-crm-contact-user-controls {
+      > .ks-control {
+        margin-right: 0;
+      }
+    }
+
+    .ks-crm-contact-user-avatar {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .ks-crm-contact-user-send-message {
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(33, 166, 240, 0.1);
+      text-align: center;
+      padding: 7px 5px;
+
+      > .ks-icon {
+        font-size: 22px;
+        color: #22a7f0;
+      }
+    }
+
+    .ks-crm-contact-user-controls {
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(0, 0, 0, 0.05);
+      text-align: center;
+
+      .ks-control {
+        position: relative;
+        top: -1px;
+
+        .btn {
+          .ks-icon {
+            font-size: 22px;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+  .ks-crm-contact-user-column-custom-info {
+    padding: 20px 30px;
+
+    + .ks-crm-contact-user-column-custom-info {
+      border-top: 1px solid $ks-default-border-color;
+    }
+
+    .ks-custom-info-header {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .ks-custom-info-item {
+      + .ks-custom-info-item {
+        margin-top: 15px;
+      }
+
+      &.ks-user {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .ks-custom-info-item-name {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: $ks-default-text-color-light;
+    }
+
+    .ks-custom-info-item-content {
+      font-size: 12px;
+    }
+
+    .ks-custom-info-item-user-avatar {
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.ks-crm-contact-user-tabs-column {
+  background: #fff;
+
+  .ks-nav-tabs {
+    background-color: rgba(0, 0, 0, 0.03);
+
+    .nav-link {
+      font-size: 12px;
+    }
+  }
+}
+
+.ks-crm-user-view-activity-block {
+  padding: 30px;
+
+  .ks-crm-user-view-activity-header {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+
+  .ks-crm-user-view-activity-items {
+    + .ks-crm-user-view-activity-header {
+      margin-top: 30px;
+    }
+  }
+
+  .ks-crm-user-view-activity-item {
+    display: flex;
+    font-size: 12px;
+    position: relative;
+
+    + .ks-crm-user-view-activity-item {
+      margin-top: 20px;
+    }
+
+    &:before {
+      content: '';
+      width: 1px;
+      background: $ks-default-border-color;
+      z-index: 0;
+      position: absolute;
+      bottom: -25px;
+      left: 6px;
+      top: 11px;
+    }
+
+    .ks-crm-user-view-activity-item-badge {
+      margin-right: 17px;
+      background: #fff;
+
+      .badge {
+        position: relative;
+        top: -3px;
+      }
+    }
+
+    .ks-crm-user-view-activity-item-date {
+      margin-right: 22px;
+      position: relative;
+      top: -3px;
+    }
+
+    &:last-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .ks-crm-user-view-activity-item-action-name {
+    margin-bottom: 2px;
+    font-size: 13px;
+    position: relative;
+    top: -3px;
+
+    > .ks-icon {
+      display: inline-block;
+      font-size: 16px;
+      margin-right: 4px;
+      color: $ks-default-text-color-light;
+    }
+
+    > .ks-text {
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  .ks-crm-user-view-activity-item-action-description {
+    margin-bottom: 5px;
+  }
+
+  .ks-crm-user-view-activity-item-action-time {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: $ks-default-text-color-light;
+  }
+}
+
+.ks-crm-contact-widget {
+  background: #fff;
+  min-height: 155px;
+
+  .ks-crm-contact-widget-item-name  {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    > .ks-icon {
+      margin-right: 10px;
+      font-size: 28px;
+    }
+  }
+
+  .ks-crm-contact-widget-item-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ks-crm-contact-widget-item-info-item-name {
+    font-size: 14px;
+  }
+  
+  .ks-crm-contact-widget-item-info-item-description {
+    font-size: 12px;
+    color: $ks-default-text-color-light;
+  }
+
+  .ks-crm-contact-widget-item-action  {
+    > .ks-icon {
+      font-size: 26px;
+    }
+  }
+}
+
+.ks-crm-contact-add-widget {
+  background: #fff;
+  min-height: 155px;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: $ks-default-text-color-light;
+  display: flex;
+
+  .ks-icon {
+    font-size: 28px;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+  }
+}
+
+

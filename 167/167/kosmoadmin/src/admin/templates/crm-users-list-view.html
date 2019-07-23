@@ -1,0 +1,375 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/bootstrap-table/bootstrap-table.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/bootstrap-table/bootstrap-table.min.css"> <!-- Customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/crm/users-list.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>CRM / Users List View</h3>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-content-nav ks-user-list-view">
+                <div class="ks-nav ks-browse">
+                    <div class="ks-separator">Browse</div>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span>
+                                    Clients
+                                </span>
+                                <span class="ks-badge badge badge-pill badge-pink ks-badge-sm">15</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Employees</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Designers</a>
+                        </li>
+                    </ul>
+                    <div class="ks-separator">Source</div>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <div class="custom-control custom-checkbox">
+                                    <input id="c1" type="checkbox" class="custom-control-input">
+                                    <label class="custom-control-label" for="c1">Linkedin</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <div class="custom-control custom-checkbox">
+                                    <input id="c2" type="checkbox" class="custom-control-input">
+                                    <label class="custom-control-label" for="c2">Dribble</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <div class="custom-control custom-checkbox">
+                                    <input id="c3" type="checkbox" class="custom-control-input">
+                                    <label class="custom-control-label" for="c3">Github</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <div class="custom-control custom-checkbox">
+                                    <input id="c4" type="checkbox" class="custom-control-input">
+                                    <label class="custom-control-label" for="c4">Referred</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="ks-separator">Statuses</div>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <div class="custom-control custom-checkbox">
+                                    <input id="c5" type="checkbox" class="custom-control-input">
+                                    <label class="custom-control-label" for="c5">Fresh</label>
+                                </div>
+                                <span class="badge ks-circle badge-success"></span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <div class="custom-control custom-checkbox">
+                                    <input id="c6" type="checkbox" class="custom-control-input" checked>
+                                    <label class="custom-control-label" for="c6">Attempting to contact</label>
+                                </div>
+                                <span class="badge ks-circle badge-danger"></span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <div class="custom-control custom-checkbox">
+                                    <input id="c7" type="checkbox" class="custom-control-input">
+                                    <label class="custom-control-label" for="c7">In discussion</label>
+                                </div>
+                                <span class="badge ks-circle badge-warning"></span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <div class="custom-control custom-checkbox">
+                                    <input id="c8" type="checkbox" class="custom-control-input">
+                                    <label class="custom-control-label" for="c8">Future opportunity</label>
+                                </div>
+                                <span class="badge ks-circle badge-info"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ks-nav-body">
+                    <div class="ks-user-list-view-header-block">
+                        <h4 class="ks-user-list-view-header-block-name">
+                            Designers
+
+                            <span class="ks-user-list-view-header-block-amount">
+                                <span class="ks-icon la la-users"></span>
+                                <span>5 candidates</span>
+                            </span>
+                        </h4>
+
+                        <div class="ks-user-list-view-header-control">
+                            <div class="btn btn-success">Add Member</div>
+                        </div>
+                    </div>
+
+                    <div class="ks-user-list-view-table">
+                        <div class="ks-full-table">
+                            <table id="ks-datatable" class="table ks-table-info dt-responsive nowrap" width="100%" data-pagination="true">
+                                <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Status</th>
+                                    <th>Imported from</th>
+                                    <th>Imported By</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-1.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-2.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-3.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-4.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-6.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-info-outline">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-11.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-12.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-primary">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-1.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-1.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-1.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-1.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-1.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/avatars/avatar-1.jpg" class="ks-avatar" alt="" width="36" height="36">
+                                            Scarlett Johansson
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">In discussion</span>
+                                        </td>
+                                        <td>
+                                            <span class="la la-github ks-icon"></span>
+                                            Github
+                                        </td>
+                                        <td>
+                                            Scarlett Johansson
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/bootstrap-table/bootstrap-table.min.js"></script>
+<script type="application/javascript">
+    (function ($) {
+        $(document).ready(function() {
+            $('#ks-datatable').bootstrapTable({
+                icons: {
+                    refresh: 'la la-refresh icon-refresh',
+                    toggle: 'la la-list-alt icon-list-alt',
+                    columns: 'la la-th icon-th',
+                    share: 'la la-download icon-share'
+                }
+            });
+        });
+    })(jQuery);
+</script>
+@@include('./_partials/footer.html')

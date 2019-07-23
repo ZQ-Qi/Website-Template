@@ -1,0 +1,80 @@
+/*           badges             */
+.badge{
+    @extend .m-l-5;
+    @extend .m-r-5;
+    font-weight: $font-weight-400;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    border: 1px solid;    
+
+    &.badge-icon{
+        padding: 0.4em 0.55em;
+        i{
+        font-size: 0.8em;
+        }
+    }
+    &.badge-default{
+        background: transparent;
+        border-color: $color-muted;
+        color: $color-muted;
+        
+        &.fill{
+            background: $color-muted;
+            color: $col-white;
+        }
+    }
+    &.badge-primary{
+        background: transparent;
+        border-color: $color-primary;
+        color: $color-primary;
+
+        &.fill{
+            background: $color-primary;
+            color: $col-white;
+        }
+    }
+    &.badge-info{
+        background: transparent;
+        border-color: $color-info;
+        color: $color-info;
+
+        &.fill{
+            background: $color-info;
+            color: $col-white;
+        }
+    }
+    &.badge-success{
+        background: transparent;
+        border-color: $color-success;
+        color: $color-success;
+
+        &.fill{
+            background: $color-success;
+            color: $col-white;
+        }
+    }
+    &.badge-warning{
+        background: transparent;
+        border-color: $color-warning;
+        color: $color-warning;
+
+        &.fill{
+            background: $color-warning;
+            color: $col-white;
+        }
+    }
+    &.badge-danger{
+        background: transparent;
+        border-color: $color-danger;
+        color: $color-danger;
+
+        &.fill{
+            background: $color-danger;
+            color: $col-white;
+        }
+    }
+
+    &.round{
+        @include border-radius (30px);
+    }
+}

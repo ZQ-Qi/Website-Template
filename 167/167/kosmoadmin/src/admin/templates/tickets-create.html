@@ -1,0 +1,114 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/select2/css/select2.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/select2/select2.min.css"> <!-- Customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/tickets.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Tickets</h3>
+                <button class="btn btn-outline-primary ks-light ks-tickets-navigation-block-toggle" data-block-toggle=".ks-tickets-page > .ks-navigation">Menu</button>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-tickets-page" data-ticket-manage>
+                @@include('./_partials/apps/tickets/navigation.html')
+                @@include('./_partials/apps/tickets/tickets.html')
+
+                <div class="ks-view ks-manage">
+                    <div class="ks-header">
+                        <span>New Ticket</span>
+                        <button class="btn btn-outline-primary ks-light ks-view-cancel">Cancel</button>
+                    </div>
+                    <div class="ks-body ks-scrollable" data-auto-height>
+                        <form>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                                <small class="text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-4">
+                                   <div class="form-group">
+                                       <label for="contact-email">Contact Email</label>
+                                       <input type="email" class="form-control" id="contact-email" placeholder="Enter Email">
+                                   </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label for="contact-email">Assigned to</label>
+                                        <select class="selectpicker form-control images">
+                                            <option data-id="1">Victoria Stone</option>
+                                            <option data-id="2">Jacob Robertson</option>
+                                            <option data-id="3">Jane Brown</option>
+                                            <option data-id="4">Jeremy Lynch</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label for="contact-email">Type</label>
+                                        <select class="selectpicker form-control">
+                                            <option>Support Request</option>
+                                            <option>Ketchup</option>
+                                            <option>Relish</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label for="contact-email">Priority</label>
+                                        <select class="selectpicker form-control">
+                                            <option>Low</option>
+                                            <option>Urgent</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8">
+                                    <div class="form-group">
+                                        <label for="tags">Tags</label>
+                                        <input type="text" class="form-control" id="tags" placeholder="Tags">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="ks-editor">
+                                    <textarea class="form-control" placeholder="Message"></textarea>
+                                    <div class="ks-actions">
+                                        <button type="button" class="btn btn-secondary">Save as Draft</button>
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                        <button type="button" class="btn btn-outline-primary ks-light ks-no-text">
+                                            <span class="la la-paperclip ks-icon"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/select2/js/select2.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('select').select2({
+            minimumResultsForSearch: Infinity
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/apps/tickets/scripts.html')
+@@include('./_partials/footer.html')

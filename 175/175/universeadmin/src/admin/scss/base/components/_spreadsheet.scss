@@ -1,0 +1,106 @@
+.spreadsheet {
+  font-size: 14px;
+  box-shadow: $box-shadow;
+  border-radius: 4px;
+  background: #fff;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  position: relative;
+
+  &__scrollpane {
+    @include mx-scrollpane();
+  }
+
+  .jexcel {
+    width: 100%;
+    border-right: 1px solid #d3d9dd;
+    border-bottom: 1px solid #d3d9dd;
+
+    > thead {
+      background-color: #f8f9fb;
+
+      > tr > td.selected {
+        background-color: #E8EBF1;
+      }
+    }
+
+    > thead > tr > td,
+    > tbody > tr > td
+    {
+      border-top: 1px solid #d3d9dd;
+      border-left: 1px solid #d3d9dd;
+      color: #939daa;
+      padding: 7px 4px;
+    }
+
+    > tbody > tr > td:first-child {
+      background-color: #f8f9fb;
+      color: #939daa;
+
+      &.selected {
+        background-color: #E8EBF1;
+      }
+    }
+
+    .highlight-left {
+      border-left: 1px solid #0094f2;
+    }
+
+    .highlight-right {
+      border-right:1px solid #0094f2;
+    }
+
+    .highlight-top {
+      border-top: 1px solid #0094f2;
+    }
+
+    .highlight-bottom {
+      border-bottom: 1px solid #0094f2;
+    }
+
+    .highlight {
+      background-color: rgba(#E4F4FE, .7);
+    }
+  }
+}
+
+.jexcel_contextmenu {
+  width: 220px;
+  padding-bottom: 4px;
+  box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+  border: 1px solid #e9ebee;
+  background-color: #ffffff;
+  color: #000;
+  font-size: 14px;
+  border-radius: $border-radius;
+
+  a {
+    padding: 6px 16px 6px 16px;
+    width: auto;
+    display: block;
+    height: 36px;
+    line-height: 25px;
+
+    span {
+      color: $color-gray;
+      margin-right: 0;
+    }
+
+    transition: none;
+
+    &:hover {
+      cursor: pointer;
+      color: #fff !important;
+      background: $color-lasur;
+
+      span {
+        color: #fff;
+      }
+    }
+  }
+
+  hr {
+    margin: 0;
+    padding: 0;
+  }
+}

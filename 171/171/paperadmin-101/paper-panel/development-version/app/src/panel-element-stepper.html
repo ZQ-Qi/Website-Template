@@ -1,0 +1,225 @@
+<!-- partial:partials/_header.html -->
+<!-- partial -->
+<div class="page has-sidebar-left bg-light height-full">
+    <header class="blue accent-3 relative nav-sticky">
+        <div class="container-fluid text-white">
+            <div class="row">
+                <div class="col">
+                    <h3 class="my-3">
+                        <i class="icon icon-date_range"></i>
+                        Stepper <span class="s-14"> <a class="btn btn-outline-primary btn-xs"
+                                                       href="http://techlaboratory.net/smartwizard/documentation"
+                                                       target="_blank"> View Plugin Docs</a> </span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid my-3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card my-3">
+                    <div class="card-header white"><h6>Circle With Theme</h6></div>
+                    <div class="card-body b-b bg-light">
+                        <div class="stepper sw-main sw-theme-circles" id="smartwizard"
+                             data-options='{
+                                     "useURLhash":true,
+                                     "theme":"sw-theme-circles",
+                                     "transitionEffect":"fade",
+                                     "toolbarSettings":{
+                                         "showNextButton":false,
+                                         "showPreviousButton":false
+                                         }
+                                     }'>
+                            <ul class="nav step-anchor">
+                                <li><a href="#step-1y">1</a></li>
+                                <li><a href="#step-2y">2</a></li>
+                                <li><a href="#step-3y">3</a></li>
+                                <li><a href="#step-4y">4</a></li>
+                            </ul>
+                            <div class="card no-b  shadow">
+                                <div id="step-1y" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 1
+                                    </h3>
+                                    <a href="#step-2y" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                                <div id="step-2y" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 2
+                                    </h3>
+                                    <a href="#step-3y" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                                <div id="step-3y" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 3
+                                    </h3>
+                                    <a href="#step-4y" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                                <div id="step-4y" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 4
+                                    </h3>
+                                    <a href="#step-1y" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header white"><h6>Square Steps</h6></div>
+                    <div class="card-body b-b bg-light">
+                        <div class="stepper sw-main sw-theme-circles"
+                             data-options='{
+                                     "useURLhash":true,
+                                     "theme":"sw-theme-circles",
+                                     "transitionEffect":"fade",
+                                     "toolbarSettings":{
+                                         "showNextButton":false,
+                                         "showPreviousButton":false
+                                         }
+                                     }'>
+                            <ul class="nav step-anchor">
+                                <li><a  class="circle" href="#step-1x">1</a></li>
+                                <li><a  class="circle"  href="#step-2x">2</a></li>
+                                <li><a  class="circle" href="#step-3x">3</a></li>
+                                <li><a  class="circle"  href="#step-4x">4</a></li>
+                            </ul>
+                            <div class="card no-b  shadow">
+                                <div id="step-1x" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 1
+                                    </h3>
+                                    <a href="#step-2x" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                                <div id="step-2x" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 2
+                                    </h3>
+                                    <a href="#step-3x" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                                <div id="step-3x" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 3
+                                    </h3>
+                                    <a href="#step-4x" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                                <div id="step-4x" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 4
+                                    </h3>
+                                    <a href="#step-1x" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my-3">
+                    <div class="card-header white"><h6>Default Stepper</h6></div>
+                    <div class="card-body b-b bg-light">
+                        <div class="stepper sw-main"
+                             data-options='{
+                                     "transitionEffect":"fade"
+
+                                     }'>
+                            <ul class="nav step-anchor">
+                                <li><a href="#step-11">Step 1<br><small>This is step description</small></a></li>
+                                <li><a href="#step-22">Step 2<br><small>This is step description</small></a></li>
+                                <li><a href="#step-33">Step 3<br><small>This is step description</small></a></li>
+                                <li><a href="#step-44">Step 4<br><small>This is step description</small></a></li>
+                            </ul>
+                            <div class="card no-b  shadow">
+                                <div id="step-11" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 1
+                                    </h3>
+                                    <a href="#step-22" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                                <div id="step-22" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 2
+                                    </h3>
+                                    <a href="#step-33" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                                <div id="step-33" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 3
+                                    </h3>
+                                    <a href="#step-44" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                                <div id="step-44" class="card-body text-center p-5">
+                                    <h3 class="my-3">
+                                        Step 4
+                                    </h3>
+                                    <a href="#step-11" class="btn btn-primary mb-3 btn-lg">Go To Next Step</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Documentation</h3>
+                <hr>
+                <p>You can pass plugin options using data-options attribute. Please make sure to use valid json
+                    code.</p>
+                <a href="http://techlaboratory.net/smartwizard/documentation" target="_blank"
+                   class="btn btn-xs btn-primary">Plugin Docs</a>
+                <a href="https://jsonformatter.org/" target="_blank" class="btn btn-outline-primary btn-xs">JSON
+                    Formatter</a>
+                <h4 class="mt-5">Code Example</h4>
+                <hr>
+                <pre><code>
+
+&lt;div class="stepper sw-main sw-theme-circles"
+&nbsp;&nbsp;&nbsp;data-options='{
+&nbsp;&nbsp;&nbsp;"useURLhash":true,
+&nbsp;&nbsp;&nbsp;"theme":"sw-theme-circles",
+&nbsp;&nbsp;&nbsp;"transitionEffect":"fade",
+&nbsp;&nbsp;&nbsp;"toolbarSettings":{
+&nbsp;&nbsp;&nbsp;"showNextButton":false,
+&nbsp;&nbsp;&nbsp;"showPreviousButton":false
+&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;}'&gt;
+&nbsp;&nbsp;&nbsp;&lt;ul class="nav step-anchor"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a  class="circle" href="#step-1"&gt;1&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a  class="circle"  href="#step-2"&gt;2&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a  class="circle" href="#step-3"&gt;3&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a  class="circle"  href="#step-4"&gt;4&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&lt;div class="card no-b  shadow"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="step-1" class="card-body text-center p-5"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="my-3"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Step 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#step-2" class="btn btn-primary mb-3 btn-lg"&gt;Go To Next Step&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="step-2" class="card-body text-center p-5"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="my-3"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Step 2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#step-3" class="btn btn-primary mb-3 btn-lg"&gt;Go To Next Step&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="step-3" class="card-body text-center p-5"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="my-3"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Step 3
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#step-4" class="btn btn-primary mb-3 btn-lg"&gt;Go To Next Step&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="step-4" class="card-body text-center p-5"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="my-3"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Step 4
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#step-1" class="btn btn-primary mb-3 btn-lg"&gt;Go To Next Step&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial:partials/_foot.html -->
+<!-- partial -->

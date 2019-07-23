@@ -1,0 +1,121 @@
+.profile-page {
+    .profile-header {
+        background: rgba(0, 0, 0, 0) url("../images/login-bg.jpg") repeat scroll center center / cover;
+        color: #fff;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        position: relative;
+        text-align: center;
+        .profile_info {
+            .profile-image {
+                img {
+                    border-radius: 50%;
+                }
+            }
+            .icon-color {
+                color: #fff;
+            }
+        }
+    }
+    .profile-sub-header {
+        min-height: 60px;
+        width: 100%;
+        .box-list {
+            ul {
+                display: inline-table;
+                padding: 0;
+                margin: 0;
+                table-layout: fixed;
+                width: 100%;
+                li {
+                    border-right: 1px solid #dedede;
+                    display: table-cell;
+                    list-style: outside none none;
+                    a {
+                        display: block;
+                        padding: 15px 0;
+                        &:hover {
+                            background:linear-gradient(45deg, #49cdd0, #45e5c3);
+                            text-decoration: none;
+                            p {
+                                color: #fff;
+                            }
+                        }
+                        i {
+                            font-size: 20px;
+                        }
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #mypost {
+        .post-box {
+            .post-img {
+                max-height:450px;
+                overflow: hidden;
+            }
+        }
+    }
+    #timeline {
+        .timeline {
+            border-left: 1px solid #dedede;
+            font-size: $font-size-base;
+            position: relative;
+            .border-info {
+                border-color: $brand-info;
+            }
+            .border-warning {
+                border-color: $brand-warning;
+            }
+            .border-danger {
+                border-color: $brand-danger;
+            }
+            .timeline-item {
+                margin-bottom: 20px;
+                padding-bottom: 1px;
+                position: relative;
+                &:after {
+                    background-color: #fff;
+                    border-color: inherit;
+                    border-radius: 50%;
+                    border-style: solid;
+                    border-width: 2px;
+                    content: "";
+                    height: 11px;
+                    left: 0;
+                    margin-left: -6px;
+                    position: absolute;
+                    width: 11px;
+                    bottom: auto;
+                    clear: both;
+                    top: 4px;
+                }
+                .item-content {
+                    margin-left: 24px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .profile-page {
+        .profile-sub-header {
+            .box-list {
+                li {
+                    a {
+                        padding: 20px 0 !important;
+                    }
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

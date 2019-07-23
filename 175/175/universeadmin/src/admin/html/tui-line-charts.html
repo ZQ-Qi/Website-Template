@@ -1,0 +1,46 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Tui Line Charts / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/tui-chart/tui-chart.min.css">
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh l-2column">
+  {% set tuiChartType = 'line' %}
+  {% include "./partials/tui-charts.html" %}
+  <div class="m-content m-content--reset">
+    <h2>Line Charts</h2>
+
+    <div class="row mt-4">
+      <div class="col-lg-12">
+        <div class="chart-widget tui-chart-widget">
+          <div id="tui-chart-widget-ex1" class="chart-widget__chart"></div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="chart-widget tui-chart-widget">
+          <div id="tui-chart-widget-ex2" class="chart-widget__chart"></div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="chart-widget tui-chart-widget">
+          <div id="tui-chart-widget-ex3-1" class="chart-widget__chart"></div>
+          <div id="tui-chart-widget-ex3-2" class="chart-widget__chart"></div>
+          <div id="tui-chart-widget-ex3-3" class="chart-widget__chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="vendor/raphael/raphael.min.js"></script>
+<script src="vendor/tui-chart/tui-code-snippet.js"></script>
+<script src="vendor/tui-chart/tui-chart.min.js"></script>
+{{ super() }}
+<script src="js/preview/tui-charts/tui-line-charts.min.js"></script>
+{% endblock %}

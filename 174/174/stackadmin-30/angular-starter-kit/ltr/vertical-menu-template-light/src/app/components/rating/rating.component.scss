@@ -1,0 +1,30 @@
+:host /deep/ ngb-rating span {
+    font-size: 1.5rem;
+}
+// For Star
+:host /deep/ .star {
+  font-size: 1.5rem;
+  color: #b0c4de;
+  // Filled Star
+  &.filled {
+    color: #FF8D60;
+  }
+  // Full Star
+  &.full {
+    color: #FF586B;
+  }
+  // Half Star
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: #FF586B;
+    font-size: 2rem;    
+  }
+}
+:host /deep/ .star {
+  position: relative;  
+  display: inline-block;
+  font-size: 2rem;
+  color: #d3d3d3;
+}

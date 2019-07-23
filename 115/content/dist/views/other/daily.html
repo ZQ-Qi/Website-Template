@@ -1,0 +1,72 @@
+
+<title>日志管理</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>日志管理</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid" id="LAY-daily-table">
+
+    <div class="layui-card">
+        <div class="demoTable lay-mb15">
+            搜索ID：
+            <div class="layui-inline">
+                <input class="layui-input" name="id" id="dailyReload" autocomplete="off">
+            </div>
+            <button class="layui-btn" data-type="reload">搜索</button>
+        </div>
+        <table class="layui-hide" id="LAY_table_daily" lay-filter="user"></table>
+
+    </div>
+</div>
+
+
+<script>
+    layui.use(['table'], function(){
+        var table = layui.table;
+
+        //方法级渲染
+        table.render({
+            elem: '#LAY_table_daily'
+            ,url: './content/json/other/daily.js'
+            ,cols: [[
+                {checkbox: true, fixed: true}
+                ,{field:'id', title: '工号', sort: true, fixed: true}
+                ,{field:'username', title: '用户名'}
+                ,{field:'department', title: '部门'}
+                ,{field:'operation', title: '操作'}
+                ,{field:'time', title: '时间'}
+                ,{field:'remark', title: '备注'}
+            ]]
+            ,id: 'testReload'
+            ,page: true
+            ,height: 315
+        });
+
+        var $ = layui.$, active = {
+            reload: function(){
+                var dailyReload = $('#dailyReload');
+                //执行重载
+                table.reload('testReload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        key: {
+                            id: dailyReload.val()
+                        }
+                    }
+                });
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+    });
+</script>

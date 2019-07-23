@@ -1,0 +1,52 @@
+.fl-form {
+  padding-top: 25px;
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .fl-has-focus  {
+    label.fl-label {
+      color: $color-lasur;
+    }
+
+    input.fl-input,
+    textarea.fl-textarea {
+      border-color: $color-lasur;
+    }
+  }
+
+  input.fl-input,
+  textarea.fl-textarea {
+    font-size: 14px;
+    padding: 6.50px 10px;
+    background: $color-white;
+    border: 1px solid $input-border-color;
+    border-radius: $border-radius;
+    color: #000;
+
+    &::placeholder {
+      color: #939daa;
+    }
+
+    &:focus {
+      border-color: $color-lasur;
+      color: #000;
+      box-shadow: none;
+      outline: none;
+    }
+
+    margin-bottom: 0;
+  }
+
+  label.fl-label {
+    color: $color-gray;
+    font-size: 14px;
+    top: -7px;
+    left: 8px;
+    background: #fff;
+    padding: 0 2px !important;
+    display: inline-flex;
+    width: auto;
+  }
+}

@@ -1,0 +1,264 @@
+// Weather Page SCSS ===========
+.weather2{
+    .city-selected{
+        position: relative;
+        overflow: hidden;        
+        border-radius: 3px 3px 0 0;
+        .city{
+            font-size: 24px;
+            span{
+                font-size: 13px;                
+                text-transform: lowercase;
+            }            
+        }
+        .night {
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+        .temp {
+            h2{
+                font-size: 73px;                
+                position: relative;                
+                @extend .margin-0;
+                @extend .displayblock;
+            }
+        }
+        .icon{
+            i{
+                font-size: 70px;
+            }
+        }
+    }
+    .table{
+        tbody{
+            tr{
+                td{
+                    padding:14px 20px;
+                }
+            }
+        }
+    }
+    .days-list{
+        @extend .margin-0;
+        .day{
+            @extend .align-center;
+            padding: 20px 10px;            
+            h5{
+                @extend .m-t-0;
+            }
+            i{
+                font-size: 30px;
+            }
+        }
+    }
+    .carousel .carousel-inner{
+        box-shadow: none;
+    }
+}
+.weather{
+    .city{
+        position: relative;
+        @extend .m-b-20;
+        @extend .m-t-0;
+        h3{
+            @extend .m-b-0;
+            @extend .m-t-0;            
+        }
+        i{
+            font-size: 40px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    .days{
+        li{
+            @extend .inlineblock;
+            width: 13.20%;
+            @extend .align-center;
+
+            img{
+                width:25px;
+                @extend .m-b-5;
+            }
+
+            h5{
+                font-size: 11px;
+            }
+
+            .degrees{
+                @extend .displayblock;
+            }
+        }
+    }
+}
+.weather3{
+    overflow: hidden;    
+
+    .top{
+        position: relative;
+        height: 430px;
+        width: 100%;
+        overflow: hidden;
+        background: url("../../../assets/images/image-gallery/2.jpg") no-repeat;
+        background-size: cover;
+        background-position: center center;
+        @extend .align-center;
+
+        &::after{
+            content: "";
+            height: 100%;
+            width: 100%;
+            @extend .displayblock;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .wrapper{
+            padding: 30px;
+            position: relative;
+            z-index: 1;
+            color: $col-white;
+
+            .mynav{
+                height: 20px;
+            }
+
+            .heading{
+                @extend .m-t-20;
+                font-size: 35px;
+                font-weight: $font-weight-400;                
+            }
+
+            .location{
+                @extend .m-t-20;
+                font-size: 21px;
+                font-weight: $font-weight-400;                
+            }
+
+            .temp{
+
+                .temp-value{
+                    @extend .inlineblock;
+                    font-size: 85px;
+                    font-weight: $font-weight-600;                    
+                }
+                .deg{
+                    @extend .inlineblock;
+                    @extend .m-t-10;
+                    font-size: 35px;
+                    font-weight: $font-weight-600;                    
+                    vertical-align: top;
+                }
+                .temp-type{
+                    font-size: 85px;
+                    color: $col-white;
+                }
+            }
+        }
+    }
+    .bottom{
+
+        padding:20px;
+        background: $col-white;
+
+        .forecast{
+            overflow: hidden;
+            @extend .margin-0;
+            @extend .padding-0;
+            @extend .p-t-20;
+            font-size: 0;
+            max-height: 155px;
+
+            li{
+                @extend .displayblock;                
+                font-size: 18px;                
+                color: $grey-400;
+                line-height: 2em;
+                
+                &.active{
+                    color: $grey-600;
+                }
+
+                .condition{
+                    float: right;
+                    line-height: 2em;
+                }
+            }
+        }
+    }
+}
+.weather4{
+    i{
+        font-size: 35px;
+        @extend .m-b-10;
+    }
+    p{
+        @extend .margin-0;
+    }
+}
+.weather5{
+    overflow: hidden;
+    .widget{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .weatherIcon{
+        flex: 1 100%;
+        height: 60%;;
+        background: $col-white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 80px;
+        padding: 20px 0;
+        i{
+            padding-top: 20px;
+        }
+    }
+    .weatherInfo{
+        flex: 0 0 70%;
+        height: 40%;
+        background: $col-dark;        
+        display: flex;
+        align-items: center;
+        color: $col-white;
+        .temperature{
+            flex: 0 0 40%;
+            width: 100%;
+            font-size: 65px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .description{
+            flex: 0 60%;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
+    }
+    .date{
+        flex: 0 0 30%;
+        height: 40%;
+        background: $color-primary;        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: $col-white;
+        font-size: 28px;
+        line-height: 97px;
+    }
+}
+.weather6{
+    text-align: center;
+    .temp{
+        font-size: 30px;
+    }
+    p{
+        @extend .m-b-0;
+    }
+}

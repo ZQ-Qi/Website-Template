@@ -1,0 +1,787 @@
+/*------------------------------------------------------------------
+[Color codes]
+
+Navbar background color: $ks-color-primary;
+Navbar link item border color: #2e427c;
+Navbar link item hover background color: #2e427c;
+Navbar dropdown link hover background color: #f5f7fa;
+Horizontal navbar background color: #f5f6fa;
+Text item text color: $ks-color-primary;
+Text item light text color: #8997c3;
+Box shadow color: #c4cbe1;
+Sidebar background color: #ebeef5;
+Sidebar icon color: #4c6ef5;
+-------------------------------------------------------------------*/
+
+@import "../config/colors";
+@import "../config/ui";
+
+$ks-hover-animation: background 0.3s ease, color 0.3s ease;
+$nav-link-hover-background-color: lighten(#f4f5f5, 1);
+$ks-color-primary: #818181;
+$ks-item-color: #666;
+$ks-item-color-light: rgba(38, 50, 56, 0.4);
+$ks-sidebar-background-color: #fff;
+$ks-navbar-horizontal-background-color: #fff;
+$ks-dropdown-menu-box-shadow-color: #d9d9d9;
+$ks-item-color-active-hover: $ks-color-info;
+$ks-nav-item-border-color: $ks-color-info;
+$ks-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+body {
+  > .ks-container, .ks-page-container {
+    .ks-page {
+      background: #f4f5f5;
+
+      > .ks-content {
+        > .ks-body {
+          &.ks-full-height {
+            flex-direction: column;
+            min-height: calc(100% - 120px);
+          }
+
+          &.ks-body-wrap {
+            .ks-body-wrap-container {
+              margin: 30px;
+              border-radius: $ks-default-border-radius;
+              background: #fff;
+              padding: 30px 15px;
+              border: 1px solid $ks-default-border-color;
+
+              .ks-full-table {
+                margin: -30px -15px 30px -15px;
+              }
+            }
+          }
+
+          > .ks-nav-body-wrapper {
+            display: flex;
+            margin: 30px;
+            flex-direction: column;
+          }
+
+          .ks-nav-body-wrapper {
+            padding: 0 15px;
+            background: #fff;
+            border: 1px solid $ks-default-border-color;
+            border-radius: $ks-default-border-radius;
+
+            > .container-fluid {
+              padding: 30px;
+              margin-left: -15px;
+              margin-right: -15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-navbar {
+  background: #fff;
+  border-bottom: 1px solid $ks-default-border-color;
+  box-shadow: none;
+
+  .navbar-brand {
+    background: #2962ff;
+
+    .nav-link {
+      color: #fff;
+
+      &:hover {
+        color: $ks-item-color;
+      }
+    }
+
+    .show {
+      .nav-link {
+        color: $ks-item-color;
+      }
+    }
+  }
+
+  .nav-item {
+    border-color: transparent;
+
+    /* Animation */
+    &:hover {
+      color: #343434;
+      transition: $ks-hover-animation;
+    }
+
+    &:hover, &.ks-active, &.show {
+      background: #f4f5f5;
+    }
+
+    &.show {
+      color: #343434;
+
+      > .nav-link {
+        color: #343434;
+      }
+    }
+
+    /* Styles for dropdowns */
+    &.show {
+      .dropdown-menu {
+        .dropdown-item {
+          &:hover {
+            color: #343434;
+            background: $nav-link-hover-background-color;
+            transition: $ks-hover-animation;
+          }
+        }
+
+        box-shadow: $ks-box-shadow;
+
+        .dropdown-item, .dropdown, .nav-link {
+          color: $ks-item-color;
+          border-bottom: 1px solid #e1e5f0;
+
+          &:hover {
+            color: #343434;
+          }
+
+          > .ks-icon {
+            color: $ks-color-primary;
+          }
+        }
+
+        .dropdown-item {
+          &:last-child {
+            > .nav-link {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+
+    &.ks-btn-action {
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+
+  .nav-link {
+    color: $ks-item-color;
+    height: 59px;
+
+    &:hover {
+      color: #343434;
+    }
+  }
+
+  .navbar-brand {
+    color: $ks-color-white;
+
+    .ks-logo {
+      color: $ks-color-white;
+      line-height: 60px;
+    }
+
+    .ks-sidebar-toggle,
+    .ks-sidebar-mobile-toggle {
+      color: $ks-color-white;
+    }
+  }
+
+  .ks-navbar-logo {
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  > .ks-wrapper {
+    > .nav {
+      > .ks-navbar-menu {
+        .ks-search-form {
+          .form-control {
+            background: #fff;
+            border: 1px solid $ks-default-border-color;
+            color: $ks-default-text-color;
+
+            &::placeholder {
+              color: $ks-default-text-color-light;
+            }
+
+            &:focus {
+              border-color: #888;
+            }
+          }
+
+          .icon-addon {
+            > .ks-icon {
+              color: $ks-default-text-color-light;
+            }
+          }
+
+          .ks-search-open,
+          .ks-search-close {
+            color: $ks-default-text-color-light;
+            font-size: 20px;
+
+            &:hover {
+              color: $ks-item-color;
+            }
+          }
+        }
+
+        &.ks-open {
+          margin-left: 30px;
+        }
+      }
+
+      > .ks-navbar-actions {
+        > .ks-languages {
+          .ks-wrapper {
+            > .ks-language {
+              border-bottom: 1px solid $ks-default-border-color;
+              border-right: 1px solid $ks-default-border-color;
+
+              > .ks-text {
+                color: $ks-default-text-color;
+              }
+
+              &:hover {
+                background: $nav-link-hover-background-color;
+              }
+            }
+          }
+        }
+
+        > .ks-messages {
+          > .nav-link {
+            color: $ks-default-text-color-light;
+          }
+
+          &.show, &:hover {
+            > .nav-link {
+              color: $ks-default-text-color;
+            }
+          }
+
+          > .dropdown-menu {
+            box-shadow: $ks-box-shadow;
+
+            > .ks-tabs-actions {
+              > a {
+                > .ks-icon {
+                  color: #b0bad7;
+
+                  &:hover {
+                    color: #8997c3;
+                  }
+                }
+              }
+            }
+
+            > .ks-nav-tabs {
+              border-bottom: 1px solid $ks-default-border-color;
+            }
+
+            > .tab-content {
+              > .tab-pane {
+                > .ks-view-all {
+                  border-top: 1px solid $ks-default-border-color;
+
+                  > a {
+                    color: $ks-default-text-color;
+                  }
+                }
+
+                .ks-message {
+                  border-bottom: 1px solid $ks-default-border-color;
+
+                  &:hover {
+                    background: $nav-link-hover-background-color;
+                    transition: $ks-hover-animation;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > .ks-notifications {
+          > .nav-link {
+            color: $ks-default-text-color-light;
+          }
+
+          &.show, &:hover {
+            > .nav-link {
+              color: $ks-default-text-color;
+            }
+          }
+
+          > .dropdown-menu {
+            box-shadow: $ks-box-shadow;
+
+            > .ks-nav-tabs {
+              border-bottom: 1px solid $ks-default-border-color;
+            }
+
+            > .tab-content {
+              > .tab-pane {
+                > .ks-view-all {
+                  border-top: 1px solid $ks-default-border-color;
+
+                  > a {
+                    color: $ks-default-text-color;
+                  }
+                }
+
+                .ks-notification {
+                  border-bottom: 1px solid #d7dceb; /* Bottom border in notifications tabs */
+
+                  &:hover {
+                    background: $nav-link-hover-background-color;
+                    transition: $ks-hover-animation;
+                  }
+
+                  > .ks-action {
+                    > span {
+                      &.ks-default {
+                        background-color: #e1e5f0;
+
+                        > .ks-icon {
+                          color: $ks-color-primary;
+                        }
+                      }
+
+                      &.ks-error {
+                        background-color: #f8e4f8;
+
+                        > .ks-icon {
+                          color: #d149d0;
+                        }
+                      }
+                    }
+                  }
+
+                  > .ks-info {
+                    > .ks-text {
+                      color: $ks-color-primary;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > .ks-user {
+          border-right: 1px solid transparent;
+
+          &.ks-user {
+            .ks-info {
+              > .ks-description {
+                color: $ks-item-color-light;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Grid navigation */
+  .ks-dropdown-grid {
+    border: none;
+    height: 30px;
+
+    > .dropdown-toggle {
+      height: 30px;
+    }
+
+    &.show {
+      > .dropdown-menu {
+        .ks-scroll-wrapper {
+          > .ks-grid-item {
+            > .ks-text {
+              color: $ks-default-text-color;
+            }
+
+            > .ks-icon {
+              color: $ks-color-primary;
+            }
+
+            &.ks-active, &:hover {
+              border: solid 1px $ks-default-border-color;
+              background-color: rgba(57, 80, 155, 0.05);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-navbar-horizontal {
+  background-color: $ks-navbar-horizontal-background-color;
+  border-bottom: 1px solid $ks-default-border-color;
+
+  .nav-item {
+    /* Styles for dropdowns */
+    &.show {
+      > .dropdown-toggle {
+        border-left: 1px solid $ks-default-border-color;
+        border-right: 1px solid $ks-default-border-color;
+      }
+
+      > .nav-link {
+        color: $ks-item-color;
+        background: $ks-color-white;
+
+        &.active, &:focus, &:hover {
+          color: $ks-item-color;
+          background: $ks-color-white;
+        }
+      }
+
+      .dropdown-menu {
+        .dropdown-item {
+          &:hover {
+            background: $nav-link-hover-background-color;
+            transition: $ks-hover-animation;
+          }
+        }
+
+        box-shadow: $ks-box-shadow;
+
+        .dropdown-item, .dropdown, .nav-link {
+          color: $ks-item-color;
+          border-bottom: 1px solid $ks-default-border-color;
+        }
+      }
+    }
+
+    .nav-link {
+      color: $ks-item-color;
+
+      &.active, &:focus, &:hover {
+        color: $ks-item-color;
+        background: #fff;
+      }
+
+      &.active {
+        border-left: 1px solid $ks-default-border-color;
+        border-right: 1px solid $ks-default-border-color;
+      }
+
+      &.disabled {
+        color: lighten($ks-item-color, 35);
+
+        &.active, &:focus, &:hover {
+          background: none;
+        }
+      }
+
+      > .ks-icon {
+        color: $ks-item-color;
+      }
+    }
+  }
+
+  > .nav {
+    > .ks-navbar-horizontal-responsive {
+      .dropdown-menu {
+        .dropdown-item {
+          border-bottom: 1px solid $ks-default-border-color;
+
+          > .nav-link, .dropdown-item {
+            background: $ks-color-white;
+            border-bottom: 1px solid $ks-default-border-color;
+
+            &.disabled {
+              color: lighten($ks-item-color, 35);
+            }
+          }
+
+          > .nav-link {
+            border-bottom: none;
+          }
+
+          &.show {
+            > .nav-link {
+              &.dropdown-toggle {
+                border-bottom: 1px solid $ks-default-border-color;
+              }
+            }
+
+            .dropdown-menu {
+              > .dropdown-item {
+                &:last-child {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-sidebar {
+  background: $ks-sidebar-background-color;
+  border-right: 1px solid rgba(38, 49, 56, 0.1);
+
+  > .ks-wrapper, .ks-sidebar-wrapper {
+    .nav {
+      .nav-item {
+        > .nav-link {
+          font-weight: 500;
+        }
+
+        &:hover {
+          > .nav-link, > .nav-link:active {
+            color: $ks-default-text-color;
+            background: $nav-link-hover-background-color;
+          }
+        }
+
+        &.ks-user {
+          .ks-info {
+            > .ks-name {
+              color: $ks-item-color;
+            }
+
+            > .ks-text {
+              color: $ks-item-color-light;
+            }
+          }
+
+          &:hover, &.open {
+            .ks-info {
+              > .ks-name {
+                color: $ks-default-text-color;
+              }
+            }
+          }
+        }
+
+        &.open, &.ks-active {
+          > .nav-link {
+            color: $ks-default-text-color;
+          }
+        }
+
+        .nav-link, .dropdown-item {
+          border-bottom: 1px solid $ks-default-border-color;
+          color: $ks-item-color;
+
+          &:hover, &.ks-active {
+            color: $ks-default-text-color;
+          }
+        }
+
+        .dropdown-menu {
+          .dropdown-item {
+            border-bottom: 1px solid $ks-default-border-color;
+            color: $ks-item-color;
+
+            &:hover, &.ks-active {
+              color: $ks-default-text-color;
+            }
+          }
+        }
+      }
+    }
+
+    .dropdown, .dropdown-item {
+      &:hover {
+        background: $nav-link-hover-background-color;
+        transition: $ks-hover-animation;
+      }
+    }
+
+    .dropdown {
+      &.open {
+        background: $nav-link-hover-background-color;
+
+        .nav-link {
+          background: $nav-link-hover-background-color;
+        }
+
+        .dropdown-item {
+          background: $nav-link-hover-background-color;
+        }
+
+        .dropdown-menu {
+          background: $nav-link-hover-background-color;
+        }
+      }
+    }
+  }
+}
+
+.ks-sidebar-position-fixed {
+  .ks-sidebar {
+    > .ks-wrapper, .ks-sidebar-wrapper {
+      background: $ks-sidebar-background-color;
+      border-right: 1px solid $ks-default-border-color;
+    }
+  }
+}
+
+.ks-content-nav {
+  > .ks-nav-body {
+    background: #f4f5f5;
+  }
+
+  &.ks-documentation-page {
+    > .ks-nav-body {
+      background: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 1225px) {
+  .ks-navbar {
+    > .ks-wrapper {
+      > .ks-navbar-menu-toggle {
+        &.ks-open {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      > .nav {
+        > .ks-navbar-menu {
+          background: $ks-sidebar-background-color;
+
+          &.ks-open {
+            > .ks-search-form {
+              border-bottom: 1px solid $ks-default-border-color;
+
+              > .ks-wrapper {
+                > .input-icon {
+                  > .form-control {
+                    background-color: $ks-color-white;
+                    border: solid 1px $ks-default-border-color;
+                    color: $ks-item-color-light;
+
+                    &::placeholder {
+                      color: $ks-item-color-light;
+                    }
+                  }
+
+                  > .icon-addon {
+                    > .ks-icon {
+                      color: $ks-item-color-light;
+                    }
+                  }
+                }
+              }
+            }
+
+            > .nav-item {
+              color: $ks-item-color;
+
+              > .nav-link, &.nav-link {
+                color: $ks-item-color;
+                border-bottom: 1px solid $ks-default-border-color;
+
+                &:hover {
+                  background: transparent;
+                }
+              }
+            }
+
+            > .dropdown {
+              > .nav-link {
+                border-bottom: 1px solid $ks-default-border-color;
+              }
+
+              &.show {
+                background: #fff;
+                border-bottom: 1px solid $ks-default-border-color;
+              }
+
+              .dropdown-menu {
+                .dropdown-item {
+                  &.dropdown {
+                    background: none;
+                    border-bottom: none;
+
+                    > .nav-link {
+                      border-bottom: none;
+                    }
+
+                    &.show {
+                      > .nav-link {
+                        border-bottom: 1px solid $ks-default-border-color;
+
+                        &:hover {
+                          background: $nav-link-hover-background-color;
+                        }
+                      }
+
+                      .dropdown-item {
+                        &:last-child {
+                          border-bottom: none;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 780px) {
+  .ks-navbar {
+    > .ks-wrapper {
+      > .ks-navbar-actions-toggle {
+        &.ks-open {
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      > .nav {
+        > .ks-navbar-actions {
+          background: #f5f6fa;
+
+          &.ks-open {
+            > .nav-item {
+              &.show {
+                background: #fff;
+              }
+
+              > .nav-link {
+                color: $ks-item-color;
+                border-bottom: 1px solid $ks-default-border-color;
+              }
+
+              &.ks-user {
+                .ks-info {
+                  > .ks-description {
+                    color: $ks-item-color-light;
+                  }
+                }
+              }
+            }
+
+            /* Static position for dropdown menus becides message, notifications, languages */
+            > .nav-item:not(.ks-languages):not(.ks-messages):not(.ks-notifications) {
+              &.show {
+                .dropdown-menu {
+                  .dropdown-item:not(.dropdown) {
+                    border-bottom: 1px solid $ks-default-border-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

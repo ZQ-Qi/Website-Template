@@ -1,0 +1,63 @@
+<title>选择器</title>
+
+<div class="layui-fluid">
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <div id="select" class="select-box"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .select-box {
+        width: 100%;
+    }
+
+    .select-table-section {
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+
+    .select-table-label {
+        box-sizing: border-box;
+        padding: 10px;
+        position: relative;
+    }
+
+    .layui-icon-ok:before {
+        content: "\e605";
+    }
+
+    .select-table-content {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .select-box .layui-form-checkbox {
+        margin-bottom: 10px;
+    }
+</style>
+
+
+<script>
+    layui.use(['select'], function () {
+        var select = layui.select;
+        /*
+        * @elem 渲染的ID选择器
+        * @mode //单选'single',多选'multiple'暂时只支持多选
+        * @url json地址
+        * @setValues 初始值，数据结构与json保持一致
+        * @render 渲染
+        * @getValues 获取选中的结果 */
+        select.render({
+            elem: '#select',
+            mode: 'multiple',//多选
+            url: './content/json/select/city.json',
+            setValues: [10,1402],//[10,1201,2003]
+        });
+
+        setTimeout(function () {
+            console.log(select.getValues());
+        }, 1000);
+    });
+</script>

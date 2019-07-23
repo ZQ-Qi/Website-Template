@@ -1,0 +1,102 @@
+/* ------------------------------------------ */
+/* ############### List Group ############### */
+/* ------------------------------------------ */
+
+.list-group-item {
+  &:first-child { @include border-top-radius(0); }
+  &:last-child { @include border-bottom-radius(0); }
+}
+
+// Striped List Group
+.list-group-striped {
+  .list-group-item:nth-child(even) {
+    background-color: $gray-200;
+  }
+}
+
+// Mailbox List
+.mail-list {
+  border: 1px solid $input-border-color;
+
+  .mail-item {
+    display: block;
+    padding: 10px 20px;
+    background-color: $gray-200;
+
+    &.active { background-color: #fff; }
+
+    + .mail-item { border-top: 1px solid $input-border-color; }
+  }
+}
+
+// User List Group
+.list-group-user {
+  .list-group-item {
+    padding: 15px 20px;
+
+    @media (min-width: 480px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    img {
+      width: 48px;
+      @include border-radius(100%);
+    }
+  }
+
+  .user-name-address {
+    margin-top: 10px;
+    margin-right: auto;
+
+    @media (min-width: 480px) {
+      margin-left: 15px;
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: $gray-800;
+      font-weight: 500;
+    }
+
+    span {
+      display: block;
+      font-size: 13px;
+    }
+  }
+
+  .user-btn-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    @media (min-width: 480px) { margin-top: 0; }
+
+    .btn + .btn { margin-left: 5px; }
+  }
+}
+
+
+/********* RTL SUPPORT **********/
+/********************************/
+[dir="rtl"] {
+  .list-group-user {
+    .user-name-address {
+      margin-left: auto;
+      margin-right: 0;
+
+      @media (min-width: 480px) {
+        margin-right: 15px;
+      }
+    }
+
+    .user-btn-wrapper {
+      .btn + .btn {
+        margin-left: 0;
+        margin-right: 5px;
+      }
+    }
+  }
+}

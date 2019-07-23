@@ -1,0 +1,119 @@
+/* Elements */
+.separator-linethrough {
+    @extend .align-center;
+	position: relative;
+	margin: 30px 0;	
+
+	span {
+        @include inline-block;
+        background-color: $col-white;
+        font-size: $font18;
+		padding: 0 10px;
+		position: inherit;		
+		z-index: 9;
+	}
+
+	&:after {
+		@extend .displayblock;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		content: '';
+		border-top: 1px solid #f0f0f0;
+		z-index: 0;
+	}
+}
+
+.block-header{
+    @extend .m-t-20;
+    @extend .m-b-20;
+	h2{        
+        @extend .m-b-0;
+        font-size: $font22;
+	}
+	.breadcrumb{        
+        @extend .m-r-0;
+        @extend .m-b-0;
+        @extend .m-l-0;
+        @extend .padding-0;
+        font-size: $font12;
+        margin-top: 2px;
+        background: transparent;
+        text-transform: uppercase;
+    }
+}
+
+
+/* toastr notification */
+#toast-container {
+	> div {
+		@include opacity(1);
+		
+		&,
+		&:hover{
+			@include box-shadow(none);
+		}
+    }
+
+    .toast-close-button {
+        @include opacity(.3);
+        color: $col-white;
+        top: -11px;
+        text-shadow: none;        
+    
+        &:hover,
+        &:focus {
+            @include opacity(.5);
+        }
+    }
+    
+    .toast-info {
+        background-color: $color-accent;
+    
+        .toast-close-button {
+            color: darken($color-accent, 20%);
+        }
+    }
+    
+    .toast-success {
+        background-color: $color-success;
+    
+        .toast-close-button {
+            color: darken($color-success, 20%);
+        }
+    }
+    
+    .toast-warning {
+        background-color: $color-warning;
+    
+        .toast-close-button {
+            color: darken($color-warning, 20%);
+        }
+    }
+    
+    .toast-error {
+        background-color: $color-danger;
+    
+        .toast-close-button {
+            color: darken($color-danger, 25%);
+        }
+    }
+
+    .toast {
+        @extend .m-b-0;
+        a {
+            text-decoration: underline;
+    
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $col-white;
+            }
+        }
+    
+        .toast-message {
+            font-size: $font14;
+            line-height: 1.4;
+        }
+    }
+}

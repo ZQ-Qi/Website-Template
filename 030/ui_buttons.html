@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html class="sidebar_default no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<title>Buttons - Start - Admin Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="css/images/favicon.png">
+<!-- Le styles -->
+<link href="js/plugins/chosen/chosen/chosen.css" rel="stylesheet">
+<link href="css/twitter/bootstrap.css" rel="stylesheet">
+<link href="css/base.css" rel="stylesheet">
+<link href="css/twitter/responsive.css" rel="stylesheet">
+<link href="css/jquery-ui-1.8.23.custom.css" rel="stylesheet">
+<script src="js/plugins/modernizr.custom.32549.js"></script>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+</head>
+
+<body>
+<div id="loading"><img src="img/ajax-loader.gif"></div>
+<div id="responsive_part">
+  <div class="logo"> <a href="index.html"><span>Start</span><span class="icon"></span></a> </div>
+  <ul class="nav responsive">
+    <li>
+      <button class="btn responsive_menu icon_item" data-toggle="collapse" data-target=".overview"> <i class="icon-reorder"></i> </button>
+    </li>
+  </ul>
+</div>
+<!-- Responsive part -->
+
+<div id="sidebar" class=" collapse1 in">
+  <div class="scrollbar">
+    <div class="track">
+      <div class="thumb">
+        <div class="end"></div>
+      </div>
+    </div>
+  </div>
+  <div class="viewport ">
+    <div class="overview collapse">
+      <div class="search row-fluid container">
+        <h2>Search</h2>
+        <form class="form-search">
+          <div class="input-append">
+            <input type="text" class=" search-query" placeholder="">
+            <button class="btn_search color_4">Search</button>
+          </div>
+        </form>
+      </div>
+      <ul id="sidebar_menu" class="navbar nav nav-list container full">
+        <li class="accordion-group  color_4"> <a class="dashboard " href="index.html"><img src="img/menu_icons/dashboard.png"><span>Dashboard</span></a> </li>
+        <li class="accordion-group color_7"> <a class="accordion-toggle widgets collapsed " data-toggle="collapse" data-parent="#sidebar_menu" href="#collapse1"> <img src="img/menu_icons/forms.png"><span>Form Elements</span></a>
+          <ul id="collapse1" class="accordion-body collapse">
+            <li><a href="forms_general.html">General</a></li>
+<li><a href="forms_wizard.html">Wizards</a></li>
+            <li><a href="forms_validation.html">Validation</a></li>
+            <li><a href="forms_editor.html">Editor</a></li>
+          </ul>
+        </li>
+        <li class="accordion-group color_3 active"> <a class="accordion-toggle widgets collapsed" data-toggle="collapse" data-parent="#sidebar_menu" href="#collapse2"> <img src="img/menu_icons/widgets.png"><span>UI Widgets</span></a>
+          <ul id="collapse2" class="accordion-body collapse in">
+            <li class="active"><a href="ui_buttons.html">Buttons</a></li>
+            <li><a href="ui_dialogs.html">Dialogs</a></li>
+            <li><a href="ui_icons.html">Icons</a></li>
+            <li><a href="ui_tabs.html">Tabs</a></li>
+            <li><a href="ui_accordion.html">Accordion</a></li>
+          </ul>
+        </li>
+        <li class="color_13"> <a class="widgets" href="calendar2.html"> <img src="img/menu_icons/calendar.png"><span>Calendar</span></a> </li>
+        <li class="color_10"> <a class="widgets"data-parent="#sidebar_menu" href="maps.html"> <img src="img/menu_icons/maps.png"><span>Maps</span></a> </li>
+        <li class="accordion-group color_12"> <a class="accordion-toggle widgets collapsed" data-toggle="collapse" data-parent="#sidebar_menu" href="#collapse3"> <img src="img/menu_icons/tables.png"><span>Tables</span></a>
+          <ul id="collapse3" class="accordion-body collapse">
+            <li><a href="tables_static.html">Static</a></li>
+            <li><a href="tables_dynamic.html">Dynamics</a></li>
+          </ul>
+        </li>
+        <li class="accordion-group color_19"> <a class="accordion-toggle widgets collapsed" data-toggle="collapse" data-parent="#sidebar_menu" href="#collapse4"> <img src="img/menu_icons/statistics.png"><span>Charts</span></a>
+          <ul id="collapse4" class="accordion-body collapse">
+            <li><a href="statistics.html">Statistics Elements</a></li>
+            <li><a href="charts.html">Charts</a></li>
+          </ul>
+        </li>
+        <li class="color_24"> <a class="widgets"data-parent="#sidebar_menu" href="grid.html"> <img src="img/menu_icons/grid.png"><span>Grid</span></a> </li>
+        <li class="color_8"> <a class="widgets"data-parent="#sidebar_menu" href="media.html"> <img src="img/menu_icons/gallery.png"><span>Media</span></a> </li>
+        <li class="color_4"> <a class="widgets"data-parent="#sidebar_menu" href="file_explorer.html"> <img src="img/menu_icons/explorer.png"><span>File Explorer</span> </a> </li>
+        <li class="accordion-group color_25"> <a class="accordion-toggle widgets collapsed" data-toggle="collapse" data-parent="#sidebar_menu" href="#collapse5"> <img src="img/menu_icons/others.png"><span>Specific Pages</span></a>
+          <ul id="collapse5" class="accordion-body collapse">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="index2.html">Login</a></li>
+           <li><a href="404.html">404 Error</a></li>
+<li ><a href="blog.html">Blog</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="menu_states row-fluid container ">
+        <h2 class="pull-left">Menu Settings</h2>
+        <div class="options pull-right">
+          <button id="menu_state_1" class="color_4" rel="tooltip" data-state ="sidebar_icons" data-placement="top" data-original-title="Icon Menu">1</button>
+          <button id="menu_state_2" class="color_4 active" rel="tooltip" data-state ="sidebar_default" data-placement="top" data-original-title="Fixed Menu">2</button>
+          <button id="menu_state_3" class="color_4" rel="tooltip" data-placement="top" data-state ="sidebar_hover" data-original-title="Floating on Hover Menu">3</button>
+        </div>
+      </div>
+      <!-- End sidebar_box --> 
+      
+    </div>
+  </div>
+</div>
+<div id="main">
+  <div class="container">
+    <div class="header row-fluid">
+      <div class="logo"> <a href="index.html"><span>Start</span><span class="icon"></span></a> </div>
+      <div class="top_right">
+        <ul class="nav nav_menu">
+          <li class="dropdown"> <a class="dropdown-toggle administrator" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+            <div class="title"><span class="name">George</span><span class="subtitle">Future Buyer</span></div>
+            <span class="icon"><img src="img/thumbnail_george.jpg"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><a href="profile.html"><i class=" icon-user"></i> My Profile</a></li>
+              <li><a href="forms_general.html"><i class=" icon-cog"></i>Settings</a></li>
+              <li><a href="index2.html"><i class=" icon-unlock"></i>Log Out</a></li>
+              <li><a href="search.html"><i class=" icon-flag"></i>Help</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- End top-right --> 
+    </div>
+    <div id="main_container">
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="box paint color_light">
+            <div class="title">
+              <div class="row-fluid">
+                <h4> Default Buttons <small>classes on hover</small> </h4>
+              </div>
+            </div>
+            <!-- End .title -->
+            <div class="content row-fluid">
+              <div class="row-fluid fluid">
+                <div class="span4 well  pagination-centered">
+                  <button class="btn" rel="tooltip" data-placement="top" data-original-title=".btn">Default</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-primary" rel="tooltip" data-placement="top" data-original-title=".btn .btn-primary">Primary</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-info" rel="tooltip" data-placement="top" data-original-title=".btn .btn-info">Info</button>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid fluid">
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-success" rel="tooltip" data-placement="top" data-original-title=".btn .success">Success</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-warning" rel="tooltip" data-placement="top" data-original-title=".btn .btn-warning">Warning</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-danger" rel="tooltip" data-placement="top" data-original-title=".btn .btn-danger">Danger</button>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid fluid">
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-inverse" rel="tooltip" data-placement="top" data-original-title=".btn .btn-inverse">Inverse</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-link" rel="tooltip" data-placement="top" data-original-title=".btn .btn-link">Link</button>
+                </div>
+              </div>
+              <!-- End .row-fluid --> 
+            </div>
+            <!-- End .content --> 
+          </div>
+          <!-- End .row-fluid -->
+          
+          <div class="box paint color_25">
+            <div class="title row-fluid">
+              <div class="row-fluid fluid ">
+                <h4> Large Buttons <small class="description">classes on hover</small> </h4>
+              </div>
+            </div>
+            <!-- End .title -->
+            <div class="content row-fluid">
+              <div class="row-fluid fluid">
+                <div class="span4 well  pagination-centered">
+                  <button class="btn btn-large" rel="tooltip" data-placement="top" data-original-title=".btn .btn-large">Default</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-primary btn-large" rel="tooltip" data-placement="top" data-original-title=".btn .btn-primary .btn-large">Primary</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-info btn-large" rel="tooltip" data-placement="top" data-original-title=".btn .btn-info .btn-large">Info</button>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid fluid">
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-success btn-large" rel="tooltip" data-placement="top" data-original-title=".btn .success .btn-large">Success</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-warning btn-large" rel="tooltip" data-placement="top" data-original-title=".btn .btn-warning .btn-large">Warning</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-danger btn-large" rel="tooltip" data-placement="top" data-original-title=".btn .btn-danger .btn-large">Danger</button>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid fluid">
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-inverse btn-large" rel="tooltip" data-placement="top" data-original-title=".btn .btn-inverse .btn-large">Inverse</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-link btn-large" rel="tooltip" data-placement="top" data-original-title=".btn .btn-link .btn-large">Link</button>
+                </div>
+              </div>
+              <!-- End .row-fluid --> 
+            </div>
+            <!-- End .content --> 
+          </div>
+          <!-- End .row-fluid -->
+          
+          <div class="box paint color_2">
+            <div class="title row-fluid">
+              <div class="row-fluid">
+                <h4> Small Buttons <small>classes on hover</small> </h4>
+              </div>
+            </div>
+            <!-- End .title -->
+            <div class="content row-fluid">
+              <div class="row-fluid fluid">
+                <div class="span4 well  pagination-centered">
+                  <button class="btn btn-mini" rel="tooltip" data-placement="top" data-original-title=".btn .btn-mini">Default</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-primary btn-mini" rel="tooltip" data-placement="top" data-original-title=".btn .btn-primary .btn-mini">Primary</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-info btn-mini" rel="tooltip" data-placement="top" data-original-title=".btn .btn-info .btn-mini">Info</button>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid fluid">
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-success btn-mini" rel="tooltip" data-placement="top" data-original-title=".btn .success .btn-mini">Success</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-warning btn-mini" rel="tooltip" data-placement="top" data-original-title=".btn .btn-warning .btn-mini">Warning</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-danger btn-mini" rel="tooltip" data-placement="top" data-original-title=".btn .btn-danger .btn-mini">Danger</button>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid fluid">
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-inverse btn-mini" rel="tooltip" data-placement="top" data-original-title=".btn .btn-inverse .btn-mini">Inverse</button>
+                </div>
+                <div class="span4 well pagination-centered">
+                  <button class="btn btn-link btn-mini" rel="tooltip" data-placement="top" data-original-title=".btn .btn-link .btn-mini">Link</button>
+                </div>
+              </div>
+              <!-- End .row-fluid --> 
+            </div>
+            <!-- End .content --> 
+          </div>
+          <!-- End .row-fluid --> 
+          
+        </div>
+        <!-- End .span6 -->
+        <div class="span6">
+          <div class="box paint">
+            <div class="title">
+              <div class="row-fluid">
+                <h4> Other styles </h4>
+              </div>
+            </div>
+            <!-- End .title -->
+            <div class="content">
+              <div class="row-fluid">
+                <div class="row-fluid well">
+                  <blockquote><strong>Disabled States</strong></blockquote>
+                  <div class="row-fluid we1ll  pagination-centered">
+                    <button class="btn " disabled>Default</button>
+                    <button class="btn btn-primary" disabled>Primary</button>
+                    <button class="btn btn-info" disabled>Info</button>
+                    <button class="btn btn-success" disabled>Success</button>
+                    <button class="btn btn-danger" disabled>Danger</button>
+                    <button class="btn btn-inverse" disabled>Inverse</button>
+                    <button class="btn btn-link" disabled>Link</button>
+                  </div>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              
+              <div class="row-fluid">
+                <div class="row-fluid well">
+                  <blockquote><strong>Button Groups</strong></blockquote>
+                  <div class="row-fluid we1ll  pagination-centered">
+                    <div class="btn-group inline">
+                      <button class="btn">Left</button>
+                      <button class="btn ">Middle</button>
+                      <button class="btn">Right</button>
+                    </div>
+                    <div class="btn-group inline"> <a class="btn " href="#"><span class="icon-align-left"></span></a> <a class="btn btn-info" href="#"><span class="icon-align-center"></span></a> <a class="btn" href="#"><span class="icon-align-right"></span></a> <a class="btn " href="#"><span class="icon-align-justify"></span></a> </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="row-fluid well">
+                  <blockquote><strong>Button dropdown menus</strong></blockquote>
+                  <div class="row-fluid we1ll  pagination-centered">
+                    <div class="btn-group inline">
+                      <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                    <div class="btn-group inline">
+                      <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                    <div class="btn-group inline">
+                      <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="row-fluid well">
+                  <blockquote><strong>Split button dropdowns in different sizes</strong></blockquote>
+                  <div class="row-fluid we1ll  pagination-centered">
+                    <div class="btn-group inline">
+                      <button class="btn btn-primary btn-large">Action</button>
+                      <button class="btn btn-primary btn-large dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                    <div class="btn-group inline">
+                      <button class="btn btn-warning">Warning</button>
+                      <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                    <div class="btn-group inline">
+                      <button class="btn btn-inverse btn-small">Inverse</button>
+                      <button class="btn btn-inverse btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="row-fluid well">
+                  <blockquote><strong>Checkbox buttons</strong></blockquote>
+                  <div class="row-fluid we1ll  pagination-centered">
+                    <div class="btn-group" data-toggle="buttons-radio">
+                      <button class="btn ">Left</button>
+                      <button class="btn">Middle</button>
+                      <button class="btn">Right</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="row-fluid well">
+                  <blockquote><strong>Radio buttons</strong></blockquote>
+                  <div class="row-fluid we1ll  pagination-centered">
+                    <div class="btn-group" data-toggle="buttons-checkbox">
+                      <button class="btn active">Left</button>
+                      <button class="btn">Middle</button>
+                      <button class="btn">Right</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="row-fluid well">
+                  <blockquote><strong>Block level buttons</strong></blockquote>
+                  <button type="button" class="btn btn-large btn-block btn-success">Block level success button</button>
+                  <button type="button" class="btn btn-large btn-block btn-danger">Block level danger button</button>
+                  <div class="marginB10"></div>
+                </div>
+              </div>
+              <!-- End .row-fluid --> 
+            </div>
+            <!-- End .content --> 
+          </div>
+        </div>
+        <!-- End .box --> 
+      </div>
+      <!-- End .row-fluid --> 
+      
+    </div>
+    <!-- End #container --> 
+  </div>
+  <div id="footer">
+    <p> &copy; Start - Admin Template 2012. More Templates <a href="https://shop303982252.taobao.com/" target="_blank" title="源代码设计">源代码设计</a> - Collect from <a href="https://shop303982252.taobao.com/" title="源代码设计" target="_blank">源代码设计</a></p> </div>
+</div>
+<div class="background_changer dropdown">
+  <div class="dropdown" id="colors_pallete"> <a data-toggle="dropdown" data-target="drop4" class="change_color"></a>
+    <ul  class="dropdown-menu pull-left" role="menu" aria-labelledby="drop4">
+      <li><a data-color="color_0" class="color_0" tabindex="-1">1</a></li>
+      <li><a data-color="color_1" class="color_1" tabindex="-1">1</a></li>
+      <li><a data-color="color_2" class="color_2" tabindex="-1">2</a></li>
+      <li><a data-color="color_3" class="color_3" tabindex="-1">3</a></li>
+      <li><a data-color="color_4" class="color_4" tabindex="-1">4</a></li>
+      <li><a data-color="color_5" class="color_5" tabindex="-1">5</a></li>
+      <li><a data-color="color_6" class="color_6" tabindex="-1">6</a></li>
+      <li><a data-color="color_7" class="color_7" tabindex="-1">7</a></li>
+      <li><a data-color="color_8" class="color_8" tabindex="-1">8</a></li>
+      <li><a data-color="color_9" class="color_9" tabindex="-1">9</a></li>
+      <li><a data-color="color_10" class="color_10" tabindex="-1">10</a></li>
+      <li><a data-color="color_11" class="color_11" tabindex="-1">10</a></li>
+      <li><a data-color="color_12" class="color_12" tabindex="-1">12</a></li>
+      <li><a data-color="color_13" class="color_13" tabindex="-1">13</a></li>
+      <li><a data-color="color_14" class="color_14" tabindex="-1">14</a></li>
+      <li><a data-color="color_15" class="color_15" tabindex="-1">15</a></li>
+      <li><a data-color="color_16" class="color_16" tabindex="-1">16</a></li>
+      <li><a data-color="color_17" class="color_17" tabindex="-1">17</a></li>
+      <li><a data-color="color_18" class="color_18" tabindex="-1">18</a></li>
+      <li><a data-color="color_19" class="color_19" tabindex="-1">19</a></li>
+      <li><a data-color="color_20" class="color_20" tabindex="-1">20</a></li>
+      <li><a data-color="color_21" class="color_21" tabindex="-1">21</a></li>
+      <li><a data-color="color_22" class="color_22" tabindex="-1">22</a></li>
+      <li><a data-color="color_23" class="color_23" tabindex="-1">23</a></li>
+      <li><a data-color="color_24" class="color_24" tabindex="-1">24</a></li>
+      <li><a data-color="color_25" class="color_25" tabindex="-1">25</a></li>
+    </ul>
+  </div>
+</div>
+<!-- End .background_changer -->
+</div>
+<!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- General scripts --> 
+<script src="js/jquery.js" type="text/javascript"> </script> 
+<!--[if !IE]> -->
+<script src="js/plugins/enquire.min.js" type="text/javascript"></script> 
+<!-- <![endif]-->
+<script language="javascript" type="text/javascript" src="js/plugins/jquery.sparkline.min.js"></script> 
+<script src="js/plugins/excanvas.compiled.js" type="text/javascript"></script> 
+<script src="js/bootstrap-transition.js" type="text/javascript"></script> 
+<script src="js/bootstrap-alert.js" type="text/javascript"></script> 
+<script src="js/bootstrap-modal.js" type="text/javascript"></script> 
+<script src="js/bootstrap-dropdown.js" type="text/javascript"></script> 
+<script src="js/bootstrap-scrollspy.js" type="text/javascript"></script> 
+<script src="js/bootstrap-tab.js" type="text/javascript"></script> 
+<script src="js/bootstrap-tooltip.js" type="text/javascript"></script> 
+<script src="js/bootstrap-popover.js" type="text/javascript"></script> 
+<script src="js/bootstrap-button.js" type="text/javascript"></script> 
+<script src="js/bootstrap-collapse.js" type="text/javascript"></script> 
+<script src="js/bootstrap-carousel.js" type="text/javascript"></script> 
+<script src="js/bootstrap-typeahead.js" type="text/javascript"></script> 
+<script src="js/bootstrap-affix.js" type="text/javascript"></script> 
+<script src="js/fileinput.jquery.js" type="text/javascript"></script> 
+<script src="js/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script> 
+<script src="js/jquery.touchdown.js" type="text/javascript"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/jquery.tinyscrollbar.min.js"></script> 
+<script language="javascript" type="text/javascript" src="js/jnavigate.jquery.min.js"></script> 
+<script language="javascript" type="text/javascript" src="js/jquery.touchSwipe.min.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/jquery.peity.min.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/wysihtml5-0.3.0.min.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/bootstrap-wysihtml5.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/jquery.peity.min.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/textarea-autogrow.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/character-limit.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/jquery.maskedinput-1.3.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/chosen/chosen/chosen.jquery.min.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/bootstrap-datepicker.js"></script> 
+<script language="javascript" type="text/javascript" src="js/plugins/bootstrap-colorpicker.js"></script> 
+
+<!-- Custom made scripts for this template --> 
+<script src="js/scripts.js" type="text/javascript"></script> 
+<script type="text/javascript">
+  /**** Specific JS for this page ****/
+ 
+
+
+
+</script>
+</body>
+</html>

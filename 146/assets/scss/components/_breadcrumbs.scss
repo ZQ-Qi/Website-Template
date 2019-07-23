@@ -1,0 +1,39 @@
+﻿.breadcrumb {
+    @include border-radius(0);
+    background-color: transparent;   
+    margin-bottom: 10px;
+
+    
+}
+
+@each $key, $val in $colors {
+    .breadcrumb-col-#{$key} {
+        li {
+            a {
+                color: $val !important;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .breadcrumb-bg-#{$key} {
+        background-color: $val !important;
+
+        li {
+            a {
+                color: $white;
+                font-weight: bold;
+
+                .material-icons {
+                    padding-bottom: 8px;
+                }
+            }
+
+            color: $white !important;
+        }
+
+        li + li:before {
+            color: $white;
+        }
+    }
+}

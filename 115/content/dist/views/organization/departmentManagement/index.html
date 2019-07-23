@@ -1,0 +1,197 @@
+
+<title>部门管理</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>部门管理</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid" id="LAY-app-table">
+    <div class="layui-card layui-row layui-col-space15" style="padding: 15px;">
+        <div class="orgbox layui-col-md2">
+            <ul id="demo2"></ul>
+        </div>
+        <div class="site-tips layui-col-md10" id="demo2-view">
+            <div id="viewForm">
+                点击左侧菜单，右侧将会显示当前点击节点的对应内容
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="formBox" type="text/html">
+    <div></div>
+    <form class="layui-form" action="" lay-filter="component-form-element">
+        <div class="layui-form-item">
+            <div class="layui-col-lg6">
+                <label class="layui-form-label">员工部门：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="fullname" lay-verify="required" placeholder="" autocomplete="off" class="layui-input" value="{{d.name}}">
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space10 layui-form-item">
+
+            <div class="layui-col-lg6">
+                <label class="layui-form-label">员工姓名：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="fullname" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-col-lg6">
+                <label class="layui-form-label">技术工种：</label>
+                <div class="layui-input-block">
+                    <select name="type" lay-verify="required" lay-filter="aihao">
+                        <option value=""></option>
+                        <option value="0">前端工程师</option>
+                        <option value="1">Node.js工程师</option>
+                        <option value="2">PHP工程师</option>
+                        <option value="3">Java工程师</option>
+                        <option value="4">运维</option>
+                        <option value="4">视觉设计师</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">兴趣爱好：</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="interest[write]" title="写作">
+                <input type="checkbox" name="interest[read]" title="阅读">
+                <input type="checkbox" name="interest[code]" title="代码" checked>
+                <input type="checkbox" name="interest[dreaming]" title="做梦">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">是否婚姻：</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="marriage" lay-skin="switch" lay-text="是|否">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属职称：</label>
+            <div class="layui-input-block">
+                <input type="radio" name="role" value="" title="经理">
+                <input type="radio" name="role" value="" title="主管">
+                <input type="radio" name="role" value="" title="码农" checked>
+                <input type="radio" name="role" value="" title="端水">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">其它信息：</label>
+            <div class="layui-input-block">
+                <textarea name="other" placeholder="" class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label"> </label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="" title="同意" lay-skin="primary" checked>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="component-form-element">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</script>
+
+<style>
+    .orgbox{
+        display: inline-block;
+        height: 510px;
+        border: 1px solid #ddd;
+        overflow: auto;
+    }
+    .site-tips{
+        display: inline-block;
+        vertical-align: top;
+    }
+</style>
+<script>
+    layui.use(['tree','layer','table','form','laytpl'], function(){
+        var $ = layui.$
+            ,layer = layui.layer
+            ,admin = layui.admin
+            ,table = layui.table
+            ,element = layui.element
+            ,form = layui.form
+            ,laytpl = layui.laytpl;
+
+        layui.tree({
+            elem: '#demo2' //指定元素
+            ,target: '_blank' //是否新选项卡打开（比如节点返回href才有效）
+            ,click: function(item){ //点击节点回调
+//                $('#demo2-view').html('当前节名称：'+ item.name + '<br>全部参数：'+ JSON.stringify(item));
+
+                var data = item;
+                var getTplForm = formBox.innerHTML,viewForm = document.getElementById('viewForm');
+                laytpl(getTplForm).render(data, function(html){
+                    viewForm.innerHTML = html;
+                });
+
+                form.render(null, 'component-form-element');
+                element.render('breadcrumb', 'breadcrumb');
+
+                // 可根据传入的参数，数据请求显示相应的数据
+
+            }
+            ,nodes: [ //节点
+                {
+                    name: '常用文件夹'
+                    ,id: 1
+                    ,alias: 'changyong'
+                    ,children: [
+                    {
+                        name: '所有未读（设置跳转）'
+                        ,id: 11
+                        ,href: 'http://www.layui.com/'
+                        ,alias: 'weidu'
+                    }, {
+                        name: '置顶邮件'
+                        ,id: 12
+                    }, {
+                        name: '标签邮件'
+                        ,id: 13
+                    }
+                ]
+                }, {
+                    name: '事业部'
+                    ,id: 2
+                    ,spread: true
+                    ,children: [
+                        {
+                            name: '研发部'
+                            ,id: 21
+                            ,spread: true
+                            ,children: [
+                            {
+                                name: '前端'
+                                ,id: 211
+                            }, {
+                                name: '所有'
+                                ,id: 212
+                            }
+                        ]
+                        }, {
+                            name: '产品部'
+                            ,id: 22
+                        }
+                    ]
+                }
+            ]
+        });
+
+
+        form.on('submit(component-form-element)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+
+
+    });
+</script>

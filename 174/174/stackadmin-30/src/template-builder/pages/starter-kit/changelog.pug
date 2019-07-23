@@ -1,0 +1,32 @@
+//- =========================================================================================
+	File Name: changelog.jade
+	Description: Change log
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+extends template
+
+block pageVars
+	- var pageTitle = "ChangeLog"
+	- var pageSubTitle = ""
+	- var description  = ""
+	- var activeMenu = "changelog"
+
+
+
+append pageConfig	
+	- var headerType = 'sk-header'
+	
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"}, {name:"Change log"}])
+
+//- Include page content in page block
+append content
+	include ../../contents/changelog.html
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/pages/timeline.css')

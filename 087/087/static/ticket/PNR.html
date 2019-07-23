@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../common/css/sapar.css" />
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/PNR.css" />
+<script type="text/javascript" src="../../common/js/jquery.js"></script>
+<script type="text/javascript" src="../../common/js/sapar.js"></script>
+<script type="text/javascript" src="../../common/js/WdatePicker.js"></script>
+<title>团队票申请</title>
+</head>
+
+<body>
+    <div id="saper-container">
+        <div id="saper-hd"></div>
+        <div id="saper-bd">
+            <div class="subfiled clearfix">
+                <h2>PNR生成订单</h2>
+            </div>
+            <div class="PNR-process">
+                <ul class="clearfix">
+                    <li class="current"><span>输入PNR</span></li>
+                    <li><span>创建订单</span></li>
+                    <li><span>付款</span></li>
+                    <li><span>等待出票</span></li>
+                    <li><span>出票完成</span></li>
+                </ul>
+            </div>
+            <div class="subfiled-content">
+                <div class="subfiled-style2 clearfix">
+                    <h2>根据PNR编号创建订单</h2>
+                </div>
+                <form class="create-order">
+                    <div class="add-box clearfix">
+                        <div class="kv-item clearfix">
+                            <label>PNR编号：</label>
+                            <div class="kv-item-content">
+                                <input type="text" placeholder="PNR编号">
+                            </div>
+                        </div>
+                        <div class="kv-item clearfix">
+                            <label>航班类型：</label>
+                            <div class="kv-item-content">
+                                <select>
+                                    <option>国内票</option>
+                                    <option>国际票</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="kv-item clearfix">
+                            <label class="long">保险份数(份/人)：</label>
+                            <div class="kv-item-content">
+                                <select>
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="sapar-btn sapar-btn-recom add-btn">根据PNR编号创建订单</a>
+                    </div>
+                </form>
+                <div class="subfiled-style2 clearfix">
+                    <h2>儿童订单专用通道</h2>
+                </div>
+                <form class="children-order">
+                    <div class="add-box clearfix">
+                        <div class="kv-item clearfix">
+                            <label class="middle">儿童PNR编号：</label>
+                            <div class="kv-item-content">
+                                <input type="text" placeholder="儿童PNR编号">
+                            </div>
+                        </div>
+                        <div class="kv-item clearfix">
+                            <label class="middle">成人PNR编号：</label>
+                            <div class="kv-item-content">
+                                <input type="text" placeholder="成人PNR编号">
+                            </div>
+                        </div>
+                        <div class="kv-item clearfix">
+                            <label>航班类型：</label>
+                            <div class="kv-item-content">
+                                <select>
+                                    <option>国内票</option>
+                                    <option>国际票</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="kv-item clearfix">
+                            <label class="long">保险份数(份/人)：</label>
+                            <div class="kv-item-content">
+                                <select>
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="sapar-btn sapar-btn-recom add-btn">根据PNR编号创建订单</a>
+                    </div>
+                </form>
+                <div class="alert alert-danger" role="alert">
+                    <div class="alert-content">
+                        <p style="color:red;font-weight:bold;">PNR操作提示：</p>
+                        <ul>
+                            <li>1.PNR下单支持：单程、特价、往返、联程、儿童pnr</li>
+                            <li>2.PNR为"HK、RR"状态</li>
+                            <li>3.本功能仅允许导入代理人系统生成的PNR（小编号），不支持航空公司系统生成的PNR（大编号）</li>
+                            <li>4.请勿在订座系统中对入库后的PNR进行任何操作</li>
+                            <li>5.请在出票时限前三十分钟提交开票，以免航空公司取消位置，发生价格变化，三十分钟内提交开票的，在开票过程中一旦位置取消，平台不承担任何责任</li>                            
+                        </ul>
+                    </div>
+                    <div class="alert-content">
+                        <p style="color:red;font-weight:bold;">儿童PNR下单操作提示：</p>
+                        <ul>
+                            <li>1.更新提示：南航（CZ）儿童需要加以下SSR项指令：SSR CHLD航空公司代码 Action-Code1/出生日期/Pn<br/>例如：<strong>SSR CHLD CZ HK1/03MAR04/P1</strong></li>
+                            <li>2.儿童需有成人陪乘，一名成人最多带两个儿童，请将成人PNR编码输入到儿童PNR编码里<br/>例如：<strong>SSR OTHS 航空公司二字码 ADULT PNR IS 成人编码</strong></li>
+                            <li>3.儿童票年龄为2至12周岁内</li>
+                            <li>4.儿童订购的舱位只能是Y舱、C舱、F舱</li> 
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="saper-ft"></div>
+    </div>
+    
+</body>
+
+<script type="text/javascript">
+$('select').iSelect();
+</script>
+</html>

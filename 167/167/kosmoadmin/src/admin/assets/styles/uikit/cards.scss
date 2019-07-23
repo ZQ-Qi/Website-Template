@@ -1,0 +1,893 @@
+@import "../config/colors";
+@import "../config/ui";
+
+$ks-card-solid-header-color: #ccc;
+$ks-card-header-color: #fff;
+$ks-nav-tabs-border-color: $ks-default-border-color;
+$ks-card-border-color: $ks-default-border-color;
+
+/* BEGIN UIKIT CARDS */
+.panel, .ks-panel {
+  border-radius: 2px;
+  border: solid 1px $ks-default-border-color;
+  background: #fff;
+
+  .card-header, .panel-heading {
+    padding: 16px 20px;
+    font-weight: 500;
+    background: transparent;
+    border-bottom: solid 1px $ks-default-border-color;
+    margin: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    font-size: 14px;
+
+    + .card-block, + .panel-body {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    > .ks-controls {
+      display: flex;
+      margin-left: 10px;
+      margin-top: -4px;
+      position: relative;
+      top: 3px;
+
+      > .ks-control {
+        color: darken(#d7dceb, 10%);
+        margin-right: 5px;
+
+        > .ks-icon {
+          font-size: 17px;
+          line-height: 17px;
+          font-weight: normal;
+        }
+
+        + .ks-control {
+          margin-left: 5px;
+        }
+
+        &:hover {
+          color: darken(#d7dceb, 20%);
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .card-block, .panel-body {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .panel-separator {
+      background: #c4cbe1;
+      height: 1px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+
+  .panel-body {
+    padding: 1.25rem;
+  }
+
+  &.ks-solid, &.ks-solid.panel-default {
+    > .card-header {
+      border-bottom: none;
+      padding: 30px 30px;
+      background: transparent;
+
+      + .card-block {
+        padding-top: 0;
+      }
+    }
+
+    > .card-block {
+      padding: 30px 30px 30px 30px;
+      background: transparent;
+    }
+
+    &.ks-bg-light-gray {
+      background-color: rgba(57, 80, 155, 0.05);
+    }
+  }
+
+  &.ks-information {
+    .card-header {
+      padding-left: 30px;
+      padding-right: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .card-block {
+      padding: 30px;
+    }
+  }
+
+  &.ks-simple {
+    position: relative;
+
+    > .ks-close {
+      color: rgba(58, 82, 155, 0.4);
+      font-size: 16px;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+
+    > .card-block {
+      padding: 30px;
+    }
+  }
+}
+
+.panel, .ks-panel {
+  &.panel-default {
+    border: solid 1px $ks-default-border-color;
+
+    .card-header, .panel-heading {
+      border-bottom: solid 1px $ks-default-border-color;
+    }
+
+    .card-block, .panel-body {
+      .panel-separator {
+        border: solid 1px $ks-default-border-color;
+      }
+    }
+
+    .card-header, .panel-heading {
+      .ks-control {
+        color: rgba(58, 82, 155, 0.4);
+      }
+    }
+  }
+}
+
+.panel.panel-default.header-gray {
+  .card-header {
+    background-color: $ks-default-border-color;
+  }
+}
+
+.panel.panel-default.block-gray {
+  .card-block {
+    background-color: $ks-default-border-color;
+  }
+}
+
+.panel.panel-gray {
+  .card-header {
+    background-color: $ks-default-border-color;
+  }
+  .card-block {
+    background-color: $ks-default-border-color;
+  }
+}
+
+.panel.panel-primary {
+  border: none;
+
+  .card-header {
+    background-color: $ks-color-primary;
+    color: #fff;
+    border-top: solid 1px $ks-color-primary;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .card-block {
+    border: none;
+    background-color: $ks-color-primary;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: rgba(255, 255, 255, 1);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.panel.panel-primary.header-default {
+  .card-header {
+    background-color: transparent;
+    border-top: solid 1px rgba(57, 81, 155, 0.3);
+    border-left: solid 1px rgba(57, 81, 155, 0.3);
+    border-right: solid 1px rgba(57, 81, 155, 0.3);
+    border-bottom: none;
+    color: #333;
+  }
+
+  .card-block {
+    border: none;
+    background-color: $ks-color-primary;
+    border-top: 1px solid $ks-color-primary;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.panel.panel-primary.block-default {
+  .card-header {
+    background-color: $ks-color-primary;
+    color: #fff;
+    border-top: solid 1px $ks-color-primary;
+    border-bottom: solid 1px $ks-color-primary;
+  }
+
+  .card-block {
+    background-color: transparent;
+    border-bottom: solid 1px rgba(57, 81, 155, 0.3);
+    border-left: solid 1px rgba(57, 81, 155, 0.3);
+    border-right: solid 1px rgba(57, 81, 155, 0.3);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: #333;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #333;
+    }
+  }
+}
+
+.panel.panel-default.color-blue {
+  border-color:  $ks-color-primary;
+
+  .card-header {
+    border-bottom-color:  $ks-color-primary;
+  }
+}
+
+.panel.panel-info {
+  border: none;
+
+  .card-header {
+    background-color: $ks-color-info;
+    color: #fff;
+    border-top: solid 1px $ks-color-info;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .card-block {
+    border: none;
+    background-color: $ks-color-info;
+    border-top: 1px solid $ks-color-info;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: rgba(255, 255, 255, 1);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.panel.panel-default.color-cyan {
+  border-color: $ks-color-info;
+
+  .card-header {
+    border-bottom-color: $ks-color-info;
+  }
+}
+
+.panel.panel-success {
+  border: none;
+
+  .card-header {
+    background-color: $ks-color-success;
+    color: #fff;
+    border-top: solid 1px $ks-color-success;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .card-block {
+    border: none;
+    background-color: $ks-color-success;
+    border-top: 1px solid $ks-color-success;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: rgba(255, 255, 255, 1);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.panel.panel-default.panel-success {
+  border-color: $ks-color-success;
+
+  .card-header {
+    border-bottom-color: $ks-color-success;
+  }
+}
+
+.panel.panel-orange {
+  border: none;
+
+  .card-header {
+    background-color: $ks-color-danger;
+    color: #fff;
+    border-top: solid 1px $ks-color-danger;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .card-block {
+    border: none;
+    background-color: $ks-color-danger;
+    border-top: 1px solid $ks-color-danger;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: rgba(255, 255, 255, 1);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.panel.panel-default.color-orange {
+  border-color: $ks-color-danger;
+
+  .card-header {
+    border-bottom-color: $ks-color-danger;
+  }
+}
+
+.panel.panel-purple {
+  border: none;
+
+  .card-header {
+    background-color: #d149d0;
+    color: #fff;
+    border-top: solid 1px #d149d0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .card-block {
+    border: none;
+    background-color: #d149d0;
+    border-top: 1px solid #d149d0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: rgba(255, 255, 255, 1);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.panel.panel-default.color-purple {
+  border-color: #d149d0;
+
+  .card-header {
+    border-bottom-color: #d149d0;
+  }
+}
+
+.panel.panel-yellow {
+  border: none;
+
+  .card-header {
+    background-color: $ks-color-warning;
+    color: #fff;
+    border-top: solid 1px $ks-color-warning;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .card-block {
+    border: none;
+    background-color: $ks-color-warning;
+    border-top: 1px solid $ks-color-warning;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: rgba(255, 255, 255, 1);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.panel.panel-default.color-yellow {
+  border-color: $ks-color-warning;
+
+  .card-header {
+    border-bottom-color: $ks-color-warning;
+  }
+}
+
+.panel {
+  form {
+    > .form-group {
+      &:last-child {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.card {
+  border-radius: 2px;
+  border: solid 1px $ks-default-border-color;
+  margin: 0;
+
+  + .card {
+    margin-top: 30px;
+  }
+
+  &.ks-card-tabs {
+    .card-block {
+      padding: 0;
+    }
+
+    .ks-tabs-container {
+      border: none;
+      border-radius: 0;
+      display: flex;
+
+      &.ks-tabs-vertical {
+        > .nav-tabs {
+          flex-direction: column;
+        }
+
+        > .tab-content {
+          flex-grow: 1;
+        }
+
+        .ks-tab-content-center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  > .card-header {
+    line-height: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+      display: none;
+    }
+
+    > .ks-controls {
+      display: flex;
+      margin-left: 10px;
+
+      > .ks-control {
+        color: darken(#d7dceb, 10%);
+        margin-right: 5px;
+
+        > .ks-icon {
+          font-size: 17px;
+          line-height: 17px;
+          font-weight: normal;
+        }
+
+        + .ks-control {
+          margin-left: 5px;
+        }
+
+        &:hover {
+          color: darken(#d7dceb, 20%);
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  > .card-block {
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    > .ks-items-block {
+      + .ks-items-block {
+        margin-top: 20px;
+      }
+
+      > .btn {
+        + .btn:not(.btn-block) {
+          margin-left: 10px;
+        }
+      }
+
+      > .btn-group {
+        + .btn-group {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    > .ks-text-block {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      > .ks-name {
+        font-size: 10px;
+        color: rgba(51, 51, 51, 0.6);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      > .ks-text {
+        font-size: 12px;
+      }
+
+      > .ks-tags {
+        > .badge {
+          margin-right: 5px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.ks-card-image {
+    padding: 20px;
+
+    > .ks-header {
+      margin-top: 0;
+    }
+
+    > img {
+      border-radius: 2px;
+    }
+
+    > .ks-info {
+      margin-top: 15px;
+    }
+  }
+
+  > .card-block {
+    &.ks-card-block-table {
+      padding: 0;
+
+      > .card-title {
+        padding: 20px;
+        margin: 0;
+      }
+
+      > .table {
+        margin: 0;
+      }
+    }
+  }
+
+  &.ks-dashboard-widget-fullscreen {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+
+    [data-control-content-visible] {
+      display: none;
+    }
+  }
+
+  &.ks-dashboard-widget-content-hidden {
+    > .card-header {
+      border-bottom: none;
+    }
+
+    [data-control-fullscreen], [data-control-refresh] {
+      display: none;
+    }
+  }
+}
+
+.ks-card-widget {
+  padding: 0;
+  border-radius: 3px;
+
+  .card-header {
+    margin: 0;
+    background: #fff;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 30px 10px 30px;
+    font-size: 18px;
+    color: $ks-default-text-color;
+    font-weight: normal;
+
+    > .ks-control {
+      margin-right: -9px;
+
+      .ks-icon {
+        font-size: 28px;
+        color: #b6ada1;
+      }
+    }
+
+    > .ks-controls {
+      .ks-control-link {
+        font-size: 12px;
+        color: $ks-default-text-color-light;
+      }
+
+      .ks-control-icon {
+        font-size: 28px;
+        color: #b6ada1;
+        line-height: 27px;
+        margin-top: -6px;
+        display: inline-block;
+        margin-left: 25px;
+      }
+    }
+  }
+
+  .card-block {
+    padding: 0 30px 30px 30px;
+  }
+
+  .ks-card-widget-datetime {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.67;
+    color: $ks-default-text-color-light;
+
+    .ks-text-bold {
+      color: $ks-default-text-color;
+    }
+  }
+
+  &.ks-card-widget-simple {
+    .card-header {
+      justify-content: flex-end;
+      padding: 5px 30px 0 30px;
+
+      > .ks-control {
+        margin-right: -20px;
+      }
+    }
+  }
+}
+/* END UIKIT CARDS */
+
+
+.card {
+  border-radius: $ks-default-border-radius;
+  border: 1px solid $ks-default-border-color;
+
+  &-header {
+    padding: 15px 20px;
+    background-color: $ks-card-header-color;
+    border-bottom: 1px solid $ks-default-border-color;
+    font-size: 17px;
+    line-height: 20px;
+    margin: 0 !important;
+
+    &:first-child {
+      border-radius: 0;
+    }
+  }
+
+  &-header-pills {
+    padding: 0;
+    margin: -7px -13px;
+
+    .nav-link {
+      padding: 7px 18px;
+      border-radius: $ks-default-border-radius;
+
+      &.active {
+        background: $ks-color-primary;
+      }
+    }
+  }
+
+  &-header-tabs {
+    padding: 0;
+    background: transparent;
+    margin: -7px -13px -16px -13px;
+
+    .nav-link {
+      padding: .65em 1em;
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
+
+      &:hover:not(.active), :focus, :active {
+        border-color: transparent !important;
+      }
+    }
+  }
+
+  &-block {
+    padding: 16px 20px;
+    font-size: 13px;
+  }
+
+  &-footer {
+    border-top: 1px solid $ks-card-border-color;
+    background: #F9FAFB;
+    color: rgba(#000, .4);
+    font-size: 13px;
+    line-height: 20px;
+    padding: 15px 20px;
+  }
+
+  &-text {
+    font-size: 13px;
+  }
+
+  &-inverse {
+    .card-footer, .card-header {
+      border-color: rgba(255,255,255,.15);
+    }
+  }
+}
+
+.card-primary {
+  background-color: $ks-color-primary;
+  border-color: $ks-color-primary;
+}
+
+.card-secondary {
+  background-color: $ks-color-secondary;
+  border-color: $ks-color-secondary;
+
+  .card-header {
+    border-bottom-color: rgba(#000, .1);
+  }
+
+  .card-header, .card-block, .card-text, .card-footer, .card-blockquote {
+    color: $ks-default-text-color;
+  }
+}
+
+.card-success {
+  background-color: $ks-color-success;
+  border-color: $ks-color-success;
+}
+
+.card-info {
+  background-color: $ks-color-info;
+  border-color: $ks-color-info;
+}
+
+.card-warning {
+  background-color: $ks-color-warning;
+  border-color: $ks-color-warning;
+}
+
+.card-danger {
+  background-color: $ks-color-danger;
+  border-color: $ks-color-danger;
+}
+
+[class*="card-outline-"] {
+  .card-header {
+    background: transparent;
+
+    &[class*="bg-"] {
+      color: #fff;
+    }
+  }
+}
+
+.card-outline-primary {
+  border-color: $ks-color-primary;
+
+  .card-header, .card-footer {
+    border-color: $ks-color-primary;
+  }
+}
+
+.card-outline-secondary {
+  border-color: $ks-color-secondary;
+
+  .card-header, .card-footer {
+    color: $ks-default-text-color !important;
+    border-color: $ks-color-secondary;
+  }
+}
+
+.card-outline-info {
+  border-color: $ks-color-info;
+
+  .card-header, .card-footer {
+    border-color: $ks-color-info;
+  }
+}
+
+.card-outline-success {
+  border-color: $ks-color-success;
+
+  .card-header, .card-footer {
+    border-color: $ks-color-success;
+  }
+}
+
+.card-outline-warning {
+  border-color: $ks-color-warning;
+
+  .card-header, .card-footer {
+    border-color: $ks-color-warning;
+  }
+}
+
+.card-outline-danger {
+  border-color: $ks-color-danger;
+
+  .card-header, .card-footer {
+    border-color: $ks-color-danger;
+  }
+}
+
+.ks-card-solid {
+  border: none;
+  position: relative;
+
+  .card-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $ks-card-solid-header-color;
+    border-bottom: none;
+  }
+
+  &.bg-primary {
+
+  }
+
+  &.bg-header-primary {
+
+  }
+}
+
+.ks-card-accordion {
+  .card-header {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .card-title {
+    margin-bottom: 0;
+    font-size: 1rem;
+
+    a {
+      position: relative;
+      top: 1px;
+    }
+  }
+}

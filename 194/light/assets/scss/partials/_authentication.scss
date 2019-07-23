@@ -1,0 +1,241 @@
+
+/* Authentication forms */
+.auth-main{
+    @include max-screen($break-xsmall - 1px) {
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 400px;
+        height: 100%;
+        z-index: -1;
+        background: $grey-add;
+
+        @include max-screen($break-medium) {
+            width: 320px;
+        }
+
+        @include max-screen($break-xsmall) {
+            width: 100%;
+        }
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        right:0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;        
+    }
+    .card{        
+        @extend .align-center;
+        @extend .m-b-0;
+        background-color: transparent;
+        box-shadow: none;        
+        padding: 20px;
+
+        @include max-screen($break-xsmall) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .header{
+            @extend .padding-0;
+            @extend .align-center;
+            h3{
+                color: $grey-900;
+                @extend .m-t-20;
+            }
+        }
+        .body{
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .mobile-logo{
+        display: none;
+        
+        img{
+            width: 60px;
+        }
+
+        @include max-screen($break-xsmall) {
+            display: block;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            top: -60px;
+        }
+    }
+
+    .auth-box {
+        background-color: $col-white;
+        border-radius: $border-radius-large;
+        max-width: 870px;
+        width: calc(100% - 40px);
+        height: auto;	    
+        margin:0 auto 0 100px;
+        position: relative;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+
+        .auth-left{
+            width: 300px;
+            position: absolute;
+            height: 100%;
+
+            &::before{
+                content: "";
+                width: 300px;
+                height: 100%;
+                background-color: #49c5b6;
+                position: absolute;
+                left: 0;
+                border-radius: 12px 0 0 12px;
+            }
+
+            .left-top{
+                @extend .align-center;
+                position: absolute;
+                top: -60px;                
+                width: 100%;
+
+                img{
+                    width: 60px;
+                }
+                span{
+                    @extend .inlineblock;
+                    font-size: $font20;
+                    font-weight: $font-weight-600;
+                    line-height: 50px;
+                    color: $col-white;                    
+                    text-transform: uppercase;
+                    text-indent: 5px;
+                    letter-spacing: 2px;                    
+                }
+            }
+
+            .left-slider{
+                height: 100%;
+                position: relative;
+                border-radius: 12px 0 0 12px;
+                overflow: hidden;
+            }
+
+            @include max-screen($break-xsmall) {
+                display: none;
+            }
+        }
+
+        .auth-right{
+            padding-left: 300px;
+            position: relative;
+
+            @include max-screen($break-xsmall) {
+                padding-left: 0;
+            }
+
+            .right-top{
+                position: absolute;
+                right: 0;
+                top: -60px;
+
+                @include max-screen($break-xsmall) {
+                    top: auto;
+                    bottom: -60px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    right: auto;
+                }
+
+                ul{
+                    @extend .m-b-0;
+                    li{
+                        @extend .p-l-10;
+                        @extend .p-r-5;
+
+                        a{
+                            font-size: $font16;
+                            line-height: 60px;
+                            color: $grey-600;
+
+                            @include max-screen($break-xsmall) {
+                                color: #242a2b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form-auth-small {
+            .btn{
+                @extend .m-t-20;
+            }
+
+            .element-left {
+                color: $grey-900;
+                float: left;                
+            }
+
+            .element-right {
+                float: right;
+            }
+
+            .bottom {
+                @extend .m-t-20;
+                @extend .align-center;
+                color: $grey-900;
+            }
+        }
+        
+        .lead {
+            @extend .m-t-5;
+            @extend .m-b-0;
+            font-size: $font18;
+            font-weight: $font-weight-600;
+        }
+
+        .helper-text {
+            color: $grey-900;
+            @extend .displayblock;
+        }
+
+        @include max-screen($break-medium) {
+            margin: 0 20px;
+        }
+
+        @include max-screen($break-xsmall) {
+            width: 90%;
+        }
+
+        .bottom{
+            a{
+                color: $grey-900;
+                border-bottom: 1px solid $grey-400;
+            }
+        }
+        .separator-linethrough {
+            span{
+                background-color: $col-white;
+            }
+        }
+        a,
+        button{
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .btn-signin-social{
+            @extend .m-b-10;
+        }
+    }
+}

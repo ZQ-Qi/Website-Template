@@ -1,0 +1,145 @@
+.file-storage {
+  &__photos {
+    &-header {
+      border-bottom: none;
+      height: 79px;
+      min-height: 79px;
+    }
+  }
+
+  &__albums {
+    &-body {
+      position: relative;
+
+      &-scrollpane {
+        @include mx-scrollpane();
+      }
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 20px;
+    }
+
+    &-album {
+      margin-left: 20px;
+      margin-bottom: 30px;
+      cursor: pointer;
+
+      &-preview {
+        position: relative;
+      }
+
+      &-preview-image {
+        height: 199px;
+        border-radius: 4px;
+      }
+
+      &-name {
+        margin-top: 15px;
+        font-size: 17px;
+        color: #222;
+      }
+
+      &-desc {
+        color: $color-gray;
+      }
+
+      &-shared-image {
+        position: absolute;
+        bottom: 11px;
+        right: 9px;
+      }
+
+      &-checkbox {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: none;
+      }
+    }
+
+    &-album:hover &-album-checkbox,
+    &-album.is-selected &-album-checkbox {
+      display: inline-flex;
+    }
+
+    &-album.is-selected &-album-checkbox {
+      .custom-control-label {
+        &:before {
+          border-color: $color-lasur;
+        }
+      }
+    }
+  }
+
+  &__photos {
+    &-body {
+      position: relative;
+
+      &-scrollpane {
+        @include mx-scrollpane();
+      }
+    }
+
+    &-heading {
+      color: $color-gray;
+      padding: 0 20px;
+      margin-bottom: 12px;
+    }
+
+    &-container {
+      padding-left: 20px;
+      display: flex;
+      flex-wrap: wrap;
+
+      &:last-child {
+        padding-bottom: 10px;
+      }
+    }
+
+    &-container + &-heading {
+      margin-top: 20px;
+    }
+
+    &-photo {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      margin-right: 10px;
+      margin-bottom: 10px;
+
+      &-image {
+        border-radius: 4px;
+        height: 183px;
+      }
+
+      &-shared-image {
+        position: absolute;
+        bottom: 11px;
+        right: 9px;
+      }
+
+      &-checkbox {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: none;
+      }
+    }
+
+    &-photo:hover &-photo-checkbox,
+    &-photo.is-selected &-photo-checkbox {
+      display: inline-flex;
+    }
+
+    &-photo.is-selected &-photo-checkbox {
+      .custom-control-label {
+        &:before {
+          border-color: $color-lasur;
+        }
+      }
+    }
+  }
+}

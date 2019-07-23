@@ -1,0 +1,16 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Background / Universe Admin{% endblock %}
+
+{% block sidenav %}
+  {% include "./common/sidenav/background.html" %}
+{% endblock %}
+
+{% block content %}
+  {% include "./common/canvas.html" %}
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script src="js/preview/im-images.min.js"></script>
+{% endblock %}

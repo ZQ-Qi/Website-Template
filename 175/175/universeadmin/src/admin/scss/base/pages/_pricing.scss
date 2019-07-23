@@ -1,0 +1,268 @@
+/* prefix .p means "page" */
+.p-pricing {
+  display: flex;
+  font-size: 14px;
+
+  &-container {
+    overflow-x: auto;
+  }
+
+  &__item,
+  &__desc {
+    flex-grow: 1;
+  }
+
+  &__desc {
+    padding-top: 223px;
+    width: 262px;
+    min-width: 262px;
+  }
+
+  &__desc-item {
+    border-top: 1px solid #e9ebee;
+    border-left: 1px solid #e9ebee;
+    color: #000;
+    font-size: 15px;
+    height: 54px;
+    padding: 16px 20px;
+
+    &:last-child {
+      border-bottom: 1px solid #e9ebee;
+      height: 56px;
+    }
+  }
+
+  &__item {
+    border: 1px solid #e9ebee;
+    border-right: none;
+    min-width: 242px;
+
+    &:last-child {
+      border-right: 1px solid #e9ebee;
+    }
+
+    &.is-active {
+      background: #f2fafe;
+      border-color: #0094f2;
+      box-shadow: inset 0 0 0 1px #0094f2;
+
+      + .p-pricing__item {
+        border-left-color: #0094f2;
+      }
+
+      .p-pricing__name,
+      .p-pricing__feature,
+      .p-pricing__choose {
+        &:after {
+          left: 1px;
+          right: 1px;
+          background: #ceebfc;
+        }
+      }
+
+      .p-pricing__price-choose {
+        background: $color-info;
+        color: #fff;
+        border-color: $color-info;
+      }
+    }
+  }
+
+  &__choose {
+    padding: 29px 20px 20px 20px;
+    text-align: center;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      background: #e9ebee;
+      left: 0;
+      z-index: 0;
+    }
+  }
+
+  &__name {
+    padding: 15px;
+    text-align: center;
+    font-size: 17px;
+    color: #000;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      background: #e9ebee;
+      left: 0;
+      z-index: 0;
+    }
+  }
+
+  &__item-price-per-month {
+    position: absolute;
+    right: -20px;
+    top: -48px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: url('../img/pricing-month-bg.png') no-repeat;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  &__item-price-per-month-amount {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  &__feature {
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #000;
+    position: relative;
+    height: 54px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      right: 0;
+      background: #e9ebee;
+      left: 0;
+      z-index: 0;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__feature-text {
+    position: relative;
+    top: -2px;
+    height: 0;
+    opacity: 0;
+  }
+
+  &__price-amount {
+    font-size: 36px;
+    color: #222;
+    line-height: 36px;
+    margin-bottom: 5px;
+
+    .currency {
+      font-size: 22px;
+      line-height: 15px;
+      position: relative;
+      top: -11px;
+      margin-right: 1px;
+      display: inline-block;
+    }
+  }
+
+  &__price-desc {
+    color: #939daa;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__price-choose {
+    border: 1px solid #939daa;
+    color: #818c9b;
+  }
+
+  &__icon-check {
+    color: #41ad49;
+    font-size: 13px;
+  }
+
+  &__icon-none {
+    color: #939daa;
+    font-size: 13px;
+  }
+
+  &__message {
+    font-size: 15px;
+    color: #000;
+    margin-top: 25px;
+    text-align: center;
+
+    .message-icon {
+      font-size: 16px;
+      display: inline-block;
+      margin-right: 10px;
+      color: #98a2ae;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  &__faq {
+    margin-top: 53px;
+
+    .main-container__heading {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__faq-heading {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__faq-desc {
+    color: #939daa;
+    font-size: 15px;
+  }
+}
+
+@include mq(screen-lg, max) {
+  .p-pricing {
+    flex-direction: column;
+
+    &-container {
+      overflow: hidden;
+    }
+
+    &__desc {
+      display: none;
+    }
+
+    &__feature-text {
+      height: auto;
+      opacity: 1;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+      border-right: 1px solid #e9ebee;
+
+      &.is-active {
+        box-shadow: none;
+
+        + .p-pricing__item {
+          border-left-color: #e9ebee;
+        }
+      }
+    }
+  }
+}

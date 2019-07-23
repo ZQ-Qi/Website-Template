@@ -1,0 +1,146 @@
+/** BEGIN: date range picker */
+.daterangepicker {
+  &.dropdown-menu {
+    border-color: #e9ebee;
+    padding: 0;
+  }
+
+  font-size: 14px;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  &_input,
+  &__input {
+    margin: 8px;
+  }
+
+  .input-mini {
+    border-color: $input-border-color;
+    border-radius: $border-radius;
+    height: 36px;
+    line-height: 36px;
+
+    &.active {
+      border-radius: $border-radius;
+      border-color: $input-border-color-active;
+    }
+  }
+
+  th {
+    font-weight: 400;
+    font-size: 11px;
+    color: #939daa;
+    width: 36px;
+    height: 36px;
+  }
+
+  td {
+    width: 36px;
+    height: 36px;
+
+    &:hover {
+      background: rgba($color-gray, .1);
+    }
+
+    &:not(.active).in-range {
+      &.available {
+        background: #E5F4FD;
+      }
+    }
+
+    &.active,
+    &.active:hover {
+      background: #0094f2;
+    }
+  }
+
+  .month {
+    font-size: 17px;
+    color: #000;
+  }
+
+  .ranges {
+    margin: 12px;
+
+    ul {
+      border: 1px solid #e9ebee;
+      border-radius: $border-radius;
+      margin-bottom: 12px;
+    }
+
+    li {
+      border: none;
+      border-radius: 0;
+      font-size: 14px;
+      color: #939daa;
+      background: #fff;
+      padding: 8px 12px;
+      margin: 0;
+
+      &.active {
+        background: #0094f2;
+        color: #fff;
+
+        &:first-child {
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+        }
+
+        &:last-child {
+          border-bottom-left-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+        }
+      }
+    }
+  }
+
+  .range_inputs {
+    margin: 8px;
+
+    .btn {
+      height: 36px;
+
+      + .btn {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .fa-calendar {
+    font-style: normal;
+    position: relative;
+    top: 2px;
+
+    &:before {
+      content: $icon-date;
+      font-family: $font-icon;
+      color: $color-gray;
+    }
+  }
+
+  .fa-chevron-left {
+    font-style: normal;
+    position: relative;
+    top: 1px;
+
+    &:before {
+      content: $icon-scheduler-left-arrow;
+      font-family: $font-icon;
+    }
+  }
+
+  .fa-chevron-right {
+    font-style: normal;
+    position: relative;
+    top: 1px;
+
+    &:before {
+      content: $icon-scheduler-right-arrow;
+      font-family: $font-icon;
+    }
+  }
+}
+/** END: date range picker */

@@ -1,0 +1,591 @@
+/** BEGIN: breadcrumbs */
+.breadcrumb {
+  background: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb-item {
+  font-size: 14px;
+  color: $color-black-light;
+
+  + .breadcrumb-item {
+    &::before {
+      display: none;
+    }
+  }
+
+  &:not(:last-child) {
+    &::after {
+      content: $icon-nav-item-active-arrow-right;
+      padding-left: 8px;
+      padding-right: 10px;
+      position: relative;
+      font-family: $font-icon;
+      font-size: 9px;
+    }
+  }
+
+  &:hover,
+  &.active {
+    color: $color-black;
+  }
+}
+
+.breadcrumb-a,
+.breadcrumb-b {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  &__icon {
+    font-size: 16px;
+    line-height: 16px;
+    position: relative;
+    top: 2px;
+  }
+
+  &__point {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    line-height: 18px;
+    text-align: center;
+    color: #939daa;
+  }
+
+  &__point-outline {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    line-height: 18px;
+    text-align: center;
+    color: #939daa;
+    border: 1px solid #939daa;
+  }
+
+  &__icon + &__text,
+  &__point + &__text {
+    margin-left: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #939daa;
+    background: #dce0e4;
+    text-decoration: none;
+    position: relative;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px 0 5px;
+    text-align: center;
+    margin-right: 22px;
+    transition: none;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      border: 0 solid #dce0e4;
+      border-width: 18px 10px;
+      width: 0;
+      height: 0;
+    }
+
+    &:before {
+      left: -20px;
+      border-left-color: transparent;
+    }
+
+    &:after {
+      left: 100%;
+      border-color: transparent;
+      border-left-color: #dce0e4;
+    }
+
+    &.is-active,
+    &:hover,
+    &:active {
+      background: #0094f2;
+      color: #fff;
+
+      &:before {
+        border-color: #0094f2;
+        border-left-color: transparent;
+      }
+
+      &:after {
+        border-left-color: #0094f2;
+      }
+    }
+
+    &.is-current {
+      background: #c9ced4;
+      color: #fff;
+
+      &:before {
+        border-color: #c9ced4;
+        border-left-color: transparent;
+      }
+
+      &:after {
+        border-left-color: #c9ced4;
+      }
+    }
+  }
+
+  &__item:first-child  &__link {
+    padding-left: 15px;
+    border-radius: 4px 0 0 4px;
+
+    &:before {
+      border: none;
+    }
+  }
+
+  &__item:last-child &__link {
+    padding-right: 15px;
+    border-radius: 0 4px 4px 0;
+
+    &:after {
+      border: none;
+    }
+  }
+
+  &__link:not(.is-current).is-active &__point,
+  &__link:not(.is-current):hover &__point,
+  &__link:not(.is-current):active &__point {
+    color: #0094f2;
+  }
+
+  &--primary &__link {
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-primary;
+        color: #fff;
+
+        &:before {
+          border-color: $color-primary;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &--primary &__link:not(.is-current).is-active &__point,
+  &--primary &__link:not(.is-current):hover &__point,
+  &--primary &__link:not(.is-current):active &__point {
+    color: $color-primary;
+  }
+
+  &--success &__link {
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-success;
+        color: #fff;
+
+        &:before {
+          border-color: $color-success;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-success;
+        }
+      }
+    }
+  }
+
+  &--success &__link:not(.is-current).is-active &__point,
+  &--success &__link:not(.is-current):hover &__point,
+  &--success &__link:not(.is-current):active &__point {
+    color: $color-success;
+  }
+
+  &--info &__link {
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-info;
+        color: #fff;
+
+        &:before {
+          border-color: $color-info;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-info;
+        }
+      }
+    }
+  }
+
+  &--info &__link:not(.is-current).is-active &__point,
+  &--info &__link:not(.is-current):hover &__point,
+  &--info &__link:not(.is-current):active &__point {
+    color: $color-info;
+  }
+
+  &--danger &__link {
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-danger;
+        color: #fff;
+
+        &:before {
+          border-color: $color-danger;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-danger;
+        }
+      }
+    }
+  }
+
+  &--danger &__link:not(.is-current).is-active &__point,
+  &--danger &__link:not(.is-current):hover &__point,
+  &--danger &__link:not(.is-current):active &__point {
+    color: $color-danger;
+  }
+
+  &--warning &__link {
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-warning;
+        color: #fff;
+
+        &:before {
+          border-color: $color-warning;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-warning;
+        }
+      }
+    }
+  }
+
+  &--warning &__link:not(.is-current).is-active &__point,
+  &--warning &__link:not(.is-current):hover &__point,
+  &--warning &__link:not(.is-current):active &__point {
+    color: $color-warning;
+  }
+}
+
+.breadcrumb-b {
+  &__point {
+    color: #4db4f6;
+  }
+
+  &__link {
+    background: #4db4f6;
+    color: #fff;
+
+    &:before {
+      border-color: #4db4f6;
+      border-left-color: transparent;
+    }
+
+    &:after {
+      border-color: transparent;
+      border-left-color: #4db4f6;
+    }
+
+    &:active {
+      color: #fff;
+    }
+
+    &.is-current {
+      background: #26a4f4;
+      color: #fff;
+
+      &:before {
+        border-color: #26a4f4;
+        border-left-color: transparent;
+      }
+
+      &:after {
+        border-left-color: #26a4f4;
+      }
+    }
+  }
+
+  &--primary &__point {
+    color: #7c8793;
+  }
+
+  &--primary &__link {
+    background: #7c8793;
+    color: #fff;
+
+    &:before {
+      border-color: #7c8793;
+      border-left-color: transparent;
+    }
+
+    &:after {
+      border-color: transparent;
+      border-left-color: #7c8793;
+    }
+
+    &.is-current {
+      background: #606e7b;
+      color: #fff;
+
+      &:before {
+        border-color: #606e7b;
+        border-left-color: transparent;
+      }
+
+      &:after {
+        border-left-color: #606e7b;
+      }
+    }
+
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-primary;
+        color: #fff;
+
+        &:before {
+          border-color: $color-primary;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &--success &__point {
+    color: $color-success;
+  }
+
+  &--success &__link {
+    background: #a8d485;
+    color: #fff;
+
+    &:before {
+      border-color: #a8d485;
+      border-left-color: transparent;
+    }
+
+    &:after {
+      border-color: transparent;
+      border-left-color: #a8d485;
+    }
+
+    &.is-current {
+      background: #95cb6a;
+      color: #fff;
+
+      &:before {
+        border-color: #95cb6a;
+        border-left-color: transparent;
+      }
+
+      &:after {
+        border-left-color: #95cb6a;
+      }
+    }
+
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-success;
+        color: #fff;
+
+        &:before {
+          border-color: $color-success;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-success;
+        }
+      }
+    }
+  }
+
+  &--info &__point {
+    color: #67b8f5;
+  }
+
+  &--info &__link {
+    background: #67b8f5;
+    color: #fff;
+
+    &:before {
+      border-color: #67b8f5;
+      border-left-color: transparent;
+    }
+
+    &:after {
+      border-color: transparent;
+      border-left-color: #67b8f5;
+    }
+
+    &.is-current {
+      background: #47a9f3;
+      color: #fff;
+
+      &:before {
+        border-color: #47a9f3;
+        border-left-color: transparent;
+      }
+
+      &:after {
+        border-left-color: #47a9f3;
+      }
+    }
+
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-info;
+        color: #fff;
+
+        &:before {
+          border-color: $color-info;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-info;
+        }
+      }
+    }
+  }
+
+  &--danger &__point {
+    color: #f1767f;
+  }
+
+  &--danger &__link {
+    background: #f1767f;
+    color: #fff;
+
+    &:before {
+      border-color: #f1767f;
+      border-left-color: transparent;
+    }
+
+    &:after {
+      border-color: transparent;
+      border-left-color: #f1767f;
+    }
+
+    &.is-current {
+      background: #ee5863;
+      color: #fff;
+
+      &:before {
+        border-color: #ee5863;
+        border-left-color: transparent;
+      }
+
+      &:after {
+        border-left-color: #ee5863;
+      }
+    }
+
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-danger;
+        color: #fff;
+
+        &:before {
+          border-color: $color-danger;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-danger;
+        }
+      }
+    }
+  }
+
+  &--warning &__point {
+    color: #f7a864;
+  }
+
+  &--warning &__link {
+    background: #f7a864;
+    color: #fff;
+
+    &:before {
+      border-color: #f7a864;
+      border-left-color: transparent;
+    }
+
+    &:after {
+      border-color: transparent;
+      border-left-color: #f7a864;
+    }
+
+    &.is-current {
+      background: #f69542;
+      color: #fff;
+
+      &:before {
+        border-color: #f69542;
+        border-left-color: transparent;
+      }
+
+      &:after {
+        border-left-color: #f69542;
+      }
+    }
+
+    &:not(.is-current) {
+      &.is-active,
+      &:hover,
+      &:active {
+        background: $color-warning;
+        color: #fff;
+
+        &:before {
+          border-color: $color-warning;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $color-warning;
+        }
+      }
+    }
+  }
+}
+/** END: breadcrumbs */

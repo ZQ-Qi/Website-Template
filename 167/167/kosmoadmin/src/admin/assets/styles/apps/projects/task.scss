@@ -1,0 +1,187 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-project-task-page
+2. Task info / .ks-project-task-page .ks-task-information
+3. Task common info / .ks-project-task-page .ks-task-common-block
+4. Task tabs / .ks-project-task-page .ks-task-tabs
+5. Task details / .ks-project-task-page .ks-task-details
+-------------------------------------------------------------------*/
+
+@import "../../config/colors";
+
+.ks-project-task-page {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  > .ks-task-information {
+    flex-grow: 1;
+
+    .ks-wrapper {
+      padding: 30px;
+
+      > .ks-task-common-block {
+        padding: 30px;
+        margin-bottom: 30px;
+
+        > .ks-header {
+          display: flex;
+          align-items: center;
+
+          > .ks-name {
+            flex-grow: 1;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 500;
+            color: $ks-default-text-color;
+
+            > .badge {
+              position: relative;
+              top: -1px;
+              margin-left: 5px;
+            }
+          }
+
+          > .ks-progress {
+            margin-left: 20px;
+
+            > .progress {
+              margin: 0;
+              width: 100px;
+            }
+          }
+
+          > .ks-datetime {
+            margin-left: 30px;
+            font-size: 12px;
+            width: 60px;
+
+            > .ks-icon {
+              font-size: 14px;
+              display: inline-block;
+              margin-right: 5px;
+            }
+          }
+
+          > .ks-users {
+            font-size: 10px;
+            font-weight: 500;
+            margin-left: 20px;
+
+            > .ks-image {
+              display: inline-block;
+              margin-right: 4px;
+            }
+          }
+        }
+
+        > .ks-project {
+          font-size: 12px;
+          color: $ks-default-text-color-light;
+          margin-top: 5px;
+          margin-bottom: 25px;
+          display: flex;
+          align-items: center;
+
+          > .ks-avatar {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            margin: 0 7px;
+          }
+        }
+
+        > .card-block {
+          padding: 0;
+
+          > .ks-controls {
+            > .ks-start-button {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+
+      > .ks-task-tabs {
+        margin-top: 30px;
+
+        .ks-comments-section {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  > .ks-task-details {
+    width: 320px;
+    min-width: 320px;
+    border-left: 1px solid $ks-default-border-color;
+    background: #fff;
+
+    .ks-wrapper {
+      padding: 30px;
+      > .ks-collapse-block {
+        > .nav-item {
+          > .nav-link {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .btn {
+    &.ks-task-details-block-toggle {
+      position: static;
+    }
+  }
+
+  .ks-project-task-page {
+    > .ks-task-details {
+      width: 280px;
+      min-width: 280px;
+      position: fixed;
+      top: 120px;
+      bottom: 0;
+      right: -280px;
+      z-index: 2;
+      height: calc(100% - 120px);
+
+      &.ks-open {
+        right: 0;
+        transition: right .2s ease;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ks-project-task-page {
+    > .ks-task-information {
+      .ks-wrapper {
+        > .ks-tabs-container {
+          .ks-nav-tabs {
+            flex-direction: column;
+          }
+        }
+
+        > .ks-task-common-block {
+          > .ks-header {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            > .ks-progress, > .ks-datetime, > .ks-users {
+              margin-left: 0;
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

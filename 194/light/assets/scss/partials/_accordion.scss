@@ -1,0 +1,79 @@
+.accordion{
+	.card-header{
+        @extend .padding-0;
+        .btn{
+            @extend .align-left;
+            font-size: $font16;
+            padding: 10px 20px;
+            width: 100%;            
+        }
+    }
+
+    &.custom{
+        .card-header{
+            background: transparent;
+            border-color: $grey-200;
+            .btn{
+                color: $grey-700;
+
+                &:hover,
+                &:focus{
+                    text-decoration: none;                    
+                }
+            }
+        }
+        .card-body{
+            font-size: $font15;            
+            color: $grey-600;
+            line-height: 28px;
+        }
+    }
+}
+
+.accordion2 {
+	@extend .margin-0;
+	@extend .padding-0;
+	list-style: none;
+    border-top: 1px solid $grey-300;
+    
+    .accordion-item {
+        border-bottom: 1px solid $grey-300;
+        padding: 0 15px;        
+    }
+
+    /* Thumb */
+    .accordion-thumb {
+        font-weight: $font-weight-400;
+        font-size: $font16;
+        @extend .margin-0;
+        padding: .8rem 0;
+        cursor: pointer;                
+        
+        // Chevron
+        &::before {
+            @extend .inlineblock;            
+            content: "\f138";
+            font-family: 'FontAwesome';
+            @include transition(all .3s ease-in-out);
+        }
+
+
+        span{
+            @extend .m-l-10;
+        }
+    }
+
+    /* Panel */
+    .accordion-panel {
+        @extend .margin-0;
+        padding-bottom: .8rem;
+        display: none;
+    }
+
+    /* Active */
+    .accordion-item.is-active {
+        .accordion-thumb::before {
+            content: "\f13a";            
+        }
+    }
+}

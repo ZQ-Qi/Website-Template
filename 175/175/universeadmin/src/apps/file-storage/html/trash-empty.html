@@ -1,0 +1,17 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}File Storage / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="file-storage">
+  {% include "./components/header.html" %}
+
+  <div class="file-storage__body">
+    {% include "./components/menu.html" %}
+
+    <div class="file-storage__content">
+      {% include "./components/trash-empty.html" %}
+    </div>
+  </div>
+</div>
+{% endblock %}

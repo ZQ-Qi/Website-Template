@@ -1,0 +1,620 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Messenger / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid m-messenger">
+  <div class="main-container m-messenger__container">
+    <div class="m-messenger__discussions">
+      <ul class="nav nav-tabs m-messenger__discussions-header">
+        <li class="nav-item">
+          <a class="nav-link active" id="messenger-recent" data-toggle="tab" href="#messenger-recent-tab">
+            <span class="tab-icon ua-icon-messages"></span>
+            <span class="tab-text">Chats</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="messenger-contacts" data-toggle="tab" href="#messenger-contacts-tab">
+            <span class="tab-icon ua-icon-users tab-icon-contacts"></span>
+            <span class="tab-text">Contacts</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="messenger-favorites" data-toggle="tab" href="#messenger-favorites-tab">
+            <span class="tab-icon ua-icon-star-outline-alt tab-icon-favorites"></span>
+            <span class="tab-text">Favorites</span>
+          </a>
+        </li>
+      </ul>
+      <div class="tab-content m-messenger__discussions-body">
+        <div class="tab-pane show active" id="messenger-recent-tab">
+          <div class="m-messenger__discussions-search">
+            <div class="input-group input-group-icon iconfont icon-right mb-0">
+              <input class="form-control" type="text" placeholder="Search users by name...">
+              <span class="input-icon ua-icon-search"></span>
+            </div>
+          </div>
+          <div class="m-messenger__discussions-content">
+            <div class="m-messenger__discussions-scrollpane js-scrollable">
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-group">
+                  <img src="img/users/user-11.png" alt="" width="16" height="16" class="rounded-circle m-messenger__conversation-group-item">
+                  <img src="img/users/user-10.png" alt="" width="16" height="16" class="rounded-circle m-messenger__conversation-group-item">
+                  <img src="img/users/user-9.png" alt="" width="16" height="16" class="rounded-circle m-messenger__conversation-group-item">
+                  <span class="m-messenger__conversation-group-item">+3</span>
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-new-messages-amount">32</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-11.png" alt="" width="34" height="34" class="rounded-circle">
+                  <span class="m-messenger__conversation-user-status is-online"></span>
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation is-active">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-11.png" alt="" width="34" height="34" class="rounded-circle">
+                  <span class="m-messenger__conversation-user-status is-online"></span>
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-11.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-new-messages-amount">4</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-11.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-11.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-11.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-9.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-new-messages-amount">8</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-10.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-12.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-9.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-10.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-12.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-9.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-10.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-12.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-9.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-10.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-12.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                    <span class="m-messenger__conversation-date">13.06.17</span>
+                  </div>
+                  <div class="m-messenger__conversation-message">Hi, how can I help you?</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="messenger-contacts-tab">
+          <div class="m-messenger__contacts-search">
+            <div class="input-group input-group-icon iconfont icon-right mb-0">
+              <input class="form-control" type="text" placeholder="Search users by name...">
+              <span class="input-icon ua-icon-search"></span>
+            </div>
+            <div class="m-messenger__contacts-filter">
+              <div class="dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown">All users</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">All users</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-secondary m-messenger__add-contact">Add Contact</a>
+            </div>
+          </div>
+          <div class="m-messenger__contacts-content">
+            <div class="m-messenger__discussions-scrollpane js-scrollable">
+              <div class="m-messenger__contacts-content-separator">A</div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-11.png" alt="" width="34" height="34" class="rounded-circle">
+                  <span class="m-messenger__conversation-user-status is-online"></span>
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-12.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-13.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-14.png" alt="" width="34" height="34" class="rounded-circle">
+                  <span class="m-messenger__conversation-user-status is-online"></span>
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__contacts-content-separator">B</div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-15.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-16.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-17.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__contacts-content-separator">C</div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-15.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-16.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-17.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__contacts-content-separator">D</div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-15.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-16.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-messenger__conversation">
+                <div class="m-messenger__conversation-avatar">
+                  <img src="img/users/user-17.png" alt="" width="34" height="34" class="rounded-circle">
+                </div>
+                <div class="m-messenger__conversation-wrap">
+                  <div class="m-messenger__conversation-header">
+                    <span class="m-messenger__conversation-username">Roxanne Abrams</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="messenger-favorites-tab">
+
+        </div>
+      </div>
+    </div>
+    <div class="m-messenger__messages">
+      <div class="m-messenger__messages-header">
+        <div class="m-messenger__messages-to">To: <a href="#">Rebecca Harris</a></div>
+        <div class="m-messenger__messages-actions">
+          <span class="m-messenger__messages-action ua-icon-comment"></span>
+          <span class="m-messenger__messages-action ua-icon-phone"></span>
+          <span class="m-messenger__messages-action ua-icon-video"></span>
+        </div>
+      </div>
+      <div class="m-messenger__messages-body">
+        <div class="m-messenger__messages-body-scrollpane js-scrollable">
+          <div class="m-messenger__messages-block">
+            <div class="m-messenger__messages-message is-interlocutor">
+              <img src="img/users/user-8.png" alt="" width="34" height="34" class="rounded-circle m-messenger__messages-avatar">
+              <div class="m-messenger__messages-wrap">
+                <div class="m-messenger__messages-message-text">Good afternoon, Rebecca! Need an online consultant for the site?</div>
+                <span class="m-messenger__messages-date">1:25 am</span>
+              </div>
+            </div>
+
+            <div class="m-messenger__messages-message is-self">
+              <img src="img/users/user-9.png" alt="" width="34" height="34" class="rounded-circle m-messenger__messages-avatar">
+              <div class="m-messenger__messages-wrap">
+                <div class="m-messenger__messages-message-text">Good afternoon, Rebecca! Need an online consultant for the site?</div>
+                <span class="m-messenger__messages-date">1:25 am</span>
+              </div>
+            </div>
+
+            <div class="m-messenger__messages-message is-interlocutor">
+              <img src="img/users/user-8.png" alt="" width="34" height="34" class="rounded-circle m-messenger__messages-avatar">
+              <div class="m-messenger__messages-wrap">
+                <div class="m-messenger__messages-message-text">Good afternoon, Rebecca! Need an online consultant for the site?</div>
+                <span class="m-messenger__messages-date">1:25 am</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="m-messenger__messages-separator"><span>Yesterday</span></div>
+
+          <div class="m-messenger__messages-message is-self">
+            <img src="img/users/user-9.png" alt="" width="34" height="34" class="rounded-circle m-messenger__messages-avatar">
+            <div class="m-messenger__messages-wrap">
+              <div class="m-messenger__messages-message-text">Good afternoon, Rebecca! Need an online consultant for the site?</div>
+              <span class="m-messenger__messages-date">1:25 am</span>
+            </div>
+          </div>
+
+          <div class="m-messenger__messages-message is-interlocutor">
+            <img src="img/users/user-8.png" alt="" width="34" height="34" class="rounded-circle m-messenger__messages-avatar">
+            <div class="m-messenger__messages-wrap">
+              <div class="m-messenger__messages-message-text">
+                Good afternoon, Rebecca! Need an online consultant for the site?
+                Good afternoon, Rebecca! Need an online consultant for the site?
+              </div>
+              <span class="m-messenger__messages-date">1:25 am</span>
+              <div class="m-messenger__messages-attachments">
+                <a href="#" class="m-messenger__messages-attachment">
+                  <img src="img/messenger/attachment-1.png" alt="" width="182" height="137">
+                  <div class="m-messenger__messages-attachment-placeholder">
+                    <div class="m-messenger__messages-attachment-name">Screenshot</div>
+                    <div class="m-messenger__messages-attachment-desc">printscreen.com</div>
+                  </div>
+                </a>
+                <a href="#" class="m-messenger__messages-attachment">
+                  <img src="img/messenger/attachment-2.png" alt="" width="182" height="137">
+                  <div class="m-messenger__messages-attachment-placeholder">
+                    <div class="m-messenger__messages-attachment-name">Screenshot</div>
+                  </div>
+                </a>
+                <a href="#" class="m-messenger__messages-attachment">
+                  <img src="img/messenger/attachment-3.png" alt="" width="182" height="137">
+                  <div class="m-messenger__messages-attachment-placeholder">
+                    <div class="m-messenger__messages-attachment-name">Screenshot</div>
+                    <div class="m-messenger__messages-attachment-desc">printscreen.com</div>
+                  </div>
+                </a>
+                <a href="#" class="m-messenger__messages-attachment">
+                  <img src="img/messenger/attachment-4.png" alt="" width="182" height="137">
+                  <div class="m-messenger__messages-attachment-placeholder">
+                    <div class="m-messenger__messages-attachment-name">Screenshot</div>
+                    <div class="m-messenger__messages-attachment-desc">printscreen.com</div>
+                  </div>
+                </a>
+                <a href="#" class="m-messenger__messages-attachment">
+                  <img src="img/messenger/attachment-5.png" alt="" width="182" height="137">
+                  <div class="m-messenger__messages-attachment-placeholder">
+                    <div class="m-messenger__messages-attachment-name">Screenshot</div>
+                    <div class="m-messenger__messages-attachment-desc">printscreen.com</div>
+                  </div>
+                </a>
+                <a href="#" class="m-messenger__messages-attachment">
+                  <img src="img/messenger/attachment-6.png" alt="" width="182" height="137">
+                  <div class="m-messenger__messages-attachment-placeholder">
+                    <div class="m-messenger__messages-attachment-name">Screenshot</div>
+                    <div class="m-messenger__messages-attachment-desc">printscreen.com</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-messenger__messages-message is-self">
+            <img src="img/users/user-9.png" alt="" width="34" height="34" class="rounded-circle m-messenger__messages-avatar">
+            <div class="m-messenger__messages-wrap">
+              <div class="m-messenger__messages-message-text">Good afternoon, Rebecca! Need an online consultant for the site?</div>
+              <span class="m-messenger__messages-date">1:25 am</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m-messenger__messages-footer">
+        <div class="m-messenger__messages-textarea">
+          <textarea class="form-control" placeholder="Type your message here..."></textarea>
+        </div>
+        <div class="m-messenger__messages-footer-actions dropup">
+          <div class="dropdown">
+            <a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+              <span class="ua-icon-addon"></span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Add file</a>
+              <a class="dropdown-item" href="#">Add video</a>
+              <a class="dropdown-item" href="#">Add image</a>
+            </div>
+          </div>
+          <button class="btn btn-info m-messenger__messages-footer-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="m-messenger__info js-scrollable">
+      <div class="m-messenger__info-user">
+        <img src="img/users/user-lg-1.png" alt="" width="110" height="110" class="m-messenger__info-avatar">
+        <span class="m-messenger__info-username">Rebecca Harris</span>
+        <span class="m-messenger__info-location">San Francisco, CA</span>
+        <div class="m-messenger__info-social">
+          <a href="#" class="m-messenger__info-social-icon ua-icon-social-facebook-sm color-facebook"></a>
+          <a href="#" class="m-messenger__info-social-icon ua-icon-social-twitter-sm color-twitter"></a>
+          <a href="#" class="m-messenger__info-social-icon ua-icon-social-google-plus-sm color-google-plus"></a>
+        </div>
+      </div>
+      <div class="m-messenger__info-item">
+        <h6 class="m-messenger__info-heading">
+          <span class="m-messenger__info-heading-icon ua-icon-folder"></span>
+          Shared files
+        </h6>
+        <ul class="list-unstyled m-messenger__info-files">
+          <li>
+            <a href="#">Annual Revenue.pdf</a>
+          </li>
+          <li>
+            <a href="#">Expenses.xls</a>
+          </li>
+          <li>
+            <a href="#">Design mockups.sketch</a>
+          </li>
+        </ul>
+      </div>
+      <div class="m-messenger__info-item">
+        <h6 class="m-messenger__info-heading">
+          <span class="m-messenger__info-heading-icon ua-icon-image"></span>
+          Shared photos
+        </h6>
+        <div class="m-messenger__info-photos">
+          <a href="#">
+            <img src="img/messenger/1.png" alt="">
+          </a>
+          <a href="#">
+            <img src="img/messenger/2.png" alt="">
+          </a>
+          <a href="#">
+            <img src="img/messenger/3.png" alt="">
+          </a>
+          <a href="#">
+            <img src="img/messenger/4.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

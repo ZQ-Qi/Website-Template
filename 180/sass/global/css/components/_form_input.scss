@@ -1,0 +1,147 @@
+/*---------------------------
+
+Start form input
+
+---------------------------*/
+
+.form-item{
+  position: $position-relative;
+  display: block;
+  margin-bottom: $gaping-20;
+  margin-top: $gaping-10;
+  .form-style{
+    color:#8a8a8a;
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: $gaping-5 $gaping-10;
+    border:1px solid $normal-light-text-color;
+    background-color: $white-backgournd-color;
+    transition: all .2s ease;
+    &:focus, &.focus{
+      outline: none;
+      border:1px solid $main-site-color;
+      color:$main-site-color;
+    }
+  }
+  p.formLabel {
+    position: $position-absolute;
+    left:$gaping-15;
+    top:9px;
+    transition:all .4s ease;
+    color:#bbb;
+    padding: $gaping-0;
+    &.formTop{
+      top:-14px;
+      background-color: $white-backgournd-color;
+      padding:$gaping-0 $gaping-5;
+      font-size: 14px;
+      color:$main-site-color
+    }
+  }
+  &.success-item{
+    .form-style{
+      &:focus, &.focus{
+        border:1px solid $success-text-color;
+        color:$success-text-color;
+      }
+    }
+    p.formLabel {
+      &.formTop{
+        color:$success-text-color
+      }
+    }
+  }
+  &.warning-item{
+    .form-style{
+      &:focus, &.focus{
+        border:1px solid $warning-text-color;
+        color:$warning-text-color;
+      }
+    }
+    p.formLabel {
+      &.formTop{
+        color:$warning-text-color
+      }
+    }
+  }
+  &.danger-item{
+    .form-style{
+      &:focus, &.focus{
+        border:1px solid $danger-text-color;
+        color:$danger-text-color;
+      }
+    }
+    p.formLabel {
+      &.formTop{
+        color:$danger-text-color
+      }
+    }
+  }
+  &.purple-item{
+    .form-style{
+      &:focus, &.focus{
+        border:1px solid $purple-text-color;
+        color:$purple-text-color;
+      }
+    }
+    p.formLabel {
+      &.formTop{
+        color:$purple-text-color
+      }
+    }
+  }
+  &.pink-item{
+    .form-style{
+      &:focus, &.focus{
+        border:1px solid $pink-text-color;
+        color:$pink-text-color;
+      }
+    }
+    p.formLabel {
+      &.formTop{
+        color:$pink-text-color
+      }
+    }
+  }
+}
+
+/*---- Start responsive form input ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+  .form-item{
+    .form-style {
+      height: 40px;
+    }
+    p{
+      &.formLabel {
+        top: 7px;
+      }
+    }
+  }
+}
+
+@media (max-width:479px) {
+  .help-block {
+    margin-top: 1px;
+    font-size: 12px;
+  }
+}
+/*---- End responsive form input ----*/
+
+/*---------------------------
+
+End form input
+
+---------------------------*/

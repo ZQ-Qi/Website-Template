@@ -1,0 +1,47 @@
+//- =========================================================================================
+	File Name: card-social.jade
+	Description: Advance social cards
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle   = "Advance Social Cards"
+	- var pageSubTitle = "Extended default cards"
+	- var description = "Exteding default bootstrap card functionality."
+	- var activeMenu  = "card-social"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Components"}, {name:"Social Cards"}])
+
+//- Include page content in page block
+append content
+	include ../contents/card-social.html
+
+//- Vendor CSS
+//------------------------------
+//- Add vendor specific CSS
+append vendorcss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/vendors/css/extensions/unslider.css')
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	//- Unslider JS
+	script(src=app_assets_path+'/vendors/js/extensions/unslider-min.js', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	//- Advance cards JS
+	script(src=app_assets_path+'/js/scripts/cards/card-social.js', type='text/javascript')
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/pages/users.css')

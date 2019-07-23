@@ -1,0 +1,77 @@
+/* ==========================================================================
+   #PROGRESS
+   ========================================================================== */
+
+.c-progress {
+	display: block;
+	width: 100%;
+	height: $progress-height;
+	margin: $progress-margin;
+	border-radius: $progress-border-radius;
+	background-color: $progress-background-color;
+}
+
+/**
+ * 1. Default (info) background-color would be applied, if class 
+ *    `c-progress--[color]` isn't specified.
+ */
+
+.c-progress__bar {
+	position: relative;
+	height: 100%;
+	border-radius: $progress-border-radius;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	@include linear-gradient(to bottom, $progress-bar-info-gradient); /* [1] */
+}
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-progress--xsmall {
+	height: $progress-xsmall-height;
+}
+
+.c-progress--small {
+	height: $progress-small-height;
+}
+
+.c-progress--medium {
+	height: $progress-medium-height;
+}
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-progress--info {
+	.c-progress__bar {
+		@include linear-gradient(to bottom, $progress-bar-info-gradient);
+	}
+}
+
+.c-progress--success {
+	.c-progress__bar {
+		@include linear-gradient(to bottom, $progress-bar-success-gradient);
+	}
+}
+
+.c-progress--warning {
+	.c-progress__bar {
+		@include linear-gradient(to bottom, $progress-bar-warning-gradient);
+	}
+}
+
+.c-progress--danger {
+	.c-progress__bar {
+		@include linear-gradient(to bottom, $progress-bar-danger-gradient);
+	}
+}
+
+.c-progress--primary {
+	.c-progress__bar {
+		@include linear-gradient(to bottom, $progress-bar-primary-gradient);
+	}
+}

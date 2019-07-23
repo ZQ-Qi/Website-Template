@@ -1,0 +1,732 @@
+/*---------------------------
+
+Start button
+
+---------------------------*/
+.button-page-section{
+  .btn{
+    margin-bottom: $gaping-10 - 2;
+  }
+  .section-body{
+    padding: $gaping-10 $gaping-10 2px $gaping-10;
+  }
+}
+.btn-margin{
+  .btn{
+    margin-bottom: $gaping-10 - 2;
+  }
+}
+.btn-purple{
+  background: $purple-background-color;
+  border: 1px solid $purple-background-color;
+  color: $white-text-color;
+  &:hover, &:focus{
+    background: $purple-background-color;
+    border: 1px solid $purple-background-color;
+    color: $white-text-color;
+  }
+}
+.btn-pink{
+  background: $pink-background-color;
+  border: 1px solid $pink-background-color;
+  color: $white-text-color;
+  &:hover, &:focus{
+    background: $pink-background-color;
+    border: 1px solid $pink-background-color;
+    color: $white-text-color;
+  }
+}
+.btn-inverse{
+  background: $inverse-background-color;
+  border: 1px solid $inverse-background-color;
+  color: $white-text-color;
+  &:hover, &:focus{
+    background: $inverse-background-color;
+    border: 1px solid $inverse-background-color;
+    color: $white-text-color;
+  }
+}
+.btn-outline{
+  &.btn {
+    background-color: transparent;
+  }
+  &.btn-primary{
+    color: $main-site-color;
+    &:hover, &:focus{
+      color: $white-text-color;
+    }
+  }
+  &.btn-success{
+    color: $success-text-color;
+    &:hover, &:focus{
+      background: $success-background-color;
+      color: $white-text-color;
+    }
+  }
+  &.btn-info{
+    color: $info-text-color;
+    &:hover, &:focus{
+      background: $info-background-color;
+      color: $white-text-color;
+    }
+  }
+  &.btn-warning{
+    color: $warning-text-color;
+    &:hover, &:focus{
+      background: $warning-background-color;
+      color: $white-text-color;
+    }
+  }
+  &.btn-danger{
+    color: $danger-text-color;
+    &:hover, &:focus{
+      background: $danger-background-color;
+      color: $white-text-color;
+    }
+  }
+  &.btn-purple{
+    color: $purple-text-color;
+    &:hover, &:focus{
+      background: $purple-background-color;
+      color: $white-text-color;
+    }
+  }
+  &.btn-pink{
+    color: $pink-text-color;
+    &:hover, &:focus{
+      background: $pink-background-color;
+      color: $white-text-color;
+    }
+  }
+  &.btn-inverse{
+    color: $inverse-text-color;
+    &:hover, &:focus{
+      background: $inverse-background-color;
+      color: $white-text-color;
+    }
+  }
+}
+.effect {
+  display: inline-block;
+  position: $position-relative;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: $gaping-20 $gaping-0;
+  width: 150px;
+  overflow: hidden;
+}
+.effect.effect-1 {
+  @include transition(all 0.2s linear 0s);
+  &:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: $position-absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: $gaping-40;
+    @include transition(all 0.2s linear 0s);
+  }
+  &:hover {
+    text-indent: -20px;
+
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}
+
+.effect.effect-2 {
+  @include transition(all 0.2s linear 0s);
+
+  &:before {
+    content: "\f0a4";
+    font-family: FontAwesome;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: $position-absolute;
+    top: 0;
+    right: -30px;
+    width: $gaping-35;
+    height: 100%;
+    background-color: rgba($white-backgournd-color,0.3);
+    border-radius: $border-radius-0;
+    @include transition(all 0.2s linear 0s);
+    text-align: $text-center;
+  }
+
+  &:hover {
+    text-indent: -30px;
+
+    &:before {
+      right: 0;
+      text-indent: 0px;
+    }
+  }
+}
+
+.effect.effect-3 {
+  @include transition(all 0.2s linear 0s);
+
+  &:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    position: $position-absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100%;
+    left: $gaping-0;
+    width: 100%;
+    height: 100%;
+    text-align: $text-center;
+    font-size: 30px;
+    @include transition(all 0.2s linear 0s);
+  }
+
+  &:hover {
+    text-indent: -9999px;
+
+    &:before {
+      top: 0;
+      text-indent: 0;
+    }
+  }
+}
+
+//effect-4 styles
+.effect.effect-4 {
+  @include transition(all 0.2s linear 0s);
+  &:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: $position-absolute;
+    top: 0;
+    left: $gaping-0;
+    width: 100%;
+    height: 100%;
+    text-align: $text-center;
+    font-size: 30px;
+    @include transform(scale(0,1));
+    @include transition(all 0.2s linear 0s);
+  }
+
+  &:hover {
+    text-indent: -9999px;
+
+    &:before {
+      @include transform(scale(1,1));
+      text-indent: 0;
+    }
+  }
+}
+
+//effect-5 styles
+
+.effect.effect-5 {
+  @include transition(all 0.2s linear 0s);
+  &:before {
+    content: "\f054";
+    font-family: FontAwesome;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: $position-absolute;
+    top: 0;
+    left: $gaping-0;
+    height: 100%;
+    width: $gaping-35;
+    background-color: rgba($white-backgournd-color,0.3);
+    border-radius: 0 50% 50% 0;
+    @include transform(scale(0,1));
+    transform-origin: left center;
+    @include transition(all 0.2s linear 0s);
+  }
+
+  &:hover {
+    text-indent: 30px;
+
+    &:before {
+      @include transform(scale(1,1));
+      text-indent: 0;
+    }
+  }
+}
+
+.btn.border-solid{
+  &:hover{
+    background: transparent;
+    border: 1px solid $main-site-color;
+    color: $main-site-color;
+  }
+}
+.btn.border-dashed{
+  &:hover{
+    background: transparent;
+    border: 1px dashed $main-site-color;
+    color: $main-site-color;
+  }
+}
+.btn.border-dotted{
+  &:hover{
+    background: transparent;
+    border: 1px dotted $main-site-color;
+    color: $main-site-color;
+  }
+}
+.btn.border-double{
+  border: 3px solid;
+  &:hover{
+    background: transparent;
+    border: 3px double $main-site-color;
+    color: $main-site-color;
+  }
+}
+.btn.border-inset{
+  border: 2px solid;
+  &:hover{
+    background: transparent;
+    border: 2px inset $main-site-color;
+    color: $main-site-color;
+  }
+}
+.btn.button-left-round{
+  border-radius: $gaping-50 0 0 $gaping-50;
+}
+.btn.button-right-round{
+  border-radius: 0 $gaping-50 $gaping-50 0;
+}
+.btn-group{
+  .btn{
+    border-radius: $border-radius-0;
+    margin-right: $gaping-0;
+  }
+}
+
+//switcher
+.switcher {
+  position: $position-relative;
+  display: inline-block;
+  cursor: $text-link;
+  padding-left: $gaping-40;
+  height: $gaping-20;
+  margin-right: $gaping-15;
+  input {
+    display: none;
+  }
+}
+
+.switcher-indicator {
+  &::after {
+    content: '';
+    position: $position-absolute;
+    top: 0;
+    left: 0;
+    height: $gaping-20;
+    width: $gaping-20;
+    background-color: $normal-light-text-color;
+    border-radius: $border-radius-circle;
+    @include transition(all 0.3s ease);
+    animation-name: pulsein;
+    animation-duration: .3s;
+  }
+
+  &::before {
+    content: '';
+    position: $position-absolute;
+    top: 7px;
+    left: 0;
+    width: $gaping-40;
+    height: 7px;
+    background-color: $normal-light-text-color;
+    border-radius: 10px;
+    @include transition(all 0.3s ease);
+  }
+
+  input:checked + &::after {
+    background-color: $main-site-color;
+    transform: translateX(20px);
+    animation-name: pulseout;
+    animation-duration: .3s;
+  }
+
+  input:checked + &::before {
+    background-color: $main-site-color;
+  }
+
+  input:disabled + &::after,
+  input:disabled + &::before {
+    background-color: #e5e5e5;
+  }
+
+  &.success-switcher{
+    input:checked + &::after {
+      background-color: $success-background-color;
+    }
+    input:checked + &::before {
+      background-color: $success-background-color;
+    }
+  }
+  &.info-switcher{
+    input:checked + &::after {
+      background-color: $info-background-color;
+    }
+    input:checked + &::before {
+      background-color: $info-background-color;
+    }
+  }
+  &.warning-switcher{
+    input:checked + &::after {
+      background-color: $warning-background-color;
+    }
+    input:checked + &::before {
+      background-color: $warning-background-color;
+    }
+  }
+  &.danger-switcher{
+    input:checked + &::after {
+      background-color: $danger-background-color;
+    }
+    input:checked + &::before {
+      background-color: $danger-background-color;
+    }
+  }
+  &.purple-switcher{
+    input:checked + &::after {
+      background-color: $purple-background-color;
+    }
+    input:checked + &::before {
+      background-color: $purple-background-color;
+    }
+  }
+  &.pink-switcher{
+    input:checked + &::after {
+      background-color: $pink-background-color;
+    }
+    input:checked + &::before {
+      background-color: $pink-background-color;
+    }
+  }
+}
+
+//material checkbox
+.checkbox {
+  margin: $gaping-0 $gaping-0 $gaping-15 $gaping-0;
+  label {
+    min-height: 23px;
+    position: $position-relative;
+    cursor: $text-link;
+    padding-left: $gaping-35;
+    text-align: $text-left;
+    display: block;
+    line-height: 23px;
+    &:hover{
+      .helper {
+        color: $white-text-color;
+      }
+    }
+  }
+  input {
+    width: auto;
+    opacity: 0.00000001;
+    position: $position-absolute;
+    left: 0;
+    &:checked ~ .helper {
+      color: $main-site-color;
+      &:before, &:after{
+        opacity: 1;
+        @include transition(height 0.28s ease);
+      }
+      &:after{
+        height: 8px;
+      }
+      &:before{
+        height: $gaping-25;
+        -webkit-transition-delay: 0.28s;
+        transition-delay: 0.28s;
+      }
+    }
+  }
+  .helper {
+    color: $white-text-color;
+    position: $position-absolute;
+    top: 3px;
+    left: 0;
+    width: $gaping-20;
+    height: $gaping-20;
+    z-index: 0;
+    border: 2px solid $main-site-color;
+    @include transition(border-color 0.28s ease);
+    &:before, &:after{
+      position: $position-absolute;
+      height: 0;
+      width: 3px;
+      background: $main-site-color;
+      display: block;
+      transform-origin: left top;
+      @include border-radius(4px);
+      content: '';
+      transition: opacity 0.28s ease, height 0s linear 0.28s;
+      opacity: 0;
+    }
+    &:before{
+      top: 16px;
+      left: 7px;
+      @include transform(rotate(-140deg));
+    }
+    &:after {
+      top: 9px;
+      left: 0;
+      @include transform(rotate(-45deg));
+    }
+  }
+}
+
+.form-radio {
+  input {
+    left: 0;
+    opacity: 0;
+    position: $position-absolute;
+    width: auto;
+  }
+  label {
+    color: $light-gray-color;
+    font-weight: $normal-text;
+    cursor: $text-link;
+    display: block;
+    padding-left: $gaping-30 + 2;
+    position: $position-relative;
+    text-align: $text-left;
+    padding-bottom: $gaping-10;
+  }
+  .radio-button {
+    .helper {
+      &:after, &:before {
+        border: 2px solid $main-site-color;
+        border-radius: $border-radius-circle;
+        content: "";
+        height: 16px;
+        left: 0;
+        margin: 4px;
+        position: $position-absolute;
+        top: 0;
+        transition: transform 0.28s ease 0s;
+        width: 16px;
+      }
+      &:after {
+        background: $main-site-color;
+        border-color: $main-site-color;
+        @include transform(scale(0));
+      }
+    }
+  }
+}
+
+.radio-button input:checked ~ .helper::before {
+  color: $main-site-color;
+}
+.radio-button input:checked ~ .helper::after {
+  @include transform(scale(0.5));
+}
+
+@keyframes pulsein {
+  0%, 100% {
+    top: $gaping-0;
+    height: $gaping-20;
+    width: $gaping-20;
+  }
+  50% {
+    top: 6px;
+    height: 8px;
+    width: 32px;
+  }
+}
+
+@keyframes pulseout {
+  0%, 100% {
+    top: $gaping-0;
+    height: $gaping-20;
+    width: $gaping-20;
+  }
+  50% {
+    top: 6px;
+    height: 8px;
+    width: 32px;
+  }
+}
+
+//social icons
+.btn.btn-social-icon {
+  border: 1px solid $normal-gray-text-color;
+}
+
+.btn.social-facebook {
+  color: $white-text-color;
+  background: $social-facebook-background-color;
+}
+
+.btn.social-twitter {
+  color: $white-text-color;
+  background: $social-twitter-background-color;
+}
+
+.btn.social-googleplus {
+  color: $white-text-color;
+  background: $social-googleplus-background-color;
+}
+
+.btn.social-flickr {
+  color: $white-text-color;
+  background: $social-flickr-background-color;
+}
+
+.btn.social-amazon {
+  color: $white-text-color;
+  background: $social-amazon-background-color;
+}
+
+.btn.social-android {
+  color: $social-android-background-color;
+  background: $white-text-color;
+}
+
+.btn.social-dribbble {
+  color: $white-text-color;
+  background: $social-dribbble-background-color;
+}
+
+.btn.social-drupal {
+  color: $white-text-color;
+  background: $social-edge-background-color;
+}
+
+.btn.social-edge {
+  color: $social-edge-background-color;
+  background: $white-text-color;
+}
+
+.btn.social-forumbee {
+  color: $white-text-color;
+  background: $social-android-background-color;
+}
+
+.btn.social-github {
+  color: $white-text-color;
+  background: $black-background-color;
+}
+
+.btn.social-html5 {
+  color: $white-text-color;
+  background: $social-html5-background-color;
+}
+
+.btn.social-instagram {
+  color: $white-text-color;
+  background: $social-instagram-background-color;
+}
+
+.btn.social-jsfiddle {
+  color: $social-edge-background-color;
+  background: $white-text-color;
+}
+
+.btn.social-linkedin {
+  color: $white-text-color;
+  background: $social-edge-background-color;
+}
+
+.btn.social-maxcdn {
+  color: $white-text-color;
+  background: $social-html5-background-color;
+}
+
+.btn.social-opera {
+  color: $social-opera-background-color;
+  background: $white-text-color;
+}
+
+.btn.social-pinterest {
+  color: $white-text-color;
+  background: $social-opera-background-color;
+}
+
+.btn.social-reddit {
+  color: $social-html5-background-color;
+  background: $white-text-color;
+}
+
+.btn.social-skype {
+  color: $white-text-color;
+  background: $social-skype-background-color;
+}
+
+.btn.social-snapchat {
+  color: $white-text-color;
+  background: $social-snapchat-background-color;
+}
+
+.btn.btn-social-icon.btn-round{
+  border-radius: 25px;
+}
+.social-icon-name{
+  i{
+    margin-right: $gaping-10 - 4;
+  }
+}
+.btn-group-vertical{
+  .btn{
+    margin-bottom: $gaping-0;
+  }
+  > .btn:first-child:not(:last-child){
+    margin-bottom: $gaping-0;
+    border-radius: $border-radius-0;
+  }
+  > .btn:last-child:not(:first-child){
+    margin-bottom: $gaping-10 - 2;
+    border-radius: $border-radius-0;
+  }
+}
+/*---- Start responsive buttons ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:479px) {
+  .btn.float-button-light{
+    margin-right: $gaping-0;
+    font-size: 13px;
+  }
+  .effect{
+    width: 100%;
+  }
+}
+/*---- End responsive buttons ----*/
+
+/*---------------------------
+
+End button
+
+---------------------------*/

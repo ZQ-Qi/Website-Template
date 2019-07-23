@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Kharna-Admin Dashboard</title>
+
+		<!--favicon -->
+		<link rel="icon" href="https://www.spruko.com/demo/kharna/favicon.ico" type="image/x-icon"/>
+
+		<!--Bootstrap.min css-->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+		<!--Icons css-->
+		<link rel="stylesheet" href="assets/css/icons.css">
+
+		<!--mCustomScrollbar css-->
+		<link rel="stylesheet" href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css">
+
+		<!--Style css-->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!--Sidemenu css-->
+		<link rel="stylesheet" href="assets/plugins/toggle-menu/sidemenu.css">
+
+	</head>
+
+	<body class="app ">
+
+		<div id="spinner"></div>
+
+		<div id="app">
+			<div class="main-wrapper" >
+				<nav class="navbar navbar-expand-lg main-navbar">
+					<a class="header-brand" href="index.html">
+						<img src="assets/img/brand/logo.png" class="header-brand-img" alt="Kharna-Admin  logo">
+					</a>
+					<form class="form-inline mr-auto">
+						<ul class="navbar-nav mr-3">
+							<li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="ion ion-navicon-round"></i></a></li>
+							<li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-md-none navsearch"><i class="ion ion-search"></i></a></li>
+						</ul>
+						<div class="search-element">
+							<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-primary" type="submit"><i class="ion ion-search"></i></button>
+						</div>
+					</form>
+					<ul class="navbar-nav navbar-right">
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="ion-ios-email-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Messages
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-1.jpeg.jpg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Stewart Ball</b>
+													<p>Your template awesome</p>
+												</div>
+												<div class="time">6 hours ago</div>
+											</div>
+
+										</div>
+									</a>
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-2.jpeg.jpg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Jonathan North</b>
+													<p>Your Order Shipped.....</p>
+												</div>
+												<div class="time">45 mins ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-4.jpeg.jpg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Victor Taylor</b>
+													<p>Hi!, I' am web developer</p>
+												</div>
+												<div class="time"> 8 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-3.jpeg.jpg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Ruth	Arnold</b>
+													<p>Hi!, I' am web designer</p>
+												</div>
+												<div class="time"> 3 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-5.jpeg.jpg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Sam	Lyman</b>
+													<p>Hi!, I' am java developer</p>
+												</div>
+												<div class="time"> 15 mintues ago</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg beep"><i class="ion-ios-bell-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Notifications
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-exclamation-triangle text-danger"></i>
+										<div class="dropdown-item-desc">
+											<b>Error message occurred....</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-warning"></i>
+										<div class="dropdown-item-desc">
+											<b> Adding new people</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-shopping-cart text-success"></i>
+										<div class="dropdown-item-desc">
+											<b>Your items Arrived</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-comment text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>New Message received</b> <div class="float-right"><span class="badge badge-pill badge-danger badge-sm">67</span></div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle">
+							<a href="#" class="nav-link nav-link-lg full-screen-link">
+								<i class="ion-arrow-expand"  id="fullscreen-button"></i>
+							</a>
+						</li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+							<img src="assets/img/avatar/avatar-1.jpeg.jpg" alt="profile-user" class="rounded-circle w-32">
+							<div class="d-sm-none d-lg-inline-block">Jessica Lee</div></a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-android-person"></i> Profile
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion-android-drafts"></i> Messages
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-gear-a"></i> Settings
+								</a>
+								<a href="#" class="dropdown-item has-icon">
+									<i class="ion-ios-redo"></i> Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+
+				<aside class="app-sidebar">
+					<div class="app-sidebar__user">
+					    <div class="dropdown">
+							<a class="nav-link pl-2 pr-2 leading-none d-flex" data-toggle="dropdown" href="#">
+								<img alt="image" src="assets/img/avatar/avatar-1.jpeg.jpg" class=" avatar-md rounded-circle">
+								<span class="ml-2 d-lg-block">
+									<span class="text-white app-sidebar__user-name mt-5">Jessica Lee</span><br>
+									<span class="text-muted app-sidebar__user-name text-sm"> Web-Designer</span>
+								</span>
+							</a>
+						</div>
+					</div>
+					<ul class="side-menu">
+						<li class="slide">
+							<a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Dashboard</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a class="slide-item"  href="index.html"><span>Dashboard 01</span></a></li>
+								<li><a class="slide-item" href="index2.html"><span>Dashboard 02</span></a></li>
+								<li><a class="slide-item" href="index3.html"><span>Dashboard 03</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="side-menu__item" href="widgets.html"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">Widgets</span></a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tasks"></i><span class="side-menu__label">UI Elements</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="elements.html" class="slide-item"> Elements</a></li>
+								<li><a href="buttons.html" class="slide-item"> Buttons</a></li>
+								<li><a href="toastr.html" class="slide-item"> Toastr</a></li>
+								<li><a href="calender.html" class="slide-item"> Calendar</a></li>
+								<li><a href="rangesliders.html" class="slide-item"> Rangeslider</a></li>
+								<li><a href="modals.html" class="slide-item"> Modals</a></li>
+								<li><a href="timeline.html" class="slide-item"> Timeline</a></li>
+								<li><a href="invoice.html" class="slide-item"> Invoice</a></li>
+								<li><a href="users.html" class="slide-item"> Users List</a></li>
+								<li><a href="mailinbox.html" class="slide-item"> Mail-inbox</a></li>
+								<li><a href="mail-compose.html" class="slide-item"> Mail-Compose</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+						    <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-paw"></i><span class="side-menu__label">Icons</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="icons-ion.html" class="slide-item"> Ion Icons</a></li>
+								<li><a href="icons-fontawesome.html" class="slide-item"> Font Awesome</a></li>
+								<li><a href="icons-feather.html" class="slide-item"> Feather Awesome</a></li>
+								<li><a href="icons-materialdesign.html" class="slide-item"> Material Design</a></li>
+								<li><a href="icons-themify.html" class="slide-item"> Themify</a></li>
+								<li><a href="icons-simpleline.html" class="slide-item"> Simple line</a></li>
+								<li><a href="icons-pe7.html" class="slide-item"> pe7</a></li>
+								<li><a href="icons-flag.html" class="slide-item"> Flag Icons</a></li>
+								<li><a href="icons-weather.html" class="slide-item"> Weather Icons</a></li>
+								<li><a href="icons-typicons.html" class="slide-item"> Typicons</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-table"></i><span class="side-menu__label">Tables</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="table.html" class="slide-item">Basic Tables</a></li>
+								<li><a href="datatables.html" class="slide-item"> Data Tables</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-file-text"></i><span class="side-menu__label">Forms</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="formelements.html" class="slide-item"> Form Elements</a></li>
+								<li><a href="formadvanced.html" class="slide-item"> Advanced Form</a></li>
+								<li><a href="formeditor.html" class="slide-item"> Form Editor</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-bar-chart"></i><span class="side-menu__label">Charts</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="chartjs.html" class="slide-item">Chart Js</a></li>
+								<li><a href="flotcharts.html" class="slide-item"> Flot Charts</a></li>
+								<li><a href="barcharts.html" class="slide-item"> Bar Charts</a></li>
+								<li><a href="echart.html" class="slide-item"> ECharts</a></li>
+								<li><a href="chartist.html" class="slide-item"> Chartist</a></li>
+								<li><a href="morris.html" class="slide-item"> Morris Charts</a></li>
+								<li><a href="othercharts.html" class="slide-item"> Other Charts</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-map"></i><span class="side-menu__label">Maps</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="maps.html" class="slide-item"> Google Maps</a></li>
+								<li><a href="vector-map.html" class="slide-item">Vector Maps</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-pie-chart"></i><span class="side-menu__label">Pages</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="profile.html" class="slide-item"> Profile</a></li>
+								<li><a href="pricing-tables.html" class="slide-item"> Pricing Tables</a></li>
+								<li><a href="gallery.html" class="slide-item"> Gallery</a></li>
+								<li><a href="shop.html" class="slide-item"> Shop</a></li>
+								<li><a href="shop-cart.html" class="slide-item"> Shop Cart</a></li>
+								<li><a href="terms.html" class="slide-item"> Terms and Conditions</a></li>
+								<li><a href="register.html" class="slide-item"> Register</a></li>
+								<li><a href="login.html" class="slide-item"> Login</a></li>
+								<li><a href="forgot.html" class="slide-item"> Forgot Password</a></li>
+								<li><a href="reset.html" class="slide-item"> Reset Password</a></li>
+								<li><a href="under-construction.html" class="slide-item"> Under Construction</a></li>
+								<li><a href="lockscreen.html" class="slide-item"> Lock Screen</a></li>
+								<li><a href="404.html" class="slide-item"> 404</a></li>
+								<li><a href="505.html" class="slide-item"> 505</a></li>
+								<li><a href="emptypage.html" class="slide-item"> Empty  Page</a></li>
+							</ul>
+						</li>
+					</ul>
+				</aside>
+
+				<div class="app-content">
+					<section class="section">
+                    	<ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">UI Elements</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Elements</li>
+                        </ol>
+
+						<div class="section-body">
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Default Tabs</h4>
+										</div>
+										<div class="card-body">
+											<ul class="nav nav-tabs" id="myTab" role="tablist">
+												<li class="nav-item">
+													<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+												</li>
+											</ul>
+											<div class="tab-content  p-3" id="myTabContent">
+												<div class="tab-pane fade show active p-0" id="home" role="tabpanel" aria-labelledby="home-tab">
+													Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+												</div>
+												<div class="tab-pane fade p-0" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+													No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+												</div>
+												<div class="tab-pane fade p-0" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+													At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Bordered Tab</h4>
+										</div>
+										<div class="card-body">
+											<ul class="nav nav-tabs" id="myTab2" role="tablist">
+												<li class="nav-item">
+													<a class="nav-link active" id="home-tab2" data-toggle="tab" href="#home2" role="tab" aria-controls="home" aria-selected="true">Home</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" id="contact-tab2" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+												</li>
+											</ul>
+											<div class="tab-content tab-bordered" id="myTab2Content">
+												<div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab2">
+													Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+												</div>
+												<div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile-tab2">
+													No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+												</div>
+												<div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">
+													At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Tabs with Horizontal nav-pills</h4>
+										</div>
+										<div class="card-body">
+											<ul class="nav nav-pills pb-3" id="myTab3" role="tablist">
+												<li class="nav-item">
+													<a class="nav-link active" id="home-tab3" data-toggle="tab" href="#home3" role="tab" aria-controls="home" aria-selected="true">Home</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" id="profile-tab3" data-toggle="tab" href="#profile3" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" id="contact-tab3" data-toggle="tab" href="#contact3" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+												</li>
+											</ul>
+											<div class="tab-content border-top p-3" id="myTabContent3">
+												<div class="tab-pane fade show active p-0" id="home3" role="tabpanel" aria-labelledby="home-tab3">
+													Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+												</div>
+												<div class="tab-pane fade p-0" id="profile3" role="tabpanel" aria-labelledby="profile-tab3">
+													No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+												</div>
+												<div class="tab-pane fade p-0" id="contact3" role="tabpanel" aria-labelledby="contact-tab3">
+													At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Tabs with Vertical nav-pills</h4>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12 col-sm-12 col-md-4">
+													<ul class="nav nav-pills flex-column" id="myTab4" role="tablist">
+														<li class="nav-item">
+															<a class="nav-link active" id="home-tab4" data-toggle="tab" href="#home4" role="tab" aria-controls="home" aria-selected="true">Home</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" id="profile-tab4" data-toggle="tab" href="#profile4" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" id="contact-tab4" data-toggle="tab" href="#contact4" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+														</li>
+													</ul>
+												</div>
+												<div class="col-12 col-sm-12 col-md-8">
+													<div class="tab-content border p-3" id="myTab3Content">
+														<div class="tab-pane fade show active p-0" id="home4" role="tabpanel" aria-labelledby="home-tab4">
+															Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+														</div>
+														<div class="tab-pane fade p-0" id="profile4" role="tabpanel" aria-labelledby="profile-tab4">
+															No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+														</div>
+														<div class="tab-pane fade p-0" id="contact4" role="tabpanel" aria-labelledby="contact-tab4">
+															At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Jumbotron</h4>
+										</div>
+										<div class="card-body">
+											<div class="jumbotron mb-0">
+												<h1 class="display-5"> Bootstrap Jumbotron Elements</h1>
+												<p class="lead">Familiar with this component? Yes, all components on this page are from bootstrap. So we have documented a few bootstrap components, as more you can refer to the bootstrap documentation page.</p>
+												<hr class="my-4">
+												<p>We're documenting here for wanting to check bootstrap built-in components still work well on our template.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12 col-lg-6">
+									<div class="card">
+										<div class="card-header">
+											<h4>Headings H1 to H6</h4>
+										</div>
+										<div class="card-body">
+											<h1>h1. Bootstrap heading</h1>
+											<h2>h2. Bootstrap heading</h2>
+											<h3>h3. Bootstrap heading</h3>
+											<h4>h4. Bootstrap heading</h4>
+											<h5>h5. Bootstrap heading</h5>
+											<h6 class="mb-0">h6. Bootstrap heading</h6>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-lg-6">
+									<div class="card">
+										<div class="card-header">
+											<h4>Color Headings H1 to H6</h4>
+										</div>
+										<div class="card-body">
+											<p class="h1 text-primary">h1. Bootstrap heading</p>
+											<p class="h2 text-success">h2. Bootstrap heading</p>
+											<p class="h3 text-danger">h3. Bootstrap heading</p>
+											<p class="h4 text-warning">h4. Bootstrap heading</p>
+											<p class="h5 text-info">h5. Bootstrap heading</p>
+											<p class="h6 text-primary mb-0">h6. Bootstrap heading</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Breadcrumbs</h4>
+										</div>
+										<div class="card-body">
+											<nav aria-label="breadcrumb">
+												<ol class="breadcrumb mb-0">
+													<li class="breadcrumb-item active" aria-current="page">Home</li>
+												</ol>
+											</nav><br>
+											<nav aria-label="breadcrumb">
+												<ol class="breadcrumb mb-0">
+													<li class="breadcrumb-item"><a href="#">Home</a></li>
+													<li class="breadcrumb-item active" aria-current="page">Library</li>
+												</ol>
+											</nav><br>
+											<nav aria-label="breadcrumb">
+												<ol class="breadcrumb mb-0">
+													<li class="breadcrumb-item"><a href="#">Home</a></li>
+													<li class="breadcrumb-item"><a href="#">Library</a></li>
+													<li class="breadcrumb-item active" aria-current="page">Data</li>
+												</ol>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Accordion</h4>
+										</div>
+										<div class="card-body">
+											<div id="accordion">
+												<div class="accordion">
+													<div class="accordion-header" data-toggle="collapse" data-target="#panel-body-1" >
+														<h4>ACCORDION 1</h4>
+													</div>
+													<div class="accordion-body collapse show border border-top-0" id="panel-body-1" data-parent="#accordion">
+														Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+													</div>
+												</div>
+												<div class="accordion">
+													<div class="accordion-header " data-toggle="collapse" data-target="#panel-body-2">
+														<h4>ACCORDION 2</h4>
+													</div>
+													<div class="accordion-body collapse border border-top-0" id="panel-body-2" data-parent="#accordion">
+														Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+													</div>
+												</div>
+												<div class="accordion mb-0">
+													<div class="accordion-header" data-toggle="collapse" data-target="#panel-body-3">
+														<h4>ACCORDION 3</h4>
+													</div>
+													<div class="accordion-body collapse border border-top-0" id="panel-body-3" data-parent="#accordion">
+														Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Badges</h4>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-lg-6">
+													<h2 class="section-title mt-0">Heading</h2>
+													<h1>Example heading <span class="badge badge-primary">New</span></h1>
+													<h2>Example heading <span class="badge badge-primary">New</span></h2>
+													<h3>Example heading <span class="badge badge-primary">New</span></h3>
+													<h4>Example heading <span class="badge badge-primary">New</span></h4>
+													<h5>Example heading <span class="badge badge-primary">New</span></h5>
+													<h6 class="mb-0">Example heading <span class="badge badge-primary">New</span></h6>
+												</div>
+												<div class="col-lg-6">
+													<h2 class="section-title">Button</h2>
+													<button type="button" class="btn btn-primary">
+													  Notifications <span class="badge badge-light">4</span>
+													</button>
+													<h2 class="section-title">Pill Badges</h2>
+													<span class="badge badge-primary m-b-5">Primary</span>
+													<span class="badge badge-secondary m-b-5">Secondary</span>
+													<span class="badge badge-success m-b-5">Success</span>
+													<span class="badge badge-danger m-b-5">Danger</span>
+													<span class="badge badge-warning m-b-5">Warning</span>
+													<span class="badge badge-info m-b-5">Info</span>
+													<span class="badge badge-light m-b-5">Light</span>
+													<span class="badge badge-dark m-b-5">Dark</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-6 col-md-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Pagination Style1</h4>
+										</div>
+										<div class="card-body">
+											<h2 class="section-title mt-0">Quick Example</h2>
+											<nav aria-label="Page navigation example">
+												<ul class="pagination  mb-0">
+													<li class="page-item">
+														<a class="page-link" href="#">Prev</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">1</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">2</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">3</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">Nex</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-6 col-md-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Pagination style2</h4>
+										</div>
+										<div class="card-body">
+											<h2 class="section-title mt-0">Working With Icons</h2>
+											<nav aria-label="Page navigation example">
+												<ul class="pagination mb-0">
+													<li class="page-item">
+														<a class="page-link" href="#" aria-label="Previous">
+															<span aria-hidden="true">&laquo;</span>
+															<span class="sr-only">Prev</span>
+														</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">1</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">2</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">3</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#" aria-label="Next">
+															<span aria-hidden="true">&raquo;</span>
+															<span class="sr-only">Nex</span>
+														</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Pagination style3</h4>
+										</div>
+										<div class="card-body">
+											<h2 class="section-title mt-0">Active State</h2>
+											<nav>
+												<ul class="pagination mb-0">
+													<li class="page-item disabled">
+														<span class="page-link">Prev</span>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">1</a>
+													</li>
+													<li class="page-item active">
+														<span class="page-link">
+															2
+															<span class="sr-only">(current)</span>
+														</span>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">3</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">Nex</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Pagination Sizing</h4>
+										</div>
+										<div class="card-body">
+											<h2 class="section-title mt-0" >Sizing</h2>
+											<nav>
+												<ul class="pagination pagination-lg mb-0">
+													<li class="page-item disabled">
+														<a class="page-link" href="#" tabindex="-1">1</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">2</a>
+													</li>
+													<li class="page-item">
+														<a class="page-link" href="#">3</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Simple navs</h4>
+										</div>
+										<div class="card-body">
+											<div  class="active">
+												<ul class="nav">
+													<li class="nav-item">
+														<a class="nav-link active" href="#">Active</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">Link</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">Link</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link disabled" href="#">Disabled</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Navs Pills</h4>
+										</div>
+										<div class="card-body">
+											<div  class="active">
+												<ul class="nav nav-pills">
+													<li class="nav-item">
+														<a class="nav-link active" href="#">Active</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">Link</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">Link</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link disabled" href="#">Disabled</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Navs Vertical</h4>
+										</div>
+										<div class="card-body">
+											<div id="navs-vertical">
+												<ul class="nav flex-column">
+													<li class="nav-item">
+														<a class="nav-link active" href="#">Active</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">Link</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">Link</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link disabled" href="#">Disabled</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Navs Tabs</h4>
+										</div>
+										<div class="card-body">
+											<div id="navs-tabs">
+												<ul class="nav nav-tabs mb-4">
+													<li class="nav-item">
+													<a class="nav-link active" href="#">Active</a>
+													</li>
+													<li class="nav-item dropdown">
+													<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+													<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+													</div>
+													</li>
+													<li class="nav-item">
+													<a class="nav-link" href="#">Link</a>
+													</li>
+													<li class="nav-item">
+													<a class="nav-link disabled" href="#">Disabled</a>
+													</li>
+												</ul>
+											</div>
+											<h2 class="section-title ">Navs Pill-Dropdowns</h2>
+											<div id="navs-pills-dropdown">
+												<ul class="nav nav-pills mt-3">
+													<li class="nav-item">
+														<a class="nav-link active" href="#">Active</a>
+													</li>
+													<li class="nav-item dropdown">
+														<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+														<div class="dropdown-menu">
+															<a class="dropdown-item" href="#">Action</a>
+															<a class="dropdown-item" href="#">Another action</a>
+															<a class="dropdown-item" href="#">Something else here</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="#">Separated link</a>
+														</div>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="#">Link</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link disabled" href="#">Disabled</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Dropdowns</h4>
+										</div>
+										<div class="card-body">
+											<div class="dropdown d-inline">
+												<button class="btn btn-primary m-b-5 m-t-5 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Easy Dropdown
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+												</div>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-danger m-b-5 m-t-5">Split Dropdown</button>
+												<button type="button" class="btn btn-danger m-b-5 m-t-5 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+													<span class="sr-only">Toggle Dropdown</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+											<div class="dropdown d-inline">
+												<button class="btn btn-success dropdown-toggle m-b-5 m-t-5" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													With Icon
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item has-icon" href="#"><i class="ion ion-heart"></i> Action</a>
+													<a class="dropdown-item has-icon" href="#"><i class="ion ion-document"></i> Another action</a>
+													<a class="dropdown-item has-icon" href="#"><i class="ion ion-clock"></i> Something else here</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>DropUps</h4>
+										</div>
+										<div class="card-body">
+											<div class="btn-group dropup">
+												<button type="button" class="btn btn-primary m-b-5 m-t-5 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Dropup
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+											<div class="btn-group dropup">
+												<button type="button" class="btn btn-success m-b-5 m-t-5">
+													Split dropup
+												</button>
+												<button type="button" class="btn btn-success m-b-5 m-t-5 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<span class="sr-only">Toggle Dropdown</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Dropdown Sizes</h4>
+										</div>
+										<div class="card-body">
+											<div class="btn-group">
+												<button class="btn btn-info btn-lg m-b-5 m-t-5 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Large button
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+											<div class="btn-group">
+												<button class="btn btn-info btn-lg m-b-5 m-t-5" type="button">
+													Split button
+												</button>
+												<button type="button" class="btn btn-lg btn-info m-b-5 m-t-5 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<span class="sr-only">Toggle Dropdown</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+											<div class="btn-group">
+												<button class="btn btn-primary btn-sm m-b-5 m-t-5 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Small button
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+											<div class="btn-group">
+												<button class="btn btn-primary btn-sm m-b-5 m-t-5" type="button">
+													Split button
+												</button>
+												<button type="button" class="btn btn-sm btn-primary m-b-5 m-t-5 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<span class="sr-only">Toggle Dropdown</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Dropdown Variation</h4>
+										</div>
+										<div class="card-body">
+											<div class="btn-group dropright">
+												<button type="button" class="btn btn-primary m-b-5 m-t-5 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Dropright
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+											<div class="btn-group dropright">
+												<button type="button" class="btn btn-primary m-b-5 m-t-5">
+													Split dropright
+												</button>
+												<button type="button" class="btn btn-primary m-b-5 m-t-5 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<span class="sr-only">Toggle Dropright</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div><br>
+											<div class="btn-group dropleft">
+												<button type="button" class="btn btn-info m-b-5 m-t-5 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													dropleft
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+											<div class="btn-group dropleft">
+												<button type="button" class="btn btn-info m-b-5 m-t-5">
+													Split dropleft
+												</button>
+												<button type="button" class="btn btn-info m-b-5 m-t-5 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<span class="sr-only">Toggle Dropright</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Action</a>
+													<a class="dropdown-item" href="#">Another action</a>
+													<a class="dropdown-item" href="#">Something else here</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Simple Lists</h4>
+										</div>
+										<div class="card-body">
+											<div class="active" id="lg-simple">
+												<ul class="list-group">
+													<li class="list-group-item">Cras justo odio</li>
+													<li class="list-group-item">Dapibus ac facilisis in</li>
+													<li class="list-group-item">Morbi leo risus</li>
+													<li class="list-group-item">Porta ac consectetur ac</li>
+													<li class="list-group-item">Vestibulum at eros</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Active Lists</h4>
+										</div>
+										<div class="card-body">
+											<div id="lg-active">
+												<ul class="list-group">
+													<li class="list-group-item">Cras justo odio</li>
+													<li class="list-group-item active">Dapibus ac facilisis in</li>
+													<li class="list-group-item">Morbi leo risus</li>
+													<li class="list-group-item">Porta ac consectetur ac</li>
+													<li class="list-group-item">Vestibulum at eros</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Clickable Lists</h4>
+										</div>
+										<div class="card-body">
+											<div id="lg-clickable">
+												<div class="list-group">
+													<a href="#" class="list-group-item list-group-item-action active">
+														Cras justo odio
+													</a>
+													<a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+													<a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+													<a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+													<a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Flush Lists</h4>
+										</div>
+										<div class="card-body">
+											<div id="lg-flush">
+												<ul class="list-group list-group-flush">
+													<li class="list-group-item">Cras justo odio</li>
+													<li class="list-group-item">Dapibus ac facilisis in</li>
+													<li class="list-group-item">Morbi leo risus</li>
+													<li class="list-group-item">Porta ac consectetur ac</li>
+													<li class="list-group-item">Vestibulum at eros</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Badges Lists</h4>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-lg-6">
+													<div id="lg-badges">
+														<ul class="list-group">
+															<li class="list-group-item d-flex justify-content-between align-items-center">
+																Cras justo odio
+																<span class="badge badge-info badge-pill">14</span>
+															</li>
+															<li class="list-group-item d-flex justify-content-between align-items-center">
+																Dapibus ac facilisis in
+																<span class="badge badge-secondary badge-pill">2</span>
+															</li>
+															<li class="list-group-item d-flex justify-content-between align-items-center">
+																Morbi leo risus
+																<span class="badge badge-warning badge-pill">1</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div id="lg-badges1" class="mt-4 mt-lg-0">
+														<ul class="list-group">
+															<li class="list-group-item d-flex justify-content-between align-items-center">
+																Cras justo odio
+																<span class="badge badge-primary badge-pill">14</span>
+															</li>
+															<li class="list-group-item d-flex justify-content-between align-items-center">
+																Dapibus ac facilisis in
+																<span class="badge badge-success badge-pill">2</span>
+															</li>
+															<li class="list-group-item d-flex justify-content-between align-items-center">
+																Morbi leo risus
+																<span class="badge badge-danger badge-pill">1</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Custom Lists</h4>
+										</div>
+										<div class="card-body">
+											<div id="lg-custom">
+												<div class="list-group">
+													<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+														<div class="d-sm-flex w-100 justify-content-between">
+															<h5 class="mb-1">List group item heading</h5>
+															<small>3 days ago</small>
+														</div>
+														<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+														<small>Donec id elit non mi porta.</small>
+													</a>
+													<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+														<div class="d-sm-flex w-100 justify-content-between">
+															<h5 class="mb-1">List group item heading</h5>
+															<small class="text-muted">3 days ago</small>
+														</div>
+														<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+														<small class="text-muted">Donec id elit non mi porta.</small>
+													</a>
+													<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+														<div class="d-sm-flex w-100 justify-content-between">
+															<h5 class="mb-1">List group item heading</h5>
+															<small class="text-muted">3 days ago</small>
+														</div>
+														<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+														<small class="text-muted">Donec id elit non mi porta.</small>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Tooltips</h4>
+										</div>
+										<div class="card-body">
+											<button type="button" class="btn btn-info m-b-5 m-t-5" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+												Tooltip on top
+											</button>
+											<button type="button" class="btn btn-primary m-b-5 m-t-5" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+												Tooltip on right
+											</button>
+											<button type="button" class="btn btn-success m-b-5 m-t-5" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+												Tooltip on bottom
+											</button>
+											<button type="button" class="btn btn-danger m-b-5 m-t-5" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+												Tooltip on left
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Popover</h4>
+										</div>
+										<div class="card-body">
+											<button type="button" class="btn btn-primary m-b-5" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+												Popover on top
+											</button>
+											<button type="button" class="btn btn-success m-b-5" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+												Popover on right
+											</button>
+											<button type="button" class="btn btn-secondary m-b-5" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+											sagittis lacus vel augue laoreet rutrum faucibus.">
+												Popover on bottom
+											</button>
+											<button type="button" class="btn btn-warning m-b-5" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+												Popover on left
+											</button>
+											<h2 class="section-title">Dismiss popover</h2>
+											<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismiss popover</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Simple Progress bars</h4>
+										</div>
+										<div class="card-body">
+											<div id="progress-simple"  class="active">
+												<div class="progress mb-3">
+													<div class="progress-bar " role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-primary w-30" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-primary w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-primary w-70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress">
+													<div class="progress-bar bg-primary w-100" role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Labels Progress bars</h4>
+										</div>
+										<div class="card-body">
+											<div id="progress-labels">
+												<div class="progress mb-3">
+													<div class="progress-bar bg-primary w-30" role="progressbar" aria-valuemin="0" aria-valuemax="100">30%</div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-primary w-40" role="progressbar" aria-valuemin="0" aria-valuemax="100">40%</div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-primary w-50" role="progressbar" aria-valuemin="0" aria-valuemax="100">50%</div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-primary w-80" role="progressbar" aria-valuemin="0" aria-valuemax="100">80%</div>
+												</div>
+												<div class="progress ">
+													<div class="progress-bar bg-primary w-50" role="progressbar" aria-valuemin="0" aria-valuemax="100">50%</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Progress bar Backgrounds</h4>
+										</div>
+										<div class="card-body">
+											<div id="progress-background">
+												<div class="progress mb-3">
+													<div class="progress-bar bg-cyan w-20" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-primary w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-orange w-60" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress">
+													<div class="progress-bar bg-success w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Progress bar Multiple</h4>
+										</div>
+										<div class="card-body">
+											<div id="progress-multiple">
+												<div class="progress mb-3">
+													<div class="progress-bar bg-primary w-10" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar bg-success w-10" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar bg-info w-20" role="progressbar"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-success w-10" role="progressbar"  aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar bg-primary w-20" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar bg-orange w-10" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar bg-dark w-10" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar bg-cyan w-30" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar bg-warning w-20" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-0">
+													<div class="progress-bar bg-gray w-20" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar bg-primary w-10" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar bg-success w-40" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Progress bar Stripted</h4>
+										</div>
+										<div class="card-body">
+											<div id="progress-striped">
+												<div class="progress mb-3">
+													<div class="progress-bar progress-bar-striped w-10" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar progress-bar-striped bg-success w-20" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar progress-bar-striped bg-orange w-50" role="progressbar"  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress">
+													<div class="progress-bar progress-bar-striped bg-warning w-70" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Progress bar Animation Striped</h4>
+										</div>
+										<div class="card-body">
+											<div id="progress-striped1">
+												<div class="progress mb-3">
+													<div class="progress-bar progress-bar-striped progress-bar-animated w-10" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar progress-bar-striped bg-success progress-bar-animated w-20" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress mb-3">
+													<div class="progress-bar progress-bar-striped bg-orange progress-bar-animated w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="progress">
+													<div class="progress-bar progress-bar-striped bg-warning progress-bar-animated w-70" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Default Alerts</h4>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-lg-6">
+													<div  class="active" id="default">
+														<div class="alert alert-primary">
+															This is a primary alert.
+														</div>
+														<div class="alert alert-secondary">
+															This is a secondary alert.
+														</div>
+														<div class="alert alert-success">
+															This is a success alert.
+														</div>
+														<div class="alert alert-danger mb-lg-0">
+															This is a danger alert.
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div  class="active" id="default1">
+														<div class="alert alert-warning">
+															This is a warning alert.
+														</div>
+														<div class="alert alert-info">
+															This is a info alert.
+														</div>
+														<div class="alert alert-light">
+															This is a light alert.
+														</div>
+														<div class="alert alert-dark mb-0">
+															This is a dark alert.
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Title Alerts</h4>
+										</div>
+										<div class="card-body">
+											<div class="row ">
+												<div class="col-lg-6">
+													<div  id="with-title">
+														<div class="alert alert-primary">
+															<div class="alert-title">Primary</div>
+															This is a primary alert.
+														</div>
+														<div class="alert alert-secondary">
+															<div class="alert-title">Secondary</div>
+															This is a secondary alert.
+														</div>
+														<div class="alert alert-success">
+															<div class="alert-title">Success</div>
+															This is a success alert.
+														</div>
+														<div class="alert alert-danger mb-lg-0">
+															<div class="alert-title">Danger</div>
+															This is a danger alert.
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div  id="with-title1">
+														<div class="alert alert-warning">
+															<div class="alert-title">Warning</div>
+															This is a warning alert.
+														</div>
+														<div class="alert alert-info">
+															<div class="alert-title">Info</div>
+															This is a info alert.
+														</div>
+														<div class="alert alert-light">
+															<div class="alert-title">Light</div>
+															This is a light alert.
+														</div>
+														<div class="alert alert-dark mb-0">
+															<div class="alert-title">Dark</div>
+															This is a dark alert.
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Alerts With icons</h4>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-lg-6">
+													<div  id="with-icon">
+														<div class="alert alert-primary alert-has-icon">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<div class="alert-title">Primary</div>
+																This is a primary alert.
+															</div>
+														</div>
+														<div class="alert alert-secondary alert-has-icon">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<div class="alert-title">Secondary</div>
+																This is a secondary alert.
+															</div>
+														</div>
+														<div class="alert alert-success alert-has-icon">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<div class="alert-title">Success</div>
+																This is a success alert.
+															</div>
+														</div>
+														<div class="alert alert-danger alert-has-icon mb-lg-0">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<div class="alert-title">Danger</div>
+																This is a danger alert.
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div  id="with-icon1">
+														<div class="alert alert-warning alert-has-icon">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<div class="alert-title">Warning</div>
+																This is a warning alert.
+															</div>
+														</div>
+														<div class="alert alert-info alert-has-icon">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<div class="alert-title">Info</div>
+																This is a info alert.
+															</div>
+														</div>
+														<div class="alert alert-light alert-has-icon">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<div class="alert-title">Light</div>
+																This is a light alert.
+															</div>
+														</div>
+														<div class="alert alert-dark alert-has-icon mb-0">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<div class="alert-title">Dark</div>
+																This is a dark alert.
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="card">
+										<div class="card-header">
+											<h4>Dismiss Alerts</h4>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-lg-6">
+													<div  id="dismissible">
+														<div class="alert alert-primary alert-has-icon alert-dismissible show fade">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<button class="close" data-dismiss="alert">
+																	<span>&times;</span>
+																</button>
+																<div class="alert-title">Primary</div>
+																This is a primary alert.
+															</div>
+														</div>
+														<div class="alert alert-secondary alert-has-icon alert-dismissible show fade">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<button class="close" data-dismiss="alert">
+																	<span>&times;</span>
+																</button>
+																<div class="alert-title">Secondary</div>
+																This is a secondary alert.
+															</div>
+														</div>
+														<div class="alert alert-success alert-has-icon alert-dismissible show fade">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<button class="close" data-dismiss="alert">
+																	<span>&times;</span>
+																</button>
+																<div class="alert-title">Success</div>
+																This is a success alert.
+															</div>
+														</div>
+														<div class="alert alert-danger alert-has-icon alert-dismissible show fade mb-lg-0">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<button class="close" data-dismiss="alert">
+																	<span>&times;</span>
+																</button>
+																<div class="alert-title">Danger</div>
+																This is a danger alert.
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div  id="dismissible1">
+														<div class="alert alert-warning alert-has-icon alert-dismissible show fade">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<button class="close" data-dismiss="alert">
+																	<span>&times;</span>
+																</button>
+																<div class="alert-title">Warning</div>
+																This is a warning alert.
+															</div>
+														</div>
+														<div class="alert alert-info alert-has-icon alert-dismissible show fade">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<button class="close" data-dismiss="alert">
+																	<span>&times;</span>
+																</button>
+																<div class="alert-title">Info</div>
+																This is a info alert.
+															</div>
+														</div>
+														<div class="alert alert-light alert-has-icon alert-dismissible show fade">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<button class="close" data-dismiss="alert">
+																	<span>&times;</span>
+																</button>
+																<div class="alert-title">Light</div>
+																This is a light alert.
+															</div>
+														</div>
+														<div class="alert alert-dark alert-has-icon alert-dismissible show fade mb-0">
+															<div class="alert-icon"><i class="ion ion-ios-lightbulb-outline"></i></div>
+															<div class="alert-body">
+																<button class="close" data-dismiss="alert">
+																	<span>&times;</span>
+																</button>
+																<div class="alert-title">Dark</div>
+																This is a dark alert.
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12 col-lg-6">
+									<div class="card">
+										<div class="card-header">
+											<h4>Simple Carousel</h4>
+										</div>
+										<div class="card-body">
+											<div class="active" id="carousel-simple">
+												<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+													<ol class="carousel-indicators">
+														<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+														<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+														<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+													</ol>
+													<div class="carousel-inner">
+														<div class="carousel-item active">
+															<img class="d-block w-100" src="assets/img/news/img01.jpg" alt="First slide">
+														</div>
+														<div class="carousel-item">
+															<img class="d-block w-100" src="assets/img/news/img07.jpg" alt="Second slide">
+														</div>
+														<div class="carousel-item">
+															<img class="d-block w-100" src="assets/img/news/img08.jpg" alt="Third slide">
+														</div>
+													</div>
+													<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+														<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+														<span class="sr-only">Previous</span>
+													</a>
+													<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+														<span class="carousel-control-next-icon" aria-hidden="true"></span>
+														<span class="sr-only">Next</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-lg-6">
+									<div class="card">
+										<div class="card-header">
+											<h4>With Caption Carousel</h4>
+										</div>
+										<div class="card-body">
+											<div  id="carousel-caption">
+												<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+													<ol class="carousel-indicators">
+														<li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+														<li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+														<li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+													</ol>
+													<div class="carousel-inner ">
+														<div class="carousel-item active">
+															<img class="d-block w-100" src="assets/img/news/img05.jpg" alt="First slide">
+															<div class="carouseltransparent d-none d-md-block"></div>
+															<div class="carousel-caption d-none d-md-block">
+																<h5>Carousel Heading1</h5>
+																<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized.</p>
+															</div>
+														</div>
+														<div class="carousel-item">
+															<img class="d-block w-100" src="assets/img/news/img04.jpg" alt="Second slide">
+															<div class="carouseltransparent d-none d-md-block"></div>
+															<div class="carousel-caption d-none  d-md-block">
+																<h5>Carousel Heading2</h5>
+																<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized.</p>
+															</div>
+														</div>
+														<div class="carousel-item">
+															<img class="d-block w-100" src="assets/img/news/img03.jpg" alt="Third slide">
+															<div class="carouseltransparent d-none d-md-block"></div>
+															<div class="carousel-caption d-none  d-md-block">
+																<h5>Carousel Heading3</h5>
+																<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized.</p>
+															</div>
+														</div>
+													</div>
+													<a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+														<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+														<span class="sr-only">Previous</span>
+													</a>
+													<a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+														<span class="carousel-control-next-icon" aria-hidden="true"></span>
+														<span class="sr-only">Next</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</section>
+				</div>
+
+				<footer class="main-footer">
+					<div class="text-center">
+						Copyright &copy;Kharna-Admin 2018. Design By<a href="https://spruko.com/"> Spruko</a>
+					</div>
+				</footer>
+
+			</div>
+		</div>
+
+		<!--Jquery.min js-->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!--popper js-->
+		<script src="assets/js/popper.js"></script>
+
+		<!--Tooltip js-->
+		<script src="assets/js/tooltip.js"></script>
+
+		<!--Bootstrap.min js-->
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--Jquery.nicescroll.min js-->
+		<script src="assets/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+
+		<!--Scroll-up-bar.min js-->
+		<script src="assets/plugins/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+
+		<!--mCustomScrollbar js-->
+		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+		<!--Sidemenu js-->
+		<script src="assets/plugins/toggle-menu/sidemenu.js"></script>
+
+		<!--Scripts js-->
+		<script src="assets/js/scripts.js"></script>
+
+	</body>
+</html>

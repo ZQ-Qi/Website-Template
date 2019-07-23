@@ -1,0 +1,114 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Confirm Alerts / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/jquery-confirm/jquery-confirm.min.css">
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Confirm Alerts</h2>
+    </div>
+  </div>
+  <div class="main-container container-fh__content">
+    <h4>Default behaviours</h4>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <p>Elegant Alerts.</p>
+        <button class="btn btn-outline-info btn-block example-p-1 mb-4">Alerts</button>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <p>Stacked Confirmations</p>
+        <button class="btn btn-outline-info btn-block example-p-2 mb-4">Confirmation</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <p>Success, error, warning</p>
+        <button class="btn btn-outline-info btn-block example-p-70-type">Alert types</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <p>Need input?</p>
+        <button class="btn btn-outline-info btn-block example-p-7-1 mb-4">Prompt</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <p>Its also a Dialog.</p>
+        <button class="btn btn-outline-info btn-block example-p-4 mb-4">Dialogs</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <p>Not so important modal</p>
+        <button class="btn btn-outline-info btn-block example-p-3 mb-4">Background dismiss</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <p>Loading from remote places</p>
+        <button class="btn btn-outline-info btn-block example-p-5 mb-4">Asynchronous content</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <p>Some actions maybe critical</p>
+        <button class="btn btn-outline-info btn-block example-p-6 mb-4">Auto-close</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <p>Responds to keystrokes</p>
+        <button class="btn btn-outline-info btn-block example-p-7 mb-4">Keystrokes</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <p>Automatically centered</p>
+        <button class="btn btn-outline-info btn-block example-pc-1 mb-4">Alignment</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <p>Loading images</p>
+        <button class="btn btn-outline-info btn-block example-pc-2 mb-4">Images</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <p>Clean animations</p>
+        <button class="btn btn-outline-info btn-block example-pc-3 mb-4">Animations</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <p>Drag me around</p>
+        <button class="btn btn-outline-info btn-block example-p-7-2 mb-4">Draggable</button>
+      </div>
+    </div>
+
+    <h4>Dialog types</h4>
+    <p>
+      Dialog types helps give the user a hint as to what the dialog is about
+    </p>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <button class="btn btn-outline-primary btn-block primary-dialog-example mb-4">Primary Dialog</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <button class="btn btn-outline-success btn-block success-dialog-example mb-4">Success Dialog</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <button class="btn btn-outline-info btn-block info-dialog-example mb-4">Info Dialog</button>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <button class="btn btn-outline-warning btn-block warning-dialog-example mb-4">Warning Dialog</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <button class="btn btn-outline-danger btn-block danger-dialog-example">Error Dialog</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/jquery-confirm/jquery-confirm.min.js"></script>
+<script src="js/preview/confirm-alerts.min.js"></script>
+{% endblock %}

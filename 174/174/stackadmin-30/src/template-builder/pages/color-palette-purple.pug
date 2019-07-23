@@ -1,0 +1,24 @@
+//- =========================================================================
+	File Name: color-palette-purple.jade
+	Description:  Bootstrap 4 Purple Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle   = "Purple Color Page"
+	- var pageSubTitle = "Purple Color Options"
+	- var description  = "Purple Color Palette with background & border color."
+	- var activeMenu  = "color-palette-purple"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Purple Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-purple.html

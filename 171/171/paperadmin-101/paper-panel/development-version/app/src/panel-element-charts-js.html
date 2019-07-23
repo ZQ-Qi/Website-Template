@@ -1,0 +1,602 @@
+<!-- partial:partials/_header.html -->
+<!-- partial -->
+<div class="has-sidebar-left">
+    <header class="blue accent-3 relative nav-sticky">
+        <div class="container-fluid text-white">
+            <div class="row p-t-b-10 ">
+                <div class="col">
+                    <h4>
+                        <i class="icon-area-chart"></i>
+                        Charts JS
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="nav responsive-tab nav-material nav-material-white">
+                    <li>
+                        <a class="nav-link active" href="panel-element-charts-js.html">
+                            <i class="icon icon-area-chart"></i>Charts.Js</a>
+                    </li>
+                    <li>
+                        <a class="nav-link " href="panel-element-morris.html">
+                            <i class="icon icon-bubble_chart"></i>Morris Charts</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-echarts.html">
+                            <i class="icon icon-bar-chart-o"></i>Echarts</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-easy-pie-charts.html">
+                            <i class="icon icon-area-chart"></i>Easy Pie Charts</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-jqvmap.html">
+                            <i class="icon icon-map"></i>Jqvmap</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="panel-element-sparklines.html">
+                            <i class="icon icon-line-chart2"></i>Sparklines</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid my-3">
+        <div class="row pb-3">
+            <div class="col-md-7">
+                <div class="card no-b p-3">
+                    <p>Line Chart</p>
+                    <div style="height: 450px">
+                        <canvas
+                                data-chart="line"
+                                data-dataset="[[0,528,228,728,528,1628,0]]"
+                                data-labels="['Blue','Yellow','Green','Purple','Orange','Red','Indigo']"
+                                data-dataset-options="[{ label:'Sales', borderColor:  'rgba(255,99,132,1)', backgroundColor: 'rgba(255, 99, 132, 0.2)'}]">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="card no-b p-3 my-3">
+                    <p>Bar Chart With Data options</p>
+                    <div style="height: 450px">
+                        <canvas
+                                data-chart="bar"
+                                data-dataset="[[0,528,228,728,528,1628,0]]"
+                                data-labels="['Blue','Yellow','Green','Purple','Orange','Red','Indigo']"
+                                data-dataset-options="[
+                                            { label:'Sales', borderColor:  'rgba(255,99,132,1)', backgroundColor: 'rgba(255, 99, 132, 0.2)'}]"
+                                data-options="{
+                                                maintainAspectRatio: false,
+                                                legend: {
+                                                    display: true
+                                                },
+                                                scales: {
+                                                    xAxes: [{
+                                                        display: true,
+                                                        gridLines: {
+                                                            zeroLineColor: '#eee',
+                                                            color: '#eee',
+
+                                                            borderDash: [5, 5],
+                                                        }
+                                                    }],
+                                                    yAxes: [{
+                                                        display: true,
+                                                        gridLines: {
+                                                            zeroLineColor: '#eee',
+                                                            color: '#eee',
+                                                            borderDash: [5, 5],
+                                                        }
+                                                    }]
+
+                                                },
+                                                elements: {
+                                                    line: {
+
+                                                        tension: 0.4,
+                                                        borderWidth: 1
+                                                    },
+                                                    point: {
+                                                        radius: 2,
+                                                        hitRadius: 10,
+                                                        hoverRadius: 6,
+                                                        borderWidth: 4
+                                                    }
+                                                }
+                                            }">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="card no-b p-3 my-3">
+                    <p>Bar Chart With Data options</p>
+                    <div style="height: 450px">
+                        <canvas
+                                data-chart="line"
+                                data-dataset="[[20, 24, 32, 34, 38, 35, 37, 40, 53, 60, 62],[48, 54, 53, 58, 56, 62, 61, 59, 76, 78, 80]]"
+                                data-labels="['1', '4', '7', '10', '13', '16', '19', '22', '25', '28', '31']"
+                                data-dataset-options="datasets: [{
+                    label: 'Revenue',
+                    fill: !0,
+                    lineTension: 0,
+                    backgroundColor: 'rgba(0,172,255, 0.1)',
+                    borderWidth: 2,
+                    borderColor: '#00AAFF',
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0,
+                    borderJoinStyle: 'miter',
+                    pointRadius: 4,
+                    pointBorderColor: '#00AAFF',
+                    pointBackgroundColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 6,
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#00AAFF',
+                    pointHoverBorderWidth: 2,
+                    data: [20, 24, 32, 34, 38, 35, 37, 40, 53, 60, 62],
+                    spanGaps: !1
+                }, {
+                    label: 'Profit',
+                    fill: !0,
+                    lineTension: 0,
+                    backgroundColor: 'rgba(163,136,227, 0.1)',
+                    borderWidth: 2,
+                    borderColor: '#886CE6',
+                    pointRadius: 4,
+                    pointBorderColor: '#886CE6',
+                    pointBackgroundColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 6,
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#886CE6',
+                    pointHoverBorderWidth: 2,
+                    data: [48, 54, 53, 58, 56, 62, 61, 59, 76, 78, 80],
+                    spanGaps: !1
+                }]"
+                                data-options="{
+                legend: {
+                    display: !0,
+                    labels: {
+                        fontColor: '#7F8FA4',
+                        fontFamily: 'Source Sans Pro, sans-serif',
+                        boxRadius: 4,
+                        usePointStyle: !0
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        display: !0,
+                        ticks: {
+                            fontSize: '11',
+                            fontColor: '#969da5'
+                        },
+                        gridLines: {
+                            color: 'rgba(0,0,0,0.0)',
+                            zeroLineColor: 'rgba(0,0,0,0.0)'
+                        }
+                    }],
+                    yAxes: [{
+                        display: !0,
+                        gridLines: {
+                            color: 'rgba(223,226,229,0.45)',
+                            zeroLineColor: 'rgba(0,0,0,0.0)'
+                        },
+                        ticks: {
+                            beginAtZero: !0,
+                            max: 100,
+                            stepSize: 25,
+                            fontSize: '11',
+                            fontColor: '#969da5'
+                        }
+                    }]
+                }
+            }">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="card no-b p-3 my-3">
+                    <p>Multiple Line Charts</p>
+                    <div style="height: 450px">
+                        <canvas
+                                data-chart="line"
+                                data-dataset="[
+                                                [0,528,228,728,528,1628,0],
+                                                [0,628,228,1228,428,1828,0],
+                                                ]"
+                                data-labels="['Blue','Yellow','Green','Purple','Orange','Red','Indigo']"
+                                data-dataset-options="[
+                                            { label:'Sales', borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},
+                                            { label:'Orders', borderColor:  'rgba(255,99,132,1)', backgroundColor: 'rgba(255, 99, 132, 1)' }]"
+                                data-options="{
+                                                maintainAspectRatio: false,
+                                                legend: {
+                                                    display: true
+                                                },
+
+                                                scales: {
+                                                    xAxes: [{
+                                                        display: true,
+                                                        gridLines: {
+                                                            zeroLineColor: '#eee',
+                                                            color: '#eee',
+
+                                                            borderDash: [5, 5],
+                                                        }
+                                                    }],
+                                                    yAxes: [{
+                                                        display: true,
+                                                        gridLines: {
+                                                            zeroLineColor: '#eee',
+                                                            color: '#eee',
+                                                            borderDash: [5, 5],
+                                                        }
+                                                    }]
+
+                                                },
+                                                elements: {
+                                                    line: {
+
+                                                        tension: 0.4,
+                                                        borderWidth: 1
+                                                    },
+                                                    point: {
+                                                        radius: 2,
+                                                        hitRadius: 10,
+                                                        hoverRadius: 6,
+                                                        borderWidth: 4
+                                                    }
+                                                }
+                                            }">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card no-b p-3 my-3">
+                            <p>Pie Chart</p>
+                            <div style="height: 300px">
+                                <canvas
+                                        data-chart="pie"
+                                        data-dataset="[
+                                                        [75, 50],
+                                                        [25, 50],
+                                                    ]"
+                                        data-labels="[['Disk'],['Database']]"
+                                        data-dataset-options="[
+                                                    {
+                                                        label: 'Disk',
+                                                        backgroundColor: [
+                                                            'rgba(255, 99, 132, 0.2)',
+                                                            'rgba(54, 162, 235, 0.2)',
+                                                        ],
+
+                                                    },
+                                                    {
+                                                        label: 'Database',
+                                                        backgroundColor: [
+                                                        'rgba(255, 206, 86, 0.2)',
+                                                        'rgba(75, 192, 192, 0.2)',
+                                                        ],
+
+                                                    },
+
+                                                    ]"
+                                >
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card no-b p-3 my-3">
+                            <p>Pie Chart</p>
+                            <div style="height: 300px">
+                                <canvas
+                                        data-chart="bar"
+                                        data-dataset="[
+                                        [21, 90, 55, 0, 59, 77, 12],
+                                        [12, 0, 55, 60, 79, 99, 12],
+                                        [12, 40, 16, 17, 89, 0, 12],
+                                        ]"
+                                        data-labels="['Blue','Yellow','Green','Purple','Orange','Red','Indigo']"
+                                        data-dataset-options="[
+                                    {
+                                        label: 'HTML',
+                                        borderColor:   'rgba(255, 99, 132, 1)',
+                                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                        borderWidth: 1
+                                    },
+                                    {
+                                         label: 'Wordpress',
+                                         borderColor:  'rgba(54, 162, 235, 1)',
+                                         backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                                         borderWidth: 1
+                                     },
+                                    {
+                                          label: 'Laravel',borderColor:
+                                         'rgba(75, 192, 192, 1)',
+                                          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                          borderWidth: 1
+                                      }
+                                    ]"
+                                        data-options="{
+                                      legend: {
+                                            display: true,
+                                      },
+                                        scales: {
+                                            yAxes: [{
+                                                stacked: true
+                                            }]
+                                        }
+                                }"
+                                >
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 sticky">
+                <h3>Documentation</h3>
+                <hr>
+                <p>You can pass plugin options using following data attributes. Please make sure to use valid json
+                    code.</p>
+                <a href="http://www.chartjs.org/docs/" target="_blank"
+                   class="btn btn-xs btn-primary">Plugin Docs</a>
+                <a href="https://jsonformatter.org/" target="_blank" class="btn btn-outline-primary btn-xs">JSON
+                    Formatter</a>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                    <tr>
+                        <td>data-chart</td>
+                        <td>
+                            Type of chart for example: line , bar, spark
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>data-dataset</td>
+                        <td>
+                            Array or Arrays of Values
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>data-labels</td>
+                        <td>
+                            Array or Arrays of Labels
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>data-dataset-options</td>
+                        <td>
+                            Chart options data sets
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h4 class="mt-5">Code Example</h4>
+                <hr>
+                <pre><code>
+
+&lt;div style="height: 450px"&gt;
+&nbsp;&nbsp;&nbsp;&lt;canvas
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-chart="line"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-dataset="[[0,528,228,728,528,1628,0]]"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-labels="['Blue','Yellow','Green','Purple','Orange','Red','Indigo']"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-dataset-options="[{ label:'Sales', borderColor:  'rgba(255,99,132,1)', backgroundColor: 'rgba(255, 99, 132, 0.2)'}]"&gt;
+&nbsp;&nbsp;&nbsp;&lt;/canvas&gt;
+&lt;/div&gt;
+
+</code></pre>
+                <h4 class="mt-5">Code Example</h4>
+                <hr>
+                <pre><code>
+
+&lt;div style="height: 300px"&gt;
+&nbsp;&nbsp;&nbsp;&lt;canvas
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-chart="pie"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-dataset="[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[75, 50],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[25, 50],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-labels="[['Disk'],['Database']]"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-dataset-options="[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label: 'Disk',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;backgroundColor: [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'rgba(255, 99, 132, 0.2)',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'rgba(54, 162, 235, 0.2)',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label: 'Database',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;backgroundColor: [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'rgba(255, 206, 86, 0.2)',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'rgba(75, 192, 192, 0.2)',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;
+&nbsp;&nbsp;&nbsp;&lt;/canvas&gt;
+&lt;/div&gt;
+
+</code></pre>
+            </div>
+        </div>
+        <!--Style Start 1-->
+        <div class="row my-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong> Spark Charts With Charts JS </strong>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <div class="p-5 bg-primary text-white">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h5 class="font-weight-normal s-14">Sodium</h5>
+                                            <span class="s-48 font-weight-lighter text-primary">Spark Bar</span>
+                                            <div> Oxygen
+                                                <span class="text-primary">
+                                                    <i class="icon icon-arrow_downward"></i> 67%</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <canvas
+                                                    width="100"
+                                                    height="70"
+                                                    data-chart="spark"
+                                                    data-chart-type="bar"
+                                                    data-dataset="[[28,68,41,43,96,45,100,28,68,41,43,96,45,100,28,68,41,43,96,45,100,28,68,41,43,96,45,100]]"
+                                                    data-labels="['a','b','c','d','e','f','g','h','i','j','k','l','m','n','a','b','c','d','e','f','g','h','i','j','k','l','m','n']">
+                                            </canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-5 bg-dark">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h5 class="font-weight-normal s-14">Iron</h5>
+                                            <span class="s-48 font-weight-lighter light-green-text">675</span>
+                                            <div> Carbon
+                                                <span class="text-light-green">
+                                                    <i class="icon icon-arrow_downward"></i> 67%</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <canvas width="378" height="100" data-chart="spark" data-chart-type="line"
+                                                    data-dataset="[[0,1030,200,430]]" data-labels="['a','b','c','d']"
+                                                    data-dataset-options="[
+                                                            { fill: '1', borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},
+                                                            ]">
+                                            </canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-5">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h5 class="font-weight-normal s-14">Iron</h5>
+                                            <span class="icon icon-inbox-document-text s-48 text-primary"></span>
+                                            <div> Carbon
+                                                <span class="text-light-green">
+                                                    <i class="icon icon-arrow_downward"></i> 67%</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <canvas width="450" height="175" data-chart="spark" data-chart-type="pie"
+                                                    data-dataset="[ [75, 50], [25, 50], ]"
+                                                    data-labels="['Blue','Yellow','Green','Purple','Orange','Red','Indigo']"
+                                                    data-dataset-options="[ { label: 'Disk', backgroundColor: [ 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', ], }, { label: 'Database', backgroundColor: [ 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', ], }, ]">
+                                            </canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Style End 1-->
+        <div class="card">
+            <div class="card-header white">More Spark Charts With Charts JS</div>
+            <div class="card-body p-0">
+                <div class="row no-gutters ">
+                    <div class="col-md-3">
+                        <div class="bg-primary text-white lighten-2">
+                            <div class="pt-5 pb-2 pl-5 pr-5">
+                                <h5 class="font-weight-normal s-14">Bit Coin</h5>
+                                <span class="s-48 font-weight-lighter text-primary">
+                                    <small>$</small>960</span>
+                                <div class="float-right">
+                                    <span class="icon icon-chart s-48"></span>
+                                </div>
+                            </div>
+                            <canvas width="378" height="94" data-chart="spark" data-chart-type="bar"
+                                    data-dataset="[[28,68,41,43,96,45,100,28,68,41,43,96,45,100]]"
+                                    data-labels="['a','b','c','d','e','f','g','h','i','j','k','l','m','n']">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="lighten-2">
+                            <div class="pt-5 pb-2 pl-5 pr-5">
+                                <h5 class="font-weight-normal s-14">Bit Coin</h5>
+                                <span class="s-48 font-weight-lighter text-primary">
+                                    <small>$</small>
+                                    <span class="sc-counter">960</span>
+                                </span>
+                                <div class="float-right">
+                                    <span class="icon icon-arrow_downward s-48"></span>
+                                </div>
+                            </div>
+                            <canvas width="378" height="94" data-chart="spark" data-chart-type="line"
+                                    data-dataset="[[0,95,228,100,528,400,0]]"
+                                    data-labels="['Blue','Yellow','Green','Purple','Orange','Red','Indigo']"
+                                    data-dataset-options="[
+                                            { borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},
+                                            ]">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="lighten-2 bg-light">
+                            <div class="pt-5 pb-2 pl-5 pr-5">
+                                <h5 class="font-weight-normal s-14">Bit Coin</h5>
+                                <span class="s-48 font-weight-lighter text-primary">
+                                    <small>$</small>
+                                    <span class="sc-counter">960</span>
+                                </span>
+                                <div class="float-right">
+                                    <span class="icon icon-arrow_downward s-48"></span>
+                                </div>
+                            </div>
+                            <canvas width="378" height="94" data-chart="spark" data-chart-type="line" data-dataset="[
+                                            [0,528,228,728,528,1628,0],
+                                            [0,628,228,1228,428,1828,0],
+                                            ]" data-labels="['Blue','Yellow','Green','Purple','Orange','Red','Indigo']"
+                                    data-dataset-options="[
+                                            { borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},
+                                            { borderColor:  'rgba(255,99,132,1)', backgroundColor: 'rgba(255, 99, 132, 1)' }
+                
+                                            ]" style="width: 189px; height: 47px;">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="bg-primary text-white lighten-2">
+                            <div class="pt-5 pb-2 pl-5 pr-5">
+                                <h5 class="font-weight-normal s-14">Bit Coin</h5>
+                                <span class="s-48 font-weight-lighter text-primary">
+                                    <small>$</small>960</span>
+                                <div class="float-right">
+                                    <span class="icon icon-chart s-48"></span>
+                                </div>
+                            </div>
+                            <canvas width="378" height="94" data-chart="spark" data-chart-type="line"
+                                    data-dataset="[[28,530,200,430]]" data-labels="['a','b','c','d']"
+                                    data-dataset-options="[
+                                            { borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},
+                                            ]">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial:partials/_foot.html -->
+<!-- partial -->

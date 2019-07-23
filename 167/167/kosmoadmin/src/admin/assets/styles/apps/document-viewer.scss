@@ -1,0 +1,400 @@
+@import "../config/colors";
+@import "../config/ui";
+
+$ks-file-manager-modal-header-border-color: #f5f6fa;
+$ks-file-manager-arrow-bg: #666;
+$ks-file-manager-box-shadow: #e6e6e6;
+$ks-file-manager-control-border-color: #c4cbe1;
+
+.ks-document-viewer {
+  .modal-dialog {
+    width: 80%;
+    height: 90%;
+    max-width: 100%;
+
+    > .modal-content {
+      height: 100%;
+    }
+  }
+
+  &.ks-expanded {
+    height: 100%;
+
+    .modal-dialog {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    .modal-content {
+      height: 100%;
+    }
+
+    .modal-header {
+      position: relative;
+      z-index: 1;
+      border-radius: 0;
+    }
+
+    .modal-body {
+      height: 100%;
+      padding-top: 60px;
+
+      .ks-image-content {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .modal-header {
+    height: 59px;
+    border-bottom: 1px solid $ks-default-border-color;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    border-top-left-radius: $ks-default-border-radius;
+    border-top-right-radius: $ks-default-border-radius;
+
+    > .ks-controls {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .ks-modal-title-icon {
+      font-size: 16px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    > .modal-title {
+      font-size: 13px;
+      font-weight: normal;
+    }
+
+    > .ks-extra-controls {
+      text-align: right;
+    }
+
+    .ks-zoom, .ks-page-controls {
+      width: 140px;
+      margin: 0;
+      margin-right: 10px;
+
+      .form-control {
+        text-align: center;
+      }
+    }
+
+    .ks-rotate, .ks-download, .ks-print, .ks-remove {
+      margin-right: 10px;
+    }
+  }
+
+  .modal-body {
+    background-color: $ks-file-manager-modal-header-border-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+
+    > .ks-arrow {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      min-height: 36px;
+      border-radius: 2px;
+      background-color: $ks-file-manager-arrow-bg;
+
+      > a {
+        cursor: pointer;
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        font-weight: normal;
+        padding: 5px 0;
+        text-align: center;
+      }
+
+      &.ks-left-arrow {
+        margin-right: 20px;
+      }
+
+      &.ks-right-arrow {
+        margin-left: 20px;
+      }
+    }
+
+    .ks-image-content {
+      text-align: center;
+      padding: 30px;
+
+      img {
+        margin: 0 auto;
+        max-width: 70%;
+        box-shadow: 0 2px 10px 0 $ks-file-manager-box-shadow;
+      }
+    }
+
+    &.ks-document {
+      display: flex;
+      padding: 0;
+      flex-grow: 1;
+
+      > .ks-thumbs {
+        border-right: 1px solid $ks-default-border-color;
+        width: 140px;
+        min-width: 140px;
+        height: 100%;
+
+        ul {
+          padding: 20px;
+          margin: 0;
+          list-style: none;
+
+          .ks-page {
+            margin-bottom: 22px;
+
+            &.ks-portrait {
+              > .ks-page-thumb {
+                width: 100px;
+                height: 129px;
+              }
+            }
+
+            &.ks-landscape {
+              > .ks-page-thumb {
+                width: 100px;
+                height: 57px;
+              }
+            }
+
+            &.ks-active {
+              .ks-page-thumb {
+                border: solid 2px $ks-color-info;
+              }
+
+              .ks-page-number {
+                font-weight: bold;
+              }
+            }
+          }
+
+          .ks-page-thumb {
+            display: block;
+            background: #fff;
+            box-shadow: 0 2px 5px 0 $ks-file-manager-box-shadow;
+          }
+
+          .ks-page-number {
+            display: block;
+            text-align: center;
+            color: $ks-default-text-color;
+            font-size: 12px;
+            margin-top: 8px;
+          }
+        }
+      }
+
+      .ks-pages {
+        flex-grow: 1;
+        height: 100%;
+
+        ul {
+          padding: 0;
+          list-style: none;
+
+          .ks-page {
+            margin-bottom: 60px;
+
+            &.ks-portrait {
+              .ks-full-page {
+                margin: 30px auto;
+                display: block;
+                background: #fff;
+                width: 70%;
+                height: 1000px;
+                box-shadow: 0 2px 10px 0 ;
+              }
+            }
+
+            &.ks-landscape {
+              .ks-full-page {
+                margin: 30px auto;
+                display: block;
+                background: #fff;
+                width: 90%;
+                height: 545px;
+                box-shadow: 0 2px 10px 0 $ks-file-manager-box-shadow;
+              }
+            }
+          }
+
+          .ks-page-number {
+            display: block;
+            text-align: center;
+            color: $ks-default-text-color;
+            font-size: 12px;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  &.ks-audio {
+    .modal-dialog {
+      width: 364px;
+      height: 165px;
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+
+      > .modal-title  {
+        flex-grow: 1;
+      }
+
+      > .ks-controls,
+      > .ks-extra-controls {
+        flex-grow: 0;
+        margin-left: 10px;
+      }
+    }
+
+    .modal-body {
+      display: flex;
+      padding: 15px 20px;
+      background: #fff;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      align-items: flex-start;
+
+      > .ks-control {
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        border: solid 1px $ks-file-manager-control-border-color;
+        color: $ks-color-primary;
+        font-size: 12px;
+        text-align: center;
+        line-height: 34px;
+        margin-right: 15px;
+        cursor: pointer;
+
+        > span {
+          position: relative;
+          left: 2px;
+        }
+      }
+
+      > .ks-info {
+        flex: 1 1 auto;
+
+        > .ks-header {
+          margin-bottom: 10px;
+
+          > .ks-album-name {
+            margin-bottom: 2px;
+
+            > span {
+              color: $ks-default-text-color-light;
+            }
+          }
+
+          > .ks-song-name {
+            font-weight: 500;
+          }
+        }
+
+        > .ks-body {
+          > .progress {
+            margin-bottom: 10px;
+          }
+
+          > .ks-time {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 1100px) {
+  .ks-document-viewer {
+    .modal-dialog {
+      width: 96%;
+
+      .modal-body {
+        &.ks-document {
+          .ks-pages {
+            ul {
+              .ks-page {
+                &.ks-portrait {
+                  .ks-full-page {
+                    width: 90%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .ks-document-viewer {
+    .modal-dialog {
+      width: 96%;
+      height: 97%;
+
+      .modal-header {
+        height: auto;
+      }
+
+      .modal-body {
+        .ks-image-content {
+          padding: 0;
+        }
+
+        &.ks-document {
+          > .ks-thumbs {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 730px) {
+  .ks-document-viewer {
+    .modal-header {
+      > .ks-controls {
+        > .btn {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 662px) {
+  .ks-document-viewer {
+    .modal-body {
+      &.ks-document {
+        height: 540px;
+      }
+    }
+  }
+}

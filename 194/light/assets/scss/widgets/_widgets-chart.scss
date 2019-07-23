@@ -1,0 +1,132 @@
+.stats-report{
+    @extend .m-t-20;
+    
+    .stat-item {
+        @extend .inlineblock;
+        @extend .p-r-15;
+        
+        h5{            
+            font-size:13px;
+            @extend .margin-0;
+        }        
+    }    
+}
+.chart.easy-pie-chart-1{
+    position: relative;    
+    width: 100px;
+    height: 100px;
+    @extend .m-b-20;
+    @extend .align-center;
+    @extend .inlineblock;
+
+    > span{
+        > img{
+            @extend .align-center;
+            left: 0;
+            margin-top: -2px;
+            position: absolute;
+            right: 0;            
+            top: 50%;
+            width: 60%;
+            height: 60%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            margin: 0 auto;
+        }
+    }
+}
+.c_list{
+
+    tr{
+        td{
+            vertical-align: middle;
+            .btn{
+                @extend .margin-0;
+            }
+        }
+    }
+
+    .fancy-checkbox{
+        @extend .m-b-0;
+        @extend .m-r-0;        
+    }
+    
+    .c_name{
+        @extend .m-b-0;
+        @extend .m-l-10;
+        @extend .inlineblock;
+        font-weight: $font-weight-600;        
+    }
+    
+    .avatar{
+        width: 35px;       
+        border: 1px solid $col-white;
+    }
+
+    address{
+        @extend .m-b-0;
+
+        i{
+            width: 25px;
+            font-size: 15px;
+            @extend .align-center;
+        }
+    }        
+}
+.right_chat{
+    li {
+        position: relative;
+        &.offline {
+            .status {
+                background: #FF9800;
+            }
+        }
+        &.online {
+            .status {
+                background: #8BC34A;
+            }
+        }
+        &.me {
+            .status {
+                background: #0498bd;
+            }
+        }
+    }
+    .media {
+        .media-object {
+            @extend .m-r-10;
+            width: 40px;
+            @include border-radius(40px);
+            border: 2px solid transparent;
+            @include transition(all .3s ease-in-out);
+        }
+        .name {            
+            color: $grey-800;
+            margin: 0px;
+            @extend .displayblock;
+            font-size: 15px;
+        }
+        .message {
+            font-size: 13px;
+            color: $grey-400;
+            @extend .inlineblock;
+           // max-width:180px;
+           // text-overflow: ellipsis;
+           // white-space: nowrap;
+           // overflow: hidden;
+        }
+        .status {
+            position: absolute;
+            left: 23px;
+            top: 30px;
+            width: 11px;
+            height: 11px;
+            @extend .padding-0;
+            @extend .inlineblock;
+            min-width: inherit;
+            border: 2px solid $col-white;
+            @include border-radius(50px);
+        }
+    }
+}

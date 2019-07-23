@@ -1,0 +1,155 @@
+@@include('./_partials/header_start.html')
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Form / Mask Input</h3>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label for="ks-date-mask-input">Date</label>
+                                    <input type="text" id="ks-date-mask-input" class="form-control ks-date-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-time-mask-input">Hour</label>
+                                    <input type="text" id="ks-time-mask-input" class="form-control ks-time-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-datetime-mask-input">Date &amp; Hour</label>
+                                    <input type="text" id="ks-datetime-mask-input" class="form-control ks-datetime-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-zip-code-mask-input">Zip-Code</label>
+                                    <input type="text" id="ks-zip-code-mask-input" class="form-control ks-zip-code-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-crazy-zip-code-mask-input">Crazy Zip-Code</label>
+                                    <input type="text" id="ks-crazy-zip-code-mask-input" class="form-control ks-crazy-zip-code-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-money-mask-input">Money</label>
+                                    <input type="text" id="ks-money-mask-input" class="form-control ks-money-mask-input" placeholder="Money mask">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-placeholder-mask-input">Mask placeholder option</label>
+                                    <input type="text" id="ks-placeholder-mask-input" class="form-control ks-placeholder-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-clear-if-not-match-mask-input">Mask with Clear If Not Match Option</label>
+                                    <input type="text" id="ks-clear-if-not-match-mask-input" class="form-control ks-clear-if-not-match-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-fallback-digit-mask-input">Mask with a Fallback Digit</label>
+                                    <input type="text" id="ks-fallback-digit-mask-input" class="form-control ks-fallback-digit-mask-input">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label for="ks-phone-mask-input">Phone</label>
+                                    <input type="text" id="ks-phone-mask-input" class="form-control ks-phone-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-phone-with-code-area-mask-input">Phone with Code Area</label>
+                                    <input type="text" id="ks-phone-with-code-area-mask-input" class="form-control ks-phone-with-code-area-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-us-phone-mask-input">US Phone</label>
+                                    <input type="text" id="ks-us-phone-mask-input" class="form-control ks-us-phone-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-aso-paulo-celphones-mask-input">São Paulo Celphones</label>
+                                    <input type="text" id="ks-aso-paulo-celphones-mask-input" class="form-control ks-aso-paulo-celphones-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-mixed-type-mask-input">Mixed Type Mask</label>
+                                    <input type="text" id="ks-mixed-type-mask-input" class="form-control ks-mixed-type-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-cpf-mask-input">CPF</label>
+                                    <input type="text" id="ks-cpf-mask-input" class="form-control ks-cpf-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-cnpj-mask-input">CNPJ</label>
+                                    <input type="text" id="ks-cnpj-mask-input" class="form-control ks-cnpj-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-ip-address-mask-input">IP Address</label>
+                                    <input type="text" id="ks-ip-address-mask-input" class="form-control ks-ip-address-mask-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ks-select-on-focus-mask-input">Mask with selectOnFocus</label>
+                                    <input type="text" id="ks-select-on-focus-mask-input" class="form-control ks-select-on-focus-mask-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/jquery-mask/jquery.mask.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $('.ks-date-mask-input').mask('00/00/0000');
+    $('.ks-time-mask-input').mask('00:00:00');
+    $('.ks-datetime-mask-input').mask('00/00/0000 00:00:00');
+    $('.ks-zip-code-mask-input').mask('00000-000');
+    $('.ks-placeholder-mask-input').mask("00/00/0000", {placeholder: "__/__/____"});
+    $('.ks-money-mask-input').mask('000.000.000.000.000,00', {reverse: true});
+    $('.ks-clear-if-not-match-mask-input').mask("00/00/0000", {clearIfNotMatch: true});
+    $('.ks-fallback-digit-mask-input').mask("00r00r0000", {
+        translation: {
+            'r': {
+                pattern: /[\/]/,
+                fallback: '/'
+            },
+            placeholder: "__/__/____"
+        }
+    });
+
+    $('.ks-phone-mask-input').mask('0000-0000');
+    $('.ks-phone-with-code-area-mask-input').mask('(00) 0000-0000');
+    $('.ks-us-phone-mask-input').mask('(000) 000-0000');
+    $('.ks-mixed-type-mask-input').mask('AAA 000-S0S');
+    $('.ks-cpf-mask-input').mask('000.000.000-00', {reverse: true});
+    $('.ks-cnpj-mask-input').mask('00.000.000/0000-00', {reverse: true});
+    $('.ks-ip-address-mask-input').mask('099.099.099.099');
+    $('.ks-select-on-focus-mask-input').mask("00/00/0000", {selectOnFocus: true});
+
+    var options =  {
+        onKeyPress: function(cep, e, field, options) {
+        var masks = ['00000-000', '0-00-00-00'];
+        mask = (cep.length>7) ? masks[1] : masks[0];
+
+        $('.ks-crazy-zip-code-mask-input').mask(mask, options);
+    }};
+
+    $('.ks-crazy-zip-code-mask-input').mask('00000-000', options);
+
+    var SPMaskBehavior = function (val) {
+        return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+    },
+    spOptions = {
+        onKeyPress: function(val, e, field, options) {
+            field.mask(SPMaskBehavior.apply({}, arguments), options);
+        }
+    };
+
+    $('.ks-aso-paulo-celphones-mask-input').mask(SPMaskBehavior, spOptions);
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

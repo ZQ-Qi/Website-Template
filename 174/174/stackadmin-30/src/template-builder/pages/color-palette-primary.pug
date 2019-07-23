@@ -1,0 +1,24 @@
+//- =========================================================================
+	File Name: color-palette-primary.jade
+	Description: Bootstrap 4 Primary Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle   = "Primary Color Page"
+	- var pageSubTitle = "Primary Color Options"
+	- var description  = "Color can be a wonderful tool for making your dashboard less stressful and more calming."
+	- var activeMenu  = "color-palette-primary"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Primary Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-primary.html

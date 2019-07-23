@@ -1,0 +1,235 @@
+.dropdown {
+  >a {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &.settings {
+    .dropdown-menu {
+      padding: 0;
+
+      &:after {
+        border-bottom-color: #f2f2f2;
+      }
+    }
+
+    .color-themes {
+      padding: 5px 10px;
+      background-color: #f2f2f2;
+      border-bottom: 1px solid #e2e2e2;
+      /*margin-bottom: 10px; falcon s */
+
+      li:not(.title) {
+        padding: 3px;
+        >a {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          @include border-radius(0px);
+          @include transition(all .25s ease);
+
+          &:hover {
+            @include transform(scale(1.3, 1.3));
+            @include box-shadow(0 1px 2px 0 $transparent-black-3);
+          }
+        }
+      }
+    }
+
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+
+  &.nav-profile {
+    .dropdown-menu {
+      min-width:200px;
+	  padding-top:0;
+	  li{
+			a{
+				padding:10px 15px;
+			}
+		}
+		.user-info{
+			background:linear-gradient(45deg, #49cdd0, #45e5c3);
+			color: #fff;
+			margin-bottom: 7px;
+			overflow: hidden;
+    		padding: 20px 15px 14px;
+			.user-name{
+				display: block;
+				font-size: 19px;
+				line-height: 22px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			} 
+		}
+    }
+  }
+}
+
+#header {
+  .dropdown {
+    >.dropdown-menu {
+      margin-top:3px;
+    }
+    &.open {
+      >a {
+        color: white;
+      }
+    }
+  }
+}
+
+.dropdown-menu {	
+  border-radius: 0;
+
+  &.with-arrow {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: -10px;
+      @include triangle(18px, $transparent-black-15, up);
+    }
+    &:after {
+      //content: "";
+      position: absolute;
+      left: 13px;
+      top: -8px;
+      @include triangle(16px, white, up);
+    }
+  }
+  
+  &.pull-right {
+    &.with-arrow {
+      &:before {
+        left: auto;
+        right: 11px;
+      }
+      &:after {
+        left: auto;
+        right: 12px;
+      }
+    }
+  }
+
+  >li {
+    >a {
+      color: $font-color-dark;
+      padding: 5px 15px;
+      >i {
+        margin-right: 5px;
+      }
+      >.label,
+      {
+        margin-top:0px;
+      }
+    }
+    >div {
+      padding: 5px 10px;
+    }
+    >ul {
+      margin-left: 0;
+      padding: 0 10px;
+
+      >li {
+        &.title {
+          padding: 5px 0 0;
+          display: inline-block;
+          font-size: $font-size-small;
+          color: $font-color;
+         /* border-bottom: 1px solid $transparent-black-3; falcon s*/
+        }
+      }
+    }
+  }
+
+  &.panel {
+    min-width: 280px;
+    margin-bottom: 0;
+    padding: 0;
+    border-color: $transparent-black-15;
+	box-shadow:0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+    .panel-heading {
+      background-color:$slategray;
+      border-radius: 0;
+      color: $font-color-light;
+      border: 0;
+      font-weight: $font-weight-normal;  
+	  	
+      strong {
+        color: white;
+      }
+    }
+
+    .panel-footer {
+      background-color: white;
+      padding: 0;
+
+      >a {
+        display: block;
+        padding: 10px 15px;
+        color: $font-color;
+        font-size: $font-size-small;
+
+        >i {
+          margin-top: 2px;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: $brand-primary;
+        }
+      }
+    }
+
+    &.with-arrow {
+      &:before {
+        border-color: transparent;
+      }
+      &:after {
+        @include triangle(18px, $slategray, up);
+      }
+    }
+
+    .list-group {
+      >li {
+        padding: 0;
+        border-color: #eaeaea;
+		a {
+      display:block;
+      color: $font-color;			
+      padding:8px 0;
+      
+			}
+        .media {
+          .media-object {
+            margin: 10px;
+            padding: 0;            
+			img{
+				@extend .br-50;
+			}
+          }
+          .media-body {
+            padding: 10px 15px 10px 0;
+          }
+        }
+
+        &:hover {
+          background-color: $active-link-bg;
+        }
+
+        >a {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,678 @@
+@import "../config/ui";
+@import "../config/colors";
+@import "../config/mixins";
+
+/* BEGIN CORE STYLES */
+html, body {
+  height: 100%;
+}
+
+.app-root {
+  display: block;
+  min-height: 100%;
+}
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: min-content;
+  overflow-x: hidden;
+
+  &.ks-content-solid-bg {
+    .ks-page-content {
+      background: rgba(0, 0, 0, 0.04);
+
+      .ks-page-content-body {
+        > .ks-nav-body-wrapper {
+          background: #fff;
+          display: flex;
+          margin: 30px;
+          flex-direction: column;
+          border-radius: $ks-default-border-radius;
+          padding: 0 15px;
+
+          > .container-fluid {
+            padding: 30px;
+            margin-left: -15px;
+            margin-right: -15px;
+          }
+        }
+      }
+    }
+  }
+
+  &.ks-page-loading {
+    .ks-navbar {
+      opacity: 0;
+    }
+
+    .ks-page-container {
+      opacity: 0;
+    }
+  }
+
+  &.ks-page-header-fixed {
+    .ks-page-header {
+      position: fixed;
+      top: 60px;
+      width: calc(100% - #{$ks-sidebar-width});
+      z-index: 2; /* Minimum: 2 */
+    }
+
+    .ks-page-content {
+      .ks-page-content-body {
+        padding-top: 60px;
+      }
+    }
+  }
+}
+
+/* DEPRECATED: .ks-container, use .ks-page-container */
+.ks-page-container {
+  display: flex;
+  width: 100%;
+  min-height: min-content;
+  height: 100%;
+
+  .ks-page {
+    width: 1px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.ks-page-header {
+  background: #fff;
+
+  &.ks-header-with-addon {
+    + .ks-content {
+      margin-top: 0;
+    }
+  }
+
+  .ks-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    height: 60px;
+    padding: 0 30px;
+    border-bottom: 1px solid $ks-default-border-color;
+    position: relative;
+    background: #fff;
+
+    h3 {
+      font-weight: normal;
+      font-size: 18px;
+      margin: 0;
+      line-height: 19px;
+    }
+
+    > .ks-controls {
+      display: inline-flex;
+      align-items: center;
+
+      > .breadcrumb {
+        + .btn {
+          margin-left: 10px;
+        }
+      }
+
+      > .btn {
+        + .btn {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  > .ks-title-and-subtitle {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    height: 60px;
+    padding: 0 30px;
+    border-bottom: 1px solid $ks-default-border-color;
+    position: relative;
+    background: #fff;
+
+    .ks-title-block {
+      .ks-main-title {
+        margin: 0;
+        margin-top: 2px;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 17px;
+      }
+
+      .ks-sub-title {
+        margin-top: 3px;
+        color: $ks-default-text-color-light;
+      }
+    }
+
+    .ks-controls {
+      display: inline-flex;
+      align-items: center;
+
+      > .breadcrumb {
+        + .btn {
+          margin-left: 10px;
+        }
+      }
+
+      > .btn {
+        + .btn {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  > .ks-addon {
+    min-height: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $ks-default-border-color;
+    font-weight: normal;
+
+    > .ks-addon-block {
+      > .ks-page-header-text {
+        color: #8998c3;
+        display: inline-block;
+        margin-right: 15px;
+        position: relative;
+        top: 1px;
+
+        .ks-icon {
+          font-size: 16px;
+          color: #b0bad7;
+          display: inline-block;
+          margin-right: 5px;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+
+    > .ks-addon-actions {
+      text-align: right;
+
+      > .btn {
+        + .btn {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.ks-page-content {
+  margin-top: -60px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% + 60px);
+
+  .ks-page-content-body {
+    margin-top: 60px;
+    padding-top: 0;
+
+    > .container-fluid,
+    > .ks-nav-body-wrapper > .container-fluid {
+      height: 100%;
+      padding: 30px !important;
+
+      h4:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .ks-nav-body-wrapper > .container-fluid {
+      padding: 0;
+    }
+  }
+}
+
+/* Default scrollbar styles */
+.jspScrollable
+.jspVerticalBar {
+  opacity: 0;
+  transition: opacity .2s ease-in;
+}
+
+.jspScrollable:hover
+.jspVerticalBar {
+  opacity: 1;
+}
+
+.jspScrollable {
+  outline: none;
+}
+
+.jspDrag {
+  background: #d1d1d1;
+  border-radius: 0;
+}
+
+.dropdown-toggle {
+  &::after {
+    display: block;
+    content: "\f110";
+    border: none;
+    font-family: $ks-icon-font-name;
+    font-size: 11px;
+    height: 6px;
+    line-height: 6px;
+    width: 10px;
+    margin-left: 11px;
+    padding: 0;
+    margin-right: 0;
+    position: relative;
+    float: right;
+    transition: 0.2s ease-in-out; /* Animate dropdown arrow */
+  }
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+.open,
+.show {
+  > .dropdown-toggle {
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.btn-group {
+  .dropdown-menu {
+    &.ks-dropdown-menu-icons {
+      min-width: 208px;
+
+      .dropdown-divider {
+        display: block;
+        margin: 0;
+      }
+
+      .dropdown-item {
+        position: relative;
+        border-bottom: none;
+        color: $ks-default-text-color;
+        font-weight: normal;
+        padding-left: 25px;
+
+        span {
+          font-size: 18px;
+          color: $ks-color-primary;
+          display: inline-block;
+          width: 16px;
+          margin-right: 12px;
+          position: relative;
+          top: 2px;
+        }
+
+        &:hover {
+          background-color: rgba(57, 81, 155, 0.05);
+        }
+      }
+    }
+
+    &.ks-dropdown-menu-sortable {
+      min-width: 208px;
+
+      .dropdown-divider {
+        display: block;
+        margin: 0;
+      }
+
+      .dropdown-item {
+        position: relative;
+        border-bottom: none;
+        color: $ks-default-text-color;
+        font-weight: normal;
+        padding-left: 25px;
+
+        &.dropdown-item-checked {
+          ::after {
+            font-family: $ks-icon-font-name;
+            content: "\f17b";
+            font-size: 14px;
+            color: $ks-color-primary;
+            position: absolute;
+            right: 12px;
+            top: 9px;
+          }
+        }
+
+        &:hover {
+          background-color: rgba(57, 81, 155, 0.05);
+        }
+
+        input {
+          display: none;
+        }
+
+        span {
+          &.ks-sort-by-text {
+            color: rgba(74,104,171,.8);
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-editor {
+  .ks-editor-body {
+    .form-control {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      resize: none;
+      min-height: 77px;
+    }
+  }
+
+  .ks-editor-footer {
+    background-color: rgba(57, 81, 155, 0.05);
+    border: 1px solid #c4cbe1;
+    border-top: none;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 10px 15px;
+    @include clearfix;
+
+    > .ks-controls {
+      .btn {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .ks-icon {
+          padding: 11px 13px;
+        }
+      }
+    }
+  }
+}
+
+.loadingoverlay {
+  .loadingoverlay_fontawesome {
+    font-size: 30px;
+  }
+
+  > div {
+    color: $ks-default-text-color-light;
+  }
+}
+
+.dropdown {
+  &.open {
+    .btn-link {
+      color: $ks-color-primary;
+    }
+  }
+
+  .dropdown-menu {
+    font-size: 12px;
+    padding: 0;
+    border: solid 1px #c4cbe1;
+    margin: 4px 0;
+    border-radius: 2px;
+    overflow: hidden;
+
+    .dropdown-item {
+      color: #474747;
+      padding: 10px 15px;
+      margin: 0;
+      border-bottom: 1px solid #c4cbe1;
+
+      &:hover {
+        background-color: #ebeef5;
+        color: #333333;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .ks-icon {
+        font-size: 16px;
+        display: inline-block;
+        margin-right: 4px;
+      }
+    }
+
+    .dropdown-divider {
+      display: none;
+    }
+
+    &.ks-simple {
+      min-width: 208px;
+
+      .dropdown-item {
+        position: relative;
+        border-bottom: none;
+        color: $ks-color-primary;
+        font-weight: normal;
+        padding-left: 25px;
+        display: flex;
+        align-items: center;
+        height: 38px;
+
+        > .ks-icon {
+          font-size: 16px;
+          line-height: 16px;
+          margin-right: 12px;
+          position: relative;
+          top: -1px;
+          width: 16px;
+          height: 16px;
+        }
+
+        > .ks-text {
+          line-height: 13px;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 5px 15px;
+  height: 30px;
+
+  &[data-block-toggle] {
+    position: fixed;
+    right: -999999px;
+  }
+}
+
+[data-block-toggle] {
+  position: fixed;
+  right: -999999px;
+}
+
+@media screen and (max-width: 1200px) {
+  .ks-page-header {
+    .ks-title {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .ks-title {
+    .ks-controls {
+      .breadcrumb {
+        display: none;
+      }
+    }
+  }
+
+  .btn {
+    &.ks-header-addon-block-toggle {
+      position: static;
+    }
+  }
+
+  .ks-page-header {
+    > .ks-addon {
+      background: $ks-color-white;
+      position: fixed;
+      top: -99999px;
+      height: auto;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 30px;
+      width: 100%;
+
+      > .ks-addon-block {
+        &.btn-group {
+          > .btn {
+            padding: 0 18px;
+          }
+        }
+
+        + .ks-addon-block {
+          margin-top: 15px;
+        }
+      }
+
+      &.ks-open {
+        top: 120px;
+      }
+    }
+
+    &.ks-header-with-addon {
+      + .ks-content {
+        > .ks-body {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ks-page-header {
+    > .ks-addon {
+      > .ks-addon-block {
+        > .ks-page-header-text {
+          text-align: center;
+        }
+
+        &.btn-group {
+          > .btn {
+            padding: 0 18px;
+          }
+        }
+
+        &.ks-addon-actions {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          .btn {
+            margin: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .ks-page-content {
+    .ks-page-content-body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+/* Header width if sidebar is compact */
+body {
+  &.ks-sidebar-compact {
+    .ks-page-header {
+      width: calc(100% - #{$ks-sidebar-compact-width});
+    }
+  }
+
+  &.ks-sidebar-none {
+    .ks-page-header {
+      width: 100%;
+    }
+  }
+
+  &.ks-sidebar-compact:not(.ks-sidebar-default):not(.ks-sidebar-sections),
+  &.ks-sidebar-empty,
+  &.ks-sidebar-none {
+    .ks-navbar {
+      .navbar-brand {
+        width: auto;
+
+        .ks-sidebar-toggle,
+        .ks-sidebar-mobile-toggle {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.ks-sidebar-iconbar {
+    .ks-navbar {
+      .navbar-brand {
+        .ks-sidebar-toggle {
+          display: none;
+        }
+      }
+    }
+
+    .ks-page-header {
+      width: calc(100% - #{$ks-sidebar-iconbar-width});
+    }
+  }
+
+  &.ks-sidebar-iconbar_compact {
+    .ks-navbar {
+      .navbar-brand {
+        .ks-sidebar-toggle {
+          display: none;
+        }
+      }
+    }
+
+    .ks-page-header {
+      width: calc(100% - #{$ks-sidebar-iconbar-compact-width});
+    }
+  }
+
+  &.ks-sidebar-collapsed,
+  &.ks-sidebar-empty {
+    .ks-page-header {
+      width: 100%;
+    }
+  }
+
+  &.ks-sidebar-empty {
+    .ks-page-header {
+      top: 110px;
+    }
+  }
+}
+/* END CORE STYLES */

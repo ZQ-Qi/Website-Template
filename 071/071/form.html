@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mobile first web app theme | first</title>
+  <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/plugin.css">
+  <link rel="stylesheet" href="css/style.css">  
+  <!--[if lt IE 9]>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="navbar">
+    <ul class="nav navbar-nav navbar-avatar pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">            
+          <span class="hidden-sm-only">Mika Sokeil</span>
+          <span class="thumb-small avatar inline"><img src="images/avatar.jpg" alt="Mika Sokeil" class="img-circle"></span>
+          <b class="caret hidden-sm-only"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#"><span class="badge bg-danger pull-right">3</span>Notifications</a></li>
+          <li class="divider"></li>
+          <li><a href="docs.html">Help</a></li>
+          <li><a href="signin.html">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="navbar-brand" href="#">first</a>
+    <button type="button" class="btn btn-link pull-left nav-toggle hidden-lg" data-toggle="class:show" data-target="#nav">
+      <i class="icon-reorder icon-xlarge text-default"></i>
+    </button>
+    <ul class="nav navbar-nav hidden-sm">
+      <li>
+        <div class="m-t m-b-small" id="panel-notifications">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-comment-alt icon-xlarge text-default"></i><b class="badge badge-notes bg-danger count-n">2</b></a>
+          <section class="dropdown-menu m-l-small m-t-mini">
+            <section class="panel panel-large arrow arrow-top">
+              <header class="panel-heading bg-white"><span class="h5"><strong>You have <span class="count-n">2</span> notifications</strong></span></header>
+              <div class="list-group list-group-flush m-t-n">
+                <a href="#" class="media list-group-item">
+                  <span class="pull-left thumb-small"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
+                  <span class="media-body block m-b-none">
+                    Moved to Bootstrap 3.0<br>
+                    <small class="text-muted">23 June 13</small>
+                  </span>
+                </a>
+                <a href="#" class="media list-group-item">
+                  <span class="media-body block m-b-none">
+                    first v.1 (Bootstrap 2.3 based) released<br>
+                    <small class="text-muted">19 June 13</small>
+                  </span>
+                </a>
+              </div>
+              <footer class="panel-footer text-small">
+                <a href="#" class="pull-right"><i class="icon-cog"></i></a>
+                <a href="#">See all the notifications</a>
+              </footer>
+            </section>
+          </section>
+        </div>
+      </li>
+      <li><div class="m-t-small"><a class="btn btn-small btn-info" data-toggle="modal" href="#modal"><i class="icon-plus"></i> POST</a></div></li>
+      <li class="dropdown shift" data-toggle="shift:appendTo" data-target=".nav-primary .nav">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-xlarge visible-sm visible-sm-inline"></i>Settings <b class="caret hidden-sm-only"></b></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#" data-toggle="class:navbar-fixed" data-target='body'>Navbar 
+              <span class="text-active">auto</span>
+              <span class="text">fixed</span>
+            </a>
+          </li>
+          <li class="visible-lg">
+            <a href="#" data-toggle="class:nav-vertical" data-target="#nav">Nav 
+              <span class="text-active">vertical</span>
+              <span class="text">horizontal</span>
+            </a>
+          </li>
+          <li class="divider hidden-sm"></li>
+          <li class="dropdown-header">Colors</li>
+          <li>
+            <a href="#" data-toggle="class:bg bg-black" data-target='.navbar'>Navbar 
+              <span class="text-active">white</span>
+              <span class="text">inverse</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-toggle="class:bg-light" data-target='#nav'>Nav 
+              <span class="text-active">inverse</span>
+              <span class="text">light</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form pull-left shift" action="" data-toggle="shift:appendTo" data-target=".nav-primary">
+      <i class="icon-search text-muted"></i>
+      <input type="text" class="input-small form-control" placeholder="Search">
+    </form>
+  </header>
+  <!-- / header -->
+  <!-- nav -->
+  <nav id="nav" class="nav-primary visible-lg nav-vertical">
+    <ul class="nav" data-spy="affix" data-offset-top="50">
+      <li><a href="index.html"><i class="icon-dashboard icon-xlarge"></i>Dashboard</a></li>
+      <li class="dropdown-submenu">
+        <a href="#"><i class="icon-th icon-xlarge"></i>Elements</a>
+        <ul class="dropdown-menu">
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="icons.html"><b class="badge pull-right">302</b>Icons</a></li>            
+          <li><a href="grid.html">Grid</a></li>
+          <li><a href="widgets.html"><b class="badge bg-primary pull-right">8</b>Widgets</a></li>
+          <li><a href="components.html"><b class="badge pull-right">18</b>Components</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="#"><i class="icon-list icon-xlarge"></i>Lists</a>
+        <ul class="dropdown-menu">
+          <li><a href="list.html">List groups</a></li>
+          <li><a href="table.html">Table</a></li>
+        </ul>
+      </li>
+      <li class="active"><a href="form.html"><i class="icon-edit icon-xlarge"></i>Form</a></li>
+      <li><a href="chart.html"><i class="icon-signal icon-xlarge"></i>Chart</a></li>
+      <li class="dropdown-submenu">
+        <a href="#"><i class="icon-link icon-xlarge"></i>Others</a>
+        <ul class="dropdown-menu">
+          <li><a href="signin.html">Signin page</a></li>
+          <li><a href="signup.html">Signup page</a></li>
+          <li><a href="404.html">404 page</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- / nav -->
+  <section id="content">
+    <section class="main padder">
+      <div class="clearfix">
+        <h4><i class="icon-edit"></i>Form</h4>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <section class="panel">
+            <form class="form-horizontal" method="get" data-validate="parsley">      
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Photo</label>
+                <div class="col-lg-9 media">
+                  <div class="bg-light pull-left text-center media-large thumb-large"><i class="icon-user inline icon-light icon-3x m-t-large m-b-large"></i></div>
+                  <div class="media-body">
+                    <input type="file" name="file" title="Change" class="btn btn-small btn-info m-b-small"><br>
+                    <button class="btn btn-small btn-default">Delete</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Email</label>
+                <div class="col-lg-8">
+                  <input type="text" name="email" placeholder="test@example.com" class="bg-focus form-control" data-required="true" data-type="email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Password</label>
+                <div class="col-lg-8">
+                  <input type="password" name="password" placeholder="Password" class="bg-focus form-control">
+                  <div class="line line-dashed m-t-large"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Username</label>
+                <div class="col-lg-8">
+                  <input type="text" name="username" placeholder="Username" data-required="true" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Account</label>
+                <div class="col-lg-4">
+                  <select name="account" class="form-control">
+                    <option value="1">Editor</option>
+                    <option value="0">Admin</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Registered</label>
+                <div class="col-lg-9">
+                  <input type="text" class="combodate form-control" data-format="DD-MM-YYYY" data-template="D  MMM  YYYY" name="datetime" value="21-12-2012">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Profile</label>
+                <div class="col-lg-8">
+                  <textarea placeholder="Profile" rows="5" class="form-control" data-trigger="keyup" data-rangelength="[20,200]"></textarea>
+                  <div class="checkbox">
+                    <label>
+                      <input name="agree" type="checkbox"> Agree the <a href="#">terms and policy</a>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-9 col-offset-3">                      
+                  <button type="submit" class="btn btn-white">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </form>
+          </section>
+          <section class="panel"> 
+            <div class="wizard clearfix m-b" id="form-wizard">
+              <ul class="steps">
+                <li data-target="#step1" class="active"><span class="badge badge-info">1</span>Step 1</li>
+                <li data-target="#step2"><span class="badge">2</span>Step 2</li>
+                <li data-target="#step3"><span class="badge">3</span>Step 3</li>
+              </ul>
+            </div>
+            <div class="step-content">
+              <form>
+                <div class="step-pane active" id="step1">
+                  <p>Your website:</p>             
+                  <input type="text" class="input-small form-control" data-trigger="change" data-required="true" data-type="url" placeholder="website">
+                </div>
+                <div class="step-pane" id="step2">
+                  <p>Your email:</p>             
+                  <input type="text" class="input-small form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
+                </div>
+                <div class="step-pane" id="step3">This is step 3</div>                
+              </form>
+              <div class="actions m-t">
+                <button type="button" class="btn btn-white btn-small btn-prev" data-target="#form-wizard" data-wizard="previous" disabled="disabled">Prev</button>
+                <button type="button" class="btn btn-white btn-small btn-next" data-target="#form-wizard" data-wizard="next" data-last="Finish">Next</button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-lg-6">
+          <div class="panel">
+            <div class="clearfix">
+              <div class="col-lg-12">
+                Radio and Checkbox (Retina display)
+              </div>
+              <div class="col-lg-6">                    
+                <!-- radio -->
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" name="radio" checked="checked">
+                    <i class="icon-circle-blank"></i>
+                    Item one checked
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" name="radio">
+                    <i class="icon-circle-blank"></i>
+                    Item two
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" name="radio" disabled="disabled">
+                    <i class="icon-circle-blank"></i>
+                    Item three disabled
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" checked="checked" disabled="disabled">
+                    <i class="icon-circle-blank"></i>
+                    Item four checked disabled
+                  </label>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <!-- checkbox -->
+                <div class="checkbox">
+                  <label class="checkbox-custom">
+                    <input type="checkbox" name="checkboxA" checked="checked">
+                    <i class="icon-unchecked"></i>
+                    Item one checked
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="checkbox-custom">
+                    <input type="checkbox" name="checkboxB" id="2">
+                    <i class="icon-unchecked"></i>
+                    Item two
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="checkbox-custom">
+                    <input type="checkbox" name="checkboxC" disabled="disabled">
+                    <i class="icon-unchecked"></i>
+                    Item three disabled
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="checkbox-custom">
+                    <input type="checkbox" name="checkboxD" checked="checked" disabled="disabled">
+                    <i class="icon-unchecked"></i>
+                    Item four checked disabled
+                  </label>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <p>Combobox</p>
+                <div id="myCombobox" class="input-group dropdown combobox m-b">
+                  <input class="input-small form-control" name="combobox" type="text">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-small btn-white dropdown-toggle" data-toggle="dropdown"><i class="caret"></i></button>
+                    <ul class="dropdown-menu pull-right">
+                      <li data-value="1" data-selected="true"><a href="#">Item One</a></li>
+                      <li data-value="2"><a href="#">Item Two</a></li>
+                      <li data-value="3" data-fizz="buzz"><a href="#">Item Three</a></li>
+                      <li class="divider"></li>
+                      <li data-value="4"><a href="#">Item Four</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <p>Select</p>
+                <div id="mySelect" class="select btn-group m-b" data-resize="auto">
+                  <button type="button" data-toggle="dropdown" class="btn btn-white btn-small dropdown-toggle">
+                    <span class="dropdown-label"></span> <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li data-value="1" data-selected="true"><a href="#">Item One</a></li>
+                    <li data-value="2"><a href="#">Item Two</a></li>
+                    <li data-value="3" data-fizz="buzz"><a href="#">Item Three</a></li>
+                    <li class="divider"></li>
+                    <li data-value="4"><a href="#">Item Four</a></li>
+                  </ul>
+                </div>
+                <p>Spinner</p>
+                <div id="MySpinner" class="spinner input-group m-b">
+                  <input type="text" class="input-small spinner-input form-control" name="spinner" maxlength="3">
+                  <div class="btn-group btn-group-vertical input-group-btn">
+                    <button type="button" class="btn btn-white spinner-up">
+                      <i class="icon-chevron-up"></i>
+                    </button>
+                    <button type="button" class="btn btn-white spinner-down">
+                      <i class="icon-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+                <p>Dropdown select</p>
+                <div class="btn-group">
+                  <button data-toggle="dropdown" class="btn btn-small btn-white dropdown-toggle">
+                    <span class="dropdown-label">Option1</span> 
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-select">
+                      <li class="active"><a href="#"><input type="radio" name="d-s-r" checked="">Option1</a></li>
+                      <li><a href="#"><input type="radio" name="d-s-r">Option2</a></li>
+                      <li><a href="#"><input type="radio" name="d-s-r">Option3</a></li>
+                      <li class="disabled"><a href="#"><input type="radio" name="d-s-r" disabled="">I'm disabled</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button data-toggle="dropdown" class="btn btn-small btn-white dropdown-toggle">
+                    <span class="dropdown-label" data-placeholder="Please select">Please select</span> 
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-select">
+                      <li><a href="#"><input type="checkbox" name="d-s-c-1">Option1</a></li>
+                      <li><a href="#"><input type="checkbox" name="d-s-c-2">Option2</a></li>
+                      <li><a href="#"><input type="checkbox" name="d-s-c-3">Option3</a></li>
+                      <li><a href="#"><input type="checkbox" name="d-s-c-4">Option4</a></li>
+                      <li><a href="#"><input type="checkbox" name="d-s-c-5">Option5</a></li>
+                  </ul>
+                </div>
+                <div class="input-group m-b m-t">
+                    <input type="text" id="appendedInput" class="input-small form-control">
+                    <div class="input-group-btn">
+                      <button class="btn btn-white btn-small dropdown-toggle" data-toggle="dropdown">
+                        <span class="dropdown-label">USD</span>  
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-select pull-right">
+                        <li class="active">
+                          <a href="#"><input type="radio" value="USD" name="pay_unit" checked="">USD</a>
+                        </li>
+                        <li>
+                          <a href="#"><input type="radio" value="GBP" name="pay_unit">GBP</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+                <p>Pillbox</p>
+                <div id="MyPillbox" class="pillbox clearfix m-b">
+                  <ul>
+                    <li class="label">Item One</li>
+                    <li class="label bg-success">Item Two</li>
+                    <li class="label bg-warning">Item Three</li>
+                    <li class="label bg-danger">Item Four</li>
+                    <li class="label bg-info">Item Five</li>
+                    <li class="label bg-success">Item Six</li>
+                    <li class="label bg-default">Item Seven</li>
+                    <input type="text" placeHolder="add a pill">
+                  </ul>
+                </div>
+                <p>Datepicker</p>
+                <div class="m-b row">
+                  <div class="col-lg-6">
+                    <input class="input-small form-control datepicker" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy" >
+                  </div>
+                </div>
+                <p>Slider</p>
+                <div>
+                  <input class="slider" type="text" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-selection="after">
+                </div>
+                <div class="dropfile visible-lg m-t">
+                  <small>Drag and Drop file here</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- footer -->
+  <footer id="footer">
+    <div class="text-center padder clearfix">
+      <p>
+        <small>&copy; first 2013, Mobile first web app framework base on Bootstrap  更多模板：<a href="http://www.aspku.com/" target="_blank">源码之家</a></small><br><br>
+        <a href="#" class="btn btn-mini btn-circle btn-twitter"><i class="icon-twitter"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-facebook"><i class="icon-facebook"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-gplus"><i class="icon-google-plus"></i></a>
+      </p>
+    </div>
+  </footer>
+  <!-- / footer -->
+	<script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- app -->
+  <script src="js/app.js"></script>
+  <script src="js/app.plugin.js"></script>
+  <script src="js/app.data.js"></script>
+  <!-- fuelux -->
+  <script src="js/fuelux/fuelux.js"></script>
+  <!-- datepicker -->
+  <script src="js/datepicker/bootstrap-datepicker.js"></script>
+  <!-- slider -->
+  <script src="js/slider/bootstrap-slider.js"></script>
+  <!-- file input -->  
+  <script src="js/file-input/bootstrap.file-input.js"></script>
+  <!-- combodate -->
+  <script src="js/combodate/moment.min.js"></script>
+  <script src="js/combodate/combodate.js"></script>
+  <!-- parsley -->
+  <script src="js/parsley/parsley.min.js"></script>
+</body>
+</html>

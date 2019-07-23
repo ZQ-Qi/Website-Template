@@ -1,0 +1,44 @@
+.pagination{
+	li{
+		a{
+			&.no-border{
+				padding: 0.5rem 1rem;
+			}
+		}
+	}
+	&.pagination-round{
+		li{
+			a{
+				&.page-link:hover{
+					&.no-border{
+						border-width: 1px;
+						border-radius: 2rem;
+					}
+				}
+			}
+			&:first-child{
+				a{
+					border-top-left-radius: 2rem !important;
+					border-bottom-left-radius: 2rem !important;
+					padding-left: 1.2rem;
+				}
+			}
+			&:last-child{
+				a{
+					border-top-right-radius: 2rem !important;
+					border-bottom-right-radius: 2rem !important;
+					padding-right: 1.2rem;
+				}
+			}
+			&.active{
+				a{
+					&.no-border,&.no-border:hover{
+						border-width: 1px;
+						border-radius: 2rem;
+						padding: 0.5rem 1rem;
+					}
+				}
+			}
+		}
+	}
+}

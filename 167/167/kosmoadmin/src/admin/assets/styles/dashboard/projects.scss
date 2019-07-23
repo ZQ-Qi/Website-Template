@@ -1,0 +1,124 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-projects-dashboard-page
+2. Project header / .ks-projects-dashboard-page > .ks-header
+3. Tasks project logo / .ks-projects-dashboard-page > .ks-header > .ks-project > .ks-logo
+4. Search and Users list / .ks-projects-dashboard-page > .ks-header > .ks-extras
+5. Widgets container / .ks-projects-dashboard-page > .ks-body
+-------------------------------------------------------------------*/
+
+@import "../config/ui";
+@import "../config/colors";
+
+.ks-projects-dashboard-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  > .ks-header {
+    background: #fff;
+    min-height: 60px;
+    height: 60px;
+    border-bottom: 1px solid $ks-default-border-color;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    justify-content: space-between;
+
+    > .ks-project {
+      display: flex;
+      align-items: center;
+
+      > .ks-logo {
+        width: 36px;
+        height: 36px;
+        background-color: #ffffff;
+        border: solid 1px $ks-default-border-color;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      > .ks-name {
+        font-size: 18px;
+      }
+    }
+
+    > .ks-extras {
+      display: flex;
+      align-items: center;
+
+      > .ks-search {
+        width: 318px;
+      }
+
+      > .ks-users {
+        display: flex;
+        margin-left: 40px;
+
+        > a {
+          margin-right: 10px;
+          width: 26px;
+          height: 26px;
+
+          &.ks-add {
+            border-radius: 50%;
+            color: $ks-color-primary;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 14px;
+            background-color: #fff;
+            font-size: 19px;
+            border: solid 1px rgba(57, 81, 155, 0.3);
+
+            &:hover {
+              border: 1px solid $ks-color-primary;
+            }
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  > .ks-body {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .ks-projects-dashboard-page {
+    > .ks-header {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 30px;
+
+      > .ks-project {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .ks-projects-dashboard-page {
+    > .ks-header {
+      > .ks-extras {
+        flex-direction: column;
+
+        > .ks-search {
+          margin-bottom: 15px;
+        }
+
+        > .ks-users {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

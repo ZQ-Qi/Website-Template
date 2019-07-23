@@ -1,0 +1,309 @@
+.main_Wrapper.aside-fixed {
+    #leftmenu {
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+    }
+}
+
+.main_Wrapper.aside-static {
+    #wrap {
+        position: relative;
+        #controls {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            &.dropdown-open {
+                right: 0;
+            }
+        }
+    }
+    #leftmenu {
+        position: static;
+        float: left;
+        padding-top: 60px;
+        min-height: 100%;
+    }
+}
+
+.main_Wrapper.aside-static.header-static {
+    #leftmenu {
+        padding-top: 60px;
+    }
+}
+
+#leftmenu {
+    width: 250px;
+    padding: 0;
+    background-color: $leftmenu-bg;
+    z-index: 21;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: -blackberry-touch;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+    .panel-group {
+        margin-bottom: 0;
+        .panel+.panel {
+            margin-top: 0;
+        }
+        .panel {
+            border-radius: 0;
+            border: 0;
+            background-color: transparent;
+            @include box-shadow(none);
+            >.panel-heading {
+                background-color: transparent;
+                border: 0;
+                text-transform: uppercase;
+                padding: 0;
+                .panel-title {
+                    margin: 0 15px;
+                    >a {
+                        display: block;
+                        position: relative;
+                        padding: 15px 15px 0;
+                        margin: 0 -15px;
+                        cursor: pointer;
+                        font-size: $font-size-mini;
+                        color: $transparent-black-2;
+                        text-decoration: none;
+                        &:after {
+                            content: '';
+                            display: block;
+                            border-bottom: 1px solid $transparent-black-05;
+                            margin-top: 15px;
+                        }
+                        &:hover {
+                            text-decoration: none;
+                            color: $transparent-black-5;
+                        }
+                        >i {
+                            position: absolute;
+                            right: 15px;
+                        }
+                    }
+                }
+                +.panel-collapse {
+                    >.panel-body {
+                        border-top: 0;
+                    }
+                }
+            }
+            .panel-title {
+                >a.collapsed {
+                    background-color: $transparent-black-1;
+                    color: $transparent-black-4;
+                    padding: 15px;
+                    &:after {
+                        display: none;
+                    }
+                    &:hover {
+                        color: $transparent-black-6;
+                    }
+                    >i:before {
+                        content: "\f107";
+                    }
+                }
+            }
+            .panel-body {
+                color: $transparent-white-5;
+            }
+        }
+    }
+    .summary {
+        .media {
+            .media-body {
+                font-size: $font-size-small;
+                color: $transparent-white-3;
+                text-transform: uppercase;
+                .media-heading {
+                    font-weight: $font-weight-bold;
+                    color: $transparent-white-5;
+                }
+            }
+        }
+    }
+    .milestone-sidbar {
+        padding: 15px;
+        .text-center-folded {
+            //color: $transparent-white-3;
+            span {
+                font-size: 13px;
+            }
+        }
+    }
+    .onoffswitch {
+        right: -10px;
+        .onoffswitch-label {
+            @include opacity(.4);
+            @include transition(all .2s ease-in-out);
+        }
+    }
+    .onoffswitch-checkbox:checked+.onoffswitch-label {
+        @include opacity(1);
+    }
+}
+
+#leftmenu-wrap {
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: -blackberry-touch;
+    width: 100%;
+    height: 100%;
+}
+
+#navigation {
+    margin: 0 -15px;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: -blackberry-touch;
+    list-style: none;
+    background-color: $leftmenu-bg;
+    >li>a>i {
+        display: inline-block;
+        margin-right: 5px;
+        text-align: center;
+        font-size: $font-size-base;
+        width: 20px;
+        line-height: 1;
+        @include transition(all .1s linear);
+    }
+    >li {
+        position: relative;
+        margin: 0; //overflow: hidden;
+        z-index: 10;
+        &.open,
+        &:hover {
+            >a {
+                background-color: $transparent-black-2;
+                color: white;
+            }
+            >i {
+                color: white;
+            }
+        }
+        &.active {
+            >a {
+                background: linear-gradient(45deg, #49cdd0, #45e5c3);
+                color: white;
+                box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4);
+            }
+            >i {
+                color: white;
+            }
+            .ink {
+                z-index: 9;
+            }
+        }
+        a {
+            font-size: $font-size-base;
+            color: $link-color;
+            @include transition(all .2s linear);
+            @include user-select(none);
+            position: relative;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .ink {
+            display: block;
+            position: absolute;
+            background: $transparent-white-1;
+            border-radius: 100%;
+            transform: scale(0);
+            width: 250px!important;
+            height: 250px!important;
+        }
+        .ink.animate {
+            @include animation(ripple 0.65s linear);
+        }
+        >a {
+            font-weight: $font-weight-normal;
+            position: relative;
+            display: block;
+            padding: 15px 10px;
+            margin: 0 15px;
+            border-radius: 3px;
+            color: $font-color;
+            >.badge {
+                position: absolute;
+                top: 6px;
+                left: 35px;
+            }
+            >.label {
+                position: absolute;
+                top: 17px;
+                right: 10px;
+            }
+        }
+    }
+    .dropdown {
+        >a>i:last-of-type {
+            font-size: 8px;
+            position: absolute;
+            top: 22px;
+            right: 0px;
+        }
+        &.open {
+            >a>i:last-of-type:before {
+                content: "\f068";
+            }
+        }
+        >a {
+            >.label {
+                right: 10px;
+            }
+        }
+        >ul {
+            display: none;
+            background-color: $transparent-black-1;
+            list-style: none;
+            padding: 5px 0;
+            margin: 0 15px;
+            border-radius: 0 0 3px 3px;
+            li {
+                position: relative;
+                padding: 0;
+                &:hover,
+                &.active {
+                    >a {
+                        color: $active-el;
+                    }
+                }
+                &:last-child>a {
+                    border-bottom: 0;
+                }
+                >a {
+                    position: relative;
+                    display: block;
+                    padding: 10px 0 10px 19px;
+                    @include transition( all .2s linear);
+                    font-weight: $font-weight-normal;
+                    color: $font-color;
+                    >i {
+                        margin-right: 12px;
+                    }
+                    >.badge,
+                    >.label {
+                        position: absolute;
+                        right: 10px;
+                        top: 8px;
+                    }
+                }
+            }
+        }
+        &.submenu {
+            >a>i:last-of-type {
+                top: 14px;
+            }
+            &.open {
+                >a {
+                    color: white!important;
+                }
+            }
+            >ul {
+                background-color: transparent;
+                padding-left: 15px;
+            }
+        }
+    }
+}

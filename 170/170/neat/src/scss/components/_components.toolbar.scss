@@ -1,0 +1,42 @@
+/* ==========================================================================
+   #TOOLBAR
+   ========================================================================== */
+
+.c-toolbar {
+	display: flex;
+	align-items: center;
+	margin-bottom: $toolbar-margin-bottom;
+	padding: $toolbar-padding;
+	background-color: $toolbar-background-color;
+	box-shadow: $toolbar-box-shadow;
+
+	@include respond-to ($breakpoint-tablet) {
+		padding-left: 0;
+	}
+}
+
+.c-toolbar-responsive {
+	@include respond-to ($breakpoint-tablet) {
+		overflow-x: auto;
+
+		.c-toolbar {
+			width: $breakpoint-tablet;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.c-toolbar__nav {}
+
+.c-toolbar__nav-link {
+	display: inline-block;
+	margin: $toolbar-nav-link-margin;
+	padding: $toolbar-nav-link-padding;
+	color: $toolbar-nav-link-color;
+	font-weight: $toolbar-nav-link-font-weight;
+
+	&.is-active {
+		border-bottom: $toolbar-nav-link-active-border-width solid $toolbar-nav-link-active-border-color;
+		color: $toolbar-nav-link-active-color;
+	}
+}

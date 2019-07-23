@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Zoom Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="node_modules/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.css">
+  <link rel="stylesheet" href="node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="node_modules/icheck/skins/all.css" />
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar navbar-primary col-lg-12 col-12 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper">
+            <a class="navbar-brand brand-logo" href="#">Zoom
+              <i class="mdi mdi-cube-send"></i>
+            </a>
+            <a class="navbar-brand brand-logo-mini" href="#"><i class="mdi mdi-cube-send"></i></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+            <button class="navbar-toggler navbar-toggler d-none d-lg-block align-self-center mr-2" type="button" data-toggle="minimize">
+                <span class="mdi mdi-chevron-left"></span>
+            </button>
+            <div class="nav-profile">
+              <span>Hi, Dave Mattew</span>
+              <img src="images/faces/face6.jpg" />
+            </div>
+            <form class="form-inline mt-2 mt-md-0 d-none d-lg-block ml-lg-auto">
+                <input class="form-control search" type="text" placeholder="Search">
+            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-toggle="dropdown">
+                        <i class="mdi mdi-bell-outline"></i>
+                        <span class="count bg-warning">7</span>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown notification-drop-down" aria-labelledby="notificationDropdown">
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-birthday-cake text-success fa-fw"></i>
+                            <span class="notification-text">Today is John's birthday</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-phone text-danger fa-fw"></i>
+                            <span class="notification-text">Call John Doe</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-handshake-o text-primary fa-fw"></i>
+                            <span class="notification-text">Meeting Alisa</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-exclamation-triangle text-danger fa-fw"></i>
+                            <span class="notification-text">Server space almost full</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-bell text-warning fa-fw"></i>
+                            <span class="notification-text">Payment Due</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator" id="MailDropdown" href="#" data-toggle="dropdown">
+                        <i class="mdi mdi-comment-outline"></i>
+                        <span class="count bg-danger">4</span>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown mail-notification" aria-labelledby="MailDropdown">
+                        <a class="dropdown-item" href="#">
+                            <div class="sender-img">
+                                <img src="images/faces/face6.jpg" alt="">
+                                <span class="badge badge-success">&nbsp;</span>
+                            </div>
+                            <div class="sender">
+                                <p class="Sende-name">John Doe</p>
+                                <p class="Sender-message">Hey, We have a meeting planned at the end of the day.</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="sender-img">
+                                <img src="images/faces/face2.jpg" alt="">
+                                <span class="badge badge-success">&nbsp;</span>
+                            </div>
+                            <div class="sender">
+                                <p class="Sende-name">Leanne Jones</p>
+                                <p class="Sender-message">Can we schedule a call this afternoon?</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="sender-img">
+                                <img src="images/faces/face3.jpg" alt="">
+                                <span class="badge badge-primary">&nbsp;</span>
+                            </div>
+                            <div class="sender">
+                                <p class="Sende-name">Stella</p>
+                                <p class="Sender-message">Great presentation the other day. Keep up the good work!</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="sender-img">
+                                <img src="images/faces/face4.jpg" alt="">
+                                <span class="badge badge-warning">&nbsp;</span>
+                            </div>
+                            <div class="sender">
+                                <p class="Sende-name">James Brown</p>
+                                <p class="Sender-message">Need the updates of the project at the end of the week.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item view-all">View all</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <span class="mdi mdi-chevron-left"></span>
+              </button>
+        </div>
+    </nav>
+
+    <!--menu ends -->
+    <div class="container-fluid page-body-wapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- sidebar starts -->
+        <nav class="sidebar sidebar-fixed sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+                <!--main pages start-->
+                <li class="nav-item nav-category">
+                    <span class="nav-link">General</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#dashboardSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-speedometer"></i>
+                        <span class="menu-title">Dashboard</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="dashboardSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Dashboard 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/dashboard/dashboard-2.html">Dashboard 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#layoutsSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-size-actual"></i>
+                        <span class="menu-title">Page layouts</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="layoutsSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/layout/boxed_layout.html">Boxed</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/layout/rtl_layout.html">Rtl</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#sidebarLayoutsSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-list"></i>
+                        <span class="menu-title">Sidebar layouts</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="sidebarLayoutsSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/layout/sidebar-compact.html">Compact menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/layout/sidebar-collapsed.html">Collapsed</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/layout/sidebar-hidden.html">Hidden</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">Hidden overlay</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/layout/horizontal_menu.html">Horizontal menu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/widgets.html">
+                        <i class="icon-wrench"></i>
+                        <span class="menu-title">Widgets</span>
+                    </a>
+                </li>
+                <!--main pages end-->
+                <!--sample pages start-->
+                <li class="nav-item nav-category">
+                    <span class="nav-link">Sample pages</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#authSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-support"></i>
+                        <span class="menu-title">Authentication</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="authSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/samples/register.html">
+                                              Register
+                                            </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/samples/login.html">
+                                              Login
+                                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#errorSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-docs"></i>
+                        <span class="menu-title">Error pages</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="errorSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/samples/error-404.html">
+                                              404
+                                            </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/samples/error-500.html">
+                                              500
+                                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#generalSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-paper-plane"></i>
+                        <span class="menu-title">General Pages</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="generalSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/samples/blank-page.html">
+                                  Blank Page
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/samples/invoice.html">
+                                  Invoice
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/samples/pricing-table.html">
+                                  Pricing Table
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!--sample pages end-->
+                <!--ui features start-->
+                <li class="nav-item nav-category">
+                    <span class="nav-link">UI Features</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#uiBasicSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-layers"></i>
+                        <span class="menu-title">Basic Elements</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="uiBasicSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/accordions.html">Accordions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/tabs.html">Tabs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/progress.html">Progress</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/modals.html">Modals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/pagination.html">Pagination</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#uiAdvancedSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-grid"></i>
+                        <span class="menu-title">Advanced Elements</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="uiAdvancedSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/image-cropper.html">Cropper</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/clipboard.html">Clipboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/dragula.html">Dragula</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/listify.html">Listify</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/context-menu.html">Context menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/carousel.html">Carousel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/colcade.html">Colcade</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#uiPopupSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-bubble"></i>
+                        <span class="menu-title">Popups</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="uiPopupSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/alerts.html">Alerts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/avgrund.html">Avgrund</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/tour.html">Tour</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#uiNotificationsSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-bell"></i>
+                        <span class="menu-title">Notifications</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="uiNotificationsSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/notifications.html">Toast</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/desktop-notification.html">Desktop notification</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#uiSliderSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-bubble"></i>
+                        <span class="menu-title">Sliders</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="uiSliderSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/ion-range-slider.html">Ion range</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/no-ui-slider.html">No-ui-slider</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#iconsSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="icon-emotsmile"></i>
+                            <span class="menu-title">Icons</span>
+                            <i class="icon-arrow-down"></i>
+                        </a>
+                        <div class="collapse" id="iconsSubmenu">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/icons/font-awesome-icons.html">Font awesome</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/icons/themify-icons.html">Themify</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/icons/flag-icons.html">Flag icons</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/icons/simple-line-icons.html">Simple line icons</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </li>
+                <!-- ui features end-->
+                <!-- Data rep start -->
+                <li class="nav-item nav-category">
+                    <span class="nav-link">Data Representation</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#chartsSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-pie-chart"></i>
+                        <span class="menu-title">Charts</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="chartsSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/charts/flot-chart.html">Flot</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/charts/chartist.html">Chartist</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/charts/sparkline.html">Sparkline</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/charts/c3.html">C3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/charts/morris.html">Morris</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/charts/rickshaw.html">Rickshaw</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#tablesSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-screen-desktop"></i>
+                        <span class="menu-title">Tables</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="tablesSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/tables/basic-table.html">Basic</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/tables/bootstrap-table.html">Bootstrap Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#mapsSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-map"></i>
+                        <span class="menu-title">Maps</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="mapsSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/maps/vector-map.html">Vector map</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!--data rep end-->
+                <!--forms start-->
+                <li class="nav-item nav-category">
+                    <span class="nav-link">Forms</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#formsSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-note"></i>
+                        <span class="menu-title">Form components</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="formsSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/basic-elements.html">Basic elements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/form-wizard.html">Wizard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/form-mask.html">Form mask</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/form-repeater.html">Form repeater</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/x-editable.html">X-editable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/typeahead.html">Typeahead</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#formsAdvancedSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-equalizer"></i>
+                        <span class="menu-title">Advanced plugins</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="formsAdvancedSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/form-addons.html">Form addons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/form-picker.html">Form pickers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/icheck.html">Icheck</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/bt-select-splitter.html">Splitter</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#validationSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-flag"></i>
+                        <span class="menu-title">Validation</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="validationSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/form-validation.html">Form validation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/bt-maxlength.html">Maxlength</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#fileUploadSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-paper-clip"></i>
+                        <span class="menu-title">File upload</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="fileUploadSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/dropify.html">Dropify</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/dropzone.html">Dropzone</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/jquery-file-upload.html">Jquery upload</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#textEditorSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-pencil"></i>
+                        <span class="menu-title">Text editors</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="textEditorSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/summernote.html">Summernote</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/tinymce.html">Tinymce</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/quill-editor.html">Quill</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/simplemde-editor.html">SimpleMde</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/wysihtml.html">Wysihtml</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#codeEditorSubmenu" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-vector"></i>
+                        <span class="menu-title">Code editors</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                    <div class="collapse" id="codeEditorSubmenu">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/ace.html">Ace</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/forms/code-mirror.html">Codemirror</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!--forms end-->
+                <!--Apps start-->
+                <li class="nav-item nav-category">
+                    <span class="nav-link">Applications</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/apps/email.html">
+                        <i class="icon-envelope-open"></i>
+                        <span class="menu-title">E-mail</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/apps/gallery.html">
+                      <i class="icon-picture"></i>
+                      <span class="menu-title">Gallery</span>
+                    </a>
+                  </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/apps/calendar.html">
+                        <i class="icon-calendar"></i>
+                        <span class="menu-title">Calendar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/apps/todo-list.html">
+                        <i class="icon-event"></i>
+                        <span class="menu-title">Todo list</span>
+                    </a>
+                </li>
+                <!--Apps end-->
+                <li class="nav-item nav-category">
+                    <span class="nav-link">Documentation</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/documentation.html">
+                        <i class="icon-doc"></i>
+                        <span class="menu-title">Documentation</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--menu ends -->
+        <div class="content-wrapper">
+          <h1 class="page-title">Overview</h1>
+          <div class="row grid-margin">
+            <div class="col-12 col-lg-6 grid-margin grid-margin-lg-0">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Total sales</h2>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="custom-legend-container small-chart-container">
+                        <canvas id="sales-chart"></canvas>
+                        <div id="sales-chart-legend" class="legend-right"></div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <h3 class="display-4 mb-0">
+                        85%
+                      </h3>
+                      <h4>
+                        160 sales January
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="row grid-margin">
+                <div class="col-6">
+                  <div class="card card-statistics">
+                    <div class="card-body">
+                      <p class="highlight-text">
+                        <i class="mdi mdi-account"></i>
+                        225
+                      </p>
+                      <p class="text-muted">
+                        New  Added contacts
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="card card-statistics">
+                    <div class="card-body">
+                      <p class="highlight-text">
+                        <i class="mdi mdi-trophy"></i>
+                        $450.00
+                      </p>
+                      <p class="text-muted">
+                        Income amounts
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="card card-statistics">
+                    <div class="card-body">
+                      <p class="highlight-text">
+                        <i class="mdi mdi-chart-areaspline"></i>
+                        $18954
+                      </p>
+                      <p class="text-muted">
+                        Lifetime total sales
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="card card-statistics">
+                    <div class="card-body">
+                      <p class="highlight-text">
+                        <i class="mdi mdi-cash-multiple"></i>
+                        $7841
+                      </p>
+                      <p class="text-muted">
+                        Income amounts
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row grid-margin">
+            <div class="col-12 col-lg-5 grid-margin grid-margin-lg-0">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Inbox Messages</h2>
+                  <!--inbox preview starts-->
+                  <div class="preview-list pr-5">
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face1.jpg" class="profile-pic" />
+                        <span class="badge badge-online"></span>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Create New Page</h4>
+                        <p>
+                          Vestibulum lectus nulla, maximus
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face3.jpg" class="profile-pic" />
+                        <span class="badge badge-offline"></span>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Back Up Theme</h4>
+                        <p>
+                          Vestibulum lectus nulla, maximus
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face4.jpg" class="profile-pic" />
+                        <span class="badge badge-busy"></span>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Create New Page</h4>
+                        <p>
+                          Vestibulum lectus nulla, maximus
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face5.jpg" class="profile-pic" />
+                        <span class="badge badge-offline"></span>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Back Up Theme</h4>
+                        <p>
+                          Vestibulum lectus nulla, maximus
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face6.jpg" class="profile-pic" />
+                        <span class="badge badge-busy"></span>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Create New Page</h4>
+                        <p>
+                          Vestibulum lectus nulla, maximus
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face7.jpg" class="profile-pic" />
+                        <span class="badge badge-online"></span>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Back Up Theme</h4>
+                        <p>
+                          Vestibulum lectus nulla, maximus
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <img src="images/faces/face8.jpg" class="profile-pic" />
+                        <span class="badge badge-offline"></span>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Create New Page</h4>
+                        <p>
+                          Vestibulum lectus nulla, maximus
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--inbox-preview end-->
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="card pb-4">
+                <div class="card-body">
+                  <h2 class="card-title">Product Calculation</h2>
+                  <div class="custom-legend-container">
+                    <div id="product-calc-chart-legend" class="legend-top"></div>
+                    <canvas id="product-calc-chart" class="mb-4"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row grid-margin">
+            <div class="col-12 col-lg-5 grid-margin grid-margin-lg-0">
+              <!--notification card starts-->
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Notifications</h2>
+                  <div class="preview-list">
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-primary">
+                          <i class="mdi mdi-email"></i>
+                        </div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">You have 3 new messages</h4>
+                        <p>
+                          Hanna giover, Jeffry brown
+                        </p>
+                        <p>
+                          9:30 AM
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info">
+                          <i class="mdi mdi-earth"></i>
+                        </div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Newsfeed available</h4>
+                        <p>
+                          Hanna giover, Jeffry brown
+                        </p>
+                        <p>
+                          9:30 AM
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-primary">
+                          <i class="mdi mdi-currency-usd"></i>
+                        </div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">2 Invoices to pay</h4>
+                        <p>
+                          Hanna giover, Jeffry brown
+                        </p>
+                        <p>
+                          9:30 AM
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info">
+                          <i class="mdi mdi-message-text"></i>
+                        </div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">15 New comments</h4>
+                        <p>
+                          Hanna giover, Jeffry brown
+                        </p>
+                        <p>
+                          9:30 AM
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--notification card ends-->
+            </div>
+            <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Active Tasks (2/98)</h2>
+                  <div class="preview-list">
+                    <div class="preview-item">
+                      <div class="icheck-square">
+                        <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                      </div>
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-primary">
+                          MR
+                        </div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Send over investmnet documnet</h4>
+                        <p>
+                          <span class="content-category">EMAIL</span>
+                          <span class="pl-3">Hanna giover, Jeffry brown</span>
+                        </p>
+                      </div>
+                      <div class="preview-actions ml-auto">
+                        <a href="#"><i class="mdi mdi-pencil"></i></a>
+                        <a href="#"><i class="mdi mdi-delete"></i></a>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="icheck-square">
+                        <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                      </div>
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info">
+                          MR
+                        </div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Prepare for a bi-weekly meeting</h4>
+                        <p>
+                          <span class="content-category">DOCUMENT</span>
+                          <span class="pl-3">Hanna giover, Jeffry brown</span>
+                        </p>
+                      </div>
+                      <div class="preview-actions ml-auto">
+                        <a href="#"><i class="mdi mdi-pencil"></i></a>
+                        <a href="#"><i class="mdi mdi-delete"></i></a>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="icheck-square">
+                        <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                      </div>
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-success">
+                          R
+                        </div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Shedule a call with reema on Thursday</h4>
+                        <p>
+                          <span class="content-category">DOCUMENT</span>
+                          <span class="pl-3">Hanna giover, Jeffry brown</span>
+                        </p>
+                      </div>
+                      <div class="preview-actions ml-auto">
+                        <a href="#"><i class="mdi mdi-pencil"></i></a>
+                        <a href="#"><i class="mdi mdi-delete"></i></a>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="icheck-square">
+                        <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                      </div>
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-danger">
+                          MR
+                        </div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Prepare for a bi-weekly meeting</h4>
+                        <p>
+                          <span class="content-category">DOCUMENT</span>
+                          <span class="pl-3">Hanna giover, Jeffry brown</span>
+                        </p>
+                      </div>
+                      <div class="preview-actions ml-auto">
+                        <a href="#"><i class="mdi mdi-pencil"></i></a>
+                        <a href="#"><i class="mdi mdi-delete"></i></a>
+                      </div>
+                    </div>
+                    <div class="preview-item">
+                      <div class="icheck-square">
+                        <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                      </div>
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-warning">
+                          MR
+                        </div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h4 class="preview-subject">Prepare for a bi-weekly meeting</h4>
+                        <p>
+                          <span class="content-category">DOCUMENT</span>
+                          <span class="pl-3">Hanna giover, Jeffry brown</span>
+                        </p>
+                      </div>
+                      <div class="preview-actions ml-auto">
+                        <a href="#"><i class="mdi mdi-pencil"></i></a>
+                        <a href="#"><i class="mdi mdi-delete"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--active task list ends-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row grid-margin">
+            <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0">
+              <div class="row grid-margin">
+                <div class="col-12">
+                  <!--visitors card starts-->
+                  <div class="card card-count">
+                    <div class="card-body">
+                      <h2 class="card-title">Visitors</h2>
+                      <div class="count-item-list">
+                        <div class="count-item">
+                          <div class="count-item-title">
+                            <i class="mdi mdi-cellphone-android"></i>
+                            Phone
+                          </div>
+                          <div class="count-value">
+                            <p>
+                              No: 850
+                            </p>
+                          </div>
+                        </div>
+                        <div class="count-item">
+                          <div class="count-item-title">
+                            <i class="mdi mdi-desktop-mac"></i>
+                            Website
+                          </div>
+                          <div class="count-value">
+                            <p>
+                              1050
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--visitors card ends-->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-6 grid-margin grid-margin-lg-0">
+                  <div class="card card-twitter">
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <i class="mdi mdi-twitter-box"></i>
+                        03 November
+                      </h3>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s,
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 grid-margin grid-margin-lg-0">
+                  <div class="card card-fb">
+                    <div class="card-body">
+                      <h4 class="card-title">
+                        <i class="mdi mdi-facebook-box"></i>
+                        03 November
+                      </h4>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s,
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 grid-margin grid-margin-lg-0">
+              <!--weather card starts-->
+              <div class="card card-weather">
+                <div class="card-body">
+                  <h2 class="card-title">Weather</h2>
+                  <div class="weather-status">
+                    <i class="mdi mdi-weather-partlycloudy"></i>
+                    <span class="highlight-text">73 <span class="symbol">&deg;</span></span>
+                    <div class="weather-date">
+                      <h3>Saturday</h3>
+                      <p>
+                        Ahmedabad, India
+                      </p>
+                    </div>
+                  </div>
+                  <div class="weather-report">
+                    <p class="row">
+                      <span class="col-4">
+                        Wind
+                      </span>
+                      <span class="col-8">
+                        ESE 17 mph
+                      </span>
+                    </p>
+                    <p class="row">
+                      <span class="col-4">
+                        Humidity
+                      </span>
+                      <span class="col-8">
+                        83%
+                      </span>
+                    </p>
+                    <p class="row">
+                      <span class="col-4">
+                        Pressure
+                      </span>
+                      <span class="col-8">
+                        28.56 in
+                      </span>
+                    </p>
+                    <p class="row">
+                      <span class="col-4">
+                        Cloud cover
+                      </span>
+                      <span class="col-8">
+                        78%
+                      </span>
+                    </p>
+                    <p class="row">
+                      <span class="col-4">
+                        Ceiling
+                      </span>
+                      <span class="col-8">
+                        25760 ft
+                      </span>
+                    </p>
+                  </div>
+                  <div class="weather-timing">
+                    <div class="row">
+                      <div class="col-3">
+                        <i class="mdi mdi-weather-night"></i>
+                        <p>
+                          00.30
+                        </p>
+                      </div>
+                      <div class="col-3">
+                        <i class="mdi mdi-weather-pouring"></i>
+                        <p>
+                          11.30
+                        </p>
+                      </div>
+                      <div class="col-3">
+                        <i class="mdi mdi-weather-partlycloudy"></i>
+                        <p>
+                          13.30
+                        </p>
+                      </div>
+                      <div class="col-3">
+                        <i class="mdi mdi-weather-fog"></i>
+                        <p>
+                          13.30
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--weather card ends-->
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="container-fluid clearfix">
+            <span class="float-right">
+                <a href="#">Zoom Admin</a> &copy; 2017
+            </span>
+          </div>
+        </footer>
+
+        <!--menu ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="node_modules/icheck/icheck.min.js"></script>
+  <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/sidebar-icon.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/misc.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/chart.js"></script>
+  <script src="js/iCheck.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

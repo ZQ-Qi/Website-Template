@@ -1,0 +1,234 @@
+.streamline {
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: #ddd;
+        top: 0;
+        left: 20px;
+        z-index: 1;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid #ddd;
+        bottom: 0;
+        left: 15px;
+        z-index: 2;
+    }
+    .streamline-post {
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+        >aside {
+            float: left;
+            vertical-align: top;
+        }
+        .post-container,
+        .reply-container {
+            vertical-align: top;
+            padding-left: 55px;
+            position: relative;
+            z-index: 2;
+            &:before {
+                content: '';
+                @include triangle(14px, #ddd, left);
+                position: absolute;
+                top: 13px;
+                left: 48px;
+            }
+            &:after {
+                content: '';
+                @include triangle(12px, #fff, left);
+                position: absolute;
+                top: 14px;
+                left: 50px;
+            }
+        }
+        .post-replies>li {
+            >aside {
+                float: left;
+                vertical-align: top;
+            }
+        }
+    }
+    .streamline-form {
+        position: absolute;
+        width: 100%;
+        padding-bottom: 20px;
+        z-index: 2;
+        .thumb {
+            float: left;
+        }
+        form {
+            padding-left: 55px;
+        }
+    } //timeline
+    &.timeline {
+        overflow: hidden;
+        position: relative;
+        ul {
+            padding: 0 0 30px;
+            margin: 0 auto;
+            list-style: none;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            float: left;
+            >li {
+                margin: 20px 0;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            .heading {
+                color: white;
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+                &:after,
+                &:before {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+            }
+            .timeline-post {
+                position: relative;
+                float: left;
+                clear: left;
+                text-align: right;
+                width: 46%;
+                padding-right: 20px;
+                border: 1px solid #e6e6e6;
+                margin: 15px;
+                aside {
+                    float: right;
+                    position: absolute;
+                    right: -14px;
+                    top: -14px;
+                }
+                .post-container {
+                    h3 {
+                        margin-top: 0;
+                    }
+                }
+                .time {
+                    position: absolute;
+                    right: 40px;
+                    bottom: 17px;
+                    font-size: $font-size-small;
+                    >i {
+                        margin-right: 5px;
+                    }
+                }
+                &:nth-of-type(even) {
+                    &:after {
+                        content: '';
+                        @include triangle(16px, #fff, right);
+                        position: absolute;
+                        top: 10px;
+                        right: 32px;
+                    }
+                }
+                &:nth-of-type(odd) {
+                    float: right;
+                    clear: right;
+                    text-align: left;
+                    padding-left: 20px;
+                    padding-right: 0;
+                    aside {
+                        float: left;
+                        right: auto;
+                        left: -15px;
+                        top: 20px;
+                    }
+                    .time {
+                        right: auto;
+                        left: 40px;
+                    }
+                }
+                .thumb {
+                    line-height: 30px;
+                    font-size: 18px;
+                    text-align: center;
+                }
+                .post-container>.panel {
+                    padding: 10px 20px;
+                }
+            }
+        }
+        &:before,
+        &:after {
+            left: 50%
+        }
+        &:before {
+            background-color: #bbb;
+        }
+        &:after {
+            margin-left: -5px;
+            border-color: #bbb;
+        }
+    }
+}
+
+.streamline-form {
+    .post-toolbar {
+        padding: 5px 10px;
+        border-radius: 0 0 2px 2px;
+        border: 1px solid #e2e2e2;
+        border-top: 0;
+        @include transition(all .2s linear);
+        >a {
+            color: $transparent-black-2;
+            padding: 2px 5px;
+            @include transition(all .2s linear);
+            &:hover {
+                color: $transparent-black-4;
+            }
+        }
+    }
+}
+
+//sm
+@media only screen and (max-width: 768px) {
+    .streamline {
+        &.timeline {
+            ul {
+                .heading {
+                    text-align: left;
+                }
+                .timeline-post,
+                .timeline-post:nth-of-type(odd),
+                .timeline-post:nth-of-type(even) {
+                    padding-right: 0;
+                    padding-left: 0px;
+                    float: none;
+                    text-align: left;
+                    width: 100%;
+                    aside {
+                        float: none;
+                        right: auto;
+                        left: -15px;
+                        top: 0;
+                    }
+                    .time {
+                        right: auto;
+                        left: 20px;
+                    }
+                }
+            }
+            &:before,
+            &:after {
+                left: 15px
+            }
+        }
+    }
+}

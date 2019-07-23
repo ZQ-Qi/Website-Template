@@ -1,0 +1,143 @@
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-1">
+        <h3 class="content-header-title">Buttons</h3>
+    </div>
+    <div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-12">
+        <div class="breadcrumb-wrapper col-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a>Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a>Components</a>
+                </li>
+                <li class="breadcrumb-item active">Buttons
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <section id="ng-buttons">
+        <div class="row">
+            <!--Checkbox ng-buttons Starts-->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Checkbox buttons</h4>
+                        <p>Easily create Bootstrap-style checkbox buttons.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-block">
+                            <div class="btn-group btn-group-toggle">
+                                <label class="btn-primary" ngbButtonLabel>
+                                    <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
+                                </label>
+                                <label class="btn-primary" ngbButtonLabel>
+                                    <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
+                                </label>
+                                <label class="btn-primary" ngbButtonLabel>
+                                    <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
+                                </label>
+                            </div>
+                            <hr>
+                            <pre>{{model | json}}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Checkbox ng-buttons Ends-->
+
+        </div>
+        <div class="row">
+            <!--Checkbox Reactive buttons Starts-->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Checkbox buttons (Reactive Forms)</h4>
+                        <p>A value of a checked button is bound to a variable specified via ngModel.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-block">
+                            <form [formGroup]="checkboxGroupForm">
+                                <div class="btn-group btn-group-toggle">
+                                    <label class="btn-primary" ngbButtonLabel>
+                                        <input type="checkbox" formControlName="left" ngbButton> Left (pre-checked)
+                                    </label>
+                                    <label class="btn-primary" ngbButtonLabel>
+                                        <input type="checkbox" formControlName="middle" ngbButton> Middle
+                                    </label>
+                                    <label class="btn-primary" ngbButtonLabel>
+                                        <input type="checkbox" formControlName="right" ngbButton> Right
+                                    </label>
+                                </div>
+                            </form>
+                            <hr>
+                            <pre>{{checkboxGroupForm.value | json}}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Checkbox Reactive buttons Ends-->
+        </div>
+        <div class="row">
+            <!--Radio buttons Starts-->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Radio buttons</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-block">
+                            <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="modelRadio">
+                                <label ngbButtonLabel class="btn-primary">
+                                    <input ngbButton type="radio" [value]="1"> Left (pre-checked)
+                                </label>
+                                <label ngbButtonLabel class="btn-primary">
+                                    <input ngbButton type="radio" value="2"> Middle
+                                </label>
+                                <label ngbButtonLabel class="btn-primary">
+                                    <input ngbButton type="radio" [value]="3"> Right
+                                </label>
+                            </div>
+                            <hr>
+                            <pre>{{modelRadio}}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Radio buttons Ends-->
+        </div>
+        <div class="row">
+            <!--Radio Reactive buttons Starts-->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Radio buttons (Reactive Forms)</h4>
+                        <p>A value of a checked button is bound to a variable specified via ngModel.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-block">
+                            <form [formGroup]="radioGroupForm">
+                                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="modelRadioForm">
+                                    <label ngbButtonLabel class="btn-primary">
+                                        <input ngbButton type="radio" [value]="1"> Left (pre-checked)
+                                    </label>
+                                    <label ngbButtonLabel class="btn-primary">
+                                        <input ngbButton type="radio" value="middle"> Middle
+                                    </label>
+                                    <label ngbButtonLabel class="btn-primary">
+                                        <input ngbButton type="radio" [value]="false"> Right
+                                    </label>
+                                </div>
+                            </form>
+                            <hr>
+                            <pre>{{radioGroupForm.value['modelRadioForm']}}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Radio Reactive buttons Ends-->
+        </div>
+    </section>
+</div>

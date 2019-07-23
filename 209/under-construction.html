@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Kharna-Admin Dashboard</title>
+		
+		<!--Favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+		<!--Bootstrap.min css-->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+		<!--Icons css-->
+		<link rel="stylesheet" href="assets/css/icons.css">
+
+		<!--Style css-->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!--mCustomScrollbar css-->
+		<link rel="stylesheet" href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css">
+
+		<!--Sidemenu css-->
+		<link rel="stylesheet" href="assets/plugins/toggle-menu/sidemenu.css">
+
+	</head>
+	<body class="bg-primary">
+
+		<div id="app">
+			<section class="section">
+				<div class="container mt-6 mb-5 ">
+					<div class="row">
+						<div class="single-page construction-bg cover-image" data-image-src="assets/img/news/img14.jpg">
+							<div class="text-white text-center construction">
+								<img src="assets/img/brand/logo-white.png" class="mb-2 mt-4 mt-lg-0 " alt="logo">
+								<h1 class="mb-0">Under Construction</h1>
+								<p class="">We are Currently Working on Our Site...please stay tuned</p>
+							</div>
+							<div class="row ">
+								
+								<div id="count-down" class="center-block text-white mt-3">
+									<div class="clock-presenter days_dash">
+										<div class="digit"></div>
+										<div class="digit"></div>
+										<p class="mt-2">Days</p>
+									</div>
+									<div class="clock-presenter hours_dash">
+										<div class="digit"></div>
+										<div class="digit"></div>
+										<p class="mt-2">Hours</p>
+									</div>
+									<div class="clock-presenter minutes_dash">
+										<div class="digit"></div>
+										<div class="digit"></div>
+										<p class="mt-2">Minutes</p>
+									</div>
+									<div class="clock-presenter seconds_dash">
+										<div class="digit"></div>
+										<div class="digit"></div>
+										<p class="mt-2">Seconds</p>
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>		
+					</div>
+				</div>
+           
+			</section>
+		</div>
+	
+		<!--Jquery.min js-->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!--popper js-->
+		<script src="assets/js/popper.js"></script>
+
+		<!--Tooltip js-->
+		<script src="assets/js/tooltip.js"></script>
+
+		<!--Bootstrap.min js-->
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--Jquery.nicescroll.min js-->
+		<script src="assets/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+
+		<!--Scroll-up-bar.min js-->
+		<script src="assets/plugins/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+		
+		<!-- Count Down-->
+		<script src="assets/plugins/count-down/jquery.lwtCountdown-1.0.js"></script>
+		
+		<!-- Moment-->
+		<script src="assets/js/moment.min.js"></script>
+
+		<!--mCustomScrollbar js-->
+		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+		<!--Sidemenu js-->
+		<script src="assets/plugins/toggle-menu/sidemenu.js"></script>
+
+		<!--Scripts js-->
+		<script src="assets/js/scripts.js"></script>
+		
+		<script>
+			$(function() {
+                "use strict";
+                //Set your date
+                $('#count-down').countDown({
+                    targetDate: {
+                        'day': 20,
+                        'month': 1,
+                        'year': 2019,
+                        'hour': 0,
+                        'min': 0,
+                        'sec': 0
+                    },
+                    omitWeeks: true
+                });
+
+            });
+		</script>
+	</body>
+</html>

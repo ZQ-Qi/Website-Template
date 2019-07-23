@@ -1,0 +1,82 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Form Wizard / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div id="form-wizard" class="main-container form-wizard">
+    <div class="container-header">
+      <h2 class="container-heading">Form Wizard Demo</h2>
+    </div>
+    <div class="form-wizard__body">
+      <ul class="form-wizard__steps">
+        <li class="form-wizard__step is-current" data-step="1">
+          <span class="form-wizard__step-name">Step 1</span>
+          <div class="form-wizard__step-progress">
+            <div class="form-wizard__step-progress-indicator"></div>
+          </div>
+        </li>
+        <li class="form-wizard__step" data-step="2">
+          <span class="form-wizard__step-name">Step 2</span>
+          <div class="form-wizard__step-progress">
+            <div class="form-wizard__step-progress-indicator"></div>
+          </div>
+        </li>
+        <li class="form-wizard__step" data-step="3">
+          <span class="form-wizard__step-name">Step 3</span>
+          <div class="form-wizard__step-progress">
+            <div class="form-wizard__step-progress-indicator"></div>
+          </div>
+        </li>
+        <li class="form-wizard__step" data-step="4">
+          <span class="form-wizard__step-name">Step 4</span>
+          <div class="form-wizard__step-progress">
+            <div class="form-wizard__step-progress-indicator"></div>
+          </div>
+        </li>
+      </ul>
+      <div class="form-wizard__content">
+        <div class="form-wizard__step-content is-current" data-step-content="1">
+          <h1>Step 1</h1>
+          <p class="text-muted-md">Email is required to proceed to the next step.</p>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <form class="form-wizard__step-form">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="form-wizard__step-content" data-step-content="2">
+          Step 2
+        </div>
+        <div class="form-wizard__step-content" data-step-content="3">
+          Step 3
+        </div>
+        <div class="form-wizard__step-content" data-step-content="4">
+          Step 4
+        </div>
+      </div>
+      <div class="form-wizard__controls">
+        <a href="#" class="btn btn-secondary form-wizard__control-prev disabled" data-step-control-prev>Back</a>
+        <a href="#" class="btn btn-info form-wizard__control-next" data-step-control-next>Next</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="js/form-wizard/form-wizard.js"></script>
+<script src="js/preview/form-wizard.min.js"></script>
+{% endblock %}

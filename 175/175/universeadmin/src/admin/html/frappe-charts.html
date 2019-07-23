@@ -1,0 +1,91 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Frappe Charts / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Frappe Charts</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex1" class="chart-widget__chart"></div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex2" class="chart-widget__chart"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex3" class="chart-widget__chart"></div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex4" class="chart-widget__chart"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex7" class="chart-widget__chart"></div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex8" class="chart-widget__chart"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex9" class="chart-widget__chart"></div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex10" class="chart-widget__chart"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex11" class="chart-widget__chart"></div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex12" class="chart-widget__chart"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex5" class="chart-widget__chart"></div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="chart-widget frappe-chart">
+        <div id="chart-ex6" class="chart-widget__chart"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="vendor/frappe-charts/frappe-charts.min.iife.js"></script>
+{{ super() }}
+<script src="js/preview/frappe-charts.min.js"></script>
+{% endblock %}

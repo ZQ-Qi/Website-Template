@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>弹框 - 默笙后台管理系统</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="这不仅仅是一个后台管理系统，它基于BT4，超强的自适应，简洁，高效，大方" />
+        <meta content="Mosheng" name="author" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Notification css (Toastr) -->
+        <link href="css/vendor/toastr.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/app.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <nav class="navbar-custom">
+
+                <div class="container-fluid">
+                    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fe-bell noti-icon"></i>
+                                <span class="badge badge-danger noti-icon-badge">2</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
+
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5 class="m-0">
+                                        <span class="float-right">
+                                            <a href="" class="text-dark">
+                                                <small>清除所有</small>
+                                            </a>
+                                        </span>通知</h5>
+                                </div>
+
+                                <div class="slimscroll noti-scroll">
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                        <div class="notify-icon">
+                                            <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                        <p class="notify-details">彼得</p>
+                                        <p class="text-muted mb-0 user-msg">
+                                            <small>嗨，你好吗？下次会议怎么样？</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-light">
+                                            <i class="mdi mdi-comment-account-outline"></i>
+                                        </div>
+                                        <p class="notify-details">Caleb Flakelar 管理员点评
+                                            <small class="text-muted">一分钟前</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon">
+                                            <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                        <p class="notify-details">凯伦·罗宾逊</p>
+                                        <p class="text-muted mb-0 user-msg">
+                                            <small>真的！这个管理员看起来不错，设计很棒。</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-light">
+                                            <i class="mdi mdi-account-plus"></i>
+                                        </div>
+                                        <p class="notify-details">新用户注册通知
+                                            <small class="text-muted">5小时之前</small>
+                                        </p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-light">
+                                            <i class="mdi mdi-heart"></i>
+                                        </div>
+                                        <p class="notify-details">哦
+                                            <b>Admin</b>
+                                            <small class="text-muted">13天之前</small>
+                                        </p>
+                                    </a>
+                                </div>
+
+                                <!-- All-->
+                                <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                    查看全部
+                                    <i class="fi-arrow-right"></i>
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle nav-user mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                <small class="pro-user-name ml-1">
+                                    Admin
+                                </small>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">欢迎 !</h6>
+                                </div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-user"></i>
+                                    <span>我的账户</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-settings"></i>
+                                    <span>设置</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-lock"></i>
+                                    <span>锁定屏幕</span>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-log-out"></i>
+                                    <span>退出</span>
+                                </a>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <a href="index.html" class="logo">
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo.png" alt="" height="18">
+                                </span>
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="28">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="app-search">
+                            <form>
+                                <input type="text" placeholder="输入关键字以搜索..." class="form-control">
+                                <button type="submit" class="sr-only"></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+            <!-- end topbar-main -->
+
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="index.html">
+                                    <i class="fe-airplay"></i>仪表盘</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="fe-layers"></i>组件</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="components-elements.html">UI 界面元素</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-rangeslider.html">范围滑块</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-alerts.html">消息框</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-ribbons.html">文章块</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-sweet-alerts.html">弹窗</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-typography.html">排版</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-charts.html">统计图</a>
+                                    </li>
+                                    <li>
+                                        <a href="components-maps.html">地图</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-bookmark"></i>表单</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="form-elements.html">一般表单元素</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-advanced.html">高级表单</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-grid"></i>表格</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="tables-basic.html">基本表格</a>
+                                    </li>
+                                    <li>
+                                        <a href="tables-advanced.html">高级表格</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-cpu"></i>图标</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="icons-feather.html">常用图标</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-mdi.html">材料设计图标</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-dripicons.html">其他图标</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"> <i class="fe-package"></i>页面</a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a href="pages-calendar.html">日历</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-timeline.html">时间轴</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-invoice.html">发票</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-contacts.html">联系人</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-starter.html">起始页</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-topbar-light.html">头部高亮</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <a href="pages-login.html">登录</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-register.html">注册</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-recoverpw.html">找回密码</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-lock-screen.html">锁定屏幕</a>
+                                            </li>
+                                            <li>
+                                                <a href="pages-404.html">404错误页面</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <!-- End navigation menu -->
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end #navigation -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="#">默笙</a></li>
+                                    <li class="breadcrumb-item"><a href="#">组件</a></li>
+                                    <li class="breadcrumb-item active">消息框</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">消息框</h4>
+                        </div>
+                    </div>
+                </div>     
+                <!-- end page title --> 
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">缺省消息框</h4>
+
+                                <div class="alert alert-primary" role="alert">
+                                    这是一个 <strong>初级的</strong> 消息框!
+                                </div>
+                                <div class="alert alert-secondary" role="alert">
+                                   这是一个 <strong>次要的</strong> 消息框!
+                                </div>
+                                <div class="alert alert-success" role="alert">
+                                    这是一个 <strong>成功的</strong> 消息框!
+                                </div>
+                                <div class="alert alert-danger" role="alert">
+                                    这是一个 <strong>危险</strong> 消息框!
+                                </div>
+                                <div class="alert alert-warning bg-warning text-white border-0" role="alert">
+                                    这是一个 <strong>警告</strong> 消息框!
+                                </div>
+                                <div class="alert alert-info bg-info text-white border-0" role="alert">
+                                    这是一个 <strong>提示</strong> 消息框!
+                                </div>
+                                <div class="alert alert-light bg-light text-dark border-0" role="alert">
+                                   这是一个 <strong>灰色</strong> 消息框!
+                                </div>
+                                <div class="alert alert-dark bg-dark text-white border-0 mb-0" role="alert">
+                                    这是一个 <strong>黑色</strong> 消息框!
+                                </div>
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+                    </div> <!-- end col-->
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">可删除的消息框</h4>
+
+                                <div class="alert alert-primary alert-dismissible bg-primary text-white border-0 fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    这是一个 初级的 消息框!
+                                </div>
+                                <div class="alert alert-secondary alert-dismissible bg-secondary text-white border-0 fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    这是一个 次要的 消息框!
+                                </div>
+                                <div class="alert alert-success alert-dismissible bg-success text-white border-0 fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    这是一个 成功的 消息框!
+                                </div>
+                                <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    这是一个 危险的 消息框!
+                                </div>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    这是一个 警告的 消息框!
+                                </div>
+                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    这是一个 提示的  消息框!
+                                </div>
+                                <div class="alert alert-light alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    这是一个 灰色的 消息框!
+                                </div>
+                                <div class="alert alert-dark alert-dismissible fade show mb-0" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    T这是一个 黑色的 消息框!
+                                </div>
+                                
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+                    </div> <!-- end col-->
+                </div>
+                <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">吐司信息框</h4>
+                                <div class="row">
+                                    <div class="col-xl-4 col-md-6">
+                                        <div class="form-group">
+                                            <label>标题</label>
+                                            <input id="title" type="text" class="form-control" placeholder="键入一个标题 ..." />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>消息</label>
+                                            <textarea class="form-control" id="message1" rows="3" placeholder="键入一条消息 ..."></textarea>
+                                        </div>
+
+                                        <div class="checkbox mb-1">
+                                            <input id="closeButton" type="checkbox" value="checked" class="input-mini" />
+                                            <label for="closeButton">
+                                                选项
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox mb-2">
+                                            <input id="addBehaviorOnToastClick" type="checkbox" value="checked" class="input-mini" />
+                                            <label for="addBehaviorOnToastClick">
+                                                选项1
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox mb-1">
+                                            <input id="debugInfo" type="checkbox" value="checked" class="input-mini" />
+                                            <label for="debugInfo">
+                                                选项2
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox mb-1">
+                                            <input id="progressBar" type="checkbox" value="checked" class="input-mini" />
+                                            <label for="progressBar">
+                                                选项3
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox mb-1">
+                                            <input id="preventDuplicates" type="checkbox" value="checked" class="input-mini" />
+                                            <label for="preventDuplicates">
+                                                选项4
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox mb-1">
+                                            <input id="addClear" type="checkbox" value="checked" class="input-mini" />
+                                            <label for="addClear">
+                                                选项5
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox mb-1">
+                                            <input id="newestOnTop" type="checkbox" value="checked" class="input-mini" />
+                                            <label for="newestOnTop">
+                                                选项6
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-2 col-md-6">
+                                        <div class="control-group" id="toastTypeGroup">
+
+                                            <div class="controls">
+                                                <label class="mb-2">吐司方式</label>
+                                                <div class="radio radio-success mb-1">
+                                                    <input type="radio" name="radio" id="radio1" value="success"
+                                                            checked>
+                                                    <label for="radio1">
+                                                        成功
+                                                    </label>
+                                                </div>
+
+                                                <div class="radio radio-info mb-1">
+                                                    <input type="radio" name="radio" id="radio2" value="info">
+                                                    <label for="radio2">
+                                                        提示
+                                                    </label>
+                                                </div>
+
+                                                <div class="radio radio-warning mb-1">
+                                                    <input type="radio" name="radio" id="radio3" value="warning">
+                                                    <label for="radio3">
+                                                        警告
+                                                    </label>
+                                                </div>
+
+                                                <div class="radio radio-danger mb-1">
+                                                    <input type="radio" name="radio" id="radio4" value="error">
+                                                    <label for="radio4">
+                                                        错误
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="control-group" id="positionGroup">
+                                            <label class="mt-2 mb-2">位置</label>
+
+                                            <div class="radio mb-1">
+                                                <input type="radio" name="positions" id="radio5" value="toast-top-right" checked />
+                                                <label for="radio5">
+                                                    选项
+                                                </label>
+                                            </div>
+
+                                            <div class="radio mb-1">
+                                                <input type="radio" name="positions" id="radio6" value="toast-bottom-right" />
+                                                <label for="radio6">
+                                                    选项1
+                                                </label>
+                                            </div>
+
+                                            <div class="radio mb-1">
+                                                <input type="radio" name="positions" id="radio7" value="toast-bottom-left" />
+                                                <label for="radio7">
+                                                    选项2
+                                                </label>
+                                            </div>
+
+                                            <div class="radio mb-1">
+                                                <input type="radio" name="positions" id="radio8" value="toast-top-left" />
+                                                <label for="radio8">
+                                                    选项3
+                                                </label>
+                                            </div>
+
+                                            <div class="radio mb-1">
+                                                <input type="radio" name="positions" id="radio9" value="toast-top-full-width" />
+                                                <label for="radio9">
+                                                    选项3
+                                                </label>
+                                            </div>
+
+                                            <div class="radio mb-1">
+                                                <input type="radio" name="positions" id="radio10" value="toast-bottom-full-width" />
+                                                <label for="radio10">
+                                                    选项4
+                                                </label>
+                                            </div>
+
+                                            <div class="radio mb-1">
+                                                <input type="radio" name="positions" id="radio11" value="toast-top-center" />
+                                                <label for="radio11">
+                                                    选项5
+                                                </label>
+                                            </div>
+
+                                            <div class="radio mb-1">
+                                                <input type="radio" name="positions" id="radio12" value="toast-bottom-center" />
+                                                <label for="radio12">
+                                                    选项6
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-md-6">
+
+                                        <div class="form-group">
+                                            <label for="showEasing">input框</label>
+                                            <input id="showEasing" type="text" placeholder="swing, linear" class="form-control" value="swing" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="hideEasing">input框</label>
+                                            <input id="hideEasing" type="text" placeholder="swing, linear" class="form-control" value="linear" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="showMethod">input框</label>
+                                            <input id="showMethod" type="text" placeholder="show, fadeIn, slideDown" class="form-control" value="fadeIn" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="hideMethod">input框</label>
+                                            <input id="hideMethod" type="text" placeholder="hide, fadeOut, slideUp" class="form-control" value="fadeOut" />
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-xl-3 col-md-6">
+
+                                        <div class="form-group">
+                                            <label for="showDuration">input框</label>
+                                            <input id="showDuration" type="text" placeholder="ms" class="input-mini form-control" value="300" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="hideDuration" class="m-t-10">input框</label>
+                                            <input id="hideDuration" type="text" placeholder="ms" class="input-mini form-control" value="1000" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="timeOut" class="m-t-10">input框</label>
+                                            <input id="timeOut" type="text" placeholder="ms" class="input-mini form-control" value="5000" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="extendedTimeOut" class="m-t-10">input框</label>
+                                            <input id="extendedTimeOut" type="text" placeholder="ms" class="input-mini form-control" value="1000" />
+                                        </div>
+                                        
+                                    </div>
+                                </div><!-- end row -->
+
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-primary btn-sm" id="showtoast">吐司一个框</button>
+                                        <button type="button" class="btn btn-danger btn-sm" id="cleartoasts">清除所有吐司</button>
+                                        <button type="button" class="btn btn-danger btn-sm" id="clearlasttoast">清除最后一条吐司</button>
+                                    </div>
+                                </div>
+
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <pre id='toastrOptions' class="p-3 bg-light mt-3 mb-0"><h5 class="m-0">示例代码</h5></pre>
+                                    </div>
+                                </div>
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+                    </div><!-- end col -->
+                </div>
+                <!-- end row -->
+
+                
+            </div> <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        Mosheng Admin &copy; 2018 - tecms.net
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-md-right footer-links d-none d-sm-block">
+                            <a href="#">关于我们</a>
+                            <a href="#">帮助</a>
+                            <a href="#">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+
+        <!-- App js -->
+        <script src="js/vendor.min.js"></script>
+        <script src="js/app.min.js"></script>
+
+        <!-- Toaster js -->
+        <script src="js/vendor/toastr.min.js"></script>
+        <script src="js/pages/toastr.init.js"></script>
+
+    </body>
+</html>

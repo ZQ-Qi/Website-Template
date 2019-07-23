@@ -1,0 +1,664 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Tables / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Tables</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="main-container table-container">
+        <table class="table table-no-border">
+          <thead>
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Paid by</th>
+                <th class="table__datetime">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table__avatar">
+                <img src="img/users/user-5.png" alt="" width="34" height="34" class="rounded-circle">
+                <span>Annie Cooper</span>
+              </td>
+              <td>
+                Easy One Page Dashboard
+              </td>
+              <td><strong>$150</strong></td>
+              <td class="table__datetime">3 day ago</td>
+            </tr>
+            <tr>
+              <td class="table__avatar">
+                <img src="img/users/user-6.png" alt="" width="34" height="34" class="rounded-circle">
+                <span>Annie Cooper</span>
+              </td>
+              <td>
+                New Website
+              </td>
+              <td><strong>$200</strong></td>
+              <td class="table__datetime">3 day ago</td>
+            </tr>
+            <tr>
+              <td class="table__avatar">
+                <img src="img/users/user-7.png" alt="" width="34" height="34" class="rounded-circle">
+                <span>Annie Cooper</span>
+              </td>
+              <td>
+                Wedding Photography
+              </td>
+              <td><strong>$90</strong></td>
+              <td class="table__datetime">3 day ago</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="main-container table-container">
+        <table class="table table__actions">
+          <thead>
+            <tr>
+              <th class="table__checkbox">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="ch1">
+                  <label class="custom-control-label" for="ch1"></label>
+                </div>
+              </th>
+              <th>Name</th>
+              <th>Rating</th>
+              <th>Label</th>
+              <th class="table__cell-w1">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr class="is-selected">
+            <td class="table__checkbox">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" checked id="ch2">
+                <label class="custom-control-label" for="ch2"></label>
+              </div>
+            </td>
+            <td>Item #1</td>
+            <td class="table__rating">
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full"></span>
+            </td>
+            <td class="table__label"><span class="badge badge-success">Label</span></td>
+            <td class="table__actions">
+              <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="table__checkbox">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="ch3">
+                <label class="custom-control-label" for="ch3"></label>
+              </div>
+            </td>
+            <td>Item #1</td>
+            <td class="table__rating">
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full"></span>
+              <span class="table__rating-item ua-icon-star-full"></span>
+            </td>
+            <td class="table__label"><span class="badge badge-info">Label</span></td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="table__checkbox">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="ch4">
+                <label class="custom-control-label" for="ch4"></label>
+              </div>
+            </td>
+            <td>Item #1</td>
+            <td class="table__rating">
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full is-active"></span>
+              <span class="table__rating-item ua-icon-star-full"></span>
+            </td>
+            <td class="table__label"><span class="badge badge-warning">Label</span></td>
+            <td class="table__actions">
+              <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="main-container table-container">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Paid by</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Item #1</strong></td>
+              <td>Easy One Page Dashboard</td>
+              <td><strong>$150</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Item #1</strong></td>
+              <td>Easy One Page Dashboard</td>
+              <td><strong>$150</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Item #1</strong></td>
+              <td>Easy One Page Dashboard</td>
+              <td><strong>$150</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="main-container table-container">
+        <table class="table table-hover table__actions">
+          <thead>
+          <tr>
+            <th>Status</th>
+            <th>Mission Name</th>
+            <th>Activated</th>
+            <th>People Inchived</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="table__switch">
+              <label class="switch">
+                <input type="checkbox" checked>
+                  <span class="switch-slider">
+                    <span class="switch-slider__on"></span>
+                    <span class="switch-slider__off"></span>
+                  </span>
+              </label>
+            </td>
+            <td>Item #1</td>
+            <td class="table__datetime">3 day ago</td>
+            <td>548</td>
+          </tr>
+          <tr>
+            <td class="table__switch">
+              <label class="switch">
+                <input type="checkbox">
+                  <span class="switch-slider">
+                    <span class="switch-slider__on"></span>
+                    <span class="switch-slider__off"></span>
+                  </span>
+              </label>
+            </td>
+            <td>Item #1</td>
+            <td class="table__datetime">3 day ago</td>
+            <td>881</td>
+          </tr>
+          <tr>
+            <td class="table__switch">
+              <label class="switch">
+                <input type="checkbox">
+                  <span class="switch-slider">
+                    <span class="switch-slider__on"></span>
+                    <span class="switch-slider__off"></span>
+                  </span>
+              </label>
+            </td>
+            <td>Item #1</td>
+            <td class="table__datetime">3 day ago</td>
+            <td>3659</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="main-container table-container">
+        <table class="table table__actions">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Invoice Subject</th>
+              <th>Client</th>
+              <th>Status</th>
+              <th>Price</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>004563</td>
+              <td>Design Works</td>
+              <td>Adobe</td>
+              <td class="table__label"><span class="badge badge-success">Label</span></td>
+              <td>$773</td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <a href="#" class="btn btn-info table__cell-actions-item">Manage</a>
+                  <div class="dropdown table__cell-actions-item">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                      Actions
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-download" title="Download"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>045445</td>
+              <td>Design Works</td>
+              <td>Bluewolf</td>
+              <td class="table__label"><span class="badge badge-info">Label</span></td>
+              <td>$564</td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <a href="#" class="btn btn-info table__cell-actions-item">Manage</a>
+                  <div class="dropdown table__cell-actions-item">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                      Actions
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-download" title="Download"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>043335</td>
+              <td>Design Works</td>
+              <td>Carlson Limited</td>
+              <td class="table__label"><span class="badge badge-warning">Label</span></td>
+              <td>$673</td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <a href="#" class="btn btn-info table__cell-actions-item">Manage</a>
+                  <div class="dropdown table__cell-actions-item">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                      Actions
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-download" title="Download"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="main-container table-container">
+        <table class="table table__actions">
+          <thead>
+          <tr>
+            <th>Project</th>
+            <th>Deadline</th>
+            <th>Leader+Team</th>
+            <th>Budjet</th>
+            <th>Status</th>
+            <th>&nbsp;</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="table__cell-widget">
+                  <a href="#" class="table__cell-widget-name">New Dashboard</a>
+                  <span class="table__cell-widget-description">Google</span>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-widget">
+                  <span class="table__cell-widget-name">13th Nov, 17</span>
+                  <span class="table__cell-widget-description color-danger">Overdue</span>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-user">
+                  <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+                  <div class="table__cell-user-wrap">
+                    <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                    <span class="table__cell-widget-description">UK, Design Team</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-widget">
+                  <span class="table__cell-widget-name">$4670</span>
+                  <span class="table__cell-widget-description">Paid</span>
+                </div>
+              </td>
+              <td class="table__label"><span class="badge badge-success">Label</span></td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <div class="dropdown table__cell-actions-item">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                      Actions
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table__cell-widget">
+                  <a href="#" class="table__cell-widget-name">New Dashboard</a>
+                  <span class="table__cell-widget-description">Google</span>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-widget">
+                  <span class="table__cell-widget-name">13th Nov, 17</span>
+                  <span class="table__cell-widget-description color-danger">Overdue</span>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-user">
+                  <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+                  <div class="table__cell-user-wrap">
+                    <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                    <span class="table__cell-widget-description">UK, Design Team</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-widget">
+                  <span class="table__cell-widget-name">$4670</span>
+                  <span class="table__cell-widget-description color-danger">Not Paid</span>
+                </div>
+              </td>
+              <td class="table__label"><span class="badge badge-success">Label</span></td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <div class="dropdown table__cell-actions-item">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                      Actions
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table__cell-widget">
+                  <a href="#" class="table__cell-widget-name">New Dashboard</a>
+                  <span class="table__cell-widget-description">Google</span>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-widget">
+                  <span class="table__cell-widget-name">13th Nov, 17</span>
+                  <span class="table__cell-widget-description">65 Day Remaining</span>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-user">
+                  <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+                  <div class="table__cell-user-wrap">
+                    <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                    <span class="table__cell-widget-description">UK, Design Team</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-widget">
+                  <span class="table__cell-widget-name">$4670</span>
+                  <span class="table__cell-widget-description">Paid</span>
+                </div>
+              </td>
+              <td class="table__label"><span class="badge badge-success">Label</span></td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <div class="dropdown table__cell-actions-item">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                      Actions
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="main-container table-container">
+        <table class="table table__actions">
+          <thead>
+            <tr>
+              <th class="table__checkbox">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="ch5">
+                  <label class="custom-control-label" for="ch5"></label>
+                </div>
+              </th>
+              <th>App</th>
+              <th>Installs</th>
+              <th>Created</th>
+              <th>Budjet</th>
+              <th>Status</th>
+              <th class="text-right">
+                <a href="#" class="btn btn-success btn-sm">Add</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="is-selected">
+              <td class="table__checkbox">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="ch6">
+                  <label class="custom-control-label" for="ch6"></label>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex">
+                  <img src="img/company/1.png" alt="" width="34" height="34" class="table__logo">
+
+                  <div class="table__cell-widget">
+                    <a href="#" class="table__cell-widget-name">24,859</a>
+                    <span class="table__cell-widget-description">Google</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-widget">
+                  <span class="table__cell-widget-name">24,859</span>
+                  <span class="table__cell-widget-description">Dayly 425</span>
+                </div>
+              </td>
+              <td>
+                29th Jan, 17
+              </td>
+              <td>
+                $14,670
+              </td>
+              <td class="table__label"><span class="badge badge-success">Label</span></td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-more"></span>
+                  </a>
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-export"></span>
+                  </a>
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-refresh"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="table__checkbox">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="ch7">
+                  <label class="custom-control-label" for="ch7"></label>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex">
+                  <img src="img/company/2.png" alt="" width="34" height="34" class="table__logo">
+
+                  <div class="table__cell-widget">
+                    <a href="#" class="table__cell-widget-name">24,859</a>
+                    <span class="table__cell-widget-description">Google</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-widget">
+                  <span class="table__cell-widget-name">24,859</span>
+                  <span class="table__cell-widget-description">Dayly 425</span>
+                </div>
+              </td>
+              <td>
+                29th Jan, 17
+              </td>
+              <td>
+                $14,670
+              </td>
+              <td class="table__label"><span class="badge badge-info">Label</span></td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-more"></span>
+                  </a>
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-export"></span>
+                  </a>
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-refresh"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="table__checkbox">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="ch8">
+                  <label class="custom-control-label" for="ch8"></label>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex">
+                  <img src="img/company/3.png" alt="" width="34" height="34" class="table__logo">
+
+                  <div class="table__cell-widget">
+                    <a href="#" class="table__cell-widget-name">24,859</a>
+                    <span class="table__cell-widget-description">Google</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="table__cell-widget">
+                  <span class="table__cell-widget-name">24,859</span>
+                  <span class="table__cell-widget-description">Dayly 425</span>
+                </div>
+              </td>
+              <td>
+                29th Jan, 17
+              </td>
+              <td>
+                $14,670
+              </td>
+              <td class="table__label"><span class="badge badge-danger">Label</span></td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-more"></span>
+                  </a>
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-export"></span>
+                  </a>
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-refresh"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,96 @@
+/* ==========================================================================
+   #FIELD
+   ========================================================================== */
+
+/**
+ * Form field `c-field` component is used as a wrapper for more complex inputs
+ * that contain an icon, addon, form feedback and form message.
+ *
+ * 1. Take up (full width - width of field addon).
+ */
+
+.c-field {
+	position: relative;
+	width: 100%;
+	text-align: left;
+
+	&.has-icon-left,
+	&.has-icon-right {
+		> .c-field__icon {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: $field-icon-color;
+			font-size: $field-icon-font-size;
+		}
+	}
+
+	&.has-icon-left {
+		> .c-input {
+			padding-left: 40px;
+		}
+
+		> .c-field__icon {
+			left: 15px;
+		}
+	}
+
+	&.has-icon-right {
+		> .c-input {
+			padding-right: 40px;
+		}
+
+		> .c-field__icon {
+			right: 15px;
+		}
+	}
+}
+
+/**
+ * Inline fields don't take up whole width 
+ *
+ * Used with search input in the navbar & toolbar.
+ */
+
+.c-field--inline {
+	width: 270px;
+
+	// @include respond-to($breakpoint-tablet) {
+	// 	width: 100%;
+	// }
+}
+
+
+/**
+ * Labels are used with inputs, always use labels with inputs for better 
+ * accesibility. Hide labels using `u-hidden-visually` to display it for 
+ * screen readers.
+ *
+ * USAGE: <label class="c-field__label u-hidden-visually"></label>
+ */
+
+.c-field__label {
+	display: block;
+	flex-basis: 100%;
+	margin: $field-label-margin;
+	color: $field-label-color;
+	font-size: $field-label-font-size;
+	font-weight: $field-label-font-weight;
+}
+
+
+/**
+ * Field message used as a helper note or feedback.
+ */
+
+.c-field__message {
+	display: inline-block;
+	margin: $field-message-margin;
+	padding: $field-message-padding;
+	color: $field-message-color;
+	font-size: $field-message-font-size;
+
+	> i {
+		margin-right: rem(5px);
+	}
+}

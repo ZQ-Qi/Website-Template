@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Paper Panel</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/skin-blue.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(http://xvelopers.com/wp/themes/docs/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+                    <link rel="stylesheet" href="assets/css/logo.png">
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+                  <div class="logo">
+                  <img src="http://xvelopers.com/wp/themes/docs/wp-content/uploads/sites/24/2018/05/logo-white.png" alt="" />
+              </div>
+        
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#directory-structure">Directory Structure</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#partials">Partials</a>
+
+                    
+              
+                 
+                   <li class="treeview" id="scrollspy-components"><a href="#">Installation</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#get-started">Get started</a><li class=""><a href="#installing-gulp-4-globally">Installing gulp 4 globally</a><li class=""><a href="#paper-installtion">Paper Installtion</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#production-versions">Production Versions</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#easy-deploy">Easy Deploy</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#compress-images">Compress Images</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#sticky-item">Sticky Item</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#plugins">Plugins</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#credits">Credits</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Paper Panel</h1>
+                              <div class="version"> Version 1.0.0</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                   
+	        <img src="http://xvelopers.com/wp/themes/docs/wp-content/uploads/sites/24/2018/05/Untitled-1.jpg" alt="">
+	                     </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Thank you for purchasing this template. We covered almost everything in this document that how easily you can set up. If you have any questions that<br />
+are beyond the scope of this help file, please feel free to contact us.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="directory-structure" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'><a href='#directory-structure' class='header-link'><i class='fa fa-link'></i></a>Directory Structure</h2><p>Download and extract zip files. You will find basic development structure like this.</p>
+<ul>
+<li><i class="xicon xicon-folder5"></i> app
+<ul>
+<li>src
+<ul>
+<li><i class="xicon xicon-folder5"></i>assets</li>
+<li>partials</li>
+<li>*.*_files.html</li>
+</ul>
+</li>
+<li>gulpfile.js</li>
+<li>package.json</li>
+</ul>
+</li>
+</ul>
+</div>  </section>
+
+  <section id="partials" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'><a href='#partials' class='header-link'><i class='fa fa-link'></i></a>Partials</h2><section id="structure" class="">
+<section id="partials">
+<div class="row">
+<div class="col-md-12">
+<p>Paper Knowlegebase is using partials folder to inject some common html files like header and<br />
+footer.</p>
+<table class="table table-bordered table-striped">
+<tbody>
+<tr>
+<th scope="row"><code>_head.html</code></th>
+<td>Basic HTML meta tags and everything that could be in <code>&lt;head&gt;&lt;/head&gt;</code></td>
+</tr>
+<tr>
+<th scope="row"><code>_foot.html</code></th>
+<td>Body &amp; wrapper close</td>
+</tr>
+<tr>
+<th scope="row"><code>_header.html</code></th>
+<td>Main Navigation or menu</td>
+</tr>
+<tr>
+<th scope="row"><code>_header.html</code></th>
+<td>Responsible for site pre header</td>
+</tr>
+<tr>
+<th scope="row"><code>_footer.html</code></th>
+<td>Footer of your site.</td>
+</tr>
+<tr>
+<th scope="row"><code>_script.html</code></th>
+<td>Responsible for all site scripts</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<div id="installation">
+<div class="row">
+<div class="col-md-12">
+<h4></h4>
+</div>
+</div>
+</div>
+</div>  </section>
+
+  <section id="installation" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'><a href='#installation' class='header-link'><i class='fa fa-link'></i></a>Installation</h2><div id='get-started' class='step-content clearfix'><h3 class='steps-header'><a href='#get-started'>Get started</a></h3><p>You may need following things to get started. Please download and install<br />
+dependencies</p>
+<ul class="arrow-list">
+<li>To install Paper Knowlegebase please make sure you have installed node and gulp.</li>
+</ul>
+<a class="btn btn-sm btn-info" href="https://nodejs.org/en/download/">Download Node</a>
+<p>&nbsp;</p>
+<ul class="arrow-list">
+<li>You can use any software of your choice to edit HTML files or</li>
+</ul>
+<a class="btn btn-sm btn-success" href="https://code.visualstudio.com/">Download VS Code</a>
+</div><div id='installing-gulp-4-globally' class='step-content clearfix'><h3 class='steps-header'><a href='#installing-gulp-4-globally'>Installing gulp 4 globally</a></h3><p>You will need to remove your current gulp global package before installing v4 in order to<br />
+do an upgrade.</p>
+<div class="alert alert-info">
+<p><em><strong>Note:</strong> The <code>$</code> shows the command is to be run on the<br />
+command line and shouldn’t be typed</em></p>
+</div>
+<pre class=" language-bash"><code class=" language-bash">$ npm <span class="token function">rm</span> -g gulp
+$ npm <span class="token function">install</span> -g gulp-cli</code></pre>
+<p>This command removes your current global package and installs v4 from the gulp-cli 4.0<br />
+branch.</p>
+<p>Make sure you don&#8217;t get any errors from the first command before you type the second.<br />
+Depending on your set-up, you may need to run them with <code>sudo</code>.</p>
+<p>To verify what version you have installed globally, you can run the below command (and<br />
+should see a similar output)</p>
+<pre class="“” language-git"><code class=" language-git">$ gulp -v
+CLI version 1.2.1</code></pre>
+</div><div id='paper-installtion' class='step-content clearfix'><h3 class='steps-header'><a href='#paper-installtion'>Paper Installtion</a></h3><p>It&#8217;s time to open Paper  HTML app folder to your favorite editor. It&#8217;s easy to use an<br />
+editor which have terminal. Like VS Code or PhpStrom</p>
+<p>First of all install all node modules by using this command:</p>
+<pre><code>$ npm install</code></pre>
+<p>&nbsp;</p>
+<p>After all node modules installation completed run</p>
+<pre><code>gulp watch</code></pre>
+<p>gulp watch will create a temporary folder with name of <em>tmp</em></p>
+<div class="alert alert-info">
+<p>only change content in <span style="color: #ff0000;"><strong><em>src</em></strong> </span>folder tmp folder is just for preview.</p>
+</div>
+</div></div><div class='stickem'><ul class='steps'><li><a href='#get-started'>1</a></li><li><a href='#installing-gulp-4-globally'>2</a></li><li><a href='#paper-installtion'>3</a></li></ul></div>  </section>
+
+  <section id="production-versions" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'><a href='#production-versions' class='header-link'><i class='fa fa-link'></i></a>Production Versions</h2><p>After all changes you need to create production version of your product</p>
+<pre><code>$ gulp production</code></pre>
+<p>&nbsp;</p>
+<h4>Creating Minified Version</h4>
+<p>If you want a minified version then run</p>
+<pre><code>$ gulp production-min</code></pre>
+<p>Above command will create a new folder &#8220;dist&#8221; it will be fully optimized. It will<br />
+compress and minify all of your html, css and js files. You can copy folder to your ftp<br />
+or framework to use it.</p>
+</div>  </section>
+
+  <section id="easy-deploy" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'><a href='#easy-deploy' class='header-link'><i class='fa fa-link'></i></a>Easy Deploy</h2><div id="production">
+<div class="row">
+<div class="col-md-12">If you are using version 1.5 or later you can use easy deploy option to upload all files<br />
+to your ftp server with just one commnand.Please make sure to run gulp watch first and make changes before you do this and you<br />
+have to add your server details to upload file. Please open ftp.config and add your<br />
+server details.</p>
+<pre><code>$ gulp deploy</code></pre>
+</div>
+</div>
+</div>
+<div id="main_menu">
+<div class="row">
+<div class="col-md-12">
+<h4></h4>
+</div>
+</div>
+</div>
+</div>  </section>
+
+  <section id="compress-images" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'><a href='#compress-images' class='header-link'><i class='fa fa-link'></i></a>Compress Images</h2><h4></h4>
+<hr />
+<p>To speed your site you may need to compress some of your images. For that run<br />
+command:</p>
+<pre><code>$ gulp img-compress</code></pre>
+<p>images in demo folder will be compressed only. you must first create production version.<br />
+you can change folder name in gulpfile.js if you want.</p>
+</div>  </section>
+
+  <section id="sticky-item" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'><a href='#sticky-item' class='header-link'><i class='fa fa-link'></i></a>Sticky Item</h2><div id="scroll">
+<div class="row">
+<div class="col-md-12">
+<p>To make an item sticky add sticky class</p>
+<pre><code>&lt;div class="sticky"&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad architecto asperiores dolor ea exercitationem hic ipsam iusto maiores natus nulla numquam perspiciatis quasi quis recusandae, reiciendis rerum similique ut.
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="contact">
+<div class="row">
+<div class="col-md-12">
+<h4></h4>
+</div>
+</div>
+</div>
+</div>  </section>
+
+  <section id="plugins" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'><a href='#plugins' class='header-link'><i class='fa fa-link'></i></a>Plugins</h2><h4></h4>
+<hr />
+<ul class="list-group">
+<li class="list-group-item">Bootstrap 4</li>
+<li class="list-group-item"><a href="http://sachinchoolur.github.io/lightslider/index.html">Light Slider</a></li>
+<li class="list-group-item"><a href="http://jackonthe.net/css3animateit/">CSS3<br />
+Animations</a></li>
+<li class="list-group-item">Easy Pie Chart</li>
+<li class="list-group-item">Morris Charts</li>
+<li class="list-group-item">Char Js</li>
+<li class="list-group-item">Spark Lines</li>
+<li class="list-group-item">Echarts</li>
+<li class="list-group-item">Jqvmap</li>
+<li class="list-group-item">Data Tables</li>
+<li class="list-group-item">Tags Input</li>
+<li class="list-group-item">Select2</li>
+<li class="list-group-item">Range Slider</li>
+<li class="list-group-item">Color Picker</li>
+<li class="list-group-item">Date Time Picker</li>
+<li class="list-group-item">Toast</li>
+<li class="list-group-item">Stepper</li>
+</ul>
+</div>  </section>
+
+  <section id="credits" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'><a href='#credits' class='header-link'><i class='fa fa-link'></i></a>Credits</h2><div id="credits" class="p-b-40">
+<div class="row">
+<div class="col-md-12">
+<ul class="list-group">
+<li class="list-group-item">Twitter Bootstrap, its recommended to see visit bootstrap docs</li>
+<li class="list-group-item">Jquery – JS library</li>
+<li class="list-group-item"><a href="icomoon.io">Generating Fonts Package</a></li>
+<li class="list-group-item"><a href="www.flatxicon.com">Flat Icon for various fonts</a></li>
+<li class="list-group-item"><a href="https://unsplash.com/">Unsplash Images</a></li>
+<li class="list-group-item">Gulp</li>
+<li class="list-group-item">NodeJS</li>
+<li class="list-group-item">https://dribbble.com/shots/3497223&#8211;Free-PSD-Samsung-Galaxy-s8-Mockup</li>
+<li class="list-group-item">https://drive.google.com/drive/folders/0ByYJdeOAU2QbU1hXcDdHc2xWWnc</li>
+</ul>
+</div>
+</div>
+</div>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 1.0.0</div>
+               </div>
+
+    <div class="copyrights">Copyrights XVELOPERS 2018</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script src="assets/js/jQuery-2.2.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/jquery.stickem.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/docs.js"></script>
+    </body>
+</html>

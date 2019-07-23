@@ -1,0 +1,139 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/mail.min.css"> <!-- Customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Mail View</h3>
+                <button class="btn btn-outline-primary ks-light ks-mail-navigation-block-toggle" data-block-toggle=".ks-mail > .ks-navigation">Menu</button>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-mail" data-mail-view>
+                @@include('./_partials/apps/mail/navigation.html')
+                @@include('./_partials/apps/mail/emails.html')
+
+                <div class="ks-view">
+                    <div class="ks-header">
+                        <div class="ks-mail-controls">
+                            <button class="btn btn-outline-primary ks-light">
+                                <span class="la la-mail-reply ks-icon"></span>
+                                <span class="ks-text">Reply</span>
+                            </button>
+                            <button class="btn btn-outline-primary ks-light">
+                                <span class="la la-mail-reply-all ks-icon"></span>
+                                <span class="ks-text">Reply all</span>
+                            </button>
+                            <button class="btn btn-outline-primary ks-light">
+                                <span class="la la-mail-forward ks-icon"></span>
+                                <span class="ks-text">Forward</span>
+                            </button>
+                            <button class="btn btn-outline-primary ks-light">
+                                <span class="la la-trash-o ks-icon"></span>
+                                <span class="ks-text">Delete</span>
+                            </button>
+                        </div>
+                        <div class="ks-controls">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-primary ks-light ks-no-text ks-no-arrow" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="la la-ellipsis-h ks-icon"></span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right ks-simple" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-user-plus ks-icon"></span>
+                                        <span class="ks-text">Add members</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-eye-slash ks-icon"></span>
+                                        <span class="ks-text">Mark as unread</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-bell-slash-o ks-icon"></span>
+                                        <span class="ks-text">Mute notifications</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-mail-forward ks-icon"></span>
+                                        <span class="ks-text">Forward</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-ban ks-icon"></span>
+                                        <span class="ks-text">Spam</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-trash-o ks-icon"></span>
+                                        <span class="ks-text">Delete</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary ks-light ks-view-cancel">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="ks-body ks-scrollable" data-auto-height>
+                        <div class="ks-email-content">
+                            <div class="ks-subject">
+                                Redesigned navigation on Mac app
+                            </div>
+                            <div class="ks-badges">
+                                <span class="ks-badge badge badge-default">inbox</span>
+                                <span class="ks-badge badge badge-info">family</span>
+                            </div>
+                            <div class="ks-sender">
+                                <span class="ks-avatar">
+                                    <img src="assets/img/avatars/ava-1.png" width="36" height="36">
+                                </span>
+                                <div class="ks-info">
+                                    <span class="ks-name">Janice Lynch <a href="#" class="la la-star-o ks-favorite"></a></span>
+                                    <span class="ks-time">Today at 8:45 PM</span>
+                                </div>
+                                <div class="ks-data">
+                                    <span class="ks-from">
+                                        From: <a href="#">a.vlasova@gmail.com</a>
+                                    </span>
+                                    <span class="ks-to">
+                                        To: me
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="ks-message">
+                                Hello, Konstantin! <br><br>
+                                The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of the family Boletaceae found in mixed woodland in Europe and North America, and occasionally in Brazil. It has also become naturalised in Tasmania, under native myrtle beech trees.
+                                <br><br>
+                                A small bolete, it has a 1.6–9 cm (0.6–3.5 in) orange-fawn cap with cinnamon or brown pores underneath, and a 4–9.5 cm (1.6–3.7 in) stalk.
+                                <br><br>
+                                Best regards, <br>Anna Frolova
+                            </div>
+                            <div class="ks-attachments">
+                                <ul>
+                                    <li class="file-item">
+                                        <span class="thumb la la-file-excel-o text-success"></span>
+                                        <span class="filename">File.xls</span>
+                                        <span class="size">15 KB</span>
+                                    </li>
+                                    <li class="file-item">
+                                        <span class="thumb la la-file-powerpoint-o text-warning"></span>
+                                        <span class="filename">File.ppt</span>
+                                        <span class="size">312 KB</span>
+                                    </li>
+                                    <li class="file-item">
+                                        <img class="thumb" src="http://placehold.it/90x90">
+                                        <span class="filename">Image.jpg</span>
+                                        <span class="size">1.1 MB</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+@@include('./_partials/apps/mail/scripts.html')
+@@include('./_partials/footer.html')

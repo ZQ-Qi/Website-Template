@@ -1,0 +1,394 @@
+<title>海报管理</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>图片管理</cite></a>
+        <a><cite>海报管理</cite></a>
+    </div>
+</div>
+
+<style>
+    /* 这段样式只是用于演示 */
+
+</style>
+
+
+<div class="layui-fluid" id="LAY-picManage-poster">
+
+    <div class="layui-card">
+        <div class="layui-tab-content">
+            <div class="layui-btn-group demoTable lay-mb15">
+                <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="layadmin-useradmin-formlist">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">名称</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" placeholder="请输入海报名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">创建时间</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" id="test1" placeholder=" 请选择创建时间 ">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">启用时间</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" id="test2" placeholder="请选择启用时间">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">平台</label>
+                            <div class="layui-input-block">
+                                <select name="platform">
+                                    <option value="" >请选择</option>
+                                    <option value="0">智汇魔方</option>
+                                    <option value="1">汇贷客</option>
+                                    <option value="2">公众号</option>
+                                    <option value="3">web</option>
+                                    <option value="4">pc</option>
+                                    <option value="5">微信</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">类型</label>
+                            <div class="layui-input-block">
+                                <select name="type">
+                                    <option value="" >请选择</option>
+                                    <option value="0">普通海报</option>
+                                    <option value="1">热门</option>
+                                    <option value="2">推荐</option>
+                                    <option value="3">diy海报</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">标签</label>
+                            <div class="layui-input-block">
+                                <select name="type">
+                                    <option value="" >请选择</option>
+                                    <option value="0">喜庆</option>
+                                    <option value="1">节气</option>
+                                    <option value="2">英雄</option>
+                                    <option value="3">青春</option>
+                                    <option value="4">魅力</option>
+                                    <option value="5">问候</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn layuiadmin-btn-admin" lay-submit lay-filter="LAY-user-back-search">
+                                <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            <div class="layui-card-body">
+                <div style="padding-bottom: 10px;">
+                    <button class="layui-btn layui-btn-danger" data-type="batchdel"><i class="layui-icon">&#xe640;</i>删除</button>
+                    <button class="layui-btn layui-btn-normal" data-type="add"><i class="layui-icon">&#xe654;</i>添加</button>
+                </div>
+            <table id="LAY-picManage-poster-all" lay-filter="LAY-picManage-poster-all" ></table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--查看-->
+<script type="text/html" id="viewTrPostrer">
+    <ul class="viewInfo">
+        <li>
+            <span>名称：</span>{{d.title}}
+        </li>
+        <li>
+            <span>所属平台：</span>{{d.platform}}
+        </li>
+        <li>
+            <span>类型：</span>{{d.type}}
+        </li>
+        <li>
+            <span>标签：</span>{{d.label}}
+        </li>
+        <li>
+            <span>热度：</span>{{d.hot}}
+        </li>
+        <li>
+            <span>创建时间：</span>{{layui.util.timeAgo(d.createTime)}}
+        </li>
+        <li>
+            <span>启用时间：</span>{{layui.util.timeAgo(d.startTime)}}
+        </li>
+        <li>
+            <span>是否启用：</span>{{d.status ? "是" :" 否"}}
+        </li>
+    </ul>
+</script>
+
+
+<!--私有样式-->
+<style>
+    .viewInfo {
+        padding: 30px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .viewInfo li {
+        margin-bottom: 15px;
+    }
+
+    .viewInfo li span {
+        display: inline-block;
+        width: 15%;
+        text-align: right;
+        margin-right: 15px;
+        font-weight: bold;
+    }
+    /*设置单元格高度，设置文本溢出时自动换行*/
+    #LAY-picManage-poster  .layui-table-body .layui-table-cell{
+        height:100px;
+        line-height:100px;
+        white-space:normal;
+    }
+
+</style>
+<script>
+
+    layui.use(['admin', 'table', 'util', 'layer', 'form', 'laydate', 'laytpl'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , element = layui.element
+            , layer = layui.layer
+            , table = layui.table
+            , form = layui.form
+            , laydate = layui.laydate
+            , laytpl = layui.laytpl;
+
+
+        //日期范围
+        laydate.render({
+            elem: '#test1'
+            ,range: true
+        });
+        laydate.render({
+            elem: '#test2'
+            ,range: true
+        });
+        element.render();
+        form.render(null, 'layadmin-useradmin-formlist');
+        //缩略图模板
+        var tplImg = function (d) {
+            console.log(d);
+            return '<img src="' + d.thumbnail + '" style="height: 80px" >';
+        };
+        //是否启用模板
+        var tplStatus=function (d) {
+            console.log(d.status);
+            return '<input type="checkbox" name="status" lay-skin="switch" lay-text="是|否" checked="'+d.status+'">';
+        };
+
+
+        // 操作内容模板
+        var tplOperate = function (d) {
+            return '<div class="opetate">' +
+                '<button class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail" lay-filter="test1">查看</button>' +
+                '<button class="layui-btn layui-btn-xs" lay-event="edit">编辑</button>' +
+                '<button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</button>' +
+                '</div>';
+
+        };
+
+
+        //全部消息
+        table.render({
+            elem: '#LAY-picManage-poster-all'
+            , url: './content/json/picManage/poster.js' //模拟接口
+            , cellMinWidth: 60 //全局定义常规单元格的最小宽度
+            , page: true // 开启分页
+            , cols: [[ // 表头
+                {type: 'checkbox'}
+                // , {type: 'numbers', title: '#'}
+                , {field: 'title', title: '名称',edit: 'text', templet: '<div>{{d.title}}</div>'}
+                , {field: 'thumbnail', title: '缩略图', templet: tplImg}
+                , {field: 'platform', title: '平台',edit: 'text', templet: '<div>{{d.platform}}</div>'}
+                , {field: 'type', title: '类型',edit: 'text', templet: '<div>{{d.type}}</div>'}
+                , {field: 'label', title: '标签',edit: 'text', templet: '<div>{{d.label}}</div>'}
+                , {field: 'hot', title: '热度', templet: '<div>{{d.hot}}</div>',sort:true}
+                , {field: 'createTime', title: '创建时间', templet: '<div>{{ layui.util.timeAgo(d.createTime) }}</div>'}
+                , {field: 'startTime', title: '启用时间', templet: '<div>{{ layui.util.timeAgo(d.startTime) }}</div>'}
+                , {field: 'status', title: '是否启用',  templet: tplStatus}
+                , {field: 'operate', title: '操作', templet: tplOperate,width:180,align:'center'}
+            ]]
+            , skin: 'line'
+            , done: function (res, curr, count) {
+                //无论是异步请求数据，还是直接赋值数据，都会触发该回调。可以利用该回调做一些表格以外元素的渲染。
+                //如果是异步请求数据方式，res即为你接口返回的信息。
+                //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                console.log(res);
+
+                //得到当前页码
+                console.log(curr);
+
+                //得到数据总量
+                console.log(count);
+            }
+        });
+
+        //监听单元格编辑——方法二
+        table.on('edit(LAY-picManage-poster-all)', function (obj) {
+            var value = obj.value //得到修改后的值
+                , data = obj.data //得到所在行所有键值
+                , field = obj.field; //得到字段
+            layer.msg('[ID: ' + data.id + '] ' + field + ' 字段更改为：' + value);
+        });
+
+        table.on('tool(LAY-picManage-poster-all)', function (obj) {
+            layui.updateitem = function (item) {
+                obj.update(JSON.parse(item));
+            };
+            var data = obj.data;
+            if (obj.event === 'detail') {
+                // layer.msg('ID：'+ data.id + ' 的查看操作');
+                layer.open({
+                    title: '查看',
+                    type: 1,
+                    //skin: 'layui-layer-rim',
+                    shadeClose: true,
+                    area: admin.screen() < 2 ? ['80%', '300px'] : ['700px', '350px'],
+                    content: '<div id="view"></div>'
+                });
+                console.log(obj)
+                console.log(JSON.stringify(data))
+                console.log(data.operate)
+
+
+
+                var getTpl = $("#viewTrPostrer")[0].innerHTML, view = $("#view")[0];
+                laytpl(getTpl).render(data, function (html) {
+                    view.innerHTML = html;
+                });
+            }
+            else if (obj.event === 'del') {
+                layer.confirm('真的删除行么', function (index) {
+                    obj.del();
+                    layer.close(index);
+                });
+            }
+            else if (obj.event === 'edit') { // 编辑方法一
+                layer.open({
+                    type: 2,
+                    area: ['700px', '550px'],
+                    fixed: false,
+                    maxmin: true,
+                    content: layui.setter.base + 'views/iframe/layer/operateTable.html'
+                }); // 打开弹窗
+            }
+            else if (obj.event === 'setSign') { // 编辑方法三
+                layer.prompt({
+                    formType: 2
+                    , title: '编辑 [' + data.id + '] 的所属平台'
+                    , value: data.platform
+                }, function (value, index) {
+                    layer.close(index);
+
+                    //这里一般是发送修改的Ajax请求
+
+                    //同步更新表格和缓存对应的值
+                    obj.update({
+                        platform: value
+                    });
+                });
+            }
+        }); // 操作
+
+        var active = {
+            batchdel: function(){
+                var checkStatus = table.checkStatus('LAY-picManage-poster-all')
+                    ,checkData = checkStatus.data; //得到选中的数据
+
+                if(checkData.length === 0){
+                    return layer.msg('请选择数据');
+                }
+
+                layer.prompt({
+                    formType: 1
+                    ,title: '敏感操作，请验证口令'
+                }, function(value, index){
+                    layer.close(index);
+
+                    layer.confirm('确定删除吗？', function(index) {
+
+                        //执行 Ajax 后重载
+                        /*
+                         admin.req({
+                         url: 'xxx'
+                         //,……
+                         });
+                         */
+                        table.reload('LAY-user-manage');
+                        layer.msg('已删除');
+                    });
+                });
+            },
+            getCheckData: function () { //获取选中数据
+                var checkStatus = table.checkStatus('LAY-picManage-poster-all')
+                    , data = checkStatus.data;
+                active.getId(data)
+
+                layer.alert(JSON.stringify(data));
+            }
+            , getId: function (data) {
+                var idArr = [];
+                for (var i = 0; i < data.length; i++) {
+                    console.log(data[i].id)
+                    idArr.push(data[i].id)
+                }
+                console.log(idArr)
+            }
+            , getCheckLength: function () { //获取选中数目
+                var checkStatus = table.checkStatus('LAY-picManage-poster-all')
+                    , data = checkStatus.data;
+                layer.msg('选中了：' + data.length + ' 个');
+            }
+            , isAll: function () { //验证是否全选
+                var checkStatus = table.checkStatus('LAY-picManage-poster-all');
+                layer.msg(checkStatus.isAll ? '全选' : '未全选')
+            }
+            , add: function () { // 增加一条列表
+                layer.open({
+                    title: '新增',
+                    type: 2,
+                    //skin: 'layui-layer-rim',
+                    shadeClose: false,
+                    area: admin.screen() < 2 ? ['80%', '300px'] : ['700px', '600px'],
+                    content: layui.setter.base + 'views/photoManagement/posterManagement/add.html'
+//                    content: '<div id="addContent"></div>'
+                });
+
+            }
+
+        };
+
+
+//        form.render(null, 'operate-form-group');
+        form.on('submit(component-form-demo1)', function (data) {
+            console.log(data)
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            })
+            return false;
+        });
+
+
+        $('.layui-fluid .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+
+    });
+</script>

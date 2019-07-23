@@ -1,0 +1,106 @@
+/** BEGIN: menu component */
+.menu {
+  width: 240px;
+  min-width: 240px;
+
+  &__heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__items-heading {
+    font-size: 17px;
+  }
+
+  &__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.is-active &-link {
+      background: #269af1;
+      color: #fff;
+    }
+  }
+
+  &__item-link,
+  &__item-link:focus {
+    color: #269af1;
+    padding: 3px 10px;
+    display: inline-block;
+    border-radius: 3px;
+    transition: none;
+
+    &:hover {
+      background: rgba(#269af1, .1);
+      color: #269af1;
+      transition: all .15s ease-in;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+}
+
+.menu-a {
+  width: 240px;
+  min-width: 240px;
+
+  &__heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__items-heading {
+    font-size: 17px;
+  }
+
+  &__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    margin-left: -20px;
+  }
+
+  &__item.is-active &__link {
+    border-left-color: $color-info;
+    color: $color-info;
+    font-weight: 600;
+  }
+
+  &__link {
+    height: 40px;
+    min-height: 40px;
+    border-left: 3px solid transparent;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    @include mx-link($color-gray, rgba($color-info, .9));
+    padding-left: 20px;
+  }
+
+  &__link,
+  &__link:focus {
+
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+}
+/** END: menu component */

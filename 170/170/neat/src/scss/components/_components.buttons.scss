@@ -1,0 +1,218 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * 1. Apply brand-color background if `c-btn--{style}` class isn't specified.
+ * 2. Animate arrow plaed within the button.
+ * 3. Use `disabled` property on <button> elements, and `is-disabled` class on
+ *    <a> elements as they don't support `disabled` property.
+ */
+
+.c-btn {
+	display: inline-block;
+	position: relative;
+	max-width: 100%;
+	margin: 0;
+	padding: $btn-padding;
+	transition: $btn-transition;
+	border: 0;
+	border-radius: $btn-border-radius;
+	background-color:  $btn-background-color; /* [1] */
+	color: $btn-color; /* [1] */
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	line-height: $btn-line-height;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	box-shadow: $btn-box-shadow;
+	cursor: pointer;
+	vertical-align: middle;
+	appearance: none;
+	user-select: none;
+
+	&:hover,
+	&:focus {
+		outline: 0;
+		text-decoration: none;
+	}
+
+	&:hover {
+		color: $btn-hover-color;
+		box-shadow: $btn-hover-box-shadow;
+		opacity: $btn-hover-opacity;
+	}
+
+	&:focus {
+		box-shadow: $btn-focus-box-shadow;
+	}
+
+	&:active {
+		transform: $btn-active-transform;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		background-color: $btn-disabled-background-color;
+		box-shadow: none;
+		cursor: default;
+		opacity: $btn-disabled-opacity;
+
+		&:hover,
+		&:focus,
+		&:active {
+			transform: none;
+			box-shadow: none;
+			opacity: $btn-disabled-opacity;
+		}
+	}
+
+	&.has-arrow i { /* [2] */
+		display: inline-block;
+		position: relative;
+		bottom: -2px;
+		transition: transform 0.15s;
+		font-size: 18px;
+	}
+
+	&.has-arrow:hover i {
+		transform: translateX(5px);
+	}
+
+	&.c-btn--outline {
+		background-color: transparent;
+		color: $btn-outline-color;
+		box-shadow: none;
+
+		&:hover {
+			color: $btn-outline-color;
+		}
+	}
+}
+
+
+/**
+ * Adjust the size of icon placed within the button.
+ */
+
+.c-btn__icon {
+	position: relative;
+	right: -2px;
+	bottom: -2px;
+	font-size: 18px;
+}
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+	padding: $btn-small-padding;
+	font-size: $btn-small-font-size;
+}
+
+.c-btn--large {
+	padding: $btn-large-padding;
+	font-size: $btn-large-font-size;
+}
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-btn--info {
+	border-color: $color-info;
+	background-color: $color-info;
+
+	&.c-btn--outline {
+		background-color: transparent;
+		color: $color-info;
+
+		&:hover {
+			color: $color-info;
+		}
+	}
+}
+
+.c-btn--success {
+	border-color: $color-success;
+	background-color: $color-success;
+
+	&.c-btn--outline {
+		background-color: transparent;
+		color: $color-success;
+
+		&:hover {
+			color: $color-success;
+		}
+	}
+}
+
+.c-btn--warning {
+	border-color: $color-warning;
+	background-color: $color-warning;
+
+	&.c-btn--outline {
+		background-color: transparent;
+		color: $color-warning;
+
+		&:hover {
+			color: $color-warning;
+		}
+	}
+}
+
+.c-btn--danger {
+	border-color: $color-danger;
+	background-color: $color-danger;
+
+	&.c-btn--outline {
+		background-color: transparent;
+		color: $color-danger;
+
+		&:hover {
+			color: $color-danger;
+		}
+	}
+}
+
+.c-btn--primary {
+	border-color: $color-primary;
+	background-color: $color-primary;
+
+	&.c-btn--outline {
+		background-color: transparent;
+		color: $color-primary;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+.c-btn--secondary {
+	border-color: $color-secondary;
+	background-color: $color-secondary;
+
+	&.c-btn--outline {
+		background-color: transparent;
+		color: $color-secondary;
+
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+}
+
+
+/* More Options
+   ========================================================================== */
+
+.c-btn--fullwidth {
+	width: 100%;
+}
+
+.c-btn--outline {
+	border: 1px solid;
+}

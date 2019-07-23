@@ -1,0 +1,45 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Tooltips &amp; Popovers / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Tooltips &amp; Popovers</h2>
+    </div>
+  </div>
+  <div class="main-container container-fh__content">
+    <div class="row">
+      <div class="col-7">
+        <h3>Tooltips &amp; Popovers</h3>
+        <span class="ua-icon-info color-gray" data-toggle="tooltip" data-placement="top" title="Tooltip" data-tippy-placement="right"></span>
+        <span class="ua-icon-info color-gray ml-5 disabled" data-toggle="tooltip" data-placement="right" title="Tooltip" data-tippy-placement="left"></span>
+        <span class="ua-icon-info color-gray ml-5" data-toggle="tooltip" data-placement="bottom" title="This element can hold an unlimited number of icons" data-tippy-placement="top"></span>
+        <span class="ua-icon-info color-gray ml-5" data-toggle="tooltip" data-placement="left" title="This element can hold an unlimited number of icons" data-tippy-placement="bottom"></span>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-12">
+        <button type="button" class="btn btn-secondary mr-3" data-container="body" data-toggle="popover" data-placement="top" data-title="Title" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          Popover on top
+        </button>
+
+        <button type="button" class="btn btn-secondary mr-3" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          Popover on right
+        </button>
+
+        <button type="button" class="btn btn-secondary mr-3" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+          Popover on bottom
+        </button>
+
+        <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          Popover on left
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

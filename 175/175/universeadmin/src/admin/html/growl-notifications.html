@@ -1,0 +1,283 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Growl Notifications / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/prism/prism.css">
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Growl Notifications</h2>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#">Components</a>
+        </li>
+        <li class="breadcrumb-item active">Growl Notifications</li>
+      </ol>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="for-group">
+          <label for="notification-position">Choose Position</label>
+          <select name="position" id="notification-position">
+            <option value="top-center" selected>Top Center</option>
+            <option value="bottom-center" selected>Bottom Center</option>
+            <option value="top-right" selected>Top Right</option>
+            <option value="bottom-right">Bottom Right</option>
+            <option value="top-left">Top Left</option>
+            <option value="bottom-left">Bottom Left</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="for-group">
+          <label for="close-timeout">Close Timeout</label>
+          <select name="position" id="close-timeout">
+            <option value="0" selected>Disabled</option>
+            <option value="1000">1 Sec</option>
+            <option value="3000">3 Sec</option>
+            <option value="5000">5 Sec</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="for-group">
+          <label for="animation">Animation</label>
+          <select name="position" id="animation">
+            <option value="none">None</option>
+            <option value="slide" selected>Slide</option>
+            <option value="fade">Fade</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="mt-5">Default Notifications</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <button id="show-notification-default-alert" class="btn btn-secondary">Show me a notification (Default)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Hello!',
+  description: 'I am a default notification.',
+  type: 'alert',
+  position: 'top-right',
+  closeTimeout: 0
+})).show(); // or GrowlNotification.notify(options);</code>
+</pre>
+      </div>
+      <div class="col-lg-6">
+        <button id="show-notification-default-success" class="btn btn-outline-success">Show me a notification (Success)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Well Done!',
+  description: 'You just submit your resume successfully.',
+  type: 'success',
+  position: 'top-right',
+  closeTimeout: 0
+})).show();</code>
+</pre>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <button id="show-notification-default-error" class="btn btn-outline-danger">Show me a notification (Error)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Warning!',
+  description: 'The data presentation here can be change.',
+  type: 'error',
+  position: 'top-right',
+  closeTimeout: 0
+})).show();</code>
+</pre>
+      </div>
+      <div class="col-lg-6">
+        <button id="show-notification-default-warning" class="btn btn-outline-warning">Show me a notification (Warning)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Reminder!',
+  description: 'You have a meeting at 10:30 АМ',
+  type: 'warning',
+  position: position,
+  closeTimeout: closeTimeout
+})).show();</code>
+</pre>
+      </div>
+      <!--<div class="col-lg-12">
+        <button id="show-notification-default-info" class="btn btn-info">Show me a notification (Info)</button>
+      </div>-->
+    </div>
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <button id="show-notification-default-info" class="btn btn-outline-purple">Show me a notification (Info)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Sorry!',
+  description: 'Could not complete your transaction.',
+  image: 'img/notifications/05.png',
+  type: 'info',
+  position: 'top-right,
+  closeTimeout: 0
+})).show();</code>
+</pre>
+      </div>
+    </div>
+
+    <h2 class="mt-5">Notifications with icons</h2>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <button id="show-notification-icon-alert" class="btn btn-secondary">Show me a notification (Default)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Hello!',
+  description: 'I am a default notification.',
+  type: 'alert',
+  image: 'img/notifications/01.png',
+  position: 'top-right',
+  closeTimeout: 0
+})).show();</code>
+</pre>
+      </div>
+      <div class="col-lg-6">
+        <button id="show-notification-icon-success" class="btn btn-outline-success">Show me a notification (Success)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Well Done!',
+  description: 'You just submit your resume successfully.',
+  image: 'img/notifications/03.png',
+  type: 'success',
+  position: 'top-right',
+  closeTimeout: 0
+})).show();</code>
+</pre>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <button id="show-notification-icon-error" class="btn btn-outline-danger">Show me a notification (Error)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Warning!',
+  description: 'The data presentation here can be change.',
+  image: 'img/notifications/04.png',
+  type: 'error',
+  position: 'top-right',
+  closeTimeout: 0
+})).show();</code>
+</pre>
+      </div>
+      <div class="col-lg-6">
+        <button id="show-notification-icon-warning" class="btn btn-outline-warning">Show me a notification (Warning)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Reminder!',
+  description: 'You have a meeting at 10:30 АМ',
+  image: 'img/notifications/02.png',
+  type: 'warning',
+  position: 'top-right',
+  closeTimeout: 0
+})).show();</code>
+</pre>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <button id="show-notification-icon-info" class="btn btn-outline-purple">Show me a notification (Info)</button>
+<pre class="mt-4">
+<code class="language-javascript">(new GrowlNotification({
+  title: 'Sorry!',
+  description: 'Could not complete your transaction.',
+  image: 'img/notifications/05.png',
+  type: 'info',
+  position: 'top-right',
+  closeTimeout: 0
+})).show();</code>
+</pre>
+      </div>
+    </div>
+
+    <h4 class="mt-5">Available options listed below.</h4>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Option</th>
+        <th>Default</th>
+        <th>Info</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>type</strong>: string</td>
+        <td>'alert'</td>
+        <td>alert, success, error, warning, info</td>
+      </tr>
+      <tr>
+        <td><strong>position</strong>: string</td>
+        <td>'top-right'</td>
+        <td>top-left, top-right, bottom-left, bottom-right, top-center, bottom-center</td>
+      </tr>
+      <tr>
+        <td><strong>title</strong>: string</td>
+        <td>''</td>
+        <td>This string can contain HTML too. But be careful and don't pass user inputs to this parameter.</td>
+      </tr>
+      <tr>
+        <td><strong>description</strong>: string</td>
+        <td>''</td>
+        <td>This string can contain HTML too. But be careful and don't pass user inputs to this parameter.</td>
+      </tr>
+      <tr>
+        <td><strong>image</strong>: string</td>
+        <td>''</td>
+        <td>Path to image.</td>
+      </tr>
+      <tr>
+        <td><strong>closeTimeout</strong>: boolean,int</td>
+        <td>false</td>
+        <td>false, 1000, 3000, 3500, etc. Delay for closing event in milliseconds (ms). Set 'false' for sticky notifications.</td>
+      </tr>
+      <tr>
+        <td><strong>closeWith</strong>: [...string]</td>
+        <td>['click']</td>
+        <td>click, button</td>
+      </tr>
+      <tr>
+        <td><strong>animation.open</strong>: string,null,false</td>
+        <td>'slide-in'</td>
+        <td>If <strong>string</strong>, assumed to be CSS class name. If <strong>false|null|'none'</strong>, no animation at all. 'slide-in', 'fade-in'</td>
+      </tr>
+      <tr>
+        <td><strong>animation.close</strong>: string,null,false</td>
+        <td>'slide-out'</td>
+        <td>If <strong>string</strong>, assumed to be CSS class name. If <strong>false|null|'none'</strong>, no animation at all. 'slide-out', 'fade-out'</td>
+      </tr>
+      <!--<tr>
+        <td><strong>force</strong>: boolean</td>
+        <td>false</td>
+        <td>DOM insert method depends on this parameter. If false uses append, if true uses prepend.</td>
+      </tr>-->
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/prism/prism.js"></script>
+<script src="vendor/requirejs/require.js"></script>
+<script src="js/growl-notification/growl-notification.js"></script>
+<script src="js/preview/growl-notifications.min.js"></script>
+{% endblock %}

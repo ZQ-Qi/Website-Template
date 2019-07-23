@@ -1,0 +1,356 @@
+<title>评论管理</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>资讯系统</cite></a>
+        <a><cite>评论管理</cite></a>
+    </div>
+</div>
+
+<style>
+    /* 这段样式只是用于演示 */
+
+</style>
+
+
+<div class="layui-fluid" id="LAY-commentManage">
+
+    <div class="layui-card">
+        <div class="layui-tab-content">
+            <div class="layui-btn-group demoTable lay-mb15">
+                <div class="layui-form layui-card-header layuiadmin-card-header-auto"
+                     lay-filter="layadmin-useradmin-formlist">
+                    <div class="layui-form-item">
+                        <!--<div class="layui-inline">-->
+                        <!--<label class="layui-form-label">问题</label>-->
+                        <!--<div class="layui-input-block">-->
+                        <!--<input type="text" name="name" placeholder="请输入问题" autocomplete="off"-->
+                        <!--class="layui-input">-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="layui-inline">
+                            <label class="layui-form-label">平台</label>
+                            <div class="layui-input-block">
+                                <select name="platform">
+                                    <option value="">请选择</option>
+                                    <option value="0">智汇魔方</option>
+                                    <option value="1">汇贷客</option>
+                                    <option value="2">公众号</option>
+                                    <option value="3">web</option>
+                                    <option value="4">pc</option>
+                                    <option value="5">微信</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">类型</label>
+                            <div class="layui-input-block">
+                                <select name="type">
+                                    <option value="">请选择</option>
+                                    <option value="0">精品</option>
+                                    <option value="1">推荐</option>
+                                    <option value="2">普通</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">创建时间</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" id="commentManagement-createTime" placeholder=" 请选择创建时间 ">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn layuiadmin-btn-admin" lay-submit lay-filter="LAY-user-back-search">
+                                <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-card-body">
+                    <div style="padding-bottom: 10px;">
+                        <button class="layui-btn layui-btn-danger" data-type="batchdel"><i
+                                class="layui-icon">&#xe640;</i>删除
+                        </button>
+                        <button class="layui-btn layui-btn-normal" data-type="add"><i class="layui-icon">&#xe654;</i>添加
+                        </button>
+                    </div>
+                    <table id="LAY-commentManage-all" lay-filter="LAY-commentManage-all"></table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--查看-->
+    <script type="text/html" id="viewTrcommentManagement">
+        <ul class="viewInfo">
+            <li>
+                <span>平台：</span>{{d.platform}}
+            </li>
+            <li>
+                <span>问题：</span>{{d.question}}
+            </li>
+            <li>
+                <span>答案：</span>{{d.answer}}
+            </li>
+            <li>
+                <span>类型：</span>{{d.type}}
+            </li>
+            <li>
+                <span>排序：</span>{{d.sort}}
+            </li>
+            <li>
+                <span>创建时间：</span>{{layui.util.timeAgo(d.createTime)}}
+            </li>
+        </ul>
+    </script>
+
+
+    <!--私有样式-->
+    <style>
+        .viewInfo {
+            padding: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .viewInfo li {
+            margin-bottom: 15px;
+        }
+
+        .viewInfo li span {
+            display: inline-block;
+            width: 15%;
+            text-align: right;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        td {
+            vertical-align: middle;
+        }
+
+    </style>
+    <script>
+        layui.use(['admin', 'table', 'util', 'layer', 'form', 'laydate', 'laytpl'], function () {
+            var $ = layui.$
+                , admin = layui.admin
+                , element = layui.element
+                , layer = layui.layer
+                , table = layui.table
+                , form = layui.form
+                , laydate = layui.laydate
+                , laytpl = layui.laytpl;
+
+            //日期范围
+            laydate.render({
+                elem: '#commentManagement-createTime'
+                , range: true
+            });
+            element.render();
+            form.render(null, 'layadmin-useradmin-formlist');
+            //缩略图模板
+            var tplImg = function (d) {
+                console.log(d);
+                return '<img src="' + d.thumbnail + '" style="height: 80px" >';
+            };
+
+
+            // 操作内容模板
+            var tplOperate = function (d) {
+                return '<div class="opetate">' +
+                    '<button class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail" lay-filter="commentManagement-createTime">查看</button>' +
+                    '<button class="layui-btn layui-btn-xs">编辑</button>' +
+                    '<button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</button>' +
+                    '</div>';
+
+            };
+
+
+            //全部消息
+            table.render({
+                elem: '#LAY-commentManage-all'
+                , url: './content/json/commentManagement/comment.js' //模拟接口
+                , cellMinWidth: 60 //全局定义常规单元格的最小宽度
+                , page: true // 开启分页
+                , cols: [[ // 表头
+                    {type: 'checkbox'}
+                    // , {type: 'numbers', title: '#'}
+                    , {field: 'platform', title: '平台', edit: 'text', templet: '<div>{{d.platform}}</div>'}
+                    , {field: 'question', title: '问题', edit: 'text', templet: '<div>{{d.question}}</div>'}
+                    , {field: 'answer', title: '答案', edit: 'text', templet: '<div>{{d.answer}}</div>'}
+                    , {field: 'type', title: '类型', edit: 'text', templet: '<div>{{d.type}}</div>'}
+                    , {field: 'sort', title: '排序', edit: 'text', templet: '<div>{{d.sort}}</div>', sort: true}
+                    , {field: 'createTime', title: '创建时间', templet: '<div>{{ layui.util.timeAgo(d.createTime) }}</div>', sort: true}
+                    , {field: 'operate', title: '操作', templet: tplOperate, width: 180, align: 'center'}
+                ]]
+                , skin: 'line'
+                , done: function (res, curr, count) {
+                    //无论是异步请求数据，还是直接赋值数据，都会触发该回调。可以利用该回调做一些表格以外元素的渲染。
+                    //如果是异步请求数据方式，res即为你接口返回的信息。
+                    //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                    console.log(res);
+
+                    //得到当前页码
+                    console.log(curr);
+
+                    //得到数据总量
+                    console.log(count);
+                }
+            });
+
+            //监听单元格编辑——方法二
+            table.on('edit(LAY-commentManage-all)', function (obj) {
+                var value = obj.value //得到修改后的值
+                    , data = obj.data //得到所在行所有键值
+                    , field = obj.field; //得到字段
+                layer.msg('[ID: ' + data.id + '] ' + field + ' 字段更改为：' + value);
+            });
+
+            table.on('tool(LAY-commentManage-all)', function (obj) {
+                layui.updateitem = function (item) {
+                    obj.update(JSON.parse(item));
+                };
+                var data = obj.data;
+                if (obj.event === 'detail') {
+                    // layer.msg('ID：'+ data.id + ' 的查看操作');
+                    layer.open({
+                        title: '查看',
+                        type: 1,
+                        //skin: 'layui-layer-rim',
+                        shadeClose: true,
+                        area: admin.screen() < 2 ? ['80%', '300px'] : ['700px', '350px'],
+                        content: '<div id="view"></div>'
+                    });
+                    console.log(obj)
+                    console.log(JSON.stringify(data))
+                    console.log(data.operate)
+
+
+                    var getTpl = $("#viewTrcommentManagement")[0].innerHTML, view = $("#view")[0];
+                    laytpl(getTpl).render(data, function (html) {
+                        view.innerHTML = html;
+                    });
+                }
+                else if (obj.event === 'del') {
+                    layer.confirm('亲，确定要删除吗', function (index) {
+                        obj.del();
+                        layer.close(index);
+                    });
+                }
+                else if (obj.event === 'edit') { // 编辑方法一
+                    layer.open({
+                        type: 2,
+                        area: ['700px', '550px'],
+                        fixed: false,
+                        maxmin: true,
+                        content: layui.setter.base + 'views/iframe/layer/operateTable.html'
+                    }); // 打开弹窗
+                }
+                else if (obj.event === 'setSign') { // 编辑方法三
+                    layer.prompt({
+                        formType: 2
+                        , title: '编辑 [' + data.id + '] 的所属平台'
+                        , value: data.platform
+                    }, function (value, index) {
+                        layer.close(index);
+
+                        //这里一般是发送修改的Ajax请求
+
+                        //同步更新表格和缓存对应的值
+                        obj.update({
+                            platform: value
+                        });
+                    });
+                }
+            }); // 操作
+
+            var active = {
+                batchdel: function(){
+                    var checkStatus = table.checkStatus('LAY-commentManage-all')
+                        ,checkData = checkStatus.data; //得到选中的数据
+
+                    if(checkData.length === 0){
+                        return layer.msg('请选择数据');
+                    }
+
+                    layer.prompt({
+                        formType: 1
+                        ,title: '敏感操作，请验证口令'
+                    }, function(value, index){
+                        layer.close(index);
+
+                        layer.confirm('确定删除吗？', function(index) {
+
+                            //执行 Ajax 后重载
+                            /*
+                             admin.req({
+                             url: 'xxx'
+                             //,……
+                             });
+                             */
+                            table.reload('LAY-user-manage');
+                            layer.msg('已删除');
+                        });
+                    });
+                },
+                getCheckData: function () { //获取选中数据
+                    var checkStatus = table.checkStatus('LAY-commentManage-all')
+                        , data = checkStatus.data;
+                    active.getId(data)
+
+                    layer.alert(JSON.stringify(data));
+                }
+                , getId: function (data) {
+                    var idArr = [];
+                    for (var i = 0; i < data.length; i++) {
+                        console.log(data[i].id)
+                        idArr.push(data[i].id)
+                    }
+                    console.log(idArr)
+                }
+                , getCheckLength: function () { //获取选中数目
+                    var checkStatus = table.checkStatus('LAY-commentManage-all')
+                        , data = checkStatus.data;
+                    layer.msg('选中了：' + data.length + ' 个');
+                }
+                , isAll: function () { //验证是否全选
+                    var checkStatus = table.checkStatus('LAY-commentManage-all');
+                    layer.msg(checkStatus.isAll ? '全选' : '未全选')
+                }
+                , add: function () { // 增加一条列表
+                    layer.open({
+                        title: '新增',
+                        type: 2,
+                        //skin: 'layui-layer-rim',
+                        shadeClose: false,
+                        area: admin.screen() < 2 ? ['80%', '300px'] : ['800px', '600px'],
+                        content: layui.setter.base + 'views/newSystem/commentManagement/add.html'
+//                    content: '<div id="addContent"></div>'
+                    });
+
+                }
+
+            };
+
+
+//        form.render(null, 'operate-form-group');
+            form.on('submit(component-form-demo1)', function (data) {
+                console.log(data)
+                layer.alert(JSON.stringify(data.field), {
+                    title: '最终的提交信息'
+                })
+                return false;
+            });
+
+
+            $('.layui-fluid .layui-btn').on('click', function () {
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) : '';
+            });
+
+
+        });
+    </script>

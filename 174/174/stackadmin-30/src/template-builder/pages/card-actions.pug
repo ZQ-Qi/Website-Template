@@ -1,0 +1,24 @@
+//- =========================================================================================
+	File Name: card-actions.jade
+	Description: All cards have actions like minimize, refresh, expand, close/cancel.
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+extends template
+
+block pageVars
+	- var pageTitle    = "Card Actions"
+	- var pageSubTitle = "Card Actions Options"
+	- var description  = "All cards have actions like minimize, refresh, expand, close/cancel for each card in card header."
+	- var activeMenu   = "card-actions"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Components"}, {name:"Card Actions"}])
+
+//- Include page content in page block
+append content
+	include ../contents/card-actions.html

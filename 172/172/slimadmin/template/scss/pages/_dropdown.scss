@@ -1,0 +1,66 @@
+/* --------------------------------------------- */
+/* ############### DROPDOWN PAGE ############### */
+/* --------------------------------------------- */
+
+.dropdown-demo {
+  .dd-link {
+    color: $gray-800;
+    display: inline-block;
+
+    > div {
+      height: 45px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border: 1px solid $gray-400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        margin-right: 10px;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      img {
+        width: 25px;
+        @include border-radius(100%);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    position: static;
+    float: none;
+  }
+}
+
+.dropdown-tab-price {
+  color: theme-color('primary');
+  font-family: $font-family-lato;
+}
+
+.dropdown-tab-label {
+  margin-bottom: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: $gray-800;
+}
+
+
+/********** RTL SUPPORT **********/
+/*********************************/
+
+[dir="rtl"] {
+  .dropdown-demo {
+    text-align: right;
+
+    .dd-link {
+      > div {
+        span { margin-left: 10px; }
+      }
+    }
+  }
+}

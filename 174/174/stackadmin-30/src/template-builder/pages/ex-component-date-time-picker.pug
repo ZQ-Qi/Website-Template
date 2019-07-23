@@ -1,0 +1,50 @@
+//- =========================================================================================
+	File Name: ex-component-date-time-picker.jade
+	Description: Date&time picker widget based on twitter bootstrap.
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+extends template
+
+block pageVars
+	- var pageTitle = "Date&time picker"
+	- var pageSubTitle = "jQuery plugin select date and time"
+	- var description  = "The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay. Choose a date, click elsewhere on the page (blur the input), or hit the Esc key to close. If a date is chosen, feedback is shown as the input's value."
+	- var activeMenu = "ex-component-date-time-picker"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Pickers"}, {name:"Date&time picker"}])//- Include page content in page block
+append content
+	include ../contents/ex-component-date-time-picker.html
+
+append vendorcss
+	//- Daterange Picker
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/vendors/css/pickers/daterange/daterangepicker.css')
+	//- Datetime picker
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/vendors/css/pickers/datetime/bootstrap-datetimepicker.css')
+	//- Pick-a-date CSS
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/vendors/css/pickers/pickadate/pickadate.css')
+
+append vendorjs
+	//- Bootstrap DateTimePicker -//
+	script(src=app_assets_path+'/vendors/js/pickers/dateTime/moment-with-locales.min.js', type='text/javascript')
+	script(src=app_assets_path+'/vendors/js/pickers/dateTime/bootstrap-datetimepicker.min.js', type='text/javascript')
+	//- Pick-a-date -//
+	script(src=app_assets_path+'/vendors/js/pickers/pickadate/picker.js', type='text/javascript')
+	script(src=app_assets_path+'/vendors/js/pickers/pickadate/picker.date.js', type='text/javascript')
+	script(src=app_assets_path+'/vendors/js/pickers/pickadate/picker.time.js', type='text/javascript')
+	script(src=app_assets_path+'/vendors/js/pickers/pickadate/legacy.js', type='text/javascript')
+	//- DateRange Picker JS
+	script(src=app_assets_path+'/vendors/js/pickers/daterange/daterangepicker.js', type='text/javascript')
+
+append pagejs
+	//- Template JS for DateTimePicker
+	script(src=app_assets_path+'/js/scripts/pickers/dateTime/bootstrap-datetime.js', type='text/javascript')
+	script(src=app_assets_path+'/js/scripts/pickers/dateTime/pick-a-datetime.js', type='text/javascript')
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/plugins/pickers/daterange/daterange.css')

@@ -1,0 +1,168 @@
+.m-subscribe-plans {
+  &__wrap {
+    width: 806px;
+  }
+
+  &__desc {
+    margin-bottom: 25px;
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    border: 1px solid #e4e6ea;
+    width: 253px;
+    margin-right: 23px;
+    border-radius: 3px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.is-free {
+      .m-subscribe-plans__item-heading {
+        color: #939daa;
+      }
+
+      .m-subscribe-plans__item-feature-icon {
+        color: #939daa;
+      }
+    }
+
+    &.is-selected {
+      border-color: #269af1;
+
+      .m-subscribe-plans__item-header {
+        background: #269af1;
+        color: #fff;
+      }
+
+      .m-subscribe-plans__item-content {
+        background: transparent;
+      }
+
+      .m-subscribe-plans__item-price-amount,
+      .m-subscribe-plans__item-heading {
+        color: #fff;
+      }
+
+      .m-subscribe-plans__item-features {
+        border-left: 1px solid #269af1;
+        border-right: 1px solid #269af1;
+        border-bottom: 1px solid #269af1;
+      }
+    }
+  }
+
+  &__item-header {
+    padding: 18px 19px;
+    color: #939daa;
+  }
+
+  &__item-heading {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #000;
+  }
+
+  &__item-price {
+    font-size: 17px;
+  }
+
+  &__item-content {
+    background: rgba(#e4e6ea, .4);
+    min-height: 197px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &__item-features {
+    min-height: 197px;
+    list-style: none;
+    margin: 0;
+    padding: 19px 18px 18px 18px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &__item-feature-icon {
+    font-size: 13px;
+    color: #269af1;
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  &__item-feature {
+    & + & {
+      margin-top: 8px;
+    }
+  }
+
+  &__item-price-amount {
+    color: #269af1;
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: 700;
+  }
+
+  &__billing {
+    margin-top: -4px;
+  }
+
+  &__billing-content {
+    max-width: 320px;
+  }
+
+  &__billing-submit {
+    font-size: 17px;
+  }
+
+  &__billing-help {
+    color: #939daa;
+  }
+
+  &__billing-controls {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@include mq(screen-lg, max) {
+  .m-subscribe-plans {
+    &__items {
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__wrap {
+      width: auto;
+    }
+
+    &__billing-controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__billing-help {
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+//- =========================================================================
+	File Name: color-palette-warning.jade
+	Description:  Bootstrap 4 Warning Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle   = "Warning Color Page"
+	- var pageSubTitle = "Warning Color Options"
+	- var description  = "Warning Color Palette with background & border color."
+	- var activeMenu  = "color-palette-warning"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Warning Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-warning.html

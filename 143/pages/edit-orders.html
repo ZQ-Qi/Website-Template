@@ -1,0 +1,858 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Admin Template">
+    <meta name="author" content="Zwolek">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Master</title>
+    <!-- Custom Style-->
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <!-- Theme Color Style-->
+    <link rel="stylesheet" type="text/css" href="../css/theme-purple.css">     
+    <!-- Data Tables Default Style-->
+    <link rel="stylesheet" type="text/css" href="../css/datatables/datatables.min.css">  
+    <!-- Nano Scroller Default Style-->
+    <link rel="stylesheet" href="../css/nanoscroller.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<!-- //////////////////////////////////////////////////// Header-Panel div -->
+<div id="header-panel">
+<nav class="navbar navbar-fixed-top">
+<div class="container-fluid">
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div id="navbar-header">
+
+      <a class="navbar-brand" href="../index.html">
+          <span class="logo-img"><!-- logo img <img src="img" alt=""> -->M</span>
+          <span class="logo-text hidden-xs hidden-sm">Master</span>
+      </a> <!-- /navbar-brand --> 
+
+    <ul class="nav navbar-nav">
+
+    <!-- menu open/close button -->
+    <li class="btn-menu hidden-xs hidden-sm"> <a id="menu-toggle" href="#" class="toggle"></a> </li>
+    <li class="btn-menu hidden-md hidden-lg"> <a id="mobile-menu-toggle" href="#" class="toggle"></a> </li>
+
+    <li class="dropdown reports">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell" aria-hidden="true"></i>
+      <span class="badge">4</span></a>
+      <ul class="dropdown-menu">
+        <li class="title-alerts">You have 4 reports</li>
+        
+        <!-- ////////////////////////////// Item 1 ////////////////////////////// -->
+        <li class="item">
+            <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="icon pull-left"><i class="center-block fa fa-user-plus" aria-hidden="true"></i></div>
+            <div class="content"> John Doe creat new account</div>
+            <div class="time-history">2 min ago</div>
+        </li> <!-- /item -->
+
+        <!-- ////////////////////////////// Item 2 ////////////////////////////// -->
+        <li class="item">
+            <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="icon pull-left"><i class="center-block fa fa-plus" aria-hidden="true"></i></div>
+            <div class="content"> Matthew Doe buy new item</div>
+            <div class="time-history">10 min ago</div>
+        </li> <!-- /item -->
+
+        <!-- ////////////////////////////// Item 3 ////////////////////////////// -->
+        <li class="item">
+            <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="icon pull-left"><i class="center-block fa fa-upload" aria-hidden="true"></i></div>
+            <div class="content"> Upload file complete</div>
+            <div class="time-history">1 hour ago</div>
+        </li> <!-- /item -->
+
+        <!-- ////////////////////////////// Item 4 ////////////////////////////// -->
+        <li class="item">
+            <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="icon pull-left"><i class="center-block fa fa-twitter" aria-hidden="true"></i></div>
+            <div class="content"> 5 new followers on twitter</div>
+            <div class="time-history">3 Hours ago</div>
+        </li> <!-- /item -->
+
+      </ul> <!-- /dropdown-menu -->
+    </li> <!-- /dropdwon reports-->
+
+    <li class="dropdown message">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span class="badge">3</span></a>
+          <ul class="dropdown-menu">
+            <li class="title-alerts">You have 3 mails</li>
+            
+            <!-- ////////////////////////////// Item 1 ////////////////////////////// -->
+            <li class="item">
+            <a href="#" class="mail-link">
+                <div class="icon pull-left"><i class="center-block fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="content"> John Doe creat new account</div>
+                <div class="time-history">2 min ago</div>
+            </a> <!-- /mail-link -->
+            </li> <!-- /item -->
+
+            <!-- ////////////////////////////// Item 2 ////////////////////////////// -->
+            <li class="item">
+            <a href="#" class="mail-link">
+                <div class="icon pull-left"><i class="center-block fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="content"> Matthew Doe buy new item</div>
+                <div class="time-history">10 min ago</div>
+            </a> <!-- /mail-link -->
+            </li> <!-- /item -->
+
+            <!-- ////////////////////////////// Item 3 ////////////////////////////// -->
+            <li class="item">
+            <a href="#" class="mail-link">
+                <div class="icon pull-left"><i class="center-block fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="content"> Upload file complete</div>
+                <div class="time-history">1 hour ago</div>
+            </a> <!-- /mail-link -->
+            </li> <!-- /item -->
+
+            <li class="all-mails">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="See all messages">
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </a>
+            </li> <!-- /all-mails -->
+
+          </ul> <!-- /dropdown-menu -->
+        </li> <!-- /dropdown message -->
+
+      </ul> <!-- /navbar-nav -->
+
+      <form class="navbar-form navbar-left hidden-xs">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <button type="submit" class="btn btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+      </form> <!-- /navbar-form -->
+
+        <ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown user-menu">
+            
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <img src="../img/admin.jpg" alt="" class="profile-img img-circle img-resposnive pull-left"> 
+        <span class="hidden-xs">Veronica Thornton</span> <span class="caret"></span></a>
+
+        <ul class="dropdown-menu pull-right">
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Profile</a></li>
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>My Inbox</a> <span class="badge">3</span></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="fa fa-lock" aria-hidden="true"></i>LockScreen</a></li>
+            <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Log out</a></li>
+        </ul> <!-- /dropdown-menu -->
+        </li> <!-- /dropdwon -->
+        
+      </ul> <!-- /navbar-right -->
+
+    </div><!-- /navbar-collapse -->
+  </div><!-- /container-fluid -->
+</nav>
+</div> <!-- /header-panel -->
+
+<!-- //////////////////////////////////////////////////// Navigation-Panel div -->
+<div id="navigation-panel" class=""> 
+    <nav class="sidebar nano">
+
+    <div class="clearfix"></div>
+
+    <div id="#sidebar-navbar" class="sidebar-nav nano-content navbar-collapse ">
+    <ul class="nav" id="side-menu">
+    
+    <li class="nav-header">Navigation</li>
+
+    <!-- Single Link -->
+    <li><a href="../index.html"><i class="fa fa-home" aria-hidden="true"></i> <span class="link-hide"> Dashboard </span></a></li>
+   
+    <!-- Dropdown -->
+    <li><a href="#" class="chevron"><i class="fa fa-desktop" aria-hidden="true"></i> <span class="link-hide"> Layouts </span></a>
+        <ul class="nav nav-second-level">
+            <li><a href="../index.html" class="active">Layout 1</a></li>
+            <li><a href="../../../index.html">Layout 2</a></li>
+        </ul> <!-- /nav-second-level -->
+    </li> <!-- /li dropdown -->
+
+    <!-- Dropdown -->
+    <li><a href="#" class="chevron"><i class="fa fa-magic" aria-hidden="true"></i> <span class="link-hide"> Ui Elements </span></a>
+        <ul class="nav nav-second-level">
+            <li><a href="buttons.html">Buttons </a></li>
+            <li><a href="grid.html">Grid </a></li>
+            <li><a href="icons.html">Icons </a></li>
+            <li><a href="lists.html">lists</a></li>
+            <li><a href="modal.html">Modal, Popover & Tooltip</a></li>
+            <li><a href="notifications.html">notifications</a></li>
+            <li><a href="panels.html">Panels </a></li>
+            <li><a href="progress-bar.html">progress bars</a></li>
+            <li><a href="tabs.html">Tabs </a></li>
+            <li><a href="typography.html">Typography </a></li>
+        </ul> <!-- /nav-second-level -->
+    </li> <!-- /li dropdown -->
+    
+    <!-- Dropdown -->
+    <li><a href="#" class="chevron"><i class="fa fa-wpforms" aria-hidden="true"></i> <span class="link-hide"> Forms </span></a>
+        <ul class="nav nav-second-level">
+            <li><a href="basic-forms.html">Basic Forms</a></li>
+            <li><a href="file-dropzone.html">File Dropzone</a></li>
+            <li><a href="file-upload.html">File Upload</a></li>
+            <li><a href="form-addons.html">Form Addons</a></li>
+            <li><a href="form-layout.html">Form Layout</a></li>
+            <li><a href="form-mask.html">Form Mask</a></li>
+            <li><a href="form-validation.html">Form Validation</a></li>
+            <li><a href="image-cropping.html">Image Cropping</a></li>
+            <li><a href="summernote.html">Summernote</a></li>
+        </ul> <!-- /nav-second-level -->
+    </li> <!-- /li dropdown -->
+
+    <!-- Dropdown -->
+    <li><a href="#" class="chevron"><i class="fa fa-external-link" aria-hidden="true"></i> <span class="link-hide"> Pages </span></a>
+        <ul class="nav nav-second-level">
+            <li><a href="blank-page.html">Blank Page</a></li>
+            <li><a href="forgot-password.html">Forgot Password</a></li>
+            <li><a href="lock-screen.html">Lockscreen</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="sign-in.html">Sign In</a></li>
+            <li><a href="404error.html">404 Error</a></li>
+            <li><a href="500error.html">500 Error</a></li>
+        </ul> <!-- /nav-second-level -->
+    </li> <!-- /li dropdown -->
+    
+    <!-- Dropdown -->
+    <li><a href="#" class="chevron"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="link-hide"> Message </span></a>
+        <ul class="nav nav-second-level">
+            <li><a href="compose-mail.html">Compose Mail</a></li>
+            <li><a href="inbox.html">Inbox</a></li>
+            <li><a href="message-detalis.html">Message Detalis</a></li>
+        </ul> <!-- /nav-second-level -->
+    </li> <!-- /li dropdown -->
+
+    <!-- Dropdown -->
+    <li><a href="#" class="chevron"><i class="fa fa-table fa-fw" aria-hidden="true"></i> <span class="link-hide"> Tables </span></a>
+        <ul class="nav nav-second-level">
+            <li><a href="basic-tables.html">Basic Tables</a></li>
+            <li><a href="data-tables.html">Data Tables</a></li>
+            <li><a href="responsive-tables.html">Responsive Tables</a></li>
+        </ul> <!-- /nav-second-level -->
+    </li> <!-- /li dropdown -->
+
+    <!-- Dropdown -->
+    <li><a href="#" class="chevron"><i class="fa fa-area-chart" aria-hidden="true"></i> <span class="link-hide"> Charts </span></a>
+        <ul class="nav nav-second-level">
+            <li><a href="chart-js.html">Chart.js Charts</a></li>
+            <li><a href="flot-js.html">Flot.js Charts</a></li>
+            <li><a href="morris-js.html">Morris.js Charts</a></li>
+        </ul> <!-- /nav-second-level -->
+    </li> <!-- /li dropdown -->
+    
+    <li class="nav-header">Features</li>
+
+    <!-- Dropdown -->
+    <li><a href="#" class="chevron"><i class="fa fa-sitemap" aria-hidden="true"></i> <span class="link-hide"> Menu Levels </span></a>
+        <ul class="nav nav-second-level">
+
+            <li class="none"><a href="#" class="chevron">Third Level</a>
+            <ul class="nav nav-third-level">
+                <li><a href="#">Third Level Item</a></li>
+                <li><a href="#">Third Level Item</a></li>
+                <li><a href="#">Third Level Item</a></li>
+                <li><a href="#">Third Level Item</a></li>
+            </ul> <!-- /nav-third-level -->
+            </li> <!-- /li dropdown -->
+
+            <li><a href="#">Simple Link</a></li>
+
+        </ul> <!-- /nav-second-level -->
+    </li> <!-- /li dropdown -->
+
+    <!-- Dropdown -->
+    <li><a href="#" class="chevron active"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="link-hide">E-commerce </span></a>
+        <ul class="nav nav-second-level">
+            <li><a href="customer.html">Customer</a></li>
+            <li><a href="edit-customer.html">Edit Customer</a></li>
+            <li><a href="edit-orders.html" class="active">Edit Orders</a></li>
+            <li><a href="edit-product.html">Edit Product</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="product-list.html">Product List</a></li>
+        </ul> <!-- /nav-second-level -->
+    </li> <!-- /li Dropdown -->
+
+    <li class="nav-header">Extras</li>
+   
+    <li><a href="documentation.html"><i class="fa fa-file-o" aria-hidden="true"></i><span class="link-hide">Documentation</span></a></li>
+    
+    </ul> <!-- /side-menu -->
+    </div> <!-- /sidebar-nav -->
+
+    </nav> <!-- /sidebar-->
+</div> <!-- /navigation-panel -->
+
+<!-- //////////////////////////////////////////////////// Content-Panel div -->
+
+<div id="content-panel">
+<div class="container-fluid">
+
+<div class="row">
+    <div class="col-xs-12 dashboard-header">
+    <h1 class="dash-title">Edit Orders</h1>   
+        <!-- //////////////////////////////////////////////////// Breadcrumb -->
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> home</a></li>
+          <li><a href="#">E-commerce</a></li>
+          <li><a href="#" class="active">Edit Orders</a></li>
+        </ol> <!-- /breadcrumb -->
+    </div> <!-- /dashboard -->
+</div> <!-- /row -->
+
+<!-- //////////////////////////////////////////////////// Edit Orders -->
+<div class="row">
+<div class="col-xs-12">  
+    <div class="panel">
+        <div class="panel-heading"><h3>Edit Orders</h3></div>
+        <div class="panel-body">
+        <div class="col-lg-2 col-md-2 col-sm-2 nav-ecommerce col-xs-12 no-padding">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs nav-pills nav-stacked wells" role="tablist">
+            <li role="presentation" class="active"><a href="#product" aria-controls="product" role="tab" data-toggle="tab">Product</a></li>
+            <li role="presentation"><a href="#information" aria-controls="information" role="tab" data-toggle="tab">Information</a></li>
+            <li role="presentation"><a href="#payment" aria-controls="product" role="tab" data-toggle="tab">Payment</a></li>
+          </ul> <!-- /nav-tabs -->
+          <!-- Tab panes -->
+          </div> <!-- /col -->
+          <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 table-ecommerce">
+          <div class="tab-content">
+
+            <div role="tabpanel" class="tab-pane active e-commerce-content" id="product">
+            <div class="table-responsive">
+            <table id="product-list" class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Product Name</th>
+                <th>Model</th>
+                <th>Quantity</th>
+                <th>Status</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Elastic</td>
+                <td>Green</td>
+                <td>63</td>
+                <td><span class="label label-warning">Low Stock</span></td>
+                <td>$170,750</td>
+                <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-edit bg-purple hidden-xs hidden-sm"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-delete btn-xs bg-red hidden-xs hidden-sm"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+                <div class="btn-group table-editor visible-xs visible-sm">
+                <!-- /btn dropdown -->
+                <button type="button" class="btn bg-purple circle-xs dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-caret-down"></i></button>
+                    <!-- /dropdown menu slidedown -->
+                    <ul class="dropdown-menu slidedown">
+                        <li><a href="#"> Edit</a></li>
+                        <li><a href="#"> Delete</a></li>
+                    </ul> <!-- /slidedown -->
+                </div> <!-- /btn-group -->
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Elastic</td>
+                <td>Yellow</td>
+                <td>66</td>
+                <td><span class="label label-success">In Stock</span></td>
+                <td>$86,000</td>
+                <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-edit bg-purple hidden-xs hidden-sm"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-delete btn-xs bg-red hidden-xs hidden-sm"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+                    <div class="btn-group table-editor visible-xs visible-sm">
+                    <!-- /btn dropdown -->
+                    <button type="button" class="btn bg-purple circle-xs dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-caret-down"></i></button>
+                        <!-- /dropdown menu slidedown -->
+                        <ul class="dropdown-menu slidedown">
+                            <li><a href="#"> Edit</a></li>
+                            <li><a href="#"> Delete</a></li>
+                        </ul> <!-- /slidedown -->
+                    </div> <!-- /btn-group -->  
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Elastic</td>
+                <td>Red</td>
+                <td>22</td>
+                <td><span class="label label-warning">Low Stock</span></td>
+                <td>$433,060</td>
+                <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-edit bg-purple hidden-xs hidden-sm"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-delete btn-xs bg-red hidden-xs hidden-sm"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+                    <div class="btn-group table-editor visible-xs visible-sm">
+                    <!-- /btn dropdown -->
+                    <button type="button" class="btn bg-purple circle-xs dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-caret-down"></i></button>
+                        <!-- /dropdown menu slidedown -->
+                        <ul class="dropdown-menu slidedown">
+                            <li><a href="#"> Edit</a></li>
+                            <li><a href="#"> Delete</a></li>
+                        </ul> <!-- /slidedown -->
+                    </div> <!-- /btn-group -->
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            </div> <!-- /table-resposnive-->
+            </div> <!-- /tab-->
+
+            <div role="tabpanel" class="tab-pane e-commerce-form" id="information">
+            <form class="form-horizontal">
+                
+                <div class="form-group">
+                    <label for="firstName" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">First Name</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="text" class="form-control" id="firstName"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label for="lastName" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">last Name</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="text" class="form-control" id="lastName"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label for="email" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Email</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="email" class="form-control" id="email"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Country</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12">
+                    <select class="form-control">
+                    <option>Country...</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AG">Angola</option>
+                    <option value="AI">Anguilla</option>
+                    <option value="AG">Antigua &amp; Barbuda</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AA">Armenia</option>
+                    <option value="AW">Aruba</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BS">Bahamas</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BB">Barbados</option>
+                    <option value="BY">Belarus</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BZ">Belize</option>
+                    <option value="BJ">Benin</option>
+                    <option value="BM">Bermuda</option>
+                    <option value="BT">Bhutan</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BL">Bonaire</option>
+                    <option value="BA">Bosnia &amp; Herzegovina</option>
+                    <option value="BW">Botswana</option>
+                    <option value="BR">Brazil</option>
+                    <option value="BC">British Indian Ocean Ter</option>
+                    <option value="BN">Brunei</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="BF">Burkina Faso</option>
+                    <option value="BI">Burundi</option>
+                    <option value="KH">Cambodia</option>
+                    <option value="CM">Cameroon</option>
+                    <option value="CA">Canada</option>
+                    <option value="IC">Canary Islands</option>
+                    <option value="CV">Cape Verde</option>
+                    <option value="KY">Cayman Islands</option>
+                    <option value="CF">Central African Republic</option>
+                    <option value="TD">Chad</option>
+                    <option value="CD">Channel Islands</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CI">Christmas Island</option>
+                    <option value="CS">Cocos Island</option>
+                    <option value="CO">Colombia</option>
+                    <option value="CC">Comoros</option>
+                    <option value="CG">Congo</option>
+                    <option value="CK">Cook Islands</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="CT">Cote D'Ivoire</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CU">Cuba</option>
+                    <option value="CB">Curacao</option>
+                    <option value="CY">Cyprus</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="DK">Denmark</option>
+                    <option value="DJ">Djibouti</option>
+                    <option value="DM">Dominica</option>
+                    <option value="DO">Dominican Republic</option>
+                    <option value="TM">East Timor</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="EG">Egypt</option>
+                    <option value="SV">El Salvador</option>
+                    <option value="GQ">Equatorial Guinea</option>
+                    <option value="ER">Eritrea</option>
+                    <option value="EE">Estonia</option>
+                    <option value="ET">Ethiopia</option>
+                    <option value="FA">Falkland Islands</option>
+                    <option value="FO">Faroe Islands</option>
+                    <option value="FJ">Fiji</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="GF">French Guiana</option>
+                    <option value="PF">French Polynesia</option>
+                    <option value="FS">French Southern Ter</option>
+                    <option value="GA">Gabon</option>
+                    <option value="GM">Gambia</option>
+                    <option value="GE">Georgia</option>
+                    <option value="DE">Germany</option>
+                    <option value="GH">Ghana</option>
+                    <option value="GI">Gibraltar</option>
+                    <option value="GB">Great Britain</option>
+                    <option value="GR">Greece</option>
+                    <option value="GL">Greenland</option>
+                    <option value="GD">Grenada</option>
+                    <option value="GP">Guadeloupe</option>
+                    <option value="GU">Guam</option>
+                    <option value="GT">Guatemala</option>
+                    <option value="GN">Guinea</option>
+                    <option value="GY">Guyana</option>
+                    <option value="HT">Haiti</option>
+                    <option value="HW">Hawaii</option>
+                    <option value="HN">Honduras</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IA">Iran</option>
+                    <option value="IQ">Iraq</option>
+                    <option value="IR">Ireland</option>
+                    <option value="IM">Isle of Man</option>
+                    <option value="IL">Israel</option>
+                    <option value="IT">Italy</option>
+                    <option value="JM">Jamaica</option>
+                    <option value="JP">Japan</option>
+                    <option value="JO">Jordan</option>
+                    <option value="KZ">Kazakhstan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="KI">Kiribati</option>
+                    <option value="NK">Korea North</option>
+                    <option value="KS">Korea South</option>
+                    <option value="KW">Kuwait</option>
+                    <option value="KG">Kyrgyzstan</option>
+                    <option value="LA">Laos</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LB">Lebanon</option>
+                    <option value="LS">Lesotho</option>
+                    <option value="LR">Liberia</option>
+                    <option value="LY">Libya</option>
+                    <option value="LI">Liechtenstein</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MO">Macau</option>
+                    <option value="MK">Macedonia</option>
+                    <option value="MG">Madagascar</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MW">Malawi</option>
+                    <option value="MV">Maldives</option>
+                    <option value="ML">Mali</option>
+                    <option value="MT">Malta</option>
+                    <option value="MH">Marshall Islands</option>
+                    <option value="MQ">Martinique</option>
+                    <option value="MR">Mauritania</option>
+                    <option value="MU">Mauritius</option>
+                    <option value="ME">Mayotte</option>
+                    <option value="MX">Mexico</option>
+                    <option value="MI">Midway Islands</option>
+                    <option value="MD">Moldova</option>
+                    <option value="MC">Monaco</option>
+                    <option value="MN">Mongolia</option>
+                    <option value="MS">Montserrat</option>
+                    <option value="MA">Morocco</option>
+                    <option value="MZ">Mozambique</option>
+                    <option value="MM">Myanmar</option>
+                    <option value="NA">Nambia</option>
+                    <option value="NU">Nauru</option>
+                    <option value="NP">Nepal</option>
+                    <option value="AN">Netherland Antilles</option>
+                    <option value="NL">Netherlands (Holland, Europe)</option>
+                    <option value="NV">Nevis</option>
+                    <option value="NC">New Caledonia</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NI">Nicaragua</option>
+                    <option value="NE">Niger</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="NW">Niue</option>
+                    <option value="NF">Norfolk Island</option>
+                    <option value="NO">Norway</option>
+                    <option value="OM">Oman</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="PW">Palau Island</option>
+                    <option value="PS">Palestine</option>
+                    <option value="PA">Panama</option>
+                    <option value="PG">Papua New Guinea</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="PE">Peru</option>
+                    <option value="PH">Philippines</option>
+                    <option value="PO">Pitcairn Island</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="QA">Qatar</option>
+                    <option value="ME">Republic of Montenegro</option>
+                    <option value="RS">Republic of Serbia</option>
+                    <option value="RE">Reunion</option>
+                    <option value="RO">Romania</option>
+                    <option value="RU">Russia</option>
+                    <option value="RW">Rwanda</option>
+                    <option value="NT">St Barthelemy</option>
+                    <option value="EU">St Eustatius</option>
+                    <option value="HE">St Helena</option>
+                    <option value="KN">St Kitts-Nevis</option>
+                    <option value="LC">St Lucia</option>
+                    <option value="MB">St Maarten</option>
+                    <option value="PM">St Pierre &amp; Miquelon</option>
+                    <option value="VC">St Vincent &amp; Grenadines</option>
+                    <option value="SP">Saipan</option>
+                    <option value="SO">Samoa</option>
+                    <option value="AS">Samoa American</option>
+                    <option value="SM">San Marino</option>
+                    <option value="ST">Sao Tome &amp; Principe</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="SN">Senegal</option>
+                    <option value="RS">Serbia</option>
+                    <option value="SC">Seychelles</option>
+                    <option value="SL">Sierra Leone</option>
+                    <option value="SG">Singapore</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="SB">Solomon Islands</option>
+                    <option value="OI">Somalia</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="ES">Spain</option>
+                    <option value="LK">Sri Lanka</option>
+                    <option value="SD">Sudan</option>
+                    <option value="SR">Suriname</option>
+                    <option value="SZ">Swaziland</option>
+                    <option value="SE">Sweden</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="SY">Syria</option>
+                    <option value="TA">Tahiti</option>
+                    <option value="TW">Taiwan</option>
+                    <option value="TJ">Tajikistan</option>
+                    <option value="TZ">Tanzania</option>
+                    <option value="TH">Thailand</option>
+                    <option value="TG">Togo</option>
+                    <option value="TK">Tokelau</option>
+                    <option value="TO">Tonga</option>
+                    <option value="TT">Trinidad &amp; Tobago</option>
+                    <option value="TN">Tunisia</option>
+                    <option value="TR">Turkey</option>
+                    <option value="TU">Turkmenistan</option>
+                    <option value="TC">Turks &amp; Caicos Is</option>
+                    <option value="TV">Tuvalu</option>
+                    <option value="UG">Uganda</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="US">United States of America</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="UZ">Uzbekistan</option>
+                    <option value="VU">Vanuatu</option>
+                    <option value="VS">Vatican City State</option>
+                    <option value="VE">Venezuela</option>
+                    <option value="VN">Vietnam</option>
+                    <option value="VB">Virgin Islands (Brit)</option>
+                    <option value="VA">Virgin Islands (USA)</option>
+                    <option value="WK">Wake Island</option>
+                    <option value="WF">Wallis &amp; Futana Is</option>
+                    <option value="YE">Yemen</option>
+                    <option value="ZR">Zaire</option>
+                    <option value="ZM">Zambia</option>
+                    <option value="ZW">Zimbabwe</option>
+                    </select> <!-- /form-control -->
+                    </div> <!-- /col -->
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label for="city" class="col-lg-1 col-md-2 col-sm-2 col-xs-12control-label">City</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="text" class="form-control" id="city"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label for="zipCode" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Zip</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="text" class="form-control" id="zipCode"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label for="streetAddres" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Addres</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="text" class="form-control" id="streetAddres"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label for="telephone" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Telephone</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="text" class="form-control" id="telephone"></div>
+                </div> <!-- /form-group -->
+  
+                <div class="form-group">
+                    <label for="fax" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Fax</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="text" class="form-control" id="fax"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-11">
+                        <button type="submit" class="btn btn-md bg-purple pull-right"><span>Save</span></button>
+                        <button type="submit" class="m-r-10 btn btn-md bg-red pull-right"><span>Cancel</span></button>
+                    </div> <!-- /col -->
+                </div> <!-- /form-group -->
+
+                </form> <!-- /form-horizontal -->
+            </div> <!-- /information tab -->
+
+          <div role="tabpanel" class="tab-pane e-commerce-form" id="payment">
+              <form class="form-horizontal">
+                
+                <div class="form-group">
+                    <label class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Method</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12">
+                    <select class="form-control">
+                      <option>Credit Cart</option>
+                      <option>Paypal</option>
+                    </select> <!-- /form-control -->
+                    </div> <!-- /col -->
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label for="nameOnCard" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Name on Card</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="text" class="form-control" id="nameOnCard"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label for="cardNumber" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Card Number</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="email" class="form-control" id="cardNumber"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label for="securityNumber" class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Security nr</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"><input type="email" class="form-control" id="securityNumber"></div>
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Expiry Month</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12">
+                    <select class="form-control">
+                        <option value='01'>January</option>
+                        <option value='02'>February</option>
+                        <option value='03'>March</option>
+                        <option value='04'>April</option>
+                        <option value='05'>May</option>
+                        <option value='06'>June</option>
+                        <option value='07'>July</option>
+                        <option value='08'>August</option>
+                        <option value='09'>September</option>
+                        <option value='10'>October</option>
+                        <option value='11'>November</option>
+                        <option value='12'>December</option>
+                    </select> <!-- /form-control -->
+                    </div> <!-- /col -->
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label class="col-lg-1 col-md-2 col-sm-2 col-xs-12 control-label">Expiry Year</label>
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12">
+                    <select class="form-control">
+                        <option value='2015'>2015</option>
+                        <option value='2016'>2016</option>
+                        <option value='2017'>2017</option>
+                        <option value='2018'>2018</option>
+                        <option value='2019'>2019</option>
+                        <option value='2020'>2020</option>
+                    </select> <!-- /form-control -->
+                    </div> <!-- /col -->
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-11">
+                        <button type="submit" class="btn btn-md bg-purple pull-right"><span>Save</span></button>
+                        <button type="submit" class="m-r-10 btn btn-md bg-red pull-right"><span>Cancel</span></button>
+                    </div> <!-- /col -->
+                </div> <!-- /form-group -->
+
+                </form> <!-- /form-horizontal -->
+            </div> <!-- /information tab -->
+
+          </div> <!-- /tab-content -->  
+        </div> <!-- /col -->      
+        </div> <!-- /panel-body -->
+    </div> <!-- /panel -->
+</div> <!-- /col -->      
+</div> <!-- /row -->  
+
+<!-- //////////////////////////////////////////////////// Footer -->
+<div class="row">
+    <footer>
+      <div id="credits">
+        <div class="col-xs-12">  
+        <p> Copyright© 2016 Develop by Zwolek. All Rights Reserved.</p>
+        </div> <!-- /col-sm-12 -->
+      </div> <!-- /credits -->
+    </footer> <!-- /footer-->
+</div> <!-- /row -->
+
+</div> <!-- /container-fluid -->
+</div> <!-- /content-panel -->
+
+<!-- /////////////////////////////// Scripts /////////////////////////////// -->  
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+<!-- Offline jQuery script -->  
+<!-- <script  type="text/javascript" src="jquery.min"></script>  -->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script  type="text/javascript" src="../js/bootstrap.min.js"></script>
+<!-- Menu Script -->
+<script  type="text/javascript" src="../js/menu/metisMenu.min.js"></script>
+<script type="text/javascript" src="../js/menu/nanoscroller.js"></script>
+<!-- DataTables scripts -->
+<script type="text/javascript" src="../js/datatables/datatables.min.js"></script>
+<script>
+$(document).ready(function() {
+"use strict";
+    $('#product-list').DataTable({
+        "columnDefs": [{
+        "targets": 6,
+        "orderable": false
+        }]
+    });
+});
+</script>
+<!-- Custom scripts -->
+<script  type="text/javascript" src="../js/jquery-functions.js"></script>
+
+</body>
+
+</html>

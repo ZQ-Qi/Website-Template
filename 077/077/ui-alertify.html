@@ -1,0 +1,642 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Float-Admin</title>
+
+        <!-- Common plugins -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-line-icons.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/pace.css" rel="stylesheet">
+        <link href="css/jasny-bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/nanoscroller.css">
+        <link rel="stylesheet" href="css/metismenu.min.css">
+        <link href="css/alertify.min.css" rel="stylesheet">
+        <link href="css/alertify-bootstrap.min.css" rel="stylesheet">
+        <!--template css-->
+        <link href="css/style.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.min.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <!--top bar start-->
+        <div class="top-bar light-top-bar"><!--by default top bar is dark, add .light-top-bar class to make it light-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a href="index.html" class="admin-logo">
+                            <h1><img src="picture/logo-dark.png" alt=""></h1>
+                        </a>
+                        <div class="left-nav-toggle visible-xs visible-sm">
+                            <a href="">
+                                <i class="glyphicon glyphicon-menu-hamburger"></i>
+                            </a>
+                        </div><!--end nav toggle icon-->
+                        <!--start search form-->
+                        <div class="search-form hidden-xs">
+                            <form>
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <!--end search form-->
+                    </div>
+                    <div class="col-xs-6">
+                        <ul class="list-inline top-right-nav">
+                            <li class="dropdown hidden-xs icon-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="glyphicon glyphicon-envelope"></i>
+                                    <span class="badge badge-warning">4</span>
+                                </a>
+                                <ul class="dropdown-menu top-dropdown lg-dropdown notification-dropdown">
+                                    <li>
+                                        <div class="dropdown-header"><a href="#" class="pull-right text-muted"><small>View All</small></a> Messages </div>
+                                        <div class="scrollDiv">
+
+                                            <div class="notification-list">
+                                                <a href="javascript: void(0);" class="clearfix">
+                                                    <span class="notification-icon">
+                                                        <img src="picture/avtar-2.jpg" alt="" class="img-circle" width="50">
+                                                    </span>                                                 
+                                                    <span class="notification-title">John Doe <label class="label label-primary pull-right">Office</label></span>
+                                                    <span class="notification-description">Praesent dictum nisl non est sagittis luctus.</span>
+                                                    <span class="notification-time">40 minutes ago</span>
+                                                </a>
+                                                <a href="javascript: void(0);" class="clearfix">
+                                                    <span class="notification-icon">
+                                                        <img src="picture/avtar-3.jpg" alt="" class="img-circle" width="50">
+                                                    </span>                                                 
+                                                    <span class="notification-title">Emily Doe  <label class="label label-info pull-right">Marketing</label></span>
+                                                    <span class="notification-description">Praesent dictum nisl non est sagittis luctus.</span>
+                                                    <span class="notification-time">40 minutes ago</span>
+                                                </a>
+                                                <a href="javascript: void(0);" class="clearfix">
+                                                    <span class="notification-icon">
+                                                        <img src="picture/avtar-4.jpg" alt="" class="img-circle" width="50">
+                                                    </span>                                                 
+                                                    <span class="notification-title">Michael Clark <label class="label label-warning pull-right">Support</label> </span>
+                                                    <span class="notification-description">Praesent dictum nisl non est sagittis luctus.</span>
+                                                    <span class="notification-time">40 minutes ago</span>
+                                                </a>
+                                                <a href="javascript: void(0);" class="clearfix">
+                                                    <span class="notification-icon">
+                                                        <img src="picture/avtar-5.jpg" alt="" class="img-circle" width="50">
+                                                    </span>                                                 
+                                                    <span class="notification-title">Ronaldo <label class="label label-success pull-right">Metting</label> </span>
+                                                    <span class="notification-description">Praesent dictum nisl non est sagittis luctus.</span>
+                                                    <span class="notification-time">40 minutes ago</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown hidden-xs icon-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="glyphicon glyphicon-bell"></i>
+                                    <span class="badge badge-danger">6</span>
+                                </a>
+                                <ul class="dropdown-menu top-dropdown lg-dropdown notification-dropdown">
+                                    <li>
+                                        <div class="dropdown-header"><a href="#" class="pull-right text-muted"><small>View All</small></a> Notifications </div>
+                                        <div class="scrollDiv">
+                                            <div class="notification-list">
+                                                <a href="javascript: void(0);" class="clearfix">
+                                                    <span class="notification-icon"><i class="icon-cloud-upload text-primary"></i></span>                                                 
+                                                    <span class="notification-title">Upload Complete</span>
+                                                    <span class="notification-description">Praesent dictum nisl non est sagittis luctus.</span>
+                                                    <span class="notification-time">40 minutes ago</span>
+                                                </a>
+                                                <a href="javascript: void(0);" class="clearfix">
+                                                    <span class="notification-icon"><i class="icon-info text-warning"></i></span>                                                 
+                                                    <span class="notification-title">Storage Space low</span>
+                                                    <span class="notification-description">Praesent dictum nisl non est sagittis luctus.</span>
+                                                    <span class="notification-time">40 minutes ago</span>
+                                                </a>
+                                                <a href="javascript: void(0);" class="clearfix">
+                                                    <span class="notification-icon"><i class="icon-check text-success"></i></span>                                                 
+                                                    <span class="notification-title">Project Task Complete </span>
+                                                    <span class="notification-description">Praesent dictum nisl non est sagittis luctus.</span>
+                                                    <span class="notification-time">40 minutes ago</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="javascript: void(0);" class="right-sidebar-toggle"><i class="glyphicon glyphicon-align-right"></i></a>
+                            </li>
+                            <li class="dropdown avtar-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="picture/avtar-1.jpg" class="img-circle" width="30" alt="">
+
+                                </a>
+                                <ul class="dropdown-menu top-dropdown">
+                                    <li><a href="javascript: void(0);"><i class="icon-bell"></i> Activities</a></li>
+                                    <li><a href="javascript: void(0);"><i class="icon-user"></i> Profile</a></li>
+                                    <li><a href="javascript: void(0);"><i class="icon-settings"></i> Settings</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="javascript: void(0);"><i class="icon-logout"></i> Logout</a></li>
+                                </ul>
+                            </li>
+
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top bar end-->
+
+        <!--right side bar panel-->
+        <nav id="right-sidebar-toggle" class="right_sidebar">
+            <div class="nano">
+                <div class="nano-content">
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="list-inline nav-tab-panel clearfix" role="tablist">
+                            <li role="presentation" class="active"><a href="#projects" aria-controls="projects" role="tab" data-toggle="tab">Projects</a></li>
+                            <li role="presentation"><a href="#contacts" aria-controls="contacts" role="tab" data-toggle="tab">Contacts</a></li>
+
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="projects">
+                                <ul class="sidebar-list">
+                                    <li class="sidebar-title">
+                                        <h3 class="font-100"> Current projects</h3>
+                                        <small>There are <strong>7</strong> Current project</small>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-primary pull-right">New</span>
+                                            <h4>YII with material design</h4>
+                                            <p>
+                                                It is a long established fact that a reader will be distracted.
+                                            </p>
+
+                                            <div class="small">Completion with: 42%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 42%;" class="progress-bar progress-bar-warning"></div>
+                                            </div>
+                                            <div class="small text-danger">Deadline - September 15, 2016</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-primary pull-right">New</span>
+                                            <h4>HTML to AngularJs</h4>
+                                            <p>
+                                                It is a long established fact that a reader will be distracted.
+                                            </p>
+
+                                            <div class="small">Completion with: 12%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 12%;" class="progress-bar progress-bar-danger"></div>
+                                            </div>
+                                            <div class="small text-danger">Deadline - September 15, 2016</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-success pull-right">Company</span>
+                                            <h4>Website Re-design</h4>
+                                            <p>
+                                                It is a long established fact that a reader will be distracted.
+                                            </p>
+
+                                            <div class="small">Completion with: 84%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 84%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                            <div class="small text-danger">Deadline - September 15, 2016</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-success pull-right">Metting</span>
+                                            <h4>Business Consultancy</h4>
+                                            <p>
+                                                It is a long established fact that a reader will be distracted.
+                                            </p>
+
+                                            <div class="small">Completion with: 54%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 54%;" class="progress-bar progress-bar-info"></div>
+                                            </div>
+                                            <div class="small text-danger">Deadline - September 15, 2016</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-primary pull-right">New</span>
+                                            <h4>YII with material design</h4>
+                                            <p>
+                                                It is a long established fact that a reader will be distracted.
+                                            </p>
+
+                                            <div class="small">Completion with: 42%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 42%;" class="progress-bar progress-bar-warning"></div>
+                                            </div>
+                                            <div class="small text-danger">Deadline - September 15, 2016</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-primary pull-right">New</span>
+                                            <h4>HTML to AngularJs</h4>
+                                            <p>
+                                                It is a long established fact that a reader will be distracted.
+                                            </p>
+
+                                            <div class="small">Completion with: 12%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 12%;" class="progress-bar progress-bar-danger"></div>
+                                            </div>
+                                            <div class="small text-danger">Deadline - September 15, 2016</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="contacts">
+
+                                <ul class="list-unstyled sidebar-contact-list">
+                                    <li class="clearfix">
+                                        <a href="#" class="media-box">
+                                            <span class="pull-right">
+                                                <span class="circle circle-success circle-lg"></span>
+                                            </span>
+                                            <span class="pull-left">
+                                                <!-- Contact avatar-->
+                                                <img src="picture/avtar-1.jpg" alt="user" class="media-box-object img-circle" width="50">
+                                            </span>
+                                            <!-- Contact info-->
+                                            <span class="media-box-body">
+                                                <span class="media-box-heading">
+                                                    <strong>Angelina</strong>
+                                                    <br>
+                                                    <small class="text-muted">Designer</small>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li><!--li end-->
+                                    <li class="clearfix">
+                                        <a href="#" class="media-box">
+                                            <span class="pull-right">
+                                                <span class="circle circle-success circle-lg"></span>
+                                            </span>
+                                            <span class="pull-left">
+                                                <!-- Contact avatar-->
+                                                <img src="picture/avtar-2.jpg" alt="user" class="media-box-object img-circle" width="50">
+                                            </span>
+                                            <!-- Contact info-->
+                                            <span class="media-box-body">
+                                                <span class="media-box-heading">
+                                                    <strong>John doe</strong>
+                                                    <br>
+                                                    <small class="text-muted">Designer</small>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li><!--li end-->
+                                    <li class="clearfix">
+                                        <a href="#" class="media-box">
+                                            <span class="pull-right">
+                                                <span class="circle circle-danger circle-lg"></span>
+                                            </span>
+                                            <span class="pull-left">
+                                                <!-- Contact avatar-->
+                                                <img src="picture/avtar-3.jpg" alt="user" class="media-box-object img-circle" width="50">
+                                            </span>
+                                            <!-- Contact info-->
+                                            <span class="media-box-body">
+                                                <span class="media-box-heading">
+                                                    <strong>Eluga Smith</strong>
+                                                    <br>
+                                                    <small class="text-muted">Designer</small>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li><!--li end-->
+                                    <li class="clearfix">
+                                        <a href="#" class="media-box">
+                                            <span class="pull-right">
+                                                <span class="circle circle-lg"></span>
+                                            </span>
+                                            <span class="pull-left">
+                                                <!-- Contact avatar-->
+                                                <img src="picture/avtar-4.jpg" alt="user" class="media-box-object img-circle" width="50">
+                                            </span>
+                                            <!-- Contact info-->
+                                            <span class="media-box-body">
+                                                <span class="media-box-heading">
+                                                    <strong>Jonathan Doe</strong>
+                                                    <br>
+                                                    <small class="text-muted">Designer</small>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li><!--li end-->
+                                    <li class="clearfix">
+                                        <a href="#" class="media-box">
+                                            <span class="pull-right">
+                                                <span class="circle circle-success circle-lg"></span>
+                                            </span>
+                                            <span class="pull-left">
+                                                <!-- Contact avatar-->
+                                                <img src="picture/avtar-5.jpg" alt="user" class="media-box-object img-circle" width="50">
+                                            </span>
+                                            <!-- Contact info-->
+                                            <span class="media-box-body">
+                                                <span class="media-box-heading">
+                                                    <strong>Angelina</strong>
+                                                    <br>
+                                                    <small class="text-muted">Designer</small>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li><!--li end-->
+                                    <li>
+                                        <div class=" text-center">
+                                            <!-- Optional link to list more users-->
+                                            <a href="javascript:void(0);" title="See more contacts" class="btn btn-teal">
+                                                Load more..
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul><!--end sidebar contacts-list-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--end right side bar panel-->
+
+        <!--left navigation start-->
+        <aside class="float-navigation light-navigation">
+            <div class="nano">
+                <div class="nano-content">
+                    <ul class="metisMenu nav" id="menu">
+                        <li class="nav-heading"><span>Main Navigation</span></li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-home"></i> Dashboard <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="index.html">Dashboard Alpha</a></li>
+                                <li><a href="index-beta.html">Dashboard beta</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="widgets.html"><i class="fa fa-diamond"></i> Widgets </a></li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-handbag"></i> E-commerce <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="ecommerce-dashboard.html">Dashboard</a></li>
+                                <li><a href="ecommerce-products.html">products</a></li>
+                                <li><a href="ecommerce-orders.html">orders</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-envelope-letter"></i> Mail <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="mail-index.html">Inbox</a></li>
+                                <li><a href="mail-view.html">Inbox view</a></li>
+                                <li><a href="mail-compose.html">Compose</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-grid"></i> Layouts <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="layout-sidebar-topbar-dark.html">Sidebar +Topbar Dark</a></li>
+                                <li><a href="layout-sidebar-colored.html">Sidebar Colored</a></li>
+                                <li><a href="layout-horizontal.html">Horizontal</a></li>
+
+                                <li><a href="layout-dashboard-only.html">Dashboard Only</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-heading"><span>Components</span></li><li><a href="jquery-ui-elements.html"><i class="icon-wrench"></i> Jquery UI Elements</a></li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-settings"></i> UI elements <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="false">
+                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="ui-icons.html">Icons</a></li>
+                                <li><a href="ui-panels.html">Panels</a></li>
+                                <li><a href="ui-buttons.html">Buttons</a></li>
+                                <li><a href="ui-tabs.html">tabs</a></li>
+                                <li><a href="ui-tip-pop.html">Tooltip & Popovers</a></li>
+                                <li><a href="ui-alerts.html">Alerts</a></li>
+                                <li><a href="ui-modals.html">modals</a></li>
+                                <li><a href="ui-grid.html">grid system</a></li>
+                                <li><a href="ui-carousel.html">Carousel</a></li>
+                                <li><a href="ui-sweetalerts.html">Sweet alters</a></li><li><a href="ui-alertify.html">Alertify Alters</a></li>
+                                <li><a href="ui-sliders.html">Sliders</a></li>
+                                <li><a href="ui-nestable.html">Nestable</a></li>
+                                <li><a href="ui-date-time-picker.html">Date time pickers</a></li>
+                                <li><a href="ui-treeview.html">Tree view</a></li><li><a href="ui-draggable-panels.html">Draggable Panels</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-pencil"></i> Forms <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="form-basic.html">Basic elements</a></li>
+                                <li><a href="form-file-upload.html">File upload</a></li>
+                                <li><a href="form-editor.html">text editor</a></li>
+                                <li><a href="form-wizard.html">Form Wizard</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-bar-chart"></i> Charts <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="chart-flot.html">Flot</a></li>
+                                <li><a href="chart-morris.html">Morris</a></li>
+                                <li><a href="chart-radial.html">Radial</a></li>
+                                <li><a href="chart-c3.html">C3</a></li>
+                                <li><a href="chart-sparkline.html">Sparkline</a></li>
+                                <li><a href="chart-rickshaw.html">rickshaw</a></li>
+                                <li><a href="chart-chartjs.html">ChartJs</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-list"></i> Tables <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="table-basic.html">Basic tables</a></li>
+                                <li><a href="table-data.html">Data tables</a></li>
+                                <li><a href="table-foo.html">Foo tables</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-map"></i> Maps <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="map-vector.html">Vector map</a></li>
+                                <li><a href="map-google.html">Google map</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-heading"><span>More</span></li>
+                        <li class="active">
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-folder"></i> Pages <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="page-empty.html">Empty page</a></li>
+                                <li><a href="page-lockscreen.html">Lock-screen</a></li>
+                                <li><a href="page-login.html">Login</a></li>
+                                <li><a href="page-register.html">Register</a></li>
+                                <li><a href="page-forget-password.html">Forget Password</a></li>
+                                <li><a href="page-404.html">404</a></li>
+                                <li><a href="page-gallery.html">Gallery</a></li>
+                                <li><a href="page-timeline.html">Timeline</a></li>
+                                <li><a href="page-invoice.html">Invoice</a></li>
+                                <li><a href="page-profile.html">Profile</a></li>
+                                <li><a href="page-calendar.html">Calendar</a></li>
+                                <li><a href="page-chat-room.html">Chat room</a></li>
+                                <li><a href="page-faqs.html">Faqs</a></li>
+                                <li><a href="page-pricing.html">Pricing</a></li>
+                                <li><a href="page-contacts.html">Contacts</a></li>
+                                <li><a href="page-blog.html">Blog</a></li>
+                                <li><a href="page-blog-article.html">Blog article</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" aria-expanded="true"><i class="icon-folder-alt"></i> Nested menu <span class="fa arrow"></span></a>
+                            <ul class="nav-second-level nav" aria-expanded="true">
+                                <li><a href="javascript: void(0);">Level 1</a></li>
+                                <li><a href="javascript: void(0);" aria-expanded="true">Level 2 <span class="fa arrow"></span></a>
+                                    <ul class="nav-third-level nav" aria-expanded="true">
+                                        <li><a href="javascript: void(0);">Level 2</a></li>
+                                        <li><a href="javascript: void(0);">Level 2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--<li><a href="landing/index.html" target="_blank" class="bg-primary"><i class="icon-star"></i>Landing page</a></li>-->
+                    </ul>
+                </div><!--nano content-->
+            </div><!--nano scroll end-->
+        </aside>
+        <!--left navigation end-->
+
+
+        <!--main content start-->
+        <section class="main-content">
+
+
+
+            <!--page header start-->
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Alertify Js <sub><small><a href="http://alertifyjs.com/" target="_blank">Offical Docs</a></small></sub></h4>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <ol class="breadcrumb">
+                            <li><a href="javascript: void(0);"><i class="fa fa-home"></i></a></li>
+                            <li>pages</li>
+                            <li>Alertify</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!--page header end-->
+
+
+            <!--start page content-->
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Basic example
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" id="alertify-basic" class="btn btn-default">Show Me</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Multiple Alerts
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" id="alertify-multi" class="btn btn-default">Show Me</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Multiple Alerts
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" id="alertify-licence-agree" class="btn btn-default">Show Me</button>
+                            <div id="la" style="display: none;">
+
+                                The MIT License (MIT)
+
+                                Copyright (c) 2014 Mohammad Younes
+
+                                Permission is hereby granted, free of charge, to any person obtaining a copy
+                                of this software and associated documentation files (the "Software"), to deal
+                                in the Software without restriction, including without limitation the rights
+                                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                                copies of the Software, and to permit persons to whom the Software is
+                                furnished to do so, subject to the following conditions:
+
+                                The above copyright notice and this permission notice shall be included in all
+                                copies or substantial portions of the Software.
+
+                                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                                SOFTWARE.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--end page content-->
+
+
+            <!--Start footer-->
+            <footer class="footer">
+                <span>Copyright &copy; 2016. Float</span>
+            </footer>
+            <!--end footer-->
+
+        </section>
+        <!--end main content-->
+
+
+
+        <!--Common plugins-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/pace.min.js"></script>
+        <script src="js/jasny-bootstrap.min.js"></script>
+        <script src="js/jquery.slimscroll.min.js"></script>
+        <script src="js/jquery.nanoscroller.min.js"></script>
+        <script src="js/metismenu.min.js"></script>
+        <script src="js/float-custom.js"></script>
+        <script src="js/alertify.min.js"></script>
+        <script src="js/alertify.custom.js"></script>
+    </body>
+</html>

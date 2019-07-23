@@ -1,0 +1,147 @@
+<!--Carousel Starts-->
+<div class="content-header row">
+  <div class="content-header-left col-md-6 col-12 mb-2">
+    <h3 class="content-header-title mb-0">Carousel</h3>
+    <div class="row breadcrumbs-top">
+      <div class="breadcrumb-wrapper col-12">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a>Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a>Components</a>
+          </li>
+          <li class="breadcrumb-item active">Carousel
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="content-header-right text-md-right col-md-6 col-12">
+    <div class="btn-group">
+      <button type="button" class="btn btn-round btn-primary">
+        <i class="ft-settings pr-1"></i> Settings</button>
+      <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-round btn-primary dropdown-toggle">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item">Action</a>
+        <a class="dropdown-item">Another action</a>
+        <a class="dropdown-item">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item">Separated link</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content-body">
+<section id="carousel">
+  <div class="row" matchHeight="card">
+    <!--Basic Carousel Starts-->
+    <div class="col-lg-12 col-xl-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Basic Carousel</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <ngb-carousel>
+              <ng-template ngbSlide>
+                <img src="assets/app/images/carousel/12.jpg" alt="Random first slide">
+                <div class="carousel-caption">
+                  <h3 class="ff-serif text-uppercase">First slide label</h3>
+                  <p class="mb-0">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <img src="assets/app/images/carousel/13.jpg" alt="Random second slide">
+                <div class="carousel-caption">
+                  <h3 class="ff-serif text-uppercase">Second slide label</h3>
+                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <img src="assets/app/images/carousel/14.jpg" alt="Random third slide">
+                <div class="carousel-caption">
+                  <h3 class="ff-serif text-uppercase">Third slide label</h3>
+                  <p class="mb-0">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </ng-template>
+            </ngb-carousel>
+            <h5 class="mt-5 mb-4 text-bold-500">Basic Code :</h5>
+            <pre class="language-typescript">
+<code class="language-typescript">
+  import &#123;Component&#125; from '@angular/core';
+  @Component(&#123;
+    selector: 'ngbd-carousel-basic',
+    templateUrl: './carousel-basic.html'
+  &#125;)
+  export class NgbdCarouselBasic &#123;
+  &#125;</code> 
+          </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Basic Carousel Ends-->
+
+    <!--Global configuration of carousels Starts-->
+    <div class="col-lg-12 col-xl-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Global configuration of carousels</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <ngb-carousel>
+              <ng-template ngbSlide>
+                <img src="assets/app/images/carousel/15.jpg" alt="Random first slide">
+                <div class="carousel-caption">
+                  <h3>10 seconds between slides...</h3>
+                  <p>This carousel uses customized default values.</p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <img src="assets/app/images/carousel/16.jpg" alt="Random second slide">
+                <div class="carousel-caption">
+                  <h3>No keyboard...</h3>
+                  <p>This carousel uses customized default values.</p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <img src="assets/app/images/carousel/17.jpg" alt="Random third slide">
+                <div class="carousel-caption">
+                  <h3>And no wrap after last slide.</h3>
+                  <p>This carousel uses customized default values.</p>
+                </div>
+              </ng-template>
+            </ngb-carousel>
+            <h5 class="mt-5 mb-4 text-bold-500">Configuration Code :</h5>
+            <pre class="language-typescript">
+<code class="language-typescript">
+  import &#123;Component&#125; from '@angular/core';
+  import &#123;NgbCarouselConfig&#125; from '@ng-bootstrap/ng-bootstrap';
+
+  @Component(&#123;
+    selector: 'ngbd-carousel-config',
+    templateUrl: './carousel-config.html',
+    providers: [NgbCarouselConfig] // add NgbCarouselConfig to the component providers
+  &#125;)
+  export class NgbdCarouselConfig &#123;
+    constructor(config: NgbCarouselConfig) &#123;
+      
+      config.interval = 10000;
+      config.wrap = false;
+      config.keyboard = false;
+    &#125;
+  &#125;</code> 
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Global configuration of carousels Starts-->
+  </div>
+</section>
+</div>
+<!--Carousel Ends-->

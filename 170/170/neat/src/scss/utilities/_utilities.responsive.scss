@@ -1,0 +1,104 @@
+/* ==========================================================================
+   #RESPONSIVE UTILITIES
+   ========================================================================== */
+
+// sass-lint:disable no-important
+
+/**
+ * Hide content at all viewports.
+ */
+
+.u-hidden {
+	display: none !important;
+}
+
+/**
+ * Hide visually but make it accessible to screenreaders.
+ */
+.u-hidden-visually {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+	clip-path: inset(50%) !important;
+}
+
+
+/**
+ * Use `u-hidden-down@{breakpoint}` to hide content from a specific breakpoint 
+ * and smaller viewports.
+ *
+ * 1. Hide on mobile.
+ * 2. Hide on mobile and tablet.
+ * 3. Hide on mobile, tablet and desktop.
+ * 4. Hide on mobile, tablet, desktop and wide. 
+ *
+ * NOTE: u-hidden@wide : still visible on viewports larger than wide breakpoint.
+ */
+
+@media (max-width: $breakpoint-mobile) {
+	.u-hidden-down\@mobile { /* [1] */
+		display: none !important;
+	}
+}
+
+@media (max-width: $breakpoint-tablet) {
+	.u-hidden-down\@tablet { /* [2] */
+		display: none !important;
+	}
+}
+
+@media (max-width: $breakpoint-desktop) {
+	.u-hidden-down\@desktop { /* [3] */
+		display: none !important;
+	}
+}
+
+@media (max-width: $breakpoint-wide) {
+	.u-hidden-down\@wide { /* [4] */
+		display: none !important;
+	}
+}
+
+
+/**
+ * Use `u-hidden-up@{breakpoint}` to hide content from a specific breakpoint 
+ * and larger viewports.
+ *
+ * 1. Hide on viewports larger than mobile.
+ * 2. Hide on viewports larger than tablet.
+ * 3. Hide on viewports larger than desktop.
+ * 4. Hide on viewports larger than wide.
+ *
+ * NOTE: u-hidden@wide : still visible on viewports larger than wide breakpoint.
+ */
+
+@media (min-width: $breakpoint-mobile) {
+	.u-hidden-up\@mobile { /* [1] */
+		display: none !important;
+	}
+}
+
+
+@media (min-width: $breakpoint-tablet) {
+	.u-hidden-up\@tablet { /* [2] */
+		display: none !important;
+	}
+}
+
+@media (min-width: $breakpoint-desktop) {
+	.u-hidden-up\@desktop { /* [3] */
+		display: none !important;
+	}
+}
+
+@media (min-width: $breakpoint-wide) {
+	.u-hidden-up\@wide { /* [4] */
+		display: none !important;
+	}
+}

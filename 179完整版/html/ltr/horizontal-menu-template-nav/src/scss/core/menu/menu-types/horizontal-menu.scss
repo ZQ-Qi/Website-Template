@@ -1,0 +1,160 @@
+/*=========================================================================================
+	File Name: horizontal-menu.scss
+	Description: A classic horizontal menu for easy navingation & support all devices.
+	It support light & dark version, filpped layout, right side icons, borders menu for
+	item seperation.
+	----------------------------------------------------------------------------------------
+	Item Name: Chameleon Admin - Modern Bootstrap 4 WebApp & Dashboard HTML Template + UI Kit
+	Version: 1.0
+	Author: ThemeSelection
+	Author URL: https://themeforest.net/user/themeselect
+==========================================================================================*/
+
+// Core variables and mixins
+@import "../../../bootstrap/functions";
+@import "../../../bootstrap/mixins";
+@import "../../../bootstrap-extended/mixins";
+
+// Core variables and mixins overrides
+@import "../../variables/variables";
+@import "../../variables/components-variables";
+
+// Overrides user variable
+@import "../../../../../assets/scss/variables/variables";
+@import "../../../../../assets/scss/variables/components-variables";
+
+// Import first main menu mixin
+@import "../../mixins/main-menu-mixin";
+
+// Horizontal Menu
+//=========================
+.horizontal-menu {
+    .navbar-horizontal {
+		z-index: 99;
+		.dropdown .dropdown-menu .dropdown-item{
+			padding: 10px 20px 10px 10px;
+		}
+        .nav-item {
+            a span {
+                font-size: 1rem;
+            }
+            i{
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    .navbar-horizontal ul#main-menu-navigation>li>a {
+        padding: 1.85rem 1rem;
+    }
+    .dropdown-item {
+        &.active,
+        &:active {
+            background-color: $white !important;
+            color: $gray-900;
+        }
+        &:hover,
+        &.hover {
+            background-color: transparent;
+        }
+    }
+    #main-menu-navigation {
+        ul {
+            li {
+                a {
+                    span {
+                        display: inline-block;
+                        transition: transform 0.3s ease;
+                        &:hover,
+                        .hover {
+                            transform: translateX(4px);
+                        }
+                    }
+                }
+
+                &.active,
+                &:hover,
+                .hover {
+                    transform: translateX(-4px);
+                    transition: transform 0.3s ease;
+                }
+            }
+            &.dropdown-menu {
+                padding: 0.5rem 0 0.5rem 1rem;
+
+                .dropdown-submenu {
+                    li {
+                        &.active,
+                        &:hover,
+                        .hover {
+                            transform: translateX(-4px);
+                            transition: transform 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.menu-collapsed {
+        #main-menu-navigation {
+            .nav-item {
+                a span {
+                    display: none;
+                }
+            }
+            ul{
+                &.dropdown-menu {
+                    padding-left: 0.25rem;
+                }
+            }
+        }
+    }
+    .navigation-header {
+        font-family: inherit;
+        color: #929292;
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+    .navbar-flipped {
+        .navbar-nav {
+            .nav-item {
+                float: right;
+            }
+        }
+    }
+    .navbar-light {
+        ul#main-menu-navigation>li.active>a {
+            border-bottom: 1px solid $info;
+            background: $white;
+        }
+        .active>a {
+            font-weight: 700;
+        }
+    }
+    .navbar-dark {
+        .nav-item {
+            &.active>a {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+            &:hover,
+            .hover {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .active>a {
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    // For small screen
+    &.vertical-overlay-menu {
+        .main-menu.menu-fixed {
+            top: $navbar-height;
+        }
+    }
+}
+
+// Import vertical-overlay-menu.scss for small screen support
+@import "vertical-overlay-menu.scss";

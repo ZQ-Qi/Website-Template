@@ -1,0 +1,305 @@
+@keyframes move-arrow {
+    0%,100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    50% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px)
+    }
+}
+
+// box shadow
+@mixin z-depth-1 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+@mixin z-depth-1-half {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+@mixin z-depth-2 {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@mixin z-depth-3 {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+@mixin z-depth-4 {
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+@mixin z-depth-5 {
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+.section-heading-underline {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: $headings-font-weight;
+    &:after {
+        content: "";
+        height: 3px;
+        width: 100px;
+        margin: 0.8em auto 0 auto;
+        display: block;
+        background: #eff0f3;
+    }
+}
+
+@keyframes (slideInDown) {
+    0% {
+        transform: translateY(-100%); 
+        visibility: visible; 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+@keyframes (fadeInUp) {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0); 
+    } 
+    100% {
+        opacity: 1; 
+        transform: none; 
+    }    
+}
+@keyframes (fadeInLeft) {
+    0% {
+        opacity: 0; 
+        transform: translate3d(-50%, 0, 0);
+    } 
+    100% {
+        opacity: 1; 
+        transform: none; 
+    }    
+}
+@keyframes (fadeInRight) {
+    0% {opacity: 0; 
+        transform: translate3d(50%, 0, 0);
+    } 
+    100% {
+        opacity: 1; 
+        transform: none; 
+    }
+}
+
+
+.slideInDown { animation-name: slideInDown; }
+.fadeInUp { animation-name: fadeInUp; }
+.fadeInLeft { animation-name: fadeInLeft; }
+.fadeInRight { animation-name: fadeInRight; }
+.animated {
+    animation-duration: .6s;
+    animation-fill-mode: both;
+}
+.animated.infinite {
+    animation-iteration-count: infinite;
+}
+.animated.hinge {
+    animation-duration: 2s;
+}
+
+
+// Buttons
+@mixin button-state-color($background) {
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-color: darken($background, 5%);
+            border-color: darken($background, 5%);
+    }
+}
+.btn,
+.btn-group {
+    &.btn-raised {
+        text-transform: uppercase;
+        @include z-depth-1;
+        transition: .25s ease-out;
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+        }
+        &:disabled,
+        &.disabled {
+            box-shadow: none;
+        }
+        &:hover {
+            @include z-depth-1-half;
+        }
+    }
+    &.btn-floating {
+        @include z-depth-1;
+        transition: .25s;
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+        }
+        &:disabled,
+        &.disabled {
+            box-shadow: none;
+        }
+        &:hover {
+            @include z-depth-1-half;
+        }        
+    }
+
+    &.btn-raised,
+    &.btn-floating {
+        &.btn-primary { @include button-state-color($brand-primary); }
+        &.btn-info { @include button-state-color($brand-info); }
+        &.btn-warning { @include button-state-color($brand-warning); }
+        &.btn-danger { @include button-state-color($brand-danger); }
+        &.btn-default { @include button-state-color($btn-default-bg); }
+    }
+}
+.btn-flat {
+    background: none;
+    color: $body-color;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
+    transition: .25s ease-out;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $bright;
+        outline: none;
+        box-shadow: none;
+        border-color: $bright;
+    }
+    &.btn-primary {
+        color: $brand-primary;
+    }
+    &.btn-info {
+        color: $brand-info;
+    }
+    &.btn-warning {
+        color: $brand-warning;
+    }
+    &.btn-danger {
+        color: $brand-danger;
+    }
+}
+.btn-w-xs { min-width: 80px; }
+.btn-w-sm { min-width: 100px; }
+.btn-w-md { min-width: 135px; }
+.btn-w-lg { min-width: 160px; }
+
+
+// Click Wave
+.ui-wave {
+    position:relative;
+    overflow:hidden;
+    z-index:0;
+    transition: all 0.2s $material_animation;
+    &.ui-wave-overflowed {
+        overflow:visible;
+    }
+    .ink {
+        display: block;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 100%;
+        transform: scale(0) ;
+    }
+
+    // 
+    &.btn-flat,
+    &.btn-default {
+        .ink {
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+.wave-animate {
+    animation: ripple 0.65s linear;
+}
+// .keyframes(~'ripple, 100% {opacity: 0; transform: scale(2.5); }');
+@-webkit-keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5); }
+}
+
+// Material Inputs
+.ui-input-group {
+    position: relative; 
+    margin: 18px 0 12px;
+
+    .form-control {
+        background-color: transparent;
+        box-shadow: none;
+        &:focus {
+            border-color: $brand-primary;
+        }
+    }
+
+    > input,
+    > textarea {
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+        border-bottom: 1px solid $input-border;
+        &:focus { outline:none; }
+        &:focus ~ label,
+        &:valid ~ label {
+            top: -20px;
+            left: 0;
+            font-size: 12px;
+        }
+        &:valid ~ label {
+            color: #999;
+        }
+        &:focus ~ label {
+            color: $brand-primary;
+        }
+
+        // active state
+        &:focus ~ .input-bar:before,
+        &:focus ~ .input-bar:after {
+            width: 50%;
+        }
+    }
+    > label {
+        color: $input-color-placeholder; 
+        font-size: 14px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        top: 10px;
+        transition: all .35s $material_animation;
+    }
+    .input-bar { 
+        position: relative; 
+        display: block; 
+        width: 100%;
+    }
+    .input-bar:before,
+    .input-bar:after {
+        content: '';
+        height: 1px; 
+        width: 0;
+        bottom: 1px; 
+        position: absolute;
+        background: $brand-primary; 
+        transition: all .35s $material_animation;
+    }
+    .input-bar:before {
+        left: 50%;
+    }
+    .input-bar:after {
+        right: 50%; 
+    }
+}

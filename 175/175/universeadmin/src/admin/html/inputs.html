@@ -1,0 +1,106 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Form Inputs / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Form Inputs</h2>
+    </div>
+  </div>
+  <div class="main-container">
+    <h3>Form Elements</h3>
+    <div class="row">
+      <div class="col-3">
+        <h4>Input</h4>
+        <div class="form-group">
+          <input type="text" placeholder="Favorite NBA Team" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="disabled">Disabled</label>
+          <input id="disabled" type="text" placeholder="Favorite NBA Team" class="form-control" disabled>
+        </div>
+      </div>
+      <div class="col-3">
+        <h4>Input with label</h4>
+        <div class="form-group">
+          <input type="text" placeholder="Favorite NBA Team" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="read-only">Read Only</label>
+          <input id="read-only" type="text" placeholder="Favorite NBA Team" class="form-control" readonly>
+        </div>
+      </div>
+      <div class="col-6">
+        <h4>Textarea</h4>
+        <div class="form-group">
+          <textarea rows="5" placeholder="Favorite NBA Team" class="form-control"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-container">
+    <h3>Inputs</h3>
+    <div class="row">
+      <div class="col-5">
+        <h4>Default</h4>
+        <div class="input-group input-group-icon icon-right">
+          <input class="form-control" type="email" placeholder="Enter email">
+          <span class="input-icon ua-icon-envelope"></span>
+        </div>
+        <div class="input-group input-group-icon icon-left">
+          <input class="form-control" type="email" placeholder="Enter email">
+          <span class="input-icon ua-icon-alert-info"></span>
+        </div>
+        <div class="form-group has-success">
+          <input class="form-control form-control-success" type="text" placeholder="Enter email">
+        </div>
+        <div class="form-group has-warning">
+          <input class="form-control form-control-warning" type="text" placeholder="Enter email">
+        </div>
+        <div class="form-group has-danger">
+          <input class="form-control form-control-danger" type="text" placeholder="Enter email">
+        </div>
+        <h4>Small</h4>
+        <div class="input-group input-group-icon icon-right input-group-sm">
+          <input class="form-control" type="email" placeholder="Enter email">
+          <span class="input-icon ua-icon-envelope"></span>
+        </div>
+        <div class="input-group input-group-icon icon-left input-group-sm">
+          <input class="form-control email-left" type="email" placeholder="Enter email">
+          <span class="input-icon ua-icon-alert-info"></span>
+        </div>
+        <div class="form-group input-group-sm has-success">
+          <input class="form-control form-control-success" type="text" placeholder="Enter email">
+        </div>
+        <div class="form-group input-group-sm has-warning">
+          <input class="form-control form-control-warning" type="text" placeholder="Enter email">
+        </div>
+        <div class="form-group input-group-sm has-danger">
+          <input class="form-control form-control-danger" type="text" placeholder="Enter email">
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="input-group input-group-icon icon-right input-group-lg">
+          <input class="form-control form-control-lg" type="email" placeholder="Enter email">
+          <span class="input-icon ua-icon-envelope"></span>
+        </div>
+        <div class="input-group input-group-icon icon-left input-group-lg">
+          <input class="form-control form-control-lg" type="email" placeholder="Enter email">
+          <span class="input-icon ua-icon-alert-info"></span>
+        </div>
+        <div class="form-group input-group-lg has-success">
+          <input class="form-control form-control-lg form-control-success" type="text" placeholder="Enter email">
+        </div>
+        <div class="form-group input-group-lg has-warning">
+          <input class="form-control form-control-lg form-control-warning" type="text" placeholder="Enter email">
+        </div>
+        <div class="form-group input-group-lg has-danger">
+          <input class="form-control form-control-lg form-control-danger" type="text" placeholder="Enter email">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

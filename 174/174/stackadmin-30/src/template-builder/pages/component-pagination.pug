@@ -1,0 +1,32 @@
+//- =========================================================================
+	File Name: component-pagination.jade
+	Description: Provide pagination links for your site or app with the multi-page pagination component.
+	--------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle   = "Pagination"
+	- var pageSubTitle = "The sequence of numbers assigned to pages"
+	- var description = "Provide pagination links for your site or app with the multi-page pagination component."
+	- var activeMenu  = "component-pagination"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Components"}, {name:"Pagination"}])
+
+//- Include page content in page block
+append content
+	include ../contents/component-pagination.html
+
+append vendorjs
+	//- Template JS for pagination
+	script(src=app_assets_path+'/vendors/js/pagination/jquery.bootpag.min.js', type='text/javascript')
+	script(src=app_assets_path+'/vendors/js/pagination/jquery.twbsPagination.min.js', type='text/javascript')
+
+append pagejs
+	script(src=app_assets_path+'/js/scripts/pagination/pagination.js', type='text/javascript')

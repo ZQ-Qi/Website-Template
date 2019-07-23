@@ -1,0 +1,67 @@
+/*---------------------------
+
+Start tootltip popover
+
+---------------------------*/
+
+.tooltip-show{
+  .tooltip {
+    position: $position-relative;
+    display: inline-block;
+    margin: $gaping-10 $gaping-20 $gaping-10 $gaping-0;
+    opacity: 1;
+    z-index: 0;
+  }
+}
+
+.popover-show{
+  .popover {
+    position: $position-relative;
+    display: block;
+    float: $left-division;
+    width: 23%;
+    margin: $gaping-0 $gaping-20 $gaping-10 $gaping-0;
+    z-index: 0;
+  }
+  .popover-title{
+    line-height: $gaping-20;
+  }
+}
+
+/*---- Start responsive tootltip popover ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+  .popover-show{
+    .popover {
+      width: auto;
+      margin: $gaping-0 $gaping-20 $gaping-20 $gaping-0;
+    }
+  }
+  .button-section{
+    .btn{
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:479px) {
+
+}
+/*---- End responsive tootltip popover ----*/
+
+/*---------------------------
+
+End tootltip popover
+
+---------------------------*/

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>{% block title %}Universe Admin{% endblock %}</title>
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  {% block styles %}
+    {% include "./styles.html" %}
+  {% endblock %}
+
+  <script src="../../admin/js/ie.assign.fix.min.js"></script>
+</head>
+<body class="js-loading {% block bodyClass %}{% endblock %} app">
+{% block body %}
+  {% include "../page-preloader/page-preloader.html" %}
+  {% include "./navbar.html" %}
+  {% include "./sidebar.html" %}
+
+  <div class="app__header">
+    <span class="app__header-tab is-active">
+      <span class="app__header-tab-text">Dashboard</span>
+      <span class="mdi mdi-close app__header-tab-close"></span>
+    </span>
+    <span class="app__header-tab">
+      <span class="app__header-tab-text">Sales</span>
+      <span class="mdi mdi-close app__header-tab-close"></span>
+    </span>
+  </div>
+
+  <div class="app__content">
+    {% block content %}{% endblock %}
+  </div>
+
+  <div class="sidebar-mobile-overlay"></div>
+
+  {% include "./float-aside.html" %}
+
+  {% block scripts %}
+    {% include "./scripts.html" %}
+  {% endblock %}
+{% endblock %}
+</body>
+</html>

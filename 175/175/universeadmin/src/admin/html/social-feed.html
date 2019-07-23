@@ -1,0 +1,380 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Social Profile / Universe Admin{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid m-social-feed">
+  <div class="m-social-feed__nav">
+    <h5 class="m-social-feed__nav-heading">Your profile</h5>
+    <div class="m-social-feed__nav-avatar">
+      <span class="ua-icon-fm-upload"></span>
+    </div>
+    <ul class="m-social-feed__nav-menu">
+      <li class="m-social-feed__nav-menu-item is-active">
+        <a href="#" class="m-social-feed__nav-menu-link">
+          <span class="ua-icon-profile-edit m-social-feed__nav-menu-icon"></span> Edit Profile
+        </a>
+      </li>
+      <li class="m-social-feed__nav-menu-item">
+        <a href="#" class="m-social-feed__nav-menu-link">
+          <span class="ua-icon-profile-history m-social-feed__nav-menu-icon"></span> History
+        </a>
+      </li>
+      <li class="m-social-feed__nav-menu-item">
+        <a href="#" class="m-social-feed__nav-menu-link">
+          <span class="ua-icon-profile-settings m-social-feed__nav-menu-icon"></span> Settings
+        </a>
+      </li>
+    </ul>
+    <div class="m-social-feed__nav-section">
+      <h6 class="m-social-feed__nav-section-heading">My Team</h6>
+      <ul class="m-social-feed__section-users">
+        <li class="m-social-feed__section-user">
+          <img src="img/users/user-16.png" alt="" width="20" height="20" class="m-social-feed__section-user-avatar">
+          <a href="#">Robert S.</a>
+        </li>
+        <li class="m-social-feed__section-user">
+          <img src="img/users/user-13.png" alt="" width="20" height="20" class="m-social-feed__section-user-avatar">
+          <a href="#">Anna F.</a>
+        </li>
+        <li class="m-social-feed__section-user">
+          <img src="img/users/user-17.png" alt="" width="20" height="20" class="m-social-feed__section-user-avatar">
+          <a href="#">Fred U.</a>
+        </li>
+      </ul>
+    </div>
+    <div class="m-social-feed__nav-section">
+      <h6 class="m-social-feed__nav-section-heading">My Events</h6>
+      <ul class="m-social-feed__section-events">
+        <li class="m-social-feed__section-event">
+          <a href="#">Strategy and cons...</a>
+        </li>
+        <li class="m-social-feed__section-event">
+          <a href="#">The right direction...</a>
+        </li>
+        <li class="m-social-feed__section-event">
+          <a href="#">Wait until the very...</a>
+        </li>
+      </ul>
+    </div>
+    <div class="m-social-feed__nav-section">
+      <h6 class="m-social-feed__nav-section-heading">My Assets</h6>
+      <ul class="m-social-feed__section-assets">
+        <li class="m-social-feed__section-asset">
+          <span class="m-social-feed__section-marker m-social-feed__section-marker--bittersweet"></span>
+          <span>Administrator</span>
+        </li>
+        <li class="m-social-feed__section-asset">
+          <span class="m-social-feed__section-marker m-social-feed__section-marker--scooter"></span>
+          <span>Development</span>
+        </li>
+        <li class="m-social-feed__section-asset">
+          <span class="m-social-feed__section-marker m-social-feed__section-marker--rose"></span>
+          <span>Marketing</span>
+        </li>
+        <li class="m-social-feed__section-asset">
+          <span class="m-social-feed__section-marker m-social-feed__section-marker--blue"></span>
+          <span>Service UX</span>
+        </li>
+        <li class="m-social-feed__section-asset">
+          <span class="m-social-feed__section-marker m-social-feed__section-marker--yellow"></span>
+          <span>Utilites</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="m-social-feed__feed">
+    <form class="main-container m-social-feed__feed-post">
+      <div class="m-social-feed__feed-post-input">
+        <img src="img/users/user-2.png" alt="" width="34" height="34" class="m-social-feed__feed-post-avatar rounded-circle">
+        <textarea class="m-social-feed__feed-post-textarea" placeholder="Anything new?"></textarea>
+      </div>
+      <div class="m-social-feed__feed-post-controls">
+        <div>
+          <span class="ua-icon-profile-photo m-social-feed__feed-post-control"></span>
+          <span class="ua-icon-profile-video m-social-feed__feed-post-control"></span>
+          <span class="ua-icon-profile-audio m-social-feed__feed-post-control"></span>
+          <div class="dropdown m-social-feed__feed-post-more">
+            <a class="dropdown-toggle color-info" href="#" data-toggle="dropdown">show more</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Document</a>
+              <a class="dropdown-item" href="#">Note</a>
+              <a class="dropdown-item" href="#">Map</a>
+              <a class="dropdown-item" href="#">Timer</a>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-info btn-sm m-social-feed__feed-post-btn">Post</button>
+      </div>
+    </form>
+
+    <div class="main-container m-social-feed__feed-item">
+      <div class="m-social-feed__feed-item-header">
+        <img src="img/users/user-13.png" alt="" class="m-social-feed__feed-item-avatar rounded-circle" width="56" height="56">
+        <div class="m-social-feed__feed-item-info">
+          <div>
+            <a href="#" class="link-info">Sarah T.</a> <span class="m-social-feed__feed-item-event">added 4 new photos</span>
+          </div>
+          <div>
+            <span class="m-social-feed__feed-item-date">
+              <span class="ua-icon-datepicker m-social-feed__feed-item-icon"></span> <span>09:12 pm</span>
+            </span>
+            <span class="m-social-feed__feed-item-location">
+              <span class="ua-icon-map m-social-feed__feed-item-icon"></span> <span>New York</span>
+            </span>
+          </div>
+        </div>
+        <div class="m-social-feed__feed-item-controls">
+          <a href="#" class="m-social-feed__feed-item-reply m-social-feed__feed-item-control">
+            <span class="m-social-feed__feed-comment-reply-btn-icon ua-icon-reply icon"></span> Reply
+          </a>
+          <div class="dropdown no-arrow m-social-feed__feed-item-dropdown m-social-feed__feed-item-control">
+            <span class="dropdown-toggle ua-icon-dots-vertical" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Share</a>
+              <a class="dropdown-item" href="#">Reply</a>
+              <a class="dropdown-item" href="#">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m-social-feed__feed-item-gallery">
+        <img src="img/social-profile/1.png" alt="">
+        <img src="img/social-profile/2.png" alt="">
+        <img src="img/social-profile/3.png" alt="">
+        <img src="img/social-profile/4.png" alt="">
+      </div>
+      <div class="m-social-feed__feed-comments">
+        <div class="m-social-feed__feed-comments-input">
+          <textarea class="form-control m-social-feed__feed-comments-textarea js-auto-size" placeholder="Reply"></textarea>
+          <div class="dropdown no-arrow m-social-feed__feed-comments-dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="ua-icon-addon"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Add file</a>
+              <a class="dropdown-item" href="#">Add video</a>
+              <a class="dropdown-item" href="#">Add image</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-social-feed__feed-comment">
+          <img src="img/users/user-14.png" alt="" width="56" height="56" class="m-social-feed__feed-comment-avatar rounded-circle">
+          <div class="m-social-feed__feed-comment-wrap">
+            <a href="#" class="m-social-feed__feed-comment-reply-btn"><span class="m-social-feed__feed-comment-reply-btn-icon ua-icon-reply"></span>Reply</a>
+            <div class="m-social-feed__feed-comment-owner">
+              <a href="#" class="m-social-feed__feed-comment-name">Usman</a>
+              <span class="m-social-feed__feed-comment-date">Jun 23 at 09:45 AM</span>
+            </div>
+            <div class="m-social-feed__feed-comment-content">
+              <div class="m-social-feed__feed-comment-text">I've prepared the files here</div>
+              <div class="m-social-feed__feed-comment-images">
+                <img src="img/social-profile/5.png" alt="" class="m-social-feed__feed-comment-image">
+                <img src="img/social-profile/6.png" alt="" class="m-social-feed__feed-comment-image">
+                <img src="img/social-profile/7.png" alt="" class="m-social-feed__feed-comment-image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="m-social-feed__feed-comment">
+          <img src="img/users/user-15.png" alt="" width="56" height="56" class="m-social-feed__feed-comment-avatar rounded-circle">
+          <div class="m-social-feed__feed-comment-wrap">
+            <a href="#" class="m-social-feed__feed-comment-reply-btn"><span class="m-social-feed__feed-comment-reply-btn-icon ua-icon-reply"></span>Reply</a>
+            <div class="m-social-feed__feed-comment-owner">
+              <a href="#" class="m-social-feed__feed-comment-name">Malik</a>
+              <span class="m-social-feed__feed-comment-date">Jun 23 at 09:45 AM</span>
+            </div>
+            <div class="m-social-feed__feed-comment-content">
+              <div class="m-social-feed__feed-comment-text">
+                <a href="#" class="link-info">@usman</a> bro, please upload the photos!
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="m-social-feed__feed-more-comments">Show more comments</a>
+      </div>
+    </div>
+    <div class="main-container m-social-feed__feed-item">
+      <div class="m-social-feed__feed-item-header">
+        <img src="img/users/user-16.png" alt="" class="m-social-feed__feed-item-avatar rounded-circle" width="56" height="56">
+        <div class="m-social-feed__feed-item-info">
+          <div>
+            <a href="#" class="link-info">Mark W.</a> <span class="m-social-feed__feed-item-event">just checked in NY</span>
+          </div>
+          <div>
+            <span class="m-social-feed__feed-item-date">
+              <span class="ua-icon-datepicker m-social-feed__feed-item-icon"></span> <span>09:12 pm</span>
+            </span>
+            <span class="m-social-feed__feed-item-location">
+              <span class="ua-icon-map m-social-feed__feed-item-icon"></span> <span>New York</span>
+            </span>
+          </div>
+        </div>
+        <div class="m-social-feed__feed-item-controls">
+          <a href="#" class="m-social-feed__feed-item-reply m-social-feed__feed-item-control"><span class="m-social-feed__feed-comment-reply-btn-icon ua-icon-reply icon"></span> Reply</a>
+          <div class="dropdown no-arrow m-social-feed__feed-item-dropdown m-social-feed__feed-item-control">
+            <span class="dropdown-toggle ua-icon-dots-vertical" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Share</a>
+              <a class="dropdown-item" href="#">Reply</a>
+              <a class="dropdown-item" href="#">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="m-social-feed-item-map" class="m-social-feed__feed-item-map"></div>
+    </div>
+    <div class="main-container m-social-feed__feed-item">
+      <div class="m-social-feed__feed-item-header">
+        <img src="img/users/user-15.png" alt="" class="m-social-feed__feed-item-avatar rounded-circle" width="56" height="56">
+        <div class="m-social-feed__feed-item-info">
+          <div>
+            <a href="#" class="link-info">Francesca S.</a> <span class="m-social-feed__feed-item-event">created a new event</span>
+          </div>
+          <div>
+            <span class="m-social-feed__feed-item-date">
+              <span class="ua-icon-datepicker m-social-feed__feed-item-icon"></span> <span>09:12 pm</span>
+            </span>
+            <span class="m-social-feed__feed-item-location">
+              <span class="ua-icon-map m-social-feed__feed-item-icon"></span> <span>Las Vegas</span>
+            </span>
+          </div>
+        </div>
+        <div class="m-social-feed__feed-item-controls">
+          <a href="#" class="m-social-feed__feed-item-reply m-social-feed__feed-item-control"><span class="m-social-feed__feed-comment-reply-btn-icon ua-icon-reply icon"></span> Reply</a>
+          <div class="dropdown no-arrow m-social-feed__feed-item-dropdown m-social-feed__feed-item-control">
+            <span class="dropdown-toggle ua-icon-dots-vertical" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Share</a>
+              <a class="dropdown-item" href="#">Reply</a>
+              <a class="dropdown-item" href="#">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m-social-feed__feed-item-document">
+        <span class="ua-icon-social-document m-social-feed__feed-item-document-icon"></span>
+        <div class="m-social-feed__feed-item-document-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper ligula augue, eget eleifend nisl varius eu. Proin semper tellus magna, vel venenatis justo mattis eu. Duis maximus urna a scelerisque rhoncus.
+        </div>
+        <a href="#" class="btn btn-outline-secondary m-social-feed__feed-item-document-read">Read now</a>
+      </div>
+    </div>
+    <div class="main-container m-social-feed__feed-item">
+      <div class="m-social-feed__feed-item-header">
+        <img src="img/users/user-15.png" alt="" class="m-social-feed__feed-item-avatar rounded-circle" width="56" height="56">
+        <div class="m-social-feed__feed-item-info">
+          <div>
+            <a href="#" class="link-info">Marta D.</a> <span class="m-social-feed__feed-item-event">rated a ream member from <a href="#" class="link-rose">Marketing</a></span>
+          </div>
+          <div>
+            <span class="m-social-feed__feed-item-date">
+              <span class="ua-icon-datepicker m-social-feed__feed-item-icon"></span> <span>09:12 pm</span>
+            </span>
+            <span class="m-social-feed__feed-item-location">
+              <span class="ua-icon-map m-social-feed__feed-item-icon"></span> <span>Las Vegas</span>
+            </span>
+          </div>
+        </div>
+        <div class="m-social-feed__feed-item-controls">
+          <a href="#" class="m-social-feed__feed-item-reply m-social-feed__feed-item-control"><span class="m-social-feed__feed-comment-reply-btn-icon ua-icon-reply icon"></span> Reply</a>
+          <div class="dropdown no-arrow m-social-feed__feed-item-dropdown m-social-feed__feed-item-control">
+            <span class="dropdown-toggle ua-icon-dots-vertical" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Share</a>
+              <a class="dropdown-item" href="#">Reply</a>
+              <a class="dropdown-item" href="#">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="m-social-feed__aside">
+    <div class="main-container m-social-feed__block">
+      <h5 class="m-social-feed__block-heading">Profile of the month</h5>
+      <div class="m-social-feed__block-account">
+        <div class="m-social-feed__block-account-header">
+          <span class="m-social-feed__block-account-name">Scott T.</span>
+          <span class="m-social-feed__block-account-type">Premium</span>
+        </div>
+        <img src="img/users/user-17.png" alt="" class="m-social-feed__block-account-avatar" width="96" height="96">
+      </div>
+      <div id="exampleAccordion" data-children=".m-social-feed__block-collapse-item" class="m-social-feed__block-collapse">
+        <a href="#" class="m-social-feed__block-collapse-item">
+          <span class="ua-icon-datepicker icon"></span> Month 1 (August)
+        </a>
+        <a href="#" class="m-social-feed__block-collapse-item">
+          <span class="ua-icon-datepicker icon"></span> Month 2 (July)
+        </a>
+        <a href="#" class="m-social-feed__block-collapse-item">
+          <span class="ua-icon-datepicker icon"></span> Month 3 (June)
+        </a>
+      </div>
+    </div>
+    <h5 class="m-social-feed__aside-heading">Related to your connections</h5>
+    <div class="main-container m-social-feed__block m-social-feed__block-connections">
+      <div class="m-social-feed__block-connection">
+        <img src="img/users/user-18.png" alt="" class="m-social-feed__block-connection-avatar" width="48" height="48">
+        <div class="m-social-feed__block-connection-info">
+          <a href="#" class="m-social-feed__block-connection-name">Floyd Castillo</a>
+          <div class="m-social-feed__block-connection-desc">Manager, 36</div>
+        </div>
+        <a href="#" class="ua-icon-plus-square m-social-feed__block-connection-add"></a>
+      </div>
+      <div class="m-social-feed__block-connection">
+        <img src="img/users/user-18.png" alt="" class="m-social-feed__block-connection-avatar" width="48" height="48">
+        <div class="m-social-feed__block-connection-info">
+          <a href="#" class="m-social-feed__block-connection-name">Floyd Castillo</a>
+          <div class="m-social-feed__block-connection-desc">Manager, 36</div>
+        </div>
+        <a href="#" class="ua-icon-plus-square m-social-feed__block-connection-add"></a>
+      </div>
+      <div class="m-social-feed__block-connection">
+        <img src="img/users/user-18.png" alt="" class="m-social-feed__block-connection-avatar" width="48" height="48">
+        <div class="m-social-feed__block-connection-info">
+          <a href="#" class="m-social-feed__block-connection-name">Floyd Castillo</a>
+          <div class="m-social-feed__block-connection-desc">Manager, 36</div>
+        </div>
+        <a href="#" class="ua-icon-plus-square m-social-feed__block-connection-add"></a>
+      </div>
+    </div>
+    <h5 class="m-social-feed__aside-heading">Upcoming events</h5>
+    <div class="main-container m-social-feed__block m-social-feed__block-events">
+      <div class="m-social-feed__block-event">
+        <div class="m-social-feed__block-event-info">
+          <a href="#" class="m-social-feed__block-event-name">Monday nighty hustle</a>
+          <span class="m-social-feed__block-event-desc">Marketing &amp; PR</span>
+        </div>
+        <span class="badge badge-sm badge-shamrock m-social-feed__block-event-badge">London</span>
+      </div>
+      <div class="m-social-feed__block-event">
+        <div class="m-social-feed__block-event-info">
+          <a href="#" class="m-social-feed__block-event-name">Business Management</a>
+          <span class="m-social-feed__block-event-desc">Productivity</span>
+        </div>
+        <span class="badge badge-sm badge-bittersweet m-social-feed__block-event-badge">Paris</span>
+      </div>
+      <div class="m-social-feed__block-event">
+        <div class="m-social-feed__block-event-info">
+          <a href="#" class="m-social-feed__block-event-name">Monday nighty hustle</a>
+          <span class="m-social-feed__block-event-desc">Marketing &amp; PR</span>
+        </div>
+        <span class="badge badge-sm badge-rose m-social-feed__block-event-badge">New York</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="vendor/textarea-autosize/jquery.textarea_autosize.min.js"></script>
+<script src="js/preview/social-feed.min.js"></script>
+{% endblock %}

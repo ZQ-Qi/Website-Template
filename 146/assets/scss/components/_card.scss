@@ -1,0 +1,148 @@
+﻿.card {
+    background: $white;
+    min-height: 50px;
+    box-shadow:0 0 8px 0 rgba(0,0,0,.05);
+    position: relative;
+    @extend .m-b-30;
+    transition: .5s;
+    border:none;
+    @include border-radius(3px);
+    
+    .card-inside-title {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        display: block;
+        font-size: 15px;
+        color: $black;
+
+        small {
+            color: $grey-500;
+            display: block;
+            font-size: 11px;
+            @extend .m-t-5;
+
+            a {
+                color: $grey-600;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .card-inside-title:first-child {
+        @extend .m-t-0;
+    }
+
+    .bg-red,
+    .bg-pink,
+    .bg-purple,
+    .bg-deep-purple,
+    .bg-indigo,
+    .bg-blue,
+    .bg-light-blue,
+    .bg-cyan,
+    .bg-teal,
+    .bg-green,
+    .bg-light-green,
+    .bg-lime,
+    .bg-yellow,
+    .bg-amber,
+    .bg-orange,
+    .bg-deep-orange,
+    .bg-brown,
+    .bg-grey,
+    .bg-blue-grey,
+    .bg-blush,
+    .bg-black {
+        border-bottom: none !important;
+        color: $white !important;
+
+        h2, small, .material-icons {
+            color: $white !important;
+        }
+
+        .badge {
+            background-color: $white;
+            color: $grey-800;
+        }
+    }
+
+    .header {
+        color: $grey-800;
+        padding:0 0 10px 0;
+        position: relative;        
+        box-shadow: none;
+        @extend .m-b-0;        
+        margin: $margin-base;
+        border-radius: $border-radius-base;        
+
+        .header-dropdown {
+            position: absolute;
+            top: 3px;
+            right:5px;
+            list-style: none;
+            @extend .margin-0;
+            @extend .padding-0;
+            
+            a{
+                padding:5px 10px;
+                @extend .displayblock;
+                &::after{
+                    display: none;
+                }
+            }
+
+            .dropdown-menu {
+                padding: 5px;
+                left: auto;
+                right: 0;
+                li {
+                    display: block !important;
+                }
+            }
+
+            li {
+                display: inline-block;
+            }
+
+            i {
+                font-size: 20px;
+                color: $grey-500;
+                @include transition(all .5s);
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: $grey-800;
+            text-transform:uppercase;
+
+            small {
+                display: block;
+                font-size: 12px;
+                @extend .m-t-5;
+                color: $grey-500;
+                line-height: 15px;
+                text-transform:capitalize;
+
+                a {
+                    font-weight: bold;
+                    color: $grey-600;
+                }
+            }
+        }
+    }
+    .p-15{ padding:15px !important;}
+
+    .body {
+        font-size: 14px;
+        color: $grey-800;
+        padding:15px;
+        font-weight:400;
+    }
+}

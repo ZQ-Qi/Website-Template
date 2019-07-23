@@ -1,0 +1,434 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/nestable/jquery.nestable.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/nestable/nestable.min.css"> <!-- customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Nestable</h3>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid ks-rows-section">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="dd ks-nestable">
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="1">
+                                            <div class="dd-handle">Item 1</div>
+                                        </li>
+                                        <li class="dd-item" data-id="2">
+                                            <div class="dd-handle">Item 2</div>
+                                        </li>
+                                        <li class="dd-item" data-id="3">
+                                            <div class="dd-handle">Item 3</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="4">
+                                                    <div class="dd-handle">Item 4</div>
+                                                </li>
+                                                <li class="dd-item" data-id="5" data-foo="bar">
+                                                    <div class="dd-handle">Item 5</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+
+                                <div class="dd">
+                                    <ol class="dd-list">
+                                        <li class="dd-item dd-drag-item" data-id="13">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 13</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="14">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 14</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="15">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 15</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item dd-drag-item" data-id="16">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 16</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="17">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 17</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="18">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 18</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="dd ks-nestable ks-primary">
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="1">
+                                            <div class="dd-handle">Item 1</div>
+                                        </li>
+                                        <li class="dd-item" data-id="2">
+                                            <div class="dd-handle">Item 2</div>
+                                        </li>
+                                        <li class="dd-item" data-id="3">
+                                            <div class="dd-handle">Item 3</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="4">
+                                                    <div class="dd-handle">Item 4</div>
+                                                </li>
+                                                <li class="dd-item" data-id="5" data-foo="bar">
+                                                    <div class="dd-handle">Item 5</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+
+                                <div class="dd ks-primary">
+                                    <ol class="dd-list">
+                                        <li class="dd-item dd-drag-item" data-id="13">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 13</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="14">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 14</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="15">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 15</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item dd-drag-item" data-id="16">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 16</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="17">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 17</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="18">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 18</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="dd ks-nestable ks-success">
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="1">
+                                            <div class="dd-handle">Item 1</div>
+                                        </li>
+                                        <li class="dd-item" data-id="2">
+                                            <div class="dd-handle">Item 2</div>
+                                        </li>
+                                        <li class="dd-item" data-id="3">
+                                            <div class="dd-handle">Item 3</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="4">
+                                                    <div class="dd-handle">Item 4</div>
+                                                </li>
+                                                <li class="dd-item" data-id="5" data-foo="bar">
+                                                    <div class="dd-handle">Item 5</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="dd ks-success">
+                                    <ol class="dd-list">
+                                        <li class="dd-item dd-drag-item" data-id="13">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 13</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="14">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 14</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="15">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 15</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item dd-drag-item" data-id="16">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 16</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="17">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 17</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="18">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 18</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="dd ks-nestable ks-info">
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="1">
+                                            <div class="dd-handle">Item 1</div>
+                                        </li>
+                                        <li class="dd-item" data-id="2">
+                                            <div class="dd-handle">Item 2</div>
+                                        </li>
+                                        <li class="dd-item" data-id="3">
+                                            <div class="dd-handle">Item 3</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="4">
+                                                    <div class="dd-handle">Item 4</div>
+                                                </li>
+                                                <li class="dd-item" data-id="5" data-foo="bar">
+                                                    <div class="dd-handle">Item 5</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="dd ks-info">
+                                    <ol class="dd-list">
+                                        <li class="dd-item dd-drag-item" data-id="13">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 13</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="14">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 14</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="15">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 15</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item dd-drag-item" data-id="16">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 16</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="17">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 17</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="18">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 18</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="dd ks-nestable ks-warning">
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="1">
+                                            <div class="dd-handle">Item 1</div>
+                                        </li>
+                                        <li class="dd-item" data-id="2">
+                                            <div class="dd-handle">Item 2</div>
+                                        </li>
+                                        <li class="dd-item" data-id="3">
+                                            <div class="dd-handle">Item 3</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="4">
+                                                    <div class="dd-handle">Item 4</div>
+                                                </li>
+                                                <li class="dd-item" data-id="5" data-foo="bar">
+                                                    <div class="dd-handle">Item 5</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="dd ks-warning">
+                                    <ol class="dd-list">
+                                        <li class="dd-item dd-drag-item" data-id="13">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 13</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="14">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 14</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="15">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 15</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item dd-drag-item" data-id="16">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 16</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="17">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 17</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="18">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 18</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="dd ks-nestable ks-danger">
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="1">
+                                            <div class="dd-handle">Item 1</div>
+                                        </li>
+                                        <li class="dd-item" data-id="2">
+                                            <div class="dd-handle">Item 2</div>
+                                        </li>
+                                        <li class="dd-item" data-id="3">
+                                            <div class="dd-handle">Item 3</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="4">
+                                                    <div class="dd-handle">Item 4</div>
+                                                </li>
+                                                <li class="dd-item" data-id="5" data-foo="bar">
+                                                    <div class="dd-handle">Item 5</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="dd ks-danger">
+                                    <ol class="dd-list">
+                                        <li class="dd-item dd-drag-item" data-id="13">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 13</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="14">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 14</div>
+                                        </li>
+                                        <li class="dd-item dd-drag-item" data-id="15">
+                                    <span class="dd-handle dd-drag-handle">
+                                        <span class="la la-bars ks-icon"></span>
+                                    </span>
+                                            <div class="dd-drag-content">Item 15</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item dd-drag-item" data-id="16">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 16</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="17">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 17</div>
+                                                </li>
+                                                <li class="dd-item dd-drag-item" data-id="18">
+                                            <span class="dd-handle dd-drag-handle">
+                                                <span class="la la-bars ks-icon"></span>
+                                            </span>
+                                                    <div class="dd-drag-content">Item 18</div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/nestable/jquery.nestable.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('.dd').nestable();
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

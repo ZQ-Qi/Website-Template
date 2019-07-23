@@ -1,0 +1,156 @@
+$screen-lg: 1200px !default;
+$screen-md: 992px !default;
+$screen-sm: 768px !default;
+
+// Columns for each screen size
+$cols-lg: 12 !default;
+$cols-md: 12 !default;
+$cols-sm: 12 !default;
+$cols-xs: 12 !default;
+
+// Gaps between widgets for each screen size
+$gap-lg: 1.3% !default;
+$gap-md: 2% !default;
+$gap-sm: 3% !default;
+$gap-xs: 4% !default;
+
+// Aspect ratio (width / height) between widgets for each screen size
+$aspect-lg: 2 / 3 !default;
+$aspect-md: 2 / 3 !default;
+$aspect-sm: 2 / 3 !default;
+$aspect-xs: 2 / 3 !default;
+
+// Maximum rows for each screen size
+// This affects file size of the resulting css quite a bit
+// so you might want to set it up with only the rows you need
+$max-rows-xs: 100 !default;
+$max-rows-sm: 100 !default;
+$max-rows-md: 30 !default;
+$max-rows-lg: 30 !default;
+
+.lt-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.lt {
+  position: absolute;
+  touch-action: none;
+}
+
+.lt-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin responsive-visibility($prefix, $cols, $max-rows, $gap, $aspect) {
+  $width: (100% - ($cols - 1) * $gap) / $cols;
+  $height: $width * $aspect;
+
+  @for $i from 0 through ($cols - 1) {
+    .lt-#{$prefix}-x-#{$i} {
+      margin-left: ($width + $gap) * $i;
+    }
+  }
+
+  @for $i from 0 through ($max-rows - 1) {
+    .lt-#{$prefix}-y-#{$i} {
+      margin-top: ($height + $gap) * $i;
+    }
+  }
+
+  @for $i from 1 through $cols {
+    .lt-#{$prefix}-w-#{$i} {
+      width: $width * $i + $gap * ($i - 1);
+    }
+  }
+
+  @for $i from 1 through $max-rows {
+    .lt-#{$prefix}-h-#{$i} {
+      padding-bottom: $height * $i + $gap * ($i - 1)
+    }
+  }
+}
+
+@include responsive-visibility('xs', $cols-xs, $max-rows-xs, $gap-xs, $aspect-xs);
+
+@media (min-width: $screen-sm) {
+  @include responsive-visibility('sm', $cols-sm, $max-rows-sm, $gap-sm, $aspect-sm);
+}
+
+@media (min-width: $screen-md) {
+  @include responsive-visibility('md', $cols-md, $max-rows-md, $gap-md, $aspect-md);
+}
+
+
+@media (min-width: $screen-lg) {
+  @include responsive-visibility('lg', $cols-lg, $max-rows-lg, $gap-lg, $aspect-lg);
+}
+
+.lt {
+  z-index: 1;
+  transition: margin-left 0.1s ease-out, margin-top 0.1s ease-out;
+}
+
+.lt-ghost {
+  z-index: 2;
+  border: 2px solid #0094f2;
+  border-radius: 3px;
+  pointer-events: none;
+  background-color: rgba(#0094f2, .5);
+  transition: margin-left 0s ease-out, margin-top 0s ease-out;
+}
+
+.lt-container {
+  transition: padding-bottom 0.1s ease-out;
+}
+
+.lt-container .lt-mask {
+  display: block;
+  border: none;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin responsive-visibility($parent, $prefix, $cols, $max-rows, $gap, $aspect) {
+  $width: (100% - ($cols - 1) * $gap) / $cols;
+  $height: $width * $aspect;
+
+  @for $i from 0 through ($cols - 1) {
+    #{$parent}.lt-#{$prefix}-x-#{$i}, #{$parent} .lt-#{$prefix}-x-#{$i} {
+      margin-left: ($width + $gap) * $i;
+    }
+  }
+
+  @for $i from 0 through ($max-rows - 1) {
+    #{$parent}.lt-#{$prefix}-y-#{$i}, #{$parent} .lt-#{$prefix}-y-#{$i} {
+      margin-top: ($height + $gap) * $i;
+    }
+  }
+
+  @for $i from 1 through $cols {
+    #{$parent}.lt-#{$prefix}-w-#{$i}, #{$parent} .lt-#{$prefix}-w-#{$i} {
+      width: $width * $i + $gap * ($i - 1);
+    }
+  }
+
+  @for $i from 1 through $max-rows {
+    #{$parent}.lt-#{$prefix}-h-#{$i}, #{$parent} .lt-#{$prefix}-h-#{$i} {
+      padding-bottom: $height * $i + $gap * ($i - 1);
+    }
+  }
+}
+
+@include responsive-visibility('.lt-only-xs','xs', $cols-xs, $max-rows-xs, $gap-xs, $aspect-xs);
+@include responsive-visibility('.lt-only-sm','sm', $cols-sm, $max-rows-sm, $gap-sm, $aspect-sm);
+@include responsive-visibility('.lt-only-md','md', $cols-md, $max-rows-md, $gap-md, $aspect-md);
+@include responsive-visibility('.lt-only-lg','lg', $cols-lg, $max-rows-lg, $gap-lg, $aspect-lg);

@@ -1,0 +1,703 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-messenger
+2. Recent discussions list / .ks-messenger > .ks-discussions
+3. Messages list / .ks-messenger > .ks-messages
+4. Discussion info sidebar / .ks-messenger > .ks-info
+-------------------------------------------------------------------*/
+
+@import '../config/mixins';
+@import '../config/colors';
+
+.ks-messenger {
+  display: flex;
+  height: 100%;
+
+  .ks-discussions {
+    background: #fff;
+    width: 340px;
+    border-right: 1px solid $ks-default-border-color;
+
+    > .ks-search {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      border-bottom: 1px solid $ks-default-border-color;
+
+      > .input-icon {
+        width: 100%;
+      }
+
+      .form-control {
+        border: none;
+        padding: 28px 20px;
+      }
+
+      .icon-addon {
+        color: rgba(58, 82, 155, 0.6);
+      }
+    }
+
+    > .ks-body {
+      .ks-items {
+        @include list-unstyled;
+
+        > .ks-item {
+          border-bottom: 1px solid $ks-default-border-color;
+
+          > a {
+            display: flex;
+            align-items: center;
+            color: $text-color;
+            padding: 15px 20px;
+
+            > .ks-group-amount {
+              position: relative;
+              top: 3px;
+              margin-right: 12px;
+              width: 36px;
+              height: 36px;
+              background-color: rgba(57, 81, 155, 0.1);
+              text-align: center;
+              line-height: 36px;
+              border-radius: 50%;
+
+              > .ks-badge {
+                position: absolute;
+                bottom: -1px;
+                right: -3px;
+              }
+            }
+
+            > .ks-avatar {
+              position: relative;
+              top: 3px;
+              margin-right: 12px;
+
+              > img {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+              }
+
+              > .ks-badge {
+                position: absolute;
+                bottom: -3px;
+                right: -3px;
+              }
+            }
+
+            > .ks-body {
+              flex-grow: 1;
+
+              > .ks-message {
+                font-size: 12px;
+                color: $ks-default-text-color-light;
+                display: flex;
+
+                > img {
+                  position: relative;
+                  top: -2px;
+                  width: 18px;
+                  height: 18px;
+                  margin-right: 5px;
+                }
+              }
+
+              > .ks-name {
+                display: flex;
+                margin-bottom: 4px;
+                justify-content: space-between;
+
+                > .ks-datetime {
+                  text-transform: uppercase;
+                  font-size: 10px;
+                  font-weight: normal;
+                  color: $ks-default-text-color-light;
+                  position: relative;
+                  top: 3px;
+                }
+              }
+            }
+          }
+
+          &.ks-active {
+            @include menu_active_item;
+
+            > a {
+              > .ks-group-amount {
+                background-color: rgba(57, 81, 155, 0.1);
+              }
+            }
+          }
+
+          &.ks-unread {
+            background: rgba(247, 202, 24, 0.1);
+
+            > a {
+              > .ks-body {
+                > .ks-message {
+                  color: $ks-default-text-color;
+                }
+              }
+
+              > .ks-group-amount {
+                background-color: rgba(222, 187, 12, 0.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ks-messages,
+  &__messages {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #fff;
+
+    > .ks-header {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      border-bottom: 1px solid $ks-default-border-color;
+      padding: 9px 20px;
+      justify-content: space-between;
+
+      > .ks-description {
+        > .ks-name {
+          font-size: 14px;
+          line-height: 14px;
+          margin-bottom: 5px;
+          font-weight: 500;
+        }
+
+        > .ks-amount {
+          color: $ks-default-text-color-light;
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+    }
+
+    > .ks-body {
+      flex-grow: 1;
+
+      .ks-items {
+        @include list-unstyled();
+        padding: 20px;
+
+        > .ks-separator {
+          color: $ks-default-text-color-light;
+          font-size: 10px;
+          text-align: center;
+          text-transform: uppercase;
+          margin-bottom: 15px;
+          margin-top: 15px;
+        }
+
+        > .ks-item {
+          display: flex;
+          margin-bottom: 12px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          > .ks-body {
+            font-size: 12px;
+            flex-grow: 1;
+            padding: 12px 15px;
+            border-radius: 2px;
+            position: relative;
+
+            > .ks-header {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 2px;
+
+              > .ks-name {
+                font-weight: 500;
+              }
+
+              > .ks-datetime {
+                font-size: 10px;
+                text-transform: uppercase;
+                color: $ks-default-text-color-light;
+              }
+            }
+
+            > .ks-message {
+              > .ks-link {
+                position: relative;
+                margin-top: 10px;
+                padding-left: 12px;
+
+                &:before {
+                  content: '';
+                  width: 4px;
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  left: 0;
+                  background-color: rgba(57, 81, 155, 0.2);
+                }
+              }
+
+              > .ks-files {
+                @include list-unstyled();
+
+                > .ks-file {
+                  float: left;
+                  margin-top: 15px;
+                  margin-right: 15px;
+
+                  a {
+                    display: block;
+                    color: $ks-default-text-color;
+                    vertical-align: top;
+
+                    > .ks-thumb, > .ks-info {
+                      float: left;
+                    }
+
+                    > .ks-thumb {
+                      margin-right: 5px;
+                      text-align: center;
+
+                      > .ks-icon {
+                        font-size: 36px;
+                        line-height: 36px;
+                      }
+
+                      > img {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 2px;
+                      }
+                    }
+
+                    > .ks-info {
+                      > .ks-name, > .ks-size {
+                        display: block;
+                      }
+
+                      > .ks-name {
+                        font-size: 12px;
+                        margin-bottom: 2px;
+                      }
+
+                      > .ks-size {
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        color: $ks-default-text-color-light;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.ks-self {
+            > .ks-avatar {
+              order: 1;
+            }
+
+            > .ks-body {
+              order: 2;
+              border: solid 1px $ks-default-border-color;
+              border-top-left-radius: 0;
+              margin-left: 14px;
+              margin-right: 50px;
+
+              &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: -10px;
+                top: -1px;
+                width: 0;
+                height: 0;
+                border-top: 10px solid $ks-default-border-color;
+                border-right: 0 solid transparent;
+                border-bottom: 0 solid transparent;
+                border-left: 10px solid transparent;
+              }
+
+              &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: -8px;
+                top: 0;
+                width: 0;
+                height: 0;
+                border-top: 10px solid #fff;
+                border-right: 0 solid transparent;
+                border-bottom: 0 solid transparent;
+                border-left: 10px solid transparent;
+              }
+            }
+          }
+
+          &.ks-from {
+            > .ks-avatar {
+              order: 2;
+            }
+
+            > .ks-body {
+              order: 1;
+              background-color: #eff1f7;
+              border-top-right-radius: 0;
+              margin-right: 14px;
+              margin-left: 50px;
+
+              &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                right: -10px;
+                top: 0;
+                width: 0;
+                height: 0;
+                border-top: 0 solid transparent;
+                border-right: 0 solid transparent;
+                border-bottom: 10px solid transparent;
+                border-left: 10px solid #eff1f7;
+              }
+            }
+          }
+
+          &.ks-unread {
+            > .ks-body {
+              background: #fcf8e7;
+            }
+
+            &.ks-self {
+              > .ks-body {
+                &:before, &:after {
+                  border-top: 10px solid #fcf8e7;
+                }
+              }
+            }
+
+            &.ks-from {
+              > .ks-body {
+                &:before {
+                  border-left: 10px solid #fcf8e7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .ks-footer {
+      padding: 15px 20px;
+      border-top: 1px solid $ks-default-border-color;
+      display: flex;
+
+      > .form-control {
+        flex-grow: 1;
+        height: 38px;
+        overflow: hidden;
+        resize: none;
+        margin-right: 20px;
+      }
+
+      > .ks-controls {
+        text-align: right;
+        width: 207px;
+        display: flex;
+        align-items: center;
+
+        .ks-attachment, .ks-smile {
+          font-size: 22px;
+          color: $text-primary-light;
+          line-height: 22px;
+          margin-left: 25px;
+        }
+
+        > .dropdown {
+          display: inline-block;
+
+          > .ks-smile {
+            padding: 0;
+          }
+
+          > .ks-smileys {
+            width: 200px;
+            height: 167px;
+
+            .ks-smileys-wrapper {
+              padding: 10px;
+            }
+
+            table {
+              width: 100%;
+
+              td {
+                vertical-align: middle;
+                text-align: center;
+                padding-bottom: 10px;
+                cursor: pointer;
+              }
+
+              tr:last-child {
+                td {
+                  padding-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .ks-files {
+      @include list-unstyled();
+      padding: 20px;
+      padding-top: 0;
+      padding-bottom: 10px;
+      margin-top: -10px;
+
+      >.ks-file {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-top: 10px;
+        position: relative;
+
+        &:hover {
+          > .ks-thumb {
+            border: solid 1px $ks-color-info;
+          }
+        }
+
+        > .ks-thumb {
+          width: 90px;
+          height: 90px;
+          border-radius: 2px;
+          background-color: #fff;
+          border: solid 1px $ks-default-border-color;
+          margin-bottom: 5px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          font-size: 45px;
+          color: $ks-color-primary;
+
+          &::before {
+            width: 100%;
+          }
+        }
+
+        > img.ks-thumb {
+          border: none;
+        }
+
+        > .ks-name {
+          display: block;
+          font-size: 12px;
+          font-weight: 400;
+          color: $ks-default-text-color;
+        }
+
+        > .ks-size {
+          position: relative;
+          top: -2px;
+          font-size: 10px;
+          color: $ks-default-text-color-light;
+        }
+      }
+    }
+  }
+
+  .ks-info,
+  &__info {
+    width: 240px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid $ks-default-border-color;
+
+    > .ks-header {
+      border-bottom: 1px solid $ks-default-border-color;
+      line-height: 15px;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      padding: 20px;
+    }
+
+    > .ks-body {
+      flex-grow: 1;
+      padding: 20px;
+
+      > .ks-item {
+        + .ks-item {
+          margin-top: 10px;
+        }
+
+        &.ks-user {
+          margin-bottom: 20px;
+          display: flex;
+
+          > .ks-avatar {
+            margin-right: 12px;
+          }
+
+          > .ks-name {
+            line-height: 31px;
+            color: $ks-default-text-color;
+          }
+        }
+
+        > .ks-name {
+          color: $ks-default-text-color-light;
+          margin-bottom: 3px;
+        }
+      }
+
+      > .ks-list {
+        > .ks-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: $ks-default-text-color-light;
+          margin-bottom: 15px;
+        }
+
+        .ks-item {
+          &.ks-user {
+            margin-bottom: 20px;
+            display: flex;
+
+            > .ks-avatar {
+              margin-right: 12px;
+            }
+
+            > .ks-name {
+              line-height: 31px;
+              color: $ks-default-text-color;
+            }
+          }
+
+          margin-bottom: 15px;
+
+          > .ks-owner {
+            position: relative;
+            top: 1px;
+
+            > .ks-name {
+              display: block;
+              line-height: 13px;
+            }
+
+            > .ks-label-sm {
+              padding: 2px;
+              font-size: 9px;
+            }
+          }
+        }
+      }
+    }
+
+    > .ks-footer {
+      padding: 20px;
+      border-top: 1px solid $ks-default-border-color;
+
+      > .ks-item {
+        + .ks-item {
+          margin-top: 10px;
+        }
+
+        > .ks-name {
+          color: $ks-default-text-color-light;
+          margin-bottom: 3px;
+        }
+      }
+
+      > .btn-block {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .btn {
+    &.ks-messenger-info-block-toggle {
+      position: static;
+    }
+  }
+
+  .ks-messenger {
+    .ks-info,
+    &__info {
+      position: fixed;
+      top: 120px;
+      bottom: 0;
+      right: -241px;
+      z-index: 4;
+      height: calc(100% - 120px);
+
+      &.ks-open {
+        right: 0;
+        transition: right .2s ease;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ks-messenger {
+    .ks-discussions {
+      width: 100%;
+    }
+
+    .ks-messages,
+    &__messages {
+      position: fixed;
+      top: 120px;
+      bottom: 0;
+      z-index: 2;
+      height: calc(100% - 120px);
+      width: 100%;
+      right: -1000px;
+
+      &.ks-open {
+        right: 0;
+        transition: right .2s ease;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .ks-messenger {
+    .ks-messages,
+    &__messages {
+      > .ks-footer {
+        flex-direction: column;
+
+        textarea {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &__ks-messages-footer {
+      flex-direction: column;
+
+      textarea {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

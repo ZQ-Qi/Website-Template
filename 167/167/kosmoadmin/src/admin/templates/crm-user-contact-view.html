@@ -1,0 +1,386 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/crm/contact.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>CRM / Contact</h3>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <div class="card ks-crm-contact-user-column">
+                                <div class="ks-crm-contact-user-column-main-info">
+                                    <section>
+                                        <span class="ks-crm-contact-user-send-message">
+                                            <span class="ks-icon la la-envelope"></span>
+                                        </span>
+                                        <img src="assets/img/avatars/avatar-4.jpg" width="100" height="100" class="ks-crm-contact-user-avatar rounded-circle">
+                                        <span class="ks-crm-contact-user-controls">
+                                            <div class="dropdown ks-control">
+                                                <a class="btn btn-link ks-no-text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="ks-icon la la-ellipsis-h"></span>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </section>
+                                    <section>
+                                        <div class="ks-crm-contact-user-name">Teresa Wells</div>
+                                        <div class="ks-crm-contact-user-location">New York, USA</div>
+                                        <div class="ks-crm-contact-user-rating">
+                                            <i class="la la-star ks-star" aria-hidden="true"></i>
+                                            <i class="la la-star ks-star" aria-hidden="true"></i>
+                                            <i class="la la-star ks-star" aria-hidden="true"></i>
+                                            <i class="la la-star ks-star" aria-hidden="true"></i>
+                                            <i class="la la-star-half-o ks-star" aria-hidden="true"></i>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="ks-crm-contact-user-column-custom-info">
+                                    <h6 class="ks-custom-info-header">Contact Information</h6>
+                                    <div class="ks-custom-info-item">
+                                        <div class="ks-custom-info-item-name">Email</div>
+                                        <div class="ks-custom-info-item-content">skarlett.78@gmail.com</div>
+                                    </div>
+                                    <div class="ks-custom-info-item">
+                                        <div class="ks-custom-info-item-name">Phone Number</div>
+                                        <div class="ks-custom-info-item-content">657-662-0825</div>
+                                    </div>
+                                    <div class="ks-custom-info-item">
+                                        <div class="ks-custom-info-item-name">Address</div>
+                                        <div class="ks-custom-info-item-content">1135 Reynolds Passage</div>
+                                    </div>
+                                </div>
+                                <div class="ks-crm-contact-user-column-custom-info">
+                                    <h6 class="ks-custom-info-header">Custom Information</h6>
+                                    <div class="ks-custom-info-item">
+                                        <div class="ks-custom-info-item-name">Facebook</div>
+                                        <div class="ks-custom-info-item-content"><a href="#">@skarlett.78</a></div>
+                                    </div>
+                                    <div class="ks-custom-info-item">
+                                        <div class="ks-custom-info-item-name">Personal Phone Number</div>
+                                        <div class="ks-custom-info-item-content">480-947-8193</div>
+                                    </div>
+                                </div>
+                                <div class="ks-crm-contact-user-column-custom-info">
+                                    <h6 class="ks-custom-info-header">Tags</h6>
+                                    <div class="ks-custom-info-item">
+                                        <span class="badge badge-default-outline">Tag 1</span>
+                                        <span class="badge badge-default-outline">Tag 2</span>
+                                    </div>
+                                </div>
+                                <div class="ks-crm-contact-user-column-custom-info">
+                                    <h6 class="ks-custom-info-header">Owner</h6>
+                                    <div class="ks-custom-info-item ks-user">
+                                        <img src="assets/img/avatars/avatar-9.jpg" class="ks-custom-info-item-user-avatar" width="25" height="25">
+                                        <div class="ks-custom-info-item-user-name">Joyce Henry</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-9">
+                            <div class="ks-crm-contact-user-tabs-column">
+                                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator">
+                                    <ul class="nav ks-nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#crm-tab-activity" aria-expanded="true">Activity</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#crm-tab-notes" aria-expanded="false">Notes</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#crm-tab-events" aria-expanded="false">Events</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#crm-tab-tasks" aria-expanded="false">Tasks</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#crm-tab-deals" aria-expanded="false">Deals</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#crm-tab-campaigns" aria-expanded="false">Campaigns</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="tab" data-target="#crm-tab-documents" aria-expanded="false">Documents</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active ks-scrollable" id="crm-tab-activity" role="tabpanel" aria-expanded="true" data-height="735">
+                                            <div class="ks-crm-user-view-activity-block">
+                                                <h4 class="ks-crm-user-view-activity-header">October, 2016</h4>
+
+                                                <div class="ks-crm-user-view-activity-items">
+                                                    <div class="ks-crm-user-view-activity-item">
+                                                        <div class="ks-crm-user-view-activity-item-badge">
+                                                            <span class="badge ks-circle badge-info"></span>
+                                                        </div>
+                                                        <div class="ks-crm-user-view-activity-item-date">Oct 12</div>
+                                                        <div class="ks-crm-user-view-activity-item-action">
+                                                            <div class="ks-crm-user-view-activity-item-action-name">
+                                                                <span class="ks-icon la la-check-circle-o"></span>
+                                                                <span class="ks-text">Task added</span>
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-description">
+                                                                Prepare for a bi-weekly meeting to discuss new features
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-time">12:22 PM</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ks-crm-user-view-activity-item">
+                                                        <div class="ks-crm-user-view-activity-item-badge">
+                                                            <span class="badge ks-circle badge-purple"></span>
+                                                        </div>
+                                                        <div class="ks-crm-user-view-activity-item-date">Oct 11</div>
+                                                        <div class="ks-crm-user-view-activity-item-action">
+                                                            <div class="ks-crm-user-view-activity-item-action-name">
+                                                                <span class="ks-icon la la-plus-circle"></span>
+                                                                <span class="ks-text">Deal added</span>
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-description">
+                                                                Deal for the property in Malibu with Casey Brother Real Estate
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-time">12:22 AM</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ks-crm-user-view-activity-item">
+                                                        <div class="ks-crm-user-view-activity-item-badge">
+                                                            <span class="badge ks-circle badge-success"></span>
+                                                        </div>
+                                                        <div class="ks-crm-user-view-activity-item-date">Oct 9</div>
+                                                        <div class="ks-crm-user-view-activity-item-action">
+                                                            <div class="ks-crm-user-view-activity-item-action-name">
+                                                                <span class="ks-icon la la-clock-o"></span>
+                                                                <span class="ks-text">Event completed</span>
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-description">
+                                                                Deal for the property in Malibu with Casey Brother Real Estate
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-time">12:22 PM</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <h4 class="ks-crm-user-view-activity-header">September, 2016</h4>
+
+                                                <div class="ks-crm-user-view-activity-items">
+                                                    <div class="ks-crm-user-view-activity-item">
+                                                        <div class="ks-crm-user-view-activity-item-badge">
+                                                            <span class="badge ks-circle badge-info"></span>
+                                                        </div>
+                                                        <div class="ks-crm-user-view-activity-item-date">Oct 12</div>
+                                                        <div class="ks-crm-user-view-activity-item-action">
+                                                            <div class="ks-crm-user-view-activity-item-action-name">
+                                                                <span class="ks-icon la la-check-circle-o"></span>
+                                                                <span class="ks-text">Task added</span>
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-description">
+                                                                Prepare for a bi-weekly meeting to discuss new features
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-time">12:22 PM</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ks-crm-user-view-activity-item">
+                                                        <div class="ks-crm-user-view-activity-item-badge">
+                                                            <span class="badge ks-circle badge-purple"></span>
+                                                        </div>
+                                                        <div class="ks-crm-user-view-activity-item-date">Oct 12</div>
+                                                        <div class="ks-crm-user-view-activity-item-action">
+                                                            <div class="ks-crm-user-view-activity-item-action-name">
+                                                                <span class="ks-icon la la-check-circle-o"></span>
+                                                                <span class="ks-text">Task added</span>
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-description">
+                                                                Prepare for a bi-weekly meeting to discuss new features
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-time">12:22 PM</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ks-crm-user-view-activity-item">
+                                                        <div class="ks-crm-user-view-activity-item-badge">
+                                                            <span class="badge ks-circle badge-success"></span>
+                                                        </div>
+                                                        <div class="ks-crm-user-view-activity-item-date">Oct 12</div>
+                                                        <div class="ks-crm-user-view-activity-item-action">
+                                                            <div class="ks-crm-user-view-activity-item-action-name">
+                                                                <span class="ks-icon la la-check-circle-o"></span>
+                                                                <span class="ks-text">Task added</span>
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-description">
+                                                                Prepare for a bi-weekly meeting to discuss new features
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-time">12:22 PM</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <h4 class="ks-crm-user-view-activity-header">August, 2016</h4>
+
+                                                <div class="ks-crm-user-view-activity-items">
+                                                    <div class="ks-crm-user-view-activity-item">
+                                                        <div class="ks-crm-user-view-activity-item-badge">
+                                                            <span class="badge ks-circle badge-info"></span>
+                                                        </div>
+                                                        <div class="ks-crm-user-view-activity-item-date">Oct 12</div>
+                                                        <div class="ks-crm-user-view-activity-item-action">
+                                                            <div class="ks-crm-user-view-activity-item-action-name">
+                                                                <span class="ks-icon la la-check-circle-o"></span>
+                                                                <span class="ks-text">Task added</span>
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-description">
+                                                                Prepare for a bi-weekly meeting to discuss new features
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-time">12:22 PM</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ks-crm-user-view-activity-item">
+                                                        <div class="ks-crm-user-view-activity-item-badge">
+                                                            <span class="badge ks-circle badge-purple"></span>
+                                                        </div>
+                                                        <div class="ks-crm-user-view-activity-item-date">Oct 12</div>
+                                                        <div class="ks-crm-user-view-activity-item-action">
+                                                            <div class="ks-crm-user-view-activity-item-action-name">
+                                                                <span class="ks-icon la la-check-circle-o"></span>
+                                                                <span class="ks-text">Task added</span>
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-description">
+                                                                Prepare for a bi-weekly meeting to discuss new features
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-time">12:22 PM</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ks-crm-user-view-activity-item">
+                                                        <div class="ks-crm-user-view-activity-item-badge">
+                                                            <span class="badge ks-circle badge-success"></span>
+                                                        </div>
+                                                        <div class="ks-crm-user-view-activity-item-date">Oct 12</div>
+                                                        <div class="ks-crm-user-view-activity-item-action">
+                                                            <div class="ks-crm-user-view-activity-item-action-name">
+                                                                <span class="ks-icon la la-check-circle-o"></span>
+                                                                <span class="ks-text">Task added</span>
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-description">
+                                                                Prepare for a bi-weekly meeting to discuss new features
+                                                            </div>
+                                                            <div class="ks-crm-user-view-activity-item-action-time">12:22 PM</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="crm-tab-notes" role="tabpanel" aria-expanded="false" data-height="735">
+                                            Content 2
+                                        </div>
+                                        <div class="tab-pane" id="crm-tab-events" role="tabpanel" aria-expanded="false" data-height="735">
+                                            Content 3
+                                        </div>
+                                        <div class="tab-pane" id="crm-tab-tasks" role="tabpanel" aria-expanded="false" data-height="735">
+                                            Content 3
+                                        </div>
+                                        <div class="tab-pane" id="crm-tab-deals" role="tabpanel" aria-expanded="false" data-height="735">
+                                            Content 3
+                                        </div>
+                                        <div class="tab-pane" id="crm-tab-campaigns" role="tabpanel" aria-expanded="false" data-height="735">
+                                            Content 3
+                                        </div>
+                                        <div class="tab-pane" id="crm-tab-documents" role="tabpanel" aria-expanded="false" data-height="735">
+                                            Content 3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card ks-card-widget ks-card-widget-simple ks-crm-contact-widget">
+                                <div class="card-header">
+                                    <div class="dropdown ks-control">
+                                        <a class="btn btn-link ks-no-text ks-no-arrow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="ks-icon la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" href="#">Add Card</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-block">
+                                    <div class="ks-crm-contact-widget-item-name">
+                                        <span class="ks-icon la la-skype ks-color-info"></span> Skype
+                                    </div>
+                                    <div class="ks-crm-contact-widget-item-body">
+                                        <div class="ks-crm-contact-widget-item-info">
+                                            <div class="ks-crm-contact-widget-item-info-item-name">Beverly Burke</div>
+                                            <div class="ks-crm-contact-widget-item-info-item-description">
+                                                <a href="#">beverly.burke@example.com</a>
+                                            </div>
+                                        </div>
+                                        <div class="ks-crm-contact-widget-item-action">
+                                            <span class="ks-icon la la-phone-square ks-color-info"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card ks-card-widget ks-card-widget-simple ks-crm-contact-widget">
+                                <div class="card-header">
+                                    <div class="dropdown ks-control">
+                                        <a class="btn btn-link ks-no-text ks-no-arrow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="ks-icon la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" href="#">Add Card</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-block">
+                                    <div class="ks-crm-contact-widget-item-name">
+                                        <span class="ks-icon la la-paypal ks-color-primary"></span> Paypal
+                                    </div>
+                                    <div class="ks-crm-contact-widget-item-body">
+                                        <div class="ks-crm-contact-widget-item-info">
+                                            <div class="ks-crm-contact-widget-item-info-item-name">
+                                                beverly.burke@paypal.com
+                                            </div>
+                                        </div>
+                                        <div class="ks-crm-contact-widget-item-action">
+                                            <span class="ks-icon la la-check-circle-o ks-color-success"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card ks-crm-contact-add-widget">
+                                <div>
+                                    <span class="ks-icon la la-plus-circle"></span> Add Widget
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+@@include('./_partials/footer.html')

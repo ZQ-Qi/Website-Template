@@ -1,0 +1,45 @@
+// fixed-top
+nav.header-navbar.navbar-expand-md.navbar.navbar-with-menu(class=navbarPosition + ' '+ navbarColor, class=(navbarHideOnScroll == true ? 'navbar-hide-on-scroll' : ''), class=(navbarBorder == true ? 'navbar-border' : ''), class=(navbarShadow == true ? 'navbar-shadow' : ''), class=(navbarBrandCenter == true ? 'navbar-brand-center' : ''), class=(boxedLayout == true ? 'container boxed-layout' : ''))
+  .navbar-wrapper
+    .navbar-header
+      ul.nav.navbar-nav.flex-row
+        li.nav-item.mobile-menu.d-md-none.mr-auto
+          a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')
+              i.ft-menu.font-large-1
+        li.nav-item
+          a.navbar-brand(href='index.html')
+            img(class='brand-logo' alt='stack admin logo' src=(logoType == 'dark' ? app_assets_path+'/images/logo/stack-logo.png' : app_assets_path+'/images/logo/stack-logo-light.png'))
+            h2.brand-text Stack
+        li.nav-item.d-md-none
+          a.nav-link.open-navbar-container(data-toggle='collapse', data-target='#navbar-mobile')
+            i.fa.fa-ellipsis-v
+    .navbar-container(class= (centerLayout == true ? 'container center-layout' : 'content'))
+      #navbar-mobile.navbar-toggleable-sm
+        ul.nav.navbar-nav.mr-auto.float-left
+          li.nav-item.d-none.d-md-block
+            a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')
+              i.ft-menu
+        ul.nav.navbar-nav.float-right
+          li.dropdown.dropdown-user.nav-item
+            a.dropdown-toggle.nav-link.dropdown-user-link(href='#', data-toggle='dropdown')
+              span.avatar.avatar-online
+                img(src=app_assets_path+'/images/portrait/small/avatar-s-1.png', alt='avatar')
+                i
+              span.user-name John Doe
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item(href='#')
+                i.ft-user
+                |  Edit Profile
+              a.dropdown-item(href='#')
+                i.ft-mail
+                |  My Inbox
+              a.dropdown-item(href='#')
+                i.ft-check-square
+                |  Task
+              a.dropdown-item(href='#')
+                i.ft-message-square
+                |  Chats
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.ft-power
+                |  Logout

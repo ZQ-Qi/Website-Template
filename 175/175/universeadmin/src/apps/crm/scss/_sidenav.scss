@@ -1,0 +1,97 @@
+.sidenav {
+  width: 266px;
+  height: 100%;
+  box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+  background: #fff;
+  position: relative;
+
+  &__scrollpane {
+    @include mx-scrollpane();
+  }
+
+  &__nav,
+  &__subnav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__nav {
+    &-item {
+      border-bottom: 1px solid rgba($border-color, .7);
+    }
+
+    &-link {
+      height: 62px;
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      color: $color-gray;
+      cursor: pointer;
+      position: relative;
+      border-bottom: 1px solid transparent;
+
+      &-icon {
+        font-size: 28px;
+        line-height: 28px;
+        color: rgba(#455161, .5);
+        width: 28px;
+        margin-right: 18px;
+      }
+
+      &:after {
+        content: "\F140";
+        font-family: $fonts-iconfont;
+        font-size: 21px;
+        position: absolute;
+        right: 20px;
+        line-height: 8px;
+        top: calc(50% - 1px);
+        transition: transform $transition;
+      }
+    }
+
+    &-item.is-active &-link,
+    &-item.is-active &-link-icon {
+      color: $color-lasur;
+    }
+
+    &-item.is-active &-link {
+      border-bottom: 1px solid rgba($border-color, .7);
+
+      &:after {
+        transform: rotate(-180deg);
+        transform-origin: center;
+      }
+    }
+  }
+
+  &__nav-item.is-active &__subnav {
+    display: block;
+    height: auto;
+  }
+
+  &__subnav {
+    height: 0;
+    overflow: hidden;
+
+    &-link {
+      height: 44px;
+      display: flex;
+      color: $color-gray;
+      padding: 0 20px 0 65px;
+      align-items: center;
+      @include mx-link($color-gray, #0094f2);
+
+      &:hover {
+        background: rgba(#0094f2, .05);
+      }
+
+      &.is-active {
+        background: rgba(#0094f2, .1);
+        color: #0094f2;
+      }
+    }
+  }
+}

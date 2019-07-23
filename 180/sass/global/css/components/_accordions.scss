@@ -1,0 +1,154 @@
+/*---------------------------
+
+Start accordions
+
+---------------------------*/
+
+.accordion {
+  a {
+    position: $position-relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: $gaping-15 $gaping-45 $gaping-15 $gaping-15;
+    font-size: 17px;
+    border-bottom: 1px solid $main-site-color;
+    &:hover {
+      cursor: $text-link;
+      color: $main-site-color;
+      &:after {
+        cursor: $text-link;
+        color: $main-site-color;
+        border: 1px solid $main-site-color;
+      }
+    }
+    &.active {
+      color: $main-site-color;
+      border-bottom: 1px solid $main-site-color;
+      &:after {
+        font-family: 'FontAwesome';
+        content: "\f068";
+        color: $main-site-color;
+        border: 1px solid $main-site-color;
+      }
+    }
+    &:after {
+      font-family: 'FontAwesome';
+      content: "\f067";
+      position: $position-absolute;
+      float: $right-division;
+      right: $gaping-10;
+      font-size: 18px;
+      padding: 4px;
+      width: $gaping-35;
+      height: $gaping-35;
+      border-radius: 20px;
+      border: 1px solid $main-site-color;
+      color: $main-site-color;
+      text-align: $text-center;
+    }
+  }
+  .content {
+    display: none;
+    padding: 1rem;
+    border-bottom: 1px solid $main-site-color;
+    overflow: hidden;
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}
+#accordion2{
+  .panel-heading{
+    background: $main-site-color;
+    a{
+      position: $position-relative;
+      display: block;
+      color: $white-text-color;
+      &:before {
+        content: "\f077";
+        font-size: 24px;
+        position: $position-absolute;
+        font-family: 'FontAwesome';
+        right: $gaping-5;
+        top: 0;
+        transform: rotate(180deg);
+        transition: all 0.5s;
+      }
+    }
+    &.active{
+      a{
+        &:brfore{
+          transform: rotate(0deg);
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
+.border-accordion{
+  .panel-heading{
+    border: 2px solid $main-site-color;
+    padding: 8px $gaping-15;
+    a{
+      position: $position-relative;
+      text-align: $text-center;
+      display: block;
+    }
+  }
+}
+
+/*---- Start responsive accordions ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:479px) {
+  .accordion{
+    a {
+      font-size: 14px;
+      &:after {
+        right: $gaping-5;
+        font-size: 16px;
+        padding: 3px;
+        width: $gaping-30;
+        height: $gaping-30;
+      }
+    }
+  }
+  #accordion2{
+    .panel-heading{
+      a{
+        &:before {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .border-accordion{
+    .panel-heading {
+      border: 1px solid #4390ff;
+      padding: $gaping-5 $gaping-10;
+    }
+  }
+}
+/*---- End responsive accordions ----*/
+
+/*---------------------------
+
+End accordions
+
+---------------------------*/

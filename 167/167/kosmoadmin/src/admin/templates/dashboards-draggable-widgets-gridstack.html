@@ -1,0 +1,661 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/c3js/c3.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="libs/gridstack/gridstack.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="libs/gridstack/gridstack-extra.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/gridstack/gridstack.min.css"> <!-- Customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/widgets/panels.min.css">
+<link rel="stylesheet" type="text/css" href="assets/scripts/charts/radial-progress/radial-progress.chart.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Dashboard / Draggable Panels</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-dashboard-grid">
+                <div class="container-fluid">
+                    <div class="grid-stack ks-grid-stack">
+                        <div class="grid-stack-item"
+                             data-gs-x="0" data-gs-y="0"
+                             data-gs-width="3" data-gs-height="2">
+                            <div class="grid-stack-item-content">
+                                <div class="ks-dashboard-widget ks-widget-amount-statistics ks-info ks-auto-height">
+                                    <div class="ks-statistics">
+                                        <span class="ks-amount" data-count-up="3119">6,555</span>
+                                        <span class="ks-text">total sales gross</span>
+                                    </div>
+                                    <div class="ks-percent ks-down"><span class="ks-text">5%</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item"
+                             data-gs-x="3" data-gs-y="0"
+                             data-gs-width="3" data-gs-height="2">
+                            <div class="grid-stack-item-content">
+                                <div class="ks-dashboard-widget ks-widget-amount-chart-statistics ks-white ks-auto-height">
+                                    <div class="ks-body">
+                                        <div class="ks-statistics">
+                                            <span class="ks-text">CPU</span>
+                                            <span class="ks-amount">50%</span>
+                                        </div>
+                                        <div class="ks-chart">
+                                            <div id="ks-cpu-radial-progress-chart" class="ks-radial-progress-chart ks-primary"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ks-footer">
+                                        <div id="ks-cpu-area-chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item"
+                             data-gs-x="6" data-gs-y="0"
+                             data-gs-width="3" data-gs-height="2">
+                            <div class="grid-stack-item-content">
+                                <div class="card panel panel-purple ks-amount-widget" data-type="purple">
+                                    <div class="card-header">
+                                        Today sent
+
+                                        <div class="ks-controls">
+                                            <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-block panel-body">
+                                        <div class="ks-amount">1,540</div>
+                                        <div class="ks-progress">
+                                            <div class="progress ks-progress-xs">
+                                                <div class="progress-bar bg-white" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ks-desc ks-up">
+                                            4% more than last month
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item"
+                             data-gs-x="9" data-gs-y="0"
+                             data-gs-width="3" data-gs-height="2">
+                            <div class="grid-stack-item-content">
+                                <div class="card panel panel-success ks-amount-widget" data-type="success">
+                                    <div class="card-header">
+                                        New Subscribers
+
+                                        <div class="ks-controls">
+                                            <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-block panel-body">
+                                        <div class="ks-amount">2,200</div>
+                                        <div class="ks-progress">
+                                            <div class="progress ks-progress-xs">
+                                                <div class="progress-bar bg-white" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ks-desc ks-up">
+                                            12% less than last month
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item"
+                             data-gs-x="0" data-gs-y="2"
+                             data-gs-width="6" data-gs-height="4">
+                            <div class="grid-stack-item-content">
+                                <div id="ks-bar-chart-panel" class="card panel">
+                                    <h5 class="card-header">
+                                        Bar chart
+
+                                        <div class="ks-controls">
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-minus"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-refresh"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-expand"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-close"></span>
+                                            </a>
+                                        </div>
+                                    </h5>
+                                    <div class="card-block">
+                                        <div id="ks-bar-chart" data-height="278"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item"
+                             data-gs-x="6" data-gs-y="2"
+                             data-gs-width="6" data-gs-height="4">
+                            <div class="grid-stack-item-content">
+                                <div id="ks-line-chart-panel" class="card panel">
+                                    <h5 class="card-header">
+                                        Line chart
+
+                                        <div class="ks-controls">
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-minus"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-refresh"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-expand"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-close"></span>
+                                            </a>
+                                        </div>
+                                    </h5>
+                                    <div class="card-block">
+                                        <div id="ks-line-chart" data-height="278"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item"
+                             data-gs-x="0" data-gs-y="8"
+                             data-gs-width="12" data-gs-height="4">
+                            <div class="grid-stack-item-content">
+                                <div class="card panel panel-default ks-widget ks-chart">
+                                    <div class="card-header">
+                                        Statistics
+
+                                        <div class="ks-controls">
+                                            <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-block" data-height="318">
+                                        <div class="ks-header">
+                                            <div class="ks-labels">
+                                            <span class="ks-label">
+                                                <span class="ks-point ks-bg-purple"></span>
+                                                <span class="ks-text">Sent</span>
+                                            </span>
+                                                <span class="ks-label">
+                                                <span class="ks-point ks-bg-primary"></span>
+                                                <span class="ks-text">Open (87%)</span>
+                                            </span>
+                                            </div>
+                                            <div class="ks-sort">
+                                                <div class="dropdown">
+                                                    <a class="btn btn-link dropdown-toggle" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="ks-text">Sort by:</span> 7 days
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                                        <a class="dropdown-item" href="#">7 days</a>
+                                                        <a class="dropdown-item" href="#">2 weeks</a>
+                                                        <a class="dropdown-item" href="#">1 month</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ks-wrapper">
+                                            <div id="ks-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item"
+                             data-gs-x="0" data-gs-y="12"
+                             data-gs-width="6" data-gs-height="4">
+                            <div class="grid-stack-item-content">
+                                <div class="card panel panel-table">
+                                    <h5 class="card-header">
+                                        Trends
+                                    </h5>
+                                    <div class="card-block ks-scrollable" data-height="320">
+                                        <table class="table table-bordered table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th width="1">#</th>
+                                                <th>Search Terms</th>
+                                                <th width="100">Views</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td scope="row">1</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">2</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">3</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">4</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">5</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">6</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">7</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">8</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">9</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">10</td>
+                                                <td>The Dark Knight Rises (Google Russia)</td>
+                                                <td class="ks-color-success ks-text-bold">317,233</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item"
+                             data-gs-x="6" data-gs-y="12"
+                             data-gs-width="3" data-gs-height="4">
+                            <div class="grid-stack-item-content">
+                                <div class="card panel ks-widget ks-widget-to-do-list">
+                                    <div class="card-header">
+                                        To Do List
+
+                                        <div class="ks-controls">
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-minus"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-expand"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-close"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <div class="ks-header">
+                                            Remaining 3 of 5
+                                            <button class="btn btn-primary ks-light">Archive</button>
+                                        </div>
+                                        <div class="ks-body ks-scrollable" data-height="182">
+                                            <ul class="ks-wrapper">
+                                                <li class="ks-task">
+                                                    <span class="ks-icon la la-bars"></span>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c1" type="checkbox" class="custom-control-input">
+                                                        <label class="custom-control-label" for="c1">Android app design</label>
+                                                    </div>
+                                                </li>
+                                                <li class="ks-task">
+                                                    <span class="ks-icon la la-bars"></span>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c2" type="checkbox" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="c2">iOS app design</label>
+                                                    </div>
+                                                </li>
+                                                <li class="ks-task">
+                                                    <span class="ks-icon la la-bars"></span>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c3" type="checkbox" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="c3">Need to make a wireframe</label>
+                                                    </div>
+                                                </li>
+                                                <li class="ks-task">
+                                                    <span class="ks-icon la la-bars"></span>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c4" type="checkbox" class="custom-control-input">
+                                                        <label class="custom-control-label" for="c4">Android app design</label>
+                                                    </div>
+                                                </li>
+                                                <li class="ks-task">
+                                                    <span class="ks-icon la la-bars"></span>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c5" type="checkbox" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="c5">iOS app design</label>
+                                                    </div>
+                                                </li>
+                                                <li class="ks-task">
+                                                    <span class="ks-icon la la-bars"></span>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c6" type="checkbox" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="c6">Need to make a wireframe</label>
+                                                    </div>
+                                                </li>
+                                                <li class="ks-task">
+                                                    <span class="ks-icon la la-bars"></span>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c7" type="checkbox" class="custom-control-input">
+                                                        <label class="custom-control-label" for="c7">Dinner with a kids at 8:30 PM</label>
+                                                    </div>
+                                                </li>
+                                                <li class="ks-task ks-completed">
+                                                    <span class="ks-icon la la-bars"></span>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c8" type="checkbox" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="c8">Grocery shopping</label>
+                                                    </div>
+                                                </li>
+                                                <li class="ks-task ks-completed">
+                                                    <span class="ks-icon la la-bars"></span>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="c9" type="checkbox" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="c9">Need to make a wireframe</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <form class="ks-footer">
+                                            <input type="text" class="form-control" placeholder="Add a new task...">
+                                            <button class="btn btn-primary">Add</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item"
+                             data-gs-x="9" data-gs-y="12"
+                             data-gs-width="3" data-gs-height="4">
+                            <div class="grid-stack-item-content">
+                                <div class="card panel ks-widget ks-widget-followers">
+                                    <div class="card-header">
+                                        New Followers
+
+                                        <div class="ks-controls">
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-minus"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-expand"></span>
+                                            </a>
+                                            <a href="#" class="ks-control">
+                                                <span class="ks-icon la la-close"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-block ks-scrollable" data-height="318">
+                                        <div class="ks-wrapper">
+                                            <div class="ks-user">
+                                                <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                                <div class="ks-info">
+                                                    <a href="#" class="ks-name">Carl Nelson</a>
+                                                    <span class="ks-description">@berezhski</span>
+                                                </div>
+                                                <button class="btn btn-success">Unfollow</button>
+                                            </div>
+                                            <div class="ks-user">
+                                                <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-2.jpg" width="36" height="36">
+                                                <div class="ks-info">
+                                                    <a href="#" class="ks-name">Carl Nelson</a>
+                                                    <span class="ks-description">@berezhski</span>
+                                                </div>
+                                                <button class="btn btn-outline-success">Follow</button>
+                                            </div>
+                                            <div class="ks-user">
+                                                <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-3.jpg" width="36" height="36">
+                                                <div class="ks-info">
+                                                    <a href="#" class="ks-name">Carl Nelson</a>
+                                                    <span class="ks-description">@berezhski</span>
+                                                </div>
+                                                <button class="btn btn-outline-success">Follow</button>
+                                            </div>
+                                            <div class="ks-user">
+                                                <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-4.jpg" width="36" height="36">
+                                                <div class="ks-info">
+                                                    <a href="#" class="ks-name">Carl Nelson</a>
+                                                    <span class="ks-description">@berezhski</span>
+                                                </div>
+                                                <button class="btn btn-outline-success">Follow</button>
+                                            </div>
+                                            <div class="ks-user">
+                                                <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-11.jpg" width="36" height="36">
+                                                <div class="ks-info">
+                                                    <a href="#" class="ks-name">Carl Nelson</a>
+                                                    <span class="ks-description">@berezhski</span>
+                                                </div>
+                                                <button class="btn btn-outline-success">Follow</button>
+                                            </div>
+                                            <div class="ks-user">
+                                                <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-10.jpg" width="36" height="36">
+                                                <div class="ks-info">
+                                                    <a href="#" class="ks-name">Carl Nelson</a>
+                                                    <span class="ks-description">@berezhski</span>
+                                                </div>
+                                                <button class="btn btn-outline-success">Follow</button>
+                                            </div>
+                                            <div class="ks-user">
+                                                <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-5.jpg" width="36" height="36">
+                                                <div class="ks-info">
+                                                    <a href="#" class="ks-name">Carl Nelson</a>
+                                                    <span class="ks-description">@berezhski</span>
+                                                </div>
+                                                <button class="btn btn-outline-success">Follow</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/jquery/jquery-ui.min.js"></script>
+<script src="libs/lodash/lodash.js"></script>
+<script src="libs/gridstack/gridstack.min.js"></script>
+<script src="libs/gridstack/gridstack.jQueryUI.min.js"></script>
+<script src="libs/d3/d3.min.js"></script>
+<script src="libs/c3js/c3.min.js"></script>
+<script src="assets/scripts/charts/radial-progress/radial-progress.chart.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        var options = {
+            cellHeight: 70,
+            verticalMargin: 30,
+            float: false
+        };
+        $('.ks-grid-stack').gridstack(options);
+
+        var cpuRadialProgressChart = new KosmoCharts.RadialProgress('#ks-cpu-radial-progress-chart', {
+            lineWidth: 8,
+            size: 50,
+            showAmount: false,
+            amount: 50
+        });
+        cpuRadialProgressChart.render();
+
+        google.charts.load('current', {'packages':['corechart', 'bar', 'line']});
+        google.charts.setOnLoadCallback(drawBarChart);
+        google.charts.setOnLoadCallback(drawLineChart);
+        google.charts.setOnLoadCallback(function () {
+            var data = google.visualization.arrayToDataTable([
+                ['CPU', 'Usages'],
+                [10,  30],
+                [11,  50],
+                [12,  10],
+                [13,  80],
+                [14,  20],
+                [15,  90],
+                [16,  60],
+                [17,  30],
+                [18,  50],
+                [19,  20],
+                [20,  40],
+                [21,  50],
+                [22,  90],
+                [23,  80],
+                [24,  20],
+                [25,  90],
+                [26,  50],
+                [27,  30],
+                [28,  60],
+                [29,  30]
+            ]);
+
+            var options = {
+                title: null,
+                height: 40,
+                legend: {position: 'none'},
+                backgroundColor: {
+                    fill: 'transparent'
+                },
+                chartArea:{
+                    left:0,
+                    top:0,
+                    right: 0,
+                    height: 40
+                },
+                lineWidth: 1,
+                colors:['#c4cbe1','#ebeef5'],
+                hAxis: {
+                    baselineColor: 'none',
+                    gridlines: {
+                        color: '#fff'
+                    }
+                },
+                vAxis: {
+                    baselineColor: 'none',
+                    maxValue: 115,
+                    gridlines: {
+                        color: '#e1e5f0'
+                    }
+                }
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('ks-cpu-area-chart'));
+            chart.draw(data, options);
+        });
+
+        function drawBarChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses', 'Profit'],
+                ['2014', 1000, 400, 200],
+                ['2015', 1170, 460, 250],
+                ['2016', 660, 1120, 300],
+                ['2017', 1030, 540, 350]
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Company Performance',
+                    subtitle: 'Sales, Expenses, and Profit: 2014-2017'
+                }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('ks-bar-chart'));
+
+            chart.draw(data, options);
+        }
+
+        function drawLineChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'Day');
+            data.addColumn('number', 'Guardians of the Galaxy');
+            data.addColumn('number', 'The Avengers');
+            data.addColumn('number', 'Transformers: Age of Extinction');
+            data.addRows([
+                [1,  37.8, 80.8, 41.8],
+                [2,  30.9, 69.5, 32.4],
+                [3,  25.4,   57, 25.7],
+                [4,  11.7, 18.8, 10.5],
+                [5,  11.9, 17.6, 10.4],
+                [6,   8.8, 13.6,  7.7],
+                [7,   7.6, 12.3,  9.6],
+                [8,  12.3, 29.2, 10.6],
+                [9,  16.9, 42.9, 14.8],
+                [10, 12.8, 30.9, 11.6],
+                [11,  5.3,  7.9,  4.7],
+                [12,  6.6,  8.4,  5.2],
+                [13,  4.8,  6.3,  3.6],
+                [14,  4.2,  6.2,  3.4]
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Box Office Earnings in First Two Weeks of Opening',
+                    subtitle: 'in millions of dollars (USD)'
+                }
+            };
+
+            var chart = new google.charts.Line(document.getElementById('ks-line-chart'));
+
+            chart.draw(data, options);
+        }
+
+        $('.ks-update').on('click', function() {
+            var card = $(this).closest('.card');
+
+            card.LoadingOverlay("show", {
+                image: "",
+                custom: $("<div>", {
+                    text: 'Loading...'
+                }),
+                color: "rgba(255, 255, 255, 0.6)",
+                zIndex: 2
+            });
+
+            setTimeout(function() {
+                card.LoadingOverlay("hide");
+            }, 2000);
+        });
+
+        var chart = c3.generate({
+            bindto: '#ks-chart',
+            size: {
+                height: 240
+            },
+            data: {
+                columns: [
+                    ['data1', 300, 350, 300, 0, 0, 0],
+                    ['data2', 130, 100, 140, 200, 150, 50]
+                ],
+                types: {
+                    data1: 'area-spline',
+                    data2: 'area-spline'
+                },
+                colors: {
+                    data1: '#3a529b',
+                    data2: '#cb48bb'
+                }
+            }
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

@@ -1,0 +1,150 @@
+/** BEGIN: nouislider */
+.noUi-horizontal {
+  height: 4px;
+}
+
+.noUi-target {
+  background: #e0e5e8;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+
+  &.noUi-horizontal {
+    &.is-pips-enabled {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.noUi-pips {
+  color: #939daa;
+  font-size: 14px;
+}
+
+.noUi-marker-horizontal {
+  &.noUi-marker-large {
+    height: 12px;
+  }
+}
+
+.noUi-marker-sub {
+  background: #939daa;
+}
+
+.noUi-marker-large {
+  background: rgba(#939daa, .8);
+}
+
+.noUi-connect {
+  background-color: $color-lasur;
+  box-shadow: none;
+}
+
+.noUi-handle {
+  border-color: $color-lasur;
+  border-radius: 50px;
+  box-shadow: none;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .noUi-horizontal & {
+    width: 10px;
+    height: 10px;
+    left: -5px;
+    top: -3px;
+  }
+}
+
+.noUi-tooltip {
+  padding: 1px 8px;
+  font-size: 13px;
+  color: $color-white;
+  border: 0;
+  background: $color-gray-dark;
+  border-radius: 3px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 4px 0;
+    border-color: $color-gray-dark transparent transparent;
+  }
+
+  .noUi-horizontal & {
+    bottom: 20px;
+  }
+}
+
+.nouislider-custom {
+  .noUi-connect {
+    background-color: transparent;
+  }
+
+  .noUi-handle {
+    top: -6px;
+    border-color: $color-gray-dark;
+    border-radius: 2px;
+    background-color: $color-gray-dark;
+    width: 6px;
+    height: 16px;
+  }
+}
+
+.nouislider-a {
+  .noUi-handle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #0094f2;
+    top: -8px;
+  }
+
+  &.noUi-horizontal {
+    .noUi-tooltip {
+      bottom: 26px;
+    }
+  }
+}
+
+.nouislider-b {
+  &.noUi-horizontal {
+    height: 2px;
+    background: #c5ced3;
+
+    .noUi-tooltip {
+      bottom: 26px;
+    }
+  }
+
+  .noUi-handle {
+    width: 18px;
+    height: 18px;
+    background: #0094f2;
+    top: -8px;
+
+    &:after {
+      content: '';
+      display: block;
+      top: 4px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+}
+/** END: nouislider */

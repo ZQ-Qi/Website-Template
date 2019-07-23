@@ -1,0 +1,662 @@
+<title>动态详情</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>动态详情</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid" id="LAY-app-table">
+    <div class="layui-card">
+        <div class="layui-tab-content" style="padding: 15px;">
+            <div id="dynamicTop">
+                <script type="text/html" template lay-url="./content/json/community/dynamicinfo1.json"
+                        id="tplDynamicTop">
+                    <div id="topic">
+                        <div class="layui-container" style="margin-left: 0; padding: 0; margin-bottom: 20px;">
+                            <div class="dynamicinfo-top layui-row">
+                                <div class="user-img layui-col-md1 layui-col-xs4 layui-col-sm4">
+                                    <img src="{{d.data.headeUrl}}" alt="">
+                                </div>
+                                <div class="user-info layui-col-md11 layui-col-xs8 layui-col-sm8">
+                                    <div class="user-name">{{d.data.name}}</div>
+                                    <div class="user-job">{{d.data.company}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--评论内容-->
+                        <div class="dynamic-content mb20 clearfix">
+                            <!--话题-->
+                            <div class="topic mb20">
+                                <span class="topic-cont fz14">{{d.data.content}}</span>
+                                <!--<span class="topic-name fz14">#话题一#</span>本地人只需要一张身份证就可以拿到1万，哈哈，你信了吗？是真的呀，不骗人，太天真了吧，这你也相信啊，真的啊。需要一张身份证就可以拿到1万，哈哈，你信了吗？是真的呀，不骗人，太天真了吧，这你也相信啊，真的啊。需要一张身份证就可以拿到1万，哈哈，你信了吗？是真的呀，不骗人，太天真了吧，这你也相信啊，真的啊。需要一张身份证就可以拿到1万，哈哈，你信了吗？是真的呀，不骗人，太天真了吧，这你也相信啊，真的啊。-->
+                            </div>
+                            <ul class="topic-img layui-row layui-col-space15 mb20" id="imgClick">
+                                {{# layui.each(d.data.imgs,function(index,item){ }}
+                                <li class="layui-col-md1 layui-col-xs4 layui-col-sm4"><img src="{{item}}" layer-src="{{item}}" alt=""></li>
+                                {{# })}}
+
+                            </ul>
+                            <div class="topic-time mb10">{{d.data.time}}</div>
+                            <ul class="topic-func clearfix">
+                                <li>
+                                    <span>点赞数：</span>{{d.data.like}}
+                                </li>
+                                <li>
+                                    <span>转发数：</span>{{d.data.shareNum}}
+                                </li>
+                                <li>
+                                    <span>评论数：</span>{{d.data.commentNum}}
+                                </li>
+                            </ul>
+                            <button class="layui-btn layui-btn-normal leavemes" data-id="{{d.data.id}}"
+                                    data-type="alertDynamic" data-index="1">评论
+                            </button>
+
+                        </div>
+                    </div>
+                </script>
+            </div>
+            <div id="dynamic-box" class="dynamic-box">
+                <div id="dynamicList">
+                    <div class="title-top">评论<span>(0)</span></div>
+                    <div id="dynamic-comment" class="dynamic-list layui-container">
+
+                    </div>
+                </div>
+                <div class="page" id="page"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--模板-->
+<!--<script type="text/html" id="tplList">-->
+<!--<div>-->
+<!--<div class="title-top">评论<span>({{ d.count }})</span></div>-->
+<!--<div id="dynamic-comment" class="dynamic-list layui-container">-->
+<!--{{# layui.each(d.data,function(index,item){ }}-->
+
+<!--<div class="media-top layui-row layui-col-space15 mb20">-->
+<!--<div class="layui-col-md1 layui-col-xs2 layui-col-sm2 media-img">-->
+<!--<img src="{{ item.headeUrl }}" alt="">-->
+<!--</div>-->
+<!--<div class="layui-col-md11 layui-col-xs8 layui-col-sm8 media-box">-->
+<!--<div class="media-name">{{ item.name }}</div>-->
+<!--<div class="media-info mb20">-->
+<!--{{item.comment}}-->
+<!--</div>-->
+<!--<div class="media-time">{{item.time}}<span class="media-reply media-btn reply-btn"-->
+<!--data-id="{{item.id}}"-->
+<!--data-name="{{item.name}}" data-index="2">回复</span>-->
+<!--</div>-->
+<!--&lt;!&ndash;<div id="interReply"></div>&ndash;&gt;-->
+<!--<div class="reply-box">-->
+<!--<ul class="reply-list" id="reply-list" data-type="tierreplayBtn">-->
+<!--&lt;!&ndash;{{# layui.each(item.lists,function(index,list){ }}&ndash;&gt;-->
+<!--&lt;!&ndash;<li class="reply-info clearfix">&ndash;&gt;-->
+<!--&lt;!&ndash;<span class="reply-name">{{list.name}}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="reply-detail">&ndash;&gt;-->
+<!--&lt;!&ndash;{{# if('commentId' in list){}}&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="reply-who">回复: <span>{{list.commentName}}</span></div>&ndash;&gt;-->
+<!--&lt;!&ndash;{{# }}}&ndash;&gt;-->
+<!--&lt;!&ndash;<span class="" style="color: #333">{{list.comment}}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;<span class="tier-reply reply-btn" data-id="{{list.id}}"&ndash;&gt;-->
+<!--&lt;!&ndash;data-name="{{list.name}}" data-index="3" >回复</span>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</li>&ndash;&gt;-->
+<!--&lt;!&ndash;{{# })}}&ndash;&gt;-->
+<!--</ul>-->
+<!--&lt;!&ndash;{{# if(item.listsTotal>0){}}&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="media-view media-btn" data-type="allReply">查看全部 <span>{{item.listsTotal}}</span>条评论></div>&ndash;&gt;-->
+<!--&lt;!&ndash;{{# }}}&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--{{# })}}-->
+<!--</div>-->
+<!--</div>-->
+<!--</script>-->
+<script type="text/html" id="tplItem">
+    <div class="media-top layui-row layui-col-space15 mb20">
+        <div class="layui-col-md1 layui-col-xs2 layui-col-sm2 media-img">
+            <img src="{{d.headeUrl}}" alt="">
+        </div>
+        <div class="layui-col-md11 layui-col-xs8 layui-col-sm8 media-box">
+            <div class="media-name">{{d.name}}</div>
+            <div class="media-info mb20">
+                {{d.comment}}
+            </div>
+            <div class="media-time">{{d.time}}<span class="media-reply media-btn reply-btn"
+                                                    data-id="{{d.id}}" data-name="{{d.name}}"
+                                                    data-index="2">回复</span></div>
+            <!--<div id="interReply"></div>-->
+            <div class="reply-box">
+                <ul id="{{'reply'+d.id}}" class="reply-list" data-type="tierreplayBtn">
+                    {{# layui.each(d.lists,function(index,list){ }}
+                    <li class="reply-info clearfix">
+                        <span class="reply-name">{{list.name}}</span>
+                        <div class="reply-detail">
+                            {{# if('commentId' in list){}}
+                            <div class="reply-who">回复: <span>{{list.commentName}}</span></div>
+                            {{# }}}
+                            <span class="" style="color: #333">{{list.comment}}</span>
+                            <span class="tier-reply reply-btn" data-id="{{list.id}}"
+                                  data-name="{{list.name}}" data-index="3">回复</span>
+                        </div>
+                    </li>
+                    {{# })}}
+                </ul>
+                {{# if(d.listsTotal>0){}}
+                <div class="media-view media-btn" data-type="allReply">查看全部<span>{{d.listsTotal}}</span>条评论></div>
+                {{# }}}
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="tplInterReply">
+    <li class="reply-info clearfix">
+        <span class="reply-name">{{d.name}}</span>
+        <div class="reply-detail">
+            {{# if('commentId' in d){}}
+            <div class="reply-who">回复: <span>{{d.commentName}}</span></div>
+            {{# }}}
+            <span class="" style="color: #333">{{d.comment}}</span>
+            <span class="tier-reply reply-btn" data-id="{{d.id}}"
+                  data-name="{{d.name}}" data-index="3">回复</span>
+        </div>
+    </li>
+</script>
+<script type="text/html" id="addDynamic">
+    <div class="alert-dynamic">
+        <form class="layui-form" action="" lay-filter="operate-form-group">
+            <div class="layui-form-item">
+                <label class="layui-form-label">回答人</label>
+                <div class="layui-input-block">
+                    <!--<select name="location" lay-filter="aihao">-->
+                    <!--<option value=""></option>-->
+                    <!--<option value="郑州">郑州</option>-->
+                    <!--<option value="开封" selected="">开封</option>-->
+                    <!--<option value="南阳">南阳</option>-->
+                    <!--<option value="海南">海南</option>-->
+                    <!--<option value="珠海">珠海</option>-->
+                    <!--</select>-->
+                    <div id="viewWho"></div>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">评论内容</label>
+                <div class="layui-input-block">
+                    <textarea name="text" placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <div class="layui-footer">
+                        <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="component-form-submit">提交
+                        </button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+<script type="text/html" id="replyUser">
+    <div>
+        <select name="username" lay-filter="huidaren">
+            {{# layui.each(d.list, function(index, item){ }}
+            <option value="{{item.replayName}}">{{item.replayName}}</option>
+            {{# }); }}
+        </select>
+    </div>
+</script>
+
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+
+    layui.use(['admin', 'laypage', 'layer', 'form', 'laydate', 'laytpl', 'flow'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , element = layui.element
+            , laypage = layui.laypage
+            , layer = layui.layer
+            , laydate = layui.laydate
+            , form = layui.form
+            , laytpl = layui.laytpl
+            , flow = layui.flow;
+
+//        element.render();
+
+        var selectedItem = null;//当前选中项
+
+
+        //初始化流布局
+        flow.load({
+            elem: '#dynamicList' //流加载容器
+            , isAuto: false
+            , isLazyimg: true
+            , done: function (page, next) { //加载下一页
+                //模拟插入
+                admin.req({
+                    url: './content/json/community/dynamicinfo2.json?pageIndex=' + page + '&pageNum=10',
+                    method: 'get',
+                    done: function (res) {
+                        var tempList = $('#tplItem').html();
+                        var html='';
+                        res.data.forEach(function(v){
+                            laytpl(tempList).render(v, function (render) {
+                                html+=render;
+                            });
+                        });
+                        $('#dynamic-comment').append(html);
+                        next('', page < res.count); //判断当前页码是否小于总页码;
+                        $('.reply-list').each(function () {
+                            if ($(this).find('.reply-info').length > 2) {
+                                var replyListHeight = $(this).height($(this).find(".reply-info").height() * 2 + 50);
+                                $(this).css({"height": replyListHeight, "overflow": 'hidden'});
+
+                                flow.load({
+                                    elem: '#'+$(this).attr('id') //流加载容器
+                                    , isAuto: false
+                                    , isLazyimg: true
+                                    , done: function (page, next) {
+                                        if(page>1){
+                                            //发送请求拉去本条评论
+                                            admin.req({
+                                                url: './content/json/community/dynamicinfo3.json?pageIndex=' + page + '&pageNum=10',
+                                                method: 'get',
+                                                done: function (res) {
+                                                    var tempList = $('#tplInterReply').html();
+                                                    var html='';
+                                                    res.data.forEach(function(v){
+                                                        laytpl(tempList).render(v, function (render) {
+                                                            html+=render;
+                                                        });
+                                                    });
+                                                    $('#'+$(this).attr('id')).append(html);
+                                                    next('', page < res.count); //判断当前页码是否小于总页码;
+                                                }
+                                            });
+                                        }else{
+                                            next('', page < res.count); //判断当前页码是否小于总页码;
+                                        }
+                                    }
+                                });
+                            }
+                        });
+
+                    }
+                });
+
+            }
+        });
+
+
+        //初始化加载评论数据
+//         admin.req({
+//             url: './content/json/community/dynamicinfo2.json',
+//             method: 'get',
+//             done: function (res) {
+//                 var tempAll = $('#tplList')[0].innerHTML;
+//
+//                 laytpl(tempAll).render(res, function (render) {
+//                     $("#dynamicList").prepend(render);
+//                 });
+//
+//
+// //                laypage.render({
+// //                    elem: 'page'
+// //                    , count: res.count
+// //                    , theme: '#1E9FFF'
+// //                    , layout: ['limit', 'prev', 'page', 'next']
+// //                    , jump: function (obj) {
+// ////                admin.req({
+// ////                    url: '/api/v1/notice?pageIndex=' + obj.curr + '&pageNum=' + obj.limit,
+// ////                    method: 'post',
+// ////                    done: function (res) {
+// ////                        $('#dynamic-comment').html('');//清空数据
+// ////                        var tempList = $('#tplItem').html();
+// ////                        laytpl(tempList).render(res.data, function (render) {
+// ////                            $(".dynamic-list").prepend(render);
+// ////                        });
+// ////                        return false;
+// ////                    }
+// ////                });
+// //                    }
+// //                });
+//
+//
+//
+//
+//             }
+//         });
+
+        //绑定头部动态详情事件
+        $('#topic').on('click', '.layui-btn', function () {
+            active.alertDynamic($(this).data());
+        });
+        $('#dynamicList').on('click', '.reply-btn', function () {
+            selectedItem = $(this).parents('.media-top');
+            active.alertDynamic($(this).data());
+        });
+
+        $('#dynamic-comment').on('click', '.media-btn', function () {
+            var type = $(this).data('type');
+            active[type] && active[type].call(this);
+        });
+
+        layer.photos({
+            photos: '#imgClick'
+            ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+        });
+
+//        $('#LAY-app-table').on('click','img',function(){
+//            layer.open({
+//                title:'图片详情'
+//                ,type: 1
+//                //,skin: 'layui-layer-rim'
+//                ,shadeClose: true
+//                ,area: admin.screen() < 2 ? ['80%', '300px'] : ['700px', '500px']
+//                ,content: '<div style="padding: 20px;text-align: center;"><img src="'+$(this).attr('src')+'" style="max-width: 700px;max-height: 500px;" alt=""></div>'
+//            });
+//        });
+
+
+        var active = {
+            dynamicBtn: function () {
+                this.alertDynamic(1); // 评论弹窗
+            },
+            replayBtn: function () {
+                this.alertDynamic(2); // 回复弹窗
+            },
+            tierreplayBtn: function () {
+                active.alertDynamic(3); // 三级弹窗
+            },
+            alertDynamic: function (ope) {
+                console.log(ope);
+                layer.open({
+                    title: ope.index == 1 ? "评论" : "回复",
+                    type: 1,
+                    //skin: 'layui-layer-rim',
+                    shadeClose: false,
+                    area: admin.screen() < 2 ? ['80%', '300px'] : ['700px', '400px'],
+                    content: '<div id="dynamic-form" ' +
+                    ('index' in ope ? 'data-index="' + ope.index + '"' : '') +
+                    ('id' in ope ? 'data-id="' + ope.id + '"' : '') +
+                    ('name' in ope ? 'data-name="' + ope.name + '"' : '') +
+                    ('answer' in ope ? 'data-answer="' + ope.answer + '"' : '') +
+                    '></div>'
+                });
+
+
+                var addTpl = $("#addDynamic")[0].innerHTML;
+                $("#dynamic-form").append(addTpl); // 渲染弹窗评论
+
+
+                active.selectData(); // 下拉框内容
+                form.render(null, 'operate-form-group');
+            },
+            allReply: function () {
+                console.log(this);
+                // 展开所有的评论
+                if ($(this).text() == '收起') {
+                    $(this).prev().css({
+                        "height": $(this).prev().height($(this).find(".reply-info:first-child").height() * 2 + 50),
+                        "overflow": 'hidden'
+                    });
+                    $(this).text("查看全部评论");
+                } else {
+                    $(this).prev().css("height", "auto");
+                    $(this).html("收起");
+                }
+            },
+            selectData: function () {
+                // 此处是假数据，真实情况调接口数据
+                var data = { //数据
+                    "title": "Layui常用模块"
+                    ,
+                    "list": [{"replayName": "头条君"}, {"replayName": "方小妹"}, {"replayName": "嗯哼"}, {"replayName": "二哈"}, {"replayName": "你是谁"}]
+                };
+                var getTpl = $("#replyUser")[0].innerHTML
+                    , view = $("#viewWho")[0];
+                console.log(view)
+                laytpl(getTpl).render(data, function (html) {
+                    view.innerHTML = html;
+                    console.log(view.innerHTML)
+                }); // 渲染下拉菜单的数据
+
+                form.render(null, 'operate-form-group');
+            }
+        };
+
+
+        /* 自定义验证规则 */
+        form.verify({});
+
+        /* 监听提交 */
+        form.on('submit(component-form-submit)', function (data) {
+            var arg = $.extend(data.field, {from: $("#dynamic-form").data()});//来源数据和提交数据
+            //得到按钮相关的信息，并发送请求
+            var tempList = $('#tplItem').html();
+            var temp = $('#tplInterReply').html();
+            admin.req({
+                url: './content/json/community/submit-data' + arg.from.index + '.json',
+                method: 'get',
+                done: function (res) {
+                    if (arg.from.index == 1) {
+                        // 评论 追加到$(".dynamic-list") 最前
+                        laytpl(tempList).render(res.data, function (render) {
+                            $("#dynamic-comment").prepend(render);
+                        });
+                    } else if (arg.from.index == 2) {
+                        // 回复 追加到$(".reply-list") 最前
+                        laytpl(temp).render(res.data, function (render) {
+                            selectedItem.find(".reply-list").prepend(render);
+                        });
+                    } else if (arg.from.index == 3) {
+                        // 回复 追加到$(".reply-list") 最前
+                        laytpl(temp).render(res.data, function (render) {
+                            selectedItem.find(".reply-list").prepend(render);
+                        });
+                    }
+                    layer.closeAll(); // 关闭弹窗
+                    layer.msg(res.msg);
+                    return false;
+                }
+            });
+            return false;
+        });
+
+
+    });
+</script>
+<!--私有样式-->
+<style>
+    .fz14 {
+        font-size: 14px;
+
+    }
+
+    .mb20 {
+        margin-bottom: 20px;
+    }
+
+    .mb10 {
+        margin-bottom: 10px;
+    }
+
+    .clearfix {
+        zoom: 1;
+    }
+
+    .clearfix:after {
+        display: block;
+        visibility: hidden;
+        clear: both;
+        overflow: hidden;
+        height: 0;
+        content: '.';
+        font-size: 0
+    }
+
+    .user-img {
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .user-img img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .user-name {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    .user-job {
+        font-size: 14px;
+        color: #999;
+    }
+
+    .dynamic-content {
+        padding-left: 15px;
+    }
+
+    .topic-name {
+        color: #ff4933;
+    }
+
+    .topic span {
+        line-height: 24px;
+    }
+
+    .topic-img li img {
+        width: 100%;
+    }
+
+    .topic-time {
+        width: 180px;
+    }
+
+    .topic-func {
+
+    }
+
+    .topic-func li {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .topic-func li span {
+        display: inline-block;
+    }
+
+    .leavemes {
+        float: right;
+    }
+
+    .title-top {
+        font-size: 16px;
+        color: #333;
+        border-bottom: 1px solid #eee;
+        margin-left: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    .title-top span {
+        color: #666;
+    }
+
+    .media-img {
+        text-align: right;
+    }
+
+    .media-img img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50px;
+    }
+
+    .dynamic-list {
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .media-name {
+        font-size: 16px;
+        line-height: 45px;
+    }
+
+    .media-info {
+        color: #666;
+    }
+
+    .media-time {
+        font-size: 12px;
+        color: #999;
+    }
+
+    .media-time span {
+        color: #333;
+        margin-left: 10px;
+    }
+
+    .reply-box {
+        margin-top: 10px;
+    }
+
+    .reply-info {
+        padding: 10px 15px;
+        background: #f6f6f6;
+    }
+
+    .reply-info span {
+        color: #1e9fff;
+        margin-right: 5px;
+    }
+
+    .reply-name {
+        float: left;
+    }
+
+    .media-view {
+        font-size: 12px;
+        color: #999;
+        cursor: pointer;
+    }
+
+    .media-top {
+        margin-bottom: 20px;
+    }
+
+    .page {
+        margin-left: 122px;
+    }
+
+    .alert-dynamic {
+        padding: 20px 20px 15px 0;
+    }
+
+    .media-reply {
+        cursor: pointer;
+    }
+
+    .reply-who {
+        display: inline-block;
+    }
+
+    .tier-reply {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+</style>

@@ -1,0 +1,128 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Submit Ticket / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Submit Ticket</h2>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="row">
+      <div class="col-lg-9">
+        <h2 class="main-container__heading">Submit a ticket</h2>
+        <div class="main-container__desc"><i>Start by selecting a category.</i></div>
+
+        <div class="row">
+          <form class="col-xl-8">
+            <div class="form-group">
+              <label for="submit-request-choose-request-type"><b>1.</b> Choose a ticket type</label>
+              <select id="submit-request-choose-request-type" class="form-control" data-placeholder="Ticket Type">
+                <option value=""> </option>
+                <option>I need help recovering my account</option>
+                <option>I am having technical issues</option>
+                <option>I have question about purchasing app</option>
+                <option>I have question about purchasing app</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label><b>2.</b> Tell us more</label>
+              <div class="text-muted">
+                Ok, now that we know what kind of issue you are having, let's get into the details. Please
+                help us by describing what you are experiencing below.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="submit-request-email-address">Your Email Address <span class="color-danger">*</span></label>
+              <input type="email" class="form-control" id="submit-request-email-address" placeholder="" value="">
+            </div>
+            <div class="form-group">
+              <label for="submit-request-subject">Subject <span class="color-danger">*</span></label>
+              <input type="text" class="form-control" id="submit-request-subject" placeholder="" value="">
+            </div>
+            <div class="form-group">
+              <label for="submit-request-desc">Description <span class="color-danger">*</span></label>
+              <textarea id="submit-request-desc" class="form-control" rows="4" placeholder=""></textarea>
+            </div>
+            <div class="form-group">
+              <label for="submit-request-username">Username</label>
+              <input type="text" class="form-control" id="submit-request-username" placeholder="" value="">
+            </div>
+            <div class="form-group">
+              <label for="submit-request-region">Region</label>
+              <input type="text" class="form-control" id="submit-request-region" placeholder="" value="">
+            </div>
+            <div class="global-settings__form form-upload form-group-no-label"> <!-- is-dragover -->
+              <div class="form-upload__drop-area">
+                <span class="ua-icon-form-upload-outline form-upload__drop-icon"></span>
+                <span>Drop document here or <a href="#" class="link-info">choose file</a> to upload app statistics</span>
+              </div>
+              <div class="form-upload__uploading-area">
+                <div class="form-upload__uploading-item">
+                  <span class="ua-icon-form-upload-solid form-upload__uploading-item-icon"></span>
+                  <div class="form-upload__uploading-item-content">
+                    <div class="form-upload__uploading-item-header">
+                      <div class="form-upload__uploading-item-name">Uploading report_file.csv</div>
+                      <div class="form-upload__uploading-item-during-time">&lt; 1 minute left</div>
+                    </div>
+                    <div class="progress progress-xs mb-0">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-upload__uploading-item">
+                  <span class="ua-icon-form-upload-solid form-upload__uploading-item-icon"></span>
+                  <div class="form-upload__uploading-item-content">
+                    <div class="form-upload__uploading-item-header">
+                      <div class="form-upload__uploading-item-name">Uploading report_file2.xls</div>
+                      <div class="form-upload__uploading-item-during-time">&lt; 3 minutes left</div>
+                    </div>
+                    <div class="progress progress-xs mb-0">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 25%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group form-group-no-label">
+              <button type="button" class="btn btn-info">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-3 m-help-center__aside">
+        <div class="m-help-center__aside-block">
+          <h4 class="m-help-center__aside-block-heading">Most Popular</h4>
+          <ul class="m-help-center__aside-block-links">
+            <li class="m-help-center__aside-block-link-item">
+              <a href="#">LeaverBuster FAQ</a>
+            </li>
+            <li class="m-help-center__aside-block-link-item">
+              <a href="#">Recovering Your Account</a>
+            </li>
+            <li class="m-help-center__aside-block-link-item">
+              <a href="#">Preseason Update FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="m-help-center__aside-block">
+          <h4 class="m-help-center__aside-block-heading">Most Recent</h4>
+          <ul class="m-help-center__aside-block-links">
+            <li class="m-help-center__aside-block-link-item">
+              <a href="#">LeaverBuster FAQ</a>
+            </li>
+            <li class="m-help-center__aside-block-link-item">
+              <a href="#">Recovering Your Account</a>
+            </li>
+            <li class="m-help-center__aside-block-link-item">
+              <a href="#">Preseason Update FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

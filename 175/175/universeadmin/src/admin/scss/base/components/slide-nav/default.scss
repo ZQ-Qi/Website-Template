@@ -1,0 +1,117 @@
+.slide-nav {
+  width: 360px;
+  box-shadow: 0 0 10px rgba(69, 81, 97, 0.25);
+  background-color: #ffffff;
+  position: fixed;
+  left: -360px;
+  top: 0;
+  height: 100vh;
+  z-index: 1041;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  transition: left $transition;
+
+  &.is-opened {
+    left: 0;
+  }
+
+  &__header {
+    padding: 30px 20px 25px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    position: relative;
+    top: 1px;
+  }
+
+  &__back {
+    position: absolute;
+    left: 20px;
+    font-size: 16px;
+    color: $color-gray;
+    cursor: pointer;
+
+    &:focus,
+    &:active,
+    &:hover {
+      color: $color-lasur;
+    }
+  }
+
+  &__body {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  &__scrollpane {
+    @include mx-scrollpane();
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 11px;
+  }
+
+  &__item {
+    width: 104px;
+    height: 112px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-right: 12px;
+
+    &:hover {
+      border-color: rgba(#000, .1);
+    }
+  }
+
+  &__item-image {
+    margin-bottom: 12px;
+    margin-top: -10px;
+  }
+
+  &__item-text {
+    color: #000;
+    line-height: 14px;
+    position: absolute;
+    bottom: 20px;
+  }
+}
+
+.slide-nav-toggle {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 24px;
+  line-height: 24px;
+  position: relative;
+  top: 2px;
+  color: #475261;
+  cursor: pointer;
+}
+
+.sidebar-sm {
+  .navbar-brand-sm {
+    margin-right: 32px;
+  }
+
+  .slide-nav-toggle {
+    position: absolute;
+    right: -35px;
+    top: 4px;
+  }
+}
+
+@include mq(phone, max) {
+  .slide-nav {
+    width: 100%;
+  }
+}

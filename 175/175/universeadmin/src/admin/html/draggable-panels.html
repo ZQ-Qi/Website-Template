@@ -1,0 +1,481 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Draggable Panels / Universe Admin{% endblock %}
+
+<!--{% block styles %}
+<link rel="stylesheet" href="vendor/layout-grid/css/layout-grid.min.css">
+{{ super() }}
+{% endblock %}-->
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Draggable Panels</h2>
+    </div>
+  </div>
+  <div id="draggable-grid" class="lt-container lt-xs-h-20 lt-sm-h-10 lt-md-h-20 lt-lg-h-10 draggable-grid" data-arrange="lt-grid">
+    <div draggable="true" class="lt lt-xs-x-0 lt-xs-y-0 lt-xs-w-12 lt-xs-h-12 lt-sm-x-0 lt-sm-y-0 lt-sm-w-12 lt-sm-h-8 lt-md-x-0 lt-md-y-0 lt-md-w-6 lt-md-h-6 lt-lg-x-0 lt-lg-y-0 lt-lg-w-4 lt-lg-h-5">
+      <div class="lt-body">
+        <div class="panel-widget">
+          <div class="panel-widget__header">
+            <div>
+              <span class="panel-widget__header-icon ua-icon-user-solid"></span> Contacts
+            </div>
+            <div class="panel-widget__header-controls">
+              <span class="panel-widget__header-control ua-icon-search"></span>
+              <span class="panel-widget__header-control ua-icon-sort"></span>
+              <span class="panel-widget__header-control ua-icon-alert-close"></span>
+            </div>
+          </div>
+          <div class="panel-widget__body">
+            <div class="panel-widget__body-scrollpane js-scrollable">
+              <div class="panel-widget__body-content">
+                <div class="widget-contacts__item">
+                  <img src="img/users/user-4.png" alt="" width="40" height="40" class="widget-contacts__item-avatar rounded-circle">
+                  <div>
+                    <a href="#" class="widget-contacts__item-name">Gabriel Saunders</a>
+                    <div class="widget-contacts__item-email">gabriel@example.com</div>
+                  </div>
+                </div>
+                <div class="widget-contacts__item">
+                  <img src="img/users/user-5.png" alt="" width="40" height="40" class="widget-contacts__item-avatar rounded-circle">
+                  <div>
+                    <a href="#" class="widget-contacts__item-name">Shawna Cohen</a>
+                    <div class="widget-contacts__item-email">shawna@example.com</div>
+                  </div>
+                </div>
+                <div class="widget-contacts__item">
+                  <img src="img/users/user-6.png" alt="" width="40" height="40" class="widget-contacts__item-avatar rounded-circle">
+                  <div>
+                    <a href="#" class="widget-contacts__item-name">Jason Kendall</a>
+                    <div class="widget-contacts__item-email">jason@example.com</div>
+                  </div>
+                </div>
+                <div class="widget-contacts__item">
+                  <img src="img/users/user-7.png" alt="" width="40" height="40" class="widget-contacts__item-avatar rounded-circle">
+                  <div>
+                    <a href="#" class="widget-contacts__item-name">Thomas Banks</a>
+                    <div class="widget-contacts__item-email">thomas@example.com</div>
+                  </div>
+                </div>
+                <div class="widget-contacts__item">
+                  <img src="img/users/user-8.png" alt="" width="40" height="40" class="widget-contacts__item-avatar rounded-circle">
+                  <div>
+                    <a href="#" class="widget-contacts__item-name">Rebecca Harris</a>
+                    <div class="widget-contacts__item-email">rebecca@example.com</div>
+                  </div>
+                </div>
+                <div class="widget-contacts__item">
+                  <img src="img/users/user-6.png" alt="" width="40" height="40" class="widget-contacts__item-avatar rounded-circle">
+                  <div>
+                    <a href="#" class="widget-contacts__item-name">Jason Kendall</a>
+                    <div class="widget-contacts__item-email">jason@example.com</div>
+                  </div>
+                </div>
+                <div class="widget-contacts__item">
+                  <img src="img/users/user-7.png" alt="" width="40" height="40" class="widget-contacts__item-avatar rounded-circle">
+                  <div>
+                    <a href="#" class="widget-contacts__item-name">Thomas Banks</a>
+                    <div class="widget-contacts__item-email">thomas@example.com</div>
+                  </div>
+                </div>
+                <div class="widget-contacts__item">
+                  <img src="img/users/user-8.png" alt="" width="40" height="40" class="widget-contacts__item-avatar rounded-circle">
+                  <div>
+                    <a href="#" class="widget-contacts__item-name">Rebecca Harris</a>
+                    <div class="widget-contacts__item-email">rebecca@example.com</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-widget__footer">
+            <a href="#" class="panel-widget__footer-add">
+              <span class="panel-widget__footer-add-icon ua-icon-user-add"></span>
+            </a>
+            <a href="#" class="panel-widget__footer-link">
+              <span class="panel-widget__footer-link-icon iconfont-arrow-circle-right"></span> View more
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div draggable="true" class="lt lt-xs-x-0 lt-xs-y-12 lt-xs-w-12 lt-xs-h-12 lt-sm-x-0 lt-sm-y-8 lt-sm-w-12 lt-sm-h-8 lt-md-x-6 lt-md-y-0 lt-md-w-6 lt-md-h-6 lt-lg-x-4 lt-lg-y-0 lt-lg-w-4 lt-lg-h-5">
+      <div class="lt-body">
+        <div class="panel-widget">
+          <div class="panel-widget__header">
+            <div>
+              <span class="panel-widget__header-icon iconfont-activity"></span> Account Activity
+            </div>
+            <div class="panel-widget__header-controls">
+              <span class="panel-widget__header-control ua-icon-search"></span>
+              <span class="panel-widget__header-control ua-icon-sort"></span>
+              <div class="dropdown panel-widget__header-control-dropdown">
+                <span data-toggle="dropdown" class="ua-icon-dots-vertical panel-widget__header-control-toggle"></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+              <span class="panel-widget__header-control ua-icon-alert-close"></span>
+            </div>
+          </div>
+          <div class="panel-widget__body">
+            <div class="panel-widget__body-scrollpane js-scrollable">
+              <table class="table table-no-border table-striped panel-widget__body-table">
+                <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Amount</th>
+                  <th>Balance</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Deposit</td>
+                  <td><span class="table__cell-up">$15</span></td>
+                  <td>$31,313</td>
+                </tr>
+                <tr>
+                  <td>Deposit</td>
+                  <td><span class="table__cell-up">$15</span></td>
+                  <td>$31,313</td>
+                </tr>
+                <tr>
+                  <td>Account Withdrawal</td>
+                  <td><span class="table__cell-down">$15</span></td>
+                  <td>$31,313</td>
+                </tr>
+                <tr>
+                  <td>Deposit</td>
+                  <td><span class="table__cell-down">$15</span></td>
+                  <td>$31,313</td>
+                </tr>
+                <tr>
+                  <td>Deposit</td>
+                  <td><span class="table__cell-up">$15</span></td>
+                  <td>$31,313</td>
+                </tr>
+                <tr>
+                  <td>Deposit</td>
+                  <td><span class="table__cell-up">$15</span></td>
+                  <td>$31,313</td>
+                </tr>
+                <tr>
+                  <td>Deposit</td>
+                  <td><span class="table__cell-up">$15</span></td>
+                  <td>$31,313</td>
+                </tr>
+                <tr>
+                  <td>Deposit</td>
+                  <td><span class="table__cell-up">$15</span></td>
+                  <td>$31,313</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel-widget__footer">
+            <a href="#" class="panel-widget__footer-link">
+              <a href="#" class="btn btn-info btn-rounded panel-widget__footer-action-link">Make a transaction</a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div draggable="true" class="lt lt-xs-x-0 lt-xs-y-24 lt-xs-w-12 lt-xs-h-12 lt-sm-x-0 lt-sm-y-16 lt-sm-w-12 lt-sm-h-8 lt-md-x-0 lt-md-y-6 lt-md-w-6 lt-md-h-6 lt-lg-x-8 lt-lg-y-0 lt-lg-w-4 lt-lg-h-5">
+      <div class="lt-body">
+        <div class="panel-widget">
+          <div class="panel-widget__header">
+            <div>
+              <span class="panel-widget__header-icon iconfont-deal"></span> Previous Payouts
+            </div>
+            <div class="panel-widget__header-controls">
+              <span class="panel-widget__header-control ua-icon-search"></span>
+              <span class="panel-widget__header-control ua-icon-sort"></span>
+              <span class="panel-widget__header-control ua-icon-alert-close"></span>
+            </div>
+          </div>
+          <div class="panel-widget__body">
+            <div class="panel-widget__body-scrollpane js-scrollable">
+              <table class="table table-no-border table-striped panel-widget__body-table">
+                <tbody>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                <tr>
+                  <td class="table__datetime">May 29, 2017</td>
+                  <td><span class="font-semibold color-info">Paypal</span></td>
+                  <td><span class="font-semibold">+$1450.00 USD</span></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div draggable="true" class="lt lt-xs-x-0 lt-xs-y-36 lt-xs-w-12 lt-xs-h-12 lt-sm-x-0 lt-sm-y-24 lt-sm-w-12 lt-sm-h-8 lt-md-x-6 lt-md-y-6 lt-md-w-6 lt-md-h-6 lt-lg-x-0 lt-lg-y-5 lt-lg-w-4 lt-lg-h-5">
+      <div class="lt-body">
+        <div class="panel-widget">
+          <div class="panel-widget__header">
+            <div>
+              <span class="panel-widget__header-icon iconfont-deal"></span> Billing Notice
+            </div>
+            <div class="panel-widget__header-controls">
+              <span class="panel-widget__header-control ua-icon-search"></span>
+              <span class="panel-widget__header-control ua-icon-sort"></span>
+              <span class="panel-widget__header-control ua-icon-alert-close"></span>
+            </div>
+          </div>
+          <div class="panel-widget__body">
+            <div class="panel-widget__body-scrollpane js-scrollable">
+              <table class="table table-no-border panel-widget__body-table">
+                <tbody>
+                <tr>
+                  <td>PRO Package</td>
+                  <td class="table__cell-text-light">Standart Payment</td>
+                  <td class="table__cell-text-light text-right">19 Jan 2017</td>
+                  <td class="table__cell-compact">
+                    <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Job Posted</td>
+                  <td class="table__cell-text-light">30-Days Recuring</td>
+                  <td class="table__cell-text-light text-right">24 Nov 2016</td>
+                  <td class="table__cell-compact">
+                    <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>PRO Package</td>
+                  <td class="table__cell-text-light">Gift</td>
+                  <td class="table__cell-text-light text-right">7 Mar 2016</td>
+                  <td class="table__cell-compact">
+                    <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>PRO Package</td>
+                  <td class="table__cell-text-light">Standart Payment</td>
+                  <td class="table__cell-text-light text-right">19 Jan 2017</td>
+                  <td class="table__cell-compact">
+                    <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Job Posted</td>
+                  <td class="table__cell-text-light">30-Days Recuring</td>
+                  <td class="table__cell-text-light text-right">24 Nov 2016</td>
+                  <td class="table__cell-compact">
+                    <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>PRO Package</td>
+                  <td class="table__cell-text-light">Gift</td>
+                  <td class="table__cell-text-light text-right">7 Mar 2016</td>
+                  <td class="table__cell-compact">
+                    <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>PRO Package</td>
+                  <td class="table__cell-text-light">Standart Payment</td>
+                  <td class="table__cell-text-light text-right">19 Jan 2017</td>
+                  <td class="table__cell-compact">
+                    <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Job Posted</td>
+                  <td class="table__cell-text-light">30-Days Recuring</td>
+                  <td class="table__cell-text-light text-right">24 Nov 2016</td>
+                  <td class="table__cell-compact">
+                    <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>PRO Package</td>
+                  <td class="table__cell-text-light">Gift</td>
+                  <td class="table__cell-text-light text-right">7 Mar 2016</td>
+                  <td class="table__cell-compact">
+                    <a href="#" class="ua-icon-download-outline table__cell-actions-icon"></a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div draggable="true" class="lt lt-xs-x-0 lt-xs-y-48 lt-xs-w-12 lt-xs-h-12 lt-sm-x-0 lt-sm-y-32 lt-sm-w-12 lt-sm-h-8 lt-md-x-0 lt-md-y-12 lt-md-w-6 lt-md-h-6 lt-lg-x-4 lt-lg-y-5 lt-lg-w-4 lt-lg-h-5">
+      <div class="lt-body">
+        <div class="panel-widget">
+          <div class="panel-widget__header">
+            <div>
+              <span class="panel-widget__header-icon ua-icon-todo"></span> ToDo List
+            </div>
+            <div class="panel-widget__header-controls">
+              <div class="dropdown panel-widget__header-control-dropdown">
+                <span data-toggle="dropdown" class="ua-icon-dots-vertical panel-widget__header-control-toggle"></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+              <span class="panel-widget__header-control ua-icon-alert-close"></span>
+            </div>
+          </div>
+          <div class="panel-widget__body">
+            <div class="panel-widget__body-scrollpane js-scrollable">
+              <div class="panel-widget__body-content">
+                <span class="widget-todo__date">Today</span>
+                <div class="widget-todo__item is-completed">
+              <span class="widget-todo__item-icon">
+                <span class="ua-icon-check"></span>
+              </span>
+                  <div class="widget-todo__item-info">
+                    <span class="widget-todo__item-name">Consectetur Sem Sollicitudin</span>
+                    <span class="widget-todo__item-date">08:22 AM</span>
+                  </div>
+                </div>
+                <div class="widget-todo__item is-completed">
+              <span class="widget-todo__item-icon">
+                <span class="ua-icon-check"></span>
+              </span>
+                  <div class="widget-todo__item-info">
+                    <span class="widget-todo__item-name">Consectetur Sem Sollicitudin</span>
+                    <span class="widget-todo__item-date">08:22 AM</span>
+                  </div>
+                </div>
+                <span class="widget-todo__date">Tomorrow</span>
+                <div class="widget-todo__item">
+                  <span class="textavatar widget-todo__item-avatar widget-todo__item-avatar--orange" data-width="40" data-height="40" data-name="Richard Hendrick" data-toggle="textavatar"></span>
+                  <div class="widget-todo__item-info">
+                    <span class="widget-todo__item-name">Porta Vevenatis Quam</span>
+                    <span class="widget-todo__item-date">10:30 PM</span>
+                  </div>
+                </div>
+                <div class="widget-todo__item">
+                  <span class="textavatar widget-todo__item-avatar widget-todo__item-avatar--green" data-width="40" data-height="40" data-name="Deborah Allen" data-toggle="textavatar"></span>
+                  <div class="widget-todo__item-info">
+                    <span class="widget-todo__item-name">Nullam quis risus eget urna mollis ornare leo</span>
+                    <span class="widget-todo__item-date">rebecca@masterskin.ru</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-widget__footer">
+            <a href="#" class="panel-widget__footer-add">
+              <span class="panel-widget__footer-add-icon ua-icon-plus-circle"></span>
+            </a>
+            <a href="#" class="panel-widget__footer-link">
+              <span class="panel-widget__footer-link-icon iconfont-arrow-circle-right"></span> View more
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div draggable="true" class="lt lt-xs-x-0 lt-xs-y-60 lt-xs-w-12 lt-xs-h-12 lt-sm-x-0 lt-sm-y-40 lt-sm-w-12 lt-sm-h-8 lt-md-x-6 lt-md-y-12 lt-md-w-6 lt-md-h-6 lt-lg-x-8 lt-lg-y-5 lt-lg-w-4 lt-lg-h-5">
+      <div class="lt-body">
+        <div class="card-widget card-widget-a h100p">
+          <div class="card-widget-a__user" style="background-image: url('img/widgets/20.png');">
+            <a href="#" class="card-widget-a__user-avatar">
+              <img src="img/widgets/19.png" alt="" class="card-widget-a__user-image rounded-circle">
+            </a>
+          </div>
+          <div class="card-widget-a__stats">
+            <div class="card-widget-a__user-info">
+              <a href="#" class="card-widget-a__user-name">Jonatan Anderson</a>
+              <div class="card-widget-a__user-desc">Administrator</div>
+            </div>
+
+            <div class="card-widget-a__stats-items">
+              <div class="card-widget-a__stats-item">
+                <span class="ua-icon-phone-alt card-widget-a__stats-item-icon"></span>
+                <span class="card-widget-a__stats-item-title">Phone</span>
+                <span class="card-widget-a__stats-item-value">+1 (800) 234-5678</span>
+              </div>
+              <div class="card-widget-a__stats-item">
+                <span class="ua-icon-envelope card-widget-a__stats-item-icon"></span>
+                <span class="card-widget-a__stats-item-title">Email</span>
+                <span class="card-widget-a__stats-item-value">info@example.com</span>
+              </div>
+              <div class="card-widget-a__stats-item">
+                <span class="ua-icon-fax card-widget-a__stats-item-icon"></span>
+                <span class="card-widget-a__stats-item-title">Fax</span>
+                <span class="card-widget-a__stats-item-value">+1 (800) 234-5678</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/layout-grid/js/layout-grid.min.js"></script>
+<script src="js/preview/draggable-panels.min.js"></script>
+{% endblock %}

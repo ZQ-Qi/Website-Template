@@ -1,0 +1,386 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Modal / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Modal</h2>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <figure class="demo-modal-bg">
+            <img src="img/modals/01.png" alt="" class="embed-responsive">
+          </figure>
+          <button type="button" class="btn btn-info btn-lg btn-block mt-3" data-toggle="modal" data-target="#exampleModal">
+            Verify account modal
+          </button>
+        </div>
+        <div class="mt-5">
+          <figure class="demo-modal-bg">
+            <img src="img/modals/03.png" alt="" class="embed-responsive">
+          </figure>
+          <button type="button" class="btn btn-info btn-lg btn-block mt-3" data-toggle="modal" data-target="#modal-error">
+            Error message modal
+          </button>
+        </div>
+        <div class="mt-5">
+          <figure class="demo-modal-bg">
+            <img src="img/modals/05.png" alt="" class="embed-responsive">
+          </figure>
+          <button type="button" class="btn btn-info btn-lg btn-block mt-3" data-toggle="modal" data-target="#modal-confirm">
+            Delete confirm modal
+          </button>
+        </div>
+        <div class="mt-5">
+          <figure class="demo-modal-bg">
+            <img src="img/modals/08.png" alt="" class="embed-responsive">
+          </figure>
+          <button type="button" class="btn btn-info btn-lg btn-block mt-3" data-toggle="modal" data-target="#custom-modal-subscribe">
+            Subscribe modal
+          </button>
+        </div>
+        <div class="mt-5">
+          <figure class="demo-modal-bg">
+            <img src="img/modals/13.png" alt="" class="embed-responsive">
+          </figure>
+          <button type="button" class="btn btn-info btn-lg btn-block mt-3" data-toggle="modal" data-target="#modal-settings">
+            Settings modal
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <figure class="demo-modal-bg">
+            <img src="img/modals/02.png" alt="" class="embed-responsive">
+          </figure>
+          <button type="button" class="btn btn-info btn-lg btn-block mt-3" data-toggle="modal" data-target="#modal-success">
+            Success message modal
+          </button>
+        </div>
+        <div class="mt-5">
+          <figure class="demo-modal-bg">
+            <img src="img/modals/04.png" alt="" class="embed-responsive">
+          </figure>
+          <button type="button" class="btn btn-info btn-lg btn-block mt-3" data-toggle="modal" data-target="#modal-reset-email">
+            Reset email modal
+          </button>
+        </div>
+        <div class="mt-5">
+          <figure class="demo-modal-bg">
+            <img src="img/modals/06.png" alt="" class="embed-responsive">
+          </figure>
+          <button type="button" class="btn btn-info btn-lg btn-block mt-3" data-toggle="modal" data-target="#modal-confirm2">
+            Delete confirm simple modal
+          </button>
+        </div>
+        <div class="mt-5">
+          <figure class="demo-modal-bg">
+            <img src="img/modals/09.png" alt="" class="embed-responsive">
+          </figure>
+          <button type="button" class="btn btn-info btn-lg btn-block mt-3" data-toggle="modal" data-target="#custom-modal-invite">
+            Invite members modal
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="exampleModal" class="modal fade custom-modal custom-modal-verify-account">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="ua-icon-modal-close"></span>
+        </button>
+        <div class="modal-content">
+          <div class="modal-header custom-modal__image">
+            <img src="img/modal/1.png" alt="" class="">
+          </div>
+          <div class="modal-body custom-modal__body">
+            <h4 class="custom-modal__body-heading">Verify your account</h4>
+            <div class="custom-modal__body-desc">Thanks for hoing Plooto! We just sent a verification link to your email. Click on it and get started sending payments!</div>
+          </div>
+          <div class="modal-footer">
+            <div class="custom-modal__buttons">
+              <button type="button" class="btn btn-info">Got It</button>
+            </div>
+            <div class="custom-modal__footer-desc">
+              Dont see the email? Click <a href="#">here</a> to resend it.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-success" class="modal fade custom-modal custom-modal-success">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="ua-icon-modal-close"></span>
+        </button>
+        <div class="modal-content">
+          <div class="modal-header custom-modal__image">
+            <img src="img/modal/2.png" alt="" class="">
+          </div>
+          <div class="modal-body custom-modal__body">
+            <h4 class="custom-modal__body-heading">Great!</h4>
+            <div class="custom-modal__body-desc">Yor invitation successfully send!</div>
+          </div>
+          <div class="modal-footer">
+            <div class="custom-modal__buttons">
+              <button type="button" class="btn btn-info">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-error" class="modal fade custom-modal custom-modal-error">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="ua-icon-modal-close"></span>
+        </button>
+        <div class="modal-content">
+          <div class="modal-header custom-modal__image">
+            <img src="img/modal/3.png" alt="" class="">
+          </div>
+          <div class="modal-body custom-modal__body">
+            <h4 class="custom-modal__body-heading">Oh snap!</h4>
+            <div class="custom-modal__body-desc">Change a few things up and try submitting again.</div>
+          </div>
+          <div class="modal-footer">
+            <div class="custom-modal__buttons">
+              <button type="button" class="btn btn-info">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-reset-email" class="modal fade custom-modal custom-modal-reset-email">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="ua-icon-modal-close"></span>
+        </button>
+        <div class="modal-content">
+          <div class="modal-header custom-modal__image">
+            <img src="img/modal/4.png" alt="" class="">
+          </div>
+          <div class="modal-body custom-modal__body">
+            <h4 class="custom-modal__body-heading">Reset Email Template</h4>
+            <div class="custom-modal__body-desc">This will completely reset the page content and all settings.</div>
+          </div>
+          <div class="modal-footer">
+            <div class="custom-modal__buttons">
+              <button type="button" class="btn btn-info">Reset</button>
+              <button type="button" class="btn btn-outline-info">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-confirm" class="modal fade custom-modal custom-modal-confirm">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="ua-icon-modal-close"></span>
+        </button>
+        <div class="modal-content">
+          <div class="modal-header custom-modal__image">
+            <img src="img/modal/5.png" alt="" class="">
+          </div>
+          <div class="modal-body custom-modal__body">
+            <h4 class="custom-modal__body-heading">Delete Bookmark</h4>
+            <div class="custom-modal__body-desc">This action cannot be undone</div>
+          </div>
+          <div class="modal-footer">
+            <div class="custom-modal__buttons">
+              <button class="btn btn-info iconfont icon-left custom-modal__icon-btn" type="button">
+                Confirm <span class="btn-icon ua-icon-check"></span>
+              </button>
+              <button type="button" class="btn btn-outline-info iconfont icon-left custom-modal__icon-btn">
+                Cancel <span class="btn-icon ua-icon-alert-close"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-confirm2" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="ua-icon-modal-close"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+              eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+              in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-info" type="button">Delete</button>
+            <button type="button" class="btn btn-outline-info">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="custom-modal-subscribe" class="modal fade custom-modal custom-modal-subscribe">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="ua-icon-modal-close"></span>
+        </button>
+        <div class="modal-content">
+          <div class="modal-header custom-modal__image">
+            <img src="img/modal/4.png" alt="" class="">
+          </div>
+          <div class="modal-body custom-modal__body">
+            <h4 class="custom-modal__body-heading">Get Our Updates In Your Inbox</h4>
+            <div class="custom-modal__body-desc">Dont want to miss a post? Sign up to get all the latest tips and trends from Pagemodo delivered right to you.</div>
+            <div class="custom-modal__form">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="form-group">
+                    <input type="text" placeholder="Favorite NBA Team" class="form-control form-control-md">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <button type="button" class="btn btn-info btn-block btn-md">Sign me up!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="custom-modal-invite" class="modal fade custom-modal custom-modal-invite">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="ua-icon-modal-close"></span>
+        </button>
+        <div class="modal-content">
+          <div class="modal-header custom-modal__image">
+            <img src="img/modal/6.png" alt="" class="">
+          </div>
+          <div class="modal-body custom-modal__body">
+            <h4 class="custom-modal__body-heading">Invite members to App</h4>
+            <div class="custom-modal__body-desc">Invite collegues, clients and friends to collaborate</div>
+            <div class="custom-modal__form">
+              <div class="form-group mb-0">
+                <div class="tag-editor"> <!-- need wrap -->
+                  <textarea id="tag-editor-invite" placeholder="Write email">example@themesanytime.com, email@example.com</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="custom-modal__buttons">
+              <button type="button" class="btn btn-info">Invite</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-settings" class="modal fade custom-modal-tabs">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header has-border">
+            <h5 class="modal-title">User Settings</h5>
+            <div class="btn-group btn-collection nav custom-modal__header-tabs" role="group" aria-label="Basic example">
+              <button class="btn btn-secondary nav-item nav-link" type="button" data-toggle="tab" data-target="#modal-settings-account">Account</button>
+              <button class="btn btn-secondary nav-item nav-link" type="button" data-toggle="tab" data-target="#modal-settings-voice">Voice</button>
+              <button class="btn btn-secondary nav-item nav-link active" type="button" data-toggle="tab" data-target="#modal-settings-notifications">Notifications</button>
+            </div>
+            <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="ua-icon-modal-close"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="tab-content">
+              <div class="tab-pane fade" id="modal-settings-account">Account</div>
+              <div class="tab-pane fade" id="modal-settings-voice">Voice</div>
+              <div class="tab-pane fade show active" id="modal-settings-notifications">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="input-device">Input Device</label>
+                      <input type="text" class="form-control" id="input-device" placeholder="Built-in Microphone">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="output-device">Output Device</label>
+                      <input type="text" class="form-control" id="output-device" placeholder="Built-in Microphone">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <span class="form-label">Mic Boost</span>
+                      <div id="mic-boost" class="nouislider"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <span class="form-label">Adjust Volume</span>
+                      <div id="adjust-volume" class="nouislider"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="input-type">Input Type</label>
+                      <input type="text" class="form-control" id="input-type">
+                      <div class="form-text text-muted">Push to talk will only work when the tab has focus unless you install the native app</div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="new-shortcut">Shortcut</label>
+                      <input type="text" class="form-control" id="new-shortcut">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer modal-footer--center">
+            <button type="button" class="btn btn-outline-info">Cancel</button>
+            <button class="btn btn-info" type="button">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/nouislider/nouislider.min.js"></script>
+<script src="vendor/tagify/tagify.min.js"></script>
+<script src="js/preview/modal.min.js"></script>
+{% endblock %}

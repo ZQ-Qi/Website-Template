@@ -1,0 +1,336 @@
+/*------------------------------------------------------------------
+[Table of contents]
+-------------------------------------------------------------------*/
+
+@import "../config/colors";
+@import "../config/ui";
+
+$ks-dashboard-tabbed-sidebar-sidebar-width: 394px;
+
+.ks-dashboard-tabbed-sidebar {
+  display: flex;
+}
+
+.ks-dashboard-tabbed-sidebar-widgets {
+  margin-right: $ks-dashboard-tabbed-sidebar-sidebar-width;
+  flex-grow: 1;
+  padding: 30px;
+  overflow: auto;
+}
+
+.ks-dashboard-tabbed-sidebar-sidebar {
+  width: 394px;
+  min-width: 300px;
+  border-left: 1px solid $ks-default-border-color;
+  position: fixed;
+  right: 0;
+  top: 120px;
+  height: calc(100% - 120px);
+  background: #fff;
+
+  .ks-tabs-container {
+    border: none;
+
+    .ks-nav-tabs {
+      .nav-item {
+        width: 25%;
+      }
+
+      .nav-link {
+        text-align: center;
+
+        &:before {
+          top: 0;
+        }
+
+        .ks-icon {
+          margin: 0;
+          font-size: 20px;
+          position: relative;
+
+          > .ks-amount {
+            font-family: $ks-base-font-name;
+            position: absolute;
+            right: -9px;
+            top: -6px;
+            font-size: 11px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-tabbed-sidebar-tab-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > h5 {
+    margin: 0;
+  }
+
+  > .form-control {
+    margin-left: 10px;
+  }
+}
+
+.ks-tabbed-sidebar-activity-items,
+.ks-tabbed-sidebar-comment-items,
+.ks-tabbed-sidebar-post-items,
+.ks-tabbed-sidebar-favourites-items {
+  margin-top: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.ks-tabbed-sidebar-activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+
+  .ks-avatar, .ks-action-icon {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 15px;
+    display: inline-flex;
+  }
+
+  .ks-action-icon {
+    justify-content: center;
+    align-items: center;
+
+    > .ks-icon {
+      font-size: 20px;
+      line-height: 20px;
+      color: $ks-color-primary;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .ks-action-message {
+    font-size: 12px;
+    color: $ks-default-text-color-light;
+    position: relative;
+    top: 1px;
+  }
+
+  .badge {
+    margin-left: 10px;
+    display: inline-flex;
+  }
+  
+  &.ks-activity-item-status-active {
+    background-color: rgba(57, 80, 155, 0.05);
+
+    .ks-action-message {
+      color: $ks-default-text-color;
+    }
+  }
+}
+
+.ks-tabbed-sidebar-comment-item {
+  + .ks-tabbed-sidebar-comment-item {
+    margin-top: 30px;
+  }
+
+  margin-left: 20px;
+  margin-right: 20px;
+
+  .ks-tabbed-sidebar-comment-action {
+    display: flex;
+
+    .ks-avatar {
+      width: 25px;
+      height: 25px;
+      min-width: 25px;
+      min-height: 25px;
+      margin-right: 15px;
+    }
+
+    > .ks-action {
+      > .ks-name {
+        color: $ks-default-text-color;
+      }
+
+      > .ks-description {
+        color: $ks-default-text-color-light;
+      }
+
+      > .ks-datetime {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: $ks-default-text-color-light;
+      }
+    }
+  }
+
+  .ks-tabbed-sidebar-comment-item-message {
+    margin-top: 15px;
+    font-size: 12px;
+    padding: 15px 20px;
+    border-radius: $ks-default-border-radius;
+    background-color: rgba(222, 186, 12, 0.1);
+  }
+}
+
+.ks-tabbed-sidebar-post-item,
+.ks-tabbed-sidebar-favourite-item {
+  padding: 15px 20px;
+  display: flex;
+  border-top: 1px solid $ks-default-border-color;
+
+  .ks-thumb {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    margin-right: 15px;
+    border-radius: $ks-default-border-radius;
+  }
+
+  .ks-description {
+    > .ks-name {
+      margin-top: -1px;
+      font-size: 14px;
+      display: block;
+      color: $ks-default-text-color;
+    }
+
+    > .ks-extra-info {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: $ks-default-text-color-light;
+
+      .ks-amount-block {
+        display: inline-block;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: $ks-default-text-color-light;
+
+        + .ks-amount-block {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.ks-tabbed-sidebar-favourite-item {
+  position: relative;
+
+  .ks-avatar, .ks-action-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    margin-right: 15px;
+    display: inline-flex;
+  }
+
+  .ks-action-icon {
+    justify-content: center;
+    align-items: center;
+
+    > .ks-icon {
+      font-size: 24px;
+      line-height: 24px;
+      color: $ks-color-primary;
+      position: relative;
+      top: 1px;
+    }
+
+    &.ks-action-file {
+      > .ks-icon {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .btn.ks-remove {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -19px;
+    right: 20px;
+  }
+
+  &:hover {
+    .ks-remove {
+      display: inline-flex;
+    }
+  }
+}
+
+.ks-dashboard-tabbed-sidebar-fixed-tabs {
+  .btn {
+    &.ks-tabbed-sidebar-navigation-block-toggle {
+      position: static;
+    }
+  }
+
+  .ks-dashboard-tabbed-sidebar-widgets {
+    margin-right: 0;
+  }
+
+  .ks-dashboard-tabbed-sidebar-sidebar {
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    right: -$ks-dashboard-tabbed-sidebar-sidebar-width;
+    z-index: 3;
+    height: 100%;
+
+    &.ks-open {
+      right: 0;
+      transition: right .2s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 1670px) {
+  .btn {
+    &.ks-tabbed-sidebar-navigation-block-toggle-icon {
+      position: static;
+    }
+  }
+
+  .ks-dashboard-tabbed-sidebar-widgets {
+    margin-right: 0;
+  }
+
+  .ks-dashboard-tabbed-sidebar-sidebar {
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    right: -$ks-dashboard-tabbed-sidebar-sidebar-width;
+    z-index: 3;
+    height: 100%;
+
+    &.ks-open {
+      right: 0;
+      transition: right .2s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  div[class*="col-"] {
+    > .card {
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      > .card {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

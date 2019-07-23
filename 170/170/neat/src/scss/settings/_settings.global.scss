@@ -1,0 +1,186 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+
+//
+// Set up global/base Neat's scss variables.
+//
+// Base variables are used across the whole UI components, any changes made 
+// to these variables will affec the whole UI Kit.
+//
+// Unless you know what you are doing, don't change it here, instead, copy 
+// settings from this file into your custom settings' file to override 
+// Neat's default settings.
+//
+
+
+//
+// Table of Content:
+//
+// 1. Color System
+// 2. Typography
+// 3. Borders
+// 4. Transitions
+// 5. Spacing
+// 6. Breakpoints
+// 7. Z-index System
+//
+
+
+//
+// 1. Color System
+// ========================================================================== */
+
+// Main Colors
+$color-info:      #2083FE !default; // blue 
+$color-success:   #2FCA74 !default; // green
+$color-warning:   #f5b848 !default; // yellow
+$color-danger:    #ED4D4D !default; // red
+$color-fancy: 	  #6F35F0 !default; // purple
+$color-primary:   #252529 !default; // black
+$color-secondary: #768093 !default; // grey
+
+// Extra Colors
+$color-pink: #F44C67 !default; // pink
+
+// Light Colors
+$color-info-light:      #E0EBFF !default; // blue 
+$color-success-light:   #DAF4E6 !default; // green
+$color-warning-light:   #FFECDA !default; // yellow
+$color-danger-light:    #FFE2E2 !default; // red
+$color-primary-light:   #E9ECF2 !default; // black
+$color-fancy-light:     #E9E0FF !default; // purple
+
+// Basic Colors
+$color-sky-light: #F4F6F9 !default;
+$color-sky:       #ECEDF2 !default;
+$color-sky-dark:  #E1E2E8 !default;
+
+$color-ink-light: #99A5BD !default;
+$color-ink:       #768093 !default;
+$color-ink-dark:  #252529 !default;
+
+$color-white: #fff !default;
+
+// Main Gradients
+$gradient-info:      #1D7BF0, #2083FE !default;
+$gradient-success:   #28C76F, #2CCF75 !default;
+$gradient-warning:   #F5A155, #F5B855 !default;
+$gradient-danger:    #EE4343, #EC5F5F !default;
+$gradient-primary:   #252529, #444449 !default;
+$gradient-secondary: #768093, #969FB0 !default;
+
+// Extra Gradients
+$gradient-fancy: #4F5EF5, #6A77FF; // purple
+
+
+// Brand Color
+// 
+// The brand color of the whole kit, will affect most UI components like toggles,
+// buttons and switchs. 
+// 
+
+$brand-color: $color-info !default;
+$body-background-color: $color-sky-light !default;
+$base-background-color: $color-white !default;
+
+
+//
+// 2. Typography
+// ========================================================================== */
+
+$base-font-family: "Lato", sans-serif !default;
+$base-font-size: 16px !default;
+$base-line-height: 24px !default;
+
+// Font Weights
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-semibold: 500 !default;
+$font-weight-bold: 600 !default;
+
+// Text
+$text-small-font-size: rem(12px) !default;
+$text-font-size: rem(14px) !default;
+$text-large-font-size: rem(16px) !default;
+
+$text-color: $color-ink !default;
+$text-inverse-color: $color-white !default;
+$text-strong-color: $color-ink !default;
+
+// Headings
+$heading-color: $color-ink-dark;
+$heading-margin: 0;
+$heading-font-weight: $font-weight-semibold;
+
+$h1-font-size: rem(36px) !default;
+$h2-font-size: rem(28px) !default;
+$h3-font-size: rem(24px) !default;
+$h4-font-size: rem(20px) !default;
+$h5-font-size: rem(18px) !default;
+$h6-font-size: rem(16px) !default;
+
+// Links
+$link-color: $color-info;
+$link-hover-color: $color-info;
+
+// IconFont
+$base-icon-font: "feather";
+
+
+//
+// 3. Borders
+// ========================================================================== */
+
+$base-border-radius: 4px !default;
+$base-border-color: $color-sky !default;
+$base-border-width: 1px !default;
+
+
+//
+// 4. Transitions
+// ========================================================================== */
+
+$base-transition-time: 0.15s;
+$base-transition-style: ease-in-out;
+
+
+//
+// 5. Spacing
+// ========================================================================== */
+
+$spacer-xsmall: 10px !default;
+$spacer-small:  15px !default;
+$spacer:        30px !default;
+$spacer-large:  50px !default;
+$spacer-xlarge: 100px !default;
+
+
+//
+// 6. Breakpoints
+// ========================================================================== */
+
+// Use these breakpoints with media-queries to create responsive website, these
+// numbers are based on Bootstrap's grid breakpoints
+
+$breakpoint-xs: 0 !default;
+$breakpoint-sm: 576px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 992px !default;
+$breakpoint-xl: 1200px !default;
+
+$breakpoint-mobile:  $breakpoint-sm !default;
+$breakpoint-tablet:  $breakpoint-md !default;
+$breakpoint-desktop: $breakpoint-lg !default;
+$breakpoint-wide:    $breakpoint-xl !default;
+
+
+//
+// 7. Z-index System
+// ========================================================================== */
+
+$z-index-100: 100 !default; // over content
+$z-index-200: 200 !default; // over control
+$z-index-300: 300 !default; // over page
+$z-index-400: 400 !default; // over screen
+$z-index-500: 500 !default; // over everything

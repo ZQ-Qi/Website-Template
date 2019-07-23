@@ -1,0 +1,272 @@
+
+
+/*==========  page  ==========*/
+
+
+.main-content {
+    overflow: hidden; // fix overflow issue caused by animate.css
+}
+
+.hero {
+    position: relative;
+    border: 0;
+    color: #fff;
+    color: rgba(255,255,255,.8);
+    text-align: center;
+    padding: 200px 0 150px;
+    background-color: $dark_bg;
+
+    .hero-inner {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-top: -110px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-bottom: 20px;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+            font-size: 2.3rem;
+            line-height: 3rem;
+            margin-bottom: 32px;
+        }
+    }
+
+    .btn-cta {
+        margin: 3rem 0 0;
+        letter-spacing: 0.8px;
+        font-size: 14px;
+        min-width: 220px;
+        padding: 1em;
+        color: #f5f5f5;
+        color: rgba(255,255,255,.85);
+    }
+
+    .preview-img {
+        display: block;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+#hero {
+    background: url('../images/2.jpg') repeat-y 0 0 fixed;
+    background-size: cover;     
+}
+
+// 
+.features {
+    padding: 80px 0 80px;
+    border-bottom: 1px solid #ddd;
+
+    > header {
+        padding: 0 20px;
+        margin-bottom: 60px;
+    }
+
+    header h3 {
+        text-transform: uppercase;
+    }
+
+    .feature-item {
+        margin-bottom: 50px;
+        &:after {
+            content: "";
+            width: 100px;
+            height: 3px;
+            display: inline-block;
+            background: #eff0f3;
+            margin-top: 2em;
+        }
+
+        .icon-container {
+            margin: auto;
+            height: 74px;
+            width: 74px;
+            line-height: 74px;         
+            padding: 0;
+            border-radius: 50%;
+            border: 3px solid $brand-primary;   
+            font-size: 35px;
+            color: $brand-primary;
+
+            .zmdi {
+                vertical-align: middle;
+                margin-top: -8px; // make is vertical centered
+            }
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: .6rem;
+            margin-bottom: .6rem;
+            font-weight: normal;
+            color: $dark_bg;
+            text-transform: uppercase;
+        }
+
+        .desc {
+            max-width: 310px;
+            margin-left: auto;
+            margin-right: auto;
+            color: $gray-light;
+            font-size: 1em;
+            line-height: 1.6em;
+        }
+    }
+
+}
+
+.newsletter {
+    position: relative;
+    background-color: $dark_bg;
+    background: url('../images/photo-1423753623104.jpg') repeat-y 0 0 fixed;
+    background-size: cover;
+    padding: 150px 0;
+    text-align: center;
+    color: #eee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.15);
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.3);
+    }
+    h2 {
+        position: relative;
+        text-align: center;
+        font-size: 36px;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #f1f1f1;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+
+
+    form {
+        padding: 0 15px;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .ui-input-group {
+        > input,
+        > textarea {
+            border-bottom: 2px solid $input-border;
+            color: $bright;
+
+        }
+        > label {
+            color: $input-border; 
+        }
+    }
+
+    .btn {
+        margin-top: 30px;
+        font-size: 14px;
+        min-width: 220px;
+        padding: 1em;
+        color: #f5f5f5;
+        color: rgba(255,255,255,.85);
+    }
+}
+
+
+.faq {
+    background-color: $bg_section_faq;
+    padding: 7em 2em 5em;
+
+    ul.faq-list {
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+        margin-bottom: 1.6em;
+        padding: 1em 1em;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+            padding: 1em 3em;
+        }
+        @media (min-width: 47.5em) {
+            width: 49%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+
+    h4 {
+        margin-bottom: .6em;
+        font-size: 21px;
+        line-height: 1.6em;
+    }
+
+    .faq-a {
+        font-family: $font-family-serif;
+        font-size: 16px;
+        line-height: 1.6em;
+    }
+}
+
+.contact {
+    padding: 30px 0 80px;
+    h3 {
+        margin: 50px 0 30px;
+    }
+
+    .contact-info {
+        margin: 50px 0 0;
+        font-size: 18px;
+        .zmdi {
+            margin-right: 15px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+    }
+
+    .form-horizontal {
+        padding: 0 15px;
+    }
+    .form-group {
+        margin-bottom: 1.5em;
+    }
+}
+
+.action-call {
+    padding: 4em 1em;
+    background-color: $brand-primary;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 25px;
+    color: $bright;
+    .btn {
+        font-size: 16px;
+        margin: 1em 0 1em 15px;
+        background-color: #fff;
+        color: $brand-primary;
+        .zmdi {
+            margin-left: 10px; 
+        }
+        &:hover {
+            .zmdi {
+                animation: move-arrow 1000ms ease-in-out infinite;
+            }
+        }        
+    }
+}
+
+// 
+.footer {
+    position: relative;
+    color: #7a859e;
+    position: relative;
+    background-color: $dark_bg;
+    padding: 50px 0;
+    font-size: 12px;
+}

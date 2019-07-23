@@ -1,0 +1,42 @@
+@import "../config/colors";
+
+.breadcrumb {
+  &.ks-default {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border-radius: 2px;
+    border: solid 1px $ks-default-border-color;
+
+    > .breadcrumb-item {
+      font-size: 12px;
+      padding: 5px 15px;
+      font-weight: normal;
+      color: $ks-default-text-color-light;
+
+      &:before, &:after {
+        display: none;
+      }
+
+      &.active {
+        color: rgba($ks-default-text-color-light, 0.6);
+      }
+
+      + .breadcrumb-item {
+        border-left: 1px solid $ks-default-border-color;
+      }
+    }
+
+    > .ks-breadcrumb-icon {
+      padding: 5px 6px;
+
+      > .ks-icon {
+        font-size: 16px;
+        line-height: 14px;
+        color: $ks-default-text-color-light;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+}

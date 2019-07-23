@@ -1,0 +1,159 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/simplemde/simplemde.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/simplemde/simplemde.min.css"> <!-- customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>SimpleMDE Markdown Editor</h3>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="ks-simplemde-markdown">
+<textarea id="ks-simplemde-markdown-editor"># Intro
+Go ahead, play around with the editor! Be sure to check out **bold** and *italic* styling, or even [links](https://google.com). You can type the Markdown syntax, use the toolbar, or use shortcuts like `cmd-b` or `ctrl-b`.
+
+## Lists
+Unordered lists can be started using the toolbar or by typing `* `, `- `, or `+ `. Ordered lists can be started by typing `1. `.
+
+#### Unordered
+* Lists are a piece of cake
+* They even auto continue as you type
+* A double enter will end them
+* Tabs and shift-tabs work too
+
+#### Ordered
+1. Numbered lists...
+2. ...work too!
+
+## What about images?
+![Yes](https://i.imgur.com/sZlktY7.png)</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/simplemde/simplemde.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        var simplemde = new SimpleMDE({
+            element: $('#ks-simplemde-markdown-editor').get(0),
+            toolbar: [
+                {
+                    name: "heading",
+                    action: SimpleMDE.toggleHeadingSmaller,
+                    className: "la la-header",
+                    title: "Heading"
+                },
+                {
+                    name: "bold",
+                    action: SimpleMDE.toggleBold,
+                    className: "la la-bold",
+                    title: "Bold"
+                },
+                {
+                    name: "italic",
+                    action: SimpleMDE.toggleItalic,
+                    className: "la la-italic",
+                    title: "Italic"
+                },
+                {
+                    name: "strikethrough",
+                    action: SimpleMDE.toggleStrikethrough,
+                    className: "la la-strikethrough",
+                    title: "Strikethrough"
+                },
+                "|",
+                {
+                    name: "quote",
+                    action: SimpleMDE.toggleBlockquote,
+                    className: "la la-quote-left",
+                    title: "Quote"
+                },
+                {
+                    name: "unordered-list",
+                    action: SimpleMDE.toggleUnorderedList,
+                    className: "la la-list-ul",
+                    title: "Generic List"
+                },
+                {
+                    name: "ordered-list",
+                    action: SimpleMDE.toggleOrderedList,
+                    className: "la la-list-ol",
+                    title: "Numbered List"
+                },
+                {
+                    name: "code",
+                    action: SimpleMDE.toggleCodeBlock,
+                    className: "la la-code",
+                    title: "Code"
+                },
+                "|",
+                {
+                    name: "link",
+                    action: SimpleMDE.drawLink,
+                    className: "la la-link",
+                    title: "Create Link"
+                },
+                {
+                    name: "image",
+                    action: SimpleMDE.drawImage,
+                    className: "la la-picture-o",
+                    title: "Insert Image"
+                },
+                {
+                    name: "table",
+                    action: SimpleMDE.drawTable,
+                    className: "la la-table",
+                    title: "Insert Table"
+                },
+                {
+                    name: "horizontal-rule",
+                    action: SimpleMDE.drawHorizontalRule,
+                    className: "la la-minus",
+                    title: "Insert Horizontal Line"
+                },
+                "|",
+                {
+                    name: "preview",
+                    action: SimpleMDE.togglePreview,
+                    className: "la la-eye no-disable",
+                    title: "Toggle Preview"
+                },
+                {
+                    name: "side-by-side",
+                    action: SimpleMDE.toggleSideBySide,
+                    className: "la la-columns no-disable no-mobile",
+                    title: "Toggle Side by Side"
+                },
+                {
+                    name: "fullscreen",
+                    action: SimpleMDE.toggleFullScreen,
+                    className: "la la-arrows-alt no-disable no-mobile",
+                    title: "Toggle Fullscreen"
+                },
+                {
+                    name: "clean-block",
+                    action: SimpleMDE.cleanBlock,
+                    className: "la la-eraser la-clean-block",
+                    title: "Clean block"
+                },
+            ]
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

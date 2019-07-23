@@ -1,0 +1,50 @@
+@import "../../config/colors";
+@import "../../config/ui";
+
+.jconfirm {
+  &.jconfirm-white, &.jconfirm-light {
+    .jconfirm-box {
+      border-radius: $ks-default-border-radius;
+      padding: 15px 20px 0 20px;
+
+      .jconfirm-buttons {
+        button {
+          border-radius: $ks-default-border-radius;
+          font-size: 12px;
+          padding: 11px 15px;
+
+          + .btn {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .jconfirm-box {
+    div.jconfirm-closeIcon {
+      top: 10px;
+    }
+
+    &.jconfirm-type-primary {
+      border-top: solid 7px $ks-color-primary;
+    }
+
+    &.jconfirm-type-success {
+      border-top: solid 7px $ks-color-success;
+    }
+
+    &.jconfirm-type-info {
+      border-top: solid 7px $ks-color-info;
+    }
+
+    &.jconfirm-type-warning {
+      border-top: solid 7px $ks-color-warning;
+    }
+
+    &.jconfirm-type-danger {
+      border-top: solid 7px $ks-color-danger;
+      animation-name: type-red;
+    }
+  }
+}

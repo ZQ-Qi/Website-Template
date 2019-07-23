@@ -1,0 +1,275 @@
+/*------------------------------------------------------------------
+[Typography]
+
+Default font size: 13px;
+Body:		13px/16px 'Open Sans', sans-serif;
+Headers:		12px-36px 'Open Sans', sans-serif;
+Input, textarea:	13px 'Open Sans', sans-serif;
+-------------------------------------------------------------------*/
+
+@import "../config/ui";
+@import "../config/colors";
+
+/* BEGIN UIKIT TYPOGRAPHY */
+body {
+  font-family: $ks-base-font-name;
+  font-size: $ks-default-font-size;
+  color: $ks-default-text-color;
+}
+
+*, *:before, *:after
+{
+  box-sizing: border-box;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a, button, label {
+  outline: none !important; /* Don't delete "!important" */
+}
+
+a {
+  &:focus, &:hover {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  font-family: $ks-base-font-name;
+  color: $ks-default-text-color;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+[class*="col-"],
+.container-fluid {
+  > h1, > h2, > h3, > h4, > h5, > h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+b, .ks-bold {
+  font-weight: 500;
+}
+
+.ks-content {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+p {
+  &.ks-lead {
+    font-size: 18px;
+  }
+}
+
+mark {
+  border-radius: 2px;
+  background-color: rgba(247, 202, 24, 0.3);
+  padding-left: 4px;
+  padding-right: 4px;
+  display: inline-block;
+}
+
+a {
+  color: $ks-color-primary;
+
+  &.hover, &:hover {
+    color: $ks-color-primary;
+    text-decoration: none;
+  }
+}
+
+code {
+  border-radius: 2px;
+  background-color: #fdf0ed;
+  color: $ks-color-danger;
+  position: relative;
+  top: -1px;
+}
+
+.blockquote {
+  font-size: 17px;
+  padding: .3rem 1rem;
+  border-left-color: #8897c3;
+
+  .blockquote-footer {
+    font-size: 13px;
+    color: #999;
+  }
+}
+
+iframe {
+  border: none;
+}
+
+.ks-color-primary {
+  color: $ks-color-primary;
+}
+
+.ks-bg-primary {
+  background: $ks-color-primary;
+}
+
+.ks-color-success  {
+  color: $ks-color-success !important;
+}
+
+.ks-color-info {
+  color: $ks-color-info !important;
+}
+
+.ks-color-warning {
+  color: $ks-color-warning !important;
+}
+
+.ks-color-danger {
+  color: $ks-color-danger !important;
+}
+
+.ks-color-pink {
+  color: rgba(209, 73, 208, 0.6) !important;
+}
+
+.ks-color-purple {
+  color: #cb48bb !important;
+}
+
+.ks-bg-purple {
+  background: #cb48bb !important;
+}
+
+.ks-color-brown {
+  color: #a26363 !important;
+}
+
+.text-gray, .ks-color-gray {
+  color: rgba(51, 51, 51, 0.6) !important;
+}
+
+.ks-text-bold {
+  font-weight: 500;
+}
+
+.ks-text-center {
+  text-align: center;
+}
+
+.ks-text-right {
+  text-align: right;
+}
+
+.ks-text-no-wrap {
+  white-space: nowrap;
+}
+
+.ks-text-light {
+  color: $ks-default-text-color-light  !important;
+}
+
+pre[class*="language-"] {
+  margin: 0;
+  text-shadow: none;
+
+  > code {
+    font-size: 14px;
+    text-shadow: none;
+
+    .tag {
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0;
+    }
+  }
+
+  + div, + p {
+    margin-top: 15px;
+  }
+
+  + h1, + h2, + h3, + h4, + h5, + h6 {
+    margin-top: 20px;
+  }
+}
+
+.ks-code-block {
+  margin-top: 15px;
+}
+
+.row {
+  + h1, + h2, + h3, + h4, + h5, + h6 {
+    margin-top: 30px;
+  }
+}
+
+.card {
+  + h4 {
+    margin-top: 20px;
+  }
+}
+
+.d-flex {
+  &.align-items-center {
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+  }
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.bg-primary {
+  background-color: $ks-color-primary !important;
+}
+
+.bg-success {
+  background-color: $ks-color-success !important;
+}
+
+.bg-info {
+  background-color: $ks-color-info !important;
+}
+
+.bg-danger {
+  background-color: $ks-color-danger !important;
+}
+
+.bg-warning {
+  background-color: $ks-color-warning !important;
+}
+
+.bg-cranberry {
+  background-color: $ks-color-cranberry !important;
+}
+/* END UIKIT TYPOGRAPHY */

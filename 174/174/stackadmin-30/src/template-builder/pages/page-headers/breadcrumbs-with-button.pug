@@ -1,0 +1,18 @@
+.content-header-left.col-md-6.col-12.mb-2
+  h3.content-header-title.mb-0 #{pageTitle}
+  .row.breadcrumbs-top
+    block breadcrumbs
+      +breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Page headers"}, {name:"Breadcrumbs with button"}])
+.content-header-right.text-md-right.col-md-6.col-12
+  .btn-group
+    button.btn.btn-round.btn-primary(type='button')
+      i.ft-settings.pr-1
+      |  Settings
+    button.btn.btn-round.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+      span.sr-only Toggle Dropdown
+    .dropdown-menu
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link

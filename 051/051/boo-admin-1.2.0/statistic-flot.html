@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Boo Admin - Statistic Flot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+    <script src="assets/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body class="sidebar-left ">
+<div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="brand" href="javascript:void(0);"><img src="assets/img/demo/logo-brand.png"></a>
+                        <div class="search-global">
+                            <input id="globalSearch" class="search search-query input-medium" type="search">
+                            <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav user-menu visible-desktop">
+                                <li><a class="btn-glyph fontello-icon-edit tip-bc" href="javascript:void(0);" title="Messages"><span class="badge badge-important">8</span></a></li>
+                                <li><a class="btn-glyph fontello-icon-mail-1 tip-bc" href="javascript:void(0);" title="Emails"></a></li>
+                                <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Support"><span class="badge badge-important">4</span></a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li> <a href="dashboard-one.html">Dashboard</a> </li>
+                                <li class="active"> <a href="javascript:void(0);">Components</a> </li>
+                                <li> <a href="component-fullcalendar-demo.html"><span class="fontello-icon-calendar"></span>Calendar</a> </li>
+                                <li> <a href="javascript:void(0);"><span class="fontello-icon-users"></span>Contacts</a> </li>
+                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="component-form-demo.html">Demo Form</a></li>
+                                        <li><a href="component-widgets-remember.html">Remember</a></li>
+                                        <li><a href="component-widgets-users.html">User List</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">Next Update</li>
+                                        <li><a href="javascript:void(0);">Contacts</a></li>
+                                        <li><a href="javascript:void(0);">Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer">
+                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                <!-- // Resposive navigation -->
+                <div class="breadcrumbs-nav hidden-phone">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                        <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Table</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">Boo Admin </li>
+                    </ul>
+                </div>
+                <!-- // breadcrumbs --> 
+            </div>
+            <!-- // drawer --> 
+        </div>
+    </div>
+    <!-- // header-container -->
+    
+    <div id="main-container">
+        <div id="main-sidebar" class="sidebar sidebar-inverse">
+            <div class="sidebar-item">
+                <div class="media profile">
+                    <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
+                        <p class="data">Last Access: 16 May 15:30</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // sidebar item - profile -->
+            
+            <ul id="mainSideMenu" class="nav nav-list nav-side">
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor"></span> <i class="chevron fontello-icon-right-open-3"></i> Dashboards </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accDash">
+                        <li> <a href="dashboard-one.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 1 </a> </li>
+                        <li> <a href="dashboard-two.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 2 </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Dashboard -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon aweso-icon-list-alt"></span><i class="chevron fontello-icon-right-open-3"></i> Form </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accForms">
+                        <li> <a href="component-form-demo.html"> <i class="fontello-icon-right-dir"></i> Demo Form </a> </li>
+                        <li> <a href="component-form-elements.html"> <i class="fontello-icon-right-dir"></i> Form Element </a> </li>
+                        <li> <a href="component-form-extension.html"> <i class="fontello-icon-right-dir"></i> Form Extension</a> </li>
+                        <li> <a href="component-form-wizard.html"> <i class="fontello-icon-right-dir"></i> Form Wizard</a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Forms -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accComponents" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Components </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accComponents">
+                        <li> <a href="elements-notification.html"> <i class="fontello-icon-right-dir"></i> Notification </a> </li>
+                        <li> <a href="component-rangeslider.html"> <i class="fontello-icon-right-dir"></i> Rangeslider </a> </li>
+                        <li> <a href="component-file-upload.html"> <i class="fontello-icon-right-dir"></i> File upload </a> </li>
+                        <li> <a href="component-gallery.html"> <i class="fontello-icon-right-dir"></i> Gallery &amp; Image </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Components -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Tables </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accTables">
+                        <li> <a href="component-table.html"> <i class="fontello-icon-right-dir"></i> Base Table </a> </li>
+                        <li> <a href="component-table-boo.html"> <i class="fontello-icon-right-dir"></i> Boo Table </a> </li>
+                        <li> <a href="component-table-datatable.html"> <i class="fontello-icon-right-dir"></i> DataTable </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Tables -->
+                <li class="accordion-group">
+                    <div class="accordion-heading active"> <a href="#accStatistics" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-chart"></span> <i class="chevron fontello-icon-right-open-3"></i> Statistics </a> </div>
+                    <ul class="accordion-content nav nav-list collapse in" id="accStatistics">
+                        <li class="active"> <a href="statistic-flot.html"> <i class="fontello-icon-right-dir"></i> Charts </a> </li>
+                        <li> <a href="statistic-sparkline.html"> <i class="fontello-icon-right-dir"></i> Sparklines </a> </li>
+                        <li> <a href="statistic-circle.html"> <i class="fontello-icon-right-dir"></i> Circle </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Statistics -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accWidgets" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon  fontello-icon-window"></span> <i class="chevron fontello-icon-right-open-3"></i> Widgets </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accWidgets">
+                        <li> <a href="component-widget-style.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Style </a> </li>
+                        <li> <a href="component-widget-custom.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Custom </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Widgets -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accButtons" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-puzzle"></span> <i class="chevron fontello-icon-right-open-3"></i> UI Elements </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accButtons">
+                        <li> <a href="elements-button.html"> <i class="fontello-icon-right-dir"></i> Button </a> </li>
+                        <li> <a href="elements-icon-font.html"> <i class="fontello-icon-right-dir"></i> Iconic fonts </a> </li>
+                        <li> <a href="elements-icon-fugue-demo.html"> <i class="fontello-icon-right-dir"></i> Icon </a> </li>
+                        <li> <a href="elements-wells.html"> <i class="fontello-icon-right-dir"></i> Wells </a> </li>
+                        <li> <a href="elements-tabs.html"> <i class="fontello-icon-right-dir"></i> Tabs </a> </li>
+                        <li> <a href="elements-modals.html"> <i class="fontello-icon-right-dir"></i> Modal </a> </li>
+                        <li> <a href="elements-progressbar.html"> <i class="fontello-icon-right-dir"></i> Progressbar </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu UI Elements -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accCalendar" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Calendar </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accCalendar">
+                        <li> <a href="component-fullcalendar-demo.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Demo </a> </li>
+                        <li> <a href="component-fullcalendar.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Style </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Calendar -->
+            </ul>
+            <!-- // sidebar menu -->
+            
+            <div class="sidebar-item"></div>
+            <!-- // sidebar item --> 
+            
+        </div>
+        <!-- // sidebar -->
+        
+        <div id="main-content" class="main-content container-fluid">
+            <div class="row-fluid page-head">
+                <h2 class="page-title"><i class="fontello-icon-easel"></i> Statistic <small>data visualization</small></h2>
+                <!--<p class="pagedesc"></p> -->
+                <div class="page-bar">
+                    <div class="btn-toolbar"> </div>
+                </div>
+            </div>
+            <!-- // page head -->
+            
+            <div id="page-content" class="page-content">
+                <section class="padding-top20">
+                    <div class="page-header">
+                        <h3><i class="fontello-icon-chart opaci45"></i> Chart Flot <small>Line</small></h3>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-simple">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart"></i> Chart Line Base</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotLineA" style="width:100%; height:230px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column -->
+                        
+                        <div class="span6 widget well well-black">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart"></i> Chart Line</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotLineB" style="width:100%; height:230px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-simple">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart"></i> Chart Line</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotLineC" style="width:100%; height:170px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-simple">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart-1"></i> Chart Line AutoUpdate</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotAutoUpdate" style="width:100%; height:170px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="page-header">
+                        <h3><i class="fontello-icon-chart-bar-3 opaci45"></i> Chart Flot <small>Bar</small></h3>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-simple">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart-bar-3"></i> Chart Bar</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotBarA" style="width:100%; height:230px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column -->
+                        
+                        <div class="span6 widget well well-black">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-align-left"></i> Chart Bar Horizontal</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotBarB" style="width:100%; height:230px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-simple">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart-bar-3"></i> Chart Bar Stack</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotBarC" style="width:100%; height:230px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column --> 
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-simple">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart-bar-3"></i> Chart Bar Stacked Percentage</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotBarD" style="width:100%; height:230px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column --> 
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="page-header">
+                        <h3><i class="fontello-icon-chart-pie opaci45"></i> Chart Flot <small>Pie</small></h3>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4 widget widget-box">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart-pie"></i> Chart Pie</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotPie" style="width:100%; height:230px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column -->
+                        <div class="span4 widget widget-box">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart-pie"></i> Chart Pie Full</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotPieFull" style="width:100%; height:230px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column -->
+                        
+                        <div class="span4 widget widget-box">
+                            <div class="widget-header">
+                                <h4><i class="fontello-icon-chart-pie"></i> Chart Donut</h4>
+                            </div>
+                            <div class="widget-content">
+                                <div class="widget-body">
+                                    <div id="statChartFlotDonut" style="width:100%; height:230px"> </div>
+                                    <!-- // Chart 1 --> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // column --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    <div class="page-header">
+                        <h3><i class="fontello-icon-palette opaci45"></i> Color Scheme <small>Inspiration</small></h3>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span6 well">
+                            <ul class="color-scheme">
+                                <li style="background-color: #5F4E1A"><span>5F4E1A</span></li>
+                                <li style="background-color: #8E7426"><span>8E7426</span></li>
+                                <li style="background-color: #BE9B33"><span>BE9B33</span></li>
+                                <li style="background-color: #Edc240"><span>Edc240</span></li>
+                                <li style="background-color: #F1CE66"><span>F1CE66</span></li>
+                                <li style="background-color: #F4DA8C"><span>F4DA8C</span></li>
+                                <li style="background-color: #F8E7B3"><span>F8E7B3</span></li>
+                            </ul>
+                            <ul class="color-scheme">
+                                <li style="background-color: #274A27"><span>274A27</span></li>
+                                <li style="background-color: #3A703A"><span>3A703A</span></li>
+                                <li style="background-color: #4E954E"><span>4E954E</span></li>
+                                <li style="background-color: #61ba61"><span>61ba61</span></li>
+                                <li style="background-color: #81C881"><span>81C881</span></li>
+                                <li style="background-color: #A0D6A0"><span>A0D6A0</span></li>
+                                <li style="background-color: #C0E3C0"><span>C0E3C0</span></li>
+                            </ul>
+                            <ul class="color-scheme">
+                                <li style="background-color: #063450"><span>063450</span></li>
+                                <li style="background-color: #0A4F77"><span>0A4F77</span></li>
+                                <li style="background-color: #0D699F"><span>0D699F</span></li>
+                                <li style="background-color: #1083c7"><span>1083c7</span></li>
+                                <li style="background-color: #409CD2"><span>409CD2</span></li>
+                                <li style="background-color: #70B5DD"><span>70B5DD</span></li>
+                                <li style="background-color: #9FCDE9"><span>9FCDE9</span></li>
+                            </ul>
+                            <ul class="color-scheme">
+                                <li style="background-color: #582828"><span>582828</span></li>
+                                <li style="background-color: #833C3C"><span>833C3C</span></li>
+                                <li style="background-color: #AF5050"><span>AF5050</span></li>
+                                <li style="background-color: #DB6464"><span>DB6464</span></li>
+                                <li style="background-color: #E28383"><span>E28383</span></li>
+                                <li style="background-color: #E9A2A2"><span>E9A2A2</span></li>
+                                <li style="background-color: #F1C1C1"><span>F1C1C1</span></li>
+                            </ul>
+                            <ul class="color-scheme">
+                                <li style="background-color: #663D14"><span>663D14</span></li>
+                                <li style="background-color: #995C1F"><span>995C1F</span></li>
+                                <li style="background-color: #CC7A29"><span>CC7A29</span></li>
+                                <li style="background-color: #FF9933"><span>FF9933</span></li>
+                                <li style="background-color: #FFAD5C"><span>FFAD5C</span></li>
+                                <li style="background-color: #FFC285"><span>FFC285</span></li>
+                                <li style="background-color: #FFD6AD"><span>FFD6AD</span></li>
+                            </ul>
+                            <ul class="color-scheme">
+                                <li style="background-color: #003D3D"><span>003D3D</span></li>
+                                <li style="background-color: #005C5C"><span>005C5C</span></li>
+                                <li style="background-color: #007A7A"><span>007A7A</span></li>
+                                <li style="background-color: #009999"><span>009999</span></li>
+                                <li style="background-color: #33ADAD"><span>33ADAD</span></li>
+                                <li style="background-color: #66C2C2"><span>66C2C2</span></li>
+                                <li style="background-color: #99D6D6"><span>99D6D6</span></li>
+                            </ul>
+                        </div>
+                        <!-- // column -->
+                        <div class="span6 well">
+                            <ul class="color-scheme">
+                                <li style="background-color: #ed3138"><span>ed3138</span></li>
+                                <li style="background-color: #e9d951"><span>e9d951</span></li>
+                                <li style="background-color: #81df8c"><span>81df8c</span></li>
+                                <li style="background-color: #cae7e5"><span>cae7e5</span></li>
+                                <li style="background-color: #70a6e0"><span>70a6e0</span></li>
+                                <li style="background-color: #074abf"><span>074abf</span></li>
+                            </ul>
+                            <ul class="color-scheme">
+                                <li style="background-color: #daeda7"><span>daeda7</span></li>
+                                <li style="background-color: #88b1ea"><span>88b1ea</span></li>
+                                <li style="background-color: #b2d0e6"><span>b2d0e6</span></li>
+                                <li style="background-color: #a5e5bb"><span>a5e5bb</span></li>
+                                <li style="background-color: #ae93ea"><span>ae93ea</span></li>
+                                <li style="background-color: #e1eab2"><span>e1eab2</span></li>
+                            </ul>
+                            <ul class="color-scheme">
+                                <li style="background-color: #8abb00"><span>8abb00</span></li>
+                                <li style="background-color: #f7eb01"><span>f7eb01</span></li>
+                                <li style="background-color: #f58400"><span>f58400</span></li>
+                                <li style="background-color: #f14900"><span>f14900</span></li>
+                                <li style="background-color: #f01f00"><span>f01f00</span></li>
+                                <li style="background-color: #f00001"><span>f00001</span></li>
+                                <li style="background-color: #ae0045"><span>ae0045</span></li>
+                                <li style="background-color: #8b0067"><span>8b0067</span></li>
+                                <li style="background-color: #460070"><span>460070</span></li>
+                                <li style="background-color: #010080"><span>010080</span></li>
+                                <li style="background-color: #004964"><span>004964</span></li>
+                                <li style="background-color: #008001"><span>008001</span></li>
+                            </ul>
+                            <ul class="color-scheme">
+                                <li style="background-color: #83112e"><span>83112e</span></li>
+                                <li style="background-color: #af2424"><span>af2424</span></li>
+                                <li style="background-color: #e75420"><span>e75420</span></li>
+                                <li style="background-color: #de921a"><span>de921a</span></li>
+                                <li style="background-color: #d9c13d"><span>d9c13d</span></li>
+                                <li style="background-color: #e5e833"><span>e5e833</span></li>
+                                <li style="background-color: #7eab0e"><span>7eab0e</span></li>
+                                <li style="background-color: #298e11"><span>298e11</span></li>
+                                <li style="background-color: #046c3e"><span>046c3e</span></li>
+                                <li style="background-color: #1a7d96"><span>1a7d96</span></li>
+                                <li style="background-color: #0d53b3"><span>0d53b3</span></li>
+                                <li style="background-color: #0911b0"><span>0911b0</span></li>
+                                <li style="background-color: #8279da"><span>8279da</span></li>
+                                <li style="background-color: #7719e1"><span>7719e1</span></li>
+                                <li style="background-color: #870d8f"><span>870d8f</span></li>
+                                <li style="background-color: #720847"><span>720847</span></li>
+                            </ul>
+                        </div>
+                        <!-- // column --> 
+                    </div>
+                    <!-- // Example row -->
+                    <div class="row-fluid">
+                        <div class="span6 widget widget-box">
+                            <div class="widget-header"> </div>
+                            <div class="widget-content">
+                                <div class="widget-body"> </div>
+                            </div>
+                        </div>
+                        <!-- // column -->
+                        
+                        <div class="span6 widget widget-box">
+                            <div class="widget-header"> </div>
+                            <div class="widget-content">
+                                <div class="widget-body"> </div>
+                            </div>
+                        </div>
+                        <!-- // column --> 
+                        
+                    </div>
+                    <!-- // Example row --> 
+                    
+                </section>
+            </div>
+            <!-- // page content --> 
+            
+        </div>
+        <!-- // main-content --> 
+        
+    </div>
+    <!-- // main-container  -->
+    
+    <footer id="footer-fix">
+        <div id="footer-sidebar" class="footer-sidebar">
+            <div class="navbar">
+                <div class="btn-toolbar"> <a class="btn btn-glyph btn-link" href="javascript:void(0);"><i class="fontello-icon-up-open-1"></i></a> </div>
+            </div>
+        </div>
+        <!-- // footer sidebar -->
+        
+        <div id="footer-content" class="footer-content">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <ul class="nav pull-left">
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnToggleSidebar" class="btn-glyph fontello-icon-resize-full-2 tip hidden-phone" href="javascript:void(0);" title="show hide sidebar"></a></li>
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnChangeSidebar" class="btn-glyph fontello-icon-login tip hidden-phone" href="javascript:void(0);" title="change sidebar position"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnChangeSidebarColor" class="btn-glyph fontello-icon-palette tip" href="javascript:void(0);" title="change sidebar color"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cw" href="javascript:void(0);"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="fontello-icon-home-3" href="dashboard-one.html"></a></li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-help-2 tip" href="javascript:void(0);" title="help to page"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cog-4 tip" href="javascript:void(0);" title="settings app"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnLogout" class="btn-glyph fontello-icon-logout-1 tip" href="javascript:void(0);" title="logout"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnScrollup" class="scrollup btn-glyph fontello-icon-up-open-1" href="javascript:void(0);"><span class="hidden-phone">Scroll</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // footer content --> 
+        
+    </footer>
+    <!-- // footer-fix  --> 
+    
+</div>
+<!-- // page-container  --> 
+
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/lib/jquery.js"></script> 
+<script src="assets/js/lib/jquery-ui.js"></script>
+<script src="assets/js/lib/jquery.cookie.js"></script> 
+<script src="assets/js/lib/jquery.date.js"></script> 
+<script src="assets/js/lib/jquery.mousewheel.js"></script> 
+<script src="assets/js/lib/jquery.load-image.min.js"></script>
+<script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+
+<!-- Plugins Bootstrap -->
+<script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+<script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script> 
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+<script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+<script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+<script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+<script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+<script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+<script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+ 
+
+<!-- Plugins Custom - Only example --> 
+<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>
+
+<!-- Plugins Custom - System --> 
+<script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+<script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+<!-- Plugins Custom - System info -->
+<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+<!-- Plugins Custom - Content -->
+<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+<!-- Plugins Custom - Component -->
+<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+<!-- Plugins Custom - Form -->
+<script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+<!-- Plugins Custom - Gallery --> 
+<script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+<script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+ 
+<!-- Plugins Tables --> 
+<script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+<!-- Plugins data visualization --> 
+<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+<script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/core.js"></script> 
+<script src="assets/js/application.js"></script> 
+
+<!-- Only This Demo Page --> 
+<script src="assets/js/demo/demo-statistic-flot.js"></script>
+<script>
+  $(document).ready(function() {
+
+
+  });
+</script>  
+
+</body>
+</html>

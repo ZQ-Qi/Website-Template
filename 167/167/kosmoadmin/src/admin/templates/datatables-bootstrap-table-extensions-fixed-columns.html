@@ -1,0 +1,107 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/bootstrap-table/bootstrap-table.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/bootstrap-table/bootstrap-table.min.css"> <!-- Customization -->
+<link rel="stylesheet" type="text/css" href="libs/table-fixed-columns/bootstrap-table-fixed-columns.css"> <!-- Original -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Bootstrap Table</h3>
+
+                <div class="ks-controls">
+                    <nav class="breadcrumb ks-default">
+                        <a class="breadcrumb-item ks-breadcrumb-icon" href="index.html">
+                            <span class="la la-home ks-icon"></span>
+                        </a>
+                        <a href="#" class="breadcrumb-item">DataTables</a>
+                        <span class="breadcrumb-item active" href="#">Bootstrap Table</span>
+                    </nav>
+
+                    <button class="btn btn-outline-primary ks-light ks-content-nav-toggle" data-block-toggle=".ks-content-nav > .ks-nav">Menu</button>
+                </div>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-content-nav">
+                @@include('./_partials/datatables/bootstrap-table/navigation.html')
+
+                <div class="ks-nav-body">
+                    <div class="ks-nav-body-wrapper">
+                        <div class="container-fluid">
+                            <div class="toolbar form-inline">
+                                <span>Fixed Number: </span>
+                                <input class="form-control" id="fixedNumber" type="number" value="1" min="1" max="5">
+                            </div>
+                            <table id="ks-datatable" class="table table-bordered"
+                                   width="100%"
+                                   data-search="true"
+                                   data-height="500"
+                                   data-show-columns="true"
+                            >
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="libs/table-fixed-columns/bootstrap-table-fixed-columns.js"></script>
+<script type="application/javascript">
+(function ($) {
+    function buildTable($el, cells, rows) {
+        var i, j, row,
+            columns = [],
+            data = [];
+
+        for (i = 0; i < cells; i++) {
+            columns.push({
+                field: 'field' + i,
+                title: 'Cell' + i,
+                sortable: true
+            });
+        }
+        for (i = 0; i < rows; i++) {
+            row = {};
+            for (j = 0; j < cells; j++) {
+                row['field' + j] = 'Row-' + i + '-' + j;
+            }
+            data.push(row);
+        }
+        $el.bootstrapTable('destroy').bootstrapTable({
+            columns: columns,
+            data: data,
+            search: true,
+            toolbar: '.toolbar',
+            fixedColumns: true,
+            fixedNumber: +$('#fixedNumber').val(),
+            icons: {
+                refresh: 'la la-refresh icon-refresh',
+                toggle: 'la la-list-alt icon-list-alt',
+                columns: 'la la-th icon-th',
+                share: 'la la-download icon-share'
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        var $table = $('#ks-datatable');
+
+        buildTable($table, 20, 20);
+
+        $('#fixedNumber').change(function () {
+            buildTable($table, 20, 20);
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

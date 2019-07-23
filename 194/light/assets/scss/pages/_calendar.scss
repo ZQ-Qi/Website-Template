@@ -1,0 +1,336 @@
+.page-calendar {
+    .event-name {
+        
+        h6{
+            @extend .m-b-0;
+            text-transform: capitalize;
+        }
+        h4{
+            @extend .m-b-0;
+            @extend .m-t-0;
+            font-size: 25px;
+            line-height: 24px;            
+
+            span{
+                @extend .displayblock;
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+        p{
+            @extend .displayblock;
+            @extend .m-b-0;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;            
+            text-overflow: ellipsis;            
+        }
+        address{            
+            @extend .m-b-0;
+            @extend .m-t-5;
+            font-size: 11px;
+            i{
+                font-size: $font12;
+                @extend .m-r-5;
+            }
+        }
+    }
+}
+
+.event-control {
+    background-color: $grey-200;
+    font-size: $font13;
+    cursor: pointer;
+    
+    &:hover {
+        background-color:$col-white;
+    }
+    a {
+        color: $grey-800;
+        cursor: pointer;
+        opacity: .5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &[class*='bg-'] {
+        &:not(.bg-default):not(.bg-white) {
+            a {
+                color: $grey-800 !important;
+                opacity: 1;
+                &:hover {
+                    color:$col-white !important;
+                }
+            }
+        }
+    }
+}
+
+.fc-overlay {
+    color: $grey-800 !important;
+    display: none;
+    position: absolute;
+    min-width: 260px;
+    padding: 15px 0;
+    top: auto;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 1000;
+    
+    &.left {
+        @extend .margin-0;
+        left: 100%;
+        top: -15px;
+        padding: 0 10px;        
+    }
+    &.right {
+        @extend .margin-0;
+        left: auto;
+        right: 100%;
+        top: -15px;
+        padding: 0 10px;        
+    }
+    .panel {
+        padding: 10px;
+    }
+}
+
+.fc {
+    .fc-toolbar {
+        @include border-radius(0);
+        @extend .p-t-10;
+        @extend .p-b-10;
+        @extend .margin-0;
+        color: $grey-800;
+        background: transparent;
+
+        h2 {            
+            @extend .p-t-5;
+            @extend .margin-0;
+            font-size: $font16;
+            text-transform: uppercase;
+        }
+        .fc-today-button, .fc-state-default{
+            @include box-shadow(none);
+            background: $grey-800;            
+            color: $grey-400;
+            font-size: $font14;           
+            padding: 8px 18px;
+            height: auto;                
+            border: none;            
+            text-shadow: none;
+        }        
+    }
+
+    .fc-view-container {
+        .fc-event {            
+            color: $grey-100;
+            font-size: $font12;
+            border-radius: $border-radius-small;            
+            padding: 3px 5px;
+            border: 0;            
+
+            &.fc-event-end:not(.fc-event-start) {
+                border: 0!important;
+            }
+
+            &:focus,
+            &:hover,
+            &:active {
+                color: $col-white;
+                z-index: 1000;                
+                .fc-overlay {
+                    @extend .displayblock;
+                }
+            }
+        }
+        .fc-view {
+            &.fc-basic-view,
+            &.fc-agenda {
+                >table {
+                    >thead {
+                        tr {
+                            th,
+                            td {
+                                &.fc-widget-header {
+                                    border: 1px solid $grey-300;
+                                    padding: 10px;
+                                    color: $grey-700;                      
+                                }
+                                &.fc-agenda-gutter {
+                                    @extend .padding-0;
+                                }
+                            }
+                            td {
+                                &.fc-widget-header {
+                                    @extend .padding-0;
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                &.fc-widget-content {
+                                    border: 0;
+                                    border-bottom: 1px solid $grey-300;
+                                    border-right: 1px solid $grey-300;
+
+                                    &.fc-state-highlight {
+                                        background: $col-white;
+                                    }
+                                }
+                                &.fc-day-number {
+                                    color: $grey-800;
+                                    font-size: $font15;
+                                    padding: 5px 10px;
+                                    margin: 5px;
+
+                                    &.fc-state-highlight {
+                                        background-color: $col-red;
+                                        color: $col-white;
+                                        @include border-radius(50%);
+                                        padding: 4px 6px;
+                                        float: right;
+                                    }
+                                }
+                                &:first-child {
+                                    &.fc-widget-content {
+                                        border-left: 1px solid $grey-300;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .fc-body {
+                    .fc-row .fc-bg {
+                        border-bottom: 1px solid $grey-300;
+                    }
+                    .fc-row:last-of-type .fc-bg {                        
+                        border-bottom: 0;
+                    }
+                }
+                .fc-agenda-allday {
+                    .fc-agenda-axis,
+                    .fc-agenda-gutter {                        
+                        background-color: $grey-200;
+                        color: $grey-800;
+                        font-size: $font12;
+                        border-left: 1px solid $grey-300;
+                        border-right: 1px solid $grey-300;
+                        font-weight: $font-weight-300;
+                        padding: 10px 5px;
+                    }
+                }
+                >table {
+                    >tbody {
+                        >tr {
+                            >td {
+                                &.fc-state-highlight {
+                                    background: $grey-200;
+                                }
+                                &.fc-sat {
+                                    border-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .fc-agenda-slots {
+                    tr {
+                        line-height: 35px;
+                        th {                            
+                            background-color: $grey-200;
+                            color: $grey-800;
+                            font-size: $font12;
+                            font-weight: $font-weight-300;
+                            border-left: 1px solid $grey-300;
+                            border-right: 1px solid $grey-300;                            
+                            border: 0;                            
+                            padding-top: 10px;
+                        }
+                        td.fc-widget-content {
+                            border-bottom: 1px solid $grey-300;
+                            line-height: 50px;
+
+                            &:last-child {
+                                border-right: 0;
+                            }
+                        }
+                        &.fc-minor {
+                            td.fc-widget-content {
+                                border-bottom: 1px solid $grey-300;
+                            }
+                        }
+                    }
+                }
+                .fc-agenda-divider {
+                    border: 1px solid $grey-300;
+
+                    .fc-agenda-divider-inner {
+                        background-color: $grey-200;
+                        height: 3px;
+                    }
+                }
+            }
+        }
+        .fc-list-view{
+            .fc-list-item{
+                color: $grey-200;
+            }
+        }
+        .fc-other-month{
+            background: $grey-100;
+        }
+
+        .fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number{
+            float: left;
+            padding: 10px 0 5px 10px;
+        }
+    }    
+
+    .fc-popover{
+        border-radius: $border-radius-large;
+        box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.2);
+        border: none;
+        padding: 10px;        
+
+        .fc-event-container{            
+            @extend .padding-0;
+        }
+        .fc-event{
+            padding: 4px 8px;
+            margin: 2px 0px;
+        }
+    
+    }
+
+    .fc-agendaWeek-view,
+    .fc-agendaDay-view,
+    .fc-listWeek-view{
+        .fc-head{
+            .fc-widget-header{
+                span{
+                    padding: 10px;
+                    @extend .inlineblock;
+                }
+            }
+        }
+
+        .fc-unthemed{
+            td{
+                border-color: #f4f7f6;                
+            }
+        }
+    }    
+}
+
+@include max-screen($break-xsmall) {
+
+    .fc-toolbar{
+        .fc-right{ display: none;}
+        .fc-left{ width: 100%; margin-bottom: 15px;}
+    }
+    .fc .fc-toolbar .fc-today-button{ float: right;}
+}

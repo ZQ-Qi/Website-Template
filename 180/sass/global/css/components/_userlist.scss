@@ -1,0 +1,437 @@
+/*---------------------------
+
+Start Userlist
+
+---------------------------*/
+
+.wrapper-user-card {
+  background-color: $white-backgournd-color;
+  box-shadow: 0 0 5px 1px $main-site-color;
+  max-width: 350px;
+  position: $position-relative;
+  z-index: 0;
+  text-align: $text-center;
+  .mline {
+    border: 2px solid #ecf0f1;
+    width: 14%;
+    margin: 0 auto;
+  }
+  .line {
+    border: 2px solid $main-site-color;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .arrow {
+    cursor: $text-link;
+    position: $position-absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: $gaping-10 $gaping-10;
+  }
+  .bars {
+    cursor: $text-link;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    .fa {
+      margin: $gaping-10 $gaping-10;
+    }
+  }
+  .header {
+    box-shadow: inset 0 0 60px $gaping-35 rgba(0, 0, 0, 0.5);
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white-text-color;
+  }
+  .user1-image {
+    background: url("../images/userlist1.jpg");
+  }
+  .user2-image {
+    background: url("../images/userlist2.jpg");
+  }
+  .user3-image {
+    background: url("../images/userlist3.jpg");
+  }
+  .name {
+    h1 {
+      color: #ecf0f1;
+      font-size: 22px;
+      margin-top: 110px;
+      font-weight: $bold-text;
+      line-height: $gaping-40;
+    }
+  }
+  .info {
+    margin: $gaping-20 0 $gaping-10 0;
+    p {
+      font-size: 17px;
+      padding-bottom: 0;
+    }
+  }
+  .card-button {
+    margin: $gaping-5 auto $gaping-20 auto;
+  }
+  .stats {
+    padding: $gaping-10 0;
+    li {
+      display: inline-block;
+      margin: 0 $gaping-25;
+      span {
+        font-size: 22px;
+        font-weight: $bold-text;
+      }
+      p {
+        font-size: 15px;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.user-card {
+  color: #303336;
+  box-shadow: 0 0 15px 3px #dcdcdc;
+  margin: 0 auto $gaping-35;
+  .container-box {
+    background: white;
+    border-radius: 3px;
+    position: $position-relative;
+    .hero-image {
+      width: 100%;
+      height: 100px;
+    }
+  }
+  .information {
+    text-align: $text-center;
+  }
+  .avatar {
+    margin: 0 auto;
+    margin: -62px auto $gaping-10;
+    display: block;
+    width: 100px;
+    border-radius: 50px;
+    height: 100px;
+  }
+  .name {
+    font-size: 22px;
+  }
+  .position {
+    font-size: 15px;
+    color: $normal-light-text-color;
+    margin-bottom: $gaping-20;
+  }
+  .stats {
+    margin: auto;
+    border-top: 1px solid #CED5E0;
+    .followers, .following, .stories {
+      display: inline-block;
+      padding: $gaping-10;
+      width: 30%;
+    }
+    .followers, .following {
+      border-right: 1px solid #CED5E0;
+      width: 33%;
+    }
+    .value {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .label {
+      display: block;
+      font-size: 14px;
+      color: #8c98a8;
+    }
+  }
+}
+
+.portfoliocard{
+  position:relative;
+  width:350px;
+  background:rgba(255,255,255,1);
+  box-shadow:0px -1px 3px rgba(0,0,0,0.1),0px 2px 6px rgba(0,0,0,0.5);
+  border-radius:6px;
+  margin-bottom: $gaping-35;
+  overflow:hidden;
+  .coverphoto{
+    width:100%;
+    height:120px;
+    background: url("../images/user-card1.jpg");
+    background-position:center center;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    box-shadow:inset 0px 3px 20px rgba(255,255,255,0.3),
+    1px 0px 2px rgba(255,255,255,0.7);
+    z-index:99;
+  }
+  .left_col, .right_col{
+    float: $left-division;
+  }
+  .left_col{
+    width:40%;
+    padding-top:85px;
+    box-sizing:border-box;
+  }
+  .right_col{
+    width:60%;
+    background:rgba(245,245,245,1);
+    border-left:1px solid rgba(230,230,230,1);
+    box-shadow:inset 0px 1px 1px rgba(255,255,255,0.7);
+    margin-left:-1px;
+    border-bottom-right-radius:5px;
+  }
+  .profile_picture{
+    position: $position-absolute;
+    top: 75px;
+    left: $gaping-25;
+    img{
+      border-radius: 50px;
+      height: $gaping-90;
+      width: $gaping-90;
+      border: 4px solid white;
+    }
+  }
+  .right_col{
+    h2.name{
+      font-size:30px;
+      font-weight:300;
+      color: rgba(30,30,30,1);
+      padding:0;
+      margin:$gaping-20 $gaping-10 $gaping-0 $gaping-35;
+    }
+    h3.location{
+      font-size:15px;
+      font-weight:300;
+      color:rgba(170,170,170,1);
+      padding:0;
+      margin:-5px $gaping-10 $gaping-10 $gaping-35;
+    }
+  }
+  ul{
+    &.contact_information{
+      padding-left:$gaping-30;
+      padding-bottom: $gaping-20;
+      list-style-type:none;
+      li{
+        line-height: $gaping-25;
+        font-weight: 300;
+        font-size: 15px;
+        color: #8c8c8c;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+        padding: $gaping-5 $gaping-0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: default;
+        i{
+          margin-right: 8px;
+        }
+      }
+      .mail{
+        font-size: 12px;
+      }
+    }
+  }
+  .followers, .following{
+    margin:$gaping-15 $gaping-0 $gaping-0 $gaping-35;
+    font-weight:300;
+    font-size:16px;
+    color:rgba(30,30,30,1);
+  }
+  .follow_count{
+    font-weight:400;
+    font-size:25px;
+    color:rgba(140,140,140,1);
+  }
+}
+
+/*---- Start responsive Userlist ----*/
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1199px) {
+  .portfoliocard {
+    width: auto;
+    .profile_picture {
+      left: 12px;
+    }
+    .right_col{
+      h2.name {
+        font-size: 25px;
+        margin: $gaping-15 $gaping-10 $gaping-0 $gaping-20;
+      }
+      h3.location {
+        font-size: 13px;
+        margin: -20px $gaping-10 $gaping-10 $gaping-20;
+      }
+    }
+    .followers, .following {
+      margin: $gaping-15 $gaping-0 $gaping-0 $gaping-15;
+    }
+    ul{
+      &.contact_information {
+        padding-left: $gaping-10;
+      }
+    }
+    .follow_count {
+      font-size: 22px;
+    }
+  }
+  .wrapper-user-card{
+    .info{
+      margin: $gaping-15 0 $gaping-5 0;
+      p {
+        font-size: 15px;
+      }
+    }
+    .stats{
+      padding: $gaping-5 0;
+      li {
+        margin: 0 $gaping-15;
+      }
+    }
+    .card-button {
+      margin: $gaping-5 auto $gaping-15 auto;
+    }
+  }
+
+
+}
+
+@media (max-width: 991px) {
+  .wrapper-user-card {
+    max-width: 100%;
+    margin-bottom: $gaping-25;
+    .header{
+      background-size: 100%;
+    }
+  }
+  .portfoliocard{
+    .coverphoto {
+      background-size: 100%;
+    }
+  }
+  .portfoliocard {
+    .profile_picture {
+      left: $gaping-10;
+    }
+    .right_col{
+      h2.name {
+        font-size: 22px;
+        margin: $gaping-5 $gaping-0 $gaping-0 $gaping-15;
+      }
+      h3.location {
+        font-size: 12px;
+        margin: -23px $gaping-0 $gaping-0 $gaping-15;
+      }
+    }
+    .followers, .following {
+      margin: $gaping-15 $gaping-0 $gaping-0 $gaping-10;
+      font-size: 15px;
+    }
+    ul{
+      &.contact_information {
+        padding-left: $gaping-10;
+        li{
+          font-size: 14px;
+        }
+      }
+    }
+    .follow_count {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .portfoliocard{
+    .profile_picture {
+      left: $gaping-35;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .portfoliocard{
+    .profile_picture{
+      left: 8px;
+      top: $gaping-50;
+      img {
+        height: 80px;
+        width: 80px;
+        border: 3px solid white;
+      }
+    }
+    .left_col {
+      width: 35%;
+    }
+    .follow_count {
+      font-size: 20px;
+    }
+    .coverphoto {
+      height: $gaping-90;
+    }
+    .followers, .following {
+      font-size: 14px;
+      margin: $gaping-10 $gaping-0 $gaping-0 $gaping-10;
+    }
+    .right_col {
+      width: 65%;
+      h2.name {
+        font-size: 23px;
+        margin-top: $gaping-5;
+      }
+      h3.location{
+        margin-bottom: 0;
+      }
+    }
+    ul{
+      &.contact_information{
+        li {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .user-card {
+    .name {
+      font-size: 20px;
+    }
+    .position {
+      font-size: 13px;
+      margin-bottom: $gaping-10;
+    }
+    .avatar {
+      margin: 0 auto;
+      margin: -42px auto $gaping-5;
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .wrapper-user-card{
+    .header {
+      height: 150px;
+    }
+    .name{
+      h1 {
+        font-size: 20px;
+        margin-top: 70px;
+        line-height: $gaping-30;
+      }
+    }
+    .info {
+      margin-top: $gaping-10;
+    }
+  }
+}
+
+/*---- End responsive Userlist ----*/
+
+/*---------------------------
+
+End Userlist
+
+---------------------------*/

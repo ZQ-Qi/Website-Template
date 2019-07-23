@@ -1,0 +1,2339 @@
+@import "../config/colors";
+@import "../config/ui";
+
+.panel, .ks-panel {
+  &.ks-widget {
+    &.ks-widget-info {
+      > .card-block {
+        > .ks-item {
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          > span {
+            display: block;
+
+            &:first-child {
+              font-size: 10px;
+              font-weight: 500;
+              color: $text-color-light;
+              text-transform: uppercase;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &.ks-widget-tags {
+      > .card-block {
+        padding-bottom: 15px;
+
+        > .badge {
+          border-radius: 14px;
+          margin-bottom: 10px;
+          margin-right: 10px;
+          padding: 8px 15px;
+        }
+      }
+    }
+
+    &.ks-widget-users {
+      > .card-block {
+        > .ks-user {
+          display: flex;
+          align-items: center;
+          margin-bottom: 12px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          > .ks-avatar {
+            width: 36px;
+            height: 36px;
+            margin-right: 10px;
+          }
+
+          > .ks-info {
+            flex: 1 1 auto;
+
+            > .ks-name {
+              font-size: 12px;
+              font-weight: 500;
+              font-style: normal;
+              display: block;
+              color: $text-color;
+            }
+
+            > .ks-occupation {
+              font-size: 12px;
+              color: $text-color-light;
+            }
+          }
+
+          > .ks-add {
+            margin-left: 10px;
+            width: 23px;
+            height: 23px;
+            border-radius: 12px;
+            border: solid 1px $ks-color-primary;
+            display: block;
+            font-size: 14px;
+            color: $ks-color-primary;
+            line-height: 21px;
+            text-align: center;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &.ks-widget-images-grid {
+      > .card-block {
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 21px;
+        padding-bottom: 21px;
+
+        > .ks-image {
+          text-decoration: none;
+          margin-right: 9px;
+          margin-bottom: 9px;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          > img {
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+    }
+
+    &.ks-widget-photos {
+      > .card-block {
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 19px;
+        padding-bottom: 19px;
+
+        > .ks-photo {
+          text-decoration: none;
+          margin-right: 9px;
+          margin-bottom: 9px;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          > img {
+            width: 62px;
+            height: 62px;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+
+    &.ks-widget-videos {
+      > .card-block {
+        > .ks-video {
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          > .ks-thumbnail {
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+
+            &:hover {
+              text-decoration: none;
+            }
+
+            > img {
+              border-radius: 2px;
+            }
+          }
+
+          > .ks-name {
+            display: block;
+            font-size: 12px;
+            color: $text-color;
+            text-decoration: none;
+          }
+
+          > .ks-duration {
+            font-size: 10px;
+            font-weight: 500;
+            color: $text-color-light;
+          }
+        }
+      }
+    }
+
+    &.ks-widget-social-profiles {
+      > .card-block {
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 21px;
+        padding-bottom: 21px;
+
+        > .ks-social-profile {
+          width: 35px;
+          height: 35px;
+          background-color: #ffffff;
+          border: solid 1px $ks-default-border-color;
+          margin-right: 9px;
+          margin-bottom: 9px;
+          line-height: 36px;
+          text-align: center;
+          border-radius: 50%;
+
+          > span {
+            color: $ks-color-primary;
+            font-size: 27px;
+            font-weight: normal;
+            line-height: 33px;
+          }
+        }
+
+        > .ks-add {
+          width: 35px;
+          height: 35px;
+          background: #ffffff;
+          border-radius: 50%;
+          border: solid 1px $ks-color-primary;
+          display: block;
+          font-size: 16px;
+          color: $ks-color-primary;
+          line-height: 35px;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.ks-widget {
+  > .card-block {
+    padding: 0;
+  }
+
+  &.ks-news {
+    .ks-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .ks-item {
+        display: block;
+        padding: 15px 20px;
+        color: $text-color;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        > .ks-datetime {
+          display: block;
+          margin-bottom: 3px;
+          font-size: 10px;
+          color: $text-color-light;
+        }
+
+        > .ks-text {
+          display: block;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &.ks-events {
+    > .card-block.scrollable {
+      height: 190px;
+    }
+
+    .table {
+      margin: 0;
+
+      td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      tr:first-child {
+        td {
+          border-top: none;
+        }
+      }
+    }
+
+    .ks-icon {
+      > span {
+        text-align: center;
+        font-size: 26px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        line-height: 42px;
+
+        &.text-danger {
+          background: rgba(236, 100, 75, 0.1);
+        }
+
+        &.text-success {
+          background-color: rgba(46, 204, 113, 0.1);
+        }
+
+        &.text-info {
+          background-color: rgba(33, 166, 240, 0.1);
+        }
+      }
+    }
+
+    .ks-text {
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+
+    .ks-datetime {
+      font-size: 10px;
+      color: $text-color-light;
+    }
+
+    .ks-amount {
+      width: 1px;
+      white-space: nowrap;
+      text-align: right;
+    }
+  }
+
+  &.ks-chart {
+    #ks-chart {
+      .c3-line-data1, .c3-line-data2 {
+        stroke-width: 2px;
+      }
+    }
+
+    .card-block {
+      > .ks-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 13px 20px;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+
+        > .ks-labels {
+          > .ks-label {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 12px;
+            line-height: 12px;
+
+            > .ks-point {
+              width: 13px;
+              height: 13px;
+              border-radius: 2px;
+              display: inline-block;
+              margin-right: 7px;
+              position: relative;
+              top: 2px;
+            }
+          }
+        }
+
+        > .ks-sort {
+          > .dropdown {
+            > .btn {
+              padding: 0;
+              height: auto;
+
+              > .ks-text {
+                color: $text-color-light;
+                display: inline-block;
+                margin-right: 2px;
+              }
+            }
+
+            > .dropdown-menu {
+              margin-top: 8px;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      > .ks-wrapper {
+        padding: 20px 25px 20px 15px;
+      }
+    }
+  }
+}
+
+.ks-widget-audio {
+  display: flex;
+  padding: 15px 20px;
+  background: #fff;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  align-items: flex-start;
+
+  > .ks-control {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    border: solid 1px rgba(57, 81, 155, 0.3);
+    color: $ks-color-primary;
+    font-size: 20px;
+    text-align: center;
+    line-height: 34px;
+    margin-right: 15px;
+    cursor: pointer;
+    background: #fff;
+
+    > span {
+      position: relative;
+      left: 1px;
+    }
+  }
+
+  > .ks-info {
+    flex: 1 1 auto;
+
+    > .ks-header {
+      margin-bottom: 10px;
+
+      > .ks-album-name {
+        margin-bottom: 2px;
+
+        > span {
+          color: $text-color-light;
+        }
+      }
+
+      > .ks-song-name {
+        font-weight: 500;
+      }
+    }
+
+    > .ks-body {
+      > .progress {
+        margin-bottom: 10px;
+      }
+
+      > .ks-time {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.ks-widget-profile-default {
+  > .card-block {
+    padding: 0;
+
+    > .ks-user {
+      display: flex;
+      padding: 20px;
+      height: 95px;
+
+      > .ks-avatar {
+        margin-right: 12px;
+
+        > img {
+          width: 55px;
+          height: 55px;
+        }
+      }
+
+      > .ks-info {
+        > .ks-name {
+          color: $text-color;
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        > .ks-nickname {
+          display: block;
+          color: $text-color;
+          font-size: 12px;
+        }
+
+        > .ks-location {
+          display: block;
+          font-size: 12px;
+          color: $text-color-light;
+        }
+      }
+    }
+
+    > .ks-sections {
+      border-top: 1px solid $ks-default-border-color;
+      display: flex;
+      justify-content: space-between;
+
+      > .ks-section {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        border-right: 1px solid $ks-default-border-color;
+
+        > .ks-icon {
+          font-size: 19px;
+          margin-bottom: 5px;
+        }
+
+        > .ks-amount {
+          font-size: 12px;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+
+    > .ks-about {
+      border-top: 1px solid $ks-default-border-color;
+      padding: 20px;
+
+      > .ks-header {
+        font-size: 12px;
+        color: $text-color-light;
+        margin-bottom: 7px;
+      }
+    }
+
+    > .ks-controls {
+      border-top: 1px solid $ks-default-border-color;
+      display: flex;
+
+      > .ks-control {
+        height: 42px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid $ks-default-border-color;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        > .ks-icon {
+          color: $ks-color-primary;
+          font-size: 20px;
+          margin-right: 10px;
+          line-height: 20px;
+          position: relative;
+          top: -1px;
+        }
+
+        > .ks-text {
+          text-decoration: none;
+          color: $ks-color-primary;
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-profile-image {
+  > .card-block {
+    padding: 0;
+
+    > .ks-cover {
+      height: 120px;
+      background-color: #ccc;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: -1px;
+      margin-left: -1px;
+      margin-right: -1px;
+    }
+
+    > .ks-user {
+      margin-top: -40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > .ks-avatar {
+        margin-bottom: 10px;
+
+        > img {
+          width: 80px;
+          height: 80px;
+          border: solid 3px #fff;
+        }
+      }
+
+      > .ks-info {
+        text-align: center;
+        height: 91px;
+
+        > .ks-name {
+          color: $text-color;
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        > .ks-nickname {
+          display: block;
+          color: $text-color;
+          font-size: 12px;
+        }
+
+        > .ks-location {
+          display: block;
+          font-size: 12px;
+          color: $text-color-light;
+        }
+      }
+    }
+
+    > .ks-sections {
+      border-top: 1px solid $ks-default-border-color;
+      display: flex;
+      justify-content: space-between;
+
+      > .ks-section {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        border-right: 1px solid $ks-default-border-color;
+
+        > .ks-icon {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+
+        > .ks-amount {
+          font-size: 12px;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+
+    > .ks-about {
+      border-top: 1px solid $ks-default-border-color;
+      padding: 20px;
+
+      > .ks-header {
+        font-size: 12px;
+        color: $text-color-light;
+        margin-bottom: 7px;
+      }
+    }
+
+    > .ks-controls {
+      border-top: 1px solid $ks-default-border-color;
+      display: flex;
+
+      > .ks-control {
+        height: 42px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid $ks-default-border-color;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        > .ks-icon {
+          color: $ks-color-primary;
+          font-size: 20px;
+          margin-right: 10px;
+          line-height: 20px;
+          position: relative;
+          top: -1px;
+        }
+
+        > .ks-text {
+          text-decoration: none;
+          color: $ks-color-primary;
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-amount-statistics {
+  background: #fff;
+
+  > .ks-statistics {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border: solid 1px rgba(57, 81, 155, 0.2);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    > .ks-amount {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    > .ks-text {
+      font-size: 12px;
+    }
+  }
+
+  > .ks-percent {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    height: 40px;
+    border-bottom: solid 1px rgba(57, 81, 155, 0.2);
+    border-left: solid 1px rgba(57, 81, 155, 0.2);
+    border-right: solid 1px rgba(57, 81, 155, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > .ks-text {
+      font-size: 12px;
+
+      &:before {
+        font-family: $ks-icon-font-name;
+        color: $ks-default-text-color;
+        font-size: 16px;
+        display: inline-block;
+        margin-right: 7px;
+        position: relative;
+      }
+    }
+
+    &.ks-up {
+      > .ks-text {
+        &:before {
+          content: "\f113";
+          top: 2px;
+        }
+      }
+    }
+
+    &.ks-down {
+      > .ks-text {
+        &:before {
+          content: "\f110";
+          top: 1px;
+        }
+      }
+    }
+  }
+
+  &.ks-primary {
+    > .ks-statistics {
+      background-color: $ks-color-primary;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-info {
+    > .ks-statistics {
+      background-color: $ks-color-info;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-success {
+    > .ks-statistics {
+      background: $ks-color-success;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-warning {
+    > .ks-statistics {
+      background: $ks-color-warning;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-danger {
+    > .ks-statistics {
+      background: $ks-color-danger;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-purple {
+    > .ks-statistics {
+      background: $ks-color-purple;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-auto-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    > .ks-statistics {
+      flex-grow: 1;
+      height: auto;
+    }
+  }
+}
+
+.ks-widget-amount-chart-statistics {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+  > .ks-body {
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border: solid 1px rgba(57, 81, 155, 0.2);
+    height: 100px;
+    align-items: center;
+
+    > .ks-statistics {
+      padding-left: 25px;
+
+      > .ks-amount {
+        font-size: 24px;
+        font-weight: 500;
+        color: #fff;
+        display: block;
+      }
+
+      > .ks-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        display: block;
+      }
+    }
+
+    > .ks-chart {
+      padding-right: 25px;
+    }
+  }
+
+  > .ks-footer {
+    height: 40px;
+    border-bottom: solid 1px #d7dceb;
+    border-left: solid 1px #d7dceb;
+    border-right: solid 1px #d7dceb;
+  }
+
+  &.ks-white {
+    > .ks-body {
+      background: #fff;
+      color: #333;
+      border-bottom: none;
+
+      > .ks-statistics {
+        > .ks-amount {
+          color: $ks-color-primary;
+        }
+
+        > .ks-text {
+          color: #333;
+        }
+      }
+    }
+  }
+
+  &.ks-primary {
+    > .ks-body {
+      background: $ks-color-primary;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-info {
+    > .ks-body {
+      background: $ks-color-info;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-success {
+    > .ks-body {
+      background: $ks-color-success;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-warning {
+    > .ks-body {
+      background: $ks-color-warning;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-danger {
+    > .ks-body {
+      background: $ks-color-danger;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-purple {
+    > .ks-body {
+      background: $ks-color-purple;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &.ks-auto-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    > .ks-body {
+      flex-grow: 1;
+      height: auto;
+    }
+  }
+}
+
+.ks-widget-simple-solid-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 35px;
+  color: #fff;
+  flex-direction: column;
+  border-radius: 2px;
+
+  > .ks-amount {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  > .ks-description {
+    text-align: center;
+  }
+
+  &.ks-primary {
+    background: $ks-color-primary;
+  }
+
+  &.ks-info {
+    background: $ks-color-info;
+  }
+
+  &.ks-success {
+    background: $ks-color-success;
+  }
+
+  &.ks-warning {
+    background: $ks-color-warning;
+  }
+
+  &.ks-danger {
+    background: $ks-color-danger;
+  }
+}
+
+.ks-widget-overview {
+  background: #fff;
+  border-radius: 2px;
+  border: solid 1px $ks-default-border-color;
+
+  > .ks-body {
+    padding: 30px;
+
+    > .ks-header {
+      margin: 0;
+      line-height: 14px;
+      margin-bottom: 30px;
+    }
+
+    > .ks-items {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      > .ks-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        > .ks-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 2px;
+          background-color: rgba(57, 80, 155, 0.05);
+          margin-right: 15px;
+          color: $ks-color-primary;
+          font-size: 19px;
+          text-align: center;
+          line-height: 36px;
+        }
+
+        > .ks-text {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  > .ks-footer {
+    padding: 18px 30px;
+    background: rgba(57, 80, 155, 0.05);
+    border-top: 1px solid $ks-default-border-color;
+    display: flex;
+    justify-content: space-between;
+
+    > .ks-info {
+      > .ks-name {
+        color: $ks-color-primary;
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 2px;
+      }
+
+      > .ks-datetime {
+        display: block;
+        color: $ks-default-text-color-light;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.ks-widget-progress-list {
+  > .card-block {
+    padding: 0;
+
+    > .ks-item {
+      padding: 15px 20px;
+      border-bottom: 1px solid $ks-default-border-color;
+
+      &:last-child {
+        border: none;
+      }
+
+      > .ks-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        > .ks-wrapper {
+          > .ks-header {
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+          }
+
+          > .ks-description {
+            display: block;
+            font-size: 12px;
+            color: $text-color-light;
+          }
+        }
+
+        > .ks-percent {
+          font-size: 18px;
+        }
+      }
+
+      > .progress {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.ks-widget-simple-offer {
+  > .card-block {
+    padding-bottom: 27px;
+
+    > .ks-item {
+      display: flex;
+
+      > .ks-preview {
+        margin-right: 15px;
+
+        > .ks-video-preview {
+          width: 60px;
+          min-width: 60px;
+          height: 60px;
+          border-radius: 2px;
+          background: $ks-color-warning;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          > .ks-icon {
+            color: $ks-color-warning;
+            font-size: 12px;
+            line-height: 12px;
+            background: #fff;
+            padding: 5px 5px 5px 7px;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      > .ks-info {
+        > .ks-header {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        > .ks-text {
+          font-size: 12px;
+          color: $ks-default-text-color-light;
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-events-stream {
+  > .card-block {
+    padding: 0;
+
+    .ks-table {
+      width: 100%;
+
+      td {
+        padding: 20px;
+        border-bottom: 1px solid $ks-default-border-color;
+      }
+
+      tr {
+
+        &:last-child {
+          td {
+            border: none;
+          }
+        }
+      }
+
+      .ks-user {
+        width: 60px;
+        position: relative;
+        padding-right: 0;
+
+        > .ks-avatar {
+          width: 55px;
+          height: 55px;
+        }
+
+        > .ks-label {
+          position: absolute;
+          bottom: 21px;
+          right: -6px;
+          padding-left: 6px;
+          border-radius: 12px;
+          background-color: $ks-default-border-color;
+          border: solid 3px #ffffff;
+          color: #333;
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+
+      .ks-info {
+        > .ks-name {
+          color: $ks-default-text-color;
+          font-size: 14px;
+          font-weight: normal;
+
+          > .ks-label {
+            margin-left: 10px;
+          }
+        }
+
+        > .ks-description {
+          font-size: 12px;
+          color: $ks-default-text-color-light;
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
+
+      .ks-datetime {
+        width: 80px;
+        text-align: right;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.ks-widget-leader-board {
+  > .card-block {
+    padding: 0;
+
+    .ks-table {
+      width: 100%;
+
+      td {
+        padding: 20px;
+        border-bottom: 1px solid $ks-default-border-color;
+      }
+
+      tr {
+
+        &:last-child {
+          td {
+            border: none;
+          }
+        }
+
+        &.ks-first-place {
+          .ks-user {
+            position: relative;
+
+            &:before {
+              border-bottom: 95px solid rgba(222, 186, 12, 0.4);
+            }
+
+            > .ks-label {
+              background-color: #ebd66d;
+              border: solid 3px #fff;
+              font-weight: 500;
+              width: 27px;
+              height: 27px;
+              top: 14px;
+              right: 9px;
+              line-height: 12px;
+            }
+          }
+        }
+
+        &.ks-second-place {
+          .ks-user {
+            &:before {
+              border-bottom: 95px solid rgba(0, 0, 0, 0.1);
+            }
+
+            > .ks-label {
+              background-color: #d6d6d6;
+              border: solid 3px #fff;
+              font-weight: 500;
+              width: 27px;
+              height: 27px;
+              top: 14px;
+              right: 9px;
+              line-height: 12px;
+            }
+          }
+        }
+
+        &.ks-third-place {
+          .ks-user {
+            &:before {
+              border-bottom: 95px solid rgba(185, 115, 44, 0.4);
+            }
+
+            > .ks-label {
+              background-color: #e3c7aa;
+              border: solid 3px #fff;
+              font-weight: 500;
+              width: 27px;
+              height: 27px;
+              top: 14px;
+              right: 9px;
+              line-height: 12px;
+            }
+          }
+        }
+      }
+
+      .ks-user {
+        width: 85px;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-bottom: 95px solid #fff;
+          border-right: 95px solid transparent;
+        }
+
+        > .ks-avatar {
+          width: 55px;
+          height: 55px;
+        }
+
+        > .ks-label {
+          position: absolute;
+          top: 16px;
+          right: 12px;
+          border-radius: 50%;
+          background-color: #ffffff;
+          border: solid 1px $ks-default-border-color;
+          width: 24px;
+          height: 24px;
+          line-height: 13px;
+          text-align: center;
+          color: $ks-default-text-color;
+          font-size: 12px;
+
+          > span {
+            position: relative;
+            left: -1px;
+          }
+        }
+      }
+
+      .ks-info {
+        > .ks-name {
+          color: $ks-default-text-color;
+          font-size: 14px;
+          font-weight: normal;
+
+          > .ks-label {
+            margin-left: 10px;
+          }
+        }
+
+        > .ks-description {
+          font-size: 12px;
+          color: $ks-default-text-color-light;
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &.ks-scrollable {
+      margin-right: -1px;
+    }
+  }
+}
+
+.ks-widget-progress-chart-statistics {
+  .card-block {
+    padding: 0;
+  }
+
+  table {
+    &.ks-statistics {
+      width: 100%;
+      height: 196px;
+
+      td {
+        width: 50%;
+        border-right: 1px solid $ks-default-border-color;
+        text-align: center;
+        padding: 10px;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      tr {
+        &:first-child {
+          td {
+            &:last-child {
+              border-bottom: 1px solid $ks-default-border-color;
+            }
+          }
+        }
+      }
+
+      .ks-chart {
+        vertical-align: middle;
+        padding: 10px;
+      }
+
+      .ks-statistic-item {
+        text-align: center;
+        vertical-align: middle;
+
+        > .ks-amount {
+          display: block;
+          font-size: 30px;
+          font-weight: normal;
+          margin-bottom: 3px;
+        }
+
+        > .ks-text {
+          display: block;
+          text-transform: uppercase;
+          color: $ks-default-text-color-light;
+          font-size: 11px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-activity-stream {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  > .card-block {
+    padding: 0;
+
+    .ks-activity-stream-items {
+      padding: 20px;
+
+      > .ks-header {
+        margin: 0;
+        line-height: 18px;
+        margin-bottom: 20px;
+        font-weight: normal;
+        margin-left: 55px;
+      }
+
+      > .ks-body {
+        display: block;
+
+        + .ks-header {
+          margin-top: 20px;
+        }
+
+        > .ks-item {
+          display: flex;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          > .ks-datetime {
+            font-size: 10px;
+            line-height: 10px;
+            text-transform: uppercase;
+            color: $ks-default-text-color-light;
+            width: 55px;
+            min-width: 55px;
+            position: relative;
+            top: 14px;
+          }
+
+          > .ks-avatar {
+            margin-right: 18px;
+            width: 36px;
+            height: 36px;
+          }
+
+          > .ks-action {
+            position: relative;
+            top: 8px;
+
+            > .ks-name {
+              font-size: 12px;
+              font-weight: 500;
+              color: $text-color;
+            }
+
+            > .ks-description {
+              font-size: 12px;
+              color: $text-color-light;
+
+              > a {
+                &.ks-closed {
+                  text-decoration: line-through;
+                }
+              }
+            }
+
+            > .ks-comment {
+              margin-top: 9px;
+              font-size: 12px;
+              color: $ks-default-text-color-light;
+              opacity: 0.9;
+              border-left: 4px solid $ks-default-border-color;
+              padding-left: 7px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-post {
+  border: none;
+
+  > .card-header {
+    background-image: linear-gradient(114deg, $ks-color-primary, $ks-color-info);
+
+    > .ks-text {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: normal;
+      color: #fff;
+    }
+  }
+
+  > .card-block {
+    border: 1px solid $ks-default-border-color;
+    border-top: none;
+    padding: 20px;
+
+    > .ks-user {
+      display: flex;
+
+      > .ks-avatar {
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+      }
+
+      > .ks-info {
+        flex-grow: 1;
+
+        > .ks-name {
+          color: #333;
+          font-size: 12px;
+          font-weight: 500;
+          display: block;
+        }
+
+        > .ks-description {
+          font-size: 12px;
+          color: rgba(51, 51, 51, 0.8);
+          font-weight: normal;
+        }
+      }
+
+      > .ks-datetime {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+      + .ks-text {
+        margin-top: 20px;
+      }
+    }
+
+    > .ks-text {
+      + .ks-actions {
+        margin-top: 20px;
+      }
+    }
+
+    > .ks-actions {
+      margin-top: 20px;
+
+      > .ks-control {
+        cursor: pointer;
+        display: inline-block;
+
+        > .ks-icon {
+          color: rgba(58,82,155,.5);
+          font-size: 19px;
+          display: inline-block;
+          margin-right: 1px;
+          position: relative;
+          top: 2px;
+        }
+
+        > .ks-amount {
+          color: $ks-default-text-color;
+          font-size: 12px;
+        }
+
+        + .ks-control {
+          margin-left: 10px;
+        }
+
+        &:hover {
+          > .ks-icon {
+            color: $ks-color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-like-post {
+  > .card-header {
+    > .ks-user {
+      display: flex;
+
+      > .ks-avatar {
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+      }
+
+      > .ks-info {
+        flex-grow: 1;
+
+        > .ks-name {
+          color: $ks-default-text-color;
+          font-size: 12px;
+          font-weight: 500;
+          display: block;
+          margin-bottom: 4px;
+        }
+
+        > .ks-description {
+          font-size: 12px;
+          color: rgba(51, 51, 51, 0.8);
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  > .card-block {
+    padding: 20px;
+
+    > .ks-text {
+      + .ks-thumbnail {
+        margin-top: 20px;
+      }
+    }
+
+    > .ks-thumbnail {
+      + .ks-actions {
+        margin-top: 20px;
+      }
+    }
+
+    > .ks-text {
+      + .ks-actions {
+        margin-top: 20px;
+      }
+    }
+
+    > .ks-actions {
+      margin-top: 20px;
+
+      > .ks-control {
+        cursor: pointer;
+        display: inline-block;
+
+        > .ks-icon {
+          color: rgba(58,82,155,.5);
+          font-size: 19px;
+          display: inline-block;
+          margin-right: 1px;
+          position: relative;
+          top: 2px;
+        }
+
+        > .ks-amount {
+          color: $ks-default-text-color;
+          font-size: 12px;
+        }
+
+        + .ks-control {
+          margin-left: 10px;
+        }
+
+        &:hover {
+          > .ks-icon {
+            color: $ks-color-primary;
+          }
+        }
+      }
+    }
+
+    > .ks-likes-block {
+      margin-top: 17px;
+      display: flex;
+      align-items: center;
+
+      > .ks-users {
+        display: flex;
+
+        > .ks-user {
+          + .ks-user {
+            margin-left: 6px;
+
+            > .ks-avatar {
+              width: 26px;
+              height: 26px;
+            }
+          }
+        }
+      }
+
+      > .ks-text {
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.ks-widget-followers {
+  > .card-block {
+    .ks-wrapper {
+      padding: 20px;
+
+      > .ks-user {
+        display: flex;
+
+        + .ks-user {
+          margin-top: 15px;
+        }
+
+        > .ks-avatar {
+          width: 36px;
+          height: 36px;
+          margin-right: 10px;
+        }
+
+        > .ks-info {
+          flex-grow: 1;
+
+          > .ks-name {
+            color: #333;
+            font-size: 12px;
+            font-weight: 500;
+            display: block;
+          }
+
+          > .ks-description {
+            font-size: 12px;
+            color: rgba(51, 51, 51, 0.8);
+            font-weight: normal;
+          }
+        }
+
+        > .btn {
+          min-width: 105px;
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-to-do-list {
+  > .card-block {
+    padding: 0;
+
+    > .ks-header {
+      padding: 15px 20px;
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    > .ks-body {
+      .ks-wrapper {
+        padding: 0 20px;
+        margin: 0;
+        list-style: none;
+        margin-top: 2px;
+
+        > .ks-task {
+          font-size: 12px;
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+
+          &.ks-completed {
+            .custom-control-description {
+              text-decoration: line-through;
+              color: rgba(51, 51, 51, 0.6);
+            }
+          }
+
+          > .ks-icon {
+            color: rgba(0, 0, 0, 0.2);
+            margin-right: 10px;
+            font-size: 18px;
+          }
+
+          > .custom-control {
+            margin-bottom: 0;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+
+    > .ks-footer {
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+
+      > .form-control {
+        flex-grow: 1;
+      }
+
+      > .btn {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.ks-user-widget {
+  .card-block {
+    padding: 30px;
+    text-align: center;
+
+    > .ks-avatar {
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+      margin-bottom: 6px;
+    }
+
+    > .ks-name {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    > .ks-desc {
+      font-size: 12px;
+      margin-bottom: 25px;
+
+      > .ks-nickname {
+        margin-bottom: 1px;
+      }
+
+      > .ks-country {
+        color: $ks-default-text-color-light;
+      }
+    }
+
+    > .ks-rate {
+      margin-bottom: 25px;
+
+      > .ks-name {
+        font-size: 14px;
+        margin-bottom: 1px;
+      }
+
+      > .ks-due-date {
+        color: $ks-default-text-color-light;
+      }
+    }
+
+    > .ks-balance {
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+  }
+}
+
+.ks-amount-widget {
+  > .card-header {
+    > .ks-controls {
+      .ks-control {
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &.panel-purple {
+    .progress-white[value]::-webkit-progress-bar {
+      background-color: #A639A5;
+    }
+  }
+
+  &.panel-info {
+    .progress-white[value]::-webkit-progress-bar {
+      background-color: #1B85C0;
+    }
+  }
+
+  &.panel-success {
+    .progress-white[value]::-webkit-progress-bar {
+      background-color: #23A259;
+    }
+  }
+
+  > .card-block {
+    padding: 10px 15px 16px 15px;
+
+    > .ks-amount {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    > .ks-progress {
+      margin-bottom: 10px;
+    }
+
+    > .ks-desc {
+      color: #fff;
+      line-height: 1.25;
+
+      &.ks-up, &.ks-down {
+        &:before {
+          font-family: $ks-icon-font-name;
+          color: #fff;
+          font-size: 16px;
+          display: inline-block;
+          margin-right: 7px;
+          position: relative;
+          top: 1px;
+        }
+      }
+
+      &.ks-up {
+        &:before {
+          top: 2px;
+          content: "\f113";
+        }
+      }
+
+      &.ks-down {
+        &:before {
+          content: "\f110";
+        }
+      }
+    }
+  }
+}
+
+.ks-action-widget {
+  .card-block {
+    padding: 0;
+    height: 132px;
+
+    > .ks-action {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      > .ks-icon {
+        color: $ks-color-primary;
+        font-size: 44px;
+        margin-right: 30px;
+      }
+
+      > .ks-text {
+        line-height: 1.29;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &.panel-primary, &.panel-success, &.panel-info, .panel-danger {
+    .card-block {
+      > .ks-action {
+        > .ks-icon, > .ks-text {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-tasks-overview-progress {
+  .ks-tasks-progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    + .ks-tasks-progress-item {
+      margin-top: 18px;
+    }
+
+    .ks-progress {
+      flex-grow: 1;
+
+      .progress {
+        margin: 0;
+      }
+    }
+
+    .ks-label {
+      margin-right: 15px;
+      font-size: 12px;
+      color: $ks-default-text-color-light;
+    }
+  }
+
+  .ks-task-progress-bar {
+    background-color: #dae5e3;
+  }
+
+  .ks-task-due-bar {
+    background-color: #c5d4c5;
+  }
+
+  .ks-task-qa-bar {
+    background-color: #b6ada1;
+  }
+
+  .ks-task-delegated-bar {
+    background-color: #979189;
+  }
+
+  .ks-tasks-progress-item-statuses {
+    list-style: none;
+    padding: 0;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+
+    li {
+      &:before {
+        content: '';
+        width: 10px;
+        height: 6px;
+        border-radius: 3px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      font-size: 12px;
+
+      + li {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .ks-task-progress-bar-status {
+    &:before {
+      background-color: #dae5e3;
+    }
+  }
+
+  .ks-task-progress-due-status {
+    &:before {
+      background-color: #c5d4c5;
+    }
+  }
+
+  .ks-task-progress-qa-status {
+    &:before {
+      background-color: #b6ada1;
+    }
+  }
+
+  .ks-task-progress-delegated-status {
+    &:before {
+      background-color: #979189;
+    }
+  }
+}
+
+.ks-widget-tasks-table {
+  .ks-table-tasks {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    tr {
+      &:first-child {
+        td {
+          border-top: none;
+        }
+      }
+    }
+
+    td {
+      padding-bottom: 6px;
+      font-size: 14px;
+
+      &.ks-cell-checkbox, &.ks-cell-radio {
+        padding-right: 0;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        text-align: right;
+      }
+
+      &.ks-cell-checked {
+        text-decoration: line-through;
+        color: rgba(51, 51, 51, 0.4);
+        text-align: left;
+      }
+    }
+  }
+}
+
+.ks-widget-tasks-statuses-progress {
+  .tasks-statuses-progress-table {
+    width: 100%;
+    margin: 0;
+    margin-top: 25px;
+
+    td {
+      font-size: 12px;
+      border: none;
+      padding-top: 9px;
+      padding-bottom: 9px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    .ks-progress-status {
+      font-weight: 700;
+    }
+  }
+
+  .tasks-total-statuses-progress {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: $ks-default-text-color-light;
+    align-items: center;
+    margin-top: 24px;
+
+    .ks-name {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .progress {
+      min-width: 180px;
+      margin: 0 20px;
+    }
+  }
+}
+
+.ks-widget-messages-inbox {
+  .card-block {
+    padding-top: 8px;
+  }
+
+  .ks-widget-messages-inbox-item {
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    + .ks-widget-messages-inbox-item {
+      border-top: 1px solid $ks-default-border-color;
+    }
+  }
+
+  .ks-widget-messages-inbox-item-avatar {
+    margin-right: 15px;
+  }
+
+  .ks-widget-messages-inbox-item-body-name-and-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+
+    > .ks-name {
+      font-size: 12px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    > .ks-time {
+      text-transform: uppercase;
+      font-size: 10px;
+      color: $ks-default-text-color-light;
+    }
+  }
+
+  .ks-widget-messages-inbox-item-body-message {
+    font-size: 12px;
+    color: #263238;
+    margin: 0;
+  }
+}
+
+.ks-widget-table {
+  .table {
+    margin-top: 15px;
+    margin-bottom: 0;
+
+    th {
+      border-top: none;
+    }
+  }
+}
+
+.ks-widget-weather-and-datetime {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &.ks-sunny {
+    background: #fefcd8;
+
+    .ks-widget-weather-and-datetime-weather-block-amount, .ks-icon {
+      color: #f88528;
+    }
+  }
+
+  &.ks-cold {
+    background: #eff1fc;
+
+    .ks-widget-weather-and-datetime-weather-block-amount, .ks-icon {
+      color: #4e54a8;
+    }
+  }
+}
+
+.ks-widget-weather-and-datetime-weather-block-amount {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ks-widget-weather-and-datetime-weather-block-type {
+  font-size: 14px;
+  color: #171717;
+  margin-bottom: 20px;
+}
+
+.ks-widget-weather-and-datetime-datetime-block-datetime {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
+  color: #171717;
+  text-transform: uppercase;
+}
+
+.ks-widget-weather-and-datetime-datetime-block-location {
+  font-size: 10px;
+  font-weight: 500;
+  text-align: right;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.ks-widget-weather-and-datetime-datetime-block {
+  text-align: right;
+
+  .ks-icon {
+    margin-top: 60px;
+    display: inline-block;
+    font-size: 26px;
+  }
+}
+
+.ks-widget-simple-weather-only {
+  border: none;
+  color: #fff;
+  text-align: right;
+  padding: 20px;
+
+  &.ks-sunny {
+    background: #f88528;
+  }
+
+  &.ks-cold {
+    background: #4e54a8;
+  }
+
+  .ks-icon {
+    font-size: 26px;
+  }
+}
+
+.ks-widget-simple-weather-only-body {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.ks-widget-simple-weather-only-block-amount {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-bottom: 10px;
+}
+
+.ks-widget-simple-weather-only-location {
+  font-size: 14px;
+}

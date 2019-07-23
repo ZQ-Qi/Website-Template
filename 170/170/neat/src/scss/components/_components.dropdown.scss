@@ -1,0 +1,132 @@
+/* ==========================================================================
+   #DROPDOWN
+   ========================================================================== */
+
+/**
+ * A wrapper for the dropdown
+ */
+
+.c-dropdown {
+	display: inline-block;
+	position: relative;
+}
+
+/**
+ * Always show a custor on dropdown toggles.
+ */
+
+.dropdown-toggle {
+	cursor: pointer;
+}
+
+
+/**
+ * Dropdown Menu
+ * 
+ * 1. No matter what size is the dropdown toggle `dropdown-toggle` (a class from
+ *    bootstrap), dropdown menu should be positioned properly.
+ * 2. Add the ability to add a top arrow to the dropdown menu.
+ */
+
+.c-dropdown__menu {
+	position: absolute;
+	top: 100%; /* [1] */
+	right: 0;
+	width: $dropdown-menu-width;
+	margin: $spacer-small 0 0;
+	transition: opacity .15s ease, visibility .15s ease;
+	border: $dropdown-menu-border-width solid $dropdown-menu-border-color;
+	border-radius: $dropdown-menu-border-radius;
+	background-color: $dropdown-menu-background-color;
+	text-align: left;
+	box-shadow: $dropdown-menu-box-shadow;
+	z-index: $z-index-400;
+
+	.c-dropdown &,
+	.dropdown & {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.c-dropdown.show &,
+	.dropdown.show & {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+    }
+
+	&.has-arrow { /* [2] */
+		margin-top: $spacer-small;
+
+		&::before {
+			display: inline-block;
+			position: absolute;
+			top: -7px;
+			right: 4px;
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid $color-sky;
+			border-left: 7px solid transparent;
+			border-bottom-color: $color-white;
+			box-shadow: $card-box-shadow;
+			content: "";
+		}
+
+		@include respond-to ($breakpoint-tablet) {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+
+/**
+ * A larger dropdown menu for dropdowns used in navbar.
+ */
+
+.c-dropdown__menu--large {
+	width: $dropdown-menu-large-width;
+
+	.c-dropdown__item {
+		padding: $dropdown-item-large-padding;
+	}
+}
+
+.c-dropdown__menu-header {
+	display: block;
+	padding: 10px $spacer-small;
+	border-bottom: 1px solid $color-sky-dark;
+}
+
+.c-dropdown__menu-footer {
+	display: block;
+	padding: 10px $spacer-small;
+	background-color: $color-sky-light;
+	font-size: 14px;
+	text-align: center;
+}
+
+
+/**
+ * 1. Remove border from last item to prevent it from collapsing with dropdown
+ *    menu's last border.
+ */
+
+.c-dropdown__item {
+	display: block;
+	padding: $dropdown-item-padding;
+	border-bottom: $dropdown-item-border-width solid $dropdown-item-border-color;
+	color: $dropdown-item-color;
+	font-size: $text-font-size;
+	font-weight: $dropdown-item-font-weight;
+
+	&:hover {
+		background-color: $dropdown-item-hover-background-color;
+		color: $dropdown-item-hover-color;
+		text-decoration: none;
+	}
+
+	&:last-child {
+		border-bottom: 0; /* [1] */
+	}
+}

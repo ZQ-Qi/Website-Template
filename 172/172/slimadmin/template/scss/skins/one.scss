@@ -1,0 +1,1368 @@
+
+
+// Bootstrap variable overrides
+@import "../bootstrap/variables";
+@import "../variables";
+
+@import "../../bower_components/bootstrap/scss/functions";
+@import "../../bower_components/bootstrap/scss/variables";
+@import "../../bower_components/bootstrap/scss/mixins";
+
+// Custom mixins for bootstrap
+@import "../bootstrap/mixins";
+
+body { background-color: lighten($gray-900, 3%); }
+
+/******************** HEADER *********************/
+.slim-header {
+  background-color: $gray-900;
+  border-bottom-color: $gray-800;
+}
+
+.slim-logo a { color: theme-color('primary'); }
+.slim-logo span { color: $body-color; }
+
+.search-box .btn {
+  background-color: theme-color('primary');
+  background-image: none;
+}
+
+.slim-header-right {
+  .dropdown-menu {
+    background-color: darken($gray-900, 2%);
+    border-width: 0;
+    box-shadow: none;
+    z-index: 1050;
+
+    &::before { border-bottom-color: $gray-800; }
+    &::after { border-bottom-color: darken($gray-900, 2%); }
+  }
+
+  .dropdown-c .nav-link {
+    color: $body-color;
+
+    &:hover,
+    &:focus {
+      background-color: $gray-900;
+      color: #fff;
+    }
+  }
+
+  .dropdown-menu-header {
+    border-color: $gray-800;
+
+    div a:nth-child(2) { border-color: $gray-800; }
+  }
+
+  .dropdown-menu-title { color: $body-color; }
+
+  .dropdown-list {
+    .dropdown-link {
+      color: $body-color;
+
+      .media { border-color: $gray-800; }
+      p strong { color: $gray-300; }
+
+      span {
+        color: $body-color;
+        opacity: .6;
+      }
+
+      &:hover,
+      &:focus {
+        .media { background-color: $gray-900; }
+      }
+
+      &.read {
+        .media { background-color: $gray-900; }
+
+        &:hover,
+        &:focus {
+          .media { background-color: lighten($gray-900, 2%); }
+        }
+      }
+    }
+  }
+}
+
+.header-notification {
+  color: $body-color;
+
+  &:hover,
+  &:focus {
+    background-color: darken($gray-900, 2%);
+  }
+}
+
+.logged-user { color: $body-color; }
+
+/******************** HEADER NAVBAR *******************/
+.slim-navbar {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  .nav-link {
+    background-color: $gray-900;
+    border-color: $gray-800;
+    color: $body-color;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($gray-900, 2%);
+      color: #fff;
+    }
+  }
+
+  .nav-item.active {
+    .nav-link {
+      background-color: lighten($gray-900, 2%);
+      background-image: none;
+      color: theme-color('primary');
+      border-width: 1px;
+
+      .icon { color: theme-color('primary'); }
+    }
+  }
+
+  .sub-item {
+    background-color: darken($gray-900, 3%);
+    border-width: 0;
+    box-shadow: none;
+
+    ul {
+      a {
+        color: $body-color;
+
+        &:hover,
+        &:focus {
+          color: theme-color('primary');
+          background-color: transparent;
+        }
+      }
+    }
+
+    .sub-with-sub {
+      ul {
+        background-color: darken($gray-900, 3%);
+        border-width: 0;
+      }
+    }
+  }
+
+  .mega-dropdown {
+    .sub-item {
+      .section-label {
+        border-color: darken($gray-800, 2%);
+        color: #fff;
+      }
+
+      a {
+        padding-left: 0;
+        padding-right: 0;
+        color: $body-color;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.search-box {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  .form-control { color: #fff; }
+}
+
+.dropdown-activity-list {
+  .activity-label {
+    background-color: darken($gray-900, 2%);
+    border-color: $gray-800;
+  }
+
+  .activity-item {
+    border-color: $gray-800;
+    .row .col-8 { color: $body-color; }
+  }
+}
+
+/******************** GLOBAL STYLES ********************/
+.slim-pagetitle { color: #fff; }
+.slim-breadcrumb {
+  .breadcrumb-item + .breadcrumb-item::before { color: $gray-700; }
+}
+
+.slim-card-title {
+  font-weight: 600;
+  color: #fff;
+}
+
+.slim-footer {
+  background-color: $gray-900;
+  border-color: $gray-800;
+}
+
+.section-wrapper {
+  background-color: $gray-900;
+  border-color: $gray-800;
+}
+
+.section-title {
+  color: #fff;
+  font-weight: 600;
+}
+
+.section-label,
+.section-label-sm { color: $body-color; }
+
+.table-reference {
+  thead tr {
+    th,
+    td { background-color: transparent !important; }
+  }
+
+  thead,
+  tbody {
+    tr {
+      th,
+      td {
+        border-color: $gray-800;
+        color: $body-color;
+      }
+    }
+  }
+}
+
+hr { border-color: $gray-800; }
+
+.img-thumbnail {
+  border-color: $gray-800;
+  background-color: $gray-900;
+}
+
+
+/******************** DASHBOARD ********************/
+.dash-headline-item-one {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  h1 {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .earning-label { color: theme-color('primary'); }
+}
+
+.dash-headline-item-two {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  h4 {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .item-label { color: theme-color('primary'); }
+}
+
+.dash-headline-item-three,
+.dash-headline-item-four {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  h1 {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .item-label { color: theme-color('primary'); }
+}
+
+.card-dash-one {
+  border-color: $gray-800;
+
+  .row > div {
+    &:nth-child(odd) { background-color: $gray-900; }
+    &:nth-child(even) { background-color: lighten($gray-900, 2%); }
+
+    + div { border-color: $gray-800; }
+  }
+
+  .dash-content {
+    h2 {
+      color: #fff;
+      font-weight: 400;
+    }
+  }
+}
+
+.card-customer-overview .card-header {
+  .nav-link + .nav-link::before {
+    border-color: $gray-800;
+  }
+}
+
+.card-status {
+  h1 {
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
+.card-dash-headline h4 { color: #fff; }
+.card-earning-summary h1 { color: #fff; }
+
+.card-dash-chart-one {
+  .row > div:first-child { border-color: $gray-800; }
+
+  .left-panel {
+    .nav-link {
+      + .nav-link::before { border-color: $gray-800; }
+    }
+  }
+
+  .active-visitor-wrapper h1 { color: #fff; }
+}
+
+.dashboard-4 .card-table .card-header .nav-link + .nav-link::before { border-color: $gray-800; }
+
+.d-h-t-right .summary-item {
+  h1 { color: #fff; }
+  + .summary-item::before { border-color: $gray-800; }
+}
+
+.nav-statistics-wrapper {
+  border-color: $gray-800;
+
+  .nav-link.active { color: theme-color('primary'); }
+  .nav:first-child .nav-link::before { border-color: theme-color('primary'); }
+}
+
+.dashboard-chart-one {
+  .card-total h1 {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .card-revenue {
+    h6 { color: #fff; }
+    h1 { color: #fff; }
+    label span { color: #fff; }
+  }
+}
+
+.card-popular-product {
+  .prod-name a {
+    color: #fff;
+  }
+
+  h1 {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .row > div:last-child::before { border-color: $gray-800; }
+}
+
+/************************ WIDGETS *******************/
+.card-table {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  .card-header,
+  .card-footer { border-color: $gray-800; }
+
+  .slim-card-title { color: #fff; }
+
+  .table {
+    thead tr {
+      th,
+      td {
+        background-color: darken($gray-900, 2%);
+        color: $body-color;
+        border-color: $gray-800;
+        font-weight: 500;
+      }
+    }
+
+    tbody tr {
+      th,
+      td {
+        border-color: $gray-800;
+        color: $body-color;
+
+        a {
+          color: $gray-200;
+          &:hover,
+          &:focus { color: $gray-100; }
+        }
+      }
+    }
+  }
+}
+
+.card-info h5 { color: #fff; }
+
+.card-sales {
+  .row .col {
+    p { color: #fff; }
+    + .col::before { border-color: $gray-800; }
+  }
+}
+
+.card-impression h2 { color: #fff; }
+
+
+/******************** CARD ********************/
+.card:not([class*=" bg-"]) {
+  background-color: $gray-900;
+  border-color: $gray-800;
+}
+
+.card-header,
+.card-footer {
+  border-color: $gray-800;
+}
+
+.card-header-tabs {
+  &::before { border-color: $gray-800; }
+  .nav-link {
+    color: $body-color;
+    &:hover,
+    &:focus { color: $gray-300; }
+
+    &.active {
+      background-color: $gray-900;
+      color: theme-color('primary');
+      border-color: $gray-800;
+      border-bottom-color: $gray-900;
+    }
+  }
+
+  &.nav-tabs-for-dark {
+    .nav-link.active {
+      &,&:focus { color: theme-color('primary'); }
+    }
+  }
+}
+
+/******************** ACCORDION ********************/
+.accordion-one {
+  .card-header a {
+    border-color: $gray-800;
+
+    &.collapsed {
+      background-color: $gray-800;
+      border-color: transparent;
+      color: $body-color;
+
+      &:hover,
+      &:focus { color: #fff; }
+    }
+  }
+}
+
+.accordion-two {
+  .card { background-color: $gray-800; }
+  .card-header a {
+    background-color: lighten($gray-800, 2%);
+    border-color: lighten($gray-800, 5%);
+    color: #fff;
+
+    &.collapsed {
+      background-color: darken($gray-900, 2%);
+      color: $body-color;
+
+      &:hover,
+      &:focus {
+        background-color: lighten($gray-900, 2%);
+        color: $gray-300;
+      }
+    }
+  }
+}
+
+
+/******************** ALERTS ********************/
+.alert { border-width: 0; }
+.alert-outline {
+  border-width: 1px;
+  .close {
+    color: $body-color;
+    text-shadow: none;
+  }
+}
+
+
+/******************** BUTTONS ********************/
+.btn:not([class*=" btn-outline-"]) { border-width: 0; }
+
+
+/******************** DROPDOWNS ********************/
+.dropdown-demo {
+  .dd-link {
+    color: $body-color;
+    > div { border-color: $gray-800; }
+  }
+}
+
+.dropdown-menu {
+  background-color: darken($gray-900, 5%);
+  border-width: 0;
+  box-shadow: none;
+}
+
+.dropdown-nav .nav-link {
+  color: $body-color;
+
+  &:hover,
+  &:focus {
+    background-color: $gray-900;
+    color: #fff;
+  }
+}
+
+.dropdown-menu-header {
+  border-color: $gray-800;
+  label { color: $body-color; }
+}
+
+.dropdown-media-list {
+  .media {
+    + .media { border-color: $gray-800; }
+
+    &:hover,
+    &:focus { background-color: darken($gray-900, 2%); }
+  }
+
+  .media-body > div p { color: #fff; }
+}
+
+.nav-tabs-dropdown {
+  .nav-link {
+    background-color: lighten($gray-900, 5%);
+
+    &.active {
+      background-color: darken($gray-900, 5%);
+    }
+  }
+}
+
+.dropdown-tab-label { color: #fff; }
+
+
+/******************** FORMS ********************/
+.form-control {
+  background-color: $gray-900;
+  border-color: $gray-700;
+
+  &:focus { background-color: $gray-900; }
+
+  &:not([value=""]) { color: #fff; }
+}
+
+
+/******************** LIST GROUP ********************/
+.list-group-item {
+  background-color: $gray-900;
+  border-color: $gray-800;
+  color: $body-color;
+}
+
+.list-group-striped {
+  .list-group-item:nth-child(even) { background-color: lighten($gray-900, 3%); }
+}
+
+.mail-list {
+  border-color: $gray-800;
+  .mail-item {
+    background-color: $gray-900;
+    + .mail-item { border-color: $gray-800; }
+
+    &.active {
+      background-color: lighten($gray-900, 5%);
+    }
+  }
+}
+
+.list-group-user {
+  .user-name-address p { color: $gray-300; }
+  .user-btn-wrapper .btn {
+    border-color: $gray-700;
+    color: $body-color;
+
+    &:hover,
+    &:focus {
+      background-color: $gray-800;
+      border-color: $gray-600;
+    }
+  }
+}
+
+
+/******************** MEDIA OBJECT ********************/
+.media-demo,
+.media-list-demo { border-color: $gray-800; }
+
+
+/******************** NAV ********************/
+.nav-tabs { border-color: $gray-800; }
+.nav-link {
+  color: $body-color;
+  &:hover,
+  &:focus { color: $gray-300; }
+
+  &.active { color: theme-color('primary'); }
+}
+
+.nav-gray-600 {
+  .nav-link.active { color: $gray-900; }
+}
+
+.nav-white-800 {
+  .nav-link {
+    color: rgba(#fff,.5);
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+
+    &.active { color: #fff; }
+  }
+}
+
+.nav-underline {
+  .nav-link {
+    &::before { background-color: theme-color('primary'); }
+    &.active { color: theme-color('primary'); }
+  }
+}
+
+
+/******************** PAGINATION ********************/
+.pagination-wrapper { border-color: $gray-800; }
+.pagination:not([class*=" pagination-"]) {
+  .page-item {
+    .page-link {
+      background-color: transparent;
+      border-color: $gray-800;
+      color: $body-color;
+
+      &:hover,
+      &:focus {
+        background-color: $gray-800;
+        border-color: $gray-700;
+      }
+    }
+
+    &.active {
+      .page-link {
+        background-color: theme-color('primary');
+        border-color: transparent;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.pagination-dark:not([class*=" pagination-"]) {
+  .page-item {
+    .page-link {
+      border-color: rgba(#fff,.2);
+      background-color: transparent;
+      color: rgba(#fff,.7);
+
+      &:hover,
+      &:focus {
+        border-color: rgba(#fff,.4);
+        color: #fff;
+        background-color: rgba(#000,.05);
+      }
+    }
+
+    &.active {
+      .page-link {
+        background-color: #fff;
+        border-color: transparent;
+        color: theme-color('primary');
+      }
+    }
+  }
+}
+
+[class*=" pagination-"]:not(.pagination-dark) {
+  .page-item:not(.active) {
+    .page-link {
+      background-color: transparent;
+      border-color: rgba(#fff,.1);
+      color: $body-color;
+
+      &:hover,
+      &:focus {
+        border-color: rgba(#fff,.3);
+        color: #fff;
+      }
+    }
+  }
+}
+
+.pagination-dark {
+  .page-item.active {
+    .page-link:hover,
+    .page-link:focus {
+      color: $gray-800;
+      background-color: #fff;
+    }
+  }
+}
+
+
+/******************** TOOLTIP & POPOVER********************/
+.tooltip-static-demo {
+  border-color: $gray-800;
+}
+
+.popover-static-demo {
+  border-color: $gray-800;
+  background-color: transparent;
+}
+
+.popover { border-width: 0; }
+
+[class*=" popover-head-"] {
+  .popover-header,
+  .popover-body { border-width: 0; }
+}
+
+
+/******************** PROGRESS ********************/
+.progress { background-color: $gray-800; }
+
+
+/******************** SPINNER ********************/
+.sk-double-bounce .sk-child,
+.sk-wave .sk-rect,
+.sk-chasing-dots .sk-child,
+.sk-circle .sk-child::before,
+.sk-three-bounce .sk-child,
+.sk-cube-grid .sk-cube,
+.sk-folding-cube .sk-cube { background-color: $gray-300; }
+
+
+/******************** PROFILE PAGE ********************/
+.card-profile-name { color: #fff; }
+.card-profile-position { color: $body-color; }
+.card-profile .card-footer {
+  background-color: transparent;
+  border-color: $gray-800;
+
+  > div a { border-color: $gray-800; }
+}
+
+.nav-activity-profile {
+  .nav-link {
+    background-color: $gray-900;
+    color: $body-color;
+    border-color: $gray-800;
+    font-weight: 600;
+
+    &:hover,
+    &:focus {
+      background-color: darken($gray-800, 5%);
+      color: #fff;
+    }
+  }
+}
+
+.card-latest-activity {
+  .activity-text { color: $body-color; }
+  .card-footer {
+    border-color: $gray-800;
+
+    a {
+      border-color: $gray-800;
+      color: $body-color;
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.card-experience {
+  .position-name { color: #fff; }
+  .position-company { color: theme-color('primary'); }
+  .card-footer {
+    border-color: $gray-800;
+    a {
+      border-color: $gray-800;
+      color: $body-color;
+
+      &:hover,
+      &:focus { color: #fff; }
+
+      &:first-child,
+      &:last-child { border-color: $gray-800; }
+    }
+  }
+}
+
+.card-connection hr { border-color: $gray-800; }
+.card-people-list .media + .media { border-color: $gray-800; }
+
+
+/******************** INVOICE PAGE ********************/
+.invoice-title { color: $gray-800; }
+.billed-to h6 { color: $gray-300; }
+.invoice-info-row span:first-child { color: $gray-300; }
+
+.table-invoice {
+  thead tr {
+    th,
+    td {
+      background-color: $gray-800;
+      color: $body-color;
+    }
+  }
+
+  tbody tr {
+    th,
+    td {
+      border-color: $gray-800;
+      color: $body-color;
+
+      &:first-child { color: $gray-300; }
+    }
+
+    &:first-child {
+      th,
+      td { border-color: $gray-700; }
+    }
+  }
+}
+
+
+/******************** CONTACT MANAGER PAGE ********************/
+.manager-left {
+  .nav { border-color: $gray-800; }
+  .nav-link {
+    background-color: $gray-900;
+
+    &:hover,
+    &:focus {
+      background-color: darken($gray-800, 5%);
+      color: #fff;
+    }
+
+    &::before { background-color: $gray-800; }
+
+    + .nav-link { border-color: $gray-800; }
+
+    &.active {
+      &,
+      &:hover,
+      &:focus {
+        background-color: darken($gray-800, 5%);
+      }
+    }
+  }
+}
+
+.card-contact {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  .card-img { background-color: $gray-900; }
+
+  .contact-name {
+    color: $gray-300;
+    &:hover,
+    &:focus { color: #fff; }
+  }
+
+  .contact-item { border-color: $gray-800; }
+}
+
+
+/******************** FLOT CHART ********************/
+.legendLabel { color: $body-color; }
+
+
+/******************** TABLE BASIC ********************/
+.table:not([class*=" table-colored"]) {
+  thead tr {
+    th,
+    td { background-color: $gray-800; }
+  }
+
+  thead tr,
+  tbody tr {
+    th,
+    td {
+      border-color: $gray-800;
+      color: $body-color;
+    }
+  }
+}
+
+.table-striped {
+  tbody tr:nth-child(odd) {
+    th,
+    td {
+      background-color: lighten($gray-900, 2%);
+    }
+  }
+}
+
+.table-bordered {
+  tbody tr:last-child {
+    th,
+    td { border-bottom-color: $gray-800; }
+  }
+}
+
+
+/******************** DATA BASIC ********************/
+.dataTables_wrapper {
+  .select2-container--default {
+    .select2-selection--single {
+      background-color: $gray-900;
+      border-color: $gray-800;
+
+      .select2-selection__rendered { color: $body-color; }
+    }
+  }
+
+  .dataTables_length label { color: $body-color; }
+  .dataTables_filter input {
+    background-color: $gray-900;
+    border-color: $gray-800;
+
+    &:focus {
+      border-color: $gray-700;
+      color: $body-color;
+    }
+  }
+
+  .dataTables_info { color: $body-color; }
+
+  .dataTables_paginate .paginate_button {
+    border-color: $gray-800;
+    background-color: $gray-900;
+    color: $body-color !important;
+
+    &:hover,
+    &:focus {
+      border-color: $gray-800;
+      background-color: lighten($gray-900, 2%);
+      color: $gray-400 !important;
+    }
+
+    &.disabled {
+      &,&:hover,&:focus {
+        background-color: $gray-900;
+        border-color: $gray-800;
+        opacity: .3;
+      }
+    }
+  }
+}
+
+.table.dataTable {
+  border-color: $gray-800;
+  tbody tr {
+    &.odd td {
+      background-color: $gray-900;
+      &.sorting_1 { background-color: lighten($gray-900, 2%); }
+    }
+
+    &.even td {
+      background-color: lighten($gray-900, 2%);
+      &.sorting_1 { background-color: lighten($gray-900, 4%); }
+    }
+
+    &:hover td {
+      &,
+      &.sorting_1 { background-color: lighten($gray-900, 5%); }
+    }
+  }
+
+  &.no-footer { border-bottom-color: $gray-800; }
+}
+
+
+/******************** FILE MANAGER ********************/
+.file-item {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  a {
+    color: $body-color;
+    &:hover,
+    &:focus { color: $gray-400; }
+  }
+}
+
+.load-more-wrapper {
+  border-color: $gray-800;
+  background-color: $gray-900;
+  a { color: $body-color; }
+
+  &:hover,
+  &:focus {
+    border-color: $gray-700;
+    a { color: #fff; }
+  }
+}
+
+/******************** CALENDAR PAGE ********************/
+.fc-toolbar {
+  h2 { color: #fff; }
+
+  .fc-button {
+    background-color: $gray-900;
+    border: 1px solid $gray-800;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($gray-900, 2%);
+    }
+  }
+}
+
+.fc-unthemed tbody tr td {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  &.fc-today { background-color: lighten($gray-900, 2%); }
+}
+
+
+/******************** TIMELINE PAGE ********************/
+.post-title a,
+.timeline-title a { color: $gray-300; }
+
+.timeline-date { color: #fff; }
+.timeline-body {
+  &::before { background-color: $gray-900; }
+  &::after { background-color: $gray-800; }
+}
+
+.post-item {
+  border-color: $gray-800;
+  &::before { background-color: $gray-900; }
+}
+
+
+/******************** PRICING PAGE ********************/
+.pricing-price { color: #fff; }
+.card-pricing-one > .row .col-lg + .col-lg::before { background-color: $gray-800; }
+
+.card-pricing-two {
+  .pricing-title { color: #fff; }
+}
+
+.pricing-list li + li { border-color: $gray-800; }
+
+.card-pricing-three {
+  .card-pricing {
+    background-color: lighten($gray-900, 2%);
+    border-color: $gray-800;
+    color: $body-color;
+
+    h1 { color: #fff; }
+  }
+  .card-body { border-color: $gray-800; }
+}
+
+
+/******************** SIGNIN/UP PAGE ********************/
+.signin-box {
+  background-color: $gray-900;
+  border-color: $gray-800;
+
+  .form-control { color: $gray-300; }
+}
+
+.signin-title-primary { color: #fff; }
+.signin-right { background-color: $gray-900; }
+.signup-separator {
+  &::before { background-color: $gray-800; }
+  span { background-color: $gray-900; }
+}
+
+/******************** ERROR PAGES ********************/
+.page-error-wrapper {
+  .error-title { color: #fff; }
+}
+
+/******************** FORM ELEMENTS *********************/
+.form-control {
+  &[readonly],
+  &[disabled] {
+    background-color: darken($gray-900, 2%);
+    border-color: darken($gray-800, 5%);
+  }
+
+  &.is-warning { border-color: theme-color('warning'); }
+}
+
+.ckbox,
+.rdiobox {
+  span::before {
+    background-color: $gray-900;
+    border-color: $gray-700;
+  }
+}
+
+.custom-file-label {
+  background-color: $gray-900;
+  border-color: $gray-700;
+}
+
+.input-group-text {
+  background-color: darken($gray-900, 2%);
+  border-color: $gray-700;
+}
+
+.bootstrap-tagsinput {
+  border-radius: 0;
+  background-color: $gray-900;
+  border-color: $gray-700;
+}
+
+.sp-replacer {
+  background-color: $gray-900;
+  border-color: $gray-700;
+  color: $body-color;
+
+  &:hover,
+  &:focus { color: $gray-300; }
+}
+
+/******************** FORM ELEMENTS *********************/
+.select2-dark {
+  &.select2-selection {
+    background-color: $gray-900;
+    border-color: $gray-700;
+
+    .select2-selection__rendered { color: #fff; }
+  }
+
+  &.select2-dropdown { border-width: 0; }
+}
+
+.form-layout-2,
+.form-layout-3 {
+  .form-group {
+    border-color: $gray-800;
+  }
+}
+
+.form-layout-6,
+.form-layout-7 {
+  .row > div {
+    border-color: $gray-800;
+    &:first-child { background-color: lighten($gray-900, 2%); }
+  }
+}
+
+.form-card-wrapper { background-color: darken($gray-900, 2%); }
+
+
+/******************** FORM WIZARD *********************/
+.wizard {
+  > .steps .disabled a {
+    &,&:hover,&:focus {
+      background-color: $gray-800;
+      color: $body-color;
+    }
+  }
+
+  > .content {
+    background-color: $gray-900;
+    border: 1px solid $gray-800;
+  }
+
+  .actions .disabled a { background-color: $gray-800; }
+  > .content > .body input { border-color: $gray-700; }
+}
+
+.wizard-style-1 {
+  > .steps > ul a {
+    .number,
+    &:hover .number,
+    &:active .number {
+      background-color: $gray-700;
+      color: $gray-300;
+    }
+  }
+}
+
+/******************** FORM EDITOR *********************/
+.note-editor.note-frame { border-width: 0; }
+.card-header.note-toolbar { border-radius: 0; }
+.note-editor.note-frame .note-statusbar { border-radius: 0; }
+
+
+/******************** SELECT2 *********************/
+.select2-container--default {
+  &.select2-container--disabled {
+    .select2-dark {
+      background-color: darken($gray-900, 5%);
+      border-color: darken($gray-800, 5%);
+    }
+  }
+}
+
+.select2-dropdown { border-width: 0; }
+
+
+/******************** RANGESLIDER *********************/
+.irs-line-left,
+.irs-line-right,
+.irs-line-mid { background-color: $gray-800; }
+
+.irs-min,
+.irs-max {
+  background-color: $gray-700;
+  color: $body-color;
+}
+
+
+/******************** MESSAGES RIGHT *********************/
+.messages-list {
+  border-color: $gray-800;
+
+  .media-left .square-10 { border-color: $gray-900; }
+
+  .media {
+    background-color: $gray-900;
+    color: $body-color;
+    border-left-color: $gray-800;
+
+    &.unread {
+      background-color: lighten($gray-900, 2%);
+      .media-left .square-10 { border-color: $gray-900; }
+    }
+
+    + .media { border-color: $gray-800; }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($gray-900, 2%);
+    }
+  }
+
+  .media-body h6 { color: #fff; }
+}
+.messages-right {
+  background-color: $gray-900;
+  border-color: $gray-800;
+}
+
+.message-header {
+  border-color: $gray-800;
+  .media .media-body h6 { color: #fff; }
+}
+
+.message-body {
+  background-color: darken($gray-900, 2%);
+  .media-list .reverse .msg p {
+    background-color: $gray-800;
+    color: $body-color;
+  }
+}
+.message-footer { border-color: $gray-800; }
+
+
+/******************** WIDGETS *********************/
+.card-recent-messages {
+  .card-header {
+    border-color: $gray-800;
+    span { color: #fff; }
+  }
+
+  .media-body h6 { color: #fff; }
+}
+
+.card-map-widget .card-body {
+  border-color: $gray-800;
+  h6 { color: #fff; }
+}
+
+.card-activities .media {
+  &::before { border-color: $gray-800; }
+  h6 { color: #fff; }
+}
+
+.card-profile .profile-name { color: #fff; }
+
+.card-blog {
+  .card-body { border-color: $gray-800; }
+  .blog-title a { color: #fff; }
+}
+
+.card-blog-split {
+  .row > div:last-child { background-color: $gray-900; }
+  .blog-title a { color: #fff; }
+}
+
+
+/******************** RTL SUPPORT *********************/
+[dir="rtl"] {
+  .card-dash-one .row > div + div { border-color: $gray-800; }
+  .card-sales .row .col + .col::before { border-color: $gray-800; }
+  .card-profile .card-footer > div a { border-color: $gray-800; }
+  .card-latest-activity .card-footer a { border-color: $gray-800; }
+  .card-experience .card-footer a {
+    &:first-child,
+    &:last-child { border-color: $gray-800; }
+  }
+
+  .post-item { border-color: $gray-800; }
+  .card-activities .media::before { border-color: $gray-800; }
+
+  .card-customer-overview .card-header .nav-link + .nav-link::after { border-color: $gray-800; }
+  .card-dash-chart-one .left-panel .nav-link + .nav-link::after { border-color: $gray-800; }
+  .card-dash-chart-one .left-panel, .card-dash-chart-one .right-panel { text-align: right; }
+  .card-dash-chart-one .row > div:first-child { border-color: $gray-800; }
+
+  .dashboard-4 .card-table .card-header .nav-link + .nav-link::after { border-color: $gray-800; }
+
+  .dash-headline-two { text-align: right; }
+  .d-h-t-right .summary-item + .summary-item::before { border-color: $gray-800; }
+  .card-popular-product .row > div:last-child::before { border-color: $gray-800; }
+}
+
+
+// Template settings: demo purposes only
+.template-options-wrapper {
+  border-color: darken($gray-800, 5%);
+  background-color: darken($gray-900, 5%);
+}
+
+.template-options-btn {
+  background-color: darken($gray-900, 5%);
+  border-color: darken($gray-800, 5%);
+  color: #fff;
+}
+
+.template-options-title {
+  color: #fff;
+  font-weight: 500;
+}
+
+.option-row-wrapper {
+  + .option-row-wrapper { border-color: darken($gray-800, 5%); }
+}
+
+.skin-mode-item {
+  a.skin-light-mode,
+  a.skin-dark-mode { border: 0; }
+}

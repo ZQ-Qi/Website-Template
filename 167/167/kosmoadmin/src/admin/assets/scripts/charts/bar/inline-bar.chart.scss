@@ -1,0 +1,25 @@
+@import "../../../styles/config/colors";
+
+.ks-inline-bar-chart {
+  display: flex;
+  height: 100%;
+
+  > div {
+    margin-right: 2px;
+    background-color: rgba(57, 80, 155, 0.1);
+    border-radius: 2px;
+    width: 10px;
+    display: flex;
+    align-items: flex-end;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    > div {
+      width: 100%;
+      border-radius: 2px;
+      background-color: $ks-color-primary;
+    }
+  }
+}

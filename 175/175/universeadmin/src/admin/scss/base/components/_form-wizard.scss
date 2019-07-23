@@ -1,0 +1,150 @@
+$form-wizard-step-progress-height: 8px;
+$form-wizard-step-progress-radius: 8px;
+
+/** BEGIN: form wizard */
+.form-wizard {
+  &.main-container {
+    padding: 0;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__steps {
+    display: flex;
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+  }
+
+  &__step {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &:first-child  {
+      .form-wizard__step-progress {
+        border-top-left-radius: $form-wizard-step-progress-radius;
+        border-bottom-left-radius: $form-wizard-step-progress-radius;
+      }
+    }
+
+    &:last-child  {
+      .form-wizard__step-progress {
+        border-top-right-radius: $form-wizard-step-progress-radius;
+        border-bottom-right-radius: $form-wizard-step-progress-radius;
+      }
+    }
+
+    &.is-current &-name {
+      color: #000;
+    }
+
+    &.is-current &-progress-indicator {
+      background: #0094f2;
+      z-index: 1;
+    }
+
+    &.is-completed {
+      .form-wizard__step-progress {
+        background: #7FCBF5;
+      }
+
+      .form-wizard__step-progress-indicator {
+        background: #7FCBF5;
+      }
+
+      + .is-current {
+        .form-wizard__step-progress {
+          &:before {
+            content: '';
+            width: 10px;
+            background: #7FCBF5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__step-name {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #939daa;
+  }
+
+  &__content {
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__step-content {
+    position: relative;
+    min-width: 100%;
+    display: none;
+
+    &.is-current {
+      display: block;
+    }
+  }
+
+  &__step-progress {
+    height: $form-wizard-step-progress-height;
+    background: rgba(#939daa, .25);
+    position: relative;
+  }
+
+  &__step-progress-indicator {
+    border-radius: $form-wizard-step-progress-radius;
+    height: 100%;
+    position: relative;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px 20px;
+  }
+
+  &__step-form {
+    margin-top: 15px;
+  }
+}
+
+@include mq(tablet, max) {
+  .form-wizard {
+    &__steps {
+      flex-direction: column;
+    }
+
+    &__step-progress {
+      border-radius: $form-wizard-step-progress-radius;
+    }
+
+    &__step {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:last-child &-progress {
+        border-radius: $form-wizard-step-progress-radius;
+      }
+
+      &:first-child &-progress {
+        border-radius: $form-wizard-step-progress-radius;
+      }
+    }
+  }
+}
+/** END: form wizard */

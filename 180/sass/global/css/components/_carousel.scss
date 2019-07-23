@@ -1,0 +1,85 @@
+/*---------------------------
+
+Start carousel
+
+---------------------------*/
+
+.carousel-indicators-numbers{
+  li {
+    text-indent: 0;
+    margin: $gaping-0 2px;
+    width: $gaping-35;
+    height: $gaping-35;
+    border: none;
+    border-radius: $border-radius-full-circle;
+    line-height: $gaping-35;
+    color: $white-text-color;
+    padding: $gaping-0;
+    background-color: $normal-light-text-color;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    &.active, &:hover{
+      margin: $gaping-0 2px;
+      width: $gaping-35;
+      height: $gaping-35;
+      background-color: #337ab7;
+    }
+  }
+}
+
+.carousel-indicators-line{
+  li{
+    position: $position-relative;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: $gaping-35;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: rgba(255,255,255,.5);
+    &:after, &:before{
+      position: $position-absolute;
+      bottom: -10px;
+      left: $gaping-0;
+      display: inline-block;
+      width: 100%;
+      height: $gaping-10;
+      content: "";
+    }
+  }
+  .active{
+    width: $gaping-35;
+    height: $gaping-5;
+    margin: $gaping-0;
+    background-color: $white-backgournd-color;
+  }
+}
+
+/*---- Start responsive carousel ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:479px) {
+
+}
+/*---- End responsive carousel ----*/
+
+/*---------------------------
+
+End carousel
+
+---------------------------*/

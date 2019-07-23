@@ -1,0 +1,307 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Kanban Board / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Kanban Board</h2>
+    </div>
+  </div>
+  <div class="kanban-board container-fh__content">
+    <div class="kanban-board__header">
+      <div class="kanban-board__header-heading">Tasks</div>
+      <div class="kanban-board__header-controls">
+        <div class="radio-group radio-group--border-hidden kanban-board__header-filter kanban-board__header-control">
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input" checked>
+            <span class="radio-group__text">All</span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Designers</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-info radio-group__label">Frontend</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-warning radio-group__label">Backend</span>
+            </span>
+          </label>
+        </div>
+        <a href="#" class="btn btn-info icon-left kanban-board__header-control">
+          Add task <span class="btn-icon iconfont-plus"></span>
+        </a>
+      </div>
+    </div>
+    <div class="kanban-board__filter">
+      <div class="dropdown kanban-board__filter-dropdown kanban-board__filter-control">
+        <a class="dropdown-toggle kanban-board__filter-toggle kanban-board__filter-control-toggle" href="#" data-toggle="dropdown">
+          <span class="kanban-board__filter-control-text">
+            <span class="iconfont-filter dropdown-toggle__icon"></span> Assigned to
+          </span>
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <a href="#" class="kanban-board__filter-control">
+        <span class="kanban-board__filter-control-text">Only my tasks</span>
+      </a>
+    </div>
+    <div class="kanban-board__body">
+      <div class="kanban-board__columns">
+        <div class="kanban-board__column">
+          <div class="kanban-board__column-header">
+            <div class="kanban-board__column-name">Pending</div>
+            <div class="kanban-board__column-desc">4 tasks</div>
+          </div>
+          <div class="kanban-board__column-items">
+            <div class="kanban-board__column-item">
+              <div class="kanban-board__column-item-icons">
+                <div class="iconfont-envelope kanban-board__column-item-icon color-success"></div>
+              </div>
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Theme Construction</a>
+                  <div class="kanban-board__column-item-desc">Main page design</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users">
+                    <a href="#" class="kanban-board__column-item-user">
+                      <img src="img/users/user-17.png" alt="" class="rounded-circle kanban-board__column-item-user-avatar">
+                      <span class="kanban-board__column-item-user-name">James</span>
+                    </a>
+                  </div>
+                  <div class="kanban-board__column-item-date">3h</div>
+                </div>
+              </div>
+            </div>
+            <div class="kanban-board__column-item kanban-board__column-item--medium">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Bronx Social Media Pack App</a>
+                  <div class="kanban-board__column-item-desc">Fix bugs</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users"></div>
+                  <div class="kanban-board__column-item-date">1h</div>
+                </div>
+              </div>
+            </div>
+            <div class="kanban-board__column-item kanban-board__column-item--hight">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Cloud Language Studio</a>
+                  <div class="kanban-board__column-item-desc">Inner pages</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users"></div>
+                  <div class="kanban-board__column-item-date">3h</div>
+                </div>
+              </div>
+            </div>
+            <div class="kanban-board__column-item">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Theme Construction</a>
+                  <div class="kanban-board__column-item-desc">Main page design</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users">
+                    <a href="#" class="kanban-board__column-item-user">
+                      <img src="img/users/user-17.png" alt="" class="rounded-circle kanban-board__column-item-user-avatar">
+                      <span class="kanban-board__column-item-user-name">James</span>
+                    </a>
+                  </div>
+                  <div class="kanban-board__column-item-date">3h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="kanban-board__column">
+          <div class="kanban-board__column-header">
+            <div class="kanban-board__column-name">In Progress</div>
+            <div class="kanban-board__column-desc">3 tasks</div>
+          </div>
+          <div class="kanban-board__column-items">
+            <div class="kanban-board__column-item">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Theme Construction</a>
+                  <div class="kanban-board__column-item-desc">Main page design</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users">
+                    <a href="#" class="kanban-board__column-item-user">
+                      <img src="img/users/user-17.png" alt="" class="rounded-circle kanban-board__column-item-user-avatar">
+                      <span class="kanban-board__column-item-user-name">James</span>
+                    </a>
+                  </div>
+                  <div class="kanban-board__column-item-date">3h</div>
+                </div>
+              </div>
+            </div>
+            <div class="kanban-board__column-item kanban-board__column-item--urgent">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Bronx Social Media Pack App</a>
+                  <div class="kanban-board__column-item-desc">Fix bugs</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users"></div>
+                  <div class="kanban-board__column-item-date">1h</div>
+                </div>
+              </div>
+            </div>
+            <div class="kanban-board__column-item kanban-board__column-item--normal">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Cloud Language Studio</a>
+                  <div class="kanban-board__column-item-desc">Inner pages</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users"></div>
+                  <div class="kanban-board__column-item-date">3h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="kanban-board__column">
+          <div class="kanban-board__column-header">
+            <div class="kanban-board__column-name">Verification</div>
+            <div class="kanban-board__column-desc">5 tasks</div>
+          </div>
+          <div class="kanban-board__column-items">
+            <div class="kanban-board__column-item">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Theme Construction</a>
+                  <div class="kanban-board__column-item-desc">Main page design</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users">
+                    <a href="#" class="kanban-board__column-item-user">
+                      <img src="img/users/user-17.png" alt="" class="rounded-circle kanban-board__column-item-user-avatar">
+                      <span class="kanban-board__column-item-user-name">James</span>
+                    </a>
+                  </div>
+                  <div class="kanban-board__column-item-date">3h</div>
+                </div>
+              </div>
+            </div>
+            <div class="kanban-board__column-item kanban-board__column-item--urgent">
+              <div class="kanban-board__column-item-icons">
+                <div class="iconfont-envelope kanban-board__column-item-icon color-success"></div>
+                <div class="iconfont-star kanban-board__column-item-icon color-golden"></div>
+              </div>
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Bronx Social Media Pack App</a>
+                  <div class="kanban-board__column-item-desc">Fix bugs</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users"></div>
+                  <div class="kanban-board__column-item-date kanban-board__column-item-date--expired">-1h</div>
+                </div>
+              </div>
+            </div>
+            <div class="kanban-board__column-item kanban-board__column-item--medium">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Cloud Language Studio</a>
+                  <div class="kanban-board__column-item-desc">Inner pages</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users"></div>
+                  <div class="kanban-board__column-item-date">3h</div>
+                </div>
+              </div>
+            </div>
+            <div class="kanban-board__column-item">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Theme Construction</a>
+                  <div class="kanban-board__column-item-desc">Main page design</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users">
+                    <a href="#" class="kanban-board__column-item-user">
+                      <img src="img/users/user-17.png" alt="" class="rounded-circle kanban-board__column-item-user-avatar">
+                      <span class="kanban-board__column-item-user-name">James</span>
+                    </a>
+                  </div>
+                  <div class="kanban-board__column-item-date">3h</div>
+                </div>
+              </div>
+            </div>
+            <div class="kanban-board__column-item kanban-board__column-item--hight">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Theme Construction</a>
+                  <div class="kanban-board__column-item-desc">Main page design</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users">
+                    <a href="#" class="kanban-board__column-item-user">
+                      <img src="img/users/user-17.png" alt="" class="rounded-circle kanban-board__column-item-user-avatar">
+                      <span class="kanban-board__column-item-user-name">James</span>
+                    </a>
+                  </div>
+                  <div class="kanban-board__column-item-date kanban-board__column-item-date--expired">-8h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="kanban-board__column">
+          <div class="kanban-board__column-header">
+            <div class="kanban-board__column-name">Solved</div>
+            <div class="kanban-board__column-desc">1 task</div>
+          </div>
+          <div class="kanban-board__column-items">
+            <div class="kanban-board__column-item">
+              <div class="kanban-board__column-item-inner">
+                <div class="kanban-board__column-item-body">
+                  <a href="#" class="kanban-board__column-item-name">Theme Construction</a>
+                  <div class="kanban-board__column-item-desc">Main page design</div>
+                </div>
+                <div class="kanban-board__column-item-footer">
+                  <div class="kanban-board__column-item-users">
+                    <a href="#" class="kanban-board__column-item-user">
+                      <img src="img/users/user-17.png" alt="" class="rounded-circle kanban-board__column-item-user-avatar">
+                      <span class="kanban-board__column-item-user-name">James</span>
+                    </a>
+                  </div>
+                  <div class="kanban-board__column-item-date">3h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/shopify/draggable.bundle.js"></script>
+<script src="vendor/shopify/sortable.js"></script>
+<script src="vendor/shopify/plugins.js"></script>
+<script src="vendor/shopify/plugins/swap-animation.js"></script>
+<script src="js/preview/kanban-board.min.js"></script>
+{% endblock %}

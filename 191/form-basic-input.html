@@ -1,0 +1,1159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic Input Page</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/ionicons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <!--fullcalendar-->
+    <link href="assets/css/fullcalendar.css" rel='stylesheet' />
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- header -->
+        <header class="main-header">
+			<div class="container_header">
+				<div class="logo">
+					<a href="#">
+						<strong class="logo_icon">
+							<img src="assets/images/small-logo.png" alt="">
+						</strong>
+						<span class="logo-default">
+							<img src="assets/images/logo.png" alt="">
+						</span>
+					</a>
+				</div>
+				<div class="right_detail">
+					<div class="row row d-flex align-items-center min-h pos-md-r">
+						<div class="col-xl-5 col-3 search_col ">
+							<div class="top_function d-md-flex align-items-md-center">
+								<div class="icon_menu">
+									<a href="#" class="menu-toggler sidebar-toggler">
+										<i class="icon-menu"></i>
+									</a>
+								</div>
+								<div class="search">
+									<a id="toggle_res_search" data-toggle="collapse" data-target="#search_form" class="res-only-view collapsed" href="javascript:void(0);"
+									    aria-expanded="false">
+										<i class=" icon-magnifier"></i>
+									</a>
+									<form id="search_form" role="search" class="search-form collapse" action="#">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Search...">
+											<button type="button" class="btn" data-target="#search_form" data-toggle="collapse" aria-label="Close">
+												<i class="ion-android-search"></i>
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-7 col-9 d-flex justify-content-end">
+							<div class="right_bar_top d-flex align-items-center">
+								<div class="fullscreen-btn">
+									<a href="javascript:;">
+										<i class="icon-size-fullscreen"></i>
+									</a>
+								</div>
+								<!-- language-switch_Start -->
+								<div class="dropdown language-switch">
+									<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+									    aria-expanded="false" value="action">
+									
+											<img src="assets/images/flag3.png" alt="">
+											<span>English</span>
+										
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+										<li>
+											<a href="#" data-value="action">
+												<img src="assets/images/flag1.png" alt="">
+												<span>Deutsch</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-value="another action">
+												<img src="assets/images/flag2.png" alt="">
+												<span>Українська</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-value="another action">
+												<img src="assets/images/flag3.png" alt="">
+												<span>English</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-value="another action">
+												<img src="assets/images/flag4.png" alt="">
+												<span>España</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-value="another action">
+												<img src="assets/images/flag5.png" alt="">
+												<span>Русский</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!-- language-switch_End -->
+								<!-- notification_Start -->
+								<div class="dropdown dropdown-notification">
+									<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false">
+										<i class="fa fa-bell-o"></i>
+										<span class="badge_coun"> 6 </span>
+									</a>
+									<ul class="dropdown-menu scroll_auto height_fixed" aria-labelledby="dropdownMenu1">
+										<li class="bigger">
+											<h3>
+												<span class="bold">Notifications</span>
+											</h3>
+											<span class="notification-label">New 6</span>
+										</li>
+										<li>
+											<ul class="dropdown-menu-list">
+												<li>
+													<a href="javascript:;">
+														<span class="time">just now</span>
+														<span class="details">
+															<span class="notification-icon deepPink-bgcolor">
+																<i class="fa fa-check"></i>
+															</span> Congratulations!. </span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<span class="time">3 mins</span>
+														<span class="details">
+															<span class="notification-icon purple-bgcolor">
+																<i class="fa fa-user o"></i>
+															</span>
+															<b>John Micle </b>is now following you. </span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<span class="time">7 mins</span>
+														<span class="details">
+															<span class="notification-icon blue-bgcolor">
+																<i class="fa fa-comments-o"></i>
+															</span>
+															<b>Sneha Jogi </b>sent you a message. </span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<span class="time">12 mins</span>
+														<span class="details">
+															<span class="notification-icon pink">
+																<i class="fa fa-heart"></i>
+															</span>
+															<b>Ravi Patel </b>like your photo. </span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<span class="time">15 mins</span>
+														<span class="details">
+															<span class="notification-icon yellow">
+																<i class="fa fa-warning"></i>
+															</span> Warning! </span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<span class="time">10 hrs</span>
+														<span class="details">
+															<span class="notification-icon red">
+																<i class="fa fa-times"></i>
+															</span> Application error. </span>
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<!-- notification_End -->
+								<!-- DropDown_Inbox -->
+								<div class="dropdown dropdown-inbox">
+									<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+										<i class="fa fa-envelope-o"></i>
+										<span class="badge_coun"> 2 </span>
+									</a>
+									<ul class="dropdown-menu scroll_auto height_fixed" aria-labelledby="dropdownMenu1">
+										<li class="bigger">
+											<h3>
+												<span class="bold">Messages</span>
+											</h3>
+											<span class="notification-label">New 2</span>
+										</li>
+										<li>
+											<ul class="dropdown-menu-list">
+												<li>
+													<a href="#">
+														<span class="photo">
+															<img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span>
+														<span class="subject">
+															<span class="from"> Sarah Smith </span>
+															<span class="time">Just Now </span>
+														</span>
+														<span class="message"> Jatin I found you on LinkedIn... </span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="photo">
+															<img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span>
+														<span class="subject">
+															<span class="from"> Sarah Smith </span>
+															<span class="time">Just Now </span>
+														</span>
+														<span class="message"> Jatin I found you on LinkedIn... </span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="photo">
+															<img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span>
+														<span class="subject">
+															<span class="from"> Sarah Smith </span>
+															<span class="time">Just Now </span>
+														</span>
+														<span class="message"> Jatin I found you on LinkedIn... </span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="photo">
+															<img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span>
+														<span class="subject">
+															<span class="from"> Sarah Smith </span>
+															<span class="time">Just Now </span>
+														</span>
+														<span class="message"> Jatin I found you on LinkedIn... </span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="photo">
+															<img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span>
+														<span class="subject">
+															<span class="from"> Sarah Smith </span>
+															<span class="time">Just Now </span>
+														</span>
+														<span class="message"> Jatin I found you on LinkedIn... </span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="photo">
+															<img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span>
+														<span class="subject">
+															<span class="from"> Sarah Smith </span>
+															<span class="time">Just Now </span>
+														</span>
+														<span class="message"> Jatin I found you on LinkedIn... </span>
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<!--DropDown_Inbox_End -->
+								<!-- Dropdown_User -->
+								<div class="dropdown dropdown-user">
+									<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true">
+										<img class="img-circle pro_pic" src="assets/images/about-1.jpg" alt="">
+										<span class="username"> Kiran </span>
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-default">
+										<li>
+											<a href="#">
+												<i class="icon-user"></i> Profile </a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="icon-settings"></i> Settings </a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="icon-directions"></i> Help </a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<a href="lock_screen.html">
+												<i class="icon-lock"></i> Lock </a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="icon-logout"></i> Log Out </a>
+										</li>
+									</ul>
+								</div>
+								<!-- Dropdown_User_End -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+        <!-- header_End -->
+        <!-- Content_right -->
+        <div class="container_full">
+
+            <!--left sidebar start-->
+            <div class="side_bar scroll_auto">
+                <div class="user-panel">
+                    <div class="user_image">
+                        <img src="assets/images/about-1.jpg" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <p>
+                            Alexander Pierce
+                        </p>
+                        <a href="#">
+                            <i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <ul id="dc_accordion" class="sidebar-menu tree">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu_sub">
+                        <a href="#">
+                            <i class="fa fa-newspaper-o"></i>
+                            <span>UI Elements </span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="down_menu">
+                            <li>
+                                <a href="alert.html">Alerts</a>
+                            </li>
+                            <li>
+                                <a href="buttons.html">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="cards.html">Cards</a>
+                            </li>
+                            <li>
+                                <a href="dropdown.html">Dropdowns</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">Grids</a>
+                            </li>
+                            <li>
+                                <a href="lists.html">Lists</a>
+                            </li>
+                            <li>
+                                <a href="modal.html">Modals</a>
+                            </li>
+                            <li>
+                                <a href="progress.html"> Progress</a>
+                            </li>
+                            <li>
+                                <a href="popover-tooltips.html">Popover &amp; Tooltips</a>
+                            </li>
+                            <li>
+                                <a href="typography.html">Typography</a>
+                            </li>
+                            <li>
+                                <a href="tabs.html">Tabs</a>
+                            </li>
+                            <li>
+                                <a href="tree.html">Tree</a>
+                            </li>
+                            <li>
+                                <a href="toastr.html">Toastr Notification</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_sub">
+                        <a href="#">
+                            <i class="fa fa-pie-chart"></i>
+                            <span>Portlets</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="down_menu">
+                            <li>
+                                <a href="portlet-base.html">Portlets Base</a>
+                            </li>
+                            <li>
+                                <a href="portlet-advanced.html">Portlets Advanced</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_sub">
+                        <a href="#">
+                            <i class="fa fa-laptop"></i>
+                            <span>Icons</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="down_menu">
+                            <li>
+                                <a href="icon-font-awesome.html">Fontawesome Icons</a>
+                            </li>
+                            <li>
+                                <a href="icon-simple-line.html">Simple line Icons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_sub">
+                        <a href="#">
+                            <i class="fa fa-table"></i>
+                            <span>Widgets </span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="down_menu">
+                            <li>
+                                <a href="widgets-base.html">Widgets Base</a>
+                            </li>
+                            <li>
+                                <a href="widgets-chart.html">Widgets Chart</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_sub">
+                        <a href="#">
+                            <i class="fa fa-calendar"></i>
+                            <span>Calendar </span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="down_menu">
+                            <li>
+                                <a href="calendar-basic.html">Basic Calendar</a>
+                            </li>
+                            <li>
+                                <a href="calendar-external-events.html">External Events Calendar</a>
+                            </li>
+                            <li>
+                                <a href="calendar-list.html">List Calendar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_sub">
+                        <a href="#">
+                            <i class="fa fa-wpforms"></i>
+                            <span>Forms</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="down_menu">
+                            <li class="menu_sub">
+                                <a href="#">Form Control
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="down_menu lavel3">
+                                    <li>
+                                        <a href="form-basic-input.html">Basic Input</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-input-group.html">Input Group</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-checkbox-radio.html">Checkbox & Radio</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu_sub">
+                                <a href="#">Form Validation
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="down_menu lavel3">
+                                    <li>
+                                        <a href="form-validation-basic.html">Basic Validation</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-validation-jquery.html">jQuery Validation</a>
+                                    </li>
+                                    <li>
+                                        <a href="form-wizard.html">Form Wizard</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_sub">
+                        <a href="#">
+                            <i class="icon-grid"></i>
+                            <span>Data Tables</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="down_menu">
+                            <li>
+                                <a href="table-basic.html">Basic Table</a>
+                            </li>
+                            <li class="menu_sub">
+                                <a href="#">Data Tables
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="down_menu">
+                                    <li>
+                                        <a href="table-datatable.html">Basic Datatable</a>
+                                    </li>
+                                    <li>
+                                        <a href="table-datatable-show-hide.html">Toggle Col Datatable</a>
+                                    </li>
+                                    <li>
+                                        <a href="table-datatable-ajax.html">Ajax Datatable</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_sub">
+                        <a href="#">
+                            <i class="fa fa-bar-chart text-aqua"></i>
+                            <span>Charts</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="down_menu">
+                            <li>
+                                <a href="flot-chart.html">Flot Charts</a>
+                            </li>
+                            <li>
+                                <a href="echart.html">eCharts</a>
+                            </li>
+                            <li>
+                                <a href="morris-chart.html">Morris Charts</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_sub">
+                        <a href="#">
+                            <i class="fa fa-file text-aqua"></i>
+                            <span>Extra Pages</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="down_menu">
+                            <li>
+                                <a href="profile.html">User Profile</a>
+                            </li>
+                            <li>
+                                <a href="page-login.html">Sign In</a>
+                            </li>
+                            <li>
+                                <a href="page-register.html">Sign Up</a>
+                            </li>
+                            <li>
+                                <a href="invoice.html">Invoice</a>
+                            </li>
+                            <li>
+                                <a href="page_404.html">404</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--left sidebar end-->
+
+            <!--main contents start-->
+            <main class="content_wrapper">
+                <!--page title start-->
+                <div class="page-heading">
+                    <div class="container-fluid">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-md-6">
+                                <div class="page-breadcrumb">
+                                    <h1>Basic Input</h1>
+                                </div>
+                            </div>
+                            <div class="col-md-6 justify-content-md-end d-md-flex">
+                                <div class="breadcrumb_nav">
+                                    <ol class="breadcrumb">
+                                        <li>
+                                            <i class="fa fa-home"></i>
+                                            <a class="parent-item" href="index.html">Home</a>
+                                            <i class="fa fa-angle-right"></i>
+                                        </li>
+                                        <li class="active">
+                                            Basic Input
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--page title end-->
+
+
+                <div class="container-fluid">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class=" col-md-6">
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Basic Form Controls
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input"> Check me out
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                    <p class="mb-4 mt-5">Textual form controls—like
+                                        <code class="highlighter-rouge">&lt;input&gt;</code>s,
+                                        <code class="highlighter-rouge">&lt;select&gt;</code>s, and
+                                        <code class="highlighter-rouge">&lt;textarea&gt;</code>s—are styled with the
+                                        <code class="highlighter-rouge">.form-control</code> class. Included are styles for general appearance, focus state,
+                                        sizing, and more.</p>
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Example select</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect2">Example multiple select</label>
+                                            <select multiple class="form-control" id="exampleFormControlSelect2">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                    </form>
+                                    <p class="mb-4 mt-5">For file inputs, swap the
+                                        <code class="highlighter-rouge">.form-control</code> for
+                                        <code class="highlighter-rouge">.form-control-file</code>.</p>
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlFile1">Example file input</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Form Square
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail10">Email address</label>
+                                            <input type="email" class="form-control form-control-square" id="exampleInputEmail10" aria-describedby="emailHelp" placeholder="Enter email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword10">Password</label>
+                                            <input type="password" class="form-control form-control-square" id="exampleInputPassword10" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect10">Select</label>
+                                            <span class="select-wrapper">
+                                                <select class="form-control form-control-square" id="exampleFormControlSelect10">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Form Pill
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail11">Email address</label>
+                                            <input type="email" class="form-control form-control-pill" id="exampleInputEmail11" aria-describedby="emailHelp" placeholder="Enter email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword11">Password</label>
+                                            <input type="password" class="form-control form-control-pill" id="exampleInputPassword11" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect10">Select</label>
+                                            <span class="select-wrapper form-control-pill">
+                                                <select class="form-control" id="exampleFormControlSelect11">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Sizing
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p>Set heights using classes like
+                                        <code class="highlighter-rouge">.form-control-lg</code> and
+                                        <code class="highlighter-rouge">.form-control-sm</code>.</p>
+                                    <div class="bd-example">
+                                        <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+                                        <input class="form-control" type="text" placeholder="Default input">
+                                        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+                                        <select class="form-control form-control-lg">
+                                            <option>Large select</option>
+                                            <option>Large select 2</option>
+                                            <option>Large select 3</option>
+                                        </select>
+                                        <select class="form-control">
+                                            <option>Default select</option>
+                                            <option>Default select 2</option>
+                                            <option>Default select 3</option>
+                                        </select>
+                                        <select class="form-control form-control-sm">
+                                            <option>Small select</option>
+                                            <option>Small select 2</option>
+                                            <option>Small select 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Inline Form
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p>Auto-sizing</p>
+                                    <form>
+                                        <div class="form-row align-items-center">
+                                            <div class="col-auto">
+                                                <label class="sr-only" for="inlineFormInput">Name</label>
+                                                <input type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInput" placeholder="Jane Doe">
+                                            </div>
+                                            <div class="col-auto">
+                                                <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                                                <div class="input-group mb-2 mb-sm-0">
+                                                    <div class="input-group-addon">@</div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn btn-info">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <p class="mt-4">Custom form controls and selects are also supported.</p>
+                                    <form class="form-inline">
+                                        <label class="mr-sm-2" for="inlineFormCustomSelectPref">Preference</label>
+                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelectPref">
+                                            <option selected>Choose...</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Remember my preference</span>
+                                        </label>
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-6">
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Horizontal form
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                            </div>
+                                        </div>
+                                        <fieldset class="form-group">
+                                            <div class="row">
+                                                <legend class="col-form-legend col-sm-3">Radios</legend>
+                                                <div class="col-sm-9">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked> Option one is this and that&mdash;be sure to include why it's
+                                                            great
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"> Option two can be something else and selecting it will deselect
+                                                            option one
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check disabled">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled> Option three is disabled
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3">Checkbox</div>
+                                            <div class="col-sm-9">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="checkbox"> Check me out
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-9">
+                                                <button type="submit" class="btn btn-info">Sign in</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Horizontal form label sizing
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                                            <div class="col-sm-10">
+                                                <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                                            <div class="col-sm-10">
+                                                <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                                            <div class="col-sm-10">
+                                                <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Column sizing
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-7">
+                                                <input type="text" class="form-control" placeholder="City">
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="State">
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Zip">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Disabled forms
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p>Add the
+                                        <code class="highlighter-rouge">disabled</code> boolean attribute on an input to prevent user interactions and make
+                                        it appear lighter.</p>
+                                    <form>
+                                        <fieldset disabled>
+                                            <div class="form-group">
+                                                <label for="disabledTextInput">Disabled input</label>
+                                                <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="disabledSelect">Disabled select menu</label>
+                                                <select id="disabledSelect" class="form-control">
+                                                    <option>Disabled select</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox"> Can't check this
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Custom styles
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form class="container" id="needs-validation" novalidate>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="validationCustom01">First name</label>
+                                                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="validationCustom02">Last name</label>
+                                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="validationCustom03">City</label>
+                                                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid city.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationCustom04">State</label>
+                                                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid state.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationCustom05">Zip</label>
+                                                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid zip.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary" type="submit">Submit form</button>
+                                    </form>
+                                    <script>
+                                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                        (function () {
+                                            'use strict';
+                                            window.addEventListener('load', function () {
+                                                var form = document.getElementById('needs-validation');
+                                                form.addEventListener('submit', function (event) {
+                                                    if (form.checkValidity() === false) {
+                                                        event.preventDefault();
+                                                        event.stopPropagation();
+                                                    }
+                                                    form.classList.add('was-validated');
+                                                }, false);
+                                            }, false);
+                                        })();
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Custom forms Elements
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="mt-3">File browser</h6>
+                                    <label class="custom-file">
+                                        <input type="file" id="file2" class="custom-file-input">
+                                        <span class="custom-file-control"></span>
+                                    </label>
+                                    <h6 class="mt-3">Select menu</h6>
+                                    <select class="custom-select">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <h6 class="mt-3">Checkboxes</h6>
+                                    <label class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">Check this custom checkbox</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">Check this custom checkbox</span>
+                                    </label>
+                                    <h6 class="mt-3">Radios</h6>
+                                    <label class="custom-control custom-radio">
+                                        <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">Toggle this custom radio</span>
+                                    </label>
+                                    <label class="custom-control custom-radio">
+                                        <input id="radio2" name="radio" type="radio" class="custom-control-input">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">Or toggle this other custom radio</span>
+                                    </label>
+                                    <h6 class="mt-3">Disabled</h6>
+                                    <label class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" disabled>
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">Check this custom checkbox</span>
+                                    </label>
+                                    <label class="custom-control custom-radio">
+                                        <input id="radio3" name="radioDisabled" type="radio" class="custom-control-input" disabled>
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">Toggle this custom radio</span>
+                                    </label>
+                                    <h6 class="mt-3">Stacked</h6>
+                                    <div class="custom-controls-stacked">
+                                        <label class="custom-control custom-radio">
+                                            <input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Toggle this custom radio</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Or toggle this other custom radio</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Supported elements
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form class="was-validated">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" required>
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Check this custom checkbox</span>
+                                        </label>
+                                        <div class="custom-controls-stacked d-block my-3">
+                                            <label class="custom-control custom-radio">
+                                                <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input" required>
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Toggle this custom radio</span>
+                                            </label>
+                                            <label class="custom-control custom-radio">
+                                                <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input" required>
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Or toggle this other custom radio</span>
+                                            </label>
+                                        </div>
+                                        <select class="custom-select d-block my-3" required>
+                                            <option value="">Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <label class="custom-file">
+                                            <input type="file" id="file" class="custom-file-input" required>
+                                            <span class="custom-file-control"></span>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- state end-->
+                </div>
+
+            </main>
+            <!--main contents end-->
+
+        </div>
+        <!-- Content_right_End -->
+        <!-- Footer -->
+        <footer class="footer ptb-20">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="copy_right">
+                        <p>
+                            2018 © Dashboard Theme By
+                            
+                        </p>
+                    </div>
+                    <a id="back-to-top" href="#">
+                        <i class="ion-android-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer_End -->
+    </div>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/custom.js" type="text/javascript"></script>
+</body>
+
+</html>

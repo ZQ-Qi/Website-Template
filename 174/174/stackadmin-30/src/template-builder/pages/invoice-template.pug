@@ -1,0 +1,28 @@
+//- =========================================================================================
+	File Name: invoice-template.jade
+	Description: Invoice Template
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================-//
+
+extends template
+
+block pageVars
+	- var pageTitle    = "Invoice Template"
+	- var pageSubTitle = "Invoice template."
+	//- var description  = ""
+	- var activeMenu   = "invoice-template"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Invoice"}, {name:"Invoice Template"}])//- Include page content in page block
+append content
+	include ../contents/invoice-template.html
+
+//- Page CSS
+//------------------------------
+//- Add page specific CSS
+append pagecss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/pages/invoice.css')

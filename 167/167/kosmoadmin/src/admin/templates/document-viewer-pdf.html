@@ -1,0 +1,164 @@
+@@include('./_partials/header_start.html')
+    <link rel="stylesheet" type="text/css" href="assets/styles/apps/document-viewer.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container modal-open">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Document Pdf Viewer</h3>
+            </section>
+        </div>
+        <div class="ks-page-content d-flex justify-content-center align-items-center">
+            <div class="ks-page-content-body d-flex">
+                <a href="document-viewer-pdf.html" class="btn btn-primary btn-lg">Open Pdf Document Viewer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ks-document-viewer fade in modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <span class="ks-modal-title-icon la la-file-pdf-o ks-color-danger"></span>
+                    file.pdf
+                </h5>
+                <div class="ks-controls">
+                    <div class="btn-group ks-zoom">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <button class="btn btn-outline-primary ks-light ks-no-text" type="button">
+                                    <span class="la la-search-plus icon"></span>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" value="100%">
+                            <span class="input-group-append">
+                                <button class="btn btn-outline-primary ks-light ks-no-text" type="button">
+                                    <span class="la la-search-minus icon"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn-group ks-page-controls">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <button class="btn btn-outline-primary ks-light ks-no-text" type="button">
+                                    <span class="la la-long-arrow-left icon"></span>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" value="1">
+                            <span class="input-group-append">
+                                <button class="btn btn-outline-primary ks-light ks-no-text" type="button">
+                                    <span class="la la-long-arrow-right icon"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-primary ks-light ks-download">
+                        <span class="la la-download ks-icon"></span>
+                        <span class="ks-text">Download</span>
+                    </button>
+                    <button class="btn btn-outline-primary ks-light ks-no-text ks-print"><span class="la la-print ks-icon"></span></button>
+                    <button class="btn btn-outline-primary ks-light ks-no-text ks-remove"><span class="la la-trash-o ks-icon"></span></button>
+                    <button class="btn btn-outline-primary ks-light ks-no-text ks-view-toggle"><span class="la la-expand ks-icon"></span></button>
+                </div>
+                <div class="ks-extra-controls">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="la la-close"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body ks-document">
+                <div class="ks-thumbs ks-scrollable">
+                    <ul>
+                        <li class="ks-page ks-active ks-portrait">
+                            <a href="#" class="ks-page-thumb">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">1</span>
+                        </li>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-page-thumb">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">2</span>
+                        </li>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-page-thumb">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">3</span>
+                        </li>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-page-thumb">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">4</span>
+                        </li>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-page-thumb">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">5</span>
+                        </li>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-page-thumb">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">6</span>
+                        </li>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-page-thumb">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">8</span>
+                        </li>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-page-thumb">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">9</span>
+                        </li>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-page-thumb">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">10</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ks-pages ks-scrollable">
+                    <ul>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-full-page">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">1</span>
+                        </li>
+                        <li class="ks-page ks-portrait">
+                            <a href="#" class="ks-full-page">
+                                <img>
+                            </a>
+                            <span class="ks-page-number">2</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+@@include('./_partials/scripts.html')
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        $('.ks-document-viewer').modal('show');
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

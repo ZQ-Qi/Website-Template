@@ -1,0 +1,389 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/widgets/panels.min.css">
+<link rel="stylesheet" type="text/css" href="assets/styles/dashboard/activity.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Widgets &amp; Activity Dashboard</h3>
+
+                <button class="btn btn-outline-primary ks-light ks-activity-block-toggle" data-block-toggle=".ks-activity-dashboard > .ks-activity">Activity</button>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-activity-dashboard">
+                <div class="ks-widgets ks-rows-section">
+                    <div class="row ks-amount-widgets-collection">
+                        <div class="col-lg-3">
+                            <div class="ks-widget ks-widget-simple-solid-amount ks-primary">
+                                <span class="ks-amount">24</span>
+                                <span class="ks-description">New ticket awaiting your review</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="ks-widget ks-widget-simple-solid-amount ks-info">
+                                <span class="ks-amount">330</span>
+                                <span class="ks-description">Ticket scheduled for today</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="ks-widget ks-widget-simple-solid-amount ks-success">
+                                <span class="ks-amount">15</span>
+                                <span class="ks-description">Total tickets open in all properties</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="ks-widget ks-widget-simple-solid-amount ks-danger">
+                                <span class="ks-amount">11</span>
+                                <span class="ks-description">Total tickets open in all properties</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ks-widgets-collection">
+                        <div class="col-xl-6 ks-panels-column-section">
+                            <div class="card panel panel-default ks-widget ks-widget-progress-list">
+                                <div class="card-header">
+                                    Property checklists
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                    </div>
+                                </div>
+                                <div class="card-block">
+                                    <div class="ks-item">
+                                        <div class="ks-info">
+                                            <div class="ks-wrapper">
+                                                <span class="ks-header">Quayside apartment</span>
+                                                <span class="ks-description">4/12 items input</span>
+                                            </div>
+                                            <span class="ks-percent">35%</span>
+                                        </div>
+                                        <div class="progress ks-progress-sm">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ks-item">
+                                        <div class="ks-info">
+                                            <div class="ks-wrapper">
+                                                <span class="ks-header">Gateshead studio</span>
+                                                <span class="ks-description">8/12 items input</span>
+                                            </div>
+                                            <span class="ks-percent">50%</span>
+                                        </div>
+                                        <div class="progress ks-progress-sm">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ks-item">
+                                        <div class="ks-info">
+                                            <div class="ks-wrapper">
+                                                <span class="ks-header">Newcastle townhouse</span>
+                                                <span class="ks-description">10/12 items input</span>
+                                            </div>
+                                            <span class="ks-percent">75%</span>
+                                        </div>
+
+                                        <div class="progress ks-progress-sm">
+                                            <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card panel panel-default ks-widget ks-widget-leader-board">
+                                <div class="card-header">
+                                    Leader board
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                    </div>
+                                </div>
+                                <div class="card-block ks-scrollable" data-height="270">
+                                    <table class="ks-table">
+                                        <tbody>
+                                        <tr class="ks-first-place">
+                                            <td class="ks-user">
+                                                <img src="assets/img/avatars/avatar-11.jpg" class="ks-avatar" width="55" height="55">
+                                                <span class="badge badge-pill badge-default ks-label"><span>1</span></span>
+                                            </td>
+                                            <td class="ks-info">
+                                                <a href="#" class="ks-name">Anna Vlasova</a>
+                                                <div class="ks-description">@anna</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="ks-second-place">
+                                            <td class="ks-user">
+                                                <img src="assets/img/avatars/avatar-1.jpg" class="ks-avatar" width="55" height="55">
+                                                <span class="badge badge-pill badge-default ks-label"><span>2</span></span>
+                                            </td>
+                                            <td class="ks-info">
+                                                <a href="#" class="ks-name">Anna Vlasova</a>
+                                                <div class="ks-description">@anna</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="ks-third-place">
+                                            <td class="ks-user">
+                                                <img src="assets/img/avatars/avatar-2.jpg" class="ks-avatar" width="55" height="55">
+                                                <span class="badge badge-pill badge-default ks-label"><span>3</span></span>
+                                            </td>
+                                            <td class="ks-info">
+                                                <a href="#" class="ks-name">Anna Vlasova</a>
+                                                <div class="ks-description">@anna</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ks-user">
+                                                <img src="assets/img/avatars/avatar-3.jpg" class="ks-avatar" width="55" height="55">
+                                                <span class="badge badge-pill badge-default ks-label"><span>4</span></span>
+                                            </td>
+                                            <td class="ks-info">
+                                                <a href="#" class="ks-name">Anna Vlasova</a>
+                                                <div class="ks-description">@anna</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ks-user">
+                                                <img src="assets/img/avatars/placeholders/ava-64.png" class="ks-avatar" width="55" height="55">
+                                                <span class="badge badge-pill badge-default ks-label"><span>5</span></span>
+                                            </td>
+                                            <td class="ks-info">
+                                                <a href="#" class="ks-name">Anna Vlasova</a>
+                                                <div class="ks-description">@anna</div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 ks-panels-column-section">
+                            <div class="card panel panel-default ks-widget ks-widget-events-stream">
+                                <div class="card-header">
+                                    Team Stream
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                    </div>
+                                </div>
+                                <div class="card-block">
+                                    <div class="ks-wrapper ks-scrollable" data-height="270">
+                                        <table class="ks-table">
+                                            <tbody>
+                                            <tr>
+                                                <td class="ks-user">
+                                                    <img src="assets/img/avatars/avatar-11.jpg" class="ks-avatar" width="55" height="55">
+                                                    <span class="badge badge-pill badge-default ks-label">10</span>
+                                                </td>
+                                                <td class="ks-info">
+                                                    <a href="#" class="ks-name">Anna Vlasova</a>
+                                                    <div class="ks-description">Completed SparqWork «Introduction to WildSparq»</div>
+                                                    <span class="badge badge-primary-outline ks-label ks-sm">Primary</span>
+                                                </td>
+                                                <td class="ks-datetime">
+                                                    24 min ago
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ks-user">
+                                                    <img src="assets/img/avatars/avatar-6.jpg" class="ks-avatar" width="55" height="55">
+                                                </td>
+                                                <td class="ks-info">
+                                                    <a href="#" class="ks-name">Anna Vlasova <span class="badge badge-default ks-label ks-sm">Admin</span></a>
+                                                    <div class="ks-description">Added 2 new members to team: Leap Logic Creative. Welcome <a href="#">Igor Kulikov</a> and <a href="#">Alex Frolov</a>.</div>
+                                                </td>
+                                                <td class="ks-datetime">
+                                                    24 min ago
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ks-user">
+                                                    <img src="assets/img/avatars/avatar-3.jpg" class="ks-avatar" width="55" height="55">
+                                                </td>
+                                                <td class="ks-info">
+                                                    <a href="#" class="ks-name">Anna Vlasova <span class="badge badge-default ks-label ks-sm">Team Lead</span></a>
+                                                    <div class="ks-description">Added 2 new members to team: Leap Logic Creative. Welcome <a href="#">Igor Kulikov</a> and <a href="#">Alex Frolov</a>.</div>
+                                                </td>
+                                                <td class="ks-datetime">
+                                                    24 min ago
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card panel panel-default ks-simple ks-widget-simple-offer">
+                                <a href="#" class="ks-close">
+                                    <span class="la la-close"></span>
+                                </a>
+                                <div class="card-block">
+                                    <a href="#" class="ks-item">
+                                        <div class="ks-preview">
+                                            <span class="ks-video-preview">
+                                                <span class="la la-play ks-icon"></span>
+                                            </span>
+                                        </div>
+                                        <div class="ks-info">
+                                            <h5 class="ks-header">New to WildSparq?</h5>
+                                            <span class="ks-text">
+                                                Offer to pay back part of the purchase price of a product to customers who send a «Proof of purchase» to the manufacturer
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ks-activity">
+                    <div class="ks-activity-items">
+                        <h4 class="ks-header">Today</h4>
+
+                        <div class="ks-container">
+                            <div class="ks-item">
+                                <span class="ks-icon ks-danger">
+                                    <span class="la la-ban"></span>
+                                </span>
+                                <div class="ks-wrapper">
+                                    <div class="ks-action">
+                                        <a href="#" class="ks-name">Anna Vlasova</a>
+                                        <span class="ks-description">banned</span>
+                                    </div>
+                                    <span class="ks-datetime">6:37 pm</span>
+                                </div>
+                            </div>
+                            <div class="ks-item">
+                                <span class="ks-icon ks-primary">
+                                    <span class="la la-share"></span>
+                                </span>
+                                <div class="ks-wrapper">
+                                    <div class="ks-action">
+                                        <a href="#" class="ks-name">Anna Vlasova</a>
+                                        <span class="ks-description">share the link</span>
+                                    </div>
+                                    <span class="ks-datetime">6:37 pm</span>
+                                    <a href="#" class="ks-target ks-share-link">
+                                        <span class="ks-name">The Verge</span>
+                                        <span class="ks-link">http://www.theverge.com</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ks-item">
+                                <span class="ks-icon ks-danger">
+                                    <span class="la la-trash"></span>
+                                </span>
+                                <div class="ks-wrapper">
+                                    <div class="ks-action">
+                                        <a href="#" class="ks-name">Anna Vlasova</a>
+                                        <span class="ks-description">removed the post</span>
+                                    </div>
+                                    <a href="#" class="ks-target ks-link">Sample Post</a>
+                                    <span class="ks-datetime">6:37 pm</span>
+                                </div>
+                            </div>
+                            <div class="ks-item">
+                                <span class="ks-icon">
+                                    <span class="la la-thumbs-o-up"></span>
+                                </span>
+                                <div class="ks-wrapper">
+                                    <div class="ks-action">
+                                        <a href="#" class="ks-name">Anna Vlasova</a>
+                                        <span class="ks-description">liked the post</span>
+                                    </div>
+                                    <a href="#" class="ks-target ks-link">Sample Post</a>
+                                    <span class="ks-datetime">6:37 pm</span>
+                                </div>
+                            </div>
+                            <div class="ks-item">
+                                <span class="ks-icon">
+                                    <span class="la la-comment-o"></span>
+                                </span>
+                                <div class="ks-wrapper">
+                                    <div class="ks-action">
+                                        <a href="#" class="ks-name">Anna Vlasova</a>
+                                        <span class="ks-description">leave a comment to</span>
+                                    </div>
+                                    <a href="#" class="ks-target ks-link">Sample Post</a>
+                                    <span class="ks-datetime">6:37 pm</span>
+                                    <a href="#" class="ks-target ks-comment">
+                                        It had to end sometime. Apple’s incredible growth that saw the company report record quarterly earnings over a span of 13 years was untenable. Any one company would be thrilled by the success brought by the Apple II, the Mac, the iPod, the iPhone, or even the iPad.
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ks-item">
+                                <span class="ks-icon">
+                                    <span class="la la-file-picture-o"></span>
+                                </span>
+                                <div class="ks-wrapper">
+                                    <div class="ks-action">
+                                        <a href="#" class="ks-name">Anna Vlasova</a>
+                                        <span class="ks-description">uploaded 1 image</span>
+                                    </div>
+                                    <span class="ks-datetime">6:37 pm</span>
+                                    <a href="#" class="ks-target ks-image">
+                                       <img src="assets/img/coconut.jpg" width="199" height="145">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ks-item">
+                                <span class="ks-icon">
+                                    <span class="la la-file-picture-o"></span>
+                                </span>
+                                <div class="ks-wrapper">
+                                    <div class="ks-action">
+                                        <a href="#" class="ks-name">Anna Vlasova</a>
+                                        <span class="ks-description">uploaded images</span>
+                                    </div>
+                                    <span class="ks-datetime">6:37 pm</span>
+                                    <div href="#" class="ks-target ks-images">
+                                        <a href="#" class="ks-image">
+                                            <img src="assets/img/thumbs/ph-2.png" width="95" height="95">
+                                        </a>
+                                        <a href="#" class="ks-image">
+                                            <img src="assets/img/thumbs/ph-3.png" width="95" height="95">
+                                        </a>
+                                        <a href="#" class="ks-image">
+                                            <img src="assets/img/thumbs/ph-4.png" width="95" height="95">
+                                        </a>
+                                        <a href="#" class="ks-image">
+                                            <img src="assets/img/thumbs/ph-5.png" width="95" height="95">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ks-item">
+                                <span class="ks-icon ks-info">
+                                    <span class="la la-pencil"></span>
+                                </span>
+                                <div class="ks-wrapper">
+                                    <div class="ks-action">
+                                        <a href="#" class="ks-name">Anna Vlasova</a>
+                                        <span class="ks-description">edited the post</span>
+                                    </div>
+                                    <a href="#" class="ks-target ks-link">Sample Post</a>
+                                    <span class="ks-datetime">6:37 pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        if (Response.band(0, 780) || Response.wave(0, 790)) {
+            Kosmo.makeScrollable('.ks-activity-dashboard > .ks-activity');
+        }
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

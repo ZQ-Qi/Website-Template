@@ -1,0 +1,255 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Payment Dashboard / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Payment Dashboard</h2>
+      <div class="page-content__header-description">Welcome to Payment Dashboard</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="widget widget-remaining-time">
+        <h3 class="widget-remaining-time__heading">Good Evening, Eleonora!</h3>
+        <div class="widget-remaining-time__block">
+          <span class="widget-remaining-time__block-text">
+            Last login 10/10/17 • 02:29 AM
+          </span>
+        </div>
+      </div>
+
+      <div class="widget widget-payment-account">
+        <div class="widget-payment-account__item">
+          <span class="widget-payment-account__heading">Type</span>
+          <span class="widget-payment-account__value">USD Account</span>
+        </div>
+        <div class="widget-payment-account__item">
+          <span class="widget-payment-account__heading">Account number</span>
+          <span class="widget-payment-account__value">265-12345678-89</span>
+        </div>
+        <div class="widget-payment-account__item">
+          <span class="widget-payment-account__heading color-danger">Reserved</span>
+          <span class="widget-payment-account__value">$5,845.23</span>
+        </div>
+        <div class="widget-payment-account__item">
+          <span class="widget-payment-account__heading color-success">Available</span>
+          <span class="widget-payment-account__value">$15,645.32</span>
+        </div>
+        <div class="widget-payment-account__item widget-payment-account__item-card">
+          <img src="img/visa.png" alt="">
+        </div>
+      </div>
+
+      <div class="widget widget-payment-account">
+        <div class="widget-payment-account__item">
+          <span class="widget-payment-account__heading">Type</span>
+          <span class="widget-payment-account__value">EUR Account</span>
+        </div>
+        <div class="widget-payment-account__item">
+          <span class="widget-payment-account__heading">Account number</span>
+          <span class="widget-payment-account__value">265-12345678-89</span>
+        </div>
+        <div class="widget-payment-account__item">
+          <span class="widget-payment-account__heading color-danger">Reserved</span>
+          <span class="widget-payment-account__value">$0</span>
+        </div>
+        <div class="widget-payment-account__item">
+          <span class="widget-payment-account__heading color-success">Available</span>
+          <span class="widget-payment-account__value">€5,000.00</span>
+        </div>
+        <div class="widget-payment-account__item widget-payment-account__item-card">
+          <img src="img/mastercard.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="widget widget-payment-balance">
+        <div class="widget-controls__header">
+          <div>
+            Balance
+          </div>
+          <div class="widget-controls__header-controls">
+            <span class="widget-controls__header-control ua-icon-settings"></span>
+          </div>
+        </div>
+        <div class="widget-controls__content">
+          <div class="widget-payment-balance__item">
+            <span class="widget-payment-balance__item-heading color-success">Available</span>
+            <span class="widget-payment-balance__item-value">$15,645.32</span>
+          </div>
+          <div class="widget-payment-balance__item">
+            <span class="widget-payment-balance__item-heading color-danger">Reserved</span>
+            <span class="widget-payment-balance__item-value">$5,845.23</span>
+          </div>
+          <div class="d-flex justify-content-end">
+            <a href="#" class="btn btn-info">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="widget widget-payment-cards">
+        <div class="widget-controls__header">
+          <div>
+            Cards
+          </div>
+          <div class="widget-controls__header-controls">
+            <span class="widget-controls__header-control ua-icon-settings"></span>
+          </div>
+        </div>
+        <div class="widget-controls__content">
+          <div class="widget-payment-cards__item">
+            <span class="widget-payment-cards__type">Visa Electron</span>
+            <span class="widget-payment-cards__number">
+              <span>**** **** **** 1164</span>
+              <img src="img/visa.png" alt="">
+            </span>
+            <span class="widget-payment-cards__expiration-date">Valid thew 08/21</span>
+          </div>
+          <div class="widget-payment-cards__item">
+            <span class="widget-payment-cards__type">Master Card Debt</span>
+            <span class="widget-payment-cards__number">
+              <span>**** **** **** 9393</span>
+              <img src="img/mastercard.png" alt="">
+            </span>
+            <span class="widget-payment-cards__expiration-date">Valid thew 05/20</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="widget widget-payment-scheduled">
+        <div class="widget-controls__header">
+          <div>
+            Scheduled Payment
+          </div>
+          <div class="widget-controls__header-controls">
+            <span class="widget-controls__header-control ua-icon-settings"></span>
+          </div>
+        </div>
+        <div class="widget-controls__content">
+          <div class="widget-payment-scheduled__item">
+            <img src="img/payment-dashboard/1.png" alt="" class="widget-payment-scheduled__image">
+            <div class="widget-payment-scheduled__info">
+              <span class="widget-payment-scheduled__info-name">Mts</span>
+              <span class="widget-payment-scheduled__info-desc">Telecommunications Bill</span>
+            </div>
+            <span class="widget-payment-scheduled__date">10/21/17</span>
+          </div>
+          <div class="widget-payment-scheduled__amount"><span>$</span>21.65</div>
+          <div class="d-flex justify-content-end">
+            <a href="#" class="btn btn-info">Pay Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="widget widget-payment-balance-table">
+        <div class="widget-controls__header widget-controls__header--bordered">
+          <div>
+            Balance
+          </div>
+          <div class="widget-controls__header-controls">
+            <span class="widget-controls__header-control ua-icon-settings"></span>
+          </div>
+        </div>
+        <div class="widget-controls__content">
+          <table class="widget-payment-balance-table__table">
+            <tr>
+              <td>
+                <img src="img/payment-dashboard/2.png" alt="">
+              </td>
+              <td>Amazon</td>
+              <td><span class="text-bold">$34.13</span></td>
+              <td><span>10/11/17</span></td>
+              <td><img src="img/visa.png" alt=""></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/payment-dashboard/3.png" alt="">
+              </td>
+              <td>Adidas</td>
+              <td><span class="text-bold">$134.01</span></td>
+              <td><span>10/11/17</span></td>
+              <td><img src="img/mastercard.png" alt=""></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/payment-dashboard/4.png" alt="">
+              </td>
+              <td>Telenor</td>
+              <td><span class="text-bold">$5.95</span></td>
+              <td><span>10/11/17</span></td>
+              <td><img src="img/visa.png" alt=""></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="widget widget-payment-templates">
+        <div class="widget-controls__header widget-controls__header--bordered">
+          <div>
+            Templates
+          </div>
+          <div class="widget-controls__header-controls">
+            <span class="widget-controls__header-control ua-icon-settings"></span>
+          </div>
+        </div>
+        <div class="widget-controls__content">
+          <table class="widget-payment-templates__table">
+            <tr>
+              <td>
+                <img src="img/users/user-1.jpg" alt="" class="widget-payment-templates__image rounded-circle">
+              </td>
+              <td>University</td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-pencil"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/users/user-8.png" alt="" class="widget-payment-templates__image rounded-circle">
+              </td>
+              <td>City Library</td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-pencil"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/users/user-9.png" alt="" class="widget-payment-templates__image rounded-circle">
+              </td>
+              <td>Parents</td>
+              <td class="table__cell-actions">
+                <div class="table__cell-actions-wrap">
+                  <a href="#" class="table__cell-actions-item table__cell-actions-icon">
+                    <span class="ua-icon-pencil"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

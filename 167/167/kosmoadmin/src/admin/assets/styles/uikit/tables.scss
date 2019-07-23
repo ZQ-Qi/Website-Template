@@ -1,0 +1,451 @@
+@import "../config/colors";
+
+/* BEGIN UIKIT TABLES */
+.table {
+  td {
+    &.ks-checkbox {
+      text-align: center;
+      padding: 0 0 0 16px;
+
+      > .custom-checkbox {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        padding: 0;
+        top: 1px;
+      }
+    }
+  }
+
+  // Responsive
+  &.ks-no-main-row {
+    .st-head-row  {
+      &.st-head-row-main {
+        display: none;
+      }
+    }
+  }
+
+  thead th {
+    border-bottom: 1px solid $ks-default-border-color;
+    color: #333333;
+    font-size: 13px;
+  }
+
+  td, th {
+    border-top: 1px solid $ks-default-border-color;
+    padding: 11px 20px;
+  }
+
+  td {
+    color: #333;
+    font-size: 13px;
+
+    .table-cell-header {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      color: #858585;
+    }
+
+    &.text-light, .ks-text-light {
+      color: #858585;
+    }
+  }
+
+  .thead-default, .ks-thead-default, .ks-table-row-separator {
+    td, th {
+      background-color: #ebeef5;
+    }
+  }
+
+  &.text-light, &.ks-text-light {
+    td {
+      color: #858585;
+    }
+  }
+
+  .dl-horizontal {
+    margin-left: -0.900rem;
+    margin-right: -0.900rem;
+  }
+
+  &.table-hover {
+    tr:hover td {
+      background: #f5f6fa;
+    }
+  }
+
+  .checkbox-cell {
+    padding: 10px 15px;
+    vertical-align: top;
+
+    > .custom-control {
+      padding-left: 16px;
+      margin: 0;
+    }
+  }
+
+  .table-cell-block, .ks-table-cell-block {
+    overflow: hidden;
+    height: auto;
+    vertical-align: middle;
+
+    &.image, &.ks-image {
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    .image-block-container,
+    .text-block-container,
+    .status-block-container,
+    .progress-text-container,
+    .progress-block-container {
+      float: left;
+      vertical-align: middle;
+    }
+
+    .ks-image-block-container,
+    .ks-text-block-container,
+    .ks-status-block-container,
+    .ks-progress-text-container,
+    .ks-progress-block-container {
+      float: left;
+      vertical-align: middle;
+    }
+
+    .image-block-container, .ks-image-block-container {
+      margin-right: 12px;
+    }
+
+    .progress-block-container, .ks-progress-block-container {
+      width: 80px;
+
+      .progress {
+        margin-top: 4px;
+        margin-bottom: 0;
+      }
+    }
+
+    .progress-text-container {
+      margin-right: 14px;
+      vertical-align: middle;
+    }
+
+    .status-block-container, .ks-status-block-container {
+      .status-block, .ks-status-block {
+        vertical-align: middle;
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        margin-top: -2px;
+        margin-right: 7px;
+
+        &.status-block-info, &.ks-status-block-info {
+          border-color: $ks-color-info;
+        }
+
+        &.status-block-success, &.ks-status-block-success {
+          border-color: $ks-color-success;
+        }
+
+        &.status-block-pink, &.ks-status-block-pink {
+          border-color: #d149d0;
+        }
+      }
+    }
+
+    &.block-danger, &.ks-block-danger {
+      vertical-align: middle;
+      padding: 9px;
+      display: inline-block;
+      border-radius: 2px;
+      background-color: #fdf0ed;
+
+      .text-block-sub-text, .ks-text-block-sub-text {
+        color: $ks-color-danger;
+      }
+    }
+  }
+
+  .text-block-container, .ks-text-block-container {
+    vertical-align: middle;
+
+    .text-block-sub-text, .ks-text-block-sub-text {
+      vertical-align: middle;
+      font-size: 11px;
+      color: #858585;
+    }
+  }
+
+  .table-actions {
+    width: 43px;
+    padding: 0;
+
+    .btn-link {
+      color: #8897c3;
+      font-size: 18px;
+      padding: 0;
+      margin: 0;
+      display: block;
+    }
+
+    .dropdown {
+      &.open {
+        .btn-link {
+          color: $ks-default-text-color;
+        }
+
+        .dropdown-menu {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      font-size: 12px;
+      padding: 0;
+      border: solid 1px #c4cbe1;
+      margin: 4px 0;
+      border-radius: 2px;
+
+      .dropdown-item {
+        color: #474747;
+        padding: 10px 15px;
+        margin: 0;
+        border-bottom: 1px solid #c4cbe1;
+
+        &:hover {
+          background-color: #ebeef5;
+          color: $ks-default-text-color;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .icon, .ks-icon {
+          font-size: 16px;
+          display: inline-block;
+          margin-right: 4px;
+          position: relative;
+          top: 1px;
+        }
+      }
+
+      .dropdown-divider {
+        display: none;
+      }
+    }
+  }
+
+  .row-checked {
+    th, td {
+      background-color: rgba(57, 81, 155, 0.05);
+    }
+  }
+
+  &.vertical-align-middle, &.ks-cells-vertical-align-middle {
+    th, td {
+      vertical-align: middle;
+    }
+  }
+
+  &.table-sm, &.ks-tbale-sm {
+    th, td {
+      padding: 7px 20px;
+    }
+  }
+}
+
+.table-bordered {
+  border: 1px solid $ks-default-border-color;
+
+  td, th {
+    border: 1px solid $ks-default-border-color;
+  }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f5f6fa;
+}
+
+.card {
+  &.panel-table, &.ks-panel-table {
+    .card-block {
+      padding: 0;
+
+      .table {
+        margin-bottom: 0;
+
+        thead {
+          th {
+            border-top: none;
+          }
+        }
+      }
+
+      .table {
+        tr:first-child {
+          td, th {
+            border-top: none;
+          }
+        }
+      }
+
+      .table-bordered {
+        border: none;
+
+        thead {
+          tr:last-child {
+            th, td {
+              border-bottom: 1px solid $ks-default-border-color;
+            }
+          }
+        }
+
+        tr:first-child {
+          td, th {
+            border-top: none;
+          }
+        }
+
+        td:first-child, th:first-child {
+          border-left: none;
+        }
+
+        td:last-child, th:last-child {
+          border-right: none;
+        }
+
+        tr:last-child {
+          td, th {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-log-table {
+  > .ks-header {
+    font-weight: normal;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.ks-xs {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    a {
+      font-size: 14px;
+    }
+  }
+
+  > .table {
+    thead {
+      th {
+        background-color: #f5f6fa;
+      }
+    }
+
+    td, th {
+      border: none;
+    }
+
+    td {
+      padding: 15px 20px;
+    }
+
+    .ks-icon {
+      font-size: 19px;
+      display: inline-block;
+      margin-left: 2px;
+      position: relative;
+      top: 2px;
+    }
+
+    .ks-download {
+      width: 140px;
+    }
+  }
+}
+
+.ks-table-info {
+  tr {
+    td {
+      vertical-align: middle;
+      padding-bottom: 10px;
+    }
+
+    &:last-child {
+      td {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .ks-icon {
+    font-size: 16px;
+    width: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.ks-table-details {
+  width: 100%;
+
+  td {
+    width: 50%;
+    padding-bottom: 20px;
+
+    > .ks-header {
+      font-size: 10px;
+      font-weight: 500;
+      color: $ks-default-text-color-light;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    > .ks-body {
+      > .ks-icon {
+        font-size: 16px;
+        display: inline-block;
+        margin-right: 4px;
+      }
+
+      .btn {
+        margin-top: 10px;
+      }
+
+      .ks-user {
+        color: $ks-default-text-color;
+
+        > .ks-avatar {
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.ks-table-cells-vertical-align-middle {
+  td {
+    vertical-align: middle;
+  }
+}
+/* END UIKIT TABLES */

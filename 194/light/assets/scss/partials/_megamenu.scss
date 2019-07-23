@@ -1,0 +1,44 @@
+﻿.mega_menubar{
+    @include box-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+    @extend .p-t-20;
+    background: $col-white;
+    position: fixed;
+    top: -1140px;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+
+    &.open{
+        top: 61px;
+    }
+
+    .card{
+        .header,
+        .body{
+            padding: 10px;
+        }
+    }
+
+    .links{
+        @extend .padding-0;
+        @extend .margin-0;
+        li{
+            a{
+                color: $grey-600;
+                @extend .displayblock;
+                padding: 5px 0 5px 15px;
+                position: relative;                
+
+                &:hover{
+                    color: $color-info;
+                }
+
+                &::before{
+                    position: absolute;
+                    left: 0;
+                    content: '--';                    
+                }
+            }
+        }
+    }
+}

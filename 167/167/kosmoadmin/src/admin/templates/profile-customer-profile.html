@@ -1,0 +1,820 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/datatables-net/media/css/dataTables.bootstrap4.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/datatables-net/datatables.min.css"> <!-- customization -->
+<link rel="stylesheet" type="text/css" href="libs/swiper/css/swiper.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/widgets/tables.min.css">
+<link rel="stylesheet" type="text/css" href="assets/styles/profile/customer.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Customer Profile</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-profile">
+                <div class="ks-header">
+                    <div class="ks-user">
+                        <img src="assets/img/avatars/ava-1.png" class="ks-avatar" width="100" height="100">
+                        <div class="ks-info">
+                            <div class="ks-name">Karen Lucas</div>
+                            <div class="ks-description">New York, USA</div>
+                            <div class="ks-rating">
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star ks-star" aria-hidden="true"></i>
+                                <i class="la la-star-half-o ks-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ks-statistics">
+                        <div class="ks-item">
+                            <div class="ks-amount">869</div>
+                            <div class="ks-text">orders</div>
+                        </div>
+                        <div class="ks-item">
+                            <div class="ks-amount">131</div>
+                            <div class="ks-text">reviews</div>
+                        </div>
+                        <div class="ks-item">
+                            <div class="ks-amount">$3,004</div>
+                            <div class="ks-text">rewand points</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ks-tabs-container ks-tabs-default ks-tabs-no-separator ks-full ks-light">
+                    <ul class="nav ks-nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#overview" aria-expanded="true">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#contacts" aria-expanded="false">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#orders" aria-expanded="false">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#wish-list" aria-expanded="false">Wish list</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#storecredit" aria-expanded="false">Store credit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#returns" aria-expanded="false">Returns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#reward-points" aria-expanded="false">Reward points</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#settings" aria-expanded="false">Settings</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="overview" role="tabpanel" aria-expanded="false">
+                            <div class="ks-overview-tab">
+                                <div class="row">
+                                    <div class="col-xl-9 ks-tables-container">
+                                        <div class="card panel panel-default ks-information ks-light">
+                                            <h5 class="card-header">
+                                                <span class="ks-text">Sales</span>
+                                                <a href="#" class="btn btn-outline-primary ks-light">New Product</a>
+                                            </h5>
+                                            <div class="card-block ks-datatable">
+                                                <table id="ks-sales-datatable" class="table table-bordered" style="width:100%" width="100%">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Reference</th>
+                                                        <th>Date</th>
+                                                        <th>Assigned To</th>
+                                                        <th>Status</th>
+                                                        <th>&nbsp;</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-3.png" width="24" height="24">
+                                                                <span class="ks-name">Ian Potter</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge ks-circle badge-info">Quotes in progress</span>
+                                                        </td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-2.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-warning">New</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-4.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-danger">Error</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-1.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-success">Completed</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-4.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-danger">Error</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-1.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-success">Completed</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-4.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-danger">Error</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-1.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-success">Completed</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-4.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-danger">Error</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-1.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-success">Completed</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-4.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-danger">Error</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-1.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-success">Completed</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-4.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-danger">Error</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-1.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-success">Completed</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-4.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-danger">Error</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-1.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-success">Completed</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-4.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-danger">Error</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">E00673</a>
+                                                        </td>
+                                                        <td>14 Sep, 2016</td>
+                                                        <td>
+                                                            <div class="ks-user">
+                                                                <img class="ks-avatar" src="assets/img/avatars/ava-1.png" width="24" height="24">
+                                                                <span class="ks-name">Brent Dean</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge ks-circle badge-success">Completed</span></td>
+                                                        <td class="ks-controls">
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="la la-ellipsis-h"></span>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="card panel panel-default ks-information ks-light">
+                                            <h5 class="card-header">
+                                                <span class="ks-text">Recommended Products</span>
+                                            </h5>
+                                            <div class="card-block ks-slider">
+                                                <div class="swiper-container">
+                                                    <!-- Additional required wrapper -->
+                                                    <div class="swiper-wrapper">
+                                                        <!-- Slides -->
+                                                        <div class="swiper-slide">
+                                                            <div class="card panel panel-default ks-light">
+                                                                <div class="ks-image">
+                                                                    <img src="assets/img/order/item-3.png">
+                                                                </div>
+                                                                <div class="ks-description">
+                                                                    <a href="#" class="ks-name">M3 Note 16GB</a>
+                                                                    <span class="ks-price">$300</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="card panel panel-default ks-light">
+                                                                <div class="ks-image">
+                                                                    <img src="assets/img/order/item-2.png">
+                                                                </div>
+                                                                <div class="ks-description">
+                                                                    <a href="#" class="ks-name">M3 Note 16GB</a>
+                                                                    <span class="ks-price">$300</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="card panel panel-default ks-light">
+                                                                <div class="ks-image">
+                                                                    <img src="assets/img/order/item-1.png">
+                                                                </div>
+                                                                <div class="ks-description">
+                                                                    <a href="#" class="ks-name">M3 Note 16GB</a>
+                                                                    <span class="ks-price">$300</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="card panel panel-default ks-light">
+                                                                <div class="ks-image">
+                                                                    <img src="assets/img/order/item-1.png">
+                                                                </div>
+                                                                <div class="ks-description">
+                                                                    <a href="#" class="ks-name">M3 Note 16GB</a>
+                                                                    <span class="ks-price">$300</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="card panel panel-default ks-light">
+                                                                <div class="ks-image">
+                                                                    <img src="assets/img/order/item-2.png">
+                                                                </div>
+                                                                <div class="ks-description">
+                                                                    <a href="#" class="ks-name">M3 Note 16GB</a>
+                                                                    <span class="ks-price">$300</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="card panel panel-default ks-light">
+                                                                <div class="ks-image">
+                                                                    <img src="assets/img/order/item-3.png">
+                                                                </div>
+                                                                <div class="ks-description">
+                                                                    <a href="#" class="ks-name">M3 Note 16GB</a>
+                                                                    <span class="ks-price">$300</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="card panel panel-default ks-light">
+                                                                <div class="ks-image">
+                                                                    <img src="assets/img/order/item-4.png">
+                                                                </div>
+                                                                <div class="ks-description">
+                                                                    <a href="#" class="ks-name">M3 Note 16GB</a>
+                                                                    <span class="ks-price">$300</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <div class="card panel panel-default ks-information ks-light">
+                                            <h5 class="card-header">
+                                                <span class="ks-text">Contact Info</span>
+                                                <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-pencil ks-icon"></span></a>
+                                            </h5>
+                                            <div class="card-block">
+                                                <table class="ks-table-description">
+                                                    <tr>
+                                                        <td class="ks-icon">
+                                                            <span class="la la-map-marker"></span>
+                                                        </td>
+                                                        <td class="ks-text">
+                                                            006 Deangelo Plaza Suite 510<br>
+                                                            Gutkowskinberg<br>
+                                                            Marocco
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="ks-icon ks-fs-16">
+                                                            <span class="la la-phone"></span>
+                                                        </td>
+                                                        <td class="ks-text">
+                                                            + 1 (555) 555-555-55
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="ks-icon">
+                                                            <span class="la la-mobile-phone"></span>
+                                                        </td>
+                                                        <td class="ks-text">
+                                                            + 1 (555) 555-555-55
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="ks-icon ks-fs-14">
+                                                            <span class="la la-envelope"></span>
+                                                        </td>
+                                                        <td class="ks-text">
+                                                            <a href="#">karen.lucas@example.com</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="ks-icon ks-fs-15">
+                                                            <span class="la la-globe"></span>
+                                                        </td>
+                                                        <td class="ks-text">
+                                                            <a href="#">example.com</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="card panel panel-default ks-information ks-light">
+                                            <h5 class="card-header">
+                                                <span class="ks-text">Consultant</span>
+                                                <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-pencil ks-icon"></span></a>
+                                            </h5>
+                                            <div class="card-block">
+                                                <ul class="ks-user-list">
+                                                    <li class="ks-item">
+                                                    <span class="ks-avatar">
+                                                        <img src="assets/img/avatars/ava-1.png" width="36" height="36">
+                                                    </span>
+                                                        <div class="ks-body">
+                                                            <div class="ks-name">Janice Lynch</div>
+                                                            <div class="ks-text">Developer</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ks-item">
+                                                    <span class="ks-avatar">
+                                                        <img src="assets/img/avatars/ava-2.png" width="36" height="36">
+                                                    </span>
+                                                        <div class="ks-body">
+                                                            <div class="ks-name">Janice Lynch</div>
+                                                            <div class="ks-text">Developer</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card panel panel-default ks-information ks-light">
+                                            <h5 class="card-header">
+                                                <span class="ks-text">Additional Info</span>
+                                                <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-pencil ks-icon"></span></a>
+                                            </h5>
+                                            <div class="card-block">
+                                                <div class="ks-info-list">
+                                                    <div class="ks-item">
+                                                        <div class="ks-name">Referred From</div>
+                                                        <div class="ks-text">Google Search</div>
+                                                    </div>
+                                                    <div class="ks-item">
+                                                        <div class="ks-name">Business Sector</div>
+                                                        <div class="ks-text">Retail</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="contacts" role="tabpanel" aria-expanded="false">
+                            Content 2
+                        </div>
+                        <div class="tab-pane" id="orders" role="tabpanel" aria-expanded="true">
+                            Content 3
+                        </div>
+                        <div class="tab-pane" id="wish-list" role="tabpanel" aria-expanded="false">
+                            Content 1
+                        </div>
+                        <div class="tab-pane" id="storecredit" role="tabpanel" aria-expanded="false">
+                            Content 2
+                        </div>
+                        <div class="tab-pane" id="returns" role="tabpanel" aria-expanded="true">
+                            Content 3
+                        </div>
+                        <div class="tab-pane" id="reward-points" role="tabpanel" aria-expanded="false">
+                            Content 1
+                        </div>
+                        <div class="tab-pane" id="settings" role="tabpanel" aria-expanded="false">
+                            Content 1
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/datatables-net/media/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-net/media/js/dataTables.bootstrap4.min.js"></script>
+<script src="libs/swiper/js/swiper.jquery.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        var salesDatatable = $('#ks-sales-datatable').DataTable({
+            dom: 'rtip',
+            pageLength: 4
+        });
+
+        var swiper = new Swiper ('.swiper-container', {
+            paginationClickable: true,
+            slidesPerView: 5,
+            spaceBetween: 20,
+            pagination: '.swiper-pagination',
+            autoResize: true,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 40
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                }
+            }
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

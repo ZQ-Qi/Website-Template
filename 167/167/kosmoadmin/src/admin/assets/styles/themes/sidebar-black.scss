@@ -1,0 +1,216 @@
+.ks-sidebar {
+  background: #2B3034 !important;
+  border-right: none;
+
+  .ks-wrapper, .ks-sidebar-wrapper {
+    background: #2B3034 !important;
+    border-right: 1px solid #2B3034 !important;
+
+    .nav {
+      > .nav-item {
+        &.open {
+          &:before {
+            position: absolute;
+            top: -1px;
+            left: 4px;
+            right: 0;
+            content: '';
+            height: 1px;
+            background: rgba(0, 0, 0, 0.11);
+            z-index: 1;
+          }
+        }
+      }
+
+      .nav-item {
+        &.ks-user {
+          .ks-info {
+            > .ks-name {
+              color: #8896A1;
+            }
+
+            > .ks-text {
+              color: #a0abb4;
+            }
+          }
+
+          &:hover {
+            .ks-info {
+              > .ks-name {
+                color: #fff;
+              }
+
+              > .ks-text {
+                color: rgba(255, 255, 255, 0.7);
+              }
+            }
+          }
+        }
+
+        &.ks-user-item {
+          > .nav-link {
+            > .ks-description {
+              color: #a0abb4;
+            }
+          }
+        }
+
+        &:hover {
+          > .nav-link, > .nav-link:active {
+            background: #252A2E;
+            border-bottom: 1px solid #252A2E;
+            color: #fff;
+
+            > .ks-icon {
+              color: #fff;
+            }
+          }
+        }
+
+        &.open, &.ks-active, .nav-item {
+          .nav-link {
+            background: #252A2E;
+            color: #8896A1;
+
+            > .ks-icon {
+              color: #8896A1;
+            }
+          }
+        }
+
+        .nav-link, .dropdown-item {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+          color: #8896A1;
+
+          > .ks-icon {
+            color: #8896A1;
+          }
+
+          &:hover {
+            color: #fff;
+
+            > .ks-icon {
+              color: #fff;
+            }
+          }
+        }
+
+        .dropdown-menu {
+          background: #252A2E;
+
+          > .dropdown {
+            > .nav-link {
+              &:hover {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.11) !important;
+              }
+            }
+          }
+
+          .dropdown-item {
+            background: #252A2E;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+            color: #8896A1;
+
+            &:hover, &.ks-active {
+              color: #fff;
+
+              > .ks-icon {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        &.open, &.open:hover {
+          position: relative;
+
+          > .nav-link {
+            color: #fff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+
+            > .ks-icon {
+              color: #fff;
+            }
+          }
+
+          &.ks-user {
+            .ks-info {
+              > .ks-name {
+                color: #fff;
+              }
+
+              > .ks-text {
+                color: rgba(255, 255, 255, 0.7);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ks-sidebar-extras-block {
+      .ks-extras-block-item {
+        color: #a0abb4;
+
+        > .ks-progress {
+          .progress {
+            background: rgba(255, 255, 255, .06);
+          }
+        }
+
+        > .ks-description {
+          > .ks-text {
+            color: #a0abb4;
+          }
+        }
+      }
+    }
+
+    .ks-sidebar-copyright {
+      color: #a0abb4;
+    }
+  }
+
+  .jspDrag {
+    border-color: transparent !important;
+    background: darken(#252A2E, 4.5%) !important;
+    opacity: 0.6;
+  }
+}
+
+.ks-sidebar-sections {
+  .ks-sidebar {
+    .ks-wrapper, .ks-sidebar-wrapper {
+      .nav {
+        .nav-item {
+          border: none !important;
+
+          &:hover, &.open:hover {
+            border: none !important;
+
+            > .nav-link, > .nav-link:active {
+              border: none !important;
+            }
+          }
+
+          .dropdown-menu {
+            > .dropdown {
+              > .nav-link {
+                &:hover {
+                  border-bottom: none !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+.ks-navbar {
+  .navbar-brand {
+    background: darken(#2B3034, 4.1%);
+  }
+}*/

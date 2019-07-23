@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>Templates / Universe Admin</title>
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  
+    <link rel="stylesheet" href="../../admin/fonts/open-sans/style.min.css"> <!-- common font  styles  -->
+<link rel="stylesheet" href="fonts/universe-admin/style.css"> <!-- universeadmin icon font styles -->
+<link rel="stylesheet" href="../../admin/vendor/simplebar/simplebar.css"> <!-- original simplebar plugin (scrollbar) styles  -->
+<link rel="stylesheet" href="../../admin/vendor/tippyjs/tippy.css"> <!-- original tippy plugin (tooltip) styles -->
+<link rel="stylesheet" href="../../admin/vendor/select2/css/select2.min.css"> <!-- original select2 plugin styles -->
+<link rel="stylesheet" href="../../admin/vendor/bootstrap/css/bootstrap.min.css"> <!-- original bootstrap styles -->
+<link rel="stylesheet" href="css/style.min.css" id="stylesheet"> <!-- universeadmin styles -->
+
+  
+
+  <script src="../../admin/js/ie.assign.fix.min.js"></script>
+</head>
+<body class="js-loading ">
+
+
+
+  <div class="navbar navbar-light navbar-expand-lg">
+  <button class="sidebar-toggler" type="button">
+    <span class="ua-icon-sidebar-open sidebar-toggler__open"></span>
+    <span class="ua-icon-alert-close sidebar-toggler__close"></span>
+  </button>
+
+  <a class="navbar-brand" href="/"><img src="../../admin/img/logo.png" alt=""/></a>
+  <a class="navbar-brand-sm" href="/"><img src="../../admin/img/logo-sm.png" alt=""/></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+    <span class="ua-icon-navbar-open navbar-toggler__open"></span>
+    <span class="ua-icon-alert-close navbar-toggler__close"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+    <div class="navbar-menu">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Project
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Edit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Help</a>
+        </li>
+      </ul>
+      <div class="navbar__image-name" data-toggle="tooltip" data-placement="bottom" title="Double click to edit">Image Name...</div>
+      <div class="navbar__image-actions">
+        <button class="btn btn-outline-secondary navbar__image-action">Share</button>
+        <button class="btn btn-outline-secondary navbar__image-action">Download</button>
+      </div>
+    </div>
+    <div class="dropdown navbar-dropdown">
+      <a class="dropdown-toggle navbar-dropdown-toggle navbar-dropdown-toggle__user" data-toggle="dropdown" href="#">
+        <img src="../../admin/img/users/user-3.png" alt="" class="navbar-dropdown-toggle__user-avatar">
+        <span class="navbar-dropdown__user-name">John Smith</span>
+      </a>
+      <div class="dropdown-menu navbar-dropdown-menu navbar-dropdown-menu__user">
+        <div class="navbar-dropdown-user-content">
+          <div class="dropdown-user__avatar"><img src="../../admin/img/users/user-3.png" alt=""/></div>
+          <div class="dropdown-info">
+            <div class="dropdown-info__name">John Smith</div>
+            <div class="dropdown-info__job">Manager</div>
+            <div class="dropdown-info-buttons"><a class="dropdown-info__viewprofile" href="#">View Profile</a><a class="dropdown-info__addaccount" href="#">Add account</a></div>
+          </div>
+        </div><a class="dropdown-item navbar-dropdown__item" href="#">Upgrade to <span>PRO</span></a><a class="dropdown-item navbar-dropdown__item" href="#">Invite team member</a><a class="dropdown-item navbar-dropdown__item" href="#">Fedback</a><a class="dropdown-item navbar-dropdown__item" href="#">Help</a><a class="dropdown-item navbar-dropdown__item" href="#">Sign Out</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="page-wrap">
+  
+    <div class="m-im-sidebar">
+  <div class="m-im-sidebar__scroll">
+    <ul class="m-im-sidebar-nav">
+      <li class="m-im-sidebar-nav__item">
+        <a class="m-im-sidebar-nav__link" href="index.html">
+          <span class="m-im-sidebar-nav__item-icon ua-icon-templates"></span>
+          <span class="m-im-sidebar-nav__item-text">Templates</span>
+        </a>
+      </li>
+      <li class="m-im-sidebar-nav__item">
+        <a class="m-im-sidebar-nav__link" href="images.html">
+          <span class="m-im-sidebar-nav__item-icon ua-icon-images"></span>
+          <span class="m-im-sidebar-nav__item-text">Images</span>
+        </a>
+      </li>
+      <li class="m-im-sidebar-nav__item">
+        <a class="m-im-sidebar-nav__link" href="text.html">
+          <span class="m-im-sidebar-nav__item-icon ua-icon-text"></span>
+          <span class="m-im-sidebar-nav__item-text">Text</span>
+        </a>
+      </li>
+      <li class="m-im-sidebar-nav__item">
+        <a class="m-im-sidebar-nav__link" href="background.html">
+          <span class="m-im-sidebar-nav__item-icon ua-icon-background"></span>
+          <span class="m-im-sidebar-nav__item-text">Background</span>
+        </a>
+      </li>
+      <!--<li class="m-im-sidebar-nav__item">
+        <a class="m-im-sidebar-nav__link" href="store.html">
+          <span class="m-im-sidebar-nav__item-icon ua-icon-shopping-bag-alt"></span>
+          <span class="m-im-sidebar-nav__item-text">Store</span>
+        </a>
+      </li>-->
+      <li class="m-im-sidebar-nav__item">
+        <a class="m-im-sidebar-nav__link" href="shapes.html">
+          <span class="m-im-sidebar-nav__item-icon ua-icon-shapes"></span>
+          <span class="m-im-sidebar-nav__item-text">Shapes</span>
+        </a>
+      </li>
+      <li class="m-im-sidebar-nav__item">
+        <a class="m-im-sidebar-nav__link" href="buttons.html">
+          <span class="m-im-sidebar-nav__item-icon ua-icon-buttons"></span>
+          <span class="m-im-sidebar-nav__item-text">Buttons</span>
+        </a>
+      </li>
+      <li class="m-im-sidebar-nav__item">
+        <a class="m-im-sidebar-nav__link" href="icons.html">
+          <span class="m-im-sidebar-nav__item-icon ua-icon-icons"></span>
+          <span class="m-im-sidebar-nav__item-text">Icons</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  
+
+  <div class="page-content">
+    
+  <div class="m-im-sidenav m-im-sidenav__templates">
+  <h4 class="m-im-sidenav__heading">Templates</h4>
+  <form action="#" class="m-im-sidenav__search-form">
+    <div class="input-group input-group-icon icon-right m-im-sidenav__search-form-input">
+      <input class="form-control" type="email" placeholder="Search templates...">
+      <span class="input-icon ua-icon-search"></span>
+    </div>
+    <div class="m-im-sidenav__search-filters">
+      <div class="dropdown m-im-sidenav__search-dropdown">
+        <a class="btn-link dropdown-toggle" href="#" data-toggle="dropdown">
+          Category
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <div class="m-im-sidenav__search-view">
+        <span class="ua-icon-grid m-im-sidenav__search-view-type is-active"></span>
+        <span class="ua-icon-list m-im-sidenav__search-view-type"></span>
+      </div>
+    </div>
+    <div class="m-im-sidenav__search-desc">
+      Type in your search. Press enter. Find
+      the perfect image from our library of over
+      one million.
+    </div>
+  </form>
+  <div class="m-im-sidenav__content">
+    <div class="m-im-sidenav__content-list js-scrollable">
+      <div class="m-im-sidenav__templates">
+        <a href="#" class="m-im-sidenav__template-add">
+          <span class="ua-icon-plus-circle-alt m-im-sidenav__template-add-icon"></span>
+          <span class="m-im-sidenav__template-add-text">Start from blank</span>
+        </a>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/01.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/02.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/03.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/04.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/05.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/06.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/07.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/02.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/03.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/04.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/05.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/06.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/07.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/02.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/03.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/04.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/05.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/06.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+        <div class="m-im-sidenav__template">
+          <img src="img/imagemaker/07.png" alt="" class="m-im-sidenav__template-image">
+          <span class="m-im-sidenav__template-cover">click to import</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="m-im-content-canvas">
+      
+  <div class="m-im-toolbox">
+  <span class="m-im-toolbox__item is-active">
+    <span class="ua-icon-text-resize m-im-toolbox__item-icon"></span>
+  </span>
+  <span class="m-im-toolbox__item">
+    <span class="ua-icon-color-picker-alt m-im-toolbox__item-icon"></span>
+  </span>
+  <span class="m-im-toolbox__item">
+    <span class="ua-icon-move-up m-im-toolbox__item-icon"></span>
+  </span>
+  <span class="m-im-toolbox__item">
+    <span class="ua-icon-move-down m-im-toolbox__item-icon"></span>
+  </span>
+  <span class="m-im-toolbox__item">
+    <span class="ua-icon-duplicate m-im-toolbox__item-icon"></span>
+  </span>
+  <span class="m-im-toolbox__item">
+    <span class="ua-icon-trash m-im-toolbox__item-icon"></span>
+  </span>
+</div>
+<div class="m-im-canvas"></div>
+<div class="m-im-controls">
+  <div class="m-im-controls__history">
+    <span class="m-im-controls__history-item">
+      <span class="ua-icon-undo m-im-controls__history-item-icon"></span>
+    </span>
+    <span class="m-im-controls__history-item">
+      <span class="ua-icon-redo m-im-controls__history-item-icon"></span>
+    </span>
+  </div>
+  <div class="m-im-controls__size">
+    <span class="m-im-controls__size-item">
+      <span class="ua-icon-plus-square-alt m-im-controls__size-item-icon"></span>
+    </span>
+    <span class="m-im-controls__size-amount">100%</span>
+    <span class="m-im-controls__size-item">
+      <span class="ua-icon-minus-square-alt m-im-controls__size-item-icon"></span>
+    </span>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+  <script src="../../admin/vendor/jquery/jquery.min.js"></script>
+<script src="../../admin/vendor/popper/popper.min.js"></script>
+<script src="../../admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../admin/vendor/select2/js/select2.full.min.js"></script>
+<script src="../../admin/vendor/simplebar/simplebar.js"></script>
+<script src="../../admin/vendor/text-avatar/jquery.textavatar.js"></script>
+<script src="../../admin/vendor/tippyjs/tippy.all.min.js"></script>
+<script src="vendor/masonry/masonry.pkgd.min.js"></script>
+<script src="../../admin/vendor/wnumb/wNumb.js"></script>
+<script src="../../admin/js/main.js"></script>
+
+
+
+<div class="sidebar-mobile-overlay"></div>
+
+</body>
+</html>

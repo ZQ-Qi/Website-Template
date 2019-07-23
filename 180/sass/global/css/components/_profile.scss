@@ -1,0 +1,242 @@
+/*---------------------------
+
+Start profile
+
+---------------------------*/
+
+.profile-background {
+  background-image: url("../../global/images/profile-background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  height: 250px;
+  width: 100%;
+  position: $position-relative;
+  margin-bottom: $gaping-20;
+  img {
+    width: 120px;
+    border-radius: 20px;
+    position: $position-absolute;
+    bottom: $gaping-0;
+    margin-left: 100px;
+    margin-bottom: $gaping-20;
+    border: 3px solid $white-text-color;
+    z-index: 9;
+  }
+  .profile-social {
+    bottom: 0;
+    left: $gaping-0;
+    padding: $gaping-15 $gaping-15 $gaping-15 250px;
+    position: $position-absolute;
+    right: $gaping-0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    color: $white-text-color;
+    ul {
+      list-style: none;
+      padding: $gaping-0;
+      .profile-follow {
+        float: $left-division;
+        padding: $gaping-0 $gaping-40;
+        text-align: $text-center;
+        h6 {
+          color: $white-text-color;
+          font-size: 25px;
+          line-height: 35px;
+        }
+
+      }
+      .profile-name {
+        float: $left-division;
+        padding: $gaping-0 $gaping-20;
+        padding-right: 100px;
+        h4 {
+          color: $white-text-color;
+          font-size: 28px;
+        }
+      }
+    }
+    .btn {
+      margin-bottom: $gaping-0;
+      margin-top: $gaping-15;
+      float: $right-division;
+    }
+  }
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+  background-color: $main-site-color;
+}
+
+.profile-left-section {
+  .profile-body {
+    background: $white-backgournd-color;
+    padding: $gaping-15;
+    &.profile-skill {
+      .btn {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .nav {
+    li {
+      padding: $gaping-0;
+      a {
+        padding: $gaping-15 $gaping-10;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        margin-bottom: $gaping-5;
+      }
+    }
+  }
+  .profile-title {
+    font-size: 17px;
+    font-weight: $semi-bold-text;
+    margin-bottom: $gaping-5;
+    text-transform: uppercase;
+  }
+  .prosonal-info {
+    span {
+      color: $main-site-color;
+      font-weight: $bold-text;
+      margin-right: $gaping-15;
+    }
+  }
+}
+
+.profile-right-section {
+  .section-body {
+    margin-bottom: $gaping-5;
+  }
+  .skill-title {
+    font-size: 17px;
+    margin-bottom: $gaping-5;
+    font-weight: $semi-bold-text;
+    text-transform: uppercase;
+  }
+  ul {
+    margin-bottom: $gaping-0;
+    li {
+      h3 {
+        font-size: 16px;
+        font-weight: $bold-text;
+        line-height: 22px;
+      }
+      p {
+        padding-bottom: $gaping-5;
+      }
+    }
+  }
+}
+
+/*---- Start responsive profile ----*/
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1199px) {
+  .profile-background {
+    .profile-social {
+      ul {
+        .profile-name {
+          padding: $gaping-0 $gaping-20;
+        }
+        .profile-follow {
+          padding: $gaping-0 $gaping-30;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .profile-background {
+    .profile-social {
+      ul {
+        .profile-name {
+          padding: $gaping-0 $gaping-10;
+        }
+        .profile-follow {
+          padding: $gaping-0 $gaping-15;
+        }
+      }
+    }
+    img {
+      margin-left: $gaping-40;
+    }
+    .profile-social {
+      padding-left: 180px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-background {
+    height: 160px;
+    img {
+      margin-left: $gaping-15;
+      width: 70px;
+      border-radius: 15px;
+    }
+    .profile-social {
+      padding-left: 100px;
+      ul {
+        .profile-name {
+          padding: $gaping-0 $gaping-5;
+          h4 {
+            font-size: 20px;
+            line-height: $gaping-20;
+          }
+        }
+        .profile-follow {
+          padding: $gaping-0 $gaping-10;
+          h6 {
+            font-size: 16px;
+            line-height: 16px;
+          }
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .btn {
+      display: none;
+    }
+  }
+  .profile-left-section {
+    .nav {
+      li {
+        a {
+          padding: $gaping-10;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .profile-left-section {
+    .nav {
+      li {
+        a {
+          padding: 8px;
+        }
+      }
+    }
+  }
+  .profile-body {
+    .btn-social-icon {
+      margin-bottom: 3px;
+    }
+  }
+}
+
+/*---- End responsive profile ----*/
+
+/*---------------------------
+
+End profile
+
+---------------------------*/

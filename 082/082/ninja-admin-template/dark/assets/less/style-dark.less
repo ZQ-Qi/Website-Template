@@ -1,0 +1,189 @@
+/*
+Version 2.0
+[Table of contents]
+-------------------------------------------------------------------------
+1. General
+2. Header
+3. Fixed Nabar
+4. Main Menu
+5. Menu Active
+6. Box content
+-------------------------------------------------------------------------*/
+@import url(variables.less);
+@dark: #242424;
+@menu_color: #a3a3a3;
+@darken: #1b1b1b;
+
+
+
+/*-----------------------------------------------------------------------
+1. General
+*/
+html,body{
+	background: @white;
+}
+#wrapper{
+	background: @white;
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+2. Header
+*/
+.header{
+	.logo{
+		background-color: @dark;
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+3. Fixed Nabar
+*/
+.fixed-navbar{
+	background: #f3f3f3;
+	color: @dark;
+	.ico-item{
+		color: #999;
+		&:hover{
+			color: @dark;
+		}
+	}
+}
+.menu-mobile-button{
+	background: #e7e7e7;
+	color: @dark;
+}
+@media(min-width: 1025px){
+	.searchform{
+		.button-search{
+			&:hover{
+				color: @dark;
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+4. Main Menu
+*/
+.main-menu{
+	background: @dark;
+	color: @white;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	.user{
+		.name{
+			a{
+				color: @white;
+			}
+		}
+		.control-wrap{
+			> .fa{
+				color: @white;
+			}
+		}
+	}
+}
+.navigation{
+	.title{
+		color: @white;
+		background: @darken;
+	}
+	.menu{
+		a{
+			color: @menu_color;
+			i{
+				color: @white;
+			}
+			@media(min-width: 1025px){
+				&:hover{
+					color: @white;
+					i{
+						color: @white;
+					}
+				}
+			}
+		}
+		> li{
+			&.active{
+				>a{
+					background: @darken;
+					color: @white;
+				}
+			}
+			&.current{
+				> a{
+					color: @white;
+					background: @darken;
+				}
+				.current{
+					> a{
+						color: @white;
+					}
+				}
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+5. Menu Active
+*/
+@media(min-width: 800px){
+	.menu-active{
+		.header{
+			.logo{
+				color: @dark;
+				&:before{
+					background: @dark;
+				}
+			}
+		}
+		.navigation{
+			.menu{
+				>li{
+					&:hover{
+						>a{
+							background: @darken;
+						}
+					}
+				}
+				.sub-menu{
+					a{
+						background: @darken;
+					}
+				}
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+6. Box content
+*/
+.box-content{
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.05),0 2px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0 0 0 2px rgba(0,0,0,0.05),0 2px 2px rgba(0,0,0,0.05);
+	-webkit-box-shadow: 0 0 0 2px rgba(0,0,0,0.05),0 2px 2px rgba(0,0,0,0.05);
+}
+/*---------------------------------------------------------------------*/

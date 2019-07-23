@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>弹窗-商品管理</title>
+
+<style>
+html,body,div,span,ul,li,h1,h2,h3,h4,p,a,img,input,form{margin:0;padding:0;border:0;list-style:none;outline:0;}
+div,td,ul,li,dl,dt,dd,h2,h3,h4{list-style:none;margin:0;padding:0;}
+div{display:block;}
+body{font-size:12px;font-family:"微软雅黑", "宋体", Arial;color:#666;}
+li{display:list-item;text-align:-webkit-match-praent;}
+img{vertical-align:middle;}
+em{font-style:normal;color:#fff;}
+input, textarea, select, button { font-family: inherit; font-size: 100%; outline:0;}
+a img{border:0}
+body{color:#333;font:12px "微软雅黑";}
+ul, ol, li{list-style-type:none;vertical-align:0}
+a{outline-style:none;color:#535353;text-decoration:none;cursor:pointer}
+a:hover{text-decoration:none;}
+.clear{height:0;overflow:hidden;clear:both}
+i,s{text-decoration:none;font-style:normal;}
+
+
+.formoverlay{cursor:default;width:1419px;height:949px;z-index:5;opacity:0.5;background:#999;position:absolute;left:0;top:0;width:100%;height:100%;display: block;}
+.tabbox{width:100%;margin:20px auto;position:relative;height: auto;overflow:hidden;}
+.tabbox .tabbtn{height:30px;background:url(images/tabbg.gif) repeat-x;border-left:solid 1px #ddd;border-right:solid 1px #ddd;}
+.tabbox .tabbtn li{float:left;position:relative;margin:0 0 0 -1px;}
+.tabbox .tabbtn li a,.tabbox .tabbtn li{display:block;float:left;height:30px;line-height:30px;overflow:hidden;width:108px;text-align:center;font-size:12px;cursor:pointer;}
+.tabbox .tabbtn li.current{border-left:solid 1px #d5d5d5;border-right:solid 1px #d5d5d5;border-top:solid 1px #c5c5c5;}
+.tabbox .tabbtn li.current a,.tabbox .tabbtn li.current span{border-top:solid 2px #ff6600;height:27px;line-height:27px;background:#fff;color:#3366cc;font-weight:800;}
+.tabcon{padding:10px;}
+.layoutitem-spgl{width:660px;border:1px solid #ddd;margin:15px  auto;}
+.spgl-item{display:block;}
+.sp-in{float:left;overflow:hidden;display:inline-block;width:96%;}
+.sp-item{width:68px;line-height:40px;display:inline-block;text-align:right;}
+.gl-in{width:85%;border:1px solid #ddd;height:30px;line-height:30px;text-indent:5px;margin-left:8px;}
+.sp-in-01{float:left;overflow:hidden;display:inline-block;width:33%;}
+.gl-sp{width:47%;border:1px solid #ddd;height:30px;line-height:30px;text-indent:5px;margin-left:8px;}
+.sp-in-01 span{height:30px;line-height:30px;padding-left:18%;}
+.sp-in-02{float:left;overflow:hidden;display:inline-block;width:50%;margin-top:15px;}
+.gl-sp-1s{width:65%;border:1px solid #ddd;height:30px;line-height:30px;text-indent:5px;margin-left:8px;}
+.sp-x{width:55%;}
+.sp-img-list{display:block;}
+.sp-title{text-align:left;line-height:40px;font-size:14px;color:#ff0303;}
+.img-list-sp{margin-top:8px;display:block;}
+.img-list-sp li{float:left;border:1px solid #ddd;width:30%;overflow:hidden;margin:1%}
+.sp-img{width:96%;margin:3px auto;}
+.sp-img img{width:100%;height:152px;}
+.sp-wj,.sp-txt{width:94%;height:30px;line-height:30px;margin:8px 5px;border:1px solid #ddd;}
+.file-ed,.txt-in{padding:2px 3px;}
+
+
+.layoutitem-add{float:right;padding-right:15px;}
+.layoutitem-add a{width:45px;height:24px;line-height:24px;margin:12px 8px ;display:inline-block;padding:2px 3px;}
+.add{background:#ff0303;color:#fff;border-radius:3px;text-align:center;}
+.bc{background:#f94913;border-radius:3px;text-align:center;color:#fff;}
+.tc{background:#333;border-radius:3px;text-align:center;color:#fff;}
+</style>
+</head>
+
+<body>
+<div class="formoverlay"></div>
+ <table cellpadding="0" cellspacing="0" border="0" class="formborder" style="z-index:99;position:absolute;left:500px;top:150px;width:680px; display: block;" >
+  <tbody>
+   
+   <tr>
+   <td align="left" valign="top" style="width:680px;height: auto;background:#fff;">
+    <div class="formcontentsize" style="width:auto;height:auto;">
+     <!--仓库基本信息   开始-->
+     <div class="layoutitem-spgl">
+     
+      <div class="demopage">
+ 	   <div class="demopage">
+		<div class="tabbox" id="statetab">
+		 <ul class="tabbtn">
+		  <li class="current"><a href="#">基本信息</a></li>
+		  <li><a href="#">售价管理</a></li>
+		  <li><a href="#">商品图片管理</a></li>
+		 </ul>
+		<div class="tabcon">
+	     <div class="">
+           <ul class="spgl-item">
+            <li>
+             <div class="sp-in">
+              <label class="sp-item">商品名称</label>
+              <input type="text" class="gl-in"> 
+             </div>            
+            </li>
+           
+            <li>
+             <div class="sp-in-01">
+              <label class="sp-item">商品编号</label>
+              <input type="text" class="gl-sp">
+             </div>
+            </li>
+             <li>
+             <div class="sp-in-01">
+              <span><input type="checkbox" class="sp-jb">编号递增</span>
+             </div>
+            </li>
+            <li>
+             <div class="sp-in-01">
+              <label class="sp-item">品牌</label>
+              <input type="text" class="gl-sp">
+             </div>
+            </li>
+            <li>
+             <div class="sp-in-01">
+              <label class="sp-item">规格</label>
+              <input type="text" class="gl-sp">
+             </div>
+            </li>
+            <li>
+             <div class="sp-in-01">
+              <label class="sp-item">型号</label>
+              <input type="text" class="gl-sp">
+             </div>
+            </li>
+            <li>
+             <div class="sp-in-01">
+              <label class="sp-item">重量(kg)</label>
+              <input type="text" class="gl-sp">
+             </div>
+            </li>
+              <li>
+             <div class="sp-in-01">
+              <label class="sp-item">长度</label>
+              <input type="text" class="gl-sp">
+             </div>
+            </li>
+            <li>
+             <div class="sp-in-01">
+              <label class="sp-item">宽度</label>
+              <input type="text" class="gl-sp">
+             </div>
+            </li>
+            <li>
+             <div class="sp-in-01">
+              <label class="sp-item">高度</label>
+              <input type="text" class="gl-sp">
+             </div>
+            </li>
+            <li>
+             <div class="sp-in-02">
+              <label class="sp-item">供货信息</label>
+              <input type="text" class="gl-sp-1s">
+             </div>
+            </li>
+             <li>
+             <div class="sp-in-02">
+              <label class="sp-item">参考成本价</label>
+              <input type="text" class="gl-sp-1s">
+             </div>
+            </li>
+             <li>
+             <div class="sp-in">
+              <label class="sp-item">备注</label>
+              <input type="text" class="gl-in"> 
+             </div>            
+            </li>
+           </ul>
+          </div>
+	     </div>
+		<div class="tabcon">
+		<form method="post"> 
+         <table class="gridbar bar" border="0" cellpadding="0" cellspacing="0" >
+          <thead>
+           <tr>
+            <th>单位名称</th>
+            <th>单位关系</th>
+            <th>条码</th>
+            <th>零售价</th> 
+            <th>预设售价1</th>          
+            <th>预设售价2</th>
+            <th>预设售价3</th>
+           </tr>
+           <tr>
+            <td><input type="text" class="sp-x"></td>
+            <td><input type="text"  class="sp-x"></td>
+            <td><input type="text"  class="sp-x"></td>
+            <td><input type="text"  class="sp-x"></td>
+            <td><input type="text"  class="sp-x"></td>
+            <td><input type="text"  class="sp-x"></td>
+            <td><input type="text"  class="sp-x"></td>
+           </tr>
+          </thead>
+         </table>
+        </form>		
+	   </div>
+	   <div class="tabcon">
+		<div class="sp-img-list">
+         <div class="sp-title">图片大小不能超过500kb，合适必须为jpg,gif,png,bmp,建议分辨率为240*280</div>
+         <ul class="img-list-sp">
+          <li>
+           <div class="sp-img">
+            <img src="img/kf03.png">
+           </div>
+           <div class="sp-wj">
+            <input type="file" class="file-ed">
+           </div>
+           <div class="sp-txt">
+           <input type="text" class="txt-in" placeholder="请输入图片名称"> 
+           </div>
+          </li>
+          
+           <li>
+           <div class="sp-img">
+            <img src="img/kf03.png">
+           </div>
+           <div class="sp-wj">
+            <input type="file" class="file-ed">
+           </div>
+           <div class="sp-txt">
+           <input type="text" class="txt-in" placeholder="请输入图片名称"> 
+           </div>
+          </li>
+           <li>
+           <div class="sp-img">
+            <img src="img/kf03.png">
+           </div>
+           <div class="sp-wj">
+            <input type="file" class="file-ed">
+           </div>
+           <div class="sp-txt">
+           <input type="text" class="txt-in" placeholder="请输入图片名称"> 
+           </div>
+          </li>
+          
+           <li>
+           <div class="sp-img">
+            <img src="img/kf03.png">
+           </div>
+           <div class="sp-wj">
+            <input type="file" class="file-ed">
+           </div>
+           <div class="sp-txt">
+           <input type="text" class="txt-in" placeholder="请输入图片名称"> 
+           </div>
+          </li>
+           <li>
+           <div class="sp-img">
+            <img src="img/kf03.png">
+           </div>
+           <div class="sp-wj">
+            <input type="file" class="file-ed">
+           </div>
+           <div class="sp-txt">
+           <input type="text" class="txt-in" placeholder="请输入图片名称"> 
+           </div>
+          </li>
+         </ul>
+        </div>		
+	   </div>
+	  </div>
+	 </div>
+<script type="text/javascript"  src="js/jquery.min.js"></script>
+<script type="text/javascript">
+
+//ajax 选项卡
+$(function(){
+	
+	//选项卡鼠标滑过事件
+	$('#statetab .tabbtn li').mouseover(function(){
+		TabSelect("#statetab .tabbtn li", "#statetab .tabcon", "current", $(this))
+	});
+	$('#statetab .tabbtn li').eq(0).trigger("mouseover");
+	
+	//选项卡鼠标滑过事件
+	$('#clicktab .tabbtn li').click(function(){
+		TabSelect("#clicktab .tabbtn li", "#clicktab .tabcon", "current", $(this))
+	});
+	$('#clicktab .tabbtn li').eq(0).trigger("click");
+
+	function TabSelect(tab,con,addClass,obj){
+		var $_self = obj;
+		var $_nav = $(tab);
+		$_nav.removeClass(addClass),
+		$_self.addClass(addClass);
+		var $_index = $_nav.index($_self);
+		var $_con = $(con);
+		$_con.hide(),
+		$_con.eq($_index).show();
+	}
+	
+})
+
+</script>	
+
+
+      
+     </div>
+     <!--仓库基本信息   结束-->
+     <!--联系人信息   开始-->
+  <div class="layoutitem-add">
+    <a href="#" class="bc">保存</a> 
+      <a href="#" class="tc">退出</a>               
+     </div>
+    </div>
+    </div>
+   </td>
+   </tr>
+   
+   
+  </tbody>
+ </table>
+       <!--弹窗 仓库管理开始-->
+       
+</body>
+</html>

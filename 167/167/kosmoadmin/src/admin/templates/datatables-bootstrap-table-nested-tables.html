@@ -1,0 +1,107 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/bootstrap-table/bootstrap-table.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/bootstrap-table/bootstrap-table.min.css"> <!-- Customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Bootstrap Table</h3>
+
+                <div class="ks-controls">
+                    <nav class="breadcrumb ks-default">
+                        <a class="breadcrumb-item ks-breadcrumb-icon" href="index.html">
+                            <span class="la la-home ks-icon"></span>
+                        </a>
+                        <a href="#" class="breadcrumb-item">DataTables</a>
+                        <span class="breadcrumb-item active" href="#">Bootstrap Table</span>
+                    </nav>
+
+                    <button class="btn btn-outline-primary ks-light ks-content-nav-toggle" data-block-toggle=".ks-content-nav > .ks-nav">Menu</button>
+                </div>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-content-nav">
+                @@include('./_partials/datatables/bootstrap-table/navigation.html')
+
+                <div class="ks-nav-body">
+                    <div class="ks-nested-table">
+                        <div class="ks-nav-body-wrapper">
+                            <div class="container-fluid">
+                                <table id="ks-datatable" class="table table-striped table-bordered" width="100%"
+                               data-search="true"
+                               data-detail-view="true"
+                        >
+                            <thead>
+                            <tr>
+                                <th data-field="id">ID</th>
+                                <th data-field="name">Item Name</th>
+                                <th data-field="price">Item Price</th>
+                            </tr>
+                            </thead>
+                        </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/bootstrap-table/bootstrap-table.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    function expandTable($detail, cells) {
+        buildTable($detail.html('<table></table>').find('table'), cells, 1);
+    }
+
+    function buildTable($el, cells, rows) {
+        var i, j, row,
+            columns = [],
+            data = [];
+
+        for (i = 0; i < cells; i++) {
+            columns.push({
+                field: 'field' + i,
+                title: 'Cell' + i,
+                sortable: true
+            });
+        }
+        for (i = 0; i < rows; i++) {
+            row = {};
+            for (j = 0; j < cells; j++) {
+                row['field' + j] = 'Row-' + i + '-' + j;
+            }
+            data.push(row);
+        }
+        $el.bootstrapTable({
+            columns: columns,
+            data: data,
+            /*icons: {
+             refresh: 'la la-refresh icon-refresh',
+             toggle: 'la la-list-alt icon-list-alt',
+             columns: 'la la-th icon-th',
+             share: 'la la-download icon-share'
+             },*/
+            detailView: cells > 1,
+            onExpandRow: function (index, row, $detail) {
+                expandTable($detail, cells - 1);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        var dataTable = $('#ks-datatable');
+        buildTable(dataTable, 8, 1);
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

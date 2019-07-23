@@ -1,0 +1,167 @@
+﻿.overlay{
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    @extend .displaynone;
+    z-index: 999;
+    opacity: 1;
+}
+.right-sidebar{
+    width: 280px;
+    height: calc(100vh - 0px);
+    position: fixed;
+    right: -300px;
+    top: 0px;
+    background: $col-white;
+    z-index: 1000 !important;
+    @include box-shadow(-2px 2px 5px rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+    @include transition(.5s);
+
+    &.open {
+        right: 0;
+    }
+
+    .nav-tabs + .tab-content {
+        @extend .padding-0;
+        
+    }
+
+    .card{
+        padding:10px 20px;
+        @extend .m-b-0;
+        box-shadow: none;
+
+        h6{
+            border-bottom: 1px solid $grey-200;    
+            @extend .p-b-5;
+            @extend .m-b-15;
+            font-size: 14px;
+            font-weight: $font-weight-700;
+        }
+        ul{
+            @extend .m-b-0;
+        }
+    }
+    
+    .nav-tabs {
+        padding: 0px;
+        border-bottom: 1px solid $grey-200;
+        
+        .nav-item{
+            width: 33.3333%;
+
+            .nav-link{
+                border-width: 0 0 2px 0;
+                padding: 15px 25px;
+    
+                &.active{
+                    border-color: $cyan;
+                }
+            }
+        }
+    }
+
+    .theme-light-dark{
+        li{
+            display: block;
+        }
+    }
+
+}
+
+.choose-skin {
+    li {
+        padding: 10px 20px;
+        @extend .displayblock;
+        position: relative;
+        cursor: pointer;
+        font-size: 0;
+
+        &.active,
+        &:hover {
+            background-color: $grey-200;
+        }
+        &.active{
+            &:after {
+                font-family: 'FontAwesome';
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                content: '\f00c';
+                font-size: 15px;
+                color: $grey-500;
+                margin-top: -11px;
+            }
+        }
+
+        div {
+            @extend .inlineblock;
+            width: 25px;
+            height: 25px;
+
+            &.purple{
+				background: $purple;
+			}
+			&.blue{
+				background: $blue;
+			}
+			&.cyan{
+				background: $cyan;
+			}
+			&.green{
+				background: $green;
+			}
+			&.orange{
+				background: $orange;
+			}
+			&.blush{
+				background: $blush;
+            }
+        }
+
+        span {
+            @extend .inlineblock;
+            display: inline-block;
+            line-height: 25px;
+            vertical-align: top;
+            padding-left: 10px;
+            font-size: 15px;
+        }
+    }
+}
+
+.contact-list{
+    li{
+        .contact-img{
+            @extend .m-r-10;
+        }
+        .contact-name{
+            @extend .m-b-0;
+            font-size: 15px;
+            color: $grey-900;
+            font-weight: 600;
+
+            span{
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        &:hover{
+            background-color: $grey-200;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .right-sidebar{
+        .slim_scroll{
+            padding-bottom: 40px;
+        }
+    }
+}
+

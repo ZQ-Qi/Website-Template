@@ -1,0 +1,64 @@
+@import "../config/colors";
+
+.ks-billing {
+  .ks-body-wrap-container {
+    margin: 30px 15px;
+  }
+
+  .ks-col-info {
+    .ks-plan-details {
+      td {
+        vertical-align: top;
+      }
+
+      .ks-amount {
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .ks-plan {
+        font-size: 12px;
+        margin-bottom: 30px;
+
+        > .ks-datetime {
+          margin-top: 2px;
+          color: $text-color-light;
+        }
+      }
+
+      .ks-description {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+          margin-bottom: 5px;
+          font-size: 10px;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .ks-billing-details, .ks-payment-details {
+      tr {
+        td {
+          padding-bottom: 10px;
+        }
+
+        td:first-child {
+          color: $text-color-light;
+          width: 110px;
+        }
+      }
+
+      tr:last-child {
+        td {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

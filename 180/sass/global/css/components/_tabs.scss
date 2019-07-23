@@ -1,0 +1,138 @@
+/*---------------------------
+
+Start tabs
+
+---------------------------*/
+.nav-tabs{
+  > li {
+    padding-left: $gaping-0;
+  }
+}
+.default-tab{
+  .tab-pane{
+    border: 1px solid $normal-light-text-color;
+    padding: $gaping-10;
+    border-top: none;
+  }
+}
+.custom-tab{
+  .nav-tabs{
+    border-bottom: 1px solid #2773ed;
+    > li.active{
+      > a, > a:focus, > a:hover {
+        border: 2px solid #2773ed;
+        border-radius: $border-radius-0;
+      }
+    }
+  }
+  .tab-pane{
+    padding: $gaping-10;
+  }
+}
+
+.border-tab{
+  .nav-tabs{
+    > li.active{
+      > a, > a:focus, > a:hover {
+        border: none;
+        border-bottom: 2px solid #2773ed;
+        border-radius: $border-radius-0;
+        color: #2773ed;
+      }
+    }
+  }
+  .tab-pane{
+    padding: $gaping-10;
+  }
+}
+
+.background-tab{
+  .nav-tabs{
+    > li.active{
+      > a, > a:focus, > a:hover {
+        background: #2773ed;
+        color: $white-text-color;
+      }
+    }
+  }
+  .tab-pane{
+    padding: $gaping-10;
+  }
+}
+.tabs-vertical{
+  .nav-tabs{
+    width: 150px;
+    border-bottom: $gaping-0;
+    border-right: 1px solid $normal-gray-text-color;
+    display: table-cell;
+    vertical-align: top;
+    &:hover{
+      border-bottom: 0;
+    }
+    li{
+      width: 100%;
+      margin-left: 2px;
+      a{
+        margin-right: $gaping-0;
+        border-radius: $border-radius-0;
+        border: none;
+      }
+    }
+  }
+  .tab-content{
+    display: table-cell;
+    padding: 0 $gaping-10 $gaping-10 $gaping-10;
+  }
+  &.border-tab{
+    .nav-tabs{
+      > li.active{
+        > a, > a:focus, > a:hover {
+          border: none;
+          border-right: 2px solid #2773ed;
+        }
+      }
+    }
+  }
+}
+
+/*---- Start responsive tabs ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:479px) {
+  .tabs-vertical{
+    .nav-tabs {
+      width: 110px;
+    }
+    .tab-content {
+      padding: $gaping-0;
+    }
+  }
+  .nav-pills{
+    > li{
+      > a{
+        padding: $gaping-5 $gaping-10;
+      }
+    }
+  }
+}
+/*---- End responsive tabs ----*/
+
+/*---------------------------
+
+End tabs
+
+---------------------------*/

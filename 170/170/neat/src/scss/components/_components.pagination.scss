@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #PAGNATION
+   ========================================================================== */
+
+.c-pagination {
+	display: flex;
+}
+
+.c-pagination__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: $pagination-link-width;
+	height: $pagination-link-height;
+	margin-right: $pagination-link-margin-right;
+	border-radius: 100%;
+	background-color: $color-white;
+	color: $color-ink;
+	font-size: 18px;
+	text-align: center;
+	box-shadow: $pagination-box-shadow;
+
+	&:hover {
+		color: $pagination-link-hover-color;
+	}
+
+	&.is-active {
+		color: $pagination-link-active-color;
+	}
+}

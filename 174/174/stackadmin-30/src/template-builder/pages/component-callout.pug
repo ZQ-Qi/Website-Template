@@ -1,0 +1,26 @@
+//- =========================================================================
+	File Name: component-callout.jade
+	Description: The media object is an abstract element used as the basis for building more complex and repetitive components.
+	--------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle   = "Callout"
+	- var pageSubTitle = "The generic callout CSS and the styles for the info, warning, and danger callouts."
+	- var description = "The media object is an abstract element used as the basis for building more complex and repetitive components."
+	- var activeMenu  = "component-callout"
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Components"}, {name:"Callout"}])
+
+//- Include page content in page block
+append content
+	include ../contents/component-callout.html
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/core/colors/palette-callout.css')

@@ -1,0 +1,27 @@
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        var ksViews = $('.ks-tickets-page > .ks-view');
+        var ksTicketView = $('.ks-tickets-page[data-ticket-view] > .ks-view');
+        var ksManageView = $('.ks-tickets-page[data-ticket-manage] > .ks-view');
+
+        if (Response.band(0, 780)) {
+            var ksTickets = $('.ks-tickets-page[data-ticket-view] > .ks-tickets > .ks-body .ks-ticket');
+            var ksTicketManage = $('.ks-tickets-page[data-ticket-manage] > .ks-tickets > .ks-controls .ks-ticket-manage');
+            var ksViewCancel = $('.ks-tickets-page > .ks-view .ks-view-cancel');
+
+            ksTickets.on('click', function () {
+                ksTicketView.addClass('ks-open');
+            });
+
+            ksTicketManage.on('click', function () {
+                ksManageView.addClass('ks-open');
+            });
+
+            ksViewCancel.on('click', function() {
+                ksViews.removeClass('ks-open');
+            });
+        }
+    });
+})(jQuery);
+</script>

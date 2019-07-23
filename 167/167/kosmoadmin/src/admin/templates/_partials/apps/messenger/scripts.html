@@ -1,0 +1,36 @@
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        $('.ks-discussions .ks-item').on('click', function() {
+            var messagesBox = $('.ks-messages');
+
+            messagesBox.LoadingOverlay("show", {
+                image: "",
+                custom: $("<div>", {
+                    text: 'Loading...'
+                }),
+                color: "rgba(255, 255, 255, 0.6)",
+                zIndex: 2
+            });
+
+            setTimeout(function() {
+                messagesBox.LoadingOverlay("hide");
+            }, 2000);
+        });
+
+        if (Response.band(0, 800)) {
+            var ksMessagesView = $('.ks-messenger > .ks-messages');
+            var ksDiscussions = $('.ks-messenger > .ks-discussions > .ks-body .ks-items > .ks-item');
+            var ksViewCancel = $('.ks-mail > .ks-view .ks-view-cancel');
+
+            ksDiscussions.on('click', function () {
+                ksMessagesView.addClass('ks-open');
+            });
+
+            ksViewCancel.on('click', function() {
+                ksMessagesView.removeClass('ks-open');
+            });
+        }
+    });
+})(jQuery);
+</script>

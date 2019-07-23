@@ -1,0 +1,261 @@
+@import '../../config/colors';
+@import '../../config/ui';
+
+.sweet-alert {
+  width: 400px;
+  border-radius: 2px;
+  background-color: #fff;
+  padding: 40px;
+  margin-left: -200px;
+
+  .animateErrorIcon {
+    animation-duration: 0s;
+  }
+
+  h2 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+  }
+
+  .lead {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.7);
+  }
+
+  .sa-button-container {
+    margin-top: 25px;
+  }
+
+  .sa-confirm-button-container {
+    .btn {
+      &.btn-primary {
+        background-color: $btn-primary-bcolor;
+        border: solid 1px $btn-primary-bcolor;
+
+        &:focus {
+          background-color: $btn-primary-bcolor;
+          border-color: $btn-primary-bcolor;
+        }
+        &:hover, &.hover, &.active {
+          background-color: $btn-primary-bcolor-hover;
+          border-color: $btn-primary-bcolor-hover;
+        }
+        &:active, &.pressed {
+          background-color: $btn-primary-bcolor-active;
+          border-color: $btn-primary-bcolor-active;
+        }
+        &:disabled, &:disabled:hover {
+          background-color: $btn-primary-bcolor-disabled;
+          border-color: $btn-primary-bcolor-disabled;
+        }
+      }
+
+      &.btn-success {
+        background-color: $btn-success-bcolor;
+        border: solid 1px $btn-success-bcolor;
+
+        &:focus {
+          background-color: $btn-success-bcolor;
+          border-color: $btn-success-bcolor;
+        }
+        &:hover, &.hover, &.active {
+          background-color: $btn-success-bcolor-hover;
+          border-color: $btn-success-bcolor-hover;
+        }
+        &:active, &.pressed {
+          background-color: $btn-success-bcolor-active;
+          border-color: $btn-success-bcolor-active;
+        }
+        &:disabled, &:disabled:hover {
+          background-color: $btn-success-bcolor-disabled;
+          border-color: $btn-success-bcolor-disabled;
+        }
+      }
+
+      .btn-info {
+        background-color: $ks-color-info;
+        border: solid 1px $ks-color-info;
+
+        &:focus {
+          background-color: $ks-color-info;
+          border-color: $ks-color-info;
+        }
+        &:hover, &.hover, &.active {
+          background-color: #1b85bf;
+          border-color: #1b85bf;
+        }
+        &:active, &.pressed {
+          background-color: #14648f;
+          border-color: #14648f;
+        }
+        &:disabled, &:disabled:hover {
+          background-color: #4eb8f3;
+          border-color: #4eb8f3;
+        }
+      }
+
+      &.btn-warning {
+        background: $ks-color-warning;
+        border: solid 1px $ks-color-warning;
+
+        &:focus {
+          background: $ks-color-warning;
+          border-color: $ks-color-warning;
+        }
+        &:hover, &.hover, &.active {
+          background-color: #b19509;
+          border-color: #b19509;
+        }
+        &:active, &.pressed {
+          background-color: #857007;
+          border-color: #857007;
+        }
+        &:disabled, &:disabled:hover {
+          background-color: #e4c83c;
+          border-color: #e4c83c;
+        }
+      }
+
+      &.btn-danger {
+        background: $ks-color-danger;
+        border: solid 1px $ks-color-danger;
+
+        &:focus {
+          background: $ks-color-danger;
+          border-color: $ks-color-danger;
+        }
+        &:hover, &.hover, &.active {
+          background-color: #bc4f3b;
+          border-color: #bc4f3b;
+        }
+        &:active, &.pressed {
+          background-color: #8d3b2c;
+          border-color: #8d3b2c;
+        }
+        &:disabled, &:disabled:hover {
+          background-color: #ef836f;
+          border-color: #ef836f;
+        }
+      }
+    }
+  }
+
+  .btn {
+    &.cancel {
+      margin-right: 10px;
+    }
+
+    &.btn-lg {
+      font-size: 14px;
+      padding: 10px 25px;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .sa-icon {
+    margin: 0 auto;
+    border: none;
+    margin-bottom: 20px;
+    width: 58px;
+    height: 58px;
+
+    &.sa-success {
+      .sa-line, .sa-placeholder, .sa-fix {
+        display: none;
+      }
+
+      &:before {
+        content: "\f058";
+        font-family: $ks-icon-font-name;
+        font-size: 58px;
+        font-weight: 400;
+        color: $ks-color-success;
+        top: -20px;
+        left: 0;
+        position: relative;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.sa-warning {
+      .sa-body, .sa-dot {
+        display: none;
+      }
+
+      &:before {
+        content: "\f06a";
+        font-family: $ks-icon-font-name;
+        font-size: 58px;
+        font-weight: 400;
+        color: $ks-color-warning;
+        top: -20px;
+        left: 0;
+        position: relative;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.sa-error {
+      .sa-x-mark {
+        display: none;
+      }
+
+      &:before {
+        content: "\f057";
+        font-family: $ks-icon-font-name;
+        font-size: 58px;
+        font-weight: 400;
+        color: $ks-color-danger;
+        top: -20px;
+        left: 0;
+        position: relative;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.sa-info {
+      &:before {
+        background: transparent;
+        content: "\f05a";
+        font-family: $ks-icon-font-name;
+        font-size: 58px;
+        font-weight: 400;
+        color: $ks-color-info;
+        top: -20px;
+        left: 0;
+        position: relative;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .sa-custom {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sweet-alert {
+    left: 50%;
+  }
+}

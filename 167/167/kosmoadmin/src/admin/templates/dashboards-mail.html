@@ -1,0 +1,323 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/c3js/c3.min.css">
+<link rel="stylesheet" type="text/css" href="assets/styles/widgets/panels.min.css">
+<link rel="stylesheet" type="text/css" href="assets/styles/dashboard/mail.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Mail Dashboard</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="container-fluid ks-dashboard ks-rows-section">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card panel panel-default ks-user-widget">
+                                <div class="card-block">
+                                    <img src="assets/img/avatars/ava-1.png" class="img-circle ks-avatar">
+                                    <div class="ks-name">Evelyn Patterson</div>
+                                    <div class="ks-desc">
+                                        <div class="ks-nickname">@evelyn_patterson</div>
+                                        <div class="ks-country">United States</div>
+                                    </div>
+                                    <div class="ks-rate">
+                                        <div class="ks-name">Tariff: Premium</div>
+                                        <div class="ks-due-date">Until September 18, 2016</div>
+                                    </div>
+                                    <div class="ks-balance">
+                                        Balance: $32,111
+                                    </div>
+                                    <a href="#" class="btn btn-primary">Upgrade Account</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card panel panel-purple ks-amount-widget" data-type="purple">
+                                <div class="card-header">
+                                    Today sent
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                    </div>
+                                </div>
+                                <div class="card-block panel-body">
+                                    <div class="ks-amount">1,540</div>
+                                    <div class="ks-progress">
+                                        <div class="progress ks-progress-xs">
+                                            <div class="progress-bar bg-white" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ks-desc ks-up">
+                                        4% more than last month
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card panel panel-primary ks-action-widget">
+                                <div class="card-block">
+                                    <a href="#" class="ks-action">
+                                        <span class="ks-icon la la-user"></span>
+                                        <span class="ks-text">Add <br> Recipients</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card panel panel-info ks-amount-widget" data-type="info">
+                                <div class="card-header">
+                                    Unread amount
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                    </div>
+                                </div>
+                                <div class="card-block panel-body">
+                                    <div class="ks-amount">756</div>
+                                    <div class="ks-progress">
+                                        <div class="progress ks-progress-xs">
+                                            <div class="progress-bar bg-white" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ks-desc ks-down">
+                                        8% less than last month
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card panel ks-action-widget">
+                                <div class="card-block">
+                                    <a href="#" class="ks-action">
+                                        <span class="ks-icon la la-envelope-o"></span>
+                                        <span class="ks-text">Create <br> Subscription</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card panel panel-success ks-amount-widget" data-type="success">
+                                <div class="card-header">
+                                    New Subscribers
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                    </div>
+                                </div>
+                                <div class="card-block panel-body">
+                                    <div class="ks-amount">2,200</div>
+                                    <div class="ks-progress">
+                                        <div class="progress ks-progress-xs">
+                                            <div class="progress-bar bg-white" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ks-desc ks-up">
+                                        12% less than last month
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card panel ks-action-widget">
+                                <div class="card-block">
+                                    <a href="#" class="ks-action">
+                                        <span class="ks-icon la la-list"></span>
+                                        <span class="ks-text">Create <br> Form</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card panel panel-default ks-widget ks-chart">
+                                <div class="card-header">
+                                    Statistics
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                    </div>
+                                </div>
+                                <div class="card-block">
+                                    <div class="ks-header">
+                                        <div class="ks-labels">
+                                            <span class="ks-label">
+                                                <span class="ks-point ks-bg-purple"></span>
+                                                <span class="ks-text">Sent</span>
+                                            </span>
+                                            <span class="ks-label">
+                                                <span class="ks-point ks-bg-primary"></span>
+                                                <span class="ks-text">Open (87%)</span>
+                                            </span>
+                                        </div>
+                                        <div class="ks-sort">
+                                            <div class="dropdown">
+                                                <a class="btn btn-link dropdown-toggle" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="ks-text">Sort by:</span> 7 days
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item" href="#">7 days</a>
+                                                    <a class="dropdown-item" href="#">2 weeks</a>
+                                                    <a class="dropdown-item" href="#">1 month</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ks-wrapper">
+                                        <div id="ks-chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card panel panel-default ks-widget ks-events">
+                                <div class="card-header">
+                                    Events
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                    </div>
+                                </div>
+                                <div class="card-block ks-scrollable">
+                                    <table class="table">
+                                        <tr>
+                                            <td class="ks-icon" width="1">
+                                                <span class="la la-arrow-circle-o-left ks-color-danger"></span>
+                                            </td>
+                                            <td>
+                                                <div class="ks-text">Payment for regular</div>
+                                                <div class="ks-datetime">Today</div>
+                                            </td>
+                                            <td class="ks-amount">
+                                                - $800
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ks-icon" width="1">
+                                                <span class="la la-arrow-circle-o-right ks-color-success"></span>
+                                            </td>
+                                            <td>
+                                                <div class="ks-text">Add money</div>
+                                                <div class="ks-datetime">Today at 11:23</div>
+                                            </td>
+                                            <td class="ks-amount">
+                                                + $2,559
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ks-icon" width="1">
+                                                <span class="la la-users ks-color-info"></span>
+                                            </td>
+                                            <td colspan="2">
+                                                <div class="ks-text">25 new subscribes</div>
+                                                <div class="ks-datetime">Yesterday at 8:00</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card panel panel-default ks-widget ks-news">
+                                <div class="card-header">
+                                    News
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control ks-update"><span class="ks-icon la la-refresh"></span></a>
+                                    </div>
+                                </div>
+                                <div class="card-block ks-scrollable" data-height="218">
+                                    <ul class="ks-list">
+                                        <li>
+                                            <a href="#" class="ks-item">
+                                                <span class="ks-datetime">Today</span>
+                                                <span class="ks-text">
+                                                    Lorem ipsum dolor sit amet, feugiat velit cursus est fermentum massa, amet nulla nulla id praesent arcu, gravida volutpat, magna sem sagittis platea felis, vitae mollis consequatur adipiscing nam. Quam et amet duis integer, eros ut dolor tortor molestie donec viverra, vel justo semper leo eu leo tortor.
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ks-item">
+                                                <span class="ks-datetime">Today</span>
+                                                <span class="ks-text">
+                                                    Lorem ipsum dolor sit amet, feugiat velit cursus est fermentum massa, amet nulla nulla id praesent arcu, gravida volutpat, magna sem sagittis platea felis, vitae mollis consequatur adipiscing nam. Quam et amet duis integer, eros ut dolor tortor molestie donec viverra, vel justo semper leo eu leo tortor.
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ks-item">
+                                                <span class="ks-datetime">Today</span>
+                                                <span class="ks-text">
+                                                    Lorem ipsum dolor sit amet, feugiat velit cursus est fermentum massa, amet nulla nulla id praesent arcu, gravida volutpat, magna sem sagittis platea felis, vitae mollis consequatur adipiscing nam. Quam et amet duis integer, eros ut dolor tortor molestie donec viverra, vel justo semper leo eu leo tortor.
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ks-item">
+                                                <span class="ks-datetime">Today</span>
+                                                <span class="ks-text">
+                                                    Lorem ipsum dolor sit amet, feugiat velit cursus est fermentum massa, amet nulla nulla id praesent arcu, gravida volutpat, magna sem sagittis platea felis, vitae mollis consequatur adipiscing nam. Quam et amet duis integer, eros ut dolor tortor molestie donec viverra, vel justo semper leo eu leo tortor.
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/d3/d3.min.js"></script>
+<script src="libs/c3js/c3.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('.ks-update').on('click', function() {
+            var card = $(this).closest('.card');
+
+            card.LoadingOverlay("show", {
+                image: "",
+                custom: $("<div>", {
+                    text: 'Loading...'
+                }),
+                color: "rgba(255, 255, 255, 0.6)",
+                zIndex: 2
+            });
+
+            setTimeout(function() {
+                card.LoadingOverlay("hide");
+            }, 2000);
+        });
+
+        var chart = c3.generate({
+            bindto: '#ks-chart',
+            data: {
+                columns: [
+                    ['data1', 300, 350, 300, 0, 0, 0],
+                    ['data2', 130, 100, 140, 200, 150, 50]
+                ],
+                types: {
+                    data1: 'area-spline',
+                    data2: 'area-spline'
+                },
+                colors: {
+                    data1: '#3a529b',
+                    data2: '#cb48bb'
+                }
+            }
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

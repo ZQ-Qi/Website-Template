@@ -1,0 +1,51 @@
+/*---------------------------
+
+Start Faq
+
+---------------------------*/
+.panel-group{
+  margin-bottom: $gaping-0;
+}
+.panel-heading {
+  .accordion-toggle {
+    &:after {
+      font-family: 'Glyphicons Halflings';
+      content: "\e114";
+      float: $right-division;
+      color: $light-gray-text-color;
+    }
+    &.collapsed {
+      &:after {
+        content: "\e080";
+      }
+    }
+  }
+}
+#accordion2{
+  .panel-heading{
+    .accordion-toggle{
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+/*---- Start responsive Faq ----*/
+@media (max-width:991px) {
+  .panel-heading {
+    padding: 5px 15px;
+  }
+}
+@media (max-width:479px) {
+  .panel-title {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+/*---- End responsive Faq ----*/
+
+/*---------------------------
+
+End Faq
+
+---------------------------*/

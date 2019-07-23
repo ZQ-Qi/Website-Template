@@ -1,0 +1,180 @@
+// ================================================================================================
+//  File Name: dashboard-analytics.scss
+//  Description: SCC file for analytics dashboard page.
+//  ----------------------------------------------------------------------------------------------
+//  Item Name: Chameleon Admin - Modern Bootstrap 4 WebApp & Dashboard HTML Template + UI Kit
+//  Version: 1.0
+//  Author: ThemeSelection
+//  Author URL: https://themeforest.net/user/themeselect
+// ================================================================================================
+// Core variables and mixins
+@import "../bootstrap/functions";
+@import "../bootstrap/mixins";
+@import "../bootstrap-extended/mixins";
+
+// Load variable overrides
+@import "../core/variables/variables";
+@import "../core/variables/components-variables";
+
+// Overrides user variable
+@import "../../../assets/scss/variables/variables";
+@import "../../../assets/scss/variables/components-variables";
+
+
+// Project stats chart CSS Starts
+#project-stats .ct-series-a .ct-area {
+    fill-opacity: 1;
+    fill: url(#area-gradient) !important;
+}
+
+#project-stats .ct-series-b .ct-area {
+    fill-opacity: 0.3;
+    fill: url(#area-gradient) !important;
+}
+
+#project-stats .ct-series-c .ct-area {
+    fill-opacity: 0.15;
+    fill: url(#area-gradient) !important;
+}
+
+
+#project-stats .ct-line {
+    stroke-width: 0px;
+}
+
+#project-stats .ct-series-b .ct-point {
+    stroke-width: 0px;
+}
+
+
+#project-stats .ct-series-b {
+    .ct-point-circle {
+        display: none;
+    }
+    .ct-point-circle-transperent {
+        display: none;
+    }
+}
+
+#project-stats .ct-point {
+    fill: transparent;
+    stroke: transparent;
+}
+
+
+#project-stats .ct-series-a .ct-point-circle {
+    fill: #7396ff;
+    stroke-width: 7;
+    stroke: #fff;
+}
+
+#project-stats .ct-series-c .ct-point-circle {
+    fill: #f8a1ec;
+    stroke-width: 7;
+    stroke: #fff;
+}
+
+#project-stats .ct-series-b .ct-point-circle {
+    fill: transparent;
+}
+
+.areaGradientShadow1 {
+    filter: drop-shadow( 0px -4px 4px rgba(115, 150, 255, 0.5));
+    /* Same syntax as box-shadow, except for the spread property */
+}
+
+#project-stats .ct-series-a .ct-point-circle-transperent {
+    fill: transparent;
+}
+
+#project-stats .ct-series-b .ct-point-circle-transperent {
+    fill: transparent;
+}
+
+#project-stats .ct-series-c .ct-point-circle-transperent {
+    fill: transparent;
+}
+
+
+// Project stats chart CSS Ends
+// Analytics Donut Chart  CSS Ends
+#Analytics-donut-chart .ct-slice-donut-solid {
+    fill: url(#donutGradient1);
+}
+
+#Analytics-donut-chart .ct-label {
+    text-anchor: middle;
+    alignment-baseline: middle;
+    font-size: 30px;
+    font-weight: 700;
+    fill: rgba(255, 255, 255, 0.8);
+}
+
+#Analytics-donut-chart .ct-chart-donut .ct-series {
+    stroke: #fff;
+    stroke-width: 0px;
+}
+
+.donutShadow {    
+    filter: drop-shadow(-5px 4px 6px rgba(0, 0, 0, 0.5));
+    /* Same syntax as box-shadow, except for the spread property */
+} //  Analytics  Donut Chart  CSS Ends  
+// Project Income Chart CSS Starts
+#project-income-chart .ct-series-a {
+    .ct-bar {
+        stroke: url(#barGradient2);
+    }
+    .ct-slice-pie {
+        fill: rgba(249, 111, 155, 1);
+    }
+}
+
+.BarChartShadow {
+    -webkit-filter: drop-shadow(-4px 9px 4px rgba(0, 0, 0, .3));
+    filter: drop-shadow(-4px 9px 4px rgba(0, 0, 0, .3));
+    /* Same syntax as box-shadow, except 
+                                                     for the spread property */
+}
+
+// Project Income CSS Starts
+// New Projcts Chart CSS Starts
+#new-projects .ct-series.ct-series-a .ct-line {
+    stroke: url(#linear6) !important;
+    stroke-width: 4px;
+}
+
+#new-projects .ct-series.ct-series-a .ct-point-circle {
+    fill: url(#linear6) !important;
+    stroke-width: 9;
+    stroke: #fff;
+}
+
+#new-projects .ct-series.ct-series-b .ct-line {
+    stroke: url(#linear7) !important;
+    stroke-width: 4px;
+}
+
+
+#new-projects .ct-series-a .ct-point-circle-transperent {
+    fill: transparent;
+}
+
+#new-projects .ct-series-b .ct-point-circle-transperent {
+    fill: transparent;
+}
+
+
+.GradientlineShadow {
+    -webkit-filter: drop-shadow( 0px -8px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow( 0px -8px 4px rgba(0, 0, 0, 0.2));
+    /* Same syntax as box-shadow, except 
+                                                       for the spread property */
+}
+
+// New Projcts Chart  CSS Ends
+.chat-application {
+    .chats {
+        position: relative;
+        padding: 0 .5rem;
+    }
+}

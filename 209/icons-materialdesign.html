@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Kharna-Admin Dashboard</title>
+		<!--favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+		<!--Bootstrap.min css-->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+		<!--mCustomScrollbar css-->
+		<link rel="stylesheet" href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css">
+
+		<!--Style css-->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!--Icons css-->
+		<link rel="stylesheet" href="assets/css/icons.css">
+
+		<!--Sidemenu css-->
+		<link rel="stylesheet" href="assets/plugins/toggle-menu/sidemenu.css">
+
+	</head>
+
+	<body class="app ">
+
+		<div id="spinner"></div>
+
+		<div id="app">
+			<div class="main-wrapper" >
+				<nav class="navbar navbar-expand-lg main-navbar">
+					<a class="header-brand" href="index.html">
+						<img src="assets/img/brand/logo.png" class="header-brand-img" alt="Kharna-Admin  logo">
+					</a>
+					<form class="form-inline mr-auto">
+						<ul class="navbar-nav mr-3">
+							<li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="ion ion-navicon-round"></i></a></li>
+							<li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-md-none navsearch"><i class="ion ion-search"></i></a></li>
+						</ul>
+						<div class="search-element">
+							<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-primary" type="submit"><i class="ion ion-search"></i></button>
+						</div>
+					</form>
+					<ul class="navbar-nav navbar-right">
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="ion-ios-email-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Messages
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-1.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Stewart Ball</b>
+													<p>Your template awesome</p>
+												</div>
+												<div class="time">6 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item dropdown-item-unread">
+										<img alt="image" src="assets/img/avatar/avatar-2.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Jonathan North</b>
+													<p>Your Order Shipped.....</p>
+												</div>
+												<div class="time">45 mins ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-4.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Victor Taylor</b>
+													<p>Hi!, I' am web developer</p>
+												</div>
+												<div class="time"> 8 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-3.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Ruth	Arnold</b>
+													<p>Hi!, I' am web designer</p>
+												</div>
+												<div class="time"> 3 hours ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<img alt="image" src="assets/img/avatar/avatar-5.jpeg" class="rounded-circle dropdown-item-img">
+										<div class="dropdown-item-desc">
+											<div class="dropdownmsg d-flex">
+												<div class="">
+													<b>Sam	Lyman</b>
+													<p>Hi!, I' am java developer</p>
+												</div>
+												<div class="time"> 15 mintues ago</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg beep"><i class="ion-ios-bell-outline"></i></a>
+							<div class="dropdown-menu dropdown-list dropdown-menu-right">
+								<div class="dropdown-header">Notifications
+									<div class="float-right">
+										<a href="#">View All</a>
+									</div>
+								</div>
+								<div class="dropdown-list-content">
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-exclamation-triangle text-danger"></i>
+										<div class="dropdown-item-desc">
+											<b>Error message occurred....</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-warning"></i>
+										<div class="dropdown-item-desc">
+											<b> Adding new people</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-shopping-cart text-success"></i>
+										<div class="dropdown-item-desc">
+											<b>Your items Arrived</b>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-comment text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>New Message received</b> <div class="float-right"><span class="badge badge-pill badge-danger badge-sm">67</span></div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item">
+										<i class="fa fa-users text-primary"></i>
+										<div class="dropdown-item-desc">
+											<b>So many Users Visit your template</b>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown dropdown-list-toggle">
+							<a href="#" class="nav-link nav-link-lg full-screen-link">
+								<i class="ion-arrow-expand"  id="fullscreen-button"></i>
+							</a>
+						</li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+							<img src="assets/img/avatar/avatar-1.jpeg" alt="profile-user" class="rounded-circle w-32">
+							<div class="d-sm-none d-lg-inline-block">Jessica Lee</div></a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-android-person"></i> Profile
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion-android-drafts"></i> Messages
+								</a>
+								<a href="profile.html" class="dropdown-item has-icon">
+									<i class="ion ion-gear-a"></i> Settings
+								</a>
+								<a href="#" class="dropdown-item has-icon">
+									<i class="ion-ios-redo"></i> Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+
+				<aside class="app-sidebar">
+					<div class="app-sidebar__user">
+					    <div class="dropdown">
+							<a class="nav-link pl-2 pr-2 leading-none d-flex" data-toggle="dropdown" href="#">
+								<img alt="image" src="assets/img/avatar/avatar-1.jpeg" class=" avatar-md rounded-circle">
+								<span class="ml-2 d-lg-block">
+									<span class="text-white app-sidebar__user-name mt-5">Jessica Lee</span><br>
+									<span class="text-muted app-sidebar__user-name text-sm"> Web-Designer</span>
+								</span>
+							</a>
+						</div>
+					</div>
+					<ul class="side-menu">
+						<li class="slide">
+							<a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Dashboard</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a class="slide-item"  href="index.html"><span>Dashboard 01</span></a></li>
+								<li><a class="slide-item" href="index2.html"><span>Dashboard 02</span></a></li>
+								<li><a class="slide-item" href="index3.html"><span>Dashboard 03</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="side-menu__item" href="widgets.html"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">Widgets</span></a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tasks"></i><span class="side-menu__label">UI Elements</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="elements.html" class="slide-item"> Elements</a></li>
+								<li><a href="buttons.html" class="slide-item"> Buttons</a></li>
+								<li><a href="toastr.html" class="slide-item"> Toastr</a></li>
+								<li><a href="calender.html" class="slide-item"> Calendar</a></li>
+								<li><a href="rangesliders.html" class="slide-item"> Rangeslider</a></li>
+								<li><a href="modals.html" class="slide-item"> Modals</a></li>
+								<li><a href="timeline.html" class="slide-item"> Timeline</a></li>
+								<li><a href="invoice.html" class="slide-item"> Invoice</a></li>
+								<li><a href="users.html" class="slide-item"> Users List</a></li>
+								<li><a href="mailinbox.html" class="slide-item"> Mail-inbox</a></li>
+								<li><a href="mail-compose.html" class="slide-item"> Mail-Compose</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+						    <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-paw"></i><span class="side-menu__label">Icons</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="icons-ion.html" class="slide-item"> Ion Icons</a></li>
+								<li><a href="icons-fontawesome.html" class="slide-item"> Font Awesome</a></li>
+								<li><a href="icons-feather.html" class="slide-item"> Feather Awesome</a></li>
+								<li><a href="icons-materialdesign.html" class="slide-item"> Material Design</a></li>
+								<li><a href="icons-themify.html" class="slide-item"> Themify</a></li>
+								<li><a href="icons-simpleline.html" class="slide-item"> Simple line</a></li>
+								<li><a href="icons-pe7.html" class="slide-item"> pe7</a></li>
+								<li><a href="icons-flag.html" class="slide-item"> Flag Icons</a></li>
+								<li><a href="icons-weather.html" class="slide-item"> Weather Icons</a></li>
+								<li><a href="icons-typicons.html" class="slide-item"> Typicons</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-table"></i><span class="side-menu__label">Tables</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="table.html" class="slide-item">Basic Tables</a></li>
+								<li><a href="datatables.html" class="slide-item"> Data Tables</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-file-text"></i><span class="side-menu__label">Forms</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="formelements.html" class="slide-item"> Form Elements</a></li>
+								<li><a href="formadvanced.html" class="slide-item"> Advanced Form</a></li>
+								<li><a href="formeditor.html" class="slide-item"> Form Editor</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-bar-chart"></i><span class="side-menu__label">Charts</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="chartjs.html" class="slide-item">Chart Js</a></li>
+								<li><a href="flotcharts.html" class="slide-item"> Flot Charts</a></li>
+								<li><a href="barcharts.html" class="slide-item"> Bar Charts</a></li>
+								<li><a href="echart.html" class="slide-item"> ECharts</a></li>
+								<li><a href="chartist.html" class="slide-item"> Chartist</a></li>
+								<li><a href="morris.html" class="slide-item"> Morris Charts</a></li>
+								<li><a href="othercharts.html" class="slide-item"> Other Charts</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-map"></i><span class="side-menu__label">Maps</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="maps.html" class="slide-item"> Google Maps</a></li>
+								<li><a href="vector-map.html" class="slide-item">Vector Maps</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-pie-chart"></i><span class="side-menu__label">Pages</span><i class="angle fa fa-angle-right"></i></a>
+							<ul class="slide-menu">
+								<li><a href="profile.html" class="slide-item"> Profile</a></li>
+								<li><a href="pricing-tables.html" class="slide-item"> Pricing Tables</a></li>
+								<li><a href="gallery.html" class="slide-item"> Gallery</a></li>
+								<li><a href="shop.html" class="slide-item"> Shop</a></li>
+								<li><a href="shop-cart.html" class="slide-item"> Shop Cart</a></li>
+								<li><a href="terms.html" class="slide-item"> Terms and Conditions</a></li>
+								<li><a href="register.html" class="slide-item"> Register</a></li>
+								<li><a href="login.html" class="slide-item"> Login</a></li>
+								<li><a href="forgot.html" class="slide-item"> Forgot Password</a></li>
+								<li><a href="reset.html" class="slide-item"> Reset Password</a></li>
+								<li><a href="under-construction.html" class="slide-item"> Under Construction</a></li>
+								<li><a href="lockscreen.html" class="slide-item"> Lock Screen</a></li>
+								<li><a href="404.html" class="slide-item"> 404</a></li>
+								<li><a href="505.html" class="slide-item"> 505</a></li>
+								<li><a href="emptypage.html" class="slide-item"> Empty  Page</a></li>
+							</ul>
+						</li>
+					</ul>
+				</aside>
+
+				<div class="app-content">
+					<section class="section">
+                    	<ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Icons</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">MaterialDesign Icons</li>
+                        </ol>
+
+						<div class="section-body">
+							<div class="card">
+								<div class="card-header">
+									<h4>MaterialDesign Icons</h4>
+								</div>
+								<div class="card-body">
+									<ul id="icons" class="icons-item">
+										<li class=""><i class="mdi mdi-access-point" data-toggle="tooltip" title="mdi-access-point"></i></li>
+										<li class=""><i class="mdi mdi-access-point-network" data-toggle="tooltip" title="mdi-access-point-network"></i></li>
+										<li class=""><i class="mdi mdi-account" data-toggle="tooltip" title="mdi-account"></i></li>
+										<li class=""><i class="mdi mdi-account-alert" data-toggle="tooltip" title="mdi-account-alert"></i></li>
+										<li class=""><i class="mdi mdi-account-box" data-toggle="tooltip" title="mdi-account-box"></i></li>
+										<li class=""><i class="mdi mdi-account-box-outline" data-toggle="tooltip" title="mdi-account-box-outline"></i></li>
+										<li class=""><i class="mdi mdi-account-card-details" data-toggle="tooltip" title="mdi-account-card-details"></i></li>
+										<li class=""><i class="mdi mdi-account-check" data-toggle="tooltip" title="mdi-account-check"></i></li>
+										<li class=""><i class="mdi mdi-account-circle" data-toggle="tooltip" title="mdi-account-circle"></i></li>
+										<li class=""><i class="mdi mdi-account-convert" data-toggle="tooltip" title="mdi-account-convert"></i></li>
+										<li class=""><i class="mdi mdi-account-edit" data-toggle="tooltip" title="mdi-account-edit"></i></li>
+										<li class=""><i class="mdi mdi-account-key" data-toggle="tooltip" title="mdi-account-key"></i></li>
+										<li class=""><i class="mdi mdi-account-location" data-toggle="tooltip" title="mdi-account-location"></i></li>
+										<li class=""><i class="mdi mdi-account-minus" data-toggle="tooltip" title="mdi-account-minus"></i></li>
+										<li class=""><i class="mdi mdi-account-multiple" data-toggle="tooltip" title="mdi-account-multiple"></i></li>
+										<li class=""><i class="mdi mdi-account-multiple-minus" data-toggle="tooltip" title="mdi-account-multiple-minus"></i></li>
+										<li class=""><i class="mdi mdi-account-multiple-outline" data-toggle="tooltip" title="mdi-account-multiple-outline"></i></li>
+										<li class=""><i class="mdi mdi-account-multiple-plus" data-toggle="tooltip" title="mdi-account-multiple-plus"></i></li>
+										<li class=""><i class="mdi mdi-account-network" data-toggle="tooltip" title="mdi-account-network"></i></li>
+										<li class=""><i class="mdi mdi-account-off" data-toggle="tooltip" title="mdi-account-off"></i></li>
+										<li class=""><i class="mdi mdi-account-outline" data-toggle="tooltip" title="mdi-account-outline"></i></li>
+										<li class=""><i class="mdi mdi-account-plus" data-toggle="tooltip" title="mdi-account-plus"></i></li>
+										<li class=""><i class="mdi mdi-account-remove" data-toggle="tooltip" title="mdi-account-remove"></i></li>
+										<li class=""><i class="mdi mdi-account-search" data-toggle="tooltip" title="mdi-account-search"></i></li>
+										<li class=""><i class="mdi mdi-account-settings" data-toggle="tooltip" title="mdi-account-settings"></i></li>
+										<li class=""><i class="mdi mdi-account-settings-variant" data-toggle="tooltip" title="mdi-account-settings-variant"></i></li>
+										<li class=""><i class="mdi mdi-account-star" data-toggle="tooltip" title="mdi-account-star"></i></li>
+										<li class=""><i class="mdi mdi-account-switch" data-toggle="tooltip" title="mdi-account-switch"></i></li>
+										<li class=""><i class="mdi mdi-adjust" data-toggle="tooltip" title="mdi-adjust"></i></li>
+										<li class=""><i class="mdi mdi-air-conditioner" data-toggle="tooltip" title="mdi-air-conditioner"></i></li>
+										<li class=""><i class="mdi mdi-airballoon" data-toggle="tooltip" title="mdi-airballoon"></i></li>
+										<li class=""><i class="mdi mdi-airplane" data-toggle="tooltip" title="mdi-airplane"></i></li>
+										<li class=""><i class="mdi mdi-airplane-landing" data-toggle="tooltip" title="mdi-airplane-landing"></i></li>
+										<li class=""><i class="mdi mdi-airplane-off" data-toggle="tooltip" title="mdi-airplane-off"></i></li>
+										<li class=""><i class="mdi mdi-airplane-takeoff" data-toggle="tooltip" title="mdi-airplane-takeoff"></i></li>
+										<li class=""><i class="mdi mdi-airplay" data-toggle="tooltip" title="mdi-airplay"></i></li>
+										<li class=""><i class="mdi mdi-alarm" data-toggle="tooltip" title="mdi-alarm"></i></li>
+										<li class=""><i class="mdi mdi-alarm-bell" data-toggle="tooltip" title="mdi-alarm-bell"></i></li>
+										<li class=""><i class="mdi mdi-alarm-check" data-toggle="tooltip" title="mdi-alarm-check"></i></li>
+										<li class=""><i class="mdi mdi-alarm-light" data-toggle="tooltip" title="mdi-alarm-light"></i></li>
+										<li class=""><i class="mdi mdi-alarm-multiple" data-toggle="tooltip" title="mdi-alarm-multiple"></i></li>
+										<li class=""><i class="mdi mdi-alarm-off" data-toggle="tooltip" title="mdi-alarm-off"></i></li>
+										<li class=""><i class="mdi mdi-alarm-plus" data-toggle="tooltip" title="mdi-alarm-plus"></i></li>
+										<li class=""><i class="mdi mdi-alarm-snooze" data-toggle="tooltip" title="mdi-alarm-snooze"></i></li>
+										<li class=""><i class="mdi mdi-album" data-toggle="tooltip" title="mdi-album"></i></li>
+										<li class=""><i class="mdi mdi-alert" data-toggle="tooltip" title="mdi-alert"></i></li>
+										<li class=""><i class="mdi mdi-alert-box" data-toggle="tooltip" title="mdi-alert-box"></i></li>
+										<li class=""><i class="mdi mdi-alert-circle" data-toggle="tooltip" title="mdi-alert-circle"></i></li>
+										<li class=""><i class="mdi mdi-alert-circle-outline" data-toggle="tooltip" title="mdi-alert-circle-outline"></i></li>
+										<li class=""><i class="mdi mdi-alert-decagram" data-toggle="tooltip" title="mdi-alert-decagram"></i></li>
+										<li class=""><i class="mdi mdi-alert-octagon" data-toggle="tooltip" title="mdi-alert-octagon"></i></li>
+										<li class=""><i class="mdi mdi-alert-octagram" data-toggle="tooltip" title="mdi-alert-octagram"></i></li>
+										<li class=""><i class="mdi mdi-alert-outline" data-toggle="tooltip" title="mdi-alert-outline"></i></li>
+										<li class=""><i class="mdi mdi-all-inclusive" data-toggle="tooltip" title="mdi-all-inclusive"></i></li>
+										<li class=""><i class="mdi mdi-alpha" data-toggle="tooltip" title="mdi-alpha"></i></li>
+										<li class=""><i class="mdi mdi-alphabetical" data-toggle="tooltip" title="mdi-alphabetical"></i></li>
+										<li class=""><i class="mdi mdi-altimeter" data-toggle="tooltip" title="mdi-altimeter"></i></li>
+										<li class=""><i class="mdi mdi-amazon" data-toggle="tooltip" title="mdi-amazon"></i></li>
+										<li class=""><i class="mdi mdi-amazon-clouddrive" data-toggle="tooltip" title="mdi-amazon-clouddrive"></i></li>
+										<li class=""><i class="mdi mdi-ambulance" data-toggle="tooltip" title="mdi-ambulance"></i></li>
+										<li class=""><i class="mdi mdi-amplifier" data-toggle="tooltip" title="mdi-amplifier"></i></li>
+										<li class=""><i class="mdi mdi-anchor" data-toggle="tooltip" title="mdi-anchor"></i></li>
+										<li class=""><i class="mdi mdi-android" data-toggle="tooltip" title="mdi-android"></i></li>
+										<li class=""><i class="mdi mdi-android-debug-bridge" data-toggle="tooltip" title="mdi-android-debug-bridge"></i></li>
+										<li class=""><i class="mdi mdi-android-head" data-toggle="tooltip" title="mdi-android-head"></i></li>
+										<li class=""><i class="mdi mdi-android-studio" data-toggle="tooltip" title="mdi-android-studio"></i></li>
+										<li class=""><i class="mdi mdi-angular" data-toggle="tooltip" title="mdi-angular"></i></li>
+										<li class=""><i class="mdi mdi-angularjs" data-toggle="tooltip" title="mdi-angularjs"></i></li>
+										<li class=""><i class="mdi mdi-animation" data-toggle="tooltip" title="mdi-animation"></i></li>
+										<li class=""><i class="mdi mdi-apple" data-toggle="tooltip" title="mdi-apple"></i></li>
+										<li class=""><i class="mdi mdi-apple-finder" data-toggle="tooltip" title="mdi-apple-finder"></i></li>
+										<li class=""><i class="mdi mdi-apple-ios" data-toggle="tooltip" title="mdi-apple-ios"></i></li>
+										<li class=""><i class="mdi mdi-apple-keyboard-caps" data-toggle="tooltip" title="mdi-apple-keyboard-caps"></i></li>
+										<li class=""><i class="mdi mdi-apple-keyboard-command" data-toggle="tooltip" title="mdi-apple-keyboard-command"></i></li>
+										<li class=""><i class="mdi mdi-apple-keyboard-control" data-toggle="tooltip" title="mdi-apple-keyboard-control"></i></li>
+										<li class=""><i class="mdi mdi-apple-keyboard-option" data-toggle="tooltip" title="mdi-apple-keyboard-option"></i></li>
+										<li class=""><i class="mdi mdi-apple-keyboard-shift" data-toggle="tooltip" title="mdi-apple-keyboard-shift"></i></li>
+										<li class=""><i class="mdi mdi-apple-mobileme" data-toggle="tooltip" title="mdi-apple-mobileme"></i></li>
+										<li class=""><i class="mdi mdi-apple-safari" data-toggle="tooltip" title="mdi-apple-safari"></i></li>
+										<li class=""><i class="mdi mdi-application" data-toggle="tooltip" title="mdi-application"></i></li>
+										<li class=""><i class="mdi mdi-approval" data-toggle="tooltip" title="mdi-approval"></i></li>
+										<li class=""><i class="mdi mdi-apps" data-toggle="tooltip" title="mdi-apps"></i></li>
+										<li class=""><i class="mdi mdi-archive" data-toggle="tooltip" title="mdi-archive"></i></li>
+										<li class=""><i class="mdi mdi-arrange-bring-forward" data-toggle="tooltip" title="mdi-arrange-bring-forward"></i></li>
+										<li class=""><i class="mdi mdi-arrange-send-to-back" data-toggle="tooltip" title="mdi-arrange-send-to-back"></i></li>
+										<li class=""><i class="mdi mdi-arrange-bring-to-front" data-toggle="tooltip" title="mdi-arrange-bring-to-front"></i></li>
+										<li class=""><i class="mdi mdi-arrange-send-backward" data-toggle="tooltip" title="mdi-arrange-send-backward"></i></li>
+										<li class=""><i class="mdi mdi-arrow-all" data-toggle="tooltip" title="mdi-arrow-all"></i></li>
+										<li class=""><i class="mdi mdi-arrow-bottom-left" data-toggle="tooltip" title="mdi-arrow-bottom-left"></i></li>
+										<li class=""><i class="mdi mdi-arrow-bottom-right" data-toggle="tooltip" title="mdi-arrow-bottom-right"></i></li>
+										<li class=""><i class="mdi mdi-arrow-collapse" data-toggle="tooltip" title="mdi-arrow-collapse"></i></li>
+										<li class=""><i class="mdi mdi-arrow-collapse-all" data-toggle="tooltip" title="mdi-arrow-collapse-all"></i></li>
+										<li class=""><i class="mdi mdi-arrow-collapse-down" data-toggle="tooltip" title="mdi-arrow-collapse-down"></i></li>
+										<li class=""><i class="mdi mdi-arrow-collapse-left" data-toggle="tooltip" title="mdi-arrow-collapse-left"></i></li>
+										<li class=""><i class="mdi mdi-arrow-collapse-right" data-toggle="tooltip" title="mdi-arrow-collapse-right"></i></li>
+										<li class=""><i class="mdi mdi-arrow-collapse-up" data-toggle="tooltip" title="mdi-arrow-collapse-up"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down" data-toggle="tooltip" title="mdi-arrow-down"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-bold" data-toggle="tooltip" title="mdi-arrow-down-bold"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-bold-box" data-toggle="tooltip" title="mdi-arrow-down-bold-box"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-bold-box-outline" data-toggle="tooltip" title="mdi-arrow-down-bold-box-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-bold-circle" data-toggle="tooltip" title="mdi-arrow-down-bold-circle"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-bold-circle-outline" data-toggle="tooltip" title="mdi-arrow-down-bold-circle-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-bold-hexagon-outline" data-toggle="tooltip" title="mdi-arrow-down-bold-hexagon-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-box" data-toggle="tooltip" title="mdi-arrow-down-box"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-drop-circle" data-toggle="tooltip" title="mdi-arrow-down-drop-circle"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-drop-circle-outline" data-toggle="tooltip" title="mdi-arrow-down-drop-circle-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-down-thick" data-toggle="tooltip" title="mdi-arrow-down-thick"></i></li>
+										<li class=""><i class="mdi mdi-arrow-expand" data-toggle="tooltip" title="mdi-arrow-expand"></i></li>
+										<li class=""><i class="mdi mdi-arrow-expand-all" data-toggle="tooltip" title="mdi-arrow-expand-all"></i></li>
+										<li class=""><i class="mdi mdi-arrow-expand-down" data-toggle="tooltip" title="mdi-arrow-expand-down"></i></li>
+										<li class=""><i class="mdi mdi-arrow-expand-left" data-toggle="tooltip" title="mdi-arrow-expand-left"></i></li>
+										<li class=""><i class="mdi mdi-arrow-expand-right" data-toggle="tooltip" title="mdi-arrow-expand-right"></i></li>
+										<li class=""><i class="mdi mdi-arrow-expand-up" data-toggle="tooltip" title="mdi-arrow-expand-up"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left" data-toggle="tooltip" title="mdi-arrow-left"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-bold" data-toggle="tooltip" title="mdi-arrow-left-bold"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-bold-box" data-toggle="tooltip" title="mdi-arrow-left-bold-box"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-bold-box-outline" data-toggle="tooltip" title="mdi-arrow-left-bold-box-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-bold-circle" data-toggle="tooltip" title="mdi-arrow-left-bold-circle"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-bold-circle-outline" data-toggle="tooltip" title="mdi-arrow-left-bold-circle-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-bold-hexagon-outline" data-toggle="tooltip" title="mdi-arrow-left-bold-hexagon-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-box" data-toggle="tooltip" title="mdi-arrow-left-box"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-drop-circle" data-toggle="tooltip" title="mdi-arrow-left-drop-circle"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-drop-circle-outline" data-toggle="tooltip" title="mdi-arrow-left-drop-circle-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-left-thick" data-toggle="tooltip" title="mdi-arrow-left-thick"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right" data-toggle="tooltip" title="mdi-arrow-right"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-bold" data-toggle="tooltip" title="mdi-arrow-right-bold"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-bold-box" data-toggle="tooltip" title="mdi-arrow-right-bold-box"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-bold-box-outline" data-toggle="tooltip" title="mdi-arrow-right-bold-box-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-bold-circle" data-toggle="tooltip" title="mdi-arrow-right-bold-circle"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-bold-circle-outline" data-toggle="tooltip" title="mdi-arrow-right-bold-circle-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-bold-hexagon-outline" data-toggle="tooltip" title="mdi-arrow-right-bold-hexagon-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-box" data-toggle="tooltip" title="mdi-arrow-right-box"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-drop-circle" data-toggle="tooltip" title="mdi-arrow-right-drop-circle"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-drop-circle-outline" data-toggle="tooltip" title="mdi-arrow-right-drop-circle-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-right-thick" data-toggle="tooltip" title="mdi-arrow-right-thick"></i></li>
+										<li class=""><i class="mdi mdi-arrow-top-left" data-toggle="tooltip" title="mdi-arrow-top-left"></i></li>
+										<li class=""><i class="mdi mdi-arrow-top-right" data-toggle="tooltip" title="mdi-arrow-top-right"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up" data-toggle="tooltip" title="mdi-arrow-up"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-bold" data-toggle="tooltip" title="mdi-arrow-up-bold"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-bold-box" data-toggle="tooltip" title="mdi-arrow-up-bold-box"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-bold-box-outline" data-toggle="tooltip" title="mdi-arrow-up-bold-box-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-bold-circle" data-toggle="tooltip" title="mdi-arrow-up-bold-circle"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-bold-circle-outline" data-toggle="tooltip" title="mdi-arrow-up-bold-circle-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-bold-hexagon-outline" data-toggle="tooltip" title="mdi-arrow-up-bold-hexagon-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-box" data-toggle="tooltip" title="mdi-arrow-up-box"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-drop-circle" data-toggle="tooltip" title="mdi-arrow-up-drop-circle"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-drop-circle-outline" data-toggle="tooltip" title="mdi-arrow-up-drop-circle-outline"></i></li>
+										<li class=""><i class="mdi mdi-arrow-up-thick" data-toggle="tooltip" title="mdi-arrow-up-thick"></i></li>
+										<li class=""><i class="mdi mdi-assistant" data-toggle="tooltip" title="mdi-assistant"></i></li>
+										<li class=""><i class="mdi mdi-asterisk" data-toggle="tooltip" title="mdi-asterisk"></i></li>
+										<li class=""><i class="mdi mdi-at" data-toggle="tooltip" title="mdi-at"></i></li>
+										<li class=""><i class="mdi mdi-atom" data-toggle="tooltip" title="mdi-atom"></i></li>
+										<li class=""><i class="mdi mdi-attachment" data-toggle="tooltip" title="mdi-attachment"></i></li>
+										<li class=""><i class="mdi mdi-audiobook" data-toggle="tooltip" title="mdi-audiobook"></i></li>
+										<li class=""><i class="mdi mdi-auto-fix" data-toggle="tooltip" title="mdi-auto-fix"></i></li>
+										<li class=""><i class="mdi mdi-auto-upload" data-toggle="tooltip" title="mdi-auto-upload"></i></li>
+										<li class=""><i class="mdi mdi-autorenew" data-toggle="tooltip" title="mdi-autorenew"></i></li>
+										<li class=""><i class="mdi mdi-av-timer" data-toggle="tooltip" title="mdi-av-timer"></i></li>
+										<li class=""><i class="mdi mdi-baby" data-toggle="tooltip" title="mdi-baby"></i></li>
+										<li class=""><i class="mdi mdi-baby-buggy" data-toggle="tooltip" title="mdi-baby-buggy"></i></li>
+										<li class=""><i class="mdi mdi-backburger" data-toggle="tooltip" title="mdi-backburger"></i></li>
+										<li class=""><i class="mdi mdi-backspace" data-toggle="tooltip" title="mdi-backspace"></i></li>
+										<li class=""><i class="mdi mdi-backup-restore" data-toggle="tooltip" title="mdi-backup-restore"></i></li>
+										<li class=""><i class="mdi mdi-bandcamp" data-toggle="tooltip" title="mdi-bandcamp"></i></li>
+										<li class=""><i class="mdi mdi-bank" data-toggle="tooltip" title="mdi-bank"></i></li>
+										<li class=""><i class="mdi mdi-barcode" data-toggle="tooltip" title="mdi-barcode"></i></li>
+										<li class=""><i class="mdi mdi-barcode-scan" data-toggle="tooltip" title="mdi-barcode-scan"></i></li>
+										<li class=""><i class="mdi mdi-barley" data-toggle="tooltip" title="mdi-barley"></i></li>
+										<li class=""><i class="mdi mdi-barrel" data-toggle="tooltip" title="mdi-barrel"></i></li>
+										<li class=""><i class="mdi mdi-basecamp" data-toggle="tooltip" title="mdi-basecamp"></i></li>
+										<li class=""><i class="mdi mdi-basket" data-toggle="tooltip" title="mdi-basket"></i></li>
+										<li class=""><i class="mdi mdi-basket-fill" data-toggle="tooltip" title="mdi-basket-fill"></i></li>
+										<li class=""><i class="mdi mdi-basket-unfill" data-toggle="tooltip" title="mdi-basket-unfill"></i></li>
+										<li class=""><i class="mdi mdi-battery" data-toggle="tooltip" title="mdi-battery"></i></li>
+										<li class=""><i class="mdi mdi-battery-10" data-toggle="tooltip" title="mdi-battery-10"></i></li>
+										<li class=""><i class="mdi mdi-battery-20" data-toggle="tooltip" title="mdi-battery-20"></i></li>
+										<li class=""><i class="mdi mdi-battery-30" data-toggle="tooltip" title="mdi-battery-30"></i></li>
+										<li class=""><i class="mdi mdi-battery-40" data-toggle="tooltip" title="mdi-battery-40"></i></li>
+										<li class=""><i class="mdi mdi-battery-50" data-toggle="tooltip" title="mdi-battery-50"></i></li>
+										<li class=""><i class="mdi mdi-battery-60" data-toggle="tooltip" title="mdi-battery-60"></i></li>
+										<li class=""><i class="mdi mdi-battery-70" data-toggle="tooltip" title="mdi-battery-70"></i></li>
+										<li class=""><i class="mdi mdi-battery-80" data-toggle="tooltip" title="mdi-battery-80"></i></li>
+										<li class=""><i class="mdi mdi-battery-90" data-toggle="tooltip" title="mdi-battery-90"></i></li>
+										<li class=""><i class="mdi mdi-battery-alert" data-toggle="tooltip" title="mdi-battery-alert"></i></li>
+										<li class=""><i class="mdi mdi-battery-charging" data-toggle="tooltip" title="mdi-battery-charging"></i></li>
+										<li class=""><i class="mdi mdi-battery-charging-100" data-toggle="tooltip" title="mdi-battery-charging-100"></i></li>
+										<li class=""><i class="mdi mdi-battery-charging-20" data-toggle="tooltip" title="mdi-battery-charging-20"></i></li>
+										<li class=""><i class="mdi mdi-battery-charging-30" data-toggle="tooltip" title="mdi-battery-charging-30"></i></li>
+										<li class=""><i class="mdi mdi-battery-charging-40" data-toggle="tooltip" title="mdi-battery-charging-40"></i></li>
+										<li class=""><i class="mdi mdi-battery-charging-60" data-toggle="tooltip" title="mdi-battery-charging-60"></i></li>
+										<li class=""><i class="mdi mdi-battery-charging-80" data-toggle="tooltip" title="mdi-battery-charging-80"></i></li>
+										<li class=""><i class="mdi mdi-battery-charging-90" data-toggle="tooltip" title="mdi-battery-charging-90"></i></li>
+										<li class=""><i class="mdi mdi-battery-minus" data-toggle="tooltip" title="mdi-battery-minus"></i></li>
+										<li class=""><i class="mdi mdi-battery-negative" data-toggle="tooltip" title="mdi-battery-negative"></i></li>
+										<li class=""><i class="mdi mdi-battery-outline" data-toggle="tooltip" title="mdi-battery-outline"></i></li>
+										<li class=""><i class="mdi mdi-battery-plus" data-toggle="tooltip" title="mdi-battery-plus"></i></li>
+										<li class=""><i class="mdi mdi-battery-unknown" data-toggle="tooltip" title="mdi-battery-unknown"></i></li>
+										<li class=""><i class="mdi mdi-beach" data-toggle="tooltip" title="mdi-beach"></i></li>
+										<li class=""><i class="mdi mdi-blank" data-toggle="tooltip" title="mdi-blank"></i></li>
+										<li class=""><i class="mdi mdi-zip-box" data-toggle="tooltip" title="mdi-zip-box"></i></li>
+										<li class=""><i class="mdi mdi-youtube-play" data-toggle="tooltip" title="mdi-youtube-play"></i></li>
+										<li class=""><i class="mdi mdi-yin-yang" data-toggle="tooltip" title="mdi-yin-yang"></i></li>
+										<li class=""><i class="mdi mdi-yelp" data-toggle="tooltip" title="mdi-yelp"></i></li>
+										<li class=""><i class="mdi mdi-yammer" data-toggle="tooltip" title="mdi-yammer"></i></li>
+										<li class=""><i class="mdi mdi-xmpp" data-toggle="tooltip" title="mdi-xmpp"></i></li>
+										<li class=""><i class="mdi mdi-xml" data-toggle="tooltip" title="mdi-xml"></i></li>
+										<li class=""><i class="mdi mdi-wrench" data-toggle="tooltip" title="mdi-wrench"></i></li>
+										<li class=""><i class="mdi mdi-wrap" data-toggle="tooltip" title="mdi-wrap"></i></li>
+										<li class=""><i class="mdi mdi-wunderlist" data-toggle="tooltip" title="mdi-wunderlist"></i></li>
+										<li class=""><i class="mdi mdi-wrench" data-toggle="tooltip" title="mdi-wrench"></i></li>
+										<li class=""><i class="mdi mdi-vpn" data-toggle="tooltip" title="mdi-vpn"></i></li>
+										<li class=""><i class="mdi mdi-volume-off" data-toggle="tooltip" title="mdi-volume-off"></i></li>
+										<li class=""><i class="mdi mdi-volume-mute" data-toggle="tooltip" title="mdi-volume-mute"></i></li>
+										<li class=""><i class="mdi mdi-vlc" data-toggle="tooltip" title="mdi-vlc"></i></li>
+										<li class=""><i class="mdi mdi-video" data-toggle="tooltip" title="mdi-video"></i></li>
+										<li class=""><i class="mdi mdi-usb" data-toggle="tooltip" title="mdi-usb"></i></li>
+										<li class=""><i class="mdi mdi-upload-network" data-toggle="tooltip" title="mdi-upload-network"></i></li>
+										<li class=""><i class="mdi mdi-update" data-toggle="tooltip" title="mdi-update"></i></li>
+										<li class=""><i class="mdi mdi-unity" data-toggle="tooltip" title="mdi-unity"></i></li>
+										<li class=""><i class="mdi mdi-undo" data-toggle="tooltip" title="mdi-undo"></i></li>
+										<li class=""><i class="mdi mdi-ubuntu" data-toggle="tooltip" title="mdi-ubuntu"></i></li>
+										<li class=""><i class="mdi mdi-tune" data-toggle="tooltip" title="mdi-tune"></i></li>
+										<li class=""><i class="mdi mdi-truck-trailer" data-toggle="tooltip" title="mdi-truck-trailer"></i></li>
+										<li class=""><i class="mdi mdi-truck" data-toggle="tooltip" title="mdi-truck"></i></li>
+										<li class=""><i class="mdi mdi-svg" data-toggle="tooltip" title="mdi-svg"></i></li>
+										<li class=""><i class="mdi mdi-subway" data-toggle="tooltip" title="mdi-subway"></i></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</section>
+				</div>
+
+				<footer class="main-footer">
+					<div class="text-center">
+						Copyright &copy;Kharna-Admin 2018. Design By<a href="https://17sucai.com/"> Spruko</a>
+					</div>
+				</footer>
+
+			</div>
+		</div>
+
+		<!--Jquery.min js-->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!--popper js-->
+		<script src="assets/js/popper.js"></script>
+
+		<!--Tooltip js-->
+		<script src="assets/js/tooltip.js"></script>
+
+		<!--Bootstrap.min js-->
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--Jquery.nicescroll.min js-->
+		<script src="assets/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+
+		<!--Scroll-up-bar.min js-->
+		<script src="assets/plugins/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+
+		<!--mCustomScrollbar js-->
+		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+		<!--Sidemenu js-->
+		<script src="assets/plugins/toggle-menu/sidemenu.js"></script>
+
+		<!--Scripts js-->
+		<script src="assets/js/scripts.js"></script>
+
+	</body>
+</html>

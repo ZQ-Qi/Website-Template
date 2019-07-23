@@ -1,0 +1,107 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Form Wizard (B) / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div id="form-wizard-b" class="main-container form-wizard-b">
+    <ul class="form-wizard-b__steps">
+      <li class="form-wizard-b__step is-current" data-step="1">
+        <span class="form-wizard-b__step-point">
+          <span class="form-wizard-b__step-point-value">1</span>
+          <span class="ua-icon-circle-check form-wizard-b__step-point-completed-icon"></span>
+        </span>
+        <span class="form-wizard-b__step-info">
+          <span class="form-wizard-b__step-name">Category</span>
+          <span class="form-wizard-b__step-desc">Equipment</span>
+        </span>
+      </li>
+      <li class="form-wizard-b__step" data-step="2">
+        <span class="form-wizard-b__step-point">
+          <span class="form-wizard-b__step-point-value">2</span>
+          <span class="ua-icon-circle-check form-wizard-b__step-point-completed-icon"></span>
+        </span>
+        <span class="form-wizard-b__step-info">
+          <span class="form-wizard-b__step-name">Product description</span>
+          <span class="form-wizard-b__step-desc">We'll need some names</span>
+        </span>
+      </li>
+      <li class="form-wizard-b__step" data-step="3">
+        <span class="form-wizard-b__step-point">
+          <span class="form-wizard-b__step-point-value">3</span>
+          <span class="ua-icon-circle-check form-wizard-b__step-point-completed-icon"></span>
+        </span>
+        <span class="form-wizard-b__step-info">
+          <span class="form-wizard-b__step-name">Pricing and images</span>
+        </span>
+      </li>
+    </ul>
+    <div class="form-wizard-b__body">
+      <div class="form-wizard-b__step-content is-current" data-step-content="1">
+        <form class="row">
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label for="product-title">Product title</label>
+                  <input type="text" class="form-control" id="product-title" placeholder="" value="Mercedes S Class suspension">
+                </div>
+                <div class="form-group">
+                  <label for="product-subtitle">Product sub title</label>
+                  <input type="text" class="form-control" id="product-subtitle" placeholder="A small description of state the product" value="">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label for="product-type">Type</label>
+                  <input type="text" class="form-control" id="product-type" placeholder="" value="AMG Suspension">
+                </div>
+                <div class="form-group">
+                  <label for="product-year">Year</label>
+                  <input type="text" class="form-control" id="product-year" placeholder="Year the product is made" value="">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label for="product-side">Side</label>
+                  <input type="text" class="form-control" id="product-side" placeholder="" value="Side of the suspension part">
+                </div>
+                <div class="form-group">
+                  <label for="product-state">State</label>
+                  <input type="text" class="form-control" id="product-state" placeholder="Is it new or used?" value="">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="product-desc">Product description</label>
+                  <textarea id="product-desc" rows="5" class="form-control" placeholder="A small description of state of the product, some HTML formating, is okay"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="form-wizard-b__step-content" data-step-content="2">Step 2</div>
+      <div class="form-wizard-b__step-content" data-step-content="3">Step 3</div>
+    </div>
+    <div class="form-wizard-b__controls">
+      <div class="form-wizard-b__tip">
+        <a href="#" class="link-info">Tips</a><br>
+        <span class="text-muted">Choose a more detailed name of your product, but keep it short. Your buyers know what they want</span>
+      </div>
+      <div class="form-wizard-b__controls-buttons">
+        <a href="#" class="btn btn-secondary form-wizard-b__control-prev disabled" data-step-control-prev>Back</a>
+        <a href="#" class="btn btn-info form-wizard-b__control-next" data-step-control-next>Next</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="js/form-wizard/form-wizard.js"></script>
+<script src="js/preview/form-wizard-b.min.js"></script>
+{% endblock %}

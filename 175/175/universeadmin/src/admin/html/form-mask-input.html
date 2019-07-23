@@ -1,0 +1,89 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Mask Input / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Input Masks</h2>
+    </div>
+  </div>
+  <div class="main-container container-fh__content">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label for="pattern-phone">Pattern (Phone) <span class="form-label__desc">+{1}(000)000-00-00</span></label>
+          <input id="pattern-phone" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="number-mask">Number Mask <span class="form-label__desc">in range [-10000, 10000]</span></label>
+          <input id="number-mask" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="date-mask">Date Mask <span class="form-label__desc">'dd.mm.yyyy' in range [01.01.2000, 01.01.2020]</span></label>
+          <input id="date-mask" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="dynamic-mask">Dynamic mask <span class="form-label__desc">phone or email</span></label>
+          <input id="dynamic-mask" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="time-mask">Time Mask <span class="form-label__desc">time with seconds</span></label>
+          <input id="time-mask" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="credit-card-mask">Credit Card Mask</label>
+          <input id="credit-card-mask" type="text" class="form-control">
+        </div>
+      </div>
+      <div class="col-lg-3 offset-1">
+        <h2 class="mb-5">Credit Card Masks</h2>
+        <div>
+          <div class="card-wrapper"></div>
+          <form class="mt-5">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input type="text" name="number" class="form-control" placeholder="Card Number">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input type="text" name="first_name" placeholder="First Name" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input type="text" name="last_name" placeholder="Last Name" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input type="text" name="expiry" placeholder="MM/YYYY" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input type="text" name="cvc" placeholder="123" class="form-control">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/imaskjs/imask.min.js"></script>
+<script src="vendor/card/card.js"></script>
+<script src="js/preview/form-mask-input.min.js"></script>
+{% endblock %}

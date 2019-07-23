@@ -1,0 +1,238 @@
+.pricing {
+    @extend .p-l-0;
+    @extend .m-b-0;
+    @extend .align-center;
+    color: $grey-600;
+
+    &.body{
+        @extend .padding-0;
+    }
+    
+    li{
+        list-style: none;
+        padding: $font13;
+        
+        &:first-child,
+        &:last-child{
+            padding: 20px 13px;
+        }
+
+        &:nth-child(2) {
+            padding: 30px 13px;
+        }
+
+        + li{
+            border-top: 1px solid #f0f0f0;
+        }
+    }
+
+    h4 {
+        font-size: $font22;
+        font-weight: $font-weight-700;
+    }
+
+    h3 {
+        @extend .m-b-0;
+        font-size: $font36;
+    }
+
+    span {     
+        color: $grey-400;
+        font-weight: $font-weight-400;
+    }
+
+    &.start-grp{
+        h4{
+            color: #207b70;
+        }
+        li{
+            &:nth-child(2) {
+                background-color: rgba(73, 197, 182, 0.3);
+                h3{
+                    color: #207b70;
+                }
+                span{
+                    color: #207b70;
+                }
+            }
+            .btn{
+                background-color: #207b70;
+                color: $col-white;
+            }
+        }
+    }
+    
+    &.good-grp{
+        h4{
+            color: #eb8e3e;
+        }
+        li{
+            &:nth-child(2) {
+                background-color: #ffe6d1;
+                h3{
+                    color: #eb8e3e;
+                }
+                span{
+                    color: #eb8e3e;
+                }
+            }
+            .btn{
+                background-color: #eb8e3e;
+                color: $col-white;
+            }
+        }
+    }
+    
+    &.ultima-grp{
+        h4{
+            color: #009040;
+        }
+        li{
+            &:nth-child(2) {
+                background-color: #caf2dc;
+                h3{
+                    color: #009040;
+                }
+                span{
+                    color: #009040;
+                }
+            }
+            .btn{
+                background-color: #009040;
+                color: $col-white;
+            }
+        }
+    }
+    
+    &.vip-grp{
+        h4{
+            color: #e47297;
+        }
+        li{
+            &:nth-child(2) {
+                background-color: #ffd2e0;
+                h3{
+                    color: #e47297;
+                }
+                span{
+                    color: #e47297;
+                }
+            }
+            .btn{
+                background-color: #e47297;
+                color: $col-white;
+            }
+        }
+    }
+}
+
+.pricing2{
+    @extend .align-center;
+
+    .body{
+        @extend .padding-0;
+    }
+
+    .pricing-plan {
+        @extend .padding-0;
+        border-bottom: none;        
+        flex-basis: 100%;        
+
+        .pricing-header {
+            color: $dark-line-color;
+            font-weight: $font-weight-700;
+            font-size: $font22;
+            letter-spacing: 1px;
+            margin-bottom: 15px !important;
+        }
+        .pricing-features {
+            @extend .padding-0;
+            @extend .margin-0;
+            background-color: $grey-100;
+            letter-spacing: 1px;            
+            line-height: 30px;
+            list-style: none;
+
+            li{
+                border-bottom: 1px solid $col-white;
+                line-height: 55px;
+            }
+        }
+        .pricing-price {
+            @extend .displayblock;
+            @extend .p-t-10;
+            @extend .p-b-10;
+            font-size: $font36;
+            font-weight: $font-weight-700;            
+
+            sup,
+            sub{
+                color: $grey-400;
+                font-size: 40%;
+            }
+
+            sup{
+                top: -15px;
+                left: -5px;
+            }
+            
+            sub{
+                right: -5px;
+            }
+        }
+
+        .btn{
+            @extend .m-t-20;
+            @extend .m-b-20;
+            text-transform: uppercase;
+        }
+
+        &.free{
+            .pricing-price{
+                color: #207b70;
+            }
+
+            .btn{
+                border-color: #207b70;
+                background-color: #207b70;
+                color: $col-white;
+            }
+        }
+        
+        &.personal{
+            .pricing-price{
+                color: #eb8e3e;
+            }
+            
+            .btn{
+                border-color: #eb8e3e;
+                background-color: #eb8e3e;
+                color: $col-white;
+            }  
+        }
+
+        &.performance{
+            .pricing-price{
+                color: #009040;
+            }
+            
+            .btn{
+                border-color: #009040;
+                background-color: #009040;
+                color: $col-white;
+            }  
+        }
+
+        &.business{
+            .pricing-price{
+                color: #e47297;
+            }
+            
+            .btn{
+                border-color: #e47297;
+                background-color: #e47297;
+                color: $col-white;
+            }  
+        }
+    }
+}

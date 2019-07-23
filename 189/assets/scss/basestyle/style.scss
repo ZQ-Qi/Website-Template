@@ -1,0 +1,378 @@
+/*
+[Master Stylesheet]
+
+Project:    Cosmo Admin
+Version:    1.1
+Last change:    01/08/18 [minor fixes]
+ThemeName v1.1.0 (https://freakpixels.com/)
+Copyright 2014-2018 Freakpixels, Inc.*/
+
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Importing Files
+    1.1 Variables (custom & bootstrap)
+    1.2 Bootstrap 4.1.1
+    1.3 Override Bootstrap
+    1.4 Fonts Files
+    1.5 Components
+        1.5.1 Sidebar
+        1.5.2 Header
+        1.5.3 Footer
+    1.6 Custom Controls
+        1.6.1 Switch
+        1.6.2 Loader
+        1.6.3 Toast
+    1.7 Utilities
+
+2. Some Basic Style
+    2.1 User Initials Circle
+    2.2 Status Circle
+    2.3 Horizontal Overflow Scroll
+
+3. Page Title & Controls
+    3.1 Title & Desc
+    3.2 Page Controls
+
+4. Step by Step Wizard
+5. Recent Activites
+6. Generating Lighten Color
+7. Fixed width columns
+8. Demo purpose css (you can remove)
+    8.1 Icon Preview
+    8.2 Buy Now button
+    8.3 Theme Setting Color Swatch
+-------------------------------------------------------------------*/
+
+
+
+
+
+
+/****************************************
+Importing Files
+****************************************/
+
+@import "variables";
+@import "../bootstrap/bootstrap";
+@import "bootstrap-override";
+@import "font";
+@import "components/components";
+@import "custom-controls/custom-controls";
+@import "utilities";
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border-radius:100px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3); 
+    border-radius:100px;
+    opacity:0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.4); 
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+    display:block;
+}
+
+
+
+
+
+/* Setting Min Height for no contant page */
+.content{
+    min-height: calc( 100vh - 260px );
+}
+
+
+
+.content-wrapper{
+    padding: 24px;
+    @media only screen and (max-width: map-get($grid-breakpoints, "sm")) {
+        padding: 24px 12px;
+    }
+}
+
+
+
+/* User Initials Circle */
+.user-initials{
+    display: inline-block;
+    height: 2.2rem;
+    border-radius: 100%;
+    line-height: 2.2rem;
+    font-weight: 400;
+    width: 2.2rem;
+    background-color: #ccc;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Status Circle */
+.status-circle{
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    display: inline-block;
+    border:4px solid #ccc;
+}
+
+
+/* Horizontal Overflow Scroll */
+.overflow-horizontal-scroll{
+    white-space: nowrap;
+    overflow: auto;
+    width: 100%;
+}
+
+
+
+
+
+
+
+/****************************************
+Page Title & Controls
+****************************************/
+
+.page-tilte{
+    margin-bottom: $grid-gutter-width;
+
+    .title{
+    	margin-bottom: 0.2rem;
+    	color: $gray-800;
+        font-weight: 300;
+    }
+    .desc{
+ 		font-size: 14px;   	
+    }
+    .controls{
+        input[type='search'], .width-260{
+            max-width: 260px;
+        }
+        > *{
+            vertical-align: top;
+            + *{
+                margin-left: 0.75rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/***************************************************
+Step by Step Wizard
+***************************************************/
+
+
+.wizard{
+    .steps{
+        li{
+            margin-bottom: -1px;
+            border-bottom:3px solid  #a7a4a4; 
+        }
+    }   
+}
+
+
+
+
+
+
+
+/***************************************************
+Recent Activites (used in dashboard)
+***************************************************/
+
+.recent-activites{
+    position: relative;
+    &:before{
+        content:'';
+        display: inline-block;
+        height: 100%;
+        position: absolute;
+        left: 10px;
+        width: 4px;
+        background-color: #f2f2f2;
+    }
+    li{
+        position: relative;
+        padding-left: 42px;
+        .activity-icon{
+            display: inline-block;
+            border-width: 4px;
+            border-style: solid;
+            height: 18px;
+            width: 18px;
+            position: absolute;
+            left: 3px;
+            background-color: #fff;
+            top: 0px;
+            bottom: 0px;
+            margin: auto ;
+            border-radius: 20px;
+        }
+
+        + li{
+            margin-top: 28px;
+        }
+
+    }
+}
+
+
+.dashboard-messages{
+    height: calc( 100% - 56px );
+}
+
+
+
+
+
+
+
+
+/***************************************************
+Generating Lighten Color 
+***************************************************/
+
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}-light25", lighten($value, 25%));
+}
+
+
+
+
+
+
+
+
+/***************************************************
+Fixed width columns
+***************************************************/
+
+$breakpoints: $grid-breakpoints;
+$columns: $grid-columns;
+.fixed-width{
+     @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+
+            
+              &.col#{$infix} {
+                &.extra-small{
+                    max-width: 120px;
+                }
+                &.small{
+                    max-width: 180px;
+                }
+                &.medium{
+                    max-width: 240px;
+                }
+                &.large{
+                    max-width: 380px;
+                }
+                &.extra-large{
+                    max-width: 480px;
+                }
+              }
+            
+
+        }
+
+     }
+}
+
+
+
+
+
+
+
+/***************************************************
+You can remove these (only for demo purpose)
+***************************************************/
+
+
+
+/* Icon Preview */
+.icon-preview{
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 140px;
+    max-width: 140px;
+    overflow: hidden;
+    small{
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/* Buy Now button at right bottom */
+.buynow-btn{
+    border-radius: 100px;
+    line-height: 36px;
+    width: 50px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 2rem;
+    right:2rem;
+    z-index: 1;
+    @include transition(all 0.5s);
+    &:hover{
+        width: 180px;
+    }
+}
+
+
+/* Theme Setting  Color Swatch*/
+.color-swatch{
+    height: 120px;
+    background-color: darken( $body-bg, 10% );
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border:6px solid #fff;
+    .left-bar{
+        width: 25%;
+        height: 100%;
+        float: left;
+    }
+    .top-bar{
+        height: 12%;
+    }
+}
+
+
+

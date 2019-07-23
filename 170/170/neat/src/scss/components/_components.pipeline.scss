@@ -1,0 +1,55 @@
+/* ==========================================================================
+   #PIPELINE
+   ========================================================================== */
+
+/**
+ * Table of content:
+ *
+ * Pipeline
+ * Pipeline Card
+ */
+
+.c-pipeline {
+	margin-bottom: $spacer;
+	border-radius: 4px;
+	//background-color: $color-ink-light;
+}
+
+.c-pipeline__card {
+	position: relative;
+	margin-bottom: $spacer-xsmall;
+	padding: $spacer-small;
+	border-radius: 4px;
+	background-color: $color-white;
+	box-shadow: $card-box-shadow;
+
+	&:hover {
+		cursor: grab;
+	}
+
+	&:active {
+		cursor: grabbing;
+	}
+}
+
+.c-pipeline__card-actions {
+	position: absolute;
+	top: $spacer-xsmall;
+	right: $spacer-xsmall;
+	color: $text-color;
+
+	&:hover {
+		color: $color-ink-dark;
+	}
+}
+
+.c-pipeline__card-title {
+	margin: 0;
+	font-size: $text-large-font-size;
+}
+
+.c-pipeline__card-footer {
+	margin-top: $spacer-xsmall;
+	padding-top: $spacer-small;
+	border-top: 1px solid $color-sky;
+}

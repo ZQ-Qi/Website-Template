@@ -1,0 +1,115 @@
+﻿$white: #ffffff;
+$blue-grey-400: #78909c !default;
+$grey-900: #212121 !default;
+$purple-400: #c18eda !default;
+$purple-500: #a27ce6 !default;
+$purple-600: #a27ce6 !default;
+
+
+.theme-purple{
+
+    ::selection {
+        color: $white; 
+        background: $purple-500;
+    }
+    .page-loader-wrapper{
+        background: $purple-500;
+    }    
+    .navbar-nav{
+        .user-profile{
+            .align-items-center{
+                background: $purple-500;        
+            }
+        }
+        ul.menu-icon{
+            background: $purple-500;
+        }
+    }
+    .sidebar-nav{
+        .metismenu{
+            >li.active>a{
+                background-color: $purple-500;
+                color: $white;
+            }
+            a:hover{
+                color: $purple-500;
+                &::before{
+                    background-color: $purple-500;
+                }
+            }
+        }
+    }
+    .fancy-checkbox {
+        input[type="checkbox"] {
+    
+            &:checked + span:before {
+                background: $purple-500;
+                border-color: $purple-500;
+            }
+        }
+    }
+    .chat-widget {
+        li {
+            &.right {
+                
+                .chat-info {
+                    background: $purple-500;
+                    color: $white;
+    
+                    &:before{
+                        border-left: 10px solid $purple-500;
+                    }
+                }
+            }
+        }
+    }
+    .fc .fc-view-container .fc-view.fc-basic-view>table>thead tr th.fc-widget-header{
+        background: $purple-500;
+        border-color: $purple-500;
+        color:$white;
+    }
+    .blog-page .single_post .footer .stats li a:hover{
+        color: $purple-500;
+    }
+    .auth-main{
+        .btn-primary{
+            background: $purple-500;
+            border-color: $purple-500;
+        }        
+    }
+    .right_chat li a:hover{
+        .media-object {
+            border-color: $purple-500;
+        }        
+    }
+    &.menu-icon{
+        .sidebar-nav{
+            .metismenu>li {
+                &.active{
+                    i{
+                        color: $white;    
+                    }
+                }
+                i{
+                    color: $purple-500;
+                }
+            }
+        }
+    }
+    .wizard{
+        >.steps{
+            .current a{
+                background: $purple-500;
+            }
+            .done a{
+                background: $blue-grey-400;
+            }
+        }
+        .actions a{
+            background: $grey-900;
+        }
+    }
+    .noUi-connect{
+        background: $purple-500;
+    }
+}

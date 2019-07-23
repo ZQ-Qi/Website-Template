@@ -1,0 +1,81 @@
+/* ==========================================================================
+   #SWITCH
+   ========================================================================== */
+
+/**
+ * 1. Radius of `toggle` should be equal to radius of `c-switch`.
+ * 2. The small circle that move to the right and left.
+ * 3. Calculation: (width of switch bar) - (toggle's width + 2px )
+ * 4. Don't allow active state on a disabled switch.
+ */
+
+.c-switch {
+	display: inline-flex;
+	position: relative;
+	flex-wrap: wrap;
+	align-items: center;
+	cursor: pointer;
+}
+
+
+/**
+ * 1. Hide input to replace it with switch-style input
+ */
+
+.c-switch__input {
+	display: none; /* [1] */
+}
+
+.c-switch__label {
+	display: flex;
+	position: relative;
+	align-items: center;
+	color: $switch-label-color;
+	font-size: $switch-label-font-size;
+	user-select: none;
+
+	&::before {
+		display: inline-block;
+		position: relative;
+		width: $switch-width;
+		height: $switch-height;
+		margin-right: 10px;
+		transition: all .3s;
+		border-radius: $switch-border-radius;
+		background-color: $switch-background-color;
+		content: " ";
+    }
+
+	&::after { /* [2] */
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		width: $switch-toggle-width;
+		height: $switch-toggle-height;
+		transition: all .3s;
+		border-radius: $switch-border-radius; /* [1] */
+		background-color: $switch-toggle-background-color;
+		content: " ";
+    }
+}
+
+.c-switch__input:checked ~ .c-switch__label {
+	&::before {
+		background-color: $switch-active-background-color;
+	}
+
+	&::after {
+		left: 25px;
+		box-shadow: 0 0 8px 0 rgba(0 , 0, 0, 0.25);
+	}
+}
+
+.c-switch__input:disabled ~ .c-switch__label {
+	&::before {
+		background-color: $switch-disabled-border-color;
+	}
+
+	&::after {
+		box-shadow: none;
+	}
+}

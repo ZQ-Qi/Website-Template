@@ -1,0 +1,256 @@
+.chat-page {
+
+    #inbox {
+        margin: 0;
+
+        >li {
+            &:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        
+            >a {
+                display: block;
+                position: relative;
+                color: $font-color;
+                padding: 20px 10px;
+                border-radius: 3px;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: $lightgray;
+                    .chat-actions {
+                        display: block;
+                    }
+                }
+
+                &:focus {
+                    text-decoration: none;
+                }
+
+                .media {
+                    position: relative;
+                    
+                    .media-left{
+                      float: left;
+                    }
+
+                    img {
+                        @extend .br-50;
+                    }
+                    
+                    .media-body {
+                        width: calc(100% - 40px);
+                        display: inline-block;
+                    }
+                }
+                
+                .message {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    display: block;
+                    width: 85%;
+                }
+                
+                .chat-actions {
+                    font-size: 11px;
+                    display: none;
+                   
+                    >span {
+                        margin-left: 4px;
+                        cursor: pointer;
+                        &.archive {
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+                        
+                        &.mark-unread {
+                            &:hover {
+                                color: $greensea;
+                                i {
+                                    &:before {
+                                        content: "\f111";
+                                    }
+                                }
+                            }
+                        }
+                       
+                        &.mark-readed {
+                            color: $greensea;
+                            &:hover {
+                                color: $font-color;
+                                i {
+                                    &:before {
+                                        content: "\f10c";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.active {
+                
+              >a {
+                    background-color: $slategray;
+                    p,
+                    small {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    ul.chats {
+        >li {
+            .media-body {
+                padding: 10px;
+            }
+            &.in {
+                .media-body {
+                    padding-left: 20px;
+                }
+            }
+            &.out {
+                .media-body {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+ul.chats {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    
+    >li {
+        margin: 20px auto;
+        font-size: $font-size-small;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    
+        .media {
+            position: relative;
+            z-index: 1;
+
+            .media-body {
+                width: auto;
+                background: #f3f3f3;
+            }
+        }
+        .name,
+
+        .datetime {
+            font-weight: 400;            
+        }
+
+        .datetime {
+            color: $font-color-light;
+            font-size: $font-size-mini;
+        }
+
+        &.conversation-divider {
+            font-size: $font-size-mini;
+            color: white;
+            text-align: center;
+        
+            span {
+                display: inline-block;
+                position: relative;
+                background-color: $transparent-black-15;
+                padding: 4px 10px;
+                @include border-radius(2px);
+                @include box-shadow(0 1px 1px $transparent-black-05);
+            }
+        }
+
+        &.in {
+            .media-body {
+                text-align: left;
+                border-top: 1px solid $blue;
+                margin-left: 65px;
+                padding: 15px;
+                border-radius:5px; 
+            }
+            .name {
+                color: $blue;
+            }            
+        }
+
+        &.out {
+            .media-body {
+                border-top: 1px solid $blush;
+                margin-right: 0;
+                text-align: right;
+                padding:15px;
+                float: right;
+                border-radius:5px; 
+            }
+            .name {
+                color: $blush;
+            }
+
+            .name,
+            .datetime {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.chat-form {
+    padding: 10px;
+    background-color: $bright-default;
+    overflow: hidden;
+    clear: both;
+}
+@media screen and (max-width: 1024px) and (min-width: 992px){
+
+  .chat-page{
+    #inbox{
+      >li{
+        >a{
+          .message{
+            display: none;
+          }
+        }
+        .media-heading{
+          .text-muted.pull-right{
+            display: block;
+            float: left !important;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 414px) {
+    .chat-page {
+        #inbox {
+            >li {
+                >a {
+                    .media {
+                        height: 52px;
+                        .media-body {
+                            .media-heading {
+                                .text-muted {
+                                    float: left !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

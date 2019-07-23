@@ -1,0 +1,85 @@
+﻿.taskboard{
+
+    .card{
+        .body{
+            @extend .p-t-0;
+        }
+    }
+     
+    .header-title{
+        padding: 8px 15px;
+    }
+
+    .dd-handle{
+        @extend .p-15;
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 15px;
+            width: 3px;
+            height: 18px;           
+        }
+
+        h5{
+            font-size: $font15;
+            font-weight: $font-weight-700;
+        }
+
+        .action{
+            li{
+                float: left;
+
+                a{
+                    @extend .p-r-15;
+                    line-height: 25px;
+                }
+                .bug{
+                    color: $blush;
+                }
+                .comment{
+                    color: $purple;
+                }
+                .qa{
+                    color: $green;
+                }
+            }
+        }
+    }
+
+    .dd-placeholder,
+    .dd-empty {
+        border: 0px;
+    }
+
+    .open_task{
+        .dd-handle{
+            &::before{
+                background: $grey-800;
+            }
+        }
+    }
+    .progress_task{
+        .dd-handle{
+            &::before{
+                background: $orange;
+            }
+        }
+    }
+    .completed_task{
+        .dd-handle{
+            &::before{
+                background: $col-green;
+            }
+        }
+    }
+    .review_task{
+        .dd-handle{
+            &::before{
+                background: $color-info;
+            }
+        }
+    }
+}

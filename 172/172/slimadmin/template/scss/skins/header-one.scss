@@ -1,0 +1,134 @@
+// Bootstrap variable overrides
+@import "../bootstrap/variables";
+@import "../variables";
+
+@import "../../bower_components/bootstrap/scss/functions";
+@import "../../bower_components/bootstrap/scss/variables";
+@import "../../bower_components/bootstrap/scss/mixins";
+
+// Custom mixins for bootstrap
+@import "../bootstrap/mixins";
+
+// Variables
+$color-primary:   #367EC1;
+$color-secondary: #191F25;
+
+.slim-header {
+  background-color: $color-primary;
+  border-bottom-width: 0;
+}
+
+.slim-logo a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.search-box {
+  border-width: 0;
+  background-color: #fff;
+
+  .btn {
+    background-color: $color-primary;
+  }
+}
+
+.logged-user {
+  color: rgba(#fff,.75);
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+
+  img { border-color: rgba(#fff, .5); }
+}
+
+.header-notification {
+  color: rgba(#fff, .75);
+
+  .indicator { background-color: $red; }
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-primary, 5%);
+    color: #fff;
+  }
+}
+
+.slim-header-right {
+  .dropdown-a,
+  .dropdown-b {
+    &.show > a {
+      background-color: darken($color-primary, 5%);
+    }
+  }
+
+  .dropdown-c.show {
+    > a { color: #fff; }
+  }
+
+  .dropdown-menu { margin-top: 17px; }
+}
+
+.slim-navbar {
+  background-color: $color-secondary;
+  border-bottom-width: 0;
+
+  .nav-item {
+    &:hover,
+    &:focus {
+      background-color: darken($color-secondary, 2%);
+    }
+
+    &.active {
+      .nav-link {
+        background-color: darken($color-secondary, 2%);
+        background-image: none;
+        border-width: 1px;
+        color: $color-primary;
+
+        .icon { color: $color-primary; }
+      }
+    }
+  }
+
+  .nav-link {
+    background-color: transparent;
+    border-color: rgba(#fff,.1);
+    color: $body-color;
+
+    .icon { color: $body-color; }
+
+    &:hover,
+    &:focus {
+      background-color: darken($color-secondary, 2%);
+      color: $body-color;
+    }
+  }
+
+  .sub-item {
+    background-color: $color-secondary;
+    border-width: 0;
+    box-shadow: none;
+
+    ul a {
+      color: $body-color;
+      &:hover,
+      &:focus {
+        background-color: $color-secondary;
+        color: theme-color('primary');
+      }
+    }
+
+    .sub-with-sub ul {
+      background-color: $color-secondary;
+      border-width: 0;
+      box-shadow: none;
+    }
+  }
+
+  .mega-dropdown .sub-item .section-label {
+    color: $body-color;
+    border-bottom-color: rgba(#fff,.08);
+  }
+}

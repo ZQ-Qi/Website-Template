@@ -1,0 +1,177 @@
+/* ==========================================================================
+   #NAVBAR
+   ========================================================================== */
+
+.c-navbar {
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	min-width: 100%;
+	padding: 20px 40px;
+	border-bottom: 1px solid $color-sky-dark;
+	background-color: $color-white;
+
+	@include respond-to ($breakpoint-desktop) {
+		padding: 20px $spacer-small;
+	}
+}
+
+/**
+ * Reduce padding of navbar when used in admin pages with sidebar.
+ */
+
+.c-navbar--small {
+	padding: rem(20px);
+}
+
+
+/**
+ * 1. Remove weird spacing.
+ */
+
+.c-navbar__brand {
+	margin-right: $spacer;
+	font-size: 0; /* [1] */
+
+	@include respond-to($breakpoint-tablet) {
+		margin-right: auto; /* [2] */
+	}
+}
+
+.c-navbar__title {
+	margin-right: auto;
+	color: $color-ink-dark;
+	font-size: $h4-font-size;
+
+	a {
+		color: inherit;
+		font-weight: 700;
+	}
+}
+
+/**
+ * Nav sits within the main navbar area. It’s fully responsive as it holds 
+ * navigation items/links that will be collapsed, toggled in small 
+ * screens via `c-nav-toggle` component.
+ */
+
+.c-navbar__nav {
+	display: block;
+
+	/**
+	 * Responsive Nav
+	 *
+	 * 1. Remove extra margin when `u-mr-auto` utility is used. 
+	 */
+	@include respond-to($breakpoint-tablet) {
+		position: relative;
+		flex: 1 0 100%;
+		order: 2;
+		margin-top: $spacer-small;
+		margin-right: -$spacer-small !important; /* [1] */
+		margin-left: -$spacer-small;
+		border-top: $base-border-width solid $base-border-color;
+
+		/**
+		 * Bootstrap classes used to show and hide nav.
+		 * This behaviour depends on collapse.js plugin.
+		 */
+		&.collapse {
+			display: none;
+		}
+
+		&.show {
+			display: block;
+		}
+
+		&.collapsing {
+			position: relative;
+			height: 0;
+			transition: height 0.6s;
+			overflow: hidden;
+		}
+	}
+}
+
+.c-navbar__nav-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+}
+
+
+/** 
+ * 1. Allow positioning dropdown menus inside nav items.
+ */
+
+.c-navbar__nav-item {
+	position: relative; /* [1] */
+	margin: $nav-item-margin;
+
+	@include respond-to($breakpoint-tablet) {
+		flex-basis: 100%;
+		margin-right: 0;
+		padding: 15px;
+		border-bottom: 1px solid $base-border-color;
+	}
+
+	&:last-child {
+		margin-right: 0;
+
+		@include respond-to($breakpoint-tablet) {
+			padding-bottom: 5px;
+			border-bottom: 0;
+		}
+	}
+}
+
+.c-navbar__nav-link {
+	color: $nav-link-color;
+	font-size: $nav-link-font-size;
+	font-weight: $nav-link-font-weight;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&.is-active {
+		color: $nav-link-active-color;
+	}
+
+	@include respond-to($breakpoint-tablet) {
+		display: block;
+		color: $heading-color;
+		font-size: $text-large-font-size;
+	}
+}
+
+/* Navbar Nav Toggle
+   ========================================================================== */
+
+/**
+ * Nav toggle is the popular hamburger-like icon that would show/hide 
+ * `c-navbar__nav` via javascript through bootstrap collapse plugin.
+ * 
+ * 1. Remove default button styles.
+ * 2. Show only on small screens, hide on large screens.
+ */
+
+.c-navbar__nav-toggle {
+	display: none;
+	position: relative;
+	margin: 0 0 0 $spacer-small; /* [1] */
+	padding: 0; /* [1] */
+	border: 0; /* [1] */
+	outline: none;
+	background-color: transparent; /* [1] */
+	color: $color-ink-dark;
+	font-size: 36px;
+	cursor: pointer;
+
+	@include respond-to($breakpoint-tablet) {
+		display: block; /* [2] */
+	}
+}

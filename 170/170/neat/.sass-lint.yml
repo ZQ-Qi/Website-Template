@@ -1,0 +1,79 @@
+# Default Settigns for Linting SCSS code
+options:
+  formatter: stylish
+files:
+  include: '**/*.s+(a|c)ss'
+rules:
+
+  # Extends & Mixins
+  extends-before-declarations: 1
+  mixins-before-declarations: 0
+  extends-before-mixins: 1
+
+  # Spacing
+  empty-line-between-blocks: 1
+  single-line-per-selector: 0
+  space-before-bang: 1
+  space-after-bang: 0
+  indentation: 
+    - 1
+    - size: tab
+
+  # Disallowed
+  no-color-hex: 0
+  no-duplicate-properties: 1
+  no-ids: 1
+  no-important: 1
+  no-vendor-prefixes: 1
+  no-css-comments: 0
+  no-transition-all: 0
+
+  # Hex (colors)
+  hex-notation: 0
+  
+  # Name Format
+  class-name-format: 
+    - 1
+    - convention: hyphenatedbem
+
+  # Variable Name Format
+  variable-name-format: 
+    - 1
+    - convention: hyphenatedbem
+
+  # BEM
+  bem-depth: 
+    - 1
+    - max-depth: 3
+
+  # Zeros
+  border-zero: 1
+  leading-zero: 0
+  zero-unit: 1
+
+  # Line Length
+  max-line-length: 0
+  max-file-line-count: 0
+
+  # Nesting
+  nesting-depth: 
+    - 1
+    - max-depth: 3
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+
+
+  # Property Sorting
+  property-sort-order: 
+    - 1
+    - order: smacss
+
+	# Quotes
+  quotes: 
+    - 1
+    - style: double
+  url-quotes: 1
+
+  # Final Items
+  trailing-semicolon: 1
+  final-newline: 1

@@ -1,0 +1,117 @@
+/*!
+ * Prince - v1.0.0
+ * @author AtriTheme
+ * Copyright (c) 2018
+ */
+@import '../../../../sass/global/css/variables';
+@import '../../../../sass/global/css/mixin';
+/*---------------------------
+
+START ERROR
+
+---------------------------*/
+
+.error-background {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  height: 100%;
+  opacity: 0.8;
+  color: $white-text-color;
+  overflow: auto;
+  position: $position-fixed;
+  width: 100%;
+  &.error-background-4{
+    background-image: url("../../../../assets/pages/error/images/404_bg.jpg");
+  }
+  &.error-background-3{
+    background-image: url("../../../../assets/pages/error/images/403_bg.jpg");
+  }
+  &.error-background-0{
+    background-image: url("../../../../assets/pages/error/images/400_bg.jpg");
+  }
+  &.error-background-5{
+    background-image: url("../../../../assets/pages/error/images/405_bg.jpg");
+  }
+  &.error-background-50{
+    background-image: url("../../../../assets/pages/error/images/500_bg.jpg");
+  }
+  &.error-background-53{
+    background-image: url("../../../../assets/pages/error/images/503_bg.jpg");
+  }
+  .error-page {
+    display: table;
+    height: 100%;
+    margin: $gaping-0 auto;
+    position: $position-relative;
+    text-align: $text-center;
+    text-transform: $text-uppercase;
+    .error-image{
+      img{
+        width: 400px;
+      }
+    }
+  }
+  .main-error-contain {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .btn-error{
+    color: $white-text-color;
+    background-color: $main-site-color;
+    border-color: $main-site-color;
+    &:hover, &:focus {
+      color: $white-text-color;
+      background-color: $main-site-color;
+      border-color: $main-site-color;
+    }
+  }
+  .btn{
+    &.float-button-light{
+      &.waves-button {
+        box-shadow: none;
+        white-space: normal;
+        border-radius: $border-radius-0;
+        padding: $gaping-10;
+      }
+    }
+  }
+}
+/*---- START RESPONSIVE ----*/
+@media (max-width: 1199px) {
+  .error {
+    background-position: right center;
+  }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 479px) {
+  .error-background {
+    .error-page{
+      .error-image{
+        img{
+          width: 220px;
+        }
+        h2{
+          font-size: 21px;
+          margin-bottom: $gaping-5;
+        }
+        p{
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+/*---- END RESPONSIVE ----*/
+
+/*---------------------------
+
+END ERROR
+
+---------------------------*/

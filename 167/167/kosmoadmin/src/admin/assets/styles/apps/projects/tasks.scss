@@ -1,0 +1,397 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-project-tasks-page
+2. Tasks header / .ks-project-tasks-page > .ks-header
+3. Tasks project logo / .ks-project-tasks-page > .ks-header > .ks-project > .ks-logo
+4. Search and Users list / .ks-project-tasks-page > .ks-header > .ks-extras
+5. Tasks list / .ks-project-tasks-page > .ks-body
+-------------------------------------------------------------------*/
+
+@import "../../config/colors";
+
+.ks-project-tasks-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  > .ks-header {
+    background: #fff;
+    height: 59px;
+    border-bottom: 1px solid $ks-default-border-color;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    justify-content: space-between;
+
+    > .ks-project {
+      display: flex;
+      align-items: center;
+
+      > .ks-logo {
+        width: 36px;
+        height: 36px;
+        background-color: #fff;
+        border: solid 1px $ks-default-border-color;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      > .ks-name {
+        font-size: 18px;
+      }
+    }
+
+    > .ks-extras {
+      display: flex;
+      align-items: center;
+
+      > .ks-search {
+        width: 318px;
+      }
+
+      > .ks-users {
+        display: flex;
+        margin-left: 40px;
+
+        > a {
+          margin-right: 10px;
+          width: 26px;
+          height: 26px;
+
+          &.ks-add {
+            border-radius: 50%;
+            color: $ks-color-primary;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 14px;
+            background-color: #fff;
+            font-size: 19px;
+            border: solid 1px #c4cbe1;
+
+            &:hover {
+              border: 1px solid $ks-color-primary;
+            }
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  > .ks-body {
+    flex-grow: 1;
+    display: flex;
+
+    > .ks-tasks-board {
+      flex-grow: 1;
+
+      .ks-wrapper {
+        padding: 30px;
+        height: 100%;
+
+        > .ks-task-create {
+          height: 56px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0 20px;
+          margin-bottom: 15px;
+
+          > .ks-icon-add {
+            font-size: 20px;
+            position: relative;
+          }
+
+          > .form-control {
+            border: none;
+            font-size: 14px;
+          }
+        }
+
+        > .ks-task {
+          + .ks-task {
+            margin-top: 15px;
+          }
+
+          > .ks-header {
+            display: flex;
+            align-items: center;
+            height: 56px;
+            padding: 0 20px;
+
+            > .custom-control {
+              margin-right: 15px;
+            }
+
+            > .ks-name {
+              flex-grow: 1;
+              font-size: 14px;
+              line-height: 14px;
+              font-weight: 500;
+              color: $ks-default-text-color;
+            }
+
+            > .ks-progress {
+              margin-left: 20px;
+
+              > .progress {
+                margin: 0;
+                width: 100px;
+              }
+            }
+
+            > .ks-control {
+              margin-left: 20px;
+              width: 40px;
+
+              > .ks-icon {
+                font-size: 17px;
+                line-height: 17px;
+                display: inline-block;
+                margin-right: 2px;
+                color: #8997c3;
+                position: relative;
+                top: 1px;
+
+                &:hover {
+                  color: $ks-color-primary;
+                }
+              }
+
+              > .ks-amount {
+                font-size: 12px;
+                line-height: 12px;
+              }
+            }
+
+            > .ks-datetime {
+              margin-left: 30px;
+              font-size: 12px;
+              width: 70px;
+
+              > .ks-icon {
+                font-size: 17px;
+                display: inline-block;
+                margin-right: 5px;
+              }
+            }
+
+            > .ks-users {
+              width: 50px;
+              font-size: 10px;
+              font-weight: 500;
+              margin-left: 20px;
+
+              > .ks-image {
+                display: inline-block;
+                margin-right: 4px;
+              }
+            }
+
+            > .ks-controls {
+              margin-left: 20px;
+
+              > .btn {
+                padding: 7px 0;
+                color: $ks-color-primary;
+                font-size: 20px;
+              }
+            }
+          }
+
+          &.ks-completed {
+            > .ks-header {
+              > .ks-name {
+                text-decoration: line-through;
+              }
+            }
+          }
+
+          &.ks-opened {
+            > .ks-body {
+              border-top: 1px solid $ks-default-border-color;
+
+              > .ks-description {
+                padding: 15px 50px;
+              }
+
+              > .ks-subtasks-and-controls {
+                border-top: 1px solid $ks-default-border-color;
+                display: flex;
+
+                > .ks-subtasks {
+                  width: 50%;
+                  padding: 10px 30px 20px 30px;
+
+                  + .ks-start-stop {
+                    border-left: 1px solid $ks-default-border-color;
+                  }
+
+                  > .ks-subtask-create {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 12px;
+
+                    > .ks-icon {
+                      font-size: 16px;
+                      font-weight: normal;
+                      color: #c4cbe1;
+                      margin-right: 12px;
+                      margin-left: 29px;
+                    }
+
+                    > .form-control {
+                      padding: 0;
+                      font-size: 12px;
+                      color: $ks-default-text-color-light;
+                      flex-grow: 1;
+
+                      &::placeholder {
+                        font-size: 12px;
+                        color: $ks-default-text-color-light;
+                      }
+
+                      border: none;
+                    }
+                  }
+
+                  > ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    > .ks-subtask {
+                      font-size: 12px;
+                      margin-bottom: 12px;
+                      display: flex;
+                      align-items: center;
+
+                      &:last-child {
+                        margin-bottom: 0;
+                      }
+
+                      > .ks-icon {
+                        font-size: 18px;
+                        color: #d8dceb;
+                        line-height: 12px;
+                        margin-right: 15px;
+                        cursor: pointer;
+                      }
+
+                      > .custom-control {
+                        margin: 0;
+                      }
+
+                      &.ks-completed {
+                        .custom-control-description {
+                          text-decoration: line-through;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                > .ks-start-stop {
+                  width: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 14px;
+
+                  > .ks-icon {
+                    font-size: 22px;
+                    color: $ks-color-primary;
+                    margin-right: 20px;
+                    cursor: pointer;
+                  }
+                }
+              }
+
+              > .ks-comments-section {
+                border-top: 1px solid $ks-default-border-color;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .btn {
+    &.ks-navigation-block-toggle {
+      position: static;
+    }
+  }
+
+  .ks-project-tasks-page {
+    > .ks-body {
+      > .ks-navigation {
+        position: fixed;
+        left: -250px;
+        z-index: 4;
+        top: 120px;
+        height: 100%;
+
+        &.ks-open {
+          left: 0;
+          transition: left .2s ease;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .ks-project-tasks-page {
+    > .ks-header {
+      flex-direction: column;
+      padding: 20px;
+      height: auto;
+
+      > .ks-project {
+        margin-bottom: 15px;
+      }
+    }
+
+    > .ks-body {
+      > .ks-tasks-board {
+        .card {
+          &.ks-task {
+            > .ks-header {
+              height: auto;
+              padding: 15px;
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .ks-project-tasks-page {
+    > .ks-header {
+      > .ks-extras {
+        flex-direction: column;
+
+        > .ks-search {
+          margin-bottom: 15px;
+        }
+
+        > .ks-users {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

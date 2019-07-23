@@ -1,0 +1,211 @@
+// Color Functions Mixins
+
+@mixin social-button($color) {
+  background: $color;
+  color: color(white);
+
+  &:hover {
+    background: darken($color, 10%);
+  }
+
+  &.btn-link {
+    background: none;
+    color: $color;
+
+    &:hover {
+      color: darken($color, 10%);
+    }
+  }
+}
+
+@mixin text-color($color) {
+  color: $color;
+}
+
+@mixin button-inverse-variant($color, $color-hover: $white) {
+  color: $color;
+  background-color: rgba($color, 0.2);
+  background-image: none;
+  border-color: rgba($color, 0);
+  @include hover {
+    color: $color-hover;
+    background-color: $color;
+    border-color: $color;
+  }
+
+  &.focus,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($color, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+
+  &.active,
+  &:active,
+  .show > &.dropdown-toggle {
+    color: $color-hover;
+    background-color: $color;
+    border-color: $color;
+  }
+}
+// Solid tab variations
+@mixin tab-solid-variant($color) {
+  .nav-link {
+    &.active {
+      background: $color;
+    }
+  }
+}
+// Minimal tab variations
+@mixin tab-minimal-variant($color) {
+  .nav-tabs {
+    .nav-item {
+      .nav-link {
+        &.active {
+          color: $color;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    border-color: $color;
+  }
+}
+// Sider color variations
+@mixin slider-color-variant($color) {
+  .noUi-base {
+    .noUi-connect {
+      background: $color;
+    }
+
+    .noUi-origin {
+      background: $color;
+
+      .noUi-handle {
+        &:after {
+          background: $color;
+        }
+
+        .noUi-tooltip {
+          background: $color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+// Breadcrumb color variations
+@mixin breadcrumb-inverse-variant($color) {
+  background: lighten($color, 25%);
+  border-color: $color;
+
+  .breadcrumb-item {
+    color: $color;
+
+    &:before {
+      color: inherit;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &.breadcrumb-custom {
+    background: transparent;
+
+    .breadcrumb-item {
+      background: lighten($color, 25%);
+
+      a {
+        color: $color;
+        border: none;
+
+        &:before {
+          border-left-color: lighten($color, 25%);
+        }
+      }
+
+      span {
+        color: $color;
+      }
+
+      &:last-child {
+        background: transparent;
+      }
+    }
+  }
+}
+// Badge variations
+@mixin badge-variations($color) {
+  border: 1px solid $color;
+  color: $white;
+}
+// Badge outlined variations
+@mixin badge-outline-variations($color) {
+  color: $color;
+  border: 1px solid $color;
+}
+// Pagination variations
+@mixin pagination-variants($color) {
+  .page-item {
+    &.active {
+      .page-link {
+        background: $color;
+        border-color: $color;
+      }
+    }
+
+    .page-link {
+      &:hover {
+        background: lighten($color,5%);
+        border-color: $color;
+        color: $white;
+      }
+    }
+  }
+}
+// Accordion Inverse variations
+@mixin accordion-inverse-variant($color) {
+  background: rgba($color, 0.16);
+  color: $color;
+  border: none;
+
+  .card-header {
+    color: $color;
+    border: none;
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
+      color: $color;
+    }
+
+    a {
+      border-color: $color;
+
+      &:before {
+        color: $color;
+      }
+
+      &[aria-expanded="true"] {
+        border-bottom: 1px solid rgba($color, 0.16);
+      }
+
+      &[aria-expanded="false"] {
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,308 @@
+/*---------------------------
+
+Start Timeline
+
+---------------------------*/
+.timeline-box {
+  text-align: $text-center;
+  width: 130px;
+  margin: $gaping-0 auto;
+  border: 1px solid $main-site-color;
+  box-shadow: 2px 2px 5px $main-site-color;
+  h3 {
+    font-size: 22px;
+  }
+}
+
+.timeline {
+  ul {
+    padding: $gaping-0;
+    li {
+      list-style-type: none;
+      position: $position-relative;
+      width: 6px;
+      margin: $gaping-0 auto;
+      padding-top: $gaping-50;
+      background: #e3edfc;
+      &:after {
+        position: $position-absolute;
+        left: 50%;
+        bottom: $gaping-0;
+        transform: translateX(-50%);
+        width: $gaping-35;
+        height: $gaping-35;
+        border-radius: $border-radius-circle;
+        background: inherit;
+        content: "\f00c";
+        font-family: Fontawesome;
+        color: $white-text-color;
+        vertical-align: middle;
+        padding: 4px $gaping-10;
+      }
+      .timeline-des {
+        position: $position-relative;
+        bottom: $gaping-0;
+        width: 460px;
+        padding: $gaping-15;
+        background: $white-backgournd-color;
+        border: 1px solid $main-site-color;
+        overflow: hidden;
+        &:before {
+          content: '';
+          position: $position-absolute;
+          bottom: 7px;
+          width: $gaping-0;
+          height: $gaping-0;
+          border-style: solid;
+        }
+      }
+      &:nth-child(odd) {
+        .timeline-des {
+          left: $gaping-30;
+          &:before {
+            left: -10px;
+            border-width: 8px $gaping-10 8px 0;
+            border-color: transparent $main-site-color transparent transparent;
+          }
+        }
+      }
+      &:nth-child(even) {
+        .timeline-des {
+          left: -505px;
+          &:before {
+            right: -10px;
+            border-width: 8px $gaping-0 8px $gaping-10;
+            border-color: transparent transparent transparent $main-site-color;
+          }
+        }
+      }
+      &:after {
+        transition: background .5s ease-in-out;
+      }
+      .timeline-des {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+      }
+      &:nth-child(odd) {
+        .timeline-des {
+          transform: translate3d(200px, 0, 0);
+        }
+      }
+      &:nth-child(even) {
+        .timeline-des {
+          transform: translate3d(-200px, 0, 0);
+        }
+      }
+      &.in-view {
+        &:after {
+          background: $main-site-color;
+        }
+        .timeline-des {
+          transform: none;
+          visibility: visible;
+          opacity: 1;
+          overflow: visible;
+        }
+      }
+      .left-text-timeline{
+        position: $position-absolute;
+        left: -280px;
+        bottom: -15px;
+        .icon-text{
+          width: 250px;
+          text-align: $text-right;
+          i{
+            font-size: 25px;
+            color: $main-site-color;
+            margin-left: $gaping-5;
+            vertical-align: middle;
+          }
+        }
+      }
+      .right-text-timeline{
+        position: $position-absolute;
+        right: -280px;
+        bottom: -15px;
+        .icon-text{
+          width: 250px;
+          text-align: $text-left;
+          i{
+            font-size: 25px;
+            color: $main-site-color;
+            margin-right: $gaping-5;
+            float: $left-division;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  .timeline-des {
+    .timeline-user {
+      margin-bottom: $gaping-10;
+      .user-img {
+        width: $gaping-35;
+        border-radius: 20px;
+        margin-right: $gaping-10;
+      }
+    }
+    .user-name {
+      color: $main-site-color;
+      font-size: 15px;
+      font-weight: $bold-text;
+    }
+    .timeline-body{
+      .body-image{
+        width: 130px;
+        height: 100px;
+      }
+    }
+    .timeline-footer {
+      border-top: 1px solid $normal-light-text-color;
+      padding-top: $gaping-10;
+      .left-section{
+        display: inline;
+        span{
+          margin-right: 8px;
+        }
+      }
+      .right-section{
+        float: $right-division;
+        display: inline;
+      }
+    }
+  }
+}
+
+/*---- Start responsive Timeline ----*/
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1199px) {
+  .timeline{
+    ul{
+      li{
+        .timeline-des {
+          width: 310px;
+        }
+        &:nth-child(2n){
+          .timeline-des {
+            left: -334px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .timeline{
+    ul{
+      li{
+        .timeline-des {
+          width: 300px;
+        }
+        &:nth-child(2n){
+          .timeline-des {
+            left: -334px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .timeline-box{
+    margin: $gaping-0;
+    h3 {
+      font-size: 18px;
+    }
+  }
+  .timeline{
+    .timeline-des{
+      .timeline-user {
+        margin-bottom: $gaping-5;
+        .user-img {
+          width: $gaping-30;
+          margin-right: $gaping-5;
+        }
+      }
+      .user-name {
+        font-size: 14px;
+      }
+      .timeline-footer{
+        .left-section{
+          span {
+            margin-right: 3px;
+            font-size: 12px;
+          }
+        }
+      }
+      .right-section {
+        font-size: 12px;
+      }
+    }
+    ul{
+      li{
+        margin: $gaping-0 $gaping-0 $gaping-0 $gaping-10;
+        .timeline-des {
+          width: 340px;
+          padding: $gaping-5;
+          p {
+            padding-bottom: $gaping-5;
+            line-height: 22px;
+            font-size: 12px;
+          }
+        }
+        .right-text-timeline {
+          display: none;
+        }
+        &:nth-child(2n){
+          .timeline-des {
+            left: 21px;
+            &:before {
+              right: $gaping-0;
+              left: -10px;
+              border-width: 8px 10px 8px 0;
+              border-color: transparent $main-site-color transparent transparent;
+            }
+          }
+        }
+        &:nth-child(2n+1){
+          .timeline-des {
+            left: 22px;
+          }
+        }
+        &:after {
+          bottom: 2px;
+          width: $gaping-25;
+          height: $gaping-25;
+          padding: $gaping-0 $gaping-5;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .timeline{
+    ul{
+      li{
+        .timeline-des {
+          width: 215px;
+        }
+      }
+    }
+  }
+}
+
+/*---- End responsive Timeline ----*/
+
+/*---------------------------
+
+End Timeline
+
+---------------------------*/

@@ -1,0 +1,203 @@
+/* -------------------------------------- */
+/* ############### Tables ############### */
+/* -------------------------------------- */
+
+.table {
+  th,
+  td {
+    border-top-color: $gray-300;
+    color: darken($gray-600, 7%);
+    &.valign-middle { vertical-align: middle; }
+  }
+
+  thead,
+  tfoot {
+    > tr > th,
+    > tr > td {
+      border-top: 0;
+      border-bottom: 0;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      background-color: $gray-300;
+      color: $gray-800;
+      letter-spacing: 0.5px;
+    }
+
+    &.bg-primary { @include table-head-variant(theme-color('primary')); }
+    &.bg-success { @include table-head-variant(theme-color('success')); }
+    &.bg-warning { @include table-head-variant(theme-color('warning')); }
+    &.bg-danger { @include table-head-variant(theme-color('danger')); }
+    &.bg-info { @include table-head-variant(theme-color('info')); }
+    &.bg-indigo { @include table-head-variant($indigo); }
+    &.bg-purple { @include table-head-variant($purple); }
+    &.bg-teal { @include table-head-variant($teal); }
+    &.bg-orange { @include table-head-variant($orange); }
+    &.bg-pink { @include table-head-variant($pink); }
+    &.bg-gray-800 { @include table-head-variant($gray-800); }
+    &.bg-gray-500 { @include table-head-variant($gray-500); }
+  }
+
+  tbody {
+    > tr > th {
+      color: $gray-800;
+      font-weight: 500;
+    }
+  }
+
+  .ckbox span::before,
+  .rdiobox span::before { border-color: transparent; }
+
+  // full-table-variant($head-color, $body-color)
+  &.table-primary { @include full-table-variant(theme-color('primary'), lighten(theme-color('primary'), 45%)); }
+  &.table-success { @include full-table-variant(theme-color('success'), lighten(theme-color('success'), 50%)); }
+  &.table-warning { @include full-table-variant(theme-color('warning'), lighten(theme-color('warning'), 40%)); }
+  &.table-danger { @include full-table-variant(theme-color('danger'), lighten(theme-color('danger'), 40%)); }
+  &.table-info { @include full-table-variant(theme-color('info'), lighten(theme-color('info'), 35%)); }
+  &.table-indigo { @include full-table-variant($indigo, lighten($indigo, 42%)); }
+  &.table-purple { @include full-table-variant($purple, lighten($purple, 42%)); }
+  &.table-teal { @include full-table-variant($teal, lighten($teal, 50%)); }
+  &.table-pink { @include full-table-variant($pink, lighten($pink, 37%)); }
+  &.table-orange { @include full-table-variant($orange, lighten($orange, 42%)); }
+}
+
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    background-color: $gray-100;
+  }
+}
+
+.table-bordered {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  > thead,
+  > tbody {
+    > tr {
+      th,
+      td {
+        + th,
+        + td { border-left-width: 0; }
+        border-top-width: 0;
+      }
+    }
+  }
+
+  tbody {
+    tr:last-child {
+      th,
+      td { border-bottom: 1px solid $input-border-color; }
+    }
+  }
+
+  .thead-colored {
+    > tr > th,
+    > tr > td {
+      &:first-child { border-left-width: 0; }
+      &:last-child { border-right-width: 0; }
+    }
+  }
+}
+
+.table-colored {
+  thead {
+    > tr {
+      > th,
+      > td {
+        border-color: rgba(#fff,.5);
+        &:first-child { border-left-width: 0; }
+        &:last-child { border-right-width: 0; }
+      }
+    }
+  }
+
+  tbody {
+    > tr {
+      > th,
+      > td {
+        border-color: #fff;
+        &:first-child { border-left-width: 0; }
+        &:last-child { border-right-width: 0; }
+      }
+
+      &:last-child {
+        > th,
+        > td { border-bottom-width: 0; }
+      }
+    }
+  }
+}
+
+.table-responsive {
+  > table { margin-bottom: 0; }
+
+  + .table-responsive { margin-top: 20px; }
+}
+
+
+/********** RTL SUPPORT **********/
+/*********************************/
+[dir="rtl"] {
+  .table {
+    thead,
+    tbody {
+      tr {
+        th,
+        td { text-align: right; }
+      }
+    }
+  }
+
+  .table-bordered {
+    > thead,
+    > tbody {
+      > tr {
+        th,
+        td {
+          &:first-child { border-left-width: 0; }
+          &:last-child { border-left-width: 1px; }
+        }
+      }
+    }
+
+    .thead-colored {
+      > tr > th,
+      > tr > td {
+        &:first-child { border-right-width: 0; }
+        &:last-child {
+          border-left-width: 0;
+          border-right-width: 1px;
+        }
+      }
+    }
+  }
+
+  .table-colored {
+    thead {
+      > tr {
+        > th,
+        > td {
+          &:first-child { border-right-width: 0; }
+          &:last-child {
+            border-left-width: 0;
+            border-right-width: 1px;
+          }
+        }
+      }
+    }
+
+    tbody {
+      > tr {
+        > th,
+        > td {
+          &:first-child { border-right-width: 0; }
+          &:last-child {
+            border-left-width: 0;
+            border-right-width: 1px;
+          }
+        }
+      }
+    }
+  }
+}

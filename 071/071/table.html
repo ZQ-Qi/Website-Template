@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mobile first web app theme | first</title>
+  <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/plugin.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="navbar">    
+    <ul class="nav navbar-nav navbar-avatar pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">            
+          <span class="hidden-sm-only">Mika Sokeil</span>
+          <span class="thumb-small avatar inline"><img src="images/avatar.jpg" alt="Mika Sokeil" class="img-circle"></span>
+          <b class="caret hidden-sm-only"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#"><span class="badge bg-danger pull-right">3</span>Notifications</a></li>
+          <li class="divider"></li>
+          <li><a href="docs.html">Help</a></li>
+          <li><a href="signin.html">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="navbar-brand" href="#">first</a>
+    <button type="button" class="btn btn-link pull-left nav-toggle hidden-lg" data-toggle="class:show" data-target="#nav">
+      <i class="icon-reorder icon-xlarge text-default"></i>
+    </button>
+    <ul class="nav navbar-nav hidden-sm">
+      <li>
+        <div class="m-t m-b-small" id="panel-notifications">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-comment-alt icon-xlarge text-default"></i><b class="badge badge-notes bg-danger count-n">2</b></a>
+          <section class="dropdown-menu m-l-small m-t-mini">
+            <section class="panel panel-large arrow arrow-top">
+              <header class="panel-heading bg-white"><span class="h5"><strong>You have <span class="count-n">2</span> notifications</strong></span></header>
+              <div class="list-group list-group-flush m-t-n">
+                <a href="#" class="media list-group-item">
+                  <span class="pull-left thumb-small"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
+                  <span class="media-body block m-b-none">
+                    Moved to Bootstrap 3.0<br>
+                    <small class="text-muted">23 June 13</small>
+                  </span>
+                </a>
+                <a href="#" class="media list-group-item">
+                  <span class="media-body block m-b-none">
+                    first v.1 (Bootstrap 2.3 based) released<br>
+                    <small class="text-muted">19 June 13</small>
+                  </span>
+                </a>
+              </div>
+              <footer class="panel-footer text-small">
+                <a href="#" class="pull-right"><i class="icon-cog"></i></a>
+                <a href="#">See all the notifications</a>
+              </footer>
+            </section>
+          </section>
+        </div>
+      </li>
+      <li><div class="m-t-small"><a class="btn btn-small btn-info" data-toggle="modal" href="#modal"><i class="icon-plus"></i> POST</a></div></li>
+      <li class="dropdown shift" data-toggle="shift:appendTo" data-target=".nav-primary .nav">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-xlarge visible-sm visible-sm-inline"></i>Settings <b class="caret hidden-sm-only"></b></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#" data-toggle="class:navbar-fixed" data-target='body'>Navbar 
+              <span class="text-active">auto</span>
+              <span class="text">fixed</span>
+            </a>
+          </li>
+          <li class="visible-lg">
+            <a href="#" data-toggle="class:nav-vertical" data-target="#nav">Nav 
+              <span class="text-active">vertical</span>
+              <span class="text">horizontal</span>
+            </a>
+          </li>
+          <li class="divider hidden-sm"></li>
+          <li class="dropdown-header">Colors</li>
+          <li>
+            <a href="#" data-toggle="class:bg bg-black" data-target='.navbar'>Navbar 
+              <span class="text-active">white</span>
+              <span class="text">inverse</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-toggle="class:bg-light" data-target='#nav'>Nav 
+              <span class="text-active">inverse</span>
+              <span class="text">light</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form pull-left shift" action="" data-toggle="shift:appendTo" data-target=".nav-primary">
+      <i class="icon-search text-muted"></i>
+      <input type="text" class="input-small form-control" placeholder="Search">
+    </form>
+  </header>
+  <!-- / header -->
+  <!-- nav -->
+  <nav id="nav" class="nav-primary visible-lg nav-vertical">
+    <ul class="nav" data-spy="affix" data-offset-top="50">
+      <li><a href="index.html"><i class="icon-dashboard icon-xlarge"></i>Dashboard</a></li>
+      <li class="dropdown-submenu">
+        <a href="#"><i class="icon-th icon-xlarge"></i>Elements</a>
+        <ul class="dropdown-menu">
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="icons.html"><b class="badge pull-right">302</b>Icons</a></li>            
+          <li><a href="grid.html">Grid</a></li>
+          <li><a href="widgets.html"><b class="badge bg-primary pull-right">8</b>Widgets</a></li>
+          <li><a href="components.html"><b class="badge pull-right">18</b>Components</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu active">
+        <a href="#"><i class="icon-list icon-xlarge"></i>Lists</a>
+        <ul class="dropdown-menu">
+          <li><a href="list.html">List groups</a></li>
+          <li><a href="table.html">Table</a></li>
+        </ul>
+      </li>
+      <li><a href="form.html"><i class="icon-edit icon-xlarge"></i>Form</a></li>
+      <li><a href="chart.html"><i class="icon-signal icon-xlarge"></i>Chart</a></li>
+      <li class="dropdown-submenu">
+        <a href="#"><i class="icon-link icon-xlarge"></i>Others</a>
+        <ul class="dropdown-menu">
+          <li><a href="signin.html">Signin page</a></li>
+          <li><a href="signup.html">Signup page</a></li>
+          <li><a href="404.html">404 page</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- / nav -->
+  <section id="content">
+    <section class="main padder">
+      <div class="clearfix">
+        <h4><i class="icon-table"></i>Table</h4>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <section class="panel">
+            <header class="panel-heading">
+              <span class="label bg-danger pull-right">4 left</span>
+              Tasks
+            </header>
+            <div class="pull-out">
+              <table class="table table-striped m-b-none text-small">
+                <thead>
+                  <tr>
+                    <th>Progress</th>
+                    <th>Item</th>                    
+                    <th width="70"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>                    
+                    <td>
+                      <div class="progress progress-small progress-striped active m-t-mini m-b-none">
+                        <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="80%" style="width: 80%"></div>
+                      </div>
+                    </td>
+                    <td>App prototype design</td>
+                    <td class="text-right">
+                      <div class="btn-group">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-pencil"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="progress progress-mini m-t-mini m-b-none">
+                        <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="40%" style="width: 40%"></div>
+                      </div>
+                    </td>
+                    <td>Design documents</td>
+                    <td class="text-right">
+                      <div class="btn-group">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-pencil"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="progress progress-mini m-t-mini m-b-none">
+                        <div class="progress-bar progress-bar-warning" data-toggle="tooltip" data-original-title="20%" style="width: 20%"></div>
+                      </div>
+                    </td>
+                    <td>UI toolkit</td>
+                    <td class="text-right">
+                      <div class="btn-group">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-pencil"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="progress progress-mini m-t-mini m-b-none">
+                        <div class="progress-bar progress-bar-danger" data-toggle="tooltip" data-original-title="15%" style="width: 15%"></div>
+                      </div>
+                    </td>
+                    <td>Testing</td>
+                    <td class="text-right">
+                      <div class="btn-group">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-pencil"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+        <div class="col-lg-6">
+          <section class="panel">
+            <header class="panel-heading">Stats</header>
+            <div class="pull-out">
+              <table class="table table-striped m-b-none text-small">
+                <thead>
+                  <tr>
+                    <th>Graph</th>
+                    <th>Item</th>                    
+                    <th width="70"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>                    
+                    <td>
+                      <div class="sparkline" data-bar-color="#5cb85c" data-type="bar" data-height="19"><!--20,10,15,21,12,5,21,30,24,15,8,19--></div>
+                    </td>
+                    <td>App downloads</td>
+                    <td class="text-success">
+                      <i class="icon-level-up"></i> 40%
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="sparkline" data-bar-color="#61a1e1" data-type="bar" data-height="19"><!--,5,21,30,24,15,8,19,20,10,15,21,12--></div>
+                    </td>
+                    <td>Social connection</td>
+                    <td class="text-success">
+                      <i class="icon-level-up"></i> 20%
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="sparkline" data-bar-color="#999900" data-type="bar" data-height="19"><!--200,400,500,100,90,1200,1500,1000,800,500,80,50--></div>
+                    </td>
+                    <td>Revenue</td>
+                    <td class="text-warning">
+                      <i class="icon-level-down"></i> 5%
+                    </td>
+                  </tr>
+                  <tr>                    
+                    <td>
+                      <div class="sparkline" data-bar-color="#ff5f5f" data-type="bar" data-height="19"><!--15,21,30,24,15,8,19,20,10,15,21,12--></div>
+                    </td>
+                    <td>Customer increase</td>
+                    <td class="text-danger">
+                      <i class="icon-level-down"></i> 20%
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+        <div class="col-lg-12">
+          <section class="panel">
+            <header class="panel-heading">
+              Static Table
+            </header>
+            <div class="row text-small">
+              <div class="col-lg-4 m-b-mini">
+                <select class="input-small inline form-control" style="width:130px">
+                  <option value="0">Bulk action</option>
+                  <option value="1">Delete selected</option>
+                  <option value="2">Bulk edit</option>
+                  <option value="3">Export</option>
+                </select>
+                <button class="btn btn-small btn-white">Apply</button>                
+              </div>
+              <div class="col-lg-4 m-b-mini">
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-small btn-white active">
+                    <input type="radio" name="options" id="option1"> Day
+                  </label>
+                  <label class="btn btn-small btn-white">
+                    <input type="radio" name="options" id="option2"> Week
+                  </label>
+                  <label class="btn btn-small btn-white">
+                    <input type="radio" name="options" id="option2"> Month
+                  </label>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="input-group">
+                  <input type="text" class="input-small form-control" placeholder="Search">
+                  <span class="input-group-btn">
+                    <button class="btn btn-small btn-white" type="button">Go!</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="pull-out m-t-small">
+              <table class="table table-striped b-t text-small">
+                <thead>
+                  <tr>
+                    <th width="20"><input type="checkbox"></th>
+                    <th class="th-sortable" data-toggle="class">Project
+                      <span class="th-sort">
+                        <i class="icon-sort-down text"></i>
+                        <i class="icon-sort-up text-active"></i>
+                        <i class="icon-sort"></i>
+                      </span>
+                    </th>
+                    <th>Task</th>
+                    <th>Date</th>
+                    <th width="30"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" name="post[]" value="2"></td>
+                    <td>Idrawfast</td>
+                    <td>4c</td>
+                    <td>Jul 25, 2013</td>
+                    <td>
+                      <a href="#" class="active" data-toggle="class"><i class="icon-ok icon-large text-success text-active"></i><i class="icon-remove icon-large text-danger text"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="post[]" value="3"></td>
+                    <td>Formasa</td>
+                    <td>8c</td>
+                    <td>Jul 22, 2013</td>
+                    <td>
+                      <a href="#" data-toggle="class"><i class="icon-ok icon-large text-success text-active"></i><i class="icon-remove icon-large text-danger text"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="post[]" value="4"></td>
+                    <td>Avatar system</td>
+                    <td>15c</td>
+                    <td>Jul 15, 2013</td>
+                    <td>
+                      <a href="#" class="active" data-toggle="class"><i class="icon-ok icon-large text-success text-active"></i><i class="icon-remove icon-large text-danger text"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="post[]" value="4"></td>
+                    <td>Throwdown</td>
+                    <td>4c</td>
+                    <td>Jul 11, 2013</td>
+                    <td>
+                      <a href="#" class="active" data-toggle="class"><i class="icon-ok icon-large text-success text-active"></i><i class="icon-remove icon-large text-danger text"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="post[]" value="5"></td>
+                    <td>Idrawfast</td>
+                    <td>4c</td>
+                    <td>Jul 7, 2013</td>
+                    <td>
+                      <a href="#" class="active" data-toggle="class"><i class="icon-ok icon-large text-success text-active"></i><i class="icon-remove icon-large text-danger text"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="post[]" value="6"></td>
+                    <td>Formasa</td>
+                    <td>8c</td>
+                    <td>Jul 3, 2013</td>
+                    <td>
+                      <a href="#" class="active" data-toggle="class"><i class="icon-ok icon-large text-success text-active"></i><i class="icon-remove icon-large text-danger text"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="post[]" value="7"></td>
+                    <td>Avatar system </b></td>
+                    <td>15c</td>
+                    <td>Jul 2, 2013</td>
+                    <td>
+                      <a href="#" class="active" data-toggle="class"><i class="icon-ok icon-large text-success text-active"></i><i class="icon-remove icon-large text-danger text"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="post[]" value="8"></td>
+                    <td>Videodown</td>
+                    <td>4c</td>
+                    <td>Jul 1, 2013</td>
+                    <td>
+                      <a href="#" class="active" data-toggle="class"><i class="icon-ok icon-large text-success text-active"></i><i class="icon-remove icon-large text-danger text"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <footer class="panel-footer">
+              <div class="row">
+                <div class="col-lg-4 hidden-sm">
+                  <select class="input-small inline form-control" style="width:130px">
+                    <option value="0">Bulk action</option>
+                    <option value="1">Delete selected</option>
+                    <option value="2">Bulk edit</option>
+                    <option value="3">Export</option>
+                  </select>
+                  <button class="btn btn-small btn-white">Apply</button>                  
+                </div>
+                <div class="col-lg-4 text-center">
+                  <small class="text-muted inline m-t-small m-b-small">showing 20-30 of 50 items</small>
+                </div>
+                <div class="col-lg-4 text-right text-center-sm">                
+                  <ul class="pagination pagination-small m-t-none m-b-none">
+                    <li><a href="#"><i class="icon-chevron-left"></i></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"><i class="icon-chevron-right"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+          </section>
+        </div>
+        <div class="col-lg-12">
+          <section class="panel">
+            <header class="panel-heading">DataGrid <i class="icon-info-sign text-muted" data-toggle="popover" data-html="true" data-placement="top" data-content="The datagrid use ajax to load the data. please put this file on a server to preview." title="" data-trigger="hover" data-original-title="Help"></i> </header>
+            <div class="pull-out">
+              <table id="MyStretchGrid" class="table table-striped datagrid m-b-small">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="row">                        
+                        <div class="col-lg-8">
+                          <div class="select filter m-b-small m-t-small" data-resize="auto">
+                            <button data-toggle="dropdown" class="btn btn-small btn-white dropdown-toggle">
+                              <span class="dropdown-label"></span>
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li data-value="all" data-selected="true"><a href="#">All</a></li>
+                              <li data-value="lt5m"><a href="#">Population &lt; 5M</a></li>
+                              <li data-value="gte5m"><a href="#">Population &gt;= 5M</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="input-group search datagrid-search m-t-small">
+                            <input type="text" class="input-small form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                              <button class="btn btn-white btn-small"><i class="icon-search"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+
+                <tfoot>
+                  <tr>
+                    <th class="row">
+                      <div class="datagrid-footer-left col col-lg-6 text-center-sm" style="display:none;">
+                        <div class="grid-controls m-t-small">
+                          <span>
+                            <span class="grid-start"></span> -
+                            <span class="grid-end"></span> of
+                            <span class="grid-count"></span>
+                          </span>
+                          <div class="select grid-pagesize dropup" data-resize="auto">
+                            <button data-toggle="dropdown" class="btn btn-small btn-white dropdown-toggle">
+                              <span class="dropdown-label"></span>
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li data-value="5" data-selected="true"><a href="#">5</a></li>
+                              <li data-value="10"><a href="#">10</a></li>
+                              <li data-value="20"><a href="#">20</a></li>
+                              <li data-value="50"><a href="#">50</a></li>
+                              <li data-value="100"><a href="#">100</a></li>
+                            </ul>
+                          </div>
+                          <span>Per Page</span>
+                        </div>
+                      </div>
+                      <div class="datagrid-footer-right col col-lg-6 text-right text-center-sm" style="display:none;">
+                        <div class="grid-pager">
+                          <button type="button" class="btn btn-small btn-white grid-prevpage"><i class="icon-chevron-left"></i></button>
+                          <span>Page</span>
+                          <div class="inline">
+                            <div class="input-group dropdown combobox">
+                              <input class="input-small form-control" type="text">
+                              <div class="input-group-btn dropup">
+                                <button class="btn btn-small btn-white" data-toggle="dropdown"><i class="caret"></i></button>
+                                <ul class="dropdown-menu pull-right"></ul>
+                              </div>
+                            </div>
+                          </div>
+                          <span>of <span class="grid-pages"></span></span>
+                          <button type="button" class="btn btn-small btn-white grid-nextpage"><i class="icon-chevron-right"></i></button>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </section>
+          <section class="panel">
+            <header class="panel-heading">DataTables <i class="icon-info-sign text-muted" data-toggle="popover" data-html="true" data-placement="top" data-content="The datatables use ajax to load the data. please put this file on a server to preview." title="" data-trigger="hover" data-original-title="Help"></i> </header>
+            <div class="pull-out">
+              <table class="table table-striped m-b-none" data-ride="datatables">
+                <thead>
+                  <tr>
+                    <th width="20%">Rendering engine</th>
+                    <th width="25%">Browser</th>
+                    <th width="25%">Platform(s)</th>
+                    <th width="15%">Engine version</th>
+                    <th width="15%">CSS grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- footer -->
+  <footer id="footer">
+    <div class="text-center padder clearfix">
+      <p>
+        <small>&copy; first 2013, Mobile first web app framework base on Bootstrap  更多模板：<a href="http://www.aspku.com/" target="_blank">源码之家</a></small><br><br>
+        <a href="#" class="btn btn-mini btn-circle btn-twitter"><i class="icon-twitter"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-facebook"><i class="icon-facebook"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-gplus"><i class="icon-google-plus"></i></a>
+      </p>
+    </div>
+  </footer>
+  <!-- / footer -->
+	<script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- fuelux -->
+  <script src="js/fuelux/fuelux.js"></script>
+  <script src="js/underscore-min.js"></script>
+  <!-- datatables -->
+  <script src="js/datatables/jquery.dataTables.min.js"></script>
+  <!-- Sparkline Chart -->
+  <script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
+  <!-- Easy Pie Chart -->
+  <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+
+  <!-- app -->
+  <script src="js/app.js"></script>
+  <script src="js/app.plugin.js"></script>
+  <script src="js/app.data.js"></script>
+</body>
+</html>

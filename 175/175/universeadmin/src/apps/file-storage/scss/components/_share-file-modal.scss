@@ -1,0 +1,76 @@
+.file-storage {
+  &__share-file-modal {
+    font-size: 14px;
+
+    &-content {
+      width: 540px;
+    }
+
+    &-header {
+      padding: 15px 20px 15px 20px;
+    }
+
+    &-heading {
+      font-size: 20px;
+      color: #111;
+    }
+
+    &-body {
+      padding: 0 20px 20px 20px;
+
+      &-heading {
+        font-size: 17px;
+        margin-bottom: 2px;
+      }
+    }
+
+    &-options {
+      margin-top: 15px;
+      display: none;
+    }
+
+    &-footer {
+      background: rgba($color-gray, .1);
+      color: #000;
+      padding: 15px 20px;
+      cursor: pointer;
+    }
+
+    &-link {
+      color: $color-gray;
+    }
+
+    &-attention {
+      display: none;
+      background-color: rgba(#f7971c, .1);
+      color: #f7971c;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 15px;
+
+      strong {
+        font-size: 17px;
+        margin-bottom: 3px;
+      }
+    }
+
+    &--sharing &-footer {
+      display: none;
+    }
+
+    &--sharing &-options,
+    &--sharing &-attention {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .file-storage {
+    &__share-file-modal {
+      &-dialog {
+        max-width: 540px;
+      }
+    }
+  }
+}

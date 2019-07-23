@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Boo Admin - Form Extension</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+    <script src="assets/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body class="sidebar-left ">
+<div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="brand" href="javascript:void(0);"><img src="assets/img/demo/logo-brand.png"></a>
+                        <div class="search-global">
+                            <input id="globalSearch" class="search search-query input-medium" type="search">
+                            <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav user-menu visible-desktop">
+                                <li><a class="btn-glyph fontello-icon-edit tip-bc" href="javascript:void(0);" title="Messages"><span class="badge badge-important">8</span></a></li>
+                                <li><a class="btn-glyph fontello-icon-mail-1 tip-bc" href="javascript:void(0);" title="Emails"></a></li>
+                                <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Support"><span class="badge badge-important">4</span></a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li> <a href="dashboard-one.html">Dashboard</a> </li>
+                                <li class="active"> <a href="javascript:void(0);">Components</a> </li>
+                                <li> <a href="component-fullcalendar-demo.html"><span class="fontello-icon-calendar"></span>Calendar</a> </li>
+                                <li> <a href="javascript:void(0);"><span class="fontello-icon-users"></span>Contacts</a> </li>
+                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="component-form-demo.html">Demo Form</a></li>
+                                        <li><a href="component-widgets-remember.html">Remember</a></li>
+                                        <li><a href="component-widgets-users.html">User List</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">Next Update</li>
+                                        <li><a href="javascript:void(0);">Contacts</a></li>
+                                        <li><a href="javascript:void(0);">Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer">
+                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                <!-- // Resposive navigation -->
+                <div class="breadcrumbs-nav hidden-phone">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                        <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Table</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">Boo Admin </li>
+                    </ul>
+                </div>
+                <!-- // breadcrumbs --> 
+            </div>
+            <!-- // drawer --> 
+        </div>
+    </div>
+    <!-- // header-container -->
+    
+    <div id="main-container">
+        <div id="main-sidebar" class="sidebar sidebar-inverse">
+            <div class="sidebar-item">
+                <div class="media profile">
+                    <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
+                        <p class="data">Last Access: 16 May 15:30</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // sidebar item - profile -->
+            
+            <ul id="mainSideMenu" class="nav nav-list nav-side">
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor"></span> <i class="chevron fontello-icon-right-open-3"></i> Dashboards </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accDash">
+                        <li> <a href="dashboard-one.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 1 </a> </li>
+                        <li> <a href="dashboard-two.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 2 </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Dashboard -->
+                <li class="accordion-group">
+                    <div class="accordion-heading active"> <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon aweso-icon-list-alt"></span><i class="chevron fontello-icon-right-open-3"></i> Form </a> </div>
+                    <ul class="accordion-content nav nav-list collapse in" id="accForms">
+                        <li> <a href="component-form-demo.html"> <i class="fontello-icon-right-dir"></i> Demo Form </a> </li>
+                        <li> <a href="component-form-elements.html"> <i class="fontello-icon-right-dir"></i> Form Element </a> </li>
+                        <li class="active"> <a href="component-form-extension.html"> <i class="fontello-icon-right-dir"></i> Form Extension</a> </li>
+                        <li> <a href="component-form-wizard.html"> <i class="fontello-icon-right-dir"></i> Form Wizard</a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Forms -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accComponents" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Components </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accComponents">
+                        <li> <a href="elements-notification.html"> <i class="fontello-icon-right-dir"></i> Notification </a> </li>
+                        <li> <a href="component-rangeslider.html"> <i class="fontello-icon-right-dir"></i> Rangeslider </a> </li>
+                        <li> <a href="component-file-upload.html"> <i class="fontello-icon-right-dir"></i> File upload </a> </li>
+                        <li> <a href="component-gallery.html"> <i class="fontello-icon-right-dir"></i> Gallery &amp; Image </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Components -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Tables </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accTables">
+                        <li> <a href="component-table.html"> <i class="fontello-icon-right-dir"></i> Base Table </a> </li>
+                        <li> <a href="component-table-boo.html"> <i class="fontello-icon-right-dir"></i> Boo Table </a> </li>
+                        <li> <a href="component-table-datatable.html"> <i class="fontello-icon-right-dir"></i> DataTable </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Tables -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accStatistics" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-chart"></span> <i class="chevron fontello-icon-right-open-3"></i> Statistics </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accStatistics">
+                        <li> <a href="statistic-flot.html"> <i class="fontello-icon-right-dir"></i> Charts </a> </li>
+                        <li> <a href="statistic-sparkline.html"> <i class="fontello-icon-right-dir"></i> Sparklines </a> </li>
+                        <li> <a href="statistic-circle.html"> <i class="fontello-icon-right-dir"></i> Circle </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Statistics -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accWidgets" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon  fontello-icon-window"></span> <i class="chevron fontello-icon-right-open-3"></i> Widgets </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accWidgets">
+                        <li> <a href="component-widget-style.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Style </a> </li>
+                        <li> <a href="component-widget-custom.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Custom </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Widgets -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accButtons" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-puzzle"></span> <i class="chevron fontello-icon-right-open-3"></i> UI Elements </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accButtons">
+                        <li> <a href="elements-button.html"> <i class="fontello-icon-right-dir"></i> Button </a> </li>
+                        <li> <a href="elements-icon-font.html"> <i class="fontello-icon-right-dir"></i> Iconic fonts </a> </li>
+                        <li> <a href="elements-icon-fugue-demo.html"> <i class="fontello-icon-right-dir"></i> Icon </a> </li>
+                        <li> <a href="elements-wells.html"> <i class="fontello-icon-right-dir"></i> Wells </a> </li>
+                        <li> <a href="elements-tabs.html"> <i class="fontello-icon-right-dir"></i> Tabs </a> </li>
+                        <li> <a href="elements-modals.html"> <i class="fontello-icon-right-dir"></i> Modal </a> </li>
+                        <li> <a href="elements-progressbar.html"> <i class="fontello-icon-right-dir"></i> Progressbar </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu UI Elements -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accCalendar" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Calendar </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accCalendar">
+                        <li> <a href="component-fullcalendar-demo.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Demo </a> </li>
+                        <li> <a href="component-fullcalendar.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Style </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Calendar -->
+            </ul>
+            <!-- // sidebar menu -->
+            
+            <div class="sidebar-item"></div>
+            <!-- // sidebar item --> 
+            
+        </div>
+        <!-- // sidebar -->
+        
+        <div id="main-content" class="main-content container-fluid">
+            <div class="row-fluid page-head">
+                <h2 class="page-title"><i class="aweso-icon-list-alt"></i> Forms Extension <small>next plugins for form</small></h2>
+                <div class="page-bar">
+                    <div class="btn-toolbar"> </div>
+                </div>
+            </div>
+            <!-- // page head -->
+            
+            <div id="page-content" class="page-content">
+                <section>
+                    <div class="page-header">
+                        <h3><i class="fontello-icon-article-alt opaci35"></i> Wysiwyg editors <small>edit content</small></h3>
+                    </div>
+                    <div class="row-fluid">
+                        <form class="span8 margin-00">
+                            <div class="well well-nice">
+                                <h4 class="simple-header">Wysihtml5 <small>Simple wysiwyg editors</small></h4>
+                                <div class="control-group">
+                                    <textarea id="wysiBooEditor" class="input-block-level" style="height: 160px" placeholder="Enter text ..."></textarea>
+                                    <!-- // fieldset Input -->
+                                    <div class="btn-toolbar"><a class="btn btn-green pull-right" href="javascript:void(0);">Save</a></div>
+                                </div>
+                            </div>
+                            <div class="well well-nice form-dark">
+                                <div class="control-group">
+                                    <textarea id="wysiBooEditorBlack" class="input-block-level" style="height: 100px" placeholder="Enter text ..."></textarea>
+                                    <!-- // fieldset Input Grid Sizig --> 
+                                </div>
+                            </div>
+                        </form>
+                        <!-- // Column -->
+                        
+                    </div>
+                    <!-- // Sample row ----------------------------------------------------------- Wysiwyg editors --> 
+                    
+                </section>
+                
+                <section>
+                	<div class="page-header">
+                        <h3><i class="fontello-icon-exchange opaci35"></i> Select DualBox <small>copy selected items</small></h3>
+                    </div>
+                    <form>
+                        <div class="row-fluid">
+                            <div class="well well-nice span4 padding-bottom5 clearfix">
+                                <h4 class="simple-header"><span id="box1Counter" class="countLabel pull-right"></span>Item list </h4>
+                                <div class="input-append append-percent form-dark">
+                                    <input type="text" id="box1Filter" style="width:70%" placeholder="Search filter">
+                                    <button id="box1Clear" class="btn btn-yellow" type="button" style="width:30%"><i class="fontello-icon-filter hidden-tablet"></i> Clear</button>
+                                </div>
+                                <select id="box1View" multiple="multiple" class="input-block-level" style="height:150px">
+                                    <option value="501649">2008-2009 "Mini" Baja</option>
+                                    <option value="501497">AAPA - Asian American Psychological Association</option>
+                                    <option value="501053">Academy of Film Geeks</option>
+                                    <option value="500001">Accounting Association</option>
+                                    <option value="501227">ACLU</option>
+                                    <option value="501610">Active Minds</option>
+                                    <option value="501514">Activism with A Reel Edge (A.W.A.R.E.)</option>
+                                    <option value="501656">Adopt a Grandparent Program</option>
+                                    <option value="501050">Africa Awareness Student Organization</option>
+                                    <option value="501075">African Diasporic Cultural RC Interns</option>
+                                    <option value="501493">Agape</option>
+                                    <option value="501562">AGE-Alliance for Graduate Excellence</option>
+                                    <option value="500676">AICHE (American Inst of Chemical Engineers)</option>
+                                    <option value="501460">AIDS Sensitivity Awareness Project ASAP</option>
+                                    <option value="500004">Aikido Club</option>
+                                    <option value="500336">Akanke</option>
+                                </select>
+                                <!-- // Select list 1 -->
+                                
+                                <ul class="listbox-menu inline pull-right">
+                                    <li>
+                                        <button id="to2" class="btn" type="button" style="width:75px"><i class="fontello-icon-to-end-1 hidden-phone"></i><span class="visible-phone"> copy</span></button>
+                                    </li>
+                                    <li>
+                                        <button id="allTo2" class="btn" type="button"><i class="fontello-icon-to-end-alt hidden-phone"></i><span class="visible-phone"> copy All</span></button>
+                                    </li>
+                                </ul>
+                                <!-- // Action for select 1 -->
+                                
+                                <select id="box1Storage">
+                                </select>
+                            </div>
+                            <!-- // Column -->
+                            
+                            <div class="well well-nice span4 padding-bottom5 clearfix">
+                                <h4 class="simple-header"><span id="box2Counter" class="countLabel pull-right"></span>Selected items </h4>
+                                <div class="input-append append-percent form-dark">
+                                    <input type="text" id="box2Filter" style="width:70%" placeholder="Search filter">
+                                    <button id="box2Clear" class="btn btn-yellow" type="button" style="width:30%"><i class="fontello-icon-filter hidden-tablet"></i> Clear</button>
+                                </div>
+                                <select id="box2View" multiple="multiple" class="input-block-level" style="height:150px">
+                                </select>
+                                <!-- // Select list 2 -->
+                                
+                                <ul class="listbox-menu inline pull-left">
+                                    <li>
+                                        <button id="to1" class="btn" type="button" style="width:75px"><i class="fontello-icon-to-start-1 hidden-phone"></i><span class="visible-phone"> return</span></button>
+                                    </li>
+                                    <li>
+                                        <button id="allTo1" class="btn" type="button "><i class="fontello-icon-to-start-alt hidden-phone"></i><span class="visible-phone"> return All</span></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn btn-green" type="submit">Send data</button>
+                                    </li>
+                                </ul>
+                                <!-- // Action for select 2 -->
+                                
+                                <select id="box2Storage">
+                                </select>
+                            </div>
+                            <!-- // Column -->
+                            
+                            <div class="span4">
+                                <p>Lorem ipsum dolor sit amet consectetuer morbi lobortis Phasellus porttitor et. Nibh tempus Integer mauris suscipit Proin Nam Duis odio laoreet Aenean. A eu augue wisi vel massa netus Nam congue neque cursus. Urna tempor Sed vitae magna tortor elit tortor est Nulla tincidunt. Dignissim at et laoreet In porta eleifend Ut In Nam magna. Pellentesque egestas auctor id id dui tincidunt vitae tempor Curabitur neque. </p>
+                            </div>
+                            <!-- // Column --> 
+                            
+                        </div>
+                        <!-- // Example row -->
+                    </form>
+                    <!-- // Sample row ----------------------------------------------------------- Dual select box -->
+                    
+                    <div class="row-fluid">
+                        <form class="form-dark span8">
+                            <div class="row-fluid">
+                                <ul class="inline well well-nice">
+                                    <li class="listbox-left span6 grider-item">
+                                        <h4 class="simple-header"><i class="fontello-icon-list-4"></i> Item list</h4>
+                                        <div class="well well-small well-impressed bg-gray-light _margin-0m">
+                                            <input id="box3Filter" class="input-block-level" type="text" placeholder="Search filter">
+                                            <div class="btn-group margin-0m">
+                                                <button id="box3Clear" class="btn btn-small btn-yellow" type="button"><i class="fontello-icon-filter"></i> Clear</button>
+                                                <button id="to4" class="btn btn-small btn-boo" type="button" style="width:60px;"><i class="fontello-icon-to-end-1"></i></button>
+                                                <button id="allTo4" class="btn btn-small btn-boo" type="button" style="width:35px;"><i class="fontello-icon-to-end-alt"></i></button>
+                                            </div>
+                                            <select id="box3View" multiple="multiple" class="input-block-level" style="height:150px">
+                                                <option value="501649">2008-2009 "Mini" Baja</option>
+                                                <option value="501497">AAPA - Asian American Psychological Association</option>
+                                                <option value="501053">Academy of Film Geeks</option>
+                                                <option value="500001">Accounting Association</option>
+                                                <option value="501227">ACLU</option>
+                                                <option value="501610">Active Minds</option>
+                                                <option value="501514">Activism with A Reel Edge (A.W.A.R.E.)</option>
+                                                <option value="501656">Adopt a Grandparent Program</option>
+                                                <option value="501050">Africa Awareness Student Organization</option>
+                                                <option value="501075">African Diasporic Cultural RC Interns</option>
+                                                <option value="501493">Agape</option>
+                                                <option value="501562">AGE-Alliance for Graduate Excellence</option>
+                                                <option value="500676">AICHE (American Inst of Chemical Engineers)</option>
+                                                <option value="501460">AIDS Sensitivity Awareness Project ASAP</option>
+                                                <option value="500004">Aikido Club</option>
+                                                <option value="500336">Akanke</option>
+                                            </select>
+                                            <span id="box3Counter" class="countLabel"></span>
+                                            <select id="box3Storage">
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="listbox-right span6  grider-item">
+                                        <h4 class="simple-header"><i class="fontello-icon-list-add"></i> Selected items</h4>
+                                        <div class="well well-small well-impressed bg-gray-light margin-0m">
+                                            <div class="margin-0m">
+                                                <input id="box4Filter" class="input-block-level" type="text" placeholder="Search filter">
+                                                <div class="btn-group">
+                                                    <button id="allTo3" class="btn btn-small btn-boo" type="button tip-tc" style="width:35px;" title="copy all items"><i class="fontello-icon-to-start-alt"></i></button>
+                                                    <button id="to3" class="btn btn-small btn-boo" type="button" style="width:60px;"><i class="fontello-icon-to-start-1"></i></button>
+                                                    <button id="box4Clear" class="btn btn-small btn-yellow" type="button"><i class="fontello-icon-filter"></i> Clear</button>
+                                                </div>
+                                            </div>
+                                            <select id="box4View" multiple="multiple" class="input-block-level" style="height:150px">
+                                            </select>
+                                            <span id="box4Counter" class="countLabel"></span>
+                                            <select id="box4Storage">
+                                            </select>
+                                        </div>
+                                        <button class="btn btn-green pull-right" type="submit">Send selected data</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- // Sample row ----------------------------------------------------------- Dual select box -->
+                    
+                    <div class="row-fluid">
+                        <form class="form-dark">
+                            <div class="well well-nice">
+                                <ul class="inline">
+                                    <li class="listbox-left span5">
+                                        <h4 class="simple-header">
+                                            <button id="box5Clear" class="btn btn-small btn-yellow pull-right" type="button"><i class="fontello-icon-filter"></i> Clear</button>
+                                            Item list</h4>
+                                        <input id="box5Filter" class="input-block-level" type="text">
+                                        <select id="box5View" multiple="multiple" class="input-block-level" style="height:210px">
+                                            <option value="501649">2008-2009 "Mini" Baja</option>
+                                            <option value="501497">AAPA - Asian American Psychological Association</option>
+                                            <option value="501053">Academy of Film Geeks</option>
+                                            <option value="500001">Accounting Association</option>
+                                            <option value="501227">ACLU</option>
+                                            <option value="501610">Active Minds</option>
+                                            <option value="501514">Activism with A Reel Edge (A.W.A.R.E.)</option>
+                                            <option value="501656">Adopt a Grandparent Program</option>
+                                            <option value="501050">Africa Awareness Student Organization</option>
+                                            <option value="501075">African Diasporic Cultural RC Interns</option>
+                                            <option value="501493">Agape</option>
+                                            <option value="501562">AGE-Alliance for Graduate Excellence</option>
+                                            <option value="500676">AICHE (American Inst of Chemical Engineers)</option>
+                                            <option value="501460">AIDS Sensitivity Awareness Project ASAP</option>
+                                            <option value="500004">Aikido Club</option>
+                                            <option value="500336">Akanke</option>
+                                        </select>
+                                        <span id="box5Counter" class="countLabel"></span>
+                                        <select id="box5Storage">
+                                        </select>
+                                    </li>
+                                    <li class="listbox-control span2 text-center">
+                                        <h4 class="simple-header">Actions</h4>
+                                        <ul class="listbox-menu well well-nice">
+                                            <li>
+                                                <button id="to6" class="btn btn-block" type="button"><i class="fontello-icon-to-end-1"></i></button>
+                                            </li>
+                                            <li>
+                                                <button id="allTo6" class="btn btn-block" type="button"><i class="fontello-icon-to-end-alt"></i></button>
+                                            </li>
+                                            <li class="divider"> </li>
+                                            <li>
+                                                <button id="allTo5" class="btn btn-block" type="button"><i class="fontello-icon-to-start-alt"></i></button>
+                                            </li>
+                                            <li>
+                                                <button id="to5" class="btn btn-block" type="button"><i class="fontello-icon-to-start-1"></i></button>
+                                            </li>
+                                            <li class="divider"> </li>
+                                            <li>
+                                                <button class="btn btn-green btn-block" type="submit">Send selected data</button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="listbox-right span5">
+                                        <h4 class="simple-header">
+                                            <button id="box6Clear" class="btn btn-small btn-yellow pull-right" type="button"><i class="fontello-icon-filter"></i> Clear</button>
+                                            <i class="fontello-icon-list-4"></i> Selected items </h4>
+                                        <input id="box6Filter" class="input-block-level" type="text">
+                                        <select id="box6View" multiple="multiple" class="input-block-level" style="height:210px">
+                                        </select>
+                                        <span id="box6Counter" class="countLabel"></span>
+                                        <select id="box6Storage">
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- // Sample row ----------------------------------------------------------- Dual select box -->  
+                    
+                </section>
+                
+                <section>
+                    <div class="page-header">
+                        <h3><a href="component-file-upload.html" class="btn btn-green pull-right" data-dismiss="fileupload">File upload plugin here</a><i class="fontello-icon-doc-2 opaci35"></i> Files <small>file management</small></h3>
+                    </div>
+                    <div class="row-fluid margin-bottom30">
+                        <div class="span7">
+                            <p>The file upload plugin allows you to create a visually appealing file or image upload widgets.</p>
+                            <h4 class="simple-header"> File upload <small>base</small></h4>
+                            <div class="well well-nice">
+                                <div class="fileupload fileupload-new" data-provides="fileupload"> 
+                                    <span class="btn btn-file"> <span class="fileupload-new">Select file</span> <span class="fileupload-exists">Change</span>
+                                    <input type="file" />
+                                    </span> <span class="fileupload-preview"></span> <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a> 
+                                </div>
+                            </div>
+                            <!-- // file upload -->
+                            
+                            <h4 class="simple-header"> File upload <small>with file input</small> </h4>
+                            <div class="well well-nice">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="input-append">
+                                        <div class="uneditable-input span4"> <i class="fontello-icon-doc-2 fileupload-exists"></i> <span class="fileupload-preview"></span> </div>
+                                        <span class="btn btn-file"> <span class="fileupload-new">Select file</span> <span class="fileupload-exists">Change</span>
+                                        <input type="file" />
+                                        </span> <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a> </div>
+                                </div>
+                            </div>
+                            <!-- // file upload -->
+                            
+                            <p>When uploading an image, it's possible to show a thumbnail instead of the filename.</p>
+                            <div class="row-fluid margin-bottom20">
+                                <div class="span6">
+                                    <h4 class="simple-header"> Image upload <small>fix size</small> </h4>
+                                    <div class="well well-nice inline">
+                                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                                            <div class="fileupload-preview thumbnail" style="width: 200px; height: 120px;"></div>
+                                            <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
+                                                <input type="file" />
+                                                </span> <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a> </div>
+                                        </div>
+                                        <!-- // image upload --> 
+                                    </div>
+                                </div>
+                                <!-- // Column -->
+                                
+                                <div class="span6">
+                                    <h4 class="simple-header"> Image upload <small>adaptable size</small> </h4>
+                                    <div class="well well-black inline">
+                                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                                            <div class="fileupload-new thumbnail" style="width: 200px; height: 120px;"> <img src="http://www.placehold.it/200x120/EFEFEF/AAAAAA&text=no+image" /> </div>
+                                            <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                            <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
+                                                <input type="file" />
+                                                </span> <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a> </div>
+                                        </div>
+                                        <!-- // image upload --> 
+                                    </div>
+                                </div>
+                                <!-- // Column --> 
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <h4 class="simple-header"> Image upload <small>floating</small> </h4>
+                            <div class="well well-nice">
+                                <div class="fileupload fileupload-new pull-left" data-provides="fileupload">
+                                    <div class="fileupload-new thumbnail" style="width: 50px; height: 50px;"> <img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA" /> </div>
+                                    <div class="fileupload-preview fileupload-exists thumbnail" style="width: 50px; height: 50px;"></div>
+                                    <span class="btn btn-file" style="vertical-align:top"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
+                                    <input type="file" />
+                                    </span> <a href="#" class="btn btn-red fileupload-exists" data-dismiss="fileupload" style="vertical-align:top">Remove</a> </div>
+                                <!-- // image upload -->
+                                
+                                <div class="fileupload fileupload-new pull-right" data-provides="fileupload" style="text-align: right"> <span class="btn btn-file" style="vertical-align:top"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
+                                    <input type="file" />
+                                    </span> <a href="#" class="btn btn-red fileupload-exists" data-dismiss="fileupload" style="vertical-align:top">Remove</a>
+                                    <div class="fileupload-new thumbnail" style="width: 50px; height: 50px;"> <img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA" /></div>
+                                    <div class="fileupload-preview fileupload-exists thumbnail" style="width: 50px; height: 50px;"></div>
+                                </div>
+                                <!-- // image upload -->
+                                <div class="clearfix"></div>
+                            </div> 
+                        </div>
+                        <!-- // Column -->
+                        
+                        <div class="span5"></div>
+                        <!-- // Column --> 
+                        
+                    </div>
+                    <!-- // Example row --> 
+                </section>
+                
+            </div>
+            <!-- // page content --> 
+            
+        </div>
+        <!-- // main-content --> 
+        
+    </div>
+    <!-- // main-container  -->
+    
+    <footer id="footer-fix">
+        <div id="footer-sidebar" class="footer-sidebar">
+            <div class="navbar">
+                <div class="btn-toolbar"> <a class="btn btn-glyph btn-link" href="javascript:void(0);"><i class="fontello-icon-up-open-1"></i></a> </div>
+            </div>
+        </div>
+        <!-- // footer sidebar -->
+        
+        <div id="footer-content" class="footer-content">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <ul class="nav pull-left">
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnToggleSidebar" class="btn-glyph fontello-icon-resize-full-2 tip hidden-phone" href="javascript:void(0);" title="show hide sidebar"></a></li>
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnChangeSidebar" class="btn-glyph fontello-icon-login tip hidden-phone" href="javascript:void(0);" title="change sidebar position"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnChangeSidebarColor" class="btn-glyph fontello-icon-palette tip" href="javascript:void(0);" title="change sidebar color"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cw" href="javascript:void(0);"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="fontello-icon-home-3" href="dashboard-one.html"></a></li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-help-2 tip" href="javascript:void(0);" title="help to page"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cog-4 tip" href="javascript:void(0);" title="settings app"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnLogout" class="btn-glyph fontello-icon-logout-1 tip" href="javascript:void(0);" title="logout"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnScrollup" class="scrollup btn-glyph fontello-icon-up-open-1" href="javascript:void(0);"><span class="hidden-phone">Scroll</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // footer content --> 
+        
+    </footer>
+    <!-- // footer-fix  --> 
+    
+</div>
+<!-- // page-container  --> 
+
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/lib/jquery.js"></script> 
+<script src="assets/js/lib/jquery-ui.js"></script>
+<script src="assets/js/lib/jquery.cookie.js"></script> 
+<script src="assets/js/lib/jquery.date.js"></script> 
+<script src="assets/js/lib/jquery.mousewheel.js"></script> 
+<script src="assets/js/lib/jquery.load-image.min.js"></script>
+<script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+
+<!-- Plugins Bootstrap -->
+<script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+<script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script> 
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+<script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+<script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+<script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+<script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+<script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+<script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+ 
+
+<!-- Plugins Custom - Only example --> 
+<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>
+
+<!-- Plugins Custom - System --> 
+<script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+<script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+<!-- Plugins Custom - System info -->
+<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+<!-- Plugins Custom - Content -->
+<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+<!-- Plugins Custom - Component -->
+<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+<!-- Plugins Custom - Form -->
+<script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+<!-- Plugins Custom - Gallery --> 
+<script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+<script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+ 
+<!-- Plugins Tables --> 
+<script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+<!-- Plugins data visualization --> 
+<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+<script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/core.js"></script> 
+<script src="assets/js/application.js"></script>  
+
+<!-- Only This Demo Page --> 
+<script src="assets/js/demo/demo-wisyhtml5.js"></script>
+
+<script>		
+$(function() {
+				$.configureBoxes({selectOnSubmit: false});
+				$.configureBoxes({
+						box1View: 'box3View',
+						box1Storage: 'box3Storage',
+						box1Filter: 'box3Filter',
+						box1Clear: 'box3Clear',
+						box1Counter: 'box3Counter',
+						box2View: 'box4View',
+						box2Storage: 'box4Storage',
+						box2Filter: 'box4Filter',
+						box2Clear: 'box4Clear',
+						box2Counter: 'box4Counter',
+						to1: 'to3',
+						to2: 'to4',
+						allTo1: 'allTo3',
+						allTo2: 'allTo4',
+						selectOnSubmit: false
+				});
+				$.configureBoxes({
+						box1View: 'box5View',
+						box1Storage: 'box5Storage',
+						box1Filter: 'box5Filter',
+						box1Clear: 'box5Clear',
+						box1Counter: 'box5Counter',
+						box2View: 'box6View',
+						box2Storage: 'box6Storage',
+						box2Filter: 'box6Filter',
+						box2Clear: 'box6Clear',
+						box2Counter: 'box6Counter',
+						to1: 'to5',
+						to2: 'to6',
+						allTo1: 'allTo5',
+						allTo2: 'allTo6',
+						selectOnSubmit: false
+				});/**/
+        });
+</script> 
+</body>
+</html>

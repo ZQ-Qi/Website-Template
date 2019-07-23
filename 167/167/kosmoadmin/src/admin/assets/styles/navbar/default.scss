@@ -1,0 +1,1740 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Logo / .ks-navbar > .navbar-brand > .ks-logo
+2. Grid navigation / .ks-navbar > .ks-dropdown-grid
+3. Navbar Menu / .ks-navbar-menu
+4. Navbar Actions / .ks-navbar-actions
+-------------------------------------------------------------------*/
+
+@import "../config/ui";
+@import "../config/colors";
+
+$ks-navbar-nav-item-padding: 0 24px;
+
+.ks-navbar {
+  height: 60px;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  flex-direction: row;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+  .dropdown-menu {
+    position: absolute;
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      min-width: 220px;
+      overflow: visible;
+
+      /* Nested dropdown menu styles */
+      .dropdown-menu {
+        position: absolute;
+        top: 0;
+        left: 229px;
+      }
+    }
+
+    &.open,
+    &.show {
+      > .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+
+  /* Styles for navigation items in navbar */
+  .nav-item {
+    padding: 0;
+    margin: 0;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+
+    + .nav-item {
+      margin: 0;
+      border-left: none;
+    }
+
+    /* Styles for dropdowns */
+    &.show {
+      .dropdown-menu {
+        margin: 0;
+        width: 229px;
+        border: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+        &.ks-primary {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-primary;
+              }
+            }
+          }
+        }
+
+        &.ks-info {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-info;
+              }
+            }
+          }
+        }
+
+        &.ks-success {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-success;
+              }
+            }
+          }
+        }
+
+        &.ks-warning {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-warning;
+              }
+            }
+          }
+        }
+
+        &.ks-danger {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-danger;
+              }
+            }
+          }
+        }
+
+        &.ks-fuchsia-pink {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-fuchsia-pink;
+              }
+            }
+          }
+        }
+
+        &.ks-cerise-red {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-cerise-red;
+              }
+            }
+          }
+        }
+
+        &.ks-crusta {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-crusta;
+              }
+            }
+          }
+        }
+
+        &.ks-medium-purple {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-medium-purple;
+              }
+            }
+          }
+        }
+
+        &.ks-royal-blue {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-royal-blue;
+              }
+            }
+          }
+        }
+
+        &.ks-persian-green {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-persian-green;
+              }
+            }
+          }
+        }
+
+        &.ks-dark-tan {
+          .dropdown-item {
+            &.ks-active {
+              &:before {
+                background: $ks-color-dark-tan;
+              }
+            }
+          }
+        }
+
+        .dropdown-item {
+          border: none;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          line-height: 13px;
+          font-weight: normal;
+          padding: $ks-navbar-nav-item-padding;
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -1px;
+            bottom: -1px;
+            width: 4px;
+            background: transparent;
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          > .nav-link {
+            border-bottom: none;
+
+            &.dropdown-toggle {
+              &:after {
+
+              }
+            }
+          }
+
+          > .ks-icon {
+            font-size: 19px;
+            line-height: 19px;
+            margin-right: 20px;
+          }
+        }
+
+        .dropdown {
+          flex-direction: column;
+
+          > .dropdown-toggle {
+            font-weight: normal;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+
+  /* For all nav-link in navbar */
+  .nav-link {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+
+    &.dropdown-toggle {
+      &:after {
+        top: 1px;
+        margin-left: 11px;
+      }
+    }
+  }
+
+  /* Logo or brand name customization */
+  .navbar-brand {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 260px;
+    padding: 0 25px;
+    margin: 0;
+
+    .ks-logo {
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 29px;
+    }
+
+    .ks-sidebar-toggle,
+    .ks-sidebar-mobile-toggle {
+      margin-right: 14px;
+      font-size: 21px;
+      line-height: 21px;
+      position: relative;
+
+      > .ks-icon {
+        font-weight: bold;
+      }
+    }
+
+    .ks-sidebar-mobile-toggle {
+      display: none;
+    }
+  }
+
+  .ks-navbar-logo {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  > .ks-wrapper {
+    display: flex;
+    flex-grow: 1;
+
+    > .nav {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      > .ks-navbar-menu {
+        display: flex;
+        align-items: center;
+
+        > .ks-search-form {
+          padding: 0 30px;
+
+          .form-control {
+            width: 265px;
+            height: 36px;
+            border-radius: 2px;
+
+            &::placeholder {
+              font-size: 12px;
+              font-weight: normal;
+            }
+          }
+
+          .icon-addon {
+            > .ks-icon {
+              font-size: 18px;
+              position: relative;
+              top: 1px;
+            }
+          }
+
+          .ks-search-open,
+          .ks-search-close {
+            display: none;
+          }
+        }
+
+        > .ks-btn-action {
+          border-right: none;
+        }
+      }
+
+      > .ks-navbar-actions {
+        display: flex;
+        padding-right: 30px;
+
+        > .btn-action-block {
+          border-left: none;
+          padding: 0;
+          height: 60px;
+
+          &:hover {
+            background: none;
+          }
+
+          > .btn {
+            flex-direction: column;
+            height: 100%;
+            color: #fff;
+            width: 100%;
+            border-radius: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            > span {
+              display: block;
+
+              &:first-child {
+                margin-top: 2px;
+                margin-bottom: 4px;
+              }
+
+              &:last-child {
+                text-transform: uppercase;
+                font-size: 10px;
+                font-weight: normal;
+              }
+            }
+          }
+        }
+
+        > .ks-languages {
+          &.show {
+            > .dropdown-menu {
+              width: 336px;
+              min-width: 336px;
+              height: 300px;
+              margin: 0;
+            }
+          }
+
+          .ks-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+
+            > .ks-language {
+              display: flex;
+              align-items: center;
+              height: 50px;
+              width: 168px;
+              list-style: none;
+              font-weight: 500;
+              padding: 0 24px;
+
+              > .ks-icon {
+                font-size: 16px;
+                line-height: 14px;
+              }
+
+              > .ks-text {
+                margin-left: 20px;
+                font-weight: normal;
+              }
+
+              &.ks-selected {
+                opacity: 0.6;
+              }
+            }
+          }
+
+          > .nav-link {
+            > .ks-text {
+              display: none;
+            }
+          }
+        }
+
+        > .ks-messages {
+          > .nav-link {
+            padding: 0 24px;
+
+            > .ks-icon {
+              position: relative;
+              font-size: 22px;
+              line-height: 22px;
+
+              > .badge {
+                position: absolute;
+                right: -7px;
+                top: -6px;
+                min-width: 18px;
+                min-height: 18px;
+                border-radius: 9px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border: none;
+                padding: 0 5px 0 6px;
+              }
+            }
+
+            > .ks-text {
+              display: none;
+            }
+
+            &:after {
+              display: none;
+            }
+          }
+
+          > .dropdown-menu {
+            width: 360px;
+            height: 342px;
+            background: #fff;
+
+            > .ks-tabs-actions {
+              position: absolute;
+              top: 15px;
+              right: 0;
+
+              > a {
+                > .ks-icon {
+                  font-size: 21px;
+                  line-height: 21px;
+                  margin-right: 14px;
+
+                  &.fa-plus {
+                    position: relative;
+                    top: 1px;
+                  }
+
+                  &.fa-search {
+                    font-size: 15px;
+                    line-height: 15px;
+                  }
+                }
+              }
+            }
+
+            > .ks-nav-tabs {
+              height: 48px;
+              min-height: 48px;
+
+              > .nav-item {
+                height: 47px;
+                padding: 0;
+                font-size: 13px;
+                border: none;
+                font-weight: 500;
+                border-radius: 0;
+                width: 85px;
+                text-align: center;
+                position: relative;
+                background: #fff;
+
+                > .nav-link {
+                  padding: 0;
+                  height: 47px;
+                  border: none;
+                  border-radius: 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: $text-color-light;
+                  background: #fff;
+
+                  &.active {
+                    color: $text-color;
+                    background: #fff;
+
+                    &:after {
+                      content: '';
+                      height: 4px;
+                      position: absolute;
+                      bottom: -1px;
+                      left: 0;
+                      width: 100%;
+                      background: transparent;
+                    }
+                  }
+                }
+
+                &:hover {
+                  background: #fff;
+                }
+              }
+
+              &.ks-primary {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-primary; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-info {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-info; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-success {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-success; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-danger {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-danger; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-warning {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-warning; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-fuchsia-pink {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-fuchsia-pink; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-cerise-red {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-cerise-red; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-crusta {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-crusta; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-medium-purple {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-medium-purple; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-royal-blue {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-royal-blue; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-persian-green {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-persian-green; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-dark-tan {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-dark-tan; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            > .tab-content {
+              > .tab-pane {
+                height: 300px;
+                max-height: 300px;
+
+                > .ks-wrapper {
+                  height: 251px;
+
+                  .ks-message {
+                    padding: 12px 20px;
+                    height: 85px;
+                    display: flex;
+
+                    > .ks-avatar {
+                      margin-top: 3px;
+                      margin-right: 12px;
+                      width: 36px;
+                      height: 36px;
+                    }
+
+                    > .ks-info {
+                      > .ks-user-name {
+                        color: $text-color;
+                        font-weight: 500;
+                        margin-bottom: 5px;
+                      }
+
+                      > .ks-text {
+                        color: $text-color;
+                        margin-bottom: 5px;
+                      }
+
+                      > .ks-datetime {
+                        font-size: 11px;
+                        color: $text-color-light;
+                      }
+                    }
+                  }
+                }
+
+                > .ks-view-all {
+                  border-top: 1px solid rgba(57, 81, 155, 0.2);
+                  height: 43px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  line-height: 13px;
+                  font-weight: 500;
+                }
+
+                &.active {
+                  &.ks-empty {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > .ks-notifications {
+          > .nav-link {
+            padding: 0 24px;
+
+            > .ks-icon {
+              position: relative;
+              font-size: 22px;
+              line-height: 22px;
+
+              > .badge {
+                position: absolute;
+                right: -7px;
+                top: -6px;
+                min-width: 18px;
+                min-height: 18px;
+                border-radius: 9px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border: none;
+                padding: 0 5px 0 6px;
+              }
+            }
+
+            > .ks-text {
+              display: none;
+            }
+
+            &:after {
+              display: none;
+            }
+          }
+
+          > .dropdown-menu {
+            width: 300px;
+            height: 342px;
+            background: #fff;
+
+            > .nav-tabs {
+              height: 48px;
+              min-height: 48px;
+              display: flex;
+              justify-content: space-between;
+
+              > .nav-item {
+                width: 33.33%;
+                height: 47px;
+                padding: 0;
+                font-size: 13px;
+                border: none;
+                font-weight: 500;
+                border-radius: 0;
+                text-align: center;
+                position: relative;
+                background: #fff;
+
+                > .nav-link {
+                  padding: 0;
+                  height: 47px;
+                  border: none;
+                  border-radius: 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: $text-color-light;
+                  background: #fff;
+
+                  &.active {
+                    color: $text-color;
+                    background: #fff;
+
+                    &:after {
+                      content: '';
+                      height: 4px;
+                      position: absolute;
+                      bottom: -1px;
+                      left: 0;
+                      width: 100%;
+                      background: transparent;
+                    }
+                  }
+                }
+
+                &:hover {
+                  background: #fff;
+                }
+              }
+
+              &.ks-primary {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-primary; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-info {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-info; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-success {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-success; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-danger {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-danger; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-warning {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-warning; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-fuchsia-pink {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-fuchsia-pink; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-cerise-red {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-cerise-red; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-crusta {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-crusta; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-medium-purple {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-medium-purple; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-royal-blue {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-royal-blue; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-persian-green {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-persian-green; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.ks-dark-tan {
+                > .nav-item {
+                  > .nav-link {
+                    &.active {
+                      &:after {
+                        background: $ks-color-dark-tan; /* Bottom border in messages tabs */
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            > .tab-content {
+              > .tab-pane {
+                height: 300px;
+                max-height: 300px;
+
+                > .ks-wrapper {
+                  height: 251px;
+
+                  .ks-notification {
+                    padding: 12px 20px;
+                    height: 85px;
+                    display: flex;
+
+                    > .ks-avatar {
+                      margin-top: 3px;
+                      margin-right: 12px;
+                      width: 36px;
+                      height: 36px;
+                    }
+
+                    > .ks-action {
+                      margin-top: 3px;
+                      margin-right: 12px;
+
+                      > span {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        > .ks-icon {
+                          font-size: 21px;
+                          line-height: 21px;
+                        }
+                      }
+                    }
+
+                    > .ks-info {
+                      > .ks-user-name {
+                        color: $ks-default-text-color;
+                        font-weight: 500;
+                        margin-bottom: 5px;
+
+                        > .ks-description {
+                          font-weight: 500;
+                        }
+                      }
+
+                      > .ks-text {
+                        color: $text-color;
+                        margin-bottom: 5px;
+
+                        > .ks-icon {
+                          font-size: 20px;
+                          display: inline-block;
+                          margin-right: 1px;
+                          position: relative;
+                          top: 1px;
+                        }
+                      }
+
+                      > .ks-datetime {
+                        font-size: 11px;
+                        color: $text-color-light;
+                      }
+                    }
+                  }
+                }
+
+                > .ks-view-all {
+                  border-top: 1px solid rgba(57, 81, 155, 0.2);
+                  height: 43px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  line-height: 13px;
+                  font-weight: 500;
+                }
+
+                &.active {
+                  &.ks-empty {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > .ks-user {
+          > .dropdown-toggle {
+            display: flex;
+            align-items: center;
+
+            > .ks-avatar {
+              width: 36px;
+              height: 36px;
+            }
+
+            > .ks-info {
+              margin-left: 12px;
+
+              > .ks-name {
+                display: block;
+              }
+
+              > .ks-description {
+                display: block;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .ks-navbar-menu-toggle,
+    > .ks-navbar-actions-toggle {
+      width: auto;
+      display: none;
+      height: 60px;
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > span {
+          font-size: 24px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  > .ks-sidebar-mobile-toggle {
+    display: none;
+    padding: 0;
+  }
+
+  /* Grid navigation */
+  .ks-dropdown-grid {
+    margin-left: 5px;
+    border-radius: $ks-default-border-radius;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > .dropdown-toggle {
+      padding: 8px;
+      height: auto;
+
+      &:after {
+        margin-left: 0;
+      }
+    }
+
+    &.show {
+      > .dropdown-menu {
+        border-radius: $ks-default-border-radius;
+        margin-top: 4px;
+        width: 360px;
+        min-width: 360px;
+
+        .ks-scroll-wrapper {
+          padding: 10px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          > .ks-grid-item {
+            width: 110px;
+            height: 80px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            > .ks-icon {
+              font-size: 26px;
+              margin-bottom: 10px;
+            }
+
+            > .ks-text {
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ks-dropdown-grid-images {
+    margin-left: 5px;
+    border-radius: $ks-default-border-radius;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > .dropdown-toggle {
+      padding: 8px;
+      height: auto;
+      border: none !important;
+
+      &:after {
+        margin-left: 0;
+      }
+    }
+
+    &.show {
+      > .dropdown-menu {
+        border-radius: $ks-default-border-radius;
+        margin-top: 4px;
+        width: 270px;
+        min-width: 270px;
+
+        .ks-scroll-wrapper {
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          > .ks-grid-item {
+            padding: 15px 20px;
+            min-width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid transparent;
+
+            > .ks-icon {
+              margin-bottom: 10px;
+            }
+
+            > .ks-text {
+              font-weight: normal;
+              color: $ks-default-text-color-light;
+            }
+
+            &:hover {
+              border: 1px solid $ks-default-border-color;
+              border-radius: 1px;
+
+              > .ks-text {
+                color: $ks-default-text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.ks-navbar-fixed {
+    padding-top: 60px;
+
+    .ks-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 6;
+    }
+  }
+
+  &.ks-sidebar-iconbar {
+    .ks-navbar {
+      .navbar-brand {
+        width: 130px;
+      }
+    }
+  }
+
+  &.ks-sidebar-iconbar_compact {
+    .ks-navbar {
+      .navbar-brand {
+        width: 150px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 1610px){
+  .ks-navbar {
+    > .ks-wrapper {
+      > .nav {
+        > .ks-navbar-menu {
+          > .ks-search-form {
+            .form-control {
+              width: 200px;
+            }
+          }
+        }
+
+        > .ks-navbar-actions {
+          > .ks-user {
+            .ks-info {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 1500px){
+  .ks-navbar {
+    > .ks-wrapper {
+      > .nav {
+        .ks-navbar-menu {
+          .ks-search-form {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0 20px;
+
+            .ks-search-open {
+              display: inline-block;
+              font-size: 20px;
+              position: relative;
+              top: 1px;
+            }
+
+            .ks-search-close {
+              display: none;
+              font-size: 20px;
+              position: relative;
+              top: 1px;
+            }
+
+            .ks-wrapper {
+              display: none;
+            }
+          }
+
+          &.ks-open {
+            position: relative;
+
+            .nav-item {
+              visibility: hidden;
+            }
+
+            .ks-search-form {
+              width: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding-left: 0;
+              padding-right: 0;
+
+              .ks-search-open {
+                display: none;
+              }
+
+              .ks-search-close {
+                display: block;
+                margin-left: 20px;
+              }
+
+              .ks-wrapper {
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .input-icon {
+                  width: 100%;
+                }
+
+                .form-control {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 1440px) {
+  .ks-navbar {
+    .navbar-brand {
+      .ks-sidebar-toggle {
+        display: none;
+      }
+
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .ks-navbar {
+    .navbar-brand {
+      .ks-sidebar-toggle {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .ks-navbar {
+    .navbar-brand {
+      padding-left: 19px;
+
+      .ks-sidebar-mobile-toggle {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1225px) {
+  .ks-navbar {
+    padding-right: 0;
+
+    > .ks-wrapper {
+      display: flex;
+      justify-content: flex-end;
+
+      > .nav {
+        justify-content: flex-end;
+      }
+
+      > .ks-navbar-menu-toggle {
+        display: block;
+        text-align: center;
+
+        .ks-icon {
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          text-align: center;
+
+          &.ks-open {
+            display: block;
+          }
+
+          &.ks-close {
+            display: none;
+          }
+        }
+
+        &.ks-open {
+          .ks-icon {
+            &.ks-open {
+              display: none;
+            }
+
+            &.ks-close {
+              display: block;
+            }
+          }
+        }
+
+        > .nav-link {
+          border: none;
+
+          &:hover {
+            border: none;
+          }
+        }
+      }
+
+      > .nav {
+        > .ks-navbar-menu {
+          position: fixed;
+          right: -230px;
+          height: 100%;
+          z-index: 6;
+          width: 230px;
+          top: 60px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+          &.ks-open {
+            position: fixed;
+            transition: right .2s ease;
+            right: 0;
+
+            > .ks-search-form {
+              position: static;
+              padding: 15px;
+
+              > .ks-wrapper {
+                > .input-icon {
+                  > .form-control {
+                    width: 100%;
+                    border-radius: 2px;
+                  }
+                }
+
+                > .ks-search-close {
+                  display: none;
+                }
+              }
+            }
+
+            > .nav-item {
+              visibility: visible;
+              opacity: 1;
+              display: flex;
+              width: 100%;
+              justify-content: flex-start;
+              border: none;
+              position: relative;
+
+              &:hover {
+                background: transparent;
+              }
+
+              > .nav-link {
+                visibility: visible;
+                opacity: 1;
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+                height: 60px;
+
+                &:hover {
+                  background: transparent;
+                }
+              }
+            }
+
+            > .dropdown {
+              flex-direction: column;
+              border-bottom: none;
+              height: auto;
+
+              > .nav-link {
+                justify-content: space-between;
+              }
+
+              &.show {
+                position: relative;
+              }
+
+              .dropdown-menu {
+                border-radius: 0;
+                box-shadow: none;
+                background: none;
+
+                /* All nested nav-link */
+                .nav-link, .dropdown-item {
+                  height: 60px;
+                }
+
+                .dropdown-item {
+                  &.ks-active {
+                    &:hover {
+                      transition: all 0.3s ease;
+                    }
+                  }
+
+                  &.dropdown {
+                    &.show {
+                      padding: 0;
+                      height: auto;
+
+                      > .nav-link {
+                        height: 61px;
+                        padding: $ks-navbar-nav-item-padding;
+                        justify-content: space-between;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            > .ks-btn-action {
+              > .btn {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        > .ks-navbar-actions {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 780px) {
+  .ks-navbar {
+    > .ks-wrapper {
+      > .ks-navbar-actions-toggle {
+        display: block;
+
+        > .nav-item {
+          > .ks-icon {
+            &.ks-open {
+              display: block;
+            }
+
+            &.ks-close {
+              display: none;
+            }
+          }
+        }
+
+        &.ks-open {
+          > .nav-item {
+            .ks-icon {
+              &.ks-open {
+                display: none;
+              }
+
+              &.ks-close {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      > .nav {
+        > .ks-navbar-actions {
+          display: flex;
+          position: fixed;
+          width: 230px;
+          height: 100%;
+          z-index: 6;
+          right: -230px;
+          top: 60px;
+          flex-direction: column;
+
+          &.ks-open {
+            transition: right .2s ease;
+            position: fixed;
+            right: 0;
+
+            > .nav-item {
+              border: none;
+
+              &:hover {
+                background: none;
+              }
+
+              &.ks-messages, &.ks-notifications, &.ks-languages {
+                > .nav-link {
+                  > .ks-text {
+                    display: block;
+                    margin-left: 27px;
+                    flex: 1 1 auto;
+                  }
+
+                  &:after {
+                    display: block;
+                  }
+
+                  .badge {
+                    padding-top: 2px;
+                  }
+                }
+              }
+
+              &.ks-languages {
+                > .nav-link {
+                  padding-left: 26px;
+                  padding-right: 24px;
+                }
+              }
+
+              > .nav-link {
+                visibility: visible;
+                opacity: 1;
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+                height: 60px;
+                border: none;
+              }
+
+              &.ks-user {
+                border-right: none;
+
+                .ks-info {
+                  flex: 1 1 auto;
+                  display: block;
+                }
+
+                .ks-avatar {
+                  margin-right: 5px;
+                }
+              }
+            }
+
+            /* Static position for dropdown menus becides message, notifications, languages */
+            > .nav-item:not(.ks-languages):not(.ks-messages):not(.ks-notifications) {
+              &.show {
+                .dropdown-menu {
+                  box-shadow: none;
+                  border: none;
+
+                  .dropdown-item:not(.dropdown) {
+                    height: 60px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 580px) {
+  body {
+    &.ks-sidebar-empty {
+      .ks-navbar {
+        .ks-dropdown-grid {
+          &.show {
+            > .dropdown-menu {
+              margin-left: -98px;
+            }
+          }
+        }
+      }
+    }
+
+    &:not(.ks-sidebar-empty) {
+      .ks-navbar {
+        .ks-dropdown-grid {
+          &.show {
+            > .dropdown-menu {
+              margin-left: -132px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+/** BEGIN: tippy tooltip */
+.tippy-tooltip {
+  font-size: 14px;
+  padding: 4px 6px;
+
+  &.dark-theme {
+    background: $color-black-medium;
+  }
+}
+
+.tippy-tooltip {
+  &.dark-theme {
+    .tippy-arrow {
+
+    }
+  }
+}
+
+.tippy-popper[x-placement^=top] {
+  .tippy-tooltip {
+    &.dark-theme {
+      .tippy-arrow {
+        border-top-color: $color-black-medium;
+        border-top-width: 6px;
+        border-left-width: 6px;
+        border-right-width: 6px;
+        bottom: -6px;
+      }
+    }
+  }
+}
+
+.tippy-popper[x-placement^=bottom] {
+  .tippy-tooltip {
+    &.dark-theme {
+      .tippy-arrow {
+        border-bottom-color: $color-black-medium;
+        border-top-width: 6px;
+        border-left-width: 6px;
+        border-right-width: 6px;
+        top: -6px;
+      }
+    }
+  }
+}
+
+.tippy-popper[x-placement^=left] {
+  .tippy-tooltip {
+    &.dark-theme {
+      .tippy-arrow {
+        border-left: 6px solid $color-black-medium;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        right: -6px;
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+.tippy-popper[x-placement^=right] {
+  .tippy-tooltip {
+    &.dark-theme {
+      .tippy-arrow {
+        border-right: 6px solid $color-black-medium;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        left: -6px;
+        margin: 5px 0;
+      }
+    }
+  }
+}
+/** END: tippy tooltip */

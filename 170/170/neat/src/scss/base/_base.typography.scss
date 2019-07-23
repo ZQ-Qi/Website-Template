@@ -1,0 +1,89 @@
+/* ==========================================================================
+   #BASE TYPOGRAPHY
+   ========================================================================== */
+
+/**
+ * Headings, paragraphs, links.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: $heading-margin;
+	color: $heading-color;
+	font-weight: $heading-font-weight;
+}
+
+h1 {
+	font-size: $h1-font-size;
+}
+
+h2 {
+	font-size: $h2-font-size;
+}
+
+h3 {
+	font-size: $h3-font-size;
+}
+
+h4 {
+	font-size: $h4-font-size;
+}
+
+h5 {
+	font-size: $h5-font-size;
+}
+
+h6 {
+	font-size: $h6-font-size;
+}
+
+p {
+	color: $text-color;
+	font-size: $text-font-size;
+}
+
+strong {
+	color: $text-strong-color;
+}
+
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+	transition: color 0.15s ease-in-out;
+	background-color: transparent; /* [1] */
+	color: $link-color;
+	text-decoration: none;
+	cursor: pointer;
+	text-decoration-skip: objects; /* [2] */
+
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: none;
+	}
+}
+
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre,
+code,
+kbd,
+samp {
+	font-family: monospace, monospace; /* [1] */
+	font-size: 1em; /* [2] */
+}
+
+small {
+	font-size: 85%;
+}

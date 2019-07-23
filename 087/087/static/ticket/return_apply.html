@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../common/css/sapar.css" />
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/return_apply.css" />
+<script type="text/javascript" src="../../common/js/jquery.js"></script>
+<script type="text/javascript" src="../../common/js/sapar.js"></script>
+<script type="text/javascript" src="../../common/js/WdatePicker.js"></script>
+<title>申请退废</title>
+</head>
+
+<body>
+    <div id="saper-container">
+        <div id="saper-hd"></div>
+        <div id="saper-bd">
+            <div class="subfiled clearfix">
+                <h2>申请退废</h2>
+            </div>
+            <div class="subfiled-content">
+                <div class="tab-container" data-trigger="click">
+                    <div class="tab">
+                        <a href="javascript:;" class="current">申请退废</a>
+                        <a href="javascript:;">退废处理中</a>
+                        <a href="javascript:;">等待退款</a>
+                        <a href="javascript:;">退废完成</a>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-content-item">
+                            <form name="f1" id="f1" action="?m=system&amp;c=myInfo&amp;a=updateInfo&amp;type=1" method="post">
+                                <div class="search-box clearfix">
+                                    <div class="kv-item clearfix">
+                                        <label>订单号：</label>
+                                        <div class="kv-item-content">
+                                            <input type="text" placeholder="订单号">
+                                        </div>
+                                    </div>
+                                    <div class="kv-item clearfix">
+                                        <label>PNR：</label>
+                                        <div class="kv-item-content">
+                                            <input type="text" placeholder="PNR">
+                                        </div>
+                                    </div>
+                                    <div class="kv-item clearfix">
+                                        <label>乘机人：</label>
+                                        <div class="kv-item-content">
+                                            <input type="text" placeholder="乘机人">
+                                        </div>
+                                    </div>
+                                    <div class="kv-item clearfix">
+                                        <label>起飞时间：</label>
+                                        <div class="kv-item-content time-select-wrap">
+                                            <div class="time-select">
+                                                <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" placeholder="">
+                                                <i class="date-icon"></i>
+                                            </div>
+                                            <span class="line">-</span>
+                                            <div class="time-select">
+                                                <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" placeholder="">
+                                                <i class="date-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:;" class="sapar-btn sapar-btn-recom query-btn">查询</a>
+                                </div>
+                            </form>
+                            <!--表格开始-->
+                            <div class="table">
+
+                                <!--表格具体内容-->
+                                <div class="table-box">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>订单号</th>
+                                                <th>PNR</th>
+                                                <th>乘机人</th>
+                                                <th>行程</th>
+                                                <th>起飞时间</th>
+                                                <th>总价</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--表格结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="saper-ft"></div>
+    </div>
+    
+</body>
+
+<script type="text/javascript">
+$('select').iSelect();
+</script>
+</html>

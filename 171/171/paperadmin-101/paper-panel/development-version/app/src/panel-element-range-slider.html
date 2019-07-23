@@ -1,0 +1,122 @@
+<!-- partial:partials/_header.html -->
+<!-- partial -->
+<div class="page has-sidebar-left bg-light height-full">
+    <header class="blue accent-3 relative nav-sticky">
+        <div class="container-fluid text-white">
+            <div class="row">
+                <div class="col">
+                    <h3 class="my-3">
+                        <i class="icon icon-date_range"></i>
+                        Range Slider <span class="s-14"> <a class="btn btn-outline-primary btn-xs"
+                                                            href="http://ionden.com/a/plugins/ion.rangeSlider/demo.html"
+                                                            target="_blank"> View Plugin Docs</a> </span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid my-3">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Simple usage</div>
+                            <input type="text" class="range-slider form-control" />
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">With Min & Max Values</div>
+                            <input type="text" class="range-slider form-control" 
+                                   data-options='{
+                                       "min": 100,
+                                        "max": 1000,
+                                        "from": 550
+                                }'/>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Set up range and step</div>
+                            <input type="text" class="range-slider form-control" 
+                                   data-options='{
+                                        "type": "double",
+                                        "grid": true,
+                                        "min": -1000,
+                                        "max": 1000,
+                                        "from": -500,
+                                        "to": 500,
+                                        "step": 250
+                                }'/>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Using custom values array</div>
+                            <input type="text" class="range-slider form-control" 
+                                   data-options='{
+    "grid": true,
+    "from": 5,
+    "values": [
+        "zero", "one",
+        "two", "three",
+        "four", "five",
+        "six", "seven",
+        "eight", "nine",
+        "ten"
+    ]
+}'/>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Decorating numbers</div>
+                            <input type="text" class="range-slider form-control" 
+                                   data-options='{
+        "type": "double",
+    "min": 100,
+    "max": 200,
+    "from": 148,
+    "to": 152,
+    "prefix": "Weight: ",
+    "postfix": " million pounds",
+    "values_separator": " → "
+}'/>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title"> Disable all the sliders visual details</div>
+                            <input type="text" class="range-slider form-control" 
+                                   data-options='{
+     "type": "double",
+    "min": 1000,
+    "max": 2000,
+    "from": 1200,
+    "to": 1800,
+    "hide_min_max": true,
+    "hide_from_to": true,
+    "grid": false
+}'/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h3>Documentation</h3>
+                <hr>
+                <p>You can pass plugin options using data-options attribute. Please make sure to use valid json
+                    code.</p>
+                <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo.html" target="_blank"
+                   class="btn btn-xs btn-primary">Plugin Docs</a>
+                <a href="https://jsonformatter.org/" target="_blank" class="btn btn-outline-primary btn-xs">JSON
+                    Formatter</a>
+                <h4 class="mt-5">Code Example</h4>
+                <hr>
+                <pre><code>&lt;input type="text" class="range-slider form-control"
+&nbsp;&nbsp;&nbsp;data-options='{
+&nbsp;&nbsp;&nbsp;"type": "double",
+&nbsp;&nbsp;&nbsp;"grid": true,
+&nbsp;&nbsp;&nbsp;"min": -1000,
+&nbsp;&nbsp;&nbsp;"max": 1000,
+&nbsp;&nbsp;&nbsp;"from": -500,
+&nbsp;&nbsp;&nbsp;"to": 500,
+&nbsp;&nbsp;&nbsp;"step": 250
+&nbsp;&nbsp;&nbsp;}'/&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial:partials/_foot.html -->
+<!-- partial -->

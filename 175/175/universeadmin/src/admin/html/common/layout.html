@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>{% block title %}Universe Admin{% endblock %}</title>
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  {% block styles %}
+    {% include "./styles.html" %}
+  {% endblock %}
+
+  <script src="js/ie.assign.fix.min.js"></script>
+</head>
+<body class="js-loading {% block bodyClass %}{% endblock %}"> <!-- add for rounded corners: form-controls-rounded -->
+{% block body %}
+{% block body_begin %}{% endblock %}
+
+{% include "../page-preloader/page-preloader.html" %}
+
+{% block navbar %}
+  {% include "./navbar/app.html" %}
+{% endblock %}
+
+{% block page_wrap %}
+<div class="page-wrap">
+  {% block sidebar %}
+    {% include "./sidebar.html" %}
+  {% endblock %}
+
+  <div class="page-content">
+    {% block content %}{% endblock %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {% include "./scripts.html" %}
+{% endblock %}
+
+<div class="sidebar-mobile-overlay"></div>
+
+{% block settings_panel %}
+  {% include "./settings-panel.html" %}
+{% endblock %}
+
+{% block slide_nav %}
+  {% include "../slide-nav/default.html" %}
+{% endblock %}
+{% endblock %}
+</body>
+</html>

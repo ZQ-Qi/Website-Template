@@ -1,0 +1,26 @@
+.donut-legend{
+  @include display-flex;
+  @include justify-content(center);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  >span{
+    @include display-flex;
+    @include align-items(center);
+    margin-right: 15px;
+    margin-top: 20px;
+    font-size: $default-font-size;
+    >span{
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+      @include border-radius(50px);
+    }
+  }
+  .rtl & {
+    span{
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+}

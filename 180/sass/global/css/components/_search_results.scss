@@ -1,0 +1,127 @@
+/*---------------------------
+
+Start Search result
+
+---------------------------*/
+
+.search-bar {
+  margin: $gaping-0 auto;
+  width: 100%;
+  input {
+    outline: none;
+  }
+  input[type=search] {
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px $normal-light-text-color;
+    padding: 9px $gaping-10 9px 32px;
+    width: 150px;
+    border-radius: 50px;
+    transition: all .5s;
+    &:focus {
+      width: 100%;
+      background-color: $white-backgournd-color;
+      border-color: #43a7fd;
+    }
+  }
+}
+
+.search-type{
+  margin-top: $gaping-20;
+  h4 {
+    display: inline;
+    font-size: 20px;
+  }
+  p {
+    float: $right-division;
+    padding-bottom: $gaping-0;
+    line-height: 36px;
+  }
+}
+.search-title{
+  font-size: 20px;
+  i {
+    float: $right-division;
+    margin-top: 8px;
+    color: $main-site-color;
+  }
+}
+.search-box {
+  margin-bottom: $gaping-10;
+  img {
+    width: 100%;
+  }
+  .news-title {
+    font-weight: $bold-text;
+    margin-bottom: 3px;
+    margin-top: $gaping-0;
+    color: $main-site-color;
+    font-size: 18px;
+    line-height: $gaping-15;
+  }
+  .news-site {
+    color: $normal-light-text-color;
+    padding-bottom: $gaping-5;
+  }
+  .news-site span {
+    font-weight: $bold-text;
+    font-size: 16px;
+  }
+}
+
+/*---- Start responsive Search result ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+  .search-box{
+    .news-title {
+      font-size: 17px;
+    }
+    .news-site {
+      padding-bottom: $gaping-0;
+      font-size: 12px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  .search-type{
+    margin-top: $gaping-5;
+    h4 {
+      display: block;
+      font-size: 18px;
+      text-align: $text-center;
+    }
+    p {
+      float: none;
+      line-height: 26px;
+      text-align: $text-center;
+    }
+  }
+  .search-title {
+    font-size: 18px;
+  }
+  .search-bar input {
+    padding: $gaping-5 $gaping-10 6px 32px;
+  }
+}
+
+@media (max-width:479px) {
+
+}
+/*---- End responsive Search result ----*/
+
+/*---------------------------
+
+End Search result
+
+---------------------------*/

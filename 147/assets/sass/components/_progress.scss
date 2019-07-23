@@ -1,0 +1,109 @@
+.progress {
+  background-color: lighten($slategray, 62%);
+  @include box-shadow(none);
+
+  .progress-bar {
+    @include box-shadow(none);
+  }
+
+  &.progress-xxs {
+    height: 2px;
+    border-radius: 0;
+  }
+
+  &.progress-xs {
+    height: 6px;
+    border-radius: 2px;
+  }
+
+  &.progress-sm {
+    height: 12px;
+    border-radius: 3px;
+
+    .progress-bar {
+      font-size: $font-size-mini;
+      line-height: 12px;
+    }
+  }
+
+  &.not-rounded {
+    border-radius: 0;
+  }
+}
+
+.progress-list {
+  position: relative;
+
+  .progress.progress-xs{
+    height: 2px;
+  }
+
+  .details {
+    display:block;    
+    width: 100%;
+    margin-bottom: 10px;
+
+    .title {
+      font-family: $font-dosis;     
+      font-size: 16px;
+    }
+
+  }
+
+  .status {
+    display: inline-block;
+    background-color: lighten($slategray, 62%);
+    font-size:12px;
+    padding: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }  
+}
+
+//bar colors
+.progress-bar-cyan {
+  background-color: $cyan;
+}
+.progress-bar-amethyst {
+  background-color: $amethyst;
+}
+.progress-bar-green {
+  background-color: $green;
+}
+.progress-bar-soundcloud {
+  background-color: $soundcloud;
+}
+.progress-bar-red {
+  background-color: $red;
+}
+.progress-bar-greensea {
+  background-color: $greensea;
+}
+.progress-bar-blush {
+  background-color: $blush;
+}
+.progress-bar-hotpink {
+  background-color: $hotpink;
+}
+.progress-bar-drank {
+  background-color: $drank;
+}
+.progress-bar-blue {
+  background-color: $blue;
+}
+.progress-bar-lightred {
+  background-color: $lightred;
+}
+.progress-bar-slategray {
+  background-color: $slategray;
+}
+.progress-bar-darkgray {
+  background-color: $darkgray;
+}
+.progress.transparent-black {
+  background-color: $transparent-black-1;
+  .progress-bar {
+    background-color: $transparent-black-2;
+  }
+}

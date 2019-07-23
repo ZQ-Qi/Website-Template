@@ -1,0 +1,87 @@
+/*---------------------------
+
+Start form wizard
+
+---------------------------*/
+
+.wizard{
+  > .steps{
+    .current{
+      a, a:hover, a:active {
+        background: $main-site-color;
+        border-radius: $border-radius-0;
+        padding: 12px $gaping-15;
+      }
+    }
+    .disabled{
+      a, a:hover, a:active {
+        border-radius: $border-radius-0;
+        padding: 12px $gaping-15;
+      }
+    }
+    .done{
+      a, a:hover, a:active {
+        border-radius: $border-radius-0;
+        padding: 12px $gaping-15;
+        background: #1e3453;
+      }
+    }
+  }
+  > .actions{
+    a, a:hover, a:active {
+      background: $main-site-color;
+      border-radius: $border-radius-0;
+      padding: $gaping-5 $gaping-15;
+    }
+  }
+  > .content {
+    min-height: 250px;
+  }
+}
+/*---- Start responsive form wizard ----*/
+@media (max-width:1366px) {
+
+}
+
+@media (max-width:1199px) {
+
+}
+
+@media (max-width:991px) {
+
+}
+
+@media (max-width:767px) {
+  .wizard{
+    > .steps{
+      > ul{
+        > li {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .wizard > .steps .disabled a, .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active {
+    padding: 5px 10px;
+  }
+  .wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+    padding: 5px 10px;
+  }
+  .wizard > .steps a, .wizard > .steps a:hover, .wizard > .steps a:active {
+    margin: 0 0 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width:479px) {
+  .wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+    padding: 5px 3px;
+  }
+}
+/*---- End responsive form wizard ----*/
+
+/*---------------------------
+
+End form wizard
+
+---------------------------*/

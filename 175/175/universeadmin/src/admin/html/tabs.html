@@ -1,0 +1,74 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Tabs / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Tabs</h2>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="row">
+      <div class="col-5">
+        <h3>Tabs</h3>
+        <div>
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-expanded="false">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Messages</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-expanded="true">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+            <div
+              class="tab-pane" id="profile" role="tabpanel" aria-expanded="false">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+            <div
+              class="tab-pane" id="messages" role="tabpanel">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container tabs-alpha">
+    <ul class="nav nav-tabs tabs-alpha__nav-tabs">
+      <li class="nav-item tabs-alpha__item">
+        <a class="nav-link tabs-alpha__link active" data-toggle="tab" href="#tabs-alpha-home">
+          Home <span class="ua-icon-circle-close tabs-alpha__tab-close-icon"></span>
+        </a>
+      </li>
+      <li class="nav-item tabs-alpha__item">
+        <a class="nav-link tabs-alpha__link" data-toggle="tab" href="#tabs-alpha-profile">
+          Profile <span class="ua-icon-circle-close tabs-alpha__tab-close-icon"></span>
+        </a>
+      </li>
+      <li class="nav-item tabs-alpha__item">
+        <a class="nav-link tabs-alpha__link" data-toggle="tab" href="#tabs-alpha-messages">
+          Messages
+          <span class="ua-icon-circle-close tabs-alpha__tab-close-icon"></span>
+        </a>
+      </li>
+      <li class="nav-item tabs-alpha__item">
+        <a class="nav-link tabs-alpha__link tabs-alpha__tab-add">
+          <span class="ua-icon-plus-circle tabs-alpha__tab-add-icon"></span>
+        </a>
+      </li>
+    </ul>
+    <div class="tab-content tabs-alpha__tab-content">
+      <div class="tab-pane active" id="tabs-alpha-home" role="tabpanel" aria-expanded="true">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+      <div
+        class="tab-pane" id="tabs-alpha-profile" role="tabpanel" aria-expanded="false">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+      <div
+        class="tab-pane" id="tabs-alpha-messages" role="tabpanel">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

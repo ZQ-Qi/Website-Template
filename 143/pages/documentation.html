@@ -1,0 +1,792 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Admin Template">
+    <meta name="author" content="Zwolek">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Master</title>
+    <!-- Custom Style-->
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <!-- Theme Color Style-->
+    <link rel="stylesheet" type="text/css" href="../css/theme-purple.css">     
+    <!-- Nano Scroller Default Style-->
+    <link rel="stylesheet" href="../css/nanoscroller.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<!-- //////////////////////////////////////////////////// Header-Panel div -->
+<div id="header-panel">
+<nav class="navbar navbar-fixed-top">
+<div class="container-fluid">
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div id="navbar-header">
+
+<a class="navbar-brand" href="../index.html">
+  <span class="logo-img"><!-- logo img <img src="img" alt=""> -->M</span>
+  <span class="logo-text hidden-xs hidden-sm">Master</span>
+</a> <!-- /navbar-brand --> 
+
+<ul class="nav navbar-nav">
+
+<!-- menu open/close button -->
+<li class="btn-menu hidden-xs hidden-sm"> <a id="menu-toggle" href="#" class="toggle"></a> </li>
+<li class="btn-menu hidden-md hidden-lg"> <a id="mobile-menu-toggle" href="#" class="toggle"></a> </li>
+
+<li class="dropdown reports">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell" aria-hidden="true"></i>
+<span class="badge">4</span></a>
+<ul class="dropdown-menu">
+<li class="title-alerts">You have 4 reports</li>
+
+<!-- ////////////////////////////// Item 1 ////////////////////////////// -->
+<li class="item">
+    <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="icon pull-left"><i class="center-block fa fa-user-plus" aria-hidden="true"></i></div>
+    <div class="content"> John Doe creat new account</div>
+    <div class="time-history">2 min ago</div>
+</li> <!-- /item -->
+
+<!-- ////////////////////////////// Item 2 ////////////////////////////// -->
+<li class="item">
+    <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="icon pull-left"><i class="center-block fa fa-plus" aria-hidden="true"></i></div>
+    <div class="content"> Matthew Doe buy new item</div>
+    <div class="time-history">10 min ago</div>
+</li> <!-- /item -->
+
+<!-- ////////////////////////////// Item 3 ////////////////////////////// -->
+<li class="item">
+    <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="icon pull-left"><i class="center-block fa fa-upload" aria-hidden="true"></i></div>
+    <div class="content"> Upload file complete</div>
+    <div class="time-history">1 hour ago</div>
+</li> <!-- /item -->
+
+<!-- ////////////////////////////// Item 4 ////////////////////////////// -->
+<li class="item">
+    <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="icon pull-left"><i class="center-block fa fa-twitter" aria-hidden="true"></i></div>
+    <div class="content"> 5 new followers on twitter</div>
+    <div class="time-history">3 Hours ago</div>
+</li> <!-- /item -->
+
+</ul> <!-- /dropdown-menu -->
+</li> <!-- /dropdwon reports-->
+
+<li class="dropdown message">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-envelope" aria-hidden="true"></i>
+  <span class="badge">3</span></a>
+  <ul class="dropdown-menu">
+    <li class="title-alerts">You have 3 mails</li>
+    
+    <!-- ////////////////////////////// Item 1 ////////////////////////////// -->
+    <li class="item">
+    <a href="#" class="mail-link">
+        <div class="icon pull-left"><i class="center-block fa fa-envelope" aria-hidden="true"></i></div>
+        <div class="content"> John Doe creat new account</div>
+        <div class="time-history">2 min ago</div>
+    </a> <!-- /mail-link -->
+    </li> <!-- /item -->
+
+    <!-- ////////////////////////////// Item 2 ////////////////////////////// -->
+    <li class="item">
+    <a href="#" class="mail-link">
+        <div class="icon pull-left"><i class="center-block fa fa-envelope" aria-hidden="true"></i></div>
+        <div class="content"> Matthew Doe buy new item</div>
+        <div class="time-history">10 min ago</div>
+    </a> <!-- /mail-link -->
+    </li> <!-- /item -->
+
+    <!-- ////////////////////////////// Item 3 ////////////////////////////// -->
+    <li class="item">
+    <a href="#" class="mail-link">
+        <div class="icon pull-left"><i class="center-block fa fa-envelope" aria-hidden="true"></i></div>
+        <div class="content"> Upload file complete</div>
+        <div class="time-history">1 hour ago</div>
+    </a> <!-- /mail-link -->
+    </li> <!-- /item -->
+
+    <li class="all-mails">
+        <a href="#" data-toggle="tooltip" data-placement="top" title="See all messages">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </a>
+    </li> <!-- /all-mails -->
+
+  </ul> <!-- /dropdown-menu -->
+</li> <!-- /dropdown message -->
+
+</ul> <!-- /navbar-nav -->
+
+<form class="navbar-form navbar-left hidden-xs">
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <button type="submit" class="btn btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
+</div>
+</form> <!-- /navbar-form -->
+
+<ul class="nav navbar-nav navbar-right">
+
+<li class="dropdown user-menu">
+    
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<img src="../img/admin.jpg" alt="" class="profile-img img-circle img-resposnive pull-left"> 
+<span class="hidden-xs">Veronica Thornton</span> <span class="caret"></span></a>
+
+<ul class="dropdown-menu pull-right">
+    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Profile</a></li>
+    <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a></li>
+    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>My Inbox</a> <span class="badge">3</span></li>
+    <li class="divider"></li>
+    <li><a href="#"><i class="fa fa-lock" aria-hidden="true"></i>LockScreen</a></li>
+    <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Log out</a></li>
+</ul> <!-- /dropdown-menu -->
+</li> <!-- /dropdwon -->
+
+</ul> <!-- /navbar-right -->
+
+</div><!-- /navbar-collapse -->
+</div><!-- /container-fluid -->
+</nav>
+</div> <!-- /header-panel -->
+
+<!-- //////////////////////////////////////////////////// Navigation-Panel div -->
+<div id="navigation-panel" class=""> 
+<nav class="sidebar nano">
+
+<div class="clearfix"></div>
+
+<div id="#sidebar-navbar" class="sidebar-nav nano-content navbar-collapse ">
+<ul class="nav" id="side-menu">
+
+<li class="nav-header">Navigation</li>
+
+<!-- Single Link -->
+<li><a href="../index.html"><i class="fa fa-home" aria-hidden="true"></i> <span class="link-hide"> Dashboard </span></a></li>
+
+<!-- Dropdown -->
+<li><a href="#" class="chevron"><i class="fa fa-desktop" aria-hidden="true"></i> <span class="link-hide"> Layouts </span></a>
+<ul class="nav nav-second-level">
+    <li><a href="../index.html" class="active">Layout 1</a></li>
+    <li><a href="../../../index.html">Layout 2</a></li>
+</ul> <!-- /nav-second-level -->
+</li> <!-- /li dropdown -->
+
+<!-- Dropdown -->
+<li><a href="#" class="chevron"><i class="fa fa-magic" aria-hidden="true"></i> <span class="link-hide"> Ui Elements </span></a>
+<ul class="nav nav-second-level">
+    <li><a href="buttons.html">Buttons </a></li>
+    <li><a href="grid.html">Grid </a></li>
+    <li><a href="icons.html">Icons </a></li>
+    <li><a href="lists.html">lists</a></li>
+    <li><a href="modal.html">Modal, Popover & Tooltip</a></li>
+    <li><a href="notifications.html">notifications</a></li>
+    <li><a href="panels.html">Panels </a></li>
+    <li><a href="progress-bar.html">progress bars</a></li>
+    <li><a href="tabs.html">Tabs </a></li>
+    <li><a href="typography.html">Typography </a></li>
+</ul> <!-- /nav-second-level -->
+</li> <!-- /li dropdown -->
+
+<!-- Dropdown -->
+<li><a href="#" class="chevron"><i class="fa fa-wpforms" aria-hidden="true"></i> <span class="link-hide"> Forms </span></a>
+<ul class="nav nav-second-level">
+    <li><a href="basic-forms.html">Basic Forms</a></li>
+    <li><a href="file-dropzone.html">File Dropzone</a></li>
+    <li><a href="file-upload.html">File Upload</a></li>
+    <li><a href="form-addons.html">Form Addons</a></li>
+    <li><a href="form-layout.html">Form Layout</a></li>
+    <li><a href="form-mask.html">Form Mask</a></li>
+    <li><a href="form-validation.html">Form Validation</a></li>
+    <li><a href="image-cropping.html">Image Cropping</a></li>
+    <li><a href="summernote.html">Summernote</a></li>
+</ul> <!-- /nav-second-level -->
+</li> <!-- /li dropdown -->
+
+<!-- Dropdown -->
+<li><a href="#" class="chevron"><i class="fa fa-external-link" aria-hidden="true"></i> <span class="link-hide"> Pages </span></a>
+<ul class="nav nav-second-level">
+    <li><a href="blank-page.html">Blank Page</a></li>
+    <li><a href="forgot-password.html">Forgot Password</a></li>
+    <li><a href="lock-screen.html">Lockscreen</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="sign-in.html">Sign In</a></li>
+    <li><a href="404error.html">404 Error</a></li>
+    <li><a href="500error.html">500 Error</a></li>
+</ul> <!-- /nav-second-level -->
+</li> <!-- /li dropdown -->
+
+<!-- Dropdown -->
+<li><a href="#" class="chevron"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="link-hide"> Message </span></a>
+<ul class="nav nav-second-level">
+    <li><a href="compose-mail.html">Compose Mail</a></li>
+    <li><a href="inbox.html">Inbox</a></li>
+    <li><a href="message-detalis.html">Message Detalis</a></li>
+</ul> <!-- /nav-second-level -->
+</li> <!-- /li dropdown -->
+
+<!-- Dropdown -->
+<li><a href="#" class="chevron"><i class="fa fa-table fa-fw" aria-hidden="true"></i> <span class="link-hide"> Tables </span></a>
+<ul class="nav nav-second-level">
+    <li><a href="basic-tables.html">Basic Tables</a></li>
+    <li><a href="data-tables.html">Data Tables</a></li>
+    <li><a href="responsive-tables.html">Responsive Tables</a></li>
+</ul> <!-- /nav-second-level -->
+</li> <!-- /li dropdown -->
+
+<!-- Dropdown -->
+<li><a href="#" class="chevron"><i class="fa fa-area-chart" aria-hidden="true"></i> <span class="link-hide"> Charts </span></a>
+<ul class="nav nav-second-level">
+    <li><a href="chart-js.html">Chart.js Charts</a></li>
+    <li><a href="flot-js.html">Flot.js Charts</a></li>
+    <li><a href="morris-js.html">Morris.js Charts</a></li>
+</ul> <!-- /nav-second-level -->
+</li> <!-- /li dropdown -->
+
+<li class="nav-header">Features</li>
+
+<!-- Dropdown -->
+<li><a href="#" class="chevron"><i class="fa fa-sitemap" aria-hidden="true"></i> <span class="link-hide"> Menu Levels </span></a>
+<ul class="nav nav-second-level">
+
+    <li class="none"><a href="#" class="chevron">Third Level</a>
+    <ul class="nav nav-third-level">
+        <li><a href="#">Third Level Item</a></li>
+        <li><a href="#">Third Level Item</a></li>
+        <li><a href="#">Third Level Item</a></li>
+        <li><a href="#">Third Level Item</a></li>
+    </ul> <!-- /nav-third-level -->
+    </li> <!-- /li dropdown -->
+
+    <li><a href="#">Simple Link</a></li>
+
+</ul> <!-- /nav-second-level -->
+</li> <!-- /li dropdown -->
+
+<!-- Dropdown -->
+<li><a href="#" class="chevron"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="link-hide">E-commerce </span></a>
+<ul class="nav nav-second-level">
+    <li><a href="customer.html">Customer</a></li>
+    <li><a href="edit-customer.html">Edit Customer</a></li>
+    <li><a href="edit-orders.html">Edit Orders</a></li>
+    <li><a href="edit-product.html">Edit Product</a></li>
+    <li><a href="orders.html">Orders</a></li>
+    <li><a href="product-list.html">Product List</a></li>
+</ul> <!-- /nav-second-level -->
+</li> <!-- /li Dropdown -->
+
+<li class="nav-header">Extras</li>
+
+<li><a href="documentation.html" class="active"><i class="fa fa-file-o" aria-hidden="true"></i><span class="link-hide">Documentation</span></a></li>
+
+</ul> <!-- /side-menu -->
+</div> <!-- /sidebar-nav -->
+
+</nav> <!-- /sidebar-->
+</div> <!-- /navigation-panel -->
+
+<!-- //////////////////////////////////////////////////// Content-Panel div -->
+
+<div id="content-panel">
+<div class="container-fluid">
+
+<div class="row">
+<div class="col-xs-12 dashboard-header">
+<h1 class="dash-title">Documentation</h1>
+<!-- //////////////////////////////////////////////////// Breadcrumb -->
+<ol class="breadcrumb">
+  <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> home</a></li>
+  <li><a href="#" class="active">Documentation</a></li>
+</ol> <!-- /breadcrumb -->
+</div> <!-- /dashboard -->
+</div> <!-- /row -->
+
+<!-- //////////////////////////////////////////////////// Documentation -->
+<div class="row">
+<div class="col-xs-12">
+<div class="panel documentation">
+<div class="panel-heading">
+    <h3>Documentation</h3>
+</div> <!-- /panel-heading -->
+<div class="panel-body m-t-0">
+
+<!-- //////////////////////////////////////////////////// LEft div -->
+<div class="left col-sm-2 col-xs-12 no-padding">
+<ul class="list-unstyled">
+    <li class="bold">Introduction</li>
+        <li class="link"><a href="#installation">- Installation Guide</a></li>
+        <li class="link"><a href="#structure">- Structure</a></li>
+        <li class="link"><a href="#help-class">- Help Class</a></li>
+        <li class="link"><a href="#color">- Color Variables</a></li>
+    <li class="bold">Components</li>    
+        <li class="link"><a href="#form">- Basic Form</a></li>
+        <li class="link"><a href="#buttons">- Buttons</a></li>
+        <li class="link"><a href="#grid">- Grid</a></li>
+        <li class="link"><a href="#notifications">- Notifications</a></li>
+        <li class="link"><a href="#panels">- Panels</a></li>
+        <li class="link"><a href="#progress-bar">- Progress Bars</a></li>
+        <li class="link"><a href="#table">- Table</a></li>
+    <li class="bold">Credits</li>
+        <li class="link"><a href="#files">- Files & Sources</a></li>
+        <li class="link"><a href="#support">- Support</a></li>
+</ul> <!-- /list-unstyled --> 
+</div> <!-- /left -->  
+
+<!-- //////////////////////////////////////////////////// Right div -->
+<div class="right col-sm-10 col-xs-12">
+<h2>Introduction</h2>
+<hr class="m-b-0">
+<!-- //////////////////////////////////////////////////// Installation -->
+<div id="installation" class="m-t-10">
+    <h3>Installation Guide</h3>
+    <p class="text-muted">Extract the downloaded zip archive contents on your local machine (server) and you're done.</p>
+</div> <!-- /installation -->
+<!-- //////////////////////////////////////////////////// Structure -->
+<div id="structure" class="m-t-10">
+    <h3 class="m-b-10">Structure</h3>
+    <pre><code class="language-bash" data-lang="bash">master/
+    dashboard1
+    |
+    ├── css - all inclued css files
+    │ 
+    ├── custom - custom scss files (custom-style, custom-variables, theme colors)
+    │ 
+    ├── fonts  - font folder
+    │
+    ├── img  - img folder
+    │  
+    ├── js - all inclued scripts
+    │   
+    ├── pages - all inclued pages
+    │ 
+    └── scss - all inclued scss files</code></pre>
+</div> <!-- /structure -->
+
+<!-- //////////////////////////////////////////////////// Help Class -->
+<div id="help-class">
+    <h3 class="m-b-10">Help Class</h3>
+    <pre class="brush: html"><code>.inline - display inline-block
+.center - vertical align & text center
+.no-padding - padding 0px 
+.center-block - margin 0 auto & text center
+.p-l-0 - padding left 0px
+.p-r-0 - padding right 0px
+.p-t-0 - padding top 0px
+.p-b-0 - padding bottom 0px
+.m-t-0 - margin top 0px 
+.m-t-5 - margin top 5px
+.m-t-10 - margin top 10px 
+.m-t-20 - margin top 20px
+.m-t-30 - margin top 30px
+.m-r-0 - margin right 0px
+.m-r-5 - margin right 5px
+.m-r-10 - margin right 10px
+.m-r-20 - margin right 20px
+.m-r-30 - margin right 30px
+.m-b-0 - margin bottom 0px
+.m-b-5 - margin bottom 5px
+.m-b-10 - margin bottom 10px 
+.m-b-20 - margin bottom 20px
+.m-b-30 - margin bottom 30px
+.m-l-0 - margin left 0px
+.m-l-5 - margin left 5px
+.m-l-10 - margin left 10px
+.m-l-20 - margin left 20px
+.m-l-30 margin left 30px
+.p-5 - padding 5px
+.p-10 - padding 10px
+.font-white - h1, h2, h3, h4, h5, h6, p, span color white
+.font-black - h1, h2, h3, h4, h5, h6, p, span color black
+.image-bg - parrallax img</code></pre>
+</div> <!-- /help-class -->
+
+<!-- //////////////////////////////////////////////////// Color -->
+<div id="color">
+    <h3 class="m-b-10">Color Variables</h3>
+    <pre class="brush: html"><code>// Custom Variables
+
+// Font Variables
+$font: 'Open Sans', 'Verdana', sans-serif;
+$small-font-size: 12px;
+$medium-font-size:16px;
+$large-font-size:20px;
+$menu-font-size:15px;
+$icon-font-size: 24px;
+$font-color1:#373a3c;
+$font-color-secondary:#757575;
+
+// Transition Variables
+$fast-transition: all 0.15s ease-in-out; 
+$average-transition: all 0.3s ease-in-out; 
+$slow-transition: all 0.5s ease-in-out; 
+
+// Scheme Color 
+$blue:#2097f3;
+$cyan:#00bfd6;
+$gray:#f0f0f0;
+$green:#4EB152;
+$dark:#212121;
+$purple:#663ab8;
+$pink:#EB1F62;
+$red:#FE5050;
+$orange:#FF9703;
+$yellow:#FDCD0C;
+$white:#ffffff;
+
+// Dark Scheme Color 
+$lighten-gray:#3f3f3f;
+$ultra-light-gray:lighten($lighten-gray,25%);
+$dark-gray:#303030;
+$darken-gray:#333;
+$ultra-dark-gray:darken($dark-gray,5%);
+
+// $font-color1:lighten($lighten-gray,25%); dark
+// Lighten Scheme Color
+$lighten-blue:#36a1f4;
+$lighten-cyan:#19c5da;
+$lighten-purple:#754dbf;
+$lighten-green:#5fb863;
+$lighten-pink:#ed3571;
+$lighten-red:#fe6161;
+$lighten-orange:#ffa11c;
+$lighten-yellow:#fdd224;
+
+// Darken Scheme Color
+$darken-blue:#1c87da;
+$darken-cyan:#00abc0;
+$darken-purple:#5b34a5;
+$darken-green:#469f49;
+$darken-pink:#d31b58;
+$darken-red:#e44848;
+$darken-orange:#e58702;
+$darken-yellow:#e3b80a;</code></pre>
+</div> <!-- /color -->
+
+<!-- //////////////////////////////////////////////////// Components -->
+<h2 class="h2-top">Components</h2>
+<hr class="m-t-10 m-b-0">
+
+<!-- //////////////////////////////////////////////////// Form -->
+<div id="form">
+<h3 class="m-b-10">Basic Form</h3>
+<p class="text-muted">A simple form example</p>
+<form class="m-t-10">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+</form>
+<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputEmail1"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputEmail1"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code>
+</pre>
+
+    <p class="text-muted">Horizontal form example</p>
+    <form class="form-horizontal m-t-10">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-1 control-label">Email</label>
+        <div class="col-sm-11">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+      </div>
+    </form>
+    </div> <!-- /form -->
+                
+<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputEmail1"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputEmail1"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code>
+</pre>                
+
+<!-- //////////////////////////////////////////////////// Buttons -->        
+<div id="buttons" class="m-t-10">
+<h3 class="m-b-10">Buttons</h3>
+<p class="text-muted m-b-10">Simple buttons Example</p>
+<button class="btn btn-md bg-purple m-r-10"><span>Purple</span></button>
+<button class="btn btn-md btn-rounded bg-purple m-r-10"><span>purple</span></button>
+<button class="btn btn-outline btn-md bg-purple m-r-10"><span>Purple</span></button>
+<button class="btn btn-md btn-outline btn-rounded bg-purple m-r-10"><span>purple</span></button>
+<pre class="m-t-10">
+<code><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-md bg-purple"</span><span class="nt">&gt;</span>&lt;span&gt;Purple&lt;/span&gt;<span class="nt">&lt;/button&gt;</span>        
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-md btn-rounded bg-purple"</span><span class="nt">&gt;</span>&lt;span&gt;Purple&lt;/span&gt;<span class="nt">&lt;/button&gt;</span>        
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-md bg-purple"</span><span class="nt">&gt;</span>&lt;span&gt;Purple&lt;/span&gt;<span class="nt">&lt;/button&gt;</span>        
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-md btn-outline btn-rounded bg-purple"</span><span class="nt">&gt;</span>&lt;span&gt;Purple&lt;/span&gt;<span class="nt">&lt;/button&gt;</span>
+</code>
+</pre>  
+</div> <!-- /buttons -->
+
+<!-- //////////////////////////////////////////////////// Grid -->
+<div id="grid">
+<h3 class="m-b-10">Grid</h3>
+ <table class="table table-bordered table-striped"> <thead> <tr> <th></th> <th> Extra small devices <small>Phones (&lt;768px)</small> </th> <th> Small devices <small>Tablets (≥768px)</small> </th> <th> Medium devices <small>Desktops (≥992px)</small> </th> <th> Large devices <small>Desktops (≥1200px)</small> </th> </tr> </thead> <tbody> <tr> <th class="text-nowrap" scope="row">Grid behavior</th> <td>Horizontal at all times</td> <td colspan="3">Collapsed to start, horizontal above breakpoints</td> </tr> <tr> <th class="text-nowrap" scope="row">Container width</th> <td>None (auto)</td> <td>750px</td> <td>970px</td> <td>1170px</td> </tr> <tr> <th class="text-nowrap" scope="row">Class prefix</th> <td><code>.col-xs-</code></td> <td><code>.col-sm-</code></td> <td><code>.col-md-</code></td> <td><code>.col-lg-</code></td> </tr> <tr> <th class="text-nowrap" scope="row"># of columns</th> <td colspan="4">12</td> </tr> <tr> <th class="text-nowrap" scope="row">Column width</th> <td class="text-muted">Auto</td> <td>~62px</td> <td>~81px</td> <td>~97px</td> </tr> <tr> <th class="text-nowrap" scope="row">Gutter width</th> <td colspan="4">30px (15px on each side of a column)</td> </tr> <tr> <th class="text-nowrap" scope="row">Nestable</th> <td colspan="4">Yes</td> </tr> <tr> <th class="text-nowrap" scope="row">Offsets</th> <td colspan="4">Yes</td> </tr> <tr> <th class="text-nowrap" scope="row">Column ordering</th> <td colspan="4">Yes</td> </tr> </tbody> </table> 
+</div> <!-- /grid -->
+
+<!-- //////////////////////////////////////////////////// Notifications -->
+<div id="notifications">
+<h3 class="m-b-10">Notifications</h3>
+
+<div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>     
+
+<pre class="m-t-10">
+<code><span class="nt">&lt;button </span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close" data-dismiss="alert" aria-label="Close"</span><span class="nt">&gt;</span>&lt;span aria-hidden="true"&gt;&lt;/span&gt;<span class="nt">&lt;/button&gt;</span>        
+<span>&lt;strong&gt;Warning!&lt;/strong&gt;Better check yourself, you're not looking too good.</span></code>
+</pre>  
+</div> <!-- /notifications -->
+
+<!-- //////////////////////////////////////////////////// Panels -->
+<div id="panels">
+<h3 class="m-b-10">Panel</h3>
+<div class="panel">
+<div class="panel-heading bg-blue font-white"><h3>Panel blue</h3></div>
+    <div class="panel-body">
+        <p>Curabitur suscipit et augue nec sollicitudin. Nunc et egestas quam. Sed pharetra augue a malesuada euismod. Vivamus posuere tortor lacus, et tristique odio dapibus tristique. Sed purus magna, sollicitudin non commodo. </p>
+    </div> <!-- /panel-body -->
+</div> <!-- /panel -->
+
+<pre class="m-t-10">
+<code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading bg-blue font-white"</span><span class="nt">&gt;</span>Panel heading without title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code>
+</pre>
+
+</div> <!-- /panels -->
+
+<!-- //////////////////////////////////////////////////// Progress Bar -->
+<div id="progress-bar">
+<h3 class="m-b-10">Progress Bar</h3>
+
+<div class="progress m-t-10">
+  <div class="progress-bar bg-purple" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+    25%
+  </div>
+</div>
+
+<pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"60"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span> <span class="na">style=</span><span class="s">"width: 25%;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>25% Complete<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code>
+</pre>
+
+
+</div> <!-- /progress-bar -->
+
+<!-- //////////////////////////////////////////////////// Table-->
+<div id="table">
+<h3 class="m-b-10">Table</h3>
+<div class="bs-example" data-example-id="simple-table"> 
+    <table class="table"> 
+    <caption>Optional table caption.</caption> 
+    <thead> 
+    <tr> 
+        <th>#</th> 
+        <th>First Name</th> 
+        <th>Last Name</th> 
+        <th>Username</th> 
+    </tr> 
+    </thead> 
+    <tbody> 
+    <tr> 
+        <th scope="row">1</th> 
+        <td>Mark</td> 
+        <td>Otto</td> 
+        <td>@mdo</td> 
+    </tr> 
+    </tbody> 
+    </table> 
+</div>
+</div> <!-- /table -->
+
+<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;table class="table"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;caption<span class="nt">&gt;</span></span>text<span class="nt">&lt;/caption<span class="nt">&gt;</span></span>
+    <span class="nt">&lt;thead<span class="nt">&gt;</span></span>
+    <span class="nt">&lt;tr<span class="nt">&gt;</span></span>
+        <span class="nt">&lt;th<span class="nt">&gt;</span>#<span class="nt">&lt;/th<span class="nt">&gt;</span></span></span>
+        <span class="nt">&lt;th<span class="nt">&gt;</span>first name<span class="nt">&lt;/th<span class="nt">&gt;</span></span></span>
+        <span class="nt">&lt;th<span class="nt">&gt;</span>last name<span class="nt">&lt;/th<span class="nt">&gt;</span></span></span>
+        <span class="nt">&lt;th<span class="nt">&gt;</span>username<span class="nt">&lt;/th<span class="nt">&gt;</span></span></span>
+    <span class="nt">&lt;/tr<span class="nt">&gt;</span></span>    
+    <span class="nt">&lt;tbody<span class="nt">&gt;</span></span>
+        <span class="nt">&lt;tr<span class="nt">&gt;</span></span>
+        <span class="nt">&lt;th scope="row"<span class="nt">&gt;</span>1<span class="nt">&lt;/th<span class="nt">&gt;</span></span></span>
+        <span class="nt">&lt;th<span class="nt">&gt;</span>Mark<span class="nt">&lt;/th<span class="nt">&gt;</span></span></span>
+        <span class="nt">&lt;th<span class="nt">&gt;</span>Otto<span class="nt">&lt;/th<span class="nt">&gt;</span></span></span>
+        <span class="nt">&lt;th<span class="nt">&gt;</span>@mdo<span class="nt">&lt;/th<span class="nt">&gt;</span></span></span>
+    <span class="nt">&lt;/tr<span class="nt">&gt;</span>  </span>
+    <span class="nt">&lt;/tbody<span class="nt">&gt;</span></span>
+<span class="nt">&lt;/table<span class="nt">&gt;</span></span>
+</code>
+</pre>
+
+<!-- //////////////////////////////////////////////////// Credits -->         
+<h2 class="h2-top">Credits</h2>
+<hr class="m-t-10 m-b-0">
+       
+<div id="help-credits">
+
+<!-- //////////////////////////////////////////////////// Files & Sources -->
+<div id="files">
+<h3 class="m-t-10">Files & Sources</h3>
+ <div class="row">
+<div class="col-md-6 col-sm-12 col-xs-12 m-t-10">
+    <strong>Included Stylesheets</strong>
+    
+    <p>These are the primary CSS files used for general front-end styling. Use these to customize your theme even further.
+    
+    <ul class="list-unstyled">
+        <li>1. cropper/cropper.css - Cropper stylesheet</li>
+        <li>2. datatables/datables.css - Datables stylesheet</li>
+        <li>3. daterangepicker/daterangepicker.css - Daterangepicker stylesheet</li>
+        <li>4. morris/morris.css - Morris stylesheet</li>
+        <li>5. summernote/summernote.css - Summernote stylesheet</li>
+        <li>6. switchery/switchery.css - Switchery stylesheet</li>
+        <li>7. tagsinput/bootstrap-tagsinput.css - Tagsinput stylesheet</li>
+        <li>8. touchspin/jquery.bootstrap-touchspin.css - Tagsinput stylesheet</li>
+        <li>9. vmap/jqvmap.css - Vmap stylesheet</li>
+        <li>10. custom.css - Custom stylesheet</li>
+        <li>11. nanoscroller.css - Nanoscroller stylesheet</li>
+        <li>12. theme-blue.css - Theme blue stylesheet</li>
+        <li>13. theme-cyan.css - Theme cyan stylesheet</li>
+        <li>14. theme-green.css - Theme green stylesheet</li>
+        <li>15. theme-orange.css - Theme orange stylesheet</li>
+        <li>16. theme-pink.css - Theme pink stylesheet</li>
+        <li>17. theme-purple.css - Theme purple stylesheet</li>
+        <li>18. theme-red.css - Theme red stylesheet</li>
+        <li>19. theme-yellow.css - Theme yellow stylesheet</li>
+    </ul>
+    
+</div>
+
+<div class="col-md-6 col-sm-12 col-xs-12 m-t-10">
+    <strong>Included JavaScript</strong>
+    
+    <p>These are the various attribution inks to the Javascript files included or modified to work with in this theme.
+    <div class="col-md-6 col-sm-12 col-xs-12">   
+        <ul class="list-unstyled no-padding">
+
+            <li>1. <a href="http://www.chartjs.org">Chart-js</a></li>
+            <li>2. <a href="https://github.com/mhuggins/jquery-countTo">CountTo</a></li>
+            <li>3. <a href="https://fengyuanchen.github.io/cropper">Crooper</a></li>
+            <li>4. <a href="https://datatables.net">Datatables</a></li>
+            <li>5. <a href="http://www.daterangepicker.com">Daterangepicker</a></li>
+            <li>6. <a href="http://www.dropzonejs.com">Dropzone</a></li>
+            <li>7. <a href="http://www.flotcharts.org/">Flot-js</a></li>
+            <li>8. <a href="https://github.com/RobinHerbots/Inputmask">Inputmask</a></li>
+            <li>9. <a href="https://github.com/onokumus/metisMenu">metisMenu</a></li>
+            <li>10. <a href="http://momentjs.com">Moment</a></li>
+            <li>11. <a href="http://morrisjs.github.io/morris.js">Morris</a></li>
+            <li>12. <a href="https://jamesflorentino.github.io/nanoScrollerJS">Nanoscroller</a></li>
+            <li>13. <a href="https://github.com/google/code-prettify">Prettify</a></li>
+            <li>14. <a href="http://summernote.org">Summernote</a></li>
+            <li>15. <a href="http://abpetkov.github.io/switchery">Switchery</a></li>
+            <li>16. <a href="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples">Tagsinput</a></li>
+            <li>17. <a href="http://www.virtuosoft.eu/code/bootstrap-touchspin">Touchspin</a></li>
+            <li>18. <a href="https://validatejs.org">Validator</a></li>
+            <li>19. <a href="https://jqvmap.com">jQVmap</a></li>
+
+        </ul>
+    </div>
+
+</div>
+</div>
+</div><!-- end row -->
+
+<!-- //////////////////////////////////////////////////// Support -->
+<div id="support">
+<h3 class="m-t-10">Support</h3>
+<div class="row">
+<div class="support col-md-6 col-sm-12 col-xs-12 m-t-10">
+    <p>Please remember you have purchased a very affordable theme and you have not paid for a full-time web design agency.
+    
+    <p>You have question ? <br>
+    <a href="mailto:zwoweb@gmail.com">zwoweb@gmail.com</a></p>
+
+    <strong>Support for my items includes:</strong>
+    <ul class="list-unstyled">
+        <li>* Responding to questions or problems regarding the item and its features</li>
+        <li>* Fixing bugs and reported issues</li>
+        <li>* Providing updates to ensure compatibility with new software versions</li>
+    </ul>
+    <strong>Item support does not include:</strong>
+    <ul class="list-unstyled">
+        <li>* Customization and installation services</li>
+        <li>* Support for third party software and plug-ins</li>
+    </ul>  
+
+</div> <!-- /support-->
+
+<div class="col-md-6 col-sm-12 col-xs-12 m-t-10">
+    <strong>Before seeking support, please...</strong>
+        <ul class="list-unstyled">
+            <li>* Make sure your question is a valid Theme Issue and not a customization request.</li>
+            <li>* Make sure you have read through the documentation before asking support on how to accomplish a task.</li>
+            <li>* Try disabling any active plugins to make sure there isn't a conflict with a plugin. And if there is this way you can let us know.</li>
+            <li>* If you have customized your theme and now have an issue, back-track to make sure you didn't make a mistake. If you have made changes and can't find the issue, please provide us with your changelog.</li>
+            <li>* Almost 80% of the time we find that the solution to people's issues can be solved with a simple "Google Search". You might want to try that before seeking support. You might be able to fix the issue yourself much quicker than we can respond to your request.</li>
+            <li>* Make sure to state the name of the theme you are having issues with when requesting support via ThemeForest.</li>
+        </ul>
+</div>
+</div> <!-- /col -->
+</div> <!-- /row -->
+</div> <!-- /help-credits -->
+
+</div> <!-- /right -->  
+
+</div> <!-- /panel-body -->
+</div> <!-- /panel-->
+</div> <!-- /col -->
+</div> <!-- /row -->
+<!-- //////////////////////////////////////////////////// Footer -->
+<div class="row">
+    <footer>
+      <div id="credits">
+        <div class="col-xs-12">  
+        <p> Copyright© 2016 Develop by Zwolek. All Rights Reserved.</p>
+        </div> <!-- /col-sm-12 -->
+      </div> <!-- /credits -->
+    </footer> <!-- /footer-->
+</div> <!-- /row -->
+
+</div> <!-- /container-fluid -->
+</div> <!-- /content-panel -->
+
+<!-- /////////////////////////////// Scripts /////////////////////////////// -->  
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+<!-- Offline jQuery script -->  
+<!-- <script  type="text/javascript" src="jquery.min"></script>  -->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script  type="text/javascript" src="../js/bootstrap.min.js"></script>
+<!-- Menu Script -->
+<script  type="text/javascript" src="../js/menu/metisMenu.min.js"></script>
+<script type="text/javascript" src="../js/menu/nanoscroller.js"></script>
+<!-- Custom scripts -->
+<script  type="text/javascript" src="../js/jquery-functions.js"></script>
+
+</body>
+
+</html>

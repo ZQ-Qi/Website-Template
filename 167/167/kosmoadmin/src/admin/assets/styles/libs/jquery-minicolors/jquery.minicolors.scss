@@ -1,0 +1,38 @@
+.minicolors {
+  .minicolors-swatch {
+    border-radius: 2px;
+    top: 5px;
+    z-index: 0;
+    border-color: #f5f5f5;
+  }
+
+  &.minicolors-position-left {
+    .minicolors-swatch {
+      left: 6px;
+    }
+  }
+
+  &.minicolors-position-right {
+    .minicolors-swatch {
+      right: 6px;
+    }
+  }
+
+  .minicolors-panel {
+    z-index: 1;
+  }
+
+  &.minicolors-inline {
+    .minicolors-panel {
+      z-index: 0;
+    }
+  }
+}
+
+.input-group {
+  .minicolors {
+    .minicolors-input {
+      width: 100%;
+    }
+  }
+}

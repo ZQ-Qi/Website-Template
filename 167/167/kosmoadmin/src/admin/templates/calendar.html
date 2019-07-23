@@ -1,0 +1,208 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/flatpickr/flatpickr.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="libs/fullcalendar/fullcalendar.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/fullcalendar/fullcalendar.min.css"> <!-- Customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/calendar.min.css"> <!-- Customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Calendar</h3>
+
+                <div class="ks-controls">
+                    <nav class="breadcrumb ks-default">
+                        <a class="breadcrumb-item ks-breadcrumb-icon" href="#">
+                            <span class="la la-home ks-icon"></span>
+                        </a>
+                        <a class="breadcrumb-item" href="#">Apps</a>
+                        <span class="breadcrumb-item active" href="#">Calendar</span>
+                    </nav>
+
+                    <button class="btn btn-outline-primary ks-light ks-calendar-info-block-toggle" data-block-toggle=".ks-calendar-container > .ks-info">Info</button>
+                </div>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-calendar">
+                <div class="ks-calendar-body">
+                    <div class="ks-calendar-container">
+                        <div class="ks-calendar-container-wrap">
+                            <div id="ks-calendar"></div>
+                        </div>
+                        <div class="ks-calendar-container-info" data-auto-height>
+                            <div class="ks-datepicker">
+                                <div class="flatpickr" data-inline=true></div>
+                            </div>
+                            <div class="ks-events">
+                                <div class="ks-header">
+                                    <span class="ks-text">Events</span>
+                                    <a href="#" class="ks-control"><span class="ks-icon">+</span></a>
+                                </div>
+                                <div class="ks-body">
+                                    <ul>
+                                        <li class="ks-primary">
+                                            <a>Primary event</a>
+                                        </li>
+                                        <li class="ks-danger">
+                                            <a>All day event</a>
+                                        </li>
+                                        <li class="ks-warning">
+                                            <a>Birthday party</a>
+                                        </li>
+                                        <li class="ks-success">
+                                            <a>Repeating event</a>
+                                        </li>
+                                        <li class="ks-info">
+                                            <a>Meeting</a>
+                                        </li>
+                                        <li class="ks-grey">
+                                            <a>Launch</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ks-statistics">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <span class="ks-amount">8</span>
+                                            <span class="ks-status">Open</span>
+                                        </td>
+                                        <td>
+                                            <span class="ks-amount">5</span>
+                                            <span class="ks-status">Calls Out</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="ks-amount">1,204</span>
+                                            <span class="ks-status">Scheduled</span>
+                                        </td>
+                                        <td>
+                                            <span class="ks-amount">129</span>
+                                            <span class="ks-status">Checked In</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="ks-amount">530</span>
+                                            <span class="ks-status">Closed</span>
+                                        </td>
+                                        <td>
+                                            <span class="ks-amount">17</span>
+                                            <span class="ks-status">Missed</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/momentjs/moment-with-locales.min.js"></script>
+<script src="libs/fullcalendar/fullcalendar.min.js"></script>
+<script src="libs/flatpickr/flatpickr.min.js"></script>
+<script type="application/javascript">
+(function($) {
+    $(document).ready(function () {
+        var offsetTop = $('#ks-calendar').offset().top - 60;
+        var bodyHeight = $('body').height();
+
+        $('#ks-calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            height: bodyHeight - offsetTop,
+            defaultDate: '2016-06-12',
+            editable: true,
+            selectable: true,
+            eventLimit: true, // allow "more" link when too many events
+            droppable: true,
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2016-06-01',
+                    className: 'ks-danger'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2016-06-07',
+                    end: '2016-06-10',
+                    className: 'ks-grey'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-06-09T16:00:00',
+                    className: 'ks-success'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-06-16T16:00:00',
+                    className: 'ks-success'
+                },
+                {
+                    title: 'Conference',
+                    start: '2016-06-11',
+                    end: '2016-06-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2016-06-12T10:30:00',
+                    end: '2016-06-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2016-06-12T12:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2016-06-12T14:30:00'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2016-06-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2016-06-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2016-06-13T07:00:00',
+                    className: 'ks-warning'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2016-06-28'
+                }
+            ],
+            eventAfterAllRender: function(view) {
+                $('#ks-calendar .fc-scroller').jScrollPane();
+            }
+        });
+
+        $('.ks-datepicker .flatpickr').flatpickr();
+
+        if (Response.band(0, 780) || Response.wave(0, 790)) {
+            Kosmo.makeScrollable('.ks-calendar-container > .ks-info');
+        }
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

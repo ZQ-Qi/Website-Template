@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>User Profile | Neat</title>
+    <meta name="description" content="Neat">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/neat.min.css?v=1.0">
+  </head>
+  <body>
+
+    <div class="o-page">
+      <div class="o-page__sidebar js-page-sidebar">
+        <aside class="c-sidebar">
+          <div class="c-sidebar__brand">
+            <a href="#"><img src="img/logo.svg" alt="Neat"></a>
+          </div>
+
+          <!-- Scrollable -->
+          <div class="c-sidebar__body">
+            <span class="c-sidebar__title">Dashboards</span>
+            <ul class="c-sidebar__list">
+              <li>
+                <a class="c-sidebar__link" href="dashboard01.html">
+                  <i class="c-sidebar__icon feather icon-home"></i>Dashboard 1
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="dashboard02.html">
+                  <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Dashboard 2
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="dashboard03.html">
+                  <i class="c-sidebar__icon feather icon-pie-chart"></i>Dashboard 3
+                </a>
+              </li>
+            </ul>
+
+            <span class="c-sidebar__title">General</span>
+            <ul class="c-sidebar__list">
+              <li>
+                <a class="c-sidebar__link" href="pipeline.html">
+                  <i class="c-sidebar__icon feather icon-move"></i>Pipeline
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="calendar.html">
+                  <i class="c-sidebar__icon feather icon-calendar"></i>Calendar
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="members.html">
+                  <i class="c-sidebar__icon feather icon-users"></i>Members
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="invoice.html">
+                  <i class="c-sidebar__icon feather icon-file-text"></i>Single Invoice
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link is-active" href="user-profile.html">
+                  <i class="c-sidebar__icon feather icon-user"></i>User
+                </a>
+
+                <!-- Always visible submenu -->
+                <ul class="c-sidebar__list">
+                  <li><a class="c-sidebar__link" href="index.html">Onboard</a></li>
+                  <li><a class="c-sidebar__link" href="account-settings.html">Account Settings</a></li>
+                  <li><a class="c-sidebar__link" href="signup.html">Sign Up</a></li>
+                  <li><a class="c-sidebar__link" href="signin.html">Sign In</a></li>
+                  <li><a class="c-sidebar__link" href="reset-password.html">Reset Password</a></li>
+                  <li><a class="c-sidebar__link" href="forgot-password.html">Forgot Password</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="pricing.html">
+                  <i class="c-sidebar__icon feather icon-tag"></i>Pricing
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="faq.html">
+                  <i class="c-sidebar__icon feather icon-info"></i>FAQ
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="404.html">
+                  <i class="c-sidebar__icon feather icon-anchor"></i>404
+                </a>
+              </li>
+
+              <li class="c-sidebar__item has-submenu">
+                <a class="c-sidebar__link" data-toggle="collapse" href="#sidebar-submenu" aria-expanded="false" aria-controls="sidebar-submenu">
+                    <i class="c-sidebar__icon feather icon-hash"></i>Sub Menu
+                </a>
+
+                <div>
+                  <ul class="c-sidebar__list collapse" id="sidebar-submenu">
+                    <li><a class="c-sidebar__link" href="#">Submenu link</a></li>
+                    <li><a class="c-sidebar__link" href="#">Submenu link</a></li>
+                    <li><a class="c-sidebar__link" href="#">Submenu link</a></li>
+                  </ul>
+                </div>
+                 
+              </li>
+            </ul>
+
+            <span class="c-sidebar__title">Neat</span>
+            <ul class="c-sidebar__list">
+              <li>
+                <a class="c-sidebar__link" href="ui-kit.html">
+                  <i class="c-sidebar__icon feather icon-layers"></i>UI Kit
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="https://zawiastudio.com/neat/docs/">
+                  <i class="c-sidebar__icon feather icon-book"></i>Documentation
+                </a>
+              </li>
+              <li>
+                <a class="c-sidebar__link" href="https://zawiastudio.com/neat/changelog/">
+                  <i class="c-sidebar__icon feather icon-anchor"></i>Changelog
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+
+          <a class="c-sidebar__footer" href="#">
+            Logout <i class="c-sidebar__footer-icon feather icon-power"></i>
+          </a>
+        </aside>
+      </div>
+
+      <main class="o-page__content">
+        <header class="c-navbar u-mb-medium">
+          <button class="c-sidebar-toggle js-sidebar-toggle">
+            <i class="feather icon-align-left"></i>
+          </button>
+
+          <h2 class="c-navbar__title">My Profile</h2>
+
+          <div class="c-dropdown dropdown u-mr-small">
+            <div class="c-notification dropdown-toggle" id="dropdownMenuToggle1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+              <i class="c-notification__icon feather icon-message-circle"></i>
+            </div>
+
+            <div class="c-dropdown__menu c-dropdown__menu--large has-arrow dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuToggle1">
+
+              <span class="c-dropdown__menu-header">
+                Mentions
+              </span>
+              <a class="c-dropdown__item dropdown-item" href="#">
+                <div class="o-media">
+                  <div class="o-media__img u-mr-xsmall">
+                    <span class="c-avatar c-avatar--xsmall">
+                      <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Adam Sandler">
+                    </span>
+                  </div>
+
+                  <div class="o-media__body">
+                    <p>Hey, Julia how are you doing. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eius iste.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a class="c-dropdown__item dropdown-item" href="#">
+                <div class="o-media">
+                  <div class="o-media__img u-mr-xsmall">
+                    <span class="c-avatar c-avatar--xsmall">
+                      <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Adam Sandler">
+                    </span>
+                  </div>
+
+                  <div class="o-media__body">
+                    <p>Hey, Julia how are you doing. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eius iste.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a class="c-dropdown__item dropdown-item" href="#">
+                <div class="o-media">
+                  <div class="o-media__img u-mr-xsmall">
+                    <span class="c-avatar c-avatar--xsmall">
+                      <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Adam Sandler">
+                    </span>
+                  </div>
+
+                  <div class="o-media__body">
+                    <p>Hey, Julia how are you doing. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eius iste.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a class="c-dropdown__menu-footer">
+                All Mentions
+              </a>
+            </div>
+          </div>
+
+          <div class="c-dropdown dropdown u-mr-medium">
+            <div class="c-notification has-indicator dropdown-toggle" id="dropdownMenuToggle2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+              <i class="c-notification__icon feather icon-bell"></i>
+            </div>
+
+            <div class="c-dropdown__menu c-dropdown__menu--large has-arrow dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuToggle2">
+
+              <span class="c-dropdown__menu-header">
+                Notifications
+              </span>
+              <a class="c-dropdown__item dropdown-item" href="#">
+                <div class="o-media">
+                  <div class="o-media__img u-mr-xsmall">
+                    <span class="c-icon c-icon--info c-icon--xsmall"><i class="feather icon-globe"></i></span>
+                  </div>
+
+                  <div class="o-media__body">
+                    <p>We've updated the Stripe Services agreement and its supporting terms. Your continueduse of Stripe's services.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a class="c-dropdown__item dropdown-item" href="#">
+                <div class="o-media">
+                  <div class="o-media__img u-mr-xsmall">
+                    <span class="c-icon c-icon--danger c-icon--xsmall"><i class="feather icon-x"></i></span>
+                  </div>
+
+                  <div class="o-media__body">
+                    <p>We've updated the Stripe Services agreement and its supporting terms. Your continueduse of Stripe's services.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a class="c-dropdown__item dropdown-item" href="#">
+                <div class="o-media">
+                  <div class="o-media__img u-mr-xsmall">
+                    <span class="c-icon c-icon--success c-icon--xsmall"><i class="feather icon-anchor"></i></span>
+                  </div>
+
+                  <div class="o-media__body">
+                    <p>We've updated the Stripe Services agreement and its supporting terms. Your continueduse of Stripe's services.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a class="c-dropdown__menu-footer">
+                All Notifications
+              </a>
+            </div>
+          </div>
+
+          <div class="c-dropdown dropdown">
+            <div class="c-avatar c-avatar--xsmall dropdown-toggle" id="dropdownMenuAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+              <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Adam Sandler">
+            </div>
+
+            <div class="c-dropdown__menu has-arrow dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuAvatar">
+              <a class="c-dropdown__item dropdown-item" href="#">Edit Profile</a>
+              <a class="c-dropdown__item dropdown-item" href="#">View Activity</a>
+              <a class="c-dropdown__item dropdown-item" href="#">Log out</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="c-alert c-alert--info u-mb-medium">
+                <span class="c-alert__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+
+                <div class="c-alert__content">
+                  <h4 class="c-alert__title">Heads Up, you look awesome today :)</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur, ipsam laboriosam alias reiciendis mollitia dolores ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur, ipsam laboriosam alias reiciendis mollitia dolores!</p>
+                </div>
+              </div><!-- // .c-alert -->
+
+              <nav class="c-tabs"> 
+                <div class="c-tabs__list nav nav-tabs" id="myTab" role="tablist">
+                  <a class="c-tabs__link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Activity</a>
+                  <a class="c-tabs__link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Documents</a>
+                  <a class="c-tabs__link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Notes</a>
+                </div>
+                <div class="c-tabs__content tab-content" id="nav-tabContent">
+                  <div class="c-tabs__pane active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="c-feed">
+                  <div class="c-feed__item">
+                    <div class="c-feed__item-content">
+                      <h6 class="u-text-small">Add new payout method</h6>
+                      <p>Added paypal as the default payout method</p>
+                    </div>
+                    <p class="u-text-xsmall">just now</p>
+                  </div>
+
+                  <div class="c-feed__item c-feed__item--success">
+                    <div class="c-feed__item-content">
+                      <h6 class="u-text-small">Payment received</h6>
+                      <p>Cha-ching payment received from <a href="#">@client-22</a></p>
+                    </div>
+                    <p class="u-text-xsmall">30 mins ago</p>
+                  </div>
+
+                  <div class="c-feed__item">
+                    <div class="c-feed__item-content">
+                      <h6 class="u-text-small">Project Approved</h6>
+                      <p>Added landing page design to finished projects</p>
+                    </div>
+                    
+                    <p class="u-text-xsmall">6 hours ago</p>
+                  </div>
+
+                  <div class="c-feed__item c-feed__item--fancy">
+                    <div class="c-feed__item-content">
+                      <h6 class="u-text-small">Project Approved</h6>
+                      <p>Moved new charachter design to <a href="#">@adamslandler</a></p>
+                    </div>
+                    <p class="u-text-xsmall">2 Days ago</p>
+                  </div>
+
+                  <div class="c-feed__item c-feed__item--danger">
+                    <div class="c-feed__item-content">
+                      <h6 class="u-text-small">Project Approved</h6>
+                      <p>Design was approved by Neat company</p>
+                    </div>
+                    <p class="u-text-xsmall">2 Days ago</p>
+                  </div>
+
+                  <div class="c-feed__item c-feed__item--warning">
+                    <div class="c-feed__item-content">
+                      <h6 class="u-text-small">Project Approved</h6>
+                      <p>New order received from Canada by #49832</p>
+                    </div>
+                    <p class="u-text-xsmall">4 Days ago</p>
+                  </div>
+
+                  <div class="c-feed__item">
+                    <div class="c-feed__item-content">
+                      <h6 class="u-text-small">Project Approved</h6>
+                      <p>New order received from Canada by #49832</p>
+                    </div>
+                    <p class="u-text-xsmall">5 Days ago</p>
+                  </div>
+                </div><!-- // .c-feed -->
+                  </div>
+                  <div class="c-tabs__pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">ducimus quam fuga, vero atque, error laboriosam odio provident eveniet nemo reiciendis non optio, laborum enim ipsum dolorum, voluptatem ducimus quam fuga, vero atque, error laboriosam odio provident eveniet nemo!</div>
+                  <div class="c-tabs__pane" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">optio, laborum enim ipsum dolorum, voluptatem ducimus quam fuga, vero atque, error laboriosam odio provident eveniet nemo reicienoptio, laborum enim ipsum dolorum, voluptatem ducimus quam fuga, vero atque, error laboriosam odio provident eveniet nemo reicien</div>
+                </div>
+              </nav>
+            </div>
+
+            <div class="col-md-5">
+              <div class="c-card">
+                <div class="u-text-center">
+                  <div class="c-avatar c-avatar--large u-mb-small u-inline-flex">
+                    <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Avatar">
+                  </div>
+
+                  <h5>Adam Sandler</h5>
+                  <p>Freelance UI Designer</p>
+                </div>
+
+                <span class="c-divider u-mv-small"></span>
+
+                <span class="c-text--subtitle">Email Address</span>
+                <p class="u-mb-small u-text-large">adam@sandler.com</p>
+
+                <span class="c-text--subtitle">Phone NUMBER</span>
+                <p class="u-mb-small u-text-large">+966 535-277-535</p>
+
+                <span class="c-text--subtitle">Address</span>
+                <p class="u-mb-small u-text-large">71 Pilgrim Avenue Chevy Chase, MD 20815</p>
+
+                <span class="c-text--subtitle u-block">Tags</span>
+                <a class="c-badge c-badge--small c-badge--info u-mb-xsmall" href="#">Sketch</a>
+                <a class="c-badge c-badge--small c-badge--info u-mb-xsmall" href="#">Photoshop</a>
+                <a class="c-badge c-badge--small c-badge--danger u-mb-xsmall" href="#">HTML</a>
+                <a class="c-badge c-badge--small c-badge--success u-mb-xsmall" href="#">CSS</a>
+                <a class="c-badge c-badge--small c-badge--fancy u-mb-xsmall" href="#">Figma</a>
+                <a class="c-badge c-badge--small c-badge--danger" href="#">AE</a>
+              </div>
+
+              <div class="c-card">
+                <h4>Payments</h4>
+                <p class="u-mb-medium">Add or remove a payout method</p>
+
+                <div class="o-media u-mb-small">
+                  <div class="o-media__img u-mr-xsmall">
+                    <img src="img/paypal.svg" alt="PayPal">
+                  </div>
+
+                  <div class="o-media__body u-flex u-justify-between">
+                    <p>adam@sandler.com</p>
+                    <a class="u-text-small" href="#">Remove</a>
+                  </div>
+                </div>
+
+                <div class="o-media u-mb-small">
+                  <div class="o-media__img u-mr-xsmall">
+                    <img src="img/stripe.svg" alt="Stripe">
+                  </div>
+
+                  <div class="o-media__body u-flex u-justify-between">
+                    <p>adam@sandler.com</p>
+                    <a class="u-text-small" href="#">Remove</a>
+                  </div>
+                </div>
+
+                <div class="o-media">
+                  <div class="o-media__img u-mr-xsmall">
+                    <img src="img/bank.svg" alt="Bank">
+                  </div>
+
+                  <div class="o-media__body u-flex u-justify-between">
+                    <p>xxxx-5623</p>
+                    <a class="u-text-small" href="#">Remove</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <footer class="c-footer">
+                <p>© 2018 Neat, Inc</p>
+                <span class="c-footer__divider">|</span>
+                <nav>
+                  <a class="c-footer__link" href="#">Terms</a>
+                  <a class="c-footer__link" href="#">Privacy</a>
+                  <a class="c-footer__link" href="#">FAQ</a>
+                  <a class="c-footer__link" href="#">Help</a>
+                </nav>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="js/neat.min.js?v=1.0"></script>
+  </body>
+</html>
