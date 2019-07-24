@@ -1,0 +1,66 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/mail.min.css"> <!-- Customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Mail</h3>
+                <button class="btn btn-outline-primary ks-light ks-mail-navigation-block-toggle" data-block-toggle=".ks-mail > .ks-navigation">Menu</button>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-mail" data-mail-manage>
+                @@include('./_partials/apps/mail/navigation.html')
+                @@include('./_partials/apps/mail/emails.html')
+
+                <div class="ks-view ks-manage">
+                    <div class="ks-header">
+                        <span>New Email</span>
+                        <button class="btn btn-outline-primary ks-light ks-view-cancel">Cancel</button>
+                    </div>
+                    <form class="ks-body">
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="to">To:</label>
+                            <input type="email" class="form-control" id="to" placeholder="To:">
+                        </div>
+                        <div class="form-group">
+                            <div class="ks-editor">
+                                <textarea class="form-control" placeholder="Message"></textarea>
+                                <div class="ks-actions">
+                                    <button type="button" class="btn btn-primary">Send</button>
+                                    <button type="button" class="btn btn-outline-primary ks-light ks-no-text">
+                                        <span class="la la-paperclip ks-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+            delay: {
+                show: 500
+            }
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/apps/mail/scripts.html')
+@@include('./_partials/footer.html')

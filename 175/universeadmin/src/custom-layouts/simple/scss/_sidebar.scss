@@ -1,0 +1,78 @@
+.sidebar {
+  height: 100%;
+  padding: 29px 20px 27px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $sidebar-width;
+
+  &__brand-sm {
+    display: none;
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 17px;
+    margin-top: 35px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: flex;
+    @include mx-link(#000, $color-info);
+    align-items: center;
+
+    &-icon {
+      font-size: 22px;
+      width: 22px;
+      line-height: 21px;
+      margin-right: 7px;
+      color: $color-gray;
+      text-align: center;
+
+      &.mdi-settings {
+        font-size: 19px;
+      }
+    }
+  }
+
+  &__item.is-active &__link-icon,
+  &__item.is-active &__link-text {
+    color: $color-info;
+    font-weight: 600;
+  }
+
+  &__bottom-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user {
+    &-avatar {
+      width: 34px;
+      height: 34px;
+      margin-right: 14px;
+    }
+
+    &-info {
+      flex-grow: 1;
+      @include mx-link($color-gray, $color-info);
+      display: flex;
+      flex-direction: column;
+      font-size: 15px;
+      line-height: 15px;
+    }
+
+    &-name {
+      margin-bottom: 4px;
+    }
+  }
+}

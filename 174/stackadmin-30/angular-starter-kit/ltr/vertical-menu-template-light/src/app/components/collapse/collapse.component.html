@@ -1,0 +1,64 @@
+<!--Collapse on toggle starts-->
+<div class="content-header row">
+  <div class="content-header-left col-md-6 col-12 mb-1">
+    <h3 class="content-header-title">Collapse</h3>
+  </div>
+  <div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-12">
+    <div class="breadcrumb-wrapper col-12">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a>Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a>Components</a>
+        </li>
+        <li class="breadcrumb-item active">Collapse
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="content-body">
+  <section id="collapse">
+    <div class="row">
+      <div class="col-12">
+        <div class="content-header">Collapse</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-block">
+              <div>
+                <button type="button" class="btn btn-outline-primary mt-2" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+                  aria-controls="collapseExample">
+                  Toggle
+                </button>
+              </div>
+              <div id="collapseExample" [ngbCollapse]="isCollapsed">
+                <br>
+                <p>Jelly-o cake chocolate bar. Ice cream gummi bears candy canes cookie toffee halvah marzipan. Gummies dessert
+                  powder biscuit sweet roll. Biscuit muffin jujubes. Tiramisu pie danish muffin oat cake. Apple pie cupcake
+                  apple pie cotton candy toffee biscuit pie. Lemon drops dessert marshmallow. Jelly-o soufflé muffin muffin.
+                  Tootsie roll carrot cake sugar plum brownie chocolate cake croissant cotton candy lemon drops toffee.</p>
+                <p>Sweet roll cotton candy jelly-o tootsie roll candy canes liquorice tart cotton candy tiramisu. Powder sesame
+                  snaps chocolate liquorice pudding jelly cake pie. Lemon drops ice cream chocolate bar pudding dragée. Pastry
+                  cake cheesecake chocolate cake. Toffee bonbon fruitcake candy canes biscuit. Jelly chocolate cake danish
+                  tart jelly-o candy jelly powder. Brownie gummi bears brownie bear claw brownie bear claw croissant marshmallow.
+                  Pudding cake icing gummies pudding candy gingerbread macaroon. Chupa chups pastry tiramisu liquorice tiramisu
+                  marshmallow gummies brownie candy canes.</p>
+                <p>Jelly beans halvah brownie macaroon powder. Wafer gingerbread caramels candy tootsie roll powder chupa chups.
+                  Marshmallow candy caramels chocolate cake oat cake caramels. Ice cream jelly liquorice danish toffee caramels.
+                  Danish icing topping. Carrot cake cupcake marshmallow donut sugar plum gingerbread sweet jelly. Pastry
+                  chocolate carrot cake sweet macaroon sweet roll jelly beans topping. Biscuit lollipop jelly-o tart halvah
+                  muffin. Caramels topping gummies pastry sweet. Lollipop candy canes bonbon sesame snaps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!--Collapse on toggle ends-->

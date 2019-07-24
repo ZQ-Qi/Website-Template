@@ -1,0 +1,553 @@
+@import "../config/colors";
+
+.ks-widget-payment-simple-amount-item {
+  min-height: 124px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-color: #e5e5e5;
+  border-radius: 3px;
+  flex-wrap: wrap;
+
+  .payment-simple-amount-item-icon-block {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+
+    > .ks-icon {
+      position: relative;
+      left: 1px;
+      color: #fff;
+      font-size: 32px;
+    }
+
+    > [class*="ks-icon-"] {
+      font-size: 24px;
+    }
+  }
+
+  .payment-simple-amount-item-amount {
+    margin-bottom: 7px;
+
+    > .ks-amount {
+      font-size: 24px;
+      font-weight: 600;
+      display: inline-block;
+      margin-right: 16px;
+    }
+
+    > .ks-amount-icon {
+      font-size: 18px;
+      transform: rotate(-360deg);
+    }
+  }
+
+  .payment-simple-amount-item-description {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    > .ks-progress-type {
+      font-weight: 600;
+    }
+  }
+
+  &.ks-purple {
+    .payment-simple-amount-item-icon-block {
+      background-color: #4e54a8;
+    }
+
+    .ks-amount-icon, .ks-progress-type {
+      color: #4e54a8;
+    }
+  }
+
+  &.ks-green {
+    .payment-simple-amount-item-icon-block {
+      background-color: #81c159;
+    }
+
+    .ks-amount-icon, .ks-progress-type {
+      color: #81c159;
+    }
+  }
+
+  &.ks-pink {
+    .payment-simple-amount-item-icon-block {
+      background-color: #df538b;
+    }
+
+    .ks-amount-icon, .ks-progress-type {
+      color: #df538b;
+    }
+  }
+
+  &.ks-orange {
+    .payment-simple-amount-item-icon-block {
+      background-color: #f88528;
+    }
+
+    .ks-amount-icon, .ks-progress-type {
+      color: #f88528;
+    }
+  }
+}
+
+.ks-widget-payment-card-rate-details {
+  .card-block {
+    padding-top: 0;
+    padding-bottom: 20px;
+
+    .ks-card-widget-datetime {
+      margin-bottom: 20px;
+    }
+  }
+
+  .ks-payment-card-rate-details-table {
+    margin: 0;
+    width: 100%;
+
+    td {
+      font-size: 14px;
+      padding-bottom: 8px;
+
+      &.ks-currency {
+        padding-left: 0;
+
+        > .ks-flag {
+          margin-top: -3px;
+          margin-right: 10px;
+          display: inline-block;
+        }
+      }
+
+      &.ks-amount {
+        padding-right: 0;
+        width: 1px;
+        font-weight: 600;
+        text-align: right;
+      }
+    }
+
+    tr {
+      &:first-child {
+        td {
+          border-top: none;
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-payment-earnings {
+  .ks-payment-earnings-chart {
+    height: 155px;
+    margin-left: -36px;
+    margin-right: -36px;
+    margin-bottom: -39px;
+    border-radius: 3px;
+
+    .c3-line {
+      stroke-width: 2px;
+    }
+  }
+
+  .ks-payment-earnings-amount {
+    font-size: 36px;
+    font-weight: 500;
+    color: #171717;
+    margin-bottom: 12px;
+  }
+
+  .ks-payment-earnings-amount-description {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(23, 23, 23, 0.8);
+    margin-bottom: 22px;
+  }
+}
+
+.ks-widget-payment-budget {
+  .card-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ks-thumbnail {
+    display: block;
+  }
+
+  .ks-card-widget-datetime {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .ks-payment-budget-amount-block,
+  .ks-payment-budget-remaining-block {
+    > .ks-text-action {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    > .ks-description {
+      font-size: 12px;
+      color: $ks-default-text-color-light;
+    }
+  }
+}
+
+.ks-widget-payment-price-ratio {
+  border-radius: 3px;
+  text-align: center;
+  padding: 31px 35px;
+  border: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .ks-price-ratio-title {
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(23, 23, 23, 0.8);
+    text-transform: uppercase;
+    margin-bottom: 17px;
+  }
+
+  .ks-price-ratio-amount {
+    color: #171717;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .ks-price-ratio-progress {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+
+    > .ks-icon {
+      font-size: 18px;
+      display: inline-block;
+      margin-right: 7px;
+    }
+  }
+
+  &.ks-green {
+    background-color: rgba(129, 193, 89, 0.15);
+
+    .ks-price-ratio-progress {
+      color: #81c159;
+    }
+  }
+
+  &.ks-purple {
+    background-color: rgba(223, 82, 139, 0.1);
+
+    .ks-price-ratio-progress {
+      color: #df538b;
+    }
+  }
+
+  &.ks-blue {
+    background-color: #eff1fc;
+
+    .ks-price-ratio-progress {
+      color: #4e54a8;
+    }
+  }
+
+  &.ks-yellow {
+    background-color: rgba(248, 238, 62, 0.2);
+
+    .ks-price-ratio-progress {
+      color: #f88528;
+    }
+  }
+}
+
+.ks-widget-payment-table-invoicing {
+  .ks-payment-table-invoicing {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    tr {
+      &:first-child {
+        td {
+          border-top: none;
+        }
+      }
+    }
+
+    td {
+      padding-bottom: 8px;
+      font-size: 14px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.ks-widget-payment-table {
+  .ks-payment-table {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    tr {
+      &:first-child {
+        td {
+          border-top: none;
+        }
+      }
+    }
+
+    td {
+      vertical-align: middle;
+      padding-bottom: 8px;
+      font-size: 14px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        text-align: right;
+      }
+    }
+
+    .ks-avatar {
+      position: relative;
+      margin-top: -2px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.ks-widget-chart-orders {
+  .ks-chart-orders-block {
+    margin-left: -20px;
+  }
+
+  .c3-line {
+    stroke-width: 2px;
+  }
+
+  .c3-axis-y, .c3-axis-x {
+    .tick {
+      line {
+        opacity: 0;
+      }
+    }
+
+    .domain {
+      opacity: 0;
+    }
+  }
+
+  .tick {
+    font-size: 12px;
+    fill: $ks-default-text-color-light;
+  }
+
+  .c3-legend-item-event {
+    font-size: 12px;
+  }
+
+  .c3-ygrid-line line {
+    stroke: rgba(57, 80, 155, 0.1);
+  }
+}
+
+.ks-widget-payment-total-amount {
+  .card-block {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .ks-payment-total-amount-item-icon-block {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    > .ks-icon {
+      position: relative;
+      left: 1px;
+      color: #fff;
+      font-size: 32px;
+    }
+
+    > [class*="ks-icon-"] {
+      font-size: 24px;
+    }
+  }
+
+  .ks-payment-total-amount-item-amount {
+    margin-bottom: 7px;
+    text-align: right;
+
+    > .ks-amount {
+      font-size: 36px;
+      font-weight: 600;
+      display: inline-block;
+    }
+  }
+
+  .ks-payment-total-amount-item-description {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: right;
+
+    > .ks-progress-type {
+      font-weight: 600;
+      text-align: right;
+    }
+  }
+
+  &.ks-purple-light {
+    .ks-payment-total-amount-item-icon-block {
+      background-color: #eff1fc;
+
+      > .ks-icon {
+        color: #4e54a8;
+      }
+    }
+  }
+
+  &.ks-green-light {
+    .ks-payment-total-amount-item-icon-block {
+      background-color: rgba(129, 193, 89, 0.15);
+
+      > .ks-icon {
+        color: #81c159;
+      }
+    }
+  }
+
+  &.ks-pink-light {
+    .ks-payment-total-amount-item-icon-block {
+      background-color: rgba(255, 61, 0, 0.1);
+
+      > .ks-icon {
+        color: #df538b;
+      }
+    }
+  }
+
+  &.ks-orange-light {
+    .ks-payment-total-amount-item-icon-block {
+      background-color: rgba(248, 238, 62, 0.2);
+
+      > .ks-icon {
+        color: #f88528;
+      }
+    }
+  }
+}
+
+.ks-payment-widget-table-and-map {
+  .card-block {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .ks-card-widget-datetime {
+      margin-bottom: 20px;
+    }
+  }
+
+  .ks-payment-widget-table-and-map-table {
+    margin: 0;
+    width: 100%;
+
+    td {
+      font-size: 14px;
+      padding-bottom: 8px;
+
+      &.ks-flag {
+        padding-left: 0;
+        padding-right: 0;
+
+        > img {
+          margin-top: -4px;
+          margin-right: 10px;
+          display: inline-block;
+        }
+      }
+
+      &.ks-amount {
+        padding-right: 0;
+        width: 20%;
+        font-weight: 600;
+        text-align: right;
+      }
+    }
+
+    tr {
+      &:first-child {
+        td {
+          border-top: none;
+        }
+      }
+    }
+  }
+}
+
+.ks-widget-payment-active-clients {
+  .ks-card-widget-datetime {
+    margin-bottom: 30px;
+  }
+
+  .ks-active-clients-category-progress {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: $ks-default-text-color-light;
+    align-items: center;
+    margin-top: 24px;
+
+    .ks-name {
+      font-weight: 500;
+      color: #333;
+      min-width: 50px;
+    }
+
+    .progress {
+      min-width: 180px;
+      margin: 0 20px;
+    }
+
+    + .ks-active-clients-category-progress {
+      margin-top: 19px;
+    }
+
+    + hr {
+      margin-top: 26px;
+    }
+  }
+}

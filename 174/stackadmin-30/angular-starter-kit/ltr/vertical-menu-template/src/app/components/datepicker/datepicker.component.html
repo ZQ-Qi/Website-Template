@@ -1,0 +1,208 @@
+<div class="content-header row">
+  <div class="content-header-left col-md-6 col-12 mb-1">
+    <h3 class="content-header-title">Datepicker</h3>
+  </div>
+  <div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-12">
+    <div class="breadcrumb-wrapper col-12">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a>Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a>Components</a>
+        </li>
+        <li class="breadcrumb-item active">Datepicker
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="content-body">
+<section id="datepicker">
+  <div class="row" matchHeight="card">
+    <!--Simple datepicker starts-->
+    <div class="col-md-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Simple datepicker</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+
+            <div class="block mt-3 mb-3">
+              <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
+              <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo()">To current month</button>
+              <button class="btn btn-sm btn-outline-primary" (click)="selectToday()">Select Today</button>
+            </div>
+
+            <p>Month: {{ date.month }}.{{ date.year }}</p>
+            <p>Model: {{ model | json }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Simple datepicker Ends-->
+    
+    <!--Disabled/Enabled datepicker starts-->
+    <div class="col-md-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Disabled datepicker</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <ngb-datepicker [(ngModel)]="disabledModel" [disabled]="disabled"></ngb-datepicker>
+
+            <div class="block mt-3">
+              <button class="btn btn-sm btn-outline-{{disabled ? 'danger' : 'success'}}" (click)="disabled = !disabled">
+              {{ disabled ? "disabled" : "enabled"}}
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Disabled/Enabled datepicker ends-->
+  </div>
+  <div class="row" matchHeight="card">
+    <!--Datepicker in a popup starts-->
+    <div class="col-md-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Datepicker in a popup</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <form class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="popupModel" ngbDatepicker #d2="ngbDatepicker">
+                  <div class="input-group-addon" (click)="d2.toggle()">
+                    <i class="fa fa-calendar" style="cursor: pointer;"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <p class="mt-4">Model: {{ popupModel | json }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Datepicker in a popup ends-->
+
+    <!--Custom day view starts-->
+    <div class="col-md-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Custom day view</h4>
+          <p>This datepicker uses a custom template to display days. All week-ends are displayed with an orange background.</p>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <form class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker [dayTemplate]="customDay"
+                    [markDisabled]="isDisabled" #d3="ngbDatepicker">
+                  <div class="input-group-addon" (click)="d3.toggle()">
+                    <i class="fa fa-calendar" style="cursor: pointer;"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <ng-template #customDay let-date="date" let-currentMonth="currentMonth" let-selected="selected" let-disabled="disabled">
+              <span class="custom-day" [class.weekend]="isWeekend(date)" [class.bg-primary]="selected" [class.hidden]="date.month !== currentMonth"
+                [class.text-muted]="disabled">
+              {{ date.day }}
+            </span>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Custom day view ends-->
+  </div>
+  <div class="row" matchHeight="card">
+    <!--Multiple months datepickers starts-->
+    <div class="col-lg-12 col-xl-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Multiple months</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <ngb-datepicker [displayMonths]="displayMonths" [navigation]="navigation"></ngb-datepicker>
+
+            <p class="pt-3">Inline</p>
+
+            <form class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [displayMonths]="displayMonths" [navigation]="navigation"
+                    ngbDatepicker #d="ngbDatepicker">
+                  <div class="input-group-addon" (click)="d.toggle()">
+                    <i class="fa fa-calendar" style="cursor: pointer;"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <p class="pt-3">Options</p>
+
+            <select class="custom-select" [(ngModel)]="displayMonths">
+            <option [ngValue]="1">One month</option>
+            <option [ngValue]="2">Two months</option>
+          </select>
+
+            <select class="custom-select" [(ngModel)]="navigation">
+            <option value="none">Without navigation</option>
+            <option value="select">With select boxes</option>
+            <option value="arrows">Without select boxes</option>
+          </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Multiple months datepickers ends-->
+
+    <!--Range selection datepickers starts-->
+    <div class="col-lg-12 col-xl-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Range selection</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <ngb-datepicker #dp1 ngModel (ngModelChange)="onDateChange($event)" [displayMonths]="2" [dayTemplate]="t">
+            </ngb-datepicker>
+
+            <ng-template #t let-date="date" let-focused="focused">
+              <span class="custom-day"
+                    [class.focused]="focused"
+                    [class.range]="isFrom(date) || isTo(date) || isInside(date) || isHovered(date)"
+                    [class.faded]="isHovered(date) || isInside(date)"
+                    (mouseenter)="hoveredDate = date"
+                    (mouseleave)="hoveredDate = null">
+                {{ date.day }}
+              </span>
+            </ng-template>
+
+            <hr>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <p>From: {{ fromDate | json }} </p>
+              </div>
+              <div class="col-12 col-md-6">
+                <p>To: {{ toDate | json }} </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Range selection datepickers ends-->
+  </div>
+</section>
+</div>

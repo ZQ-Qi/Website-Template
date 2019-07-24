@@ -1,0 +1,50 @@
+//- =========================================================================================
+	File Name: form-validation.jade
+	Description: A JQuery validation plugin for bootstrap forms.
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+extends template
+
+block pageVars
+	- var pageTitle = "JQuery Bootstrap Validation"
+	- var pageSubTitle = "A JQuery validation plugin for bootstrap forms."
+	- var description  = "jqBootstrapValidation will scan for HTML5 validator attributes directly on the elements, plus any extra options specified via data attributes."
+	- var activeMenu = "form-validation"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Form Components"}, {name:"JQuery Bootstrap Validation"}])//- Include page content in page block
+append content
+	include ../contents/form-validation.html
+
+append vendorcss
+	//- Bootstrap Touchspin CSS
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/vendors/css/forms/spinner/jquery.bootstrap-touchspin.css')
+	//- iCheck CSS
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/vendors/css/forms/icheck/icheck.css')
+	//- Switchery CSS
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/vendors/css/forms/toggle/switchery.min.css')
+
+append vendorjs
+	//- Bootstrap Touchspin JS
+	script(src=app_assets_path+'/vendors/js/forms/spinner/jquery.bootstrap-touchspin.js', type='text/javascript')
+	//- jQuery Bootstrap Validation JS
+	script(src=app_assets_path+'/vendors/js/forms/validation/jqBootstrapValidation.js', type='text/javascript')
+	//- iCheck JS
+	script(src=app_assets_path+'/vendors/js/forms/icheck/icheck.min.js', type='text/javascript')
+	//- Switchery JS
+	script(src=app_assets_path+'/vendors/js/forms/toggle/switchery.min.js', type='text/javascript')
+
+append pagejs
+	//- Template JS for Validation
+	script(src=app_assets_path+'/js/scripts/forms/validation/form-validation.js', type='text/javascript')
+
+append pagecss
+	//- Validation CSS
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/plugins/forms/validation/form-validation.css')
+	//- Switch CSS
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/plugins/forms/switch.css')

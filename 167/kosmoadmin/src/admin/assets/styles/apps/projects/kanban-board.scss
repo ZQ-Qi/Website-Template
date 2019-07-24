@@ -1,0 +1,375 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-projects-kanban-board
+2. Columns / .ks-projects-kanban-board > .ks-column
+-------------------------------------------------------------------*/
+
+@import "../../config/colors";
+
+$ks-kanban-project-default-border-color: #e1e5f0;
+
+body {
+  overflow-x: auto;
+
+  > .ks-container, .ks-page-container {
+    .ks-projects-kanban-board-page {
+      margin-top: 0;
+
+      > .ks-content {
+        overflow-x: auto;
+        display: flex;
+        height: 100%;
+        margin-top: 0;
+
+        > .ks-projects-kanban-board {
+          margin-top: 0;
+          padding-top: 0 !important;
+        }
+      }
+    }
+  }
+
+  &.ks-page-header-fixed {
+    > .ks-container, .ks-page-container {
+      .ks-projects-kanban-board-page {
+        > .ks-content {
+          .ks-projects-kanban-board {
+            margin-top: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-projects-kanban-board {
+  > .ks-wrapper {
+    display: flex;
+    padding: 30px;
+
+    > .ks-column {
+      width: 265px;
+      min-width: 265px;
+      border-radius: 2px;
+      margin-right: 30px;
+      align-self: flex-start;
+      height: auto;
+      padding: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      > .ks-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        > .ks-name {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        > .ks-control {
+          > .btn-link {
+            height: auto;
+            padding: 0;
+            margin: 0;
+            width: auto;
+            color: $ks-default-text-color;
+
+            &.ks-no-text {
+              > .ks-icon {
+                height: auto;
+                width: auto;
+                padding: 0;
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+
+      > .ks-cards {
+        margin-top: 18px;
+
+        > .ks-drag-placeholder {
+          height: 146px;
+          border-radius: 2px;
+          background-color: rgba(0, 0, 0, 0.05);
+          margin-bottom: 12px;
+        }
+
+        &.ks-empty {
+          > .card {
+            &.ks-drop-or-add {
+              display: block;
+            }
+          }
+        }
+
+        > .card {
+          margin: 0 0 12px 0;
+          border: 1px solid $ks-kanban-project-default-border-color;
+
+          &.ks-drop-or-add {
+            display: none;
+            text-align: center;
+            background: transparent;
+            padding: 15px;
+            border-style: dashed;
+
+            > a {
+              color: $ks-default-text-color;
+              font-weight: 500;
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &.ui-sortable-helper {
+            box-shadow: 0 2px 20px 0 #d7dceb;
+          }
+
+          > .card-header {
+            font-size: 12px;
+            font-weight: 500;
+            border: none;
+            padding: 15px 15px 10px 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:after {
+              display: none;
+            }
+
+            > .ks-control {
+              margin: 0;
+              padding: 0;
+
+              > .btn-link {
+                cursor: pointer;
+                height: auto;
+                padding: 0;
+                margin: 0;
+                width: auto;
+                color: $ks-default-text-color;
+
+                &.ks-no-text {
+                  > .ks-icon {
+                    height: auto;
+                    width: auto;
+                    padding: 0;
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+
+          > .card-block {
+            padding: 0 15px 15px 15px;
+
+            > .ks-controls {
+              > .ks-play, > .ks-pause {
+                color: $ks-default-text-color-light;
+                font-size: 28px;
+                text-align: center;
+                margin-right: 5px;
+                cursor: pointer;
+                position: relative;
+                top: 5px;
+                left: -4px;
+              }
+
+              > .ks-time {
+                font-size: 12px;
+              }
+            }
+
+            > .ks-info {
+              margin-top: 10px;
+              display: flex;
+              align-items: center;
+              font-size: 12px;
+
+              > .ks-progress {
+                margin-bottom: 0;
+                margin-right: 10px;
+              }
+            }
+
+            > .ks-footer {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 12px;
+              margin-top: 10px;
+
+              .ks-icon {
+                color: #d7dceb;
+                font-size: 20px;
+                display: inline-block;
+                margin-right: 3px;
+                position: relative;
+                top: 1px;
+              }
+
+              > .ks-users {
+                > .ks-avatar {
+                  > img {
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+
+                > .ks-amount {
+                  font-size: 10px;
+                  font-weight: 500;
+                  display: inline-block;
+                  margin-left: 3px;
+                  position: relative;
+                  top: 1px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.ks-purple {
+        border-top: 4px solid $ks-color-purple;
+        background-color: #fdf6fd;
+
+        > .ks-cards {
+          > .card {
+            &.ks-drop-or-add {
+              border-color: #edb6ec;
+            }
+          }
+        }
+      }
+
+      &.ks-danger {
+        border-top: 4px solid $ks-color-danger;
+        background-color: #fef7f6;
+
+        > .ks-cards {
+          > .card {
+            &.ks-drop-or-add {
+              border-color: #f7c1b7;
+            }
+          }
+        }
+      }
+
+      &.ks-primary {
+        border-top: 4px solid $ks-color-primary;
+        background-color: #f5f6fa;
+
+        > .ks-cards {
+          > .card {
+            &.ks-drop-or-add {
+              border-color: #b0b9d7;
+            }
+          }
+        }
+      }
+
+      &.ks-success {
+        border-top: 4px solid $ks-color-success;
+        background-color: #f5fcf8;
+
+        > .ks-cards {
+          > .card {
+            &.ks-drop-or-add {
+              border-color: #abebc6;
+            }
+          }
+        }
+      }
+
+      &.ks-info {
+        border-top: 4px solid $ks-color-info;
+        background-color: #f4fbfe;
+
+        > .ks-cards {
+          > .card {
+            &.ks-drop-or-add {
+              border-color: #a6dbf9;
+            }
+          }
+        }
+      }
+
+      &.ks-warning {
+        border-top: 4px solid $ks-color-warning;
+        background-color: #fdfcf3;
+
+        > .ks-cards {
+          > .card {
+            &.ks-drop-or-add {
+              border: solid 1px #f2e49e;
+            }
+          }
+        }
+      }
+
+      &.ks-new-column {
+        border-radius: 2px;
+        border: solid 1px $ks-default-border-color;
+
+        > .ks-add {
+          margin: -20px;
+          color: $ks-default-text-color-light;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          > .ks-control {
+            > .ks-icon {
+              border: none;
+              font-size: 24px;
+              color: $ks-default-text-color-light;
+            }
+
+            margin-right: 20px;
+          }
+        }
+      }
+
+      &.ks-new-list {
+        > .ks-pick-color {
+          > .ks-header {
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+
+          > .ks-controls {
+            display: flex;
+            justify-content: space-between;
+            height: 45px;
+
+            > .custom-control {
+              margin: 0;
+            }
+          }
+        }
+
+        > .ks-controls {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

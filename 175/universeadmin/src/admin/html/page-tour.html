@@ -1,0 +1,101 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Page Tour / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/driver/driver.min.css">
+<link rel="stylesheet" href="vendor/prism/prism.css">
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Page Tour</h2>
+    </div>
+  </div>
+  <div class="main-container container-fh__content">
+    <div id="page-tour-element">Example Element</div>
+
+    <div id="popover-position" class="mt-4">
+      <h2>Popover Positioning</h2>
+      <p>You can also, change the position of the popover to be either <code>left</code>, <code>top</code>,
+      <code>right</code> or <code>bottom</code>.</p>
+      <button type="button" class="btn btn-info mr-3" id="run-single-element-with-popover-position">Show Demo</button>
+      <button type="button" class="btn btn-info mr-3" id="run-single-element-with-popover-position-left">On my left</button>
+      <button type="button" class="btn btn-info mr-3" id="run-single-element-with-popover-position-top">On my top</button>
+      <button type="button" class="btn btn-info mr-3" id="run-single-element-with-popover-position-right">On my right</button>
+      <button type="button" class="btn btn-info" id="run-single-element-with-popover-position-bottom">On my bottom</button>
+<pre class="mt-4 language-javascript">
+<code>var driver = new Driver();
+driver.highlight({
+  element: '#some-element',
+  popover: {
+    title: 'Title for the Popover',
+    description: 'Description for it',
+    position: 'left', // can be `top`, `left`, `right`, `bottom`
+  }
+});</code></pre>
+    </div>
+
+    <div class="mt-4">
+      <h2>Creating Feature Introductions</h2>
+      <p id="popover-feature-introduction-p1">
+        You can also make powerful feature introductions to guide the users about the features. Just provide an array of steps where each step specifies an element to highlight.
+      </p>
+      <p id="popover-feature-introduction-p2">
+        Below is just a quick example showing you how to combine the steps in introduction.
+      </p>
+      <button type="button" id="introduction-demo" class="btn btn-info">Show Demo</button>
+<pre class="mt-4 language-javascript">
+<code>var driver = new Driver({
+  opacity: 0.5
+});
+// Define the steps for introduction
+driver.defineSteps([
+  {
+    element: '#popover-feature-introduction-p1',
+    popover: {
+      title: 'Before we start',
+      description: 'This is just use-case, make sure to check out the rest of the docs below',
+      position: 'top'
+    }
+  },
+  {
+    element: '#popover-feature-introduction-p2',
+    popover: {
+      title: 'Title on Popover 1',
+      description: 'Body of the popover',
+      position: 'top'
+    }
+  },
+  {
+    element: '#popover-feature-introduction-p3',
+    popover: {
+      title: 'Title on Popover 2',
+      description: 'This is just use-case, make sure to check out the rest of the docs below',
+      position: 'top'
+    }
+  }
+]);
+// Start the introduction
+driver.start();</code>
+</pre>
+    </div>
+
+    <div class="mt-4">
+      <h2>HTML in Popovers</h2>
+      <p id="html-in-popover-p1">You can also specify HTML in the body or the title of the popovers. Here is an example:</p>
+      <button type="button" class="btn btn-info" id="html-in-popover">HTML in popover</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="vendor/prism/prism.js"></script>
+{{ super() }}
+<script src="vendor/driver/driver.min.js"></script>
+<script src="js/preview/page-tour.min.js"></script>
+{% endblock %}

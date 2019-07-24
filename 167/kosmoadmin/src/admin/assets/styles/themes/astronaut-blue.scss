@@ -1,0 +1,594 @@
+/*------------------------------------------------------------------
+[Color codes]
+
+Navbar background color: #00405d;
+Navbar link item border color: #00334A;
+Navbar link item hover background color: #00334A;
+Navbar dropdown link hover background color: #f5f7fa;
+Horizontal navbar background color: #f7f7f7;
+Text item text color: #333;
+Text item light text color: #858585;
+Box shadow color: #d9d9d9;
+Sidebar background color: #00405d;
+Sidebar icon color: #00405d;
+-------------------------------------------------------------------*/
+
+@import "../config/colors";
+
+$ks-hover-animation: background 0.3s ease;
+$ks-navbar-background-color: #00405d;
+$nav-link-hover-background-color: #f5f7fa;
+$ks-nav-item-border-color: #00334A;
+$ks-nav-item-hover-background-color: #00334A;
+$ks-item-color: $ks-default-text-color;
+$ks-item-color-light: $ks-default-text-color-light;
+$ks-dropdown-menu-box-shadow-color: #d9d9d9;
+$ks-sidebar-background-color: #f7f7f7;
+$ks-sidebar-icon-color: #00405d;
+$ks-navbar-horizontal-background-color: #f7f7f7;
+$ks-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+.ks-navbar {
+  background: $ks-navbar-background-color;
+
+  .nav-item {
+    border-color: $ks-nav-item-border-color;
+
+    /* Animation */
+    &:hover {
+      transition: $ks-hover-animation;
+    }
+
+    &:hover, &.ks-active, &.show {
+      background: $ks-nav-item-hover-background-color;
+    }
+
+    /* Styles for dropdowns */
+    &.show {
+      .dropdown-menu {
+        background: $ks-color-white;
+
+        .dropdown-item {
+          &:hover {
+            background: $nav-link-hover-background-color;
+            transition: $ks-hover-animation;
+          }
+        }
+
+        box-shadow: $ks-box-shadow;
+
+        .dropdown-item, .dropdown, .nav-link {
+          color: $ks-item-color;
+          border-bottom: 1px solid #e1e5f0;
+        }
+
+        .dropdown-item {
+          &:last-child {
+            > .nav-link {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+
+    &.ks-btn-action {
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+
+  .nav-link {
+    color: $ks-color-white;
+  }
+
+  .navbar-brand {
+    color: $ks-color-white;
+
+    .ks-logo {
+      color: $ks-color-white;
+    }
+
+    .ks-sidebar-toggle,
+    .ks-sidebar-mobile-toggle {
+      color: $ks-color-white;
+    }
+  }
+
+  > .ks-wrapper {
+    > .nav {
+      > .ks-navbar-menu {
+        .ks-search-form {
+          .form-control {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid transparent;
+            color: rgba(255, 255, 255, 0.6);
+
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.6);
+            }
+          }
+
+          .icon-addon {
+            > .ks-icon {
+              color: rgba(255, 255, 255, 0.6);
+            }
+          }
+
+          .ks-search-open, .ks-search-close {
+            color: $ks-color-white;
+          }
+        }
+      }
+
+      > .ks-navbar-actions {
+        > .ks-languages {
+          .ks-wrapper {
+            > .ks-language {
+              border-bottom: 1px solid $ks-default-border-color;
+              border-right: 1px solid $ks-default-border-color;
+
+              &:hover {
+                background: $nav-link-hover-background-color;
+              }
+
+              > .ks-text {
+                color: $ks-item-color;
+              }
+            }
+          }
+        }
+
+        > .ks-messages {
+          > .dropdown-menu {
+            box-shadow: $ks-box-shadow;
+
+            > .ks-tabs-actions {
+              > a {
+                > .ks-icon {
+                  color: #b0bad7;
+
+                  &:hover {
+                    color: #8997c3;
+                  }
+                }
+              }
+            }
+
+            > .ks-nav-tabs {
+              border-bottom: 1px solid $ks-default-border-color;
+            }
+
+            > .tab-content {
+              > .tab-pane {
+                > .ks-view-all {
+                  border-top: 1px solid $ks-default-border-color;
+
+                  > a {
+                    color: $ks-item-color;
+                  }
+                }
+
+                .ks-message {
+                  border-bottom: 1px solid $ks-default-border-color;
+
+                  &:hover {
+                    background: $nav-link-hover-background-color;
+                    transition: $ks-hover-animation;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > .ks-notifications {
+          > .dropdown-menu {
+            box-shadow: $ks-box-shadow;
+
+            > .ks-nav-tabs {
+              border-bottom: 1px solid $ks-default-border-color;
+            }
+
+            > .tab-content {
+              > .tab-pane {
+                > .ks-view-all {
+                  border-top: 1px solid $ks-default-border-color;
+
+                  > a {
+                    color: $ks-item-color;
+                  }
+                }
+
+                .ks-notification {
+                  border-bottom: 1px solid $ks-default-border-color; /* Bottom border in notifications tabs */
+
+                  &:hover {
+                    background: $nav-link-hover-background-color;
+                    transition: $ks-hover-animation;
+                  }
+
+                  > .ks-action {
+                    > span {
+                      &.ks-default {
+                        background-color: #e1e5f0;
+
+                        > .ks-icon {
+                          color: $ks-item-color;
+                        }
+                      }
+
+                      &.ks-error {
+                        background-color: #f8e4f8;
+
+                        > .ks-icon {
+                          color: #d149d0;
+                        }
+                      }
+                    }
+                  }
+
+                  > .ks-info {
+                    > .ks-text {
+                      color: $ks-item-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > .ks-user {
+          border-right: 1px solid $ks-nav-item-border-color;
+        }
+      }
+    }
+  }
+
+  /* Grid navigation */
+  .ks-dropdown-grid {
+    border: none;
+
+    &.show {
+      > .dropdown-menu {
+        .ks-scroll-wrapper {
+          > .ks-grid-item {
+            > .ks-icon, > .ks-text {
+              color: $ks-item-color;
+            }
+
+            &.ks-active, &:hover {
+              border: solid 1px rgba(57, 81, 155, 0.1);
+              background-color: rgba(57, 80, 155, 0.05);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-navbar-horizontal {
+  background-color: $ks-navbar-horizontal-background-color;
+  border-bottom: 1px solid $ks-default-border-color;
+
+  .nav-item {
+    /* Styles for dropdowns */
+    &.show {
+      > .dropdown-toggle {
+        border-left: 1px solid $ks-default-border-color;
+        border-right: 1px solid $ks-default-border-color;
+      }
+
+      > .nav-link {
+        color: $ks-item-color;
+        background: $ks-color-white;
+
+        &.active, &:focus, &:hover {
+          color: $ks-item-color;
+          background: $ks-color-white;
+        }
+      }
+
+      .dropdown-menu {
+        .dropdown-item {
+          &:hover {
+            background: $nav-link-hover-background-color;
+            transition: $ks-hover-animation;
+          }
+        }
+
+        box-shadow: $ks-box-shadow;
+
+        .dropdown-item, .dropdown, .nav-link {
+          color: $ks-item-color;
+          border-bottom: 1px solid #e1e5f0;
+        }
+      }
+    }
+
+    .nav-link {
+      color: $ks-item-color;
+
+      &.active, &:focus, &:hover {
+        color: $ks-item-color;
+        background: #fff;
+      }
+
+      &.active {
+        border-left: 1px solid $ks-default-border-color;
+        border-right: 1px solid $ks-default-border-color;
+      }
+
+      &.disabled {
+        color: lighten($ks-item-color, 35);
+
+        &.active, &:focus, &:hover {
+          background: none;
+        }
+      }
+
+      > .ks-icon {
+        color: $ks-item-color;
+      }
+    }
+  }
+
+  > .nav {
+    > .ks-navbar-horizontal-responsive {
+      .dropdown-menu {
+        .dropdown-item {
+          border-bottom: 1px solid #e1e5f0;
+
+          > .nav-link, .dropdown-item {
+            background: $ks-color-white;
+            border-bottom: 1px solid #e1e5f0;
+
+            &.disabled {
+              color: lighten($ks-item-color, 35);
+            }
+          }
+
+          > .nav-link {
+            border-bottom: none;
+          }
+
+          &.show {
+            > .nav-link {
+              &.dropdown-toggle {
+                border-bottom: 1px solid #e1e5f0;
+              }
+            }
+
+            .dropdown-menu {
+              > .dropdown-item {
+                &:last-child {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-sidebar {
+  background: $ks-sidebar-background-color;
+  border-right: 1px solid $ks-default-border-color;
+
+  > .ks-wrapper, .ks-sidebar-wrapper {
+    background: $ks-sidebar-background-color;
+
+    .nav {
+      .nav-item {
+        &.ks-user {
+          .ks-info {
+            > .ks-name {
+              color: $ks-item-color;
+            }
+
+            > .ks-text {
+              color: $ks-item-color-light;
+            }
+          }
+        }
+
+        &.open, .nav-item {
+          .nav-link {
+            background: $ks-color-white;
+            color: $ks-item-color;
+          }
+        }
+
+        .nav-link, .dropdown-item {
+          border-bottom: 1px solid $ks-default-border-color;
+          color: $ks-item-color;
+
+          > .ks-icon {
+            color: $ks-sidebar-icon-color;
+          }
+        }
+
+        .dropdown-menu {
+          background: $ks-color-white;
+
+          .dropdown-item {
+            border-bottom: 1px solid $ks-default-border-color;
+            color: $ks-item-color;
+          }
+        }
+      }
+    }
+
+    .dropdown-item {
+      &:hover {
+        background: transparent;
+        transition: $ks-hover-animation;
+      }
+    }
+  }
+}
+
+.ks-sidebar-position-fixed {
+  .ks-sidebar {
+    > .ks-wrapper, .ks-sidebar-wrapper {
+      background: $ks-sidebar-background-color;
+      border-right: 1px solid $ks-default-border-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 1225px) {
+  .ks-navbar {
+    > .ks-wrapper {
+      > .ks-navbar-menu-toggle {
+        &.ks-open {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      > .nav {
+        > .ks-navbar-menu {
+          background: $ks-sidebar-background-color;
+
+          &.ks-open {
+            > .ks-search-form {
+              border-bottom: 1px solid $ks-default-border-color;
+
+              > .ks-wrapper {
+                > .input-icon {
+                  > .form-control {
+                    background-color: $ks-color-white;
+                    border: solid 1px $ks-default-border-color;
+                    color: $ks-item-color-light;
+
+                    &::placeholder {
+                      color: $ks-item-color-light;
+                    }
+                  }
+
+                  > .icon-addon {
+                    > .ks-icon {
+                      color: $ks-item-color-light;
+                    }
+                  }
+                }
+              }
+            }
+
+            > .nav-item {
+              color: $ks-item-color;
+
+              > .nav-link, &.nav-link {
+                color: $ks-item-color;
+                border-bottom: 1px solid $ks-default-border-color;
+
+                &:hover {
+                  background: transparent;
+                }
+              }
+            }
+
+            > .dropdown {
+              > .nav-link {
+                border-bottom: 1px solid $ks-default-border-color;
+              }
+
+              &.show {
+                background: #fff;
+                border-bottom: 1px solid $ks-default-border-color;
+              }
+
+              .dropdown-menu {
+                .dropdown-item {
+                  &.dropdown {
+                    background: none;
+                    border-bottom: none;
+
+                    > .nav-link {
+                      border-bottom: none;
+                    }
+
+                    &.show {
+                      > .nav-link {
+                        border-bottom: 1px solid $ks-default-border-color;
+
+                        &:hover {
+                          background: $nav-link-hover-background-color;
+                        }
+                      }
+
+                      .dropdown-item {
+                        &:last-child {
+                          border-bottom: none;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 780px) {
+  .ks-navbar {
+    > .ks-wrapper {
+      > .ks-navbar-actions-toggle {
+        &.ks-open {
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      > .nav {
+        > .ks-navbar-actions {
+          background: $ks-sidebar-background-color;
+
+          &.ks-open {
+            > .nav-item {
+              &.show {
+                background: #fff;
+              }
+
+              > .nav-link {
+                color: $ks-item-color;
+                border-bottom: 1px solid $ks-default-border-color;
+
+                > .ks-icon {
+                  color: $ks-sidebar-icon-color;
+                }
+              }
+
+              &.ks-user {
+                .ks-info {
+                  > .ks-description {
+                    color: $ks-item-color-light;
+                  }
+                }
+              }
+            }
+
+            /* Static position for dropdown menus becides message, notifications, languages */
+            > .nav-item:not(.ks-languages):not(.ks-messages):not(.ks-notifications) {
+              &.show {
+                .dropdown-menu {
+                  .dropdown-item:not(.dropdown) {
+                    border-bottom: 1px solid $ks-default-border-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

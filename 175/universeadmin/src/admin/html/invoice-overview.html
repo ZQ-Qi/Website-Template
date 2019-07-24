@@ -1,0 +1,123 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Invoice Overview / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="main-container p-invoice">
+    <div class="p-invoice__header">
+      <div class="p-invoice__company">
+        <img src="img/logo/invoice-logo.png" alt="" class="p-invoice__company-avatar">
+        <ul class="p-invoice__company-info">
+          <li>Infinum Inc.</li>
+          <li>340 S LEMON AVE # 9714</li>
+          <li>WALNUT, CA 91789</li>
+          <li>VAT: SI55336795</li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8">
+          <h3 class="p-invoice__name">Invoice #123</h3>
+          <table class="p-invoice__table table-responsive">
+            <thead>
+            <tr>
+              <th>Bill to</th>
+              <th>Date</th>
+              <th>Due date</th>
+              <th>Terms</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                <ul class="p-invoice__company-info">
+                  <li>Infinum Inc.</li>
+                  <li>340 S LEMON AVE # 9714</li>
+                  <li>WALNUT, CA 91789</li>
+                  <li>VAT: SI55336795</li>
+                </ul>
+              </td>
+              <td>09/13/2024</td>
+              <td>10/13/2024</td>
+              <td>Net7</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <table class="table p-invoice__items table-responsive-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Description</th>
+              <th>Unit</th>
+              <th>QTY</th>
+              <th>Rate</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Space shuttle</td>
+              <td>hours</td>
+              <td>2</td>
+              <td>$120.000.00</td>
+              <td>$240.000.00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Space shuttle</td>
+              <td>hours</td>
+              <td>2</td>
+              <td>$120.000.00</td>
+              <td>$240.000.00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Space shuttle</td>
+              <td>hours</td>
+              <td>2</td>
+              <td>$120.000.00</td>
+              <td>$240.000.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="p-invoice__footer">
+      <div class="p-invoice__notes">
+        <h6 class="p-invoice__notes-heading">Notes</h6>
+        <ul class="p-invoice__notes-list">
+          <li>Please pay to our Chase bank account</li>
+          <li>Accounting number: 1234567890</li>
+          <li>Routing number: 9876543210</li>
+        </ul>
+        <div class="mt-4">Thank you for number business!</div>
+      </div>
+      <div class="p-invoice__total">
+        <table class="table table-responsive-sm">
+          <tr>
+            <td><span class="text-muted-md">Subtotal:</span></td>
+            <td>$270.120.00</td>
+          </tr>
+          <tr>
+            <td><span class="text-muted-md">Discount:</span></td>
+            <td>5%</td>
+          </tr>
+          <tr class="p-invoice__total-row">
+            <td><span class="text-muted-md">Total:</span></td>
+            <td><span class="p-invoice__total-amount">$270.119,95</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

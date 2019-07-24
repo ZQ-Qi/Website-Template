@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Hi5Dash - HTML5 Admin Template By Jewel Theme</title>
+  <meta name="description" content="Hi5Dash - HTML5 Admin Template By Jewel Theme">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Import Template Icons CSS Files -->
+  <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../assets/css/linea-basic.css">
+  <link rel="stylesheet" href="../assets/css/pe-icon-7-stroke.css">
+  <link rel="stylesheet" href="../assets/css/icon-weather.css">
+
+  <!-- Import Custom Country Select CSS Files -->
+  <link rel="stylesheet" href="../assets/css/countrySelect.min.css">
+
+  <!-- Import Perfect ScrollBar CSS Files -->
+  <link rel="stylesheet" href="../assets/css/perfect-scrollbar.css">   
+
+  <!-- Import Bootstrap CSS File -->
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css"> 
+
+  <!-- Import Template's CSS Files -->
+  <link rel="stylesheet" href="../assets/css/presets.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+
+</head>
+
+
+<body>
+
+
+    <header class="top-header media">
+        <div class="top-left mr-3">
+            <a class="navbar-brand" href="./index.html"><img src="../images/logo.png" alt="Site Logo"></a><!-- /.navbar-brand -->
+        </div><!-- /.top-left -->
+
+        <div class="top-right media-body">
+            <div class="left-content float-left">
+                <button class="sidenav-toggle mr-2"><i class="fa fa-bars"></i></button><!-- /.sidenav-toggle -->
+
+                <form class="search-form" action="#">
+                    <input type="text" class="form-control" id="search1" placeholder="Search ...">
+                    <input type="submit" class="form-control" id="submit1">
+                </form><!-- /.search-form -->
+            </div><!-- /.left-content -->
+
+            <div class="right-content float-right">
+                <div class="country dropdown">
+                    <div id="country_selector"></div>
+                </div><!-- /.country -->
+
+                <div class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="count">5</span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 5 messages</li>
+                        <li>
+                            <div class="slimScrollDiv">
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="#" class="media">
+                                            <img src="../images/avatar/1.jpg" class="rounded-circle mr-3" alt="User Image">
+                                            <div class="message-contnet media-body">
+                                                <h4 class="name">Jacob Stewart</h4>
+                                                <span class="time"><i class="fa fa-clock-o"></i> 15 mins</span>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end message -->
+                                    <li>
+                                        <a href="#" class="media">
+                                            <img src="../images/avatar/2.jpg" class="rounded-circle mr-3" alt="User Image">
+                                            <div class="message-contnet media-body">
+                                                <h4 class="name">Lawrence Wright</h4>
+                                                <span class="time"><i class="fa fa-clock-o"></i> 4 hours</span>
+                                                <p>Curabitur facilisis erat quis metus congue viverra.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="media">
+                                            <img src="../images/avatar/3.jpg" class="rounded-circle mr-3" alt="User Image">
+                                            <div class="message-contnet media-body">
+                                                <h4 class="name">Alan Perez</h4>
+                                                <span class="time"><i class="fa fa-clock-o"></i> Today</span>
+                                                <p>Vestibulum nec ligula nec quam sodales rutrum sed luctus.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="media">
+                                            <img src="../images/avatar/4.jpg" class="rounded-circle mr-3" alt="User Image">
+                                            <div class="message-contnet media-body">
+                                                <h4 class="name">Jason Johnson</h4>
+                                                <span class="time"><i class="fa fa-clock-o"></i> Yesterday</span>
+                                                <p>Curabitur quis risus aliquet, luctus arcu nec, venenatis neque.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="media">
+                                            <img src="../images/avatar/5.jpg" class="rounded-circle mr-3" alt="User Image">
+                                            <div class="message-contnet media-body">
+                                                <h4 class="name">David Morrison</h4>
+                                                <span class="time"><i class="fa fa-clock-o"></i> 2 days</span>
+                                                <p>Praesent vitae tellus eget nibh lacinia pretium.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="footer"><a href="#">See all Messages</a></li>
+                    </ul><!-- /.dropdown-menu -->
+                </div><!-- /.dropdown -->
+
+                <div class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="count">4</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 4 notifications</li>
+                        <li>
+                            <ul class="dropdown-content">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users alert-primary"></i> Curabitur id eros quis nunc suscipit blandit.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-warning alert-secondary"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart alert-success"></i> In gravida mauris et nisi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user alert-danger"></i> Praesent eu lacus in libero dictum fermentum.
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">View all</a></li>
+                    </ul><!-- /.dropdown-menu -->
+                </div><!-- /.dropdown -->
+
+                <div class="dropdown user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="../images/avatar/1.jpg" class="rounded-circle float-left mr-2" alt="User Image">
+                        <span class="status"></span>
+                        <h4 class="name">Jonathon Doe</h4>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fa fa-user"></i> My Profile</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> Inbox</a></li>
+                        <li><a href="#"><i class="fa fa-gears"></i> Account Setting</a></li>
+                        <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                    </ul>
+                </div>
+
+            </div><!-- /.right-content -->
+        </div><!-- /.top-right -->
+    </header><!-- /.top-header -->
+
+
+    <div class="content-wrapper container-fluid">
+        <aside class="left-panel">
+            <div class="user-card background-bg" data-image-src="../images/bg5.jpg">
+                <a href="#">
+                    <div class="avatar mr-3 float-left"><img class="rounded-circle" src="../images/avatar/4.jpg" alt="Avatar"></div><!-- /.avatar -->
+                    <div class="details">
+                        <h4 class="name">Bobby Payne</h4><!-- /.name -->
+                        <span class="designation">Designer</span><!-- /.designation -->
+                    </div><!-- /.details -->
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-dashboard"></i> <span class="menu-title">Dashboard</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../index.html">Dashboard 01</a>
+                            <a class="dropdown-item" href="../index-02.html">Dashboard 02</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon icon-basic-webpage-multiple"></i> <span class="menu-title">Layout</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../layout/boxed.html">Boxed</a>
+                            <a class="dropdown-item" href="../layout/fixed.html">Fixed</a>
+                            <a class="dropdown-item" href="../layout/sidebar.html">Sidebar Collapsed</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-envelope"></i> <span class="menu-title">Mailbox</span>
+                            <span class="badge notifications">4</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../mail/inbox.html">Inbox</a>
+                            <a class="dropdown-item" href="../mail/compose.html">Compose</a>
+                            <a class="dropdown-item" href="../mail/read.html">Read</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calendar.html">
+                            <i class="fa fa-calendar-o"></i> <span class="menu-title">Calendar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item header"><span class="menu-title">Elements</span></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-sliders"></i> <span class="menu-title">UI Elements</span>
+                            <span class="badge hot">hot</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../ui/alerts.html">Alerts</a>
+                            <a class="dropdown-item" href="../ui/badges.html">Badges</a>
+                            <a class="dropdown-item" href="../ui/buttons.html">Buttons</a>
+                            <a class="dropdown-item" href="../ui/cards.html">User Card</a>
+                            <a class="dropdown-item" href="../ui/dropdown.html">Dropdown</a>
+                            <a class="dropdown-item" href="../ui/list.html">List</a>
+                            <a class="dropdown-item" href="../ui/modals.html">Modals</a>
+                            <a class="dropdown-item" href="../ui/progress-bars.html">Pregress Bars</a>
+                            <a class="dropdown-item" href="../ui/ribbons.html">Ribbons</a>
+                            <a class="dropdown-item" href="../ui/sliders.html">Sliders</a>
+                            <a class="dropdown-item" href="../ui/tab.html">Tabs</a>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-laptop"></i> <span class="menu-title">Widgets</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../widgets/chart.html">Chart</a>
+                            <a class="dropdown-item" href="../widgets/social.html">Social</a>
+                            <a class="dropdown-item" href="../widgets/statistic.html">Statistic</a>
+                            <a class="dropdown-item" href="../widgets/weather.html">Weather</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-pie-chart"></i> <span class="menu-title">Charts</span>
+                            <span class="badge danger">11</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../charts/chartjs.html">ChartJs</a>
+                            <a class="dropdown-item" href="../charts/morris.html">Morris</a>
+                            <a class="dropdown-item" href="../charts/flot-chart.html">Float</a>
+                            <a class="dropdown-item" href="../charts/sparkline.html">Sparkline js</a>
+                            <a class="dropdown-item" href="../charts/c3.html">C3 charts</a>
+                            <a class="dropdown-item" href="../charts/chartist.html">Chartists</a>
+                            <a class="dropdown-item" href="../charts/rickshaw.html">Rickshaw</a>
+                            <a class="dropdown-item" href="../charts/justGage.html">JustGage</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-table"></i> <span class="menu-title">Tables</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../simple.html">Simple tables</a>
+                            <a class="dropdown-item" href="../data.html">Data tables</a>
+                            <a class="dropdown-item" href="../editable-tables.html">Editable Tables</a>
+                            <a class="dropdown-item" href="../table-color.html">Table Color</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-wpforms"></i> <span class="menu-title">Forms</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../forms/basic.html">Basic Elements</a>
+                            <a class="dropdown-item" href="../forms/advanced.html">Advanced Elements</a>
+                            <a class="dropdown-item" href="../forms/wizard.html">Wizard Forms</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-flask"></i> <span class="menu-title">Icons</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="fontawesome.html">FontAwesome</a>
+                            <a class="dropdown-item" href="simple.html">Simple Line Icons</a>
+                            <a class="dropdown-item" href="linea.html">Linea Basic</a>
+                            <a class="dropdown-item" href="stroke.html">Pe 7 stroke</a>
+                            <a class="dropdown-item" href="weather.html">Icon Weather</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item header"><span class="menu-title">Extras</span></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-clone"></i> <span class="menu-title">Pages</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../pages/blog.html">Blog</a>
+                            <a class="dropdown-item" href="../pages/log-in.html">Login</a>
+                            <a class="dropdown-item" href="../pages/register.html">Register</a>
+                            <a class="dropdown-item" href="../pages/404.html">Error 404</a>
+                            <a class="dropdown-item" href="../pages/500.html">Error 500</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-credit-card"></i> <span class="menu-title">E-Commerce</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../e-commerce/pricing.html">Pricing</a>
+                            <a class="dropdown-item" href="../e-commerce/order.html">Order</a>
+                            <a class="dropdown-item" href="../e-commerce/invoice.html">Invoice</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="change-log.html">
+                            <i class="fa fa-stop-circle"></i> <span class="menu-title">Changelogs</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside><!-- /.left-panel -->
+
+        <div class="dashboard-contents">
+            <div class="contents-inner">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-content">
+                            <div class="content-head">
+                                <h4 class="content-title">Weather icons</h4><!-- /.content-title -->
+                                <div class="corner-content float-right">
+                                    <button class="content-settings" data-toggle="tooltip" data-placement="top" title="Settings"><i class="fa fa-cog"></i></button>
+                                    <button class="content-refresh" data-toggle="tooltip" data-placement="top" title="Reload"><i class="fa fa-refresh"></i></button>
+                                    <button class="content-collapse" data-toggle="tooltip" data-placement="top" title="Collapse"><i class="fa fa-angle-down"></i></button>
+                                    <button class="content-close" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close"></i></button>
+                                </div><!-- /.corner-content -->
+                            </div><!-- /.content-head -->
+
+                            <div class="content-details show">
+                                <div class="card mb-4 p-3">
+                                    <div class="card-body">
+                                        <div class="icons-list row">
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-aquarius"></i> .icon-weather-aquarius
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-aries"></i> .icon-weather-aries
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-cancer"></i> .icon-weather-cancer
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-capricorn"></i> .icon-weather-capricorn
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-cloud"></i> .icon-weather-cloud
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-cloud-drop"></i> .icon-weather-cloud-drop
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-cloud-lightning"></i> .icon-weather-cloud-lightning
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-cloud-snowflake"></i> .icon-weather-cloud-snowflake
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-downpour-fullmoon"></i> .icon-weather-downpour-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-downpour-halfmoon"></i> .icon-weather-downpour-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-downpour-sun"></i> .icon-weather-downpour-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-drop"></i> .icon-weather-drop
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-first-quarter"></i> .icon-weather-first-quarter
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-fog"></i> .icon-weather-fog
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-fog-fullmoon"></i> .icon-weather-fog-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-fog-halfmoon"></i> .icon-weather-fog-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-fog-sun"></i> .icon-weather-fog-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-fullmoon"></i> .icon-weather-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-gemini"></i> .icon-weather-gemini
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-hail"></i> .icon-weather-hail
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-hail-fullmoon"></i> .icon-weather-hail-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-hail-halfmoon"></i> .icon-weather-hail-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-hail-sun"></i> .icon-weather-hail-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-last-quarter"></i> .icon-weather-last-quarter
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-leo"></i> .icon-weather-leo
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-libra"></i> .icon-weather-libra
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-lightning"></i> .icon-weather-lightning
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-mistyrain"></i> .icon-weather-mistyrain
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-mistyrain-fullmoon"></i> .icon-weather-mistyrain-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-mistyrain-halfmoon"></i> .icon-weather-mistyrain-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-mistyrain-sun"></i> .icon-weather-mistyrain-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-moon"></i> .icon-weather-moon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-moondown-full"></i> .icon-weather-moondown-full
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-moondown-half"></i> .icon-weather-moondown-half
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-moonset-full"></i> .icon-weather-moonset-full
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-moonset-half"></i> .icon-weather-moonset-half
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-move2"></i> .icon-weather-move2
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-newmoon"></i> .icon-weather-newmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-pisces"></i> .icon-weather-pisces
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-rain"></i> .icon-weather-rain
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-rain-fullmoon"></i> .icon-weather-rain-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-rain-halfmoon"></i> .icon-weather-rain-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-rain-sun"></i> .icon-weather-rain-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-sagittarius"></i> .icon-weather-sagittarius
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-scorpio"></i> .icon-weather-scorpio
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-snow"></i> .icon-weather-snow
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-snow-fullmoon"></i> .icon-weather-snow-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-snow-halfmoon"></i> .icon-weather-snow-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-snow-sun"></i> .icon-weather-snow-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-snowflake"></i> .icon-weather-snowflake
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-star"></i> .icon-weather-star
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-storm-11"></i> .icon-weather-storm-11
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-storm-32"></i> .icon-weather-storm-32
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-storm-fullmoon"></i> .icon-weather-storm-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-storm-halfmoon"></i> .icon-weather-storm-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-storm-sun"></i> .icon-weather-storm-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-sun"></i> .icon-weather-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-sundown"></i> .icon-weather-sundown
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-sunset"></i> .icon-weather-sunset
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-taurus"></i> .icon-weather-taurus
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-tempest"></i> .icon-weather-tempest
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-tempest-fullmoon"></i> .icon-weather-tempest-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-tempest-halfmoon"></i> .icon-weather-tempest-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-tempest-sun"></i> .icon-weather-tempest-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-variable-fullmoon"></i> .icon-weather-variable-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-variable-halfmoon"></i> .icon-weather-variable-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-variable-sun"></i> .icon-weather-variable-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-virgo"></i> .icon-weather-virgo
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-waning-cresent"></i> .icon-weather-waning-cresent
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-waning-gibbous"></i> .icon-weather-waning-gibbous
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-waxing-cresent"></i> .icon-weather-waxing-cresent
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-waxing-gibbous"></i> .icon-weather-waxing-gibbous
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind"></i> .icon-weather-wind
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-e"></i> .icon-weather-wind-e
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-fullmoon"></i> .icon-weather-wind-fullmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-halfmoon"></i> .icon-weather-wind-halfmoon
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-n"></i> .icon-weather-wind-n
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-ne"></i> .icon-weather-wind-ne
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-nw"></i> .icon-weather-wind-nw
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-s"></i> .icon-weather-wind-s
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-se"></i> .icon-weather-wind-se
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-sun"></i> .icon-weather-wind-sun
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-sw"></i> .icon-weather-wind-sw
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-wind-w"></i> .icon-weather-wind-w
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <i class="icon icon-weather-windgust"></i> .icon-weather-windgust
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.content-details -->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.contents-inner -->
+
+            <footer class="site-footer">
+                <div class="copyright">
+                    <div class="float-left">
+                        Copyright © 2018 <a href="https://demos.jeweltheme.com/hi5dash" target="_blank">hi5dash</a>
+                    </div>
+
+                    <div class="float-right">
+                        Developed with Love by <a href="https://jeweltheme.com" rel="nofollow">Jewel Theme</a>
+                    </div>
+                </div><!-- /.copyright -->
+            </footer><!-- /.site-footer -->
+        </div><!-- /.dashboard-contents -->
+    </div><!-- /.content-wrapper -->
+
+
+
+    <script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+
+</body>
+</html>

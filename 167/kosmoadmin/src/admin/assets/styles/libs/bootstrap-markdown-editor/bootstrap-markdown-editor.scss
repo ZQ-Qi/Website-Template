@@ -1,0 +1,188 @@
+@import "../../config/ui";
+
+.md-container {
+  border-radius: 2px;
+  background-color: #fff;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+
+  .md-toolbar {
+    padding: 10px 15px;
+    border: none;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    .md-btn {
+      padding: 10px 11px;
+      height: 36px !important;
+    }
+
+    .btn-toolbar {
+      display: block;
+    }
+
+    .btn-group {
+      &.pull-right {
+        float: right;
+      }
+
+      + .btn-group {
+        margin-left: 15px;
+      }
+    }
+
+    .btn {
+      border-color: rgba(0, 0, 0, 0.15);
+      font-weight: normal;
+
+      &.active {
+        background-color: #ebebeb;
+      }
+
+      &[data-btn="bold"],
+      &[data-btn="italic"],
+      &[data-btn="ul"],
+      &[data-btn="ol"],
+      &[data-btn="link"],
+      &[data-btn="image"],
+      &[data-btn="edit"],
+      &[data-btn="preview"],
+      &[data-btn="fullscreen"] {
+        padding: 7px;
+
+        span {
+          font-size: 21px;
+          line-height: 21px;
+
+          &::before {
+            font-family: $ks-icon-font-name;
+          }
+        }
+      }
+
+      &[data-btn="h1"],
+      &[data-btn="h2"],
+      &[data-btn="h3"] {
+        font-size: 17px;
+        font-weight: normal;
+        padding: 2px 7px;
+      }
+
+      &[data-btn="bold"] {
+        span {
+          position: relative;
+          left: 1px;
+
+          &::before {
+            content: "\f14b";
+          }
+        }
+      }
+
+      &[data-btn="italic"] {
+        span {
+          &::before {
+            content: "\f251";
+          }
+        }
+      }
+
+      &[data-btn="ul"] {
+        span {
+          &::before {
+            content: "\f26c";
+          }
+        }
+      }
+
+      &[data-btn="ol"] {
+        span {
+          &::before {
+            content: "\f26e";
+          }
+        }
+      }
+
+      &[data-btn="link"] {
+        span {
+          &::before {
+            content: "\f268";
+          }
+        }
+      }
+
+      &[data-btn="image"] {
+        span {
+          &::before {
+            content: "\f246";
+          }
+        }
+      }
+
+      &[data-btn="edit"] {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        span {
+          font-size: 18px;
+          line-height: 18px;
+          display: inline-block;
+          margin-right: 4px;
+
+          &::before {
+            content: "\f2b0";
+          }
+        }
+      }
+
+      &[data-btn="preview"] {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        span {
+          font-size: 18px;
+          display: inline-block;
+          margin-right: 4px;
+          line-height: 18px;
+
+          &::before {
+            content: "\f1d4";
+          }
+        }
+      }
+
+      &[data-btn="fullscreen"] {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        span {
+          font-size: 18px;
+          line-height: 18px;
+          display: inline-block;
+          margin-right: 4px;
+
+          &::before {
+            content: "\f1d0";
+          }
+        }
+      }
+    }
+  }
+
+  .md-editor, .md-preview {
+    border: none;
+    border-top: solid 1px rgba(0, 0, 0, 0.15);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  &.md-fullscreen {
+    position: fixed;
+    border: none;
+    border-radius: 0;
+  }
+
+  .ace_content {
+    padding-top: 14px;
+    padding-left: 3px;
+  }
+}

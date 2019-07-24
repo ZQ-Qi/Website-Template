@@ -1,0 +1,328 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/select2/css/select2.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/select2/select2.min.css"> <!-- Customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/tickets.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Tickets</h3>
+                <button class="btn btn-outline-primary ks-light ks-tickets-navigation-block-toggle" data-block-toggle=".ks-tickets-page > .ks-navigation">Menu</button>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-tickets-page" data-ticket-view>
+                @@include('./_partials/apps/tickets/navigation.html')
+                @@include('./_partials/apps/tickets/tickets.html')
+
+                <div class="ks-view">
+                    <div class="ks-body">
+                        <div class="ks-reply">
+                            <div class="ks-header">
+                                <div class="ks-info">
+                                    <div class="ks-message">Why didn't he come and talk to me himself?</div>
+                                    <span class="badge badge-info ks-status">waiting</span>
+                                    <span class="ks-time">Today at 4:30 PM</span>
+                                </div>
+                                <div class="ks-actions">
+                                    <button class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-plus k-icon"></span></button>
+                                    <button class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-refresh ks-icon"></span></button>
+                                </div>
+                            </div>
+                            <div class="ks-editor">
+                                <textarea class="form-control" placeholder="ks-message"></textarea>
+                                <div class="ks-actions">
+                                    <button type="button" class="btn btn-primary">Send</button>
+                                    <button class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-paperclip ks-icon"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ks-messages ks-scrollable" data-auto-height>
+                            <ul>
+                                <li class="ks-message ks-unread">
+                                    <div class="ks-body">
+                                        <span class="ks-avatar">
+                                            <img src="assets/img/avatars/ava-1.png" width="36" height="36">
+                                        </span>
+                                        <div class="ks-content">
+                                            <div class="ks-name">
+                                                Janice Lynch
+                                                <span class="ks-time">just now</span>
+                                            </div>
+                                            <div class="ks-message">The weird future of movie theater food</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ks-message">
+                                    <div class="ks-body">
+                                    <span class="ks-avatar">
+                                        <img src="assets/img/avatars/ava-2.png" width="36" height="36">
+                                    </span>
+                                        <div class="ks-content">
+                                            <div class="ks-name">
+                                                Eric George
+
+                                                <span class="badge badge-default ks-user-type">agent</span>
+
+                                                <span class="time">just now</span>
+                                            </div>
+                                            <div class="ks-message">Why didn't he come and talk to me himse...</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ks-files-box">
+                                        <ul>
+                                            <li class="ks-file-item">
+                                                <span class="ks-thumb la la-file-excel-o text-success"></span>
+                                                <span class="ks-filename">File.xls</span>
+                                                <span class="ks-size">15 KB</span>
+                                            </li>
+                                            <li class="ks-file-item">
+                                                <span class="ks-thumb la la-file-powerpoint-o text-warning"></span>
+                                                <span class="ks-filename">File.ppt</span>
+                                                <span class="ks-size">312 KB</span>
+                                            </li>
+                                            <li class="ks-file-item">
+                                                <img class="ks-thumb" src="assets/img/placeholders/placeholder-256x256.png" width="90" height="90">
+                                                <span class="ks-filename">Image.jpg</span>
+                                                <span class="ks-size">1.1 MB</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="ks-message">
+                                    <div class="ks-body">
+                                    <span class="ks-avatar">
+                                        <img src="assets/img/avatars/ava-2.png" width="36" height="36">
+                                    </span>
+                                        <div class="ks-content">
+                                            <div class="ks-name">
+                                                Eric George
+                                                <span class="time">just now</span>
+                                            </div>
+                                            <div class="ks-message">Why didn't he come and talk to me himse...</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ks-message">
+                                    <div class="ks-body">
+                                    <span class="ks-avatar">
+                                        <img src="assets/img/avatars/ava-2.png" width="36" height="36">
+                                    </span>
+                                        <div class="ks-content">
+                                            <div class="ks-name">
+                                                Eric George
+                                                <span class="time">just now</span>
+                                            </div>
+                                            <div class="ks-message">
+                                                Lorem ipsum dolor sit amet, id appareat sententiae vim, id qui tota vidit, vel id assum facilisi inimicus. Putant cetero eum no, usu ne alii dicam. Et vel consul appareat, ad sale nusquam omnesque vel. Eu iisque percipitur mel, solum facilisi corrumpit ad duo.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ks-message">
+                                    <div class="ks-body">
+                                        <span class="ks-avatar">
+                                            <img src="assets/img/avatars/ava-2.png" width="36" height="36">
+                                        </span>
+                                        <div class="ks-content">
+                                            <div class="ks-name">
+                                                Eric George
+                                                <span class="time">just now</span>
+                                            </div>
+                                            <div class="ks-message">Why didn't he come and talk to me himse...</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="ks-message">
+                                    <div class="ks-body">
+                                        <span class="ks-avatar">
+                                            <img src="assets/img/avatars/ava-2.png" width="36" height="36">
+                                        </span>
+                                        <div class="ks-content">
+                                            <div class="ks-name">
+                                                Eric George
+                                                <span class="time">just now</span>
+                                            </div>
+                                            <div class="ks-message">Why didn't he come and talk to me himse...</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ks-message">
+                                    <div class="ks-body">
+                                        <span class="ks-avatar">
+                                            <img src="assets/img/avatars/ava-2.png" width="36" height="36">
+                                        </span>
+                                        <div class="ks-content">
+                                            <div class="ks-name">
+                                                Eric George
+                                                <span class="time">just now</span>
+                                            </div>
+                                            <div class="ks-message">
+                                                Lorem ipsum dolor sit amet, id appareat sententiae vim, id qui tota vidit, vel id assum facilisi inimicus. Putant cetero eum no, usu ne alii dicam. Et vel consul appareat, ad sale nusquam omnesque vel. Eu iisque percipitur mel, solum facilisi corrumpit ad duo.
+
+                                                Lorem ipsum dolor sit amet, id appareat sententiae vim, id qui tota vidit, vel id assum facilisi inimicus. Putant cetero eum no, usu ne alii dicam. Et vel consul appareat, ad sale nusquam omnesque vel. Eu iisque percipitur mel, solum facilisi corrumpit ad duo.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ks-message">
+                                    <div class="ks-body">
+                                        <span class="ks-avatar">
+                                            <img src="assets/img/avatars/ava-3.png" width="36" height="36">
+                                        </span>
+                                        <div class="ks-content">
+                                            <div class="ks-name">
+                                                Lauren Sandoval
+                                                <span class="time">just now</span>
+                                            </div>
+                                            <div class="ks-message">The weird future of movie theater food</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ks-tickets-view-info">
+                        <div class="ks-tabs-container ks-tabs-default ks-tabs-with-separator ks-tabs-header-default ks-tabs-info">
+                            <ul class="nav ks-nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">
+                                        Ticket Info
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">
+                                        User Info
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab4" role="tabpanel">
+                                    <div class="tab-pane-content">
+                                        <div class="ks-body">
+                                            <div class="ks-info-box">
+                                                <div class="ks-header">Assigned to</div>
+                                                <div class="ks-user-info">
+                                                    <a href="#">
+                                                        <img src="assets/img/avatars/ava-1.png" width="18" height="18" class="rounded-circle"> Janice Lynch
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ks-info-box">
+                                                <div class="ks-header">Type</div>
+                                                <div>
+                                                    Support Request
+                                                </div>
+                                            </div>
+                                            <div class="ks-info-box">
+                                                <div class="ks-header">Priority</div>
+                                                <div>
+                                                    Normal
+                                                </div>
+                                            </div>
+                                            <div class="ks-info-box">
+                                                <div class="ks-header">Tags</div>
+                                                <div class="ks-tags">
+                                                    <span class="badge badge-pills badge-primary-outline">tag 1</span>
+                                                    <span class="badge badge-pills badge-primary-outline">tag 2</span>
+                                                    <span class="badge badge-pills badge-primary-outline">tag 3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ks-footer">
+                                            <table>
+                                                <tr>
+                                                    <td>Created</td>
+                                                    <td>Today at 4:30 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Updated</td>
+                                                    <td>1 minute ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ticket #</td>
+                                                    <td>
+                                                        <a href="#">156</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab5" role="tabpanel">
+                                    <div class="tab-pane-content">
+                                        <div class="ks-body">
+                                            <div class="ks-contact-box">
+                                                <span class="ks-avatar">
+                                                    <img src="assets/img/avatars/ava-1.png" width="36" height="36">
+                                                </span>
+                                                <div class="ks-body">
+                                                    <div class="ks-name">Janice Lynch</div>
+                                                    <a href="#">janice.lynch@exampe.com</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="ks-info-box">
+                                                <div class="ks-header">Timezone</div>
+                                                <div>(GMT+03:00) Moscow</div>
+                                            </div>
+
+                                            <div class="ks-info-box">
+                                                <div class="ks-header">Company</div>
+                                                <div>Design company</div>
+                                            </div>
+
+                                            <div class="ks-info-box">
+                                                <div class="ks-header">Phone number</div>
+                                                <div>+1 (555) 555-55-55</div>
+                                            </div>
+
+                                            <div class="ks-info-box">
+                                                <div class="ks-header">Notes</div>
+                                                <div>None</div>
+                                            </div>
+                                        </div>
+                                        <div class="ks-footer">
+                                            <table>
+                                                <tr>
+                                                    <td>Registered</td>
+                                                    <td>1 week ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last activity</td>
+                                                    <td>1 minute ago</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/select2/js/select2.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('select').select2({
+            minimumResultsForSearch: Infinity
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/apps/tickets/scripts.html')
+@@include('./_partials/footer.html')

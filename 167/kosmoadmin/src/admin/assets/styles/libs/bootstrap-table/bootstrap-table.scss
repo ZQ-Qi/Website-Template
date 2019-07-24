@@ -1,0 +1,398 @@
+@import "../../config/ui";
+@import "../../config/colors";
+
+.bootstrap-table {
+  background: #fff;
+  border: 1px solid $ks-default-table-border-color;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+
+  .dropdown-menu {
+    padding: 0;
+    font-size: 12px;
+    border: solid 1px #c4cbe1;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    border-radius: 2px;
+
+    > li {
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid #c4cbe1;
+      line-height: 16px;
+
+      > a {
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+        line-height: 16px;
+      }
+
+      &:hover, &.active {
+        background-color: #ebeef5;
+        color: #333;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .fixed-table-toolbar {
+    .search {
+      margin-right: 10px;
+    }
+
+    .toolbar {
+      &.form-inline {
+        input {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .columns {
+      .btn-default {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .btn {
+        &.dropdown-toggle {
+          padding: 0 30px 0 12px;
+          border-radius: 2px;
+          padding-left: 1px;
+
+          > i {
+            padding-left: 12px;
+          }
+        }
+      }
+
+      &.columns-right {
+        margin-right: 10px;
+      }
+
+      .dropdown-menu {
+        label {
+          margin: 0;
+          display: block;
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          > input[type="checkbox"] {
+            display: inline-block;
+            position: relative;
+            margin-right: 4px;
+            top: 2px;
+          }
+        }
+      }
+
+      .icon-list-alt {
+        font-size: 21px;
+        font-style: normal;
+        position: relative;
+        top: -2px;
+      }
+
+      .icon-th {
+        font-size: 21px;
+        font-style: normal;
+      }
+
+      .export {
+        .icon-share {
+          font-size: 21px;
+          font-style: normal;
+        }
+      }
+    }
+
+    .bs-bars {
+      &.pull-left {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .fixed-table-container {
+    border: none;
+    border-top: 1px solid $ks-default-table-border-color;
+    border-radius: 0;
+
+    thead {
+      th {
+        .both {
+          margin-right: 10px;
+          background-image: url('img/both.png');
+        }
+
+        .desc {
+          background-image: url('img/desc.png');
+        }
+
+        .asc {
+          background-image: url('img/asc.png');
+        }
+      }
+    }
+
+    .table {
+      border: none;
+
+      thead, tfoot {
+        background: #ebeef5;
+
+        > tr {
+          > th {
+            font-weight: 500;
+            border-top: none;
+            border-color: $ks-default-table-border-color;
+          }
+        }
+      }
+    }
+
+    .fixed-table-header {
+      .bs-checkbox {
+        .th-inner {
+          padding: 6px 0;
+        }
+      }
+    }
+
+    .fixed-table-body {
+      border-bottom: 1px solid $ks-default-table-border-color;
+
+      .table {
+        .detail-view {
+          p {
+            margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        > thead {
+          > tr {
+            th {
+              border-bottom: none;
+            }
+          }
+        }
+
+        > tbody {
+          > tr {
+            &:first-child {
+              > td {
+                border-top: none;
+              }
+            }
+          }
+
+          .bs-checkbox {
+            input[type="checkbox"] {
+              position: relative;
+              top: 2px;
+            }
+          }
+        }
+
+        > tfoot {
+          > tr {
+            > th {
+              border-bottom: none;
+              border-left: none;
+            }
+          }
+        }
+
+        .detail-icon {
+          .icon-plus {
+            position: relative;
+            top: 2px;
+
+            &::before {
+              font-size: 21px;
+              font-style: normal;
+              visibility: visible;
+              content: "\f2c3";
+              font-family: $ks-icon-font-name;
+            }
+          }
+
+          .icon-minus {
+            position: relative;
+            top: 2px;
+
+            &::before {
+              font-size: 21px;
+              font-style: normal;
+              visibility: visible;
+              content: "\f28f";
+              font-family: $ks-icon-font-name;
+            }
+          }
+        }
+
+        .card-view {
+          > .title {
+            font-weight: 500;
+          }
+
+          + .card-view {
+            margin-top: 5px;
+          }
+        }
+
+        &.JColResizer {
+          > tbody {
+            > tr {
+              td {
+                padding-left: 10px !important; /* Don't delete "!important" */
+                padding-right: 10px !important; /* Don't delete "!important" */
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .fixed-table-pagination {
+      &::after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+
+      border: 1px solid $ks-default-table-border-color;
+      border-top: none;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: -1px;
+      margin-right: -1px;
+
+      .pagination {
+        height: 34px;
+      }
+
+      ul.pagination {
+        border-radius: 2px;
+        border: 1px solid $ks-default-table-border-color;
+        height: 34px;
+
+        .page-first, .page-next {
+          + .page-number {
+            border-left: 1px solid #c4cbe1;
+          }
+        }
+
+        .page-last {
+          + .page-next {
+            border-left: 1px solid #c4cbe1;
+          }
+        }
+
+        .page-pre {
+          + .page-first {
+            border-left: 1px solid #c4cbe1;
+          }
+        }
+
+        .page-number, .page-pre, .page-first, .page-last, .page-next {
+          > a {
+            font-size: 13px;
+            padding: 8px 14px;
+            position: relative;
+            top: 7px;
+          }
+
+          + .page-number, + .page-last, + .page-next {
+            border-left: 1px solid #c4cbe1;
+          }
+
+          &:not(.active):hover {
+            background-color: #ebeef5;
+          }
+
+          &.active {
+            > a {
+              color: #fff;
+              background-color: $ks-color-primary;
+              border-color: $ks-color-primary;
+            }
+          }
+        }
+      }
+
+      .pagination-detail {
+        .btn-group {
+          &.dropup {
+            > .btn-default {
+              padding: 0;
+              background: #fff;
+              height: 34px;
+              width: 65px;
+              margin-left: 8px;
+              margin-right: 8px;
+              border: solid 1px rgba(57,81,155,.3);
+              color: #333;
+              font-weight: normal;
+
+              &:active, &:focus {
+                border: solid 1px rgba(57,81,155,.3);
+              }
+
+              > .page-size {
+                position: relative;
+                left: -10px;
+              }
+            }
+
+            > .dropdown-menu {
+              margin-left: 8px;
+              margin-bottom: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Drag table styles */
+.dragtable-sortable {
+  list-style-type: none; margin: 0; padding: 0; -moz-user-select: none;
+}
+.dragtable-sortable li {
+  margin: 0; padding: 0; float: left; font-size: 1em; background: white;
+}
+
+.dragtable-sortable th, .dragtable-sortable td {
+  border-left: 0;
+}
+
+.dragtable-sortable li:first-child th, .dragtable-sortable li:first-child td {
+  border-left: none;
+}
+
+.ui-sortable-helper {
+  opacity: 0.7;filter: alpha(opacity=70);
+}
+.ui-sortable-placeholder {
+  box-shadow: 4px 5px 4px rgba(57, 81, 155, 0.3) inset;
+  background: rgba(57, 81, 155, 0.1);
+  visibility: visible !important; /* Don't delete "!important" */
+}
+.ui-sortable-placeholder * {
+  opacity: 0.0; visibility: hidden;
+}

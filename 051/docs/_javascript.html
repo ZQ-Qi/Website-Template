@@ -1,0 +1,3428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Javascript · Bootstrap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/extension.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+<!-- Navbar
+    ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="brand" href="./index.html">Boo Admin</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class=""> <a href="./index.html">Home</a> </li>
+                    <li class=""> <a href="./getting-started.html">Get started</a> </li>
+                    <li class=""> <a href="./scaffolding.html">Scaffolding</a> </li>
+                    <li class=""> <a href="./base-css.html">CSS</a> </li>
+                    <li class=""> <a href="./custom-css.html">Custom CSS</a> </li>
+                    <li class="active"> <a href="./javascript.html">JavaScript</a> </li>
+                    <li class=""> <a href="./changelog.html">Boo Changelog</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron boo subhead">
+    <div class="container">
+        <h1>JavaScript</h1>
+        <p class="lead">Javascript and js plugins used in Boo Admin. 
+    </div>
+</header>
+<div class="container"> 
+    
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+        <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+                <li><a href="#overview"><i class="icon-chevron-right"></i> Overview</a></li>
+                <li><a href="#js-structure"><i class="icon-chevron-right"></i> JS files and structure</a></li>
+                <li><a href="#plugins"><i class="icon-chevron-right"></i> Plugins in Boo</a></li>
+                <li><a href="#plugins-bootstrap"><i class="icon-chevron-right"></i> Bootstrap Plugins</a></li>
+                <li><a href="#plugins-jquery"><i class="icon-chevron-right"></i> jQuery Plugins</a></li>
+                <li><a href="#bootstrap-js"><i class="icon-chevron-right"></i> Bootstrap js</a></li>
+            </ul>
+        </div>
+        <div class="span9"> 
+            
+            <!-- Overview
+        	================================================== -->
+            <section id="overview">
+                <div class="page-header doc">
+                    <h1>JavaScrip Bootstrap</h1>
+                </div>
+                <h3>Individual or compiled</h3>
+                <p>Plugins can be included individually (though some have required dependencies), or all at once. Both <strong>bootstrap.js</strong> and <strong>bootstrap.min.js</strong> contain all plugins in a single file.</p>
+                <h3>Data attributes</h3>
+                <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first class API and should be your first consideration when using a plugin.</p>
+                <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the body namespaced with `'data-api'`. This looks like this:
+                <pre class="prettyprint linenums">$('body').off('.data-api')</pre>
+                <p>Alternatively, to target a specific plugin, just include the plugin's name as a namespace along with the data-api namespace like this:</p>
+                <pre class="prettyprint linenums">$('body').off('.alert.data-api')</pre>
+                <h3>Programmatic API</h3>
+                <p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+                <pre class="prettyprint linenums">$(".btn.danger").button("toggle").addClass("fat")</pre>
+                <p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
+                <pre class="prettyprint linenums">
+$("#myModal").modal()                       // initialized with defaults
+$("#myModal").modal({ keyboard: false })   // initialized with no keyboard
+$("#myModal").modal('show')                // initializes and invokes show immediately</p>
+</pre>
+                <p>Each plugin also exposes its raw constructor on a `Constructor` property: <code>$.fn.popover.Constructor</code>. If you'd like to get a particular plugin instance, retrieve it directly from an element: <code>$('[rel=popover]').data('popover')</code>.</p>
+                <h3>Events</h3>
+                <p>Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
+                <p>All infinitive events provide preventDefault functionality. This provides the abililty to stop the execution of an action before it starts.</p>
+                <pre class="prettyprint linenums">
+$('#myModal').on('show', function (e) {
+    if (!data) return e.preventDefault() // stops modal from being shown
+})
+</pre>
+                <p class="alert alert-info">For detailed information about the bootstrap javascript framework to go first <a class="btn" href="../_bootstrap/docs/javascript.html" target="_blank">bootstrap documentation</a></p>
+            </section>
+            
+            <!-- JS 
+            ================================================== -->
+            <section id="js-structure">
+                <div class="page-header doc">
+                    <h2>JS files and structure</h2>
+                </div>
+                <h3>JS files</h3>
+                <p>All javascript files are located in the directory assets / js directory contains demo and lib. Plugins are installed in the assets / plugins.</p>
+                <p>In general each HTML page loads all these 39 .js files. In your project you can minify all these files into 1 or do anything you want, but in download package i included all files so you can easily edit/remove/add new files.</p>
+                <h3>Library</h3>
+                <dl>
+                    <dt>jQuery & jQuery UI</dt>
+                    <dd>jQuery - 1.8.3</dd>
+                    <dd>jQuery UI - 1.9.1</dd>
+                    <dd>bootstrap - 2.2.2</dd>
+                </dl>
+                <pre class="prettyprint linenums">
+&lt;script src="assets/js/lib/jquery.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/js/lib/jquery-ui.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/lib/jquery.cookie.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/js/lib/jquery.date.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/js/lib/jquery.mousewheel.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/js/lib/jquery.load-image.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/lib/bootstrap/bootstrap.js"&gt;&lt;/script&gt; 
+
+&lt;!-- Plugins Bootstrap --&gt;
+&lt;script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-fuelux/js/all-fuelux.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-select/bootstrap-select.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard-combi.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"&gt;&lt;/script&gt;
+ 
+
+&lt;!-- Plugins Custom - Only example --&gt; 
+&lt;script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"&gt;&lt;/script&gt;
+&lt;!-- Plugins Custom - System --&gt; 
+&lt;script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"&gt;&lt;/script&gt; 
+&lt;!-- Plugins Custom - System info --&gt;
+&lt;script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"&gt;&lt;/script&gt;
+&lt;!-- Plugins Custom - Content --&gt;
+&lt;script src="assets/plugins/pl-content/list/js/list.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/pl-content/jpages/js/jPages.js"&gt;&lt;/script&gt; 
+&lt;!-- Plugins Custom - Component --&gt;
+&lt;script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"&gt;&lt;/script&gt;
+&lt;!-- Plugins Custom - Form --&gt;
+&lt;script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-form/select2/select2.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/pl-form/counter/jquery.counter.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-form/elastic/jquery.elastic.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-form/duallistbox/jquery.dualListBox.min.js"&gt;&lt;/script&gt;
+&lt;!-- Plugins Custom - Gallery --&gt; 
+&lt;script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"&gt;&lt;/script&gt;
+ 
+&lt;!-- Plugins Tables --&gt; 
+&lt;script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"&gt;&lt;/script&gt; 
+
+&lt;!-- Plugins data visualization --&gt; 
+&lt;script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"&gt;&lt;/script&gt; 
+
+&lt;!-- main js --&gt; 
+&lt;script src="assets/js/core.js"&gt;&lt;/script&gt; 
+&lt;script src="assets/js/application.js"&gt;&lt;/script&gt;  
+
+&lt;!-- Only This Demo Page --&gt;  
+&lt;script src="assets/js/demo/demo-form.js"&gt;&lt;/script&gt; 
+
+&lt;script&gt;
+$(document).ready(function() {
+
+});
+&lt;/script&gt;
+</pre>
+            </section>
+            
+            <!-- Plugins 
+            ================================================== -->
+            <section id="plugins">
+                <div class="page-header doc">
+                    <h1>Plugins used in Boo</h1>
+                </div>
+            </section>
+            
+            <!-- Plugins Bootstrap 
+            ================================================== -->
+            <section id="plugins-bootstrap">
+                <div class="page-header doc">
+                    <h2>Bootstrap plugins</h2>
+                </div>
+                <h3>Location</h3>
+                <p>Location of assets/plugins/bootstrap-...</p>
+                <hr class="bs-docs-separator">
+                <ul class="nav the-50 clearfix">
+                    <li><a href="#plugins-bootbox"><i class="icon-chevron-right"></i> Bootsrap - Bootbox <span class="label label-info">update</span></a> </li>
+                    <li><a href="#plugins-modal"><i class="icon-chevron-right"></i> Bootsrap - Modal + <span class="label label-info">update</span></a></li>
+                    <li><a href="#plugins-datepicker"><i class="icon-chevron-right"></i> Bootsrap - Datepicker <span class="label label-info">update</span></a></li>
+                    <li><a href="#plugins-datetimepicker"><i class="icon-chevron-right"></i> Bootsrap - Datetimepicker <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-daterangepicker"><i class="icon-chevron-right"></i> Bootsrap - Daterangepicker <span class="label label-info">update</span></a></li>
+                    <li><a href="#plugins-timepicker"><i class="icon-chevron-right"></i> Bootsrap - Timepicker</a></li>
+                    <li><a href="#plugins-colorpicker"><i class="icon-chevron-right"></i> Bootsrap - Colorpicker</a></li>
+                    <li><a href="#plugins-fileupload"><i class="icon-chevron-right"></i> Bootsrap - Fileupload</a></li>
+                    <li><a href="#plugins-rowlink"><i class="icon-chevron-right"></i> Bootsrap - Rowlink</a></li>
+                    <li><a href="#plugins-progressbar"><i class="icon-chevron-right"></i> Bootsrap - ProgressBar</a></li>
+                    <li><a href="#pluginsl-wysihtm"><i class="icon-chevron-right"></i> Bootsrap - WysiHTML5</a></li>
+                    <li><a href="#plugins-selectpicker"><i class="icon-chevron-right"></i> Bootsrap - Selectpicker <span class="label label-info">update</span></a></li>
+                    <li><a href="#plugins-multiselect"><i class="icon-chevron-right"></i> Bootsrap - Multiselect  <span class="label label-success">new</span></a></a></li>
+                    <li><a href="#plugins-combobox"><i class="icon-chevron-right"></i> Bootsrap - Combobox  <span class="label label-success">new</span></a></a></li>
+                    <li><a href="#plugins-spinner"><i class="icon-chevron-right"></i> Bootsrap - Spinner  <span class="label label-success">new</span></a></a></li>
+                    <li><a href="#plugins-search"><i class="icon-chevron-right"></i> Bootsrap - Search  <span class="label label-success">new</span></a></a></li>
+                    <li><a href="#plugins-wizard"><i class="icon-chevron-right"></i> Bootsrap - Wizard <span class="label label-info">update</span></a></a></li>
+                    <li><a href="#plugins-wizard2"><i class="icon-chevron-right"></i> Bootsrap - Wizard 2 <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-pillbox"><i class="icon-chevron-right"></i> Bootsrap - Pillbox  <span class="label label-success">new</span></a></a></li>
+                </ul>
+                <p>What is the plan still to add:</p>
+                <ul class="nav the-50 clearfix">
+                    <li><a target="_blank" href="http://vitalets.github.com/bootstrap-editable/"><i class="icon-chevron-right"></i> Bootsrap - Editable</a></li>
+                    <li><a target="_blank" href="http://gregfranko.com/jquery.tocify.js/"><i class="icon-chevron-right"></i> Bootsrap - Tocify</a></li>
+                </ul>
+            </section>
+            
+            <!-- Bootbox -->
+            <section id="plugins-bootbox">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-window"></i> Bootbox</h2>
+                </div>
+                <dl>
+                    <dd>Alert, confirm and flexible dialogs</dd>
+                    <dd>Bootbox.js is a small JavaScript library which allows you to create programmatic dialog boxes using Twitter's Bootstrap modals, without having to worry about creating, managing or removing any of the required DOM elements or JS event handlers.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"&gt;&lt;/script&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/makeusabrew/bootbox"><i class="fontello-icon-link-4"></i> github.com/makeusabrew/bootbox</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Modal -->
+            <section id="plugins-modal">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-window"></i> Bootstrap Modal</h2>
+                </div>
+                <dl>
+                    <dd>Extends Bootstrap's native modals to provide additional functionality. Introduces a ModalManager class that operates behind the scenes to handle multiple modals by listening on their events.</dd>
+                    <dd class="margin-bottom10">A single ModalManager is created by default that can be accessed through the <code>GlobalModalManager</code> variable.</dd>
+                    <dd class="text-warning">Original bootstrap-modal plugin has been removed from the file and replaced bootstrap.js separate plugin.</dd>
+                </dl>
+                <pre class="prettyprint linenums">
+  &lt;script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"&gt;&lt;/script&gt;</pre>
+                <h2>Examples</h2>
+                <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+                <h3>Static example</h3>
+                <p>A rendered modal with header, body, and set of actions in the footer.</p>
+                <div class="bs-docs-example" style="background-color: #f5f5f5;">
+                    <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3>Modal header</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>One fine body&hellip;</p>
+                        </div>
+                        <div class="modal-footer"> <a href="#" class="btn">Close</a> <a href="#" class="btn btn-primary">Save changes</a> </div>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="modal hide fade"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
+    &lt;h3&gt;Modal header&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;One fine body&hellip;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;a href="#" class="btn"&gt;Close&lt;/a&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;Save changes&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                <h3>Overview</h3>
+                <ul class="margin-bottom20">
+                    <li>Backwards compatible</li>
+                    <li>Responsive</li>
+                    <li>Stackable</li>
+                    <li>Full width</li>
+                    <li>Load content via AJAX</li>
+                    <li>Disable background scrolling</li>
+                </ul>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">
+  $('#myModal').modal(options)</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered _table-condensed table-striped">
+                    <colgroup>
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col55">
+                    </colgroup>
+                    <caption>
+                    for Modal
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Options</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>backdrop</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Includes a modal-backdrop element. Alternatively, specify static for a backdrop which doesn't close the modal on click.</td>
+                        </tr>
+                        <tr>
+                            <td>keyboard</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Closes the modal when escape key is pressed.</td>
+                        </tr>
+                        <tr>
+                            <td>show</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Shows the modal when initialized.</td>
+                        </tr>
+                        <tr>
+                            <td>remote</td>
+                            <td>path</td>
+                            <td>false</td>
+                            <td>If a remote url is provided, content will be loaded via jQuery's <code>load</code> method and injected into the <code>.modal-body</code>. If you're using the data api, you may alternatively use the <code>href</code> tag to specify the remote source. </td>
+                        </tr>
+                    <td>width</td>
+                        <td>number</td>
+                        <td>null</td>
+                        <td>Set the inital width of the modal.</td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>number</td>
+                        <td>null</td>
+                        <td>Set the inital height of the modal.</td>
+                    </tr>
+                    <tr>
+                        <td>maxHeight</td>
+                        <td>number</td>
+                        <td>null</td>
+                        <td>Set the max-height of the modal-body.</td>
+                    </tr>
+                    <tr>
+                        <td>loading</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>Toggle the loading state.</td>
+                    </tr>
+                    <tr>
+                        <td>spinner</td>
+                        <td>string</td>
+                        <td>html</td>
+                        <td>Provide a custom image or animation for the loading spinner.</td>
+                    </tr>
+                    <tr>
+                        <td>consumeTab</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Used to enable tabindexing for modals with <code>data-tabindex</code>.</td>
+                    </tr>
+                    <tr>
+                        <td>focusOn</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>The element or selector to set the focus to once the modal is shown <code>data-focus-on</code>.</td>
+                    </tr>
+                    <tr>
+                        <td>attentionAnimation</td>
+                        <td>string</td>
+                        <td>shake</td>
+                        <td>Set the animation used by the <code>attention</code> method. Any animation in <a target="_blank" href="http://daneden.me/animate/">animate.css</a> is supported but only the shake animation is included by default.</td>
+                    </tr>
+                    <tr>
+                        <td>modalOverflow</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>Set this property to true for modals with highly dynamic content. This will force the modal to behave as if it is larger than the viewport.</td>
+                    </tr>
+                    <tr>
+                        <td>manager</td>
+                        <td>string</td>
+                        <td>GlobalModalManager</td>
+                        <td>Set the modal's manager. By default this is set to the <code>GlobalModalManager</code> and will most likely not need to be overridden.</td>
+                    </tr>
+                        </tbody>
+                    
+                </table>
+                <table class="table table-bordered _table-condensed table-striped">
+                    <colgroup>
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col55">
+                    </colgroup>
+                    <caption>
+                    for ModalManager
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Options</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>loading</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Toggle the loading state.</td>
+                        </tr>
+                        <tr>
+                            <td>backdropLimit</td>
+                            <td>number</td>
+                            <td>null</td>
+                            <td>Limit the amount of backdrops that will appear on the page at the same time.</td>
+                        </tr>
+                        <tr>
+                            <td>spinner</td>
+                            <td>string</td>
+                            <td>html</td>
+                            <td>Provide a custom image or animation for the loading spinner.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a href="javascript.html#modals">see also bootstrap-modal documentation</a></p>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/jschr/bootstrap-modal"><i class="fontello-icon-link-4"></i> github.com/jschr/bootstrap-modal</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Datepicker -->
+            <section id="plugins-datepicker">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-calendar"></i> Bootstrap Datepicker</h2>
+                </div>
+                <dl>
+                    <dd>Add datepicker picker to field or to any other element.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">
+  $('.datepickers').datepicker(options)</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div class="input-append date" id="datepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                        <input size="16" type="text" value="12-02-2012" readonly>
+                        <span class="add-on"><i class="icon-th"></i></span> </div>
+                </div>
+                <pre class="prettyprint linenums">
+  &lt;!-- Attached to a field with the format specified via options --&gt;
+  &lt;input type="text" value="02-16-2012" id="datepicker"&gt;
+  
+  &lt;script type="text/javascript"&gt;
+      $('#datepicker').datepicker({ format: 'mm-dd-yyyy' });
+  &lt;/script&gt;</pre>
+                <pre class="prettyprint linenums">
+  &lt;!-- Attached to a field with the format specified via data tag --&gt;
+  &lt;input type="text" value="02/16/12" data-date-format="mm/dd/yy" id="datepicker"&gt;
+  
+  &lt;script type="text/javascript"&gt;
+      $('#datepicker').datepicker();
+  &lt;/script&gt;</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered _table-condensed table-striped">
+                    <colgroup>
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col55">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Options</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>format</td>
+                            <td>String</td>
+                            <td>mm/dd/yyyy</td>
+                            <td>The date format, combination of d, dd, m, mm, M, MM, yy, yyyy.</td>
+                        </tr>
+                        <tr>
+                            <td>weekStart</td>
+                            <td>Integer</td>
+                            <td>0</td>
+                            <td>Day of the week start. 0 (Sunday) to 6 (Saturday)</td>
+                        </tr>
+                        <tr>
+                            <td>startDate</td>
+                            <td>Date</td>
+                            <td>Beginning of time</td>
+                            <td>The earliest date that may be selected; all earlier dates will be disabled.</td>
+                        </tr>
+                        <tr>
+                            <td>endDate</td>
+                            <td>Date</td>
+                            <td>End of time</td>
+                            <td>The latest date that may be selected; all later dates will be disabled.</td>
+                        </tr>
+                        <tr>
+                            <td>autoclose</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                            <td>Whether or not to close the datepicker immediately when a date is selected.</td>
+                        </tr>
+                        <tr>
+                            <td>startView</td>
+                            <td>Number, String</td>
+                            <td>0, month</td>
+                            <td>The view that the datepicker should show when it is opened. Accepts values of 0 or 'month' for month view (the default), 1 or 'year' for the 12-month overview, and 2 or 'decade' for the 10-year overview. Useful for date-of-birth datepickers.</td>
+                        </tr>
+                        <tr>
+                            <td>todayBtn</td>
+                            <td>Boolean, "linked"</td>
+                            <td>false</td>
+                            <td>If true or "linked", displays a "Today" button at the bottom of the datepicker to select the current date. If true, the "Today" button will only move the current date into view; if "linked", the current date will also be selected.</td>
+                        </tr>
+                        <tr>
+                            <td>todayHighlight</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                            <td>If true, highlights the current date.</td>
+                        </tr>
+                        <tr>
+                            <td>keyboardNavigation</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                            <td>Whether or not to allow date navigation by arrow keys.</td>
+                        </tr>
+                        <tr>
+                            <td>language</td>
+                            <td>String</td>
+                            <td>en</td>
+                            <td>The two-letter code of the language to use for month and day names. These will also be used as the input's value (and subsequently sent to the server in the case of form submissions). Currently ships with English ('en'), German ('de'), Brazilian ('br'), and Spanish ('es') translations, but others can be added (see I18N below). If an unknown language code is given, English will be used.</td>
+                        </tr>
+                        <tr>
+                            <td>forceParse</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                            <td>Whether or not to force parsing of the input value when the picker is closed. That is, when an invalid date is left in the input field by the user, the picker will forcibly parse that value, and set the input's value to the new, valid date, conforming to the given <code>format</code>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/eternicode/bootstrap-datepicker"><i class="fontello-icon-link-4"></i> github.com/eternicode/bootstrap-datepicker</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Datetimepicker -->
+            <section id="plugins-datetimepicker">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-calendar"></i> Bootstrap Datetimepicker</h2>
+                </div>
+                <dl>
+                    <dd>Simple date/time picker component.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">
+  $('.datetimepickers').datetimepicker(options)</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div class="input-append date" id="datepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                        <input size="16" type="text" data-format="dd/MM/yyyy hh:mm:ss">
+                        <span class="add-on"><i class="icon-th"></i></span> </div>
+                </div>
+                <pre class="prettyprint linenums">
+
+&lt;div id="datetimepicker" class="input-append date"&gt;
+  &lt;input data-format="dd/MM/yyyy hh:mm:ss" type="text"&gt;
+    &lt;span class="add-on"&gt;
+      &lt;i data-time-icon="fontello-icon-clock" data-date-icon="fontello-icon-calendar"&gt;
+    &lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+  $(function() {
+    $('#datetimepicker').datetimepicker({
+      language: 'pt-BR'
+    });
+  });
+&lt;/script&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/tarruda/bootstrap-datetimepicker"><i class="fontello-icon-link-4"></i> github.com/tarruda/bootstrap-datetimepicker</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Daterangepicker -->
+            <section id="plugins-daterangepicker">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-calendar-1"></i><i class="fontello-icon-calendar-1"></i> Bootstrap Daterangepicker</h2>
+                </div>
+                <dl>
+                    <dd>This date range picker component for Twitter Bootstrap creates a dropdown menu from which a user can select a range of dates.</dd>
+                    <dd>Bootbox.js is a small JavaScript library which allows you to create programmatic dialog boxes using Twitter's Bootstrap modals, without having to worry about creating, managing or removing any of the required DOM elements or JS event handlers.</dd>
+                </dl>
+                <pre class="prettyprint linenums">
+  &lt;script src="assets/plugins/bootstrap-daterangepicker/js/date.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">
+  $('.daterangepicker').daterangepicker()
+  $('input[name="daterange"]').daterangepicker();</pre>
+                <h3>Options</h3>
+                <ul>
+                    <li>Custom callback handler called when the date range selection is made</li>
+                    <li>Setting initial start and end dates for the calendars</li>
+                    <li>Bounding the minimum and maximum selectable dates</li>
+                    <li>Overriding all labels in the interface with localized text</li>
+                    <li>Starting the calendar week on any day of week</li>
+                    <li>Overriding the direction the dropdown expands (left/right of element it's attached to)</li>
+                    <li>Setting the date format string for parsing string inputs</li>
+                </ul>
+                <h3>Default options</h3>
+                <div class="bs-docs-example">
+                    <form class="form-horizontal margin-00">
+                        <fieldset>
+                            <div class="control-group">
+                                <label class="control-label" for="reservation">Reservation dates:</label>
+                                <div class="controls">
+                                    <div class="input-prepend"> <span class="add-on"><i class="icon-calendar"></i></span>
+                                        <input type="text" name="reservation" id="reservation" />
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+    &lt;fieldset&gt;
+        &lt;div class="control-group"&gt;
+            &lt;label class="control-label" for="reservation"&gt;Reservation dates:&lt;/label&gt;
+            &lt;div class="controls"&gt;
+                &lt;div class="input-prepend"&gt;
+                    &lt;span class="add-on"&gt;&lt;i class="icon-calendar"&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;input type="text" name="reservation" id="reservation" /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;script type="text/javascript"&gt;
+    $(document).ready(function() {
+        $('#reservation').daterangepicker();
+    });
+&lt;/script&gt;
+</pre>
+                <h3>Pre-defined callback handler called when the date range selection</h3>
+                <div class="bs-docs-example">
+                    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc"> <i class="icon-calendar icon-large"></i> <span></span> <b class="caret" style="margin-top: 8px"></b> </div>
+                    <div class="clearfix"></div>
+                </div>
+                <pre class="pre-scrollable prettyprint linenums">
+&lt;div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc"&gt;
+    &lt;i class="icon-calendar icon-large"&gt;&lt;/i&gt;
+    &lt;span&gt;&lt;/span&gt; &lt;b class="caret" style="margin-top: 8px"&gt;&lt;/b&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+$(document).ready(function() {
+    $('#reportrange').daterangepicker({
+       ranges: {
+           'Today': ['today', 'today'],
+           'Yesterday': ['yesterday', 'yesterday'],
+           'Last 7 Days': [Date.today().add({ days: -6 }), 'today'],
+           'Last 30 Days': [Date.today().add({ days: -29 }), 'today'],
+           'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
+           'Last Month': [Date.today().moveToFirstDayOfMonth().add({ months: -1 }), Date.today().moveToFirstDayOfMonth().add({ days: -1 })]
+        },
+        opens: 'left',
+        format: 'MM/dd/yyyy',
+        separator: ' to ',
+        startDate: Date.today().add({ days: -29 }),
+        endDate: Date.today(),
+        minDate: '01/01/2012',
+        maxDate: '12/31/2013',
+        locale: {
+            applyLabel: 'Submit',
+            fromLabel: 'From',
+            toLabel: 'To',
+            customRangeLabel: 'Custom Range',
+            daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            firstDay: 1
+        },
+        showWeekNumbers: true,
+        buttonClasses: ['btn-danger']
+     }, 
+     function(start, end) {
+        $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+     }
+);
+
+//Set the initial state of the picker label
+$('#reportrange span').html(Date.today().add({ days: -29 }).toString('MMMM d, yyyy') + ' - ' + Date.today().toString('MMMM d, yyyy'));
+
+});
+&lt;/script&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/dangrossman/bootstrap-daterangepicker"><i class="fontello-icon-link-4"></i> github.com/dangrossman/bootstrap-daterangepicker</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Timepicker -->
+            <section id="plugins-timepicker">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-clock-3"></i> Bootstrap Timepicker</h2>
+                </div>
+                <dl>
+                    <dd>A very cool widget to easily select a time for a text input using your mouse or arrow keys.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('.timepicker').timepicker();</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div class="input-append bootstrap-timepicker-component">
+                        <input type="text" class="timepicker input-small">
+                        <span class="add-on"> <i class="icon-time"></i> </span> </div>
+                </div>
+                <pre class="prettyprint linenums">
+    &lt;!-- Use as component --&gt;
+    &lt;div class="input-append"&gt;
+        &lt;input type="text" class="timepicker input-small"&gt;
+        &lt;span class="add-on"&gt;
+            &lt;i class="icon-time"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered _table-condensed table-striped">
+                    <colgroup>
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col55">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Options</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>template</td>
+                            <td>String</td>
+                            <td>dropdown (default), modal, false</td>
+                            <td>Show picker in a dropdown. Show picker in a modal. Don't show a widget</td>
+                        </tr>
+                        <tr>
+                            <td>minuteStep</td>
+                            <td>integer</td>
+                            <td>15</td>
+                            <td>Specify a step for the minute field.</td>
+                        </tr>
+                        <tr>
+                            <td>showSeconds</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Show the seconds field.</td>
+                        </tr>
+                        <tr>
+                            <td>secondStep</td>
+                            <td>integer</td>
+                            <td>15</td>
+                            <td>Specify a step for the second field.</td>
+                        </tr>
+                        <tr>
+                            <td>defaultTime</td>
+                            <td>string</td>
+                            <td>current (default), value, false</td>
+                            <td>Set to the current time. Set to inputs current value. Do not set a default time</td>
+                        </tr>
+                        <tr>
+                            <td>showMeridian</td>
+                            <td>boolean</td>
+                            <td>true (default), false</td>
+                            <td>12hr mode 24hr mode</td>
+                        </tr>
+                        <tr>
+                            <td>showInputs</td>
+                            <td>boolean</td>
+                            <td>true (default), false</td>
+                            <td>Shows the text inputs in the widget. Hide the text inputs in the widget</td>
+                        </tr>
+                        <tr>
+                            <td>disableFocus</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Disables the input from focusing. This is useful for touch screen devices that display a keyboard on input focus.</td>
+                        </tr>
+                        <tr>
+                            <td>modalBackdrop</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Show modal backdrop.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://jdewit.github.com/bootstrap-timepicker/"><i class="fontello-icon-link-4"></i> jdewit.github.com/bootstrap-timepicker</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Colorpicker -->
+            <section id="plugins-colorpicker">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-palette"></i> Bootstrap Colorpicker</h2>
+                </div>
+                <dl>
+                    <dd>A very cool widget to easily select a time for a text input using your mouse or arrow keys.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('.colorpicker').colorpicker();</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div class="input-append color colorpicker" data-color="rgb(255, 146, 180)" data-color-format="rgb">
+                        <input type="text" class="span2" value="" >
+                        <span class="add-on"><i style="background-color: rgb(255, 146, 180)"></i></span> </div>
+                </div>
+                <pre class="prettyprint linenums">
+    &lt;!-- Use as component --&gt;
+    &lt;div class="input-append color colorpicker" data-color="rgb(255, 146, 180)" data-color-format="rgb"&gt;
+        &lt;input type="text" class="span2" value=""&gt;
+        &lt;span class="add-on"&gt;
+            &lt;i style="background-color: rgb(255, 146, 180)"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered _table-condensed table-striped">
+                    <colgroup>
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col55">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Options</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>format</td>
+                            <td>string</td>
+                            <td>hex</td>
+                            <td>the color format - hex | rgb | rgba.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Methods</h3>
+                <dl>
+                    <dt>.colorpicker(options)</dt>
+                    <dd>Initializes an colorpicker.</dd>
+                    <dt>.colorpicker('show')</dt>
+                    <dd>Show the color picker.</dd>
+                    <dt>.colorpicker('hide')</dt>
+                    <dd>Hide the color picker.</dd>
+                    <dt>.colorpicker('place')</dt>
+                    <dd>Updates the color picker's position relative to the element.</dd>
+                    <dt>.colorpicker('setValue', value)</dt>
+                    <dd>Set a new value for the color picker. Triggers 'changeColor' event.</dd>
+                </dl>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://www.eyecon.ro/bootstrap-colorpicker/"><i class="fontello-icon-link-4"></i> eyecon.ro/bootstrap-colorpicker</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Fileupload -->
+            <section id="plugins-fileupload">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-upload"></i> Bootstrap Fileupload</h2>
+                </div>
+                <dl>
+                    <dd>The file upload plugin allows you to create a visually appealing file or image upload widgets.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"&gt;&lt;/script&gt;</pre>
+                <h3>File upload widgets</h3>
+                <div class="bs-docs-example">
+                    <div data-provides="fileupload" class="fileupload fileupload-new">
+                        <div class="input-append">
+                            <div class="uneditable-input span3"> <i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span> </div>
+                            <span class="btn btn-file"> <span class="fileupload-new">Select file</span> <span class="fileupload-exists">Change</span>
+                            <input type="file">
+                            </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="fileupload fileupload-new" data-provides="fileupload"&gt;
+    &lt;div class="input-append"&gt;
+        &lt;div class="uneditable-input span3"&gt;
+            &lt;i class="icon-file fileupload-exists"&gt;&lt;/i&gt; &lt;span class="fileupload-preview"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;span class="btn btn-file"&gt;&lt;span class="fileupload-new"&gt;Select file&lt;/span&gt;
+        &lt;span class="fileupload-exists"&gt;Change&lt;/span&gt;&lt;input type="file" /&gt;&lt;/span&gt;
+        &lt;a href="#" class="btn fileupload-exists" data-dismiss="fileupload"&gt;Remove&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                <div class="bs-docs-example">
+                    <div data-provides="fileupload" class="fileupload fileupload-new"> <span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span>
+                        <input type="file">
+                        </span> <span class="fileupload-preview"></span> <a style="float: none" data-dismiss="fileupload" class="close fileupload-exists" href="#">×</a> </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="fileupload fileupload-new" data-provides="fileupload"&gt;
+    &lt;span class="btn btn-file"&gt;
+        &lt;span class="fileupload-new"&gt;Select file&lt;/span&gt;
+        &lt;span class="fileupload-exists"&gt;Change&lt;/span&gt;
+        &lt;input type="file" /&gt;
+    &lt;/span&gt;
+    &lt;span class="fileupload-preview"&gt;&lt;/span&gt;
+    &lt;a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none"&gt;×&lt;/a&gt;
+&lt;/div&gt;</pre>
+                <h3>Image upload widgets</h3>
+                <p>When uploading an image, it's possible to show a thumbnail instead of the filename.</p>
+                <div class="bs-docs-example">
+                    <div data-provides="fileupload" class="fileupload fileupload-new">
+                        <div style="width: 200px; height: 150px;" class="fileupload-preview thumbnail"></div>
+                        <div> <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>
+                            <input type="file">
+                            </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="fileupload fileupload-new" data-provides="fileupload"&gt;
+    &lt;div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"&gt;&lt;/div&gt;
+    &lt;div&gt;
+        &lt;span class="btn btn-file"&gt;
+            &lt;span class="fileupload-new"&gt;Select image&lt;/span&gt;
+            &lt;span class="fileupload-exists"&gt;Change&lt;/span&gt;
+            &lt;input type="file" /&gt;
+        &lt;/span&gt;
+        &lt;a href="#" class="btn fileupload-exists" data-dismiss="fileupload"&gt;Remove&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                <div class="bs-docs-example">
+                    <div data-provides="fileupload" class="fileupload fileupload-new">
+                        <div style="width: 200px; height: 150px;" class="fileupload-new thumbnail"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image"></div>
+                        <div style="max-width: 200px; max-height: 150px; line-height: 20px;" class="fileupload-preview fileupload-exists thumbnail"></div>
+                        <div> <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>
+                            <input type="file">
+                            </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="fileupload fileupload-new" data-provides="fileupload"&gt;
+    &lt;div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"&gt;
+        &lt;img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" /&gt;
+    &lt;/div&gt;
+    &lt;div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"&gt;&lt;/div&gt;
+    &lt;div&gt;
+        &lt;span class="btn btn-file"&gt;
+            &lt;span class="fileupload-new"&gt;Select image&lt;/span&gt;
+            &lt;span class="fileupload-exists"&gt;Change&lt;/span&gt;
+            &lt;input type="file" /&gt;
+        &lt;/span&gt;
+        &lt;a href="#" class="btn fileupload-exists" data-dismiss="fileupload"&gt;Remove&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                <div class="bs-docs-example">
+                    <div data-provides="fileupload" class="fileupload fileupload-new pull-left">
+                        <div style="width: 50px; height: 50px;" class="fileupload-new thumbnail"><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA"></div>
+                        <div style="width: 50px; height: 50px;" class="fileupload-preview fileupload-exists thumbnail"></div>
+                        <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>
+                        <input type="file">
+                        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+                    <div style="text-align: right" data-provides="fileupload" class="fileupload fileupload-new pull-right"> <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>
+                        <input type="file">
+                        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a>
+                        <div style="width: 50px; height: 50px;" class="fileupload-new thumbnail"><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA"></div>
+                        <div style="width: 50px; height: 50px;" class="fileupload-preview fileupload-exists thumbnail"></div>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="fileupload fileupload-new" data-provides="fileupload"&gt;
+    &lt;div class="fileupload-new thumbnail" style="width: 50px; height: 50px;"&gt;
+        &lt;img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA" /&gt;
+    &lt;/div&gt;
+    &lt;div class="fileupload-preview fileupload-exists thumbnail" style="width: 50px; height: 50px;"&gt;&lt;/div&gt;
+    &lt;span class="btn btn-file"&gt;
+        &lt;span class="fileupload-new"&gt;Select image&lt;/span&gt;
+        &lt;span class="fileupload-exists"&gt;Change&lt;/span&gt;
+        &lt;input type="file" /&gt;
+    &lt;/span&gt;
+    &lt;a href="#" class="btn fileupload-exists" data-dismiss="fileupload"&gt;Remove&lt;/a&gt;
+&lt;/div&gt;</pre>
+                <div class="alert alert-warning"><strong>Note!</strong> Image preview only works in IE10+, FF3.6+, Chrome6.0+ and Opera11.1+. In older browsers and Safari, the filename is shown instead.</div>
+                <h3>Usage plugin</h3>
+                <p>Via data attributes</p>
+                <p class="margin-bottom20">Add data attributes to register the file upload widget. The main container should either have the <code>.fileupload-new</code> class for a new record or if the record does not have file or <code>.fileupload-exists</code> if an existing file is present. Elements inside the container with the <code>.fileupload-new</code> and <code>.fileupload-exists</code> class will be shown or hidden based on the current state. The content of <code>.fileupload-preview</code> is replaced when a file is selected. Implement a button to clear the file with <code>data-dismiss="fileupload"</code>. The content of <code>.fileupload-preview</code> is replaced when a file is selected. Implement a button to clear the file with <code>data-dismiss="fileupload"</code>.</p>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('.fileupload').fileupload()</pre>
+                <h3>Layout</h3>
+                <p class="margin-bottom20">Using the given elements, you can layout the upload widget the way you want, either with a fixed <code>width</code> and <code>height</code> or with <code>max-width</code> and <code>max-height</code>.</p>
+                <h3>Options</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 100px;">Name</th>
+                            <th style="width: 50px;">type</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>uploadtype</td>
+                            <td>string</td>
+                            <td>Choose 'file' or 'image'. If omitted, the type is automatically determined based on the presence of a <code>.thumbnail</code> element.</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>string</td>
+                            <td>Use this option instead of setting the <code>name</code> attribute on the <code>&lt;input&gt;</code> element to prevent it from being part of the post data when not changed.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://jasny.github.com/bootstrap/javascript.html#fileupload"><i class="fontello-icon-link-4"></i> jasny.github.com/bootstrap/javascript</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Rowlink -->
+            <section id="plugins-rowlink">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-link-4"></i> Bootstrap Rowlink</h2>
+                </div>
+                <dl>
+                    <dd>This plugin turns a table row into a clickable link.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('tbody.rowlink').rowlink()</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <table class="table table-bordered table-condensed table-striped" data-provides="rowlink">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="boo.html#feature">Feature</a></td>
+                                <td>Lorem ipsum dolor sit amet consectetuer tellus Nullam Cum enim a</td>
+                                <td class="nohref"><a href="#">Action</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="base-css.html#tables">Table</a></td>
+                                <td>Lorem ipsum dolor sit amet consectetuer tellus Nullam Cum enim a</td>
+                                <td class="nohref"><a href="#">Action</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;table class="table table-bordered table-condensed table-striped" data-provides="rowlink"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a href="boo.html#feature"&gt;Feature&lt;/a&gt;&lt;/td&gt;
+        &lt;td class="nohref"&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a href="base-css.html#tables"&gt;Table&lt;/a&gt;&lt;/td&gt;
+        &lt;td class="nohref"&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+                <h3>Via data attributes</h3>
+                <p class="margin-bottom20">Add <code>data-provides="rowlink"</code> to a <code>&lt;table&gt;</code>, <code>&lt;tbody&gt;</code> or <code>&lt;tr&gt;</code> element. The value should be selector to the link, which is a child of the row. A cell can be excluded by adding the <code>.nolink</code> class to the <code>&lt;td&gt;</code>.</p>
+                <p class="margin-bottom20"><span class="label label-info">Tip!</span> Add <code>.rowlink</code> to your <code>&lt;a&gt;</code>. This prevents the link styling during page load.</p>
+                <h3>Options</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col15">Name</th>
+                            <th class="col15">type</th>
+                            <th class="col15">default</th>
+                            <th class="col55">description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>target</td>
+                            <td>string</td>
+                            <td>'a'</td>
+                            <td>A jquery selector string, to select the link element within each row.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://jasny.github.com/bootstrap/javascript.html#rowlink"><i class="fontello-icon-link-4"></i> jasny.github.com/bootstrap/javascript</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap ProgressBar -->
+            <section id="plugins-progressbar">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-progress-2"></i> Bootstrap ProgressBar</h2>
+                </div>
+                <dl>
+                    <dd>Bootstrap-progressbar is a jQuery plugin which extends the basic twitter-bootstrap progressbar. It provides the ability to animate the progressbar by adding Javascript in combination with the preexisting css transitions. Additionally you can display the current progress information in the bar or get the value via callback.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('.progress .bar').progressbar();</pre>
+                <h3>Usage plugin</h3>
+                <p>set the data attribute and remove the width style attribute (alternatively you can set it to 0)</p>
+                <pre class="prettyprint linenums">
+    &lt;!-- data-percentage --&gt;
+    &lt;div class="progress progress-info"&gt;
+        &lt;div class="bar" data-percentage="75"&gt;&lt;/div&gt;
+    &lt;/div&gt;</pre>
+                <pre class="prettyprint linenums">
+    &lt;!-- data-amount-part and data-amount-total --&gt;
+    &lt;div class="progress progress-info"&gt;
+        &lt;div class="bar" data-amount-part="1337" data-amount-total="9000"&gt;&lt;/div&gt;
+    &lt;/div&gt;</pre>
+                <h3>Customization</h3>
+                <h4>1. alignment</h4>
+                <p>to use a horizontal progressbar which is align to the right you have to add <code>right</code> to the <code>progress</code> element</p>
+                <pre class="prettyprint linenums">&lt;div class="progress right progress-info"&gt;</pre>
+                <p>to use a vertical progressbar you have to add <code>vertical</code> to the <code>progress</code> element</p>
+                <pre class="prettyprint linenums">&lt;div class=progress vertical progress-info"&gt;</pre>
+                <p>o use a vertical progressbar which is align to the bottom you have to add <code>vertical</code> and <code>bottom</code> to the <code>progress</code> element</p>
+                <pre class="prettyprint linenums">&lt;div class="progress vertical bottom progress-info"&gt;</pre>
+                <h4>2. text and delay</h4>
+                <p>simply add additional parameters when activating the script</p>
+                <pre class="prettyprint linenums">
+$(document).ready(function() {
+    $('.progress .bar').progressbar({
+        transition_delay: 300,
+        refresh_speed: 50,
+        display_text: 2,
+        use_percentage: true,
+        update: doSomethingCool( current_percentage ) { .. },
+        done: doSomethingCool( ) { .. },
+        fail: doSomethingCool( error_message ) { .. },
+    });
+});</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered _table-condensed table-striped">
+                    <colgroup>
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col70">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Options</th>
+                            <th></th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>transition_delay</td>
+                            <td></td>
+                            <td>is the time in milliseconds until the animation starts</td>
+                        </tr>
+                        <tr>
+                            <td>refresh_speed</td>
+                            <td></td>
+                            <td>is the time in milliseconds which will elapse between every text refresh / callback call</td>
+                        </tr>
+                        <tr>
+                            <td>display_text</td>
+                            <td></td>
+                            <td>determines whether the text will be displayed</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>0</td>
+                            <td><strong>no text</strong> this mode doesn't change any css / html</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td><strong>text on filled bar</strong> this mode doesn't change any css / html</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>2</td>
+                            <td><strong>text on center</strong> this mode changes css / html due to styling requirements</td>
+                        </tr>
+                        <tr>
+                            <td>use_percentage</td>
+                            <td></td>
+                            <td>determines whether the text will be displayed in percent or amount</td>
+                        </tr>
+                        <tr>
+                            <td>update</td>
+                            <td></td>
+                            <td>callback where you can grab the actual percentage value</td>
+                        </tr>
+                        <tr>
+                            <td>done</td>
+                            <td></td>
+                            <td>callback which indicates when progressbar is filled to the given value</td>
+                        </tr>
+                        <tr>
+                            <td>fail</td>
+                            <td></td>
+                            <td>callback where you can grab an error message when something went wrong</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>3. animation</h4>
+                <p>horizontal</p>
+                <pre class="prettyprint linenums">
+.progress .bar.two-sec-ease-in-out {
+    -webkit-transition: width 2s ease-in-out;
+    -moz-transition: width 2s ease-in-out;
+    -ms-transition: width 2s ease-in-out;
+    -o-transition: width 2s ease-in-out;
+    transition: width 2s ease-in-out;
+}</pre>
+                <p>vertical</p>
+                <pre class="prettyprint linenums">
+.progress.vertical .bar.two-sec-ease-in-out {
+    -webkit-transition: height 2s ease-in-out;
+    -moz-transition: height 2s ease-in-out;
+    -ms-transition: height 2s ease-in-out;
+    -o-transition: height 2s ease-in-out;
+    transition: height 2s ease-in-out;
+}</pre>
+                <pre class="prettyprint linenums">
+&lt;div class="progress progress-success right"&gt;
+    &lt;div data-amount-total="9000" data-amount-part="1337" class="bar six-sec-ease-in-out">&lt;/div&gt;
+&lt;/div&gt;</pre>
+                <p class="margin-bottom20">you have a choice of 2s <code>two-sec-ease-in-out</code> or 4s <code>four-sec-ease-in-out</code> or 6s <code>six-sec-ease-in-out</code> or use custom css</p>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/minddust/bootstrap-progressbar"><i class="fontello-icon-link-4"></i> github.com/minddust/bootstrap-progressbar</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Wysihtml5 -->
+            <section id="pluginsl-wysihtm">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-font"></i> Bootstrap Wysihtml5</h2>
+                </div>
+                <dl>
+                    <dd>Bootstrap-wysihtml5 is a javascript plugin that makes it easy to create simple, beautiful wysiwyg editors with the help of wysihtml5 and Twitter Bootstrap.</dd>
+                </dl>
+                <pre class="prettyprint linenums">
+  &lt;script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#some-textarea').wysihtml5();</pre>
+                <h3>Usage plugin</h3>
+                <pre class="prettyprint linenums">&lt;textarea id="some-textarea" placeholder="Enter text ..."&gt;&lt;/textarea&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/jhollingworth/bootstrap-wysihtml5"><i class="fontello-icon-link-4"></i> github.com/jhollingworth/bootstrap-wysihtml5</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Selectpicker -->
+            <section id="plugins-selectpicker">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-doc-text"></i> Bootstrap Select</h2>
+                </div>
+                <dl>
+                    <dd>This plugin turns a table row into a clickable link.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-select/bootstrap-select.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('.selectpicker').selectpicker();</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <select class="selectpicker">
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Barbecue</option>
+                    </select>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;select class="selectpicker"&gt;
+    &lt;option&gt;Mustard&lt;/option&gt;
+    &lt;option&gt;Ketchup&lt;/option&gt;
+    &lt;option&gt;Barbecue&lt;/option&gt;
+&lt;/select&gt;</pre>
+                <p>Control size to wrap <code>.selectpicker-block</code></p>
+                <div class="bs-docs-example">
+                    <select id="selectpicker2" class="span3" data-style="btn-green">
+                        <option value="1">item 1</option>
+                        <option value="2">item 2</option>
+                        <option value="3">item 3</option>
+                    </select>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;select id="selectpicker2" class="span3" data-style="btn-green"&gt;
+    &lt;option value="1"&gt;item 1&lt;/option&gt;
+    &lt;option value="2"&gt;item 2&lt;/option&gt;
+    &lt;option value="3"&gt;item 3&lt;/option&gt;
+&lt;/select&gt;</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Key</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>style</td>
+                            <td>btn</td>
+                            <td>class for bootstrap button <code>btn-success</code> use via class <code>data-style</code> to the select</td>
+                        </tr>
+                        <tr>
+                            <td>size</td>
+                            <td>'auto'</td>
+                            <td>When size is set to <code>'auto'</code>, the menu always opens up to show as many items as the window will allow without being cut off. Set size to <code>'false'</code> to always show all items. Use via class <code>data-size</code> to the select </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <pre class="prettyprint linenums">
+$('.selectpicker').selectpicker();
+
+$('select').selectpicker();
+
+$('.selectpicker').selectpicker({
+	style: 'btn-info',
+  	size: 3
+});</pre>
+                <p>Apply <code>.span*</code> class to the selects to set the width. Add the <code>disabled</code> attribute to the select to apply the <code>.disabled</code> class.</p>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/silviomoreto/bootstrap-select"><i class="fontello-icon-link-4"></i> github.com/silviomoreto/bootstrap-select</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap MultiSelect -->
+            <section id="plugins-multiselect">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-doc-text"></i> Bootstrap Multiselect</h2>
+                </div>
+                <dl>
+                    <dd>Bootstrap Multiselect is a JQuery based plugin to provide an intuitive user interface for using select inputs with the multiple attribute present. Instead of a select a bootstrap button will be shown as dropdown menu containing the single options as checkboxes.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#multiselect').multiselect();</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <select id="multiselect">
+                        <option value="item1">item 1</option>
+                        <option value="item2">item 2</option>
+                        <option value="item3">item 3</option>
+                        <option value="item4">item 4</option>
+                        <option value="item5">item 5</option>
+                        <option value="item6">item 6</option>
+                    </select>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;select id="multiselect"&gt;
+  &lt;option value="item1"&gt;item 1&lt;/option&gt;
+  &lt;option value="item2"&gt;item 2&lt;/option&gt;
+  &lt;option value="item3"&gt;item 3&lt;/option&gt;
+  &lt;option value="item4"&gt;item 4&lt;/option&gt;
+  &lt;option value="item5"&gt;item 5&lt;/option&gt;
+  &lt;option value="item6"&gt;item 6&lt;/option&gt;
+&lt;/select&gt;</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Key</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>none</td>
+                            <td></td>
+                            <td>define placeholder if no selection</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>auto</td>
+                            <td>The width of the dropdown button px % auto</td>
+                        </tr>
+                        <tr>
+                            <td>text</td>
+                            <td></td>
+                            <td>Defining the text of the button. Must be a function returning a string. All currently selected options are passed as parameter.</td>
+                        </tr>
+                        <tr>
+                            <td>container</td>
+                            <td>&lt;span class="dropdown" /&gt;</td>
+                            <td>The used container holding both the dropdown button and the dropdown menu.</td>
+                        </tr>
+                        <tr>
+                            <td>onchange</td>
+                            <td></td>
+                            <td>Assign an event handler to the change event:</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <pre class="prettyprint linenums">
+$(document).ready(function() {
+    $('.multiselect').multiselect()
+    
+    $('.multiselect').multiselect({
+        'none': 'select something...'
+    });
+
+    $('.multiselect').multiselect({
+        container: '&lt;span class="dropdown" /&gt;',
+    });
+});</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/davidstutz/bootstrap-multiselect"><i class="fontello-icon-link-4"></i> github.com/davidstutz/bootstrap-multiselect</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Combobox -->
+            <section id="plugins-combobox">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-doc-text"></i> Bootstrap Combobox</h2>
+                </div>
+                <dl>
+                    <dd>Combines input and dropdown for easy and flexible data selection.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-fuelux/js/combobox.js.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#myCombobox').combobox()</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div class="input-append dropdown combobox">
+                        <input class="span3" type="text">
+                        <button class="btn" data-toggle="dropdown"><i class="caret"></i></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Item One</a></li>
+                            <li><a href="#">Item Two</a></li>
+                            <li><a href="#">Item Three</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Item After Divider</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="input-append dropdown combobox"&gt;
+    &lt;input class="span3" type="text"&gt;
+    &lt;button class="btn" data-toggle="dropdown"&gt;&lt;i class="caret"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item One&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item Two&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item Three&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item After Divider&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                <h3>Methods</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>disable</td>
+                        <td>Disable the combobox</td>
+                    </tr>
+                    <tr>
+                        <td>enable</td>
+                        <td>Enable the combobox</td>
+                    </tr>
+                    <tr>
+                        <td>selectedItem</td>
+                        <td>Returns an object containing the jQuery data() contents of the selected item <em><a href="http://api.jquery.com/data/#data-html5">which includes data-* attributes</a></em> plus a <code>text</code> property with the items's visible text.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>setByIndex</td>
+                        <td>Set the selected item based on its index in the list (zero-based index). Convenience method for
+                            <code>setBySelector('li:eq({index})')</code></td>
+                    </tr>
+                    <tr>
+                        <td>setByText</td>
+                        <td>Set the selected item based on its text value</td>
+                    </tr>
+                    <tr>
+                        <td>setBySelector</td>
+                        <td>Set the selected item based on a selector. For example: <code>$('#myCombobox').select('setBySelector','li[data-fizz=buzz]');</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>setByValue</td>
+                        <td>Set the selected item based on its value. Convenience method for <code>setBySelector('data-value={value}')</code>
+                            that requires the item to have a <code>data-value="{value}"</code> attribute
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Events</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                    	<tr>
+                        	<th style="width: 150px;">Event</th>
+                        	<th>Description</th>
+                    	<tr>
+                            <td>changed</td>
+                            <td>This event is fired when the value has changed (either by selecting an item from the list or
+                                updating the input value directly). Arguments are <code>event, data</code> where data represents
+                                the same object structure returned by the <code>selectedItem</code> method.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://exacttarget.github.com/fuelux/#combobox"><i class="fontello-icon-link-4"></i> fuelux - combobox</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Spiner -->
+            <section id="plugins-spinner">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-doc-text"></i> Bootstrap Spinner</h2>
+                </div>
+                <dl>
+                    <dd>Provides convenient numeric input with increment and decrement buttons.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-fuelux/js/spinner.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#MySpinner').spinner()</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div id="MySpinner" class="spinner">
+                        <input type="text" class="input-mini spinner-input">
+                        <div class="spinner-buttons  btn-group btn-group-vertical">
+                            <button class="btn spinner-up">
+                                <i class="fontello-icon-up-micro"></i>
+                            </button>
+                            <button class="btn spinner-down">
+                                <i class="fontello-icon-down-micro"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div id="MySpinner" class="spinner"&gt;
+    &lt;input type="text" class="input-mini spinner-input"&gt;
+    &lt;div class="spinner-buttons  btn-group btn-group-vertical"&gt;
+        &lt;button class="btn spinner-up"&gt;
+        	&lt;i class="fontello-icon-up-micro"&gt;&lt;/i&gt;
+        &lt;/button&gt;
+        &lt;button class="btn spinner-down"&gt;
+        	&lt;i class="fontello-icon-down-micro"&gt;&lt;/i&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                <h3>Methods</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th style="width: 150px;">Method</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>Sets or returns the spinner value. As an example, <code>$('#MySpinner').spinner('value')</code>
+                                would return spinner value and <code style="white-space: nowrap;">$('#MySpinner').spinner('value',
+                                    37)</code> would set spinner value to 37.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>disable</td>
+                            <td>Disable the spinner.</td>
+                        </tr>
+                        <tr>
+                            <td>enable</td>
+                            <td>Enable the spinner.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Options</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th style="width: 150px;">Options</th>
+                            <th>Description</th>
+                            <th>Default Value</th>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>Sets the initial spinner value.</td>
+                            <td><code>1</code></td>
+                        </tr>
+                        <tr>
+                            <td>min</td>
+                            <td>Sets the minimum spinner value.</td>
+                            <td><code>1</code></td>
+                        </tr>
+                        <tr>
+                            <td>max</td>
+                            <td>Sets the maximum spinner value.</td>
+                            <td><code>999</code></td>
+                        </tr>
+                        <tr>
+                            <td>step</td>
+                            <td>Sets the increment by which the value in the spinner will change each time the spinner buttons
+                                are pressed.
+                            </td>
+                            <td><code>1</code></td>
+                        </tr>
+                        <tr>
+                            <td>hold</td>
+                            <td>If <code>true</code> the spinner will react to its buttons being pressed and held down.</td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td>speed</td>
+                            <td>Spinner speed when buttons are held down. The options include:
+                                <code>"fast","medium","slow"</code>.
+                            </td>
+                            <td><code>"medium"</code></td>
+                        </tr>
+                        <tr>
+                            <td>disabled</td>
+                            <td>Spinner will be disabled when it is created.</td>
+                            <td><code>false</code></td>
+                        </tr>
+                    </tbody>
+				</table>
+                
+                <h3>Events</h3>
+                <table class="table table-bordered table-striped">
+                    </tbody>
+                        <tr>
+                            <th style="width: 150px;">Event</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>changed</td>
+                            <td>This event is fired when the value has changed (either by selecting an item from the list or
+                                updating the input value directly). Arguments are <code>event, value</code> where value is
+                                the current value of the spinner.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://exacttarget.github.com/fuelux/#spinner"><i class="fontello-icon-link-4"></i> fuelux - spinner</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Search -->
+            <section id="plugins-search">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-doc-text"></i> Bootstrap Search</h2>
+                </div>
+                <dl>
+                    <dd>Combines input and button for integrated search interaction.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-fuelux/js/search.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#MySearch').search()</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div id="MySearch" class="input-append search">
+                        <input type="text" class="input-medium" placeholder="Search"><button class="btn"><i class="fontello-icon-search-5"></i></button>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div id="MySearch" class="input-append search"&gt;
+	&lt;input type="text" class="input-medium" placeholder="Search"&gt;&lt;button class="btn"&gt;&lt;i class="fontello-icon-search-5"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</pre>
+                <h3>Methods</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th style="width: 150px;">Method</th>
+                            <th>Description</th>
+                        </tr>
+                         <tr>
+                            <td>disable</td>
+                            <td>Disables the search control</td>
+                        </tr>
+                        <tr>
+                            <td>enable</td>
+                            <td>Enables the search control</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Events</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th style="width: 150px;">Event</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>searched</td>
+                            <td>This event is fired when a search has been performed. Arguments are <code>event,
+                                searchText</code></td>
+                        </tr>
+                        <tr>
+                            <td>cleared</td>
+                            <td>This event is fired when the search has been cleared.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://exacttarget.github.com/fuelux/#search"><i class="fontello-icon-link-4"></i> fuelux - search</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Wizard -->
+            <section id="plugins-wizard">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-folder-empty"></i> Bootstrap Wizard</h2>
+                </div>
+                <dl>
+                    <dd>This twitter bootstrap plugin builds a wizard out of a formatter tabbable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each step individually.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#wizard').bootstrapWizard();</pre>
+                <h3>Usage plugin</h3>
+                <pre class="prettyprint linenums">
+&lt;!-- Base --&gt;
+&lt;div id="wizard"&gt;
+    &lt;div class="navbar"&gt;
+        &lt;div class="navbar-inner"&gt;
+           &lt;div class="container"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#tab1" data-toggle="tab"&gt;First&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Second&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#tab3" data-toggle="tab"&gt;Third&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="tab-content"&gt;
+            &lt;div class="tab-pane" id="tab1"&gt; 1 &lt;/div&gt;
+            &lt;div class="tab-pane" id="tab2"&gt; 2 &lt;/div&gt;
+            &lt;div class="tab-pane" id="tab3"&gt; 3 &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;ul class="pager wizard"&gt;
+            &lt;li class="previous first" style="display:none;"&gt;&lt;a href="#"&gt;First&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="previous"&gt;&lt;a href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="next last" style="display:none;"&gt;&lt;a href="#"&gt;Last&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="next"&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;	
+&lt;/div&gt;</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Key</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>class</td>
+                            <td>nav nav-pills</td>
+                            <td>ul navigation class</td>
+                        </tr>
+                        <tr>
+                            <td>nextSelector</td>
+                            <td>.wizard li.next</td>
+                            <td>next element selector</td>
+                        </tr>
+                        <tr>
+                            <td>previousSelector</td>
+                            <td>.wizard li.previous</td>
+                            <td>previous element selector</td>
+                        </tr>
+                        <tr>
+                            <td>firstSelector</td>
+                            <td>.wizard li.first</td>
+                            <td>first element selector</td>
+                        </tr>
+                        <tr>
+                            <td>lastSelector</td>
+                            <td>.wizard li.last</td>
+                            <td>last element selector</td>
+                        </tr>
+                        <tr>
+                            <td>onInit</td>
+                            <td>null</td>
+                            <td>Fired when plugin is initialized</td>
+                        </tr>
+                        <tr>
+                            <td>onShow</td>
+                            <td>null</td>
+                            <td>Fired when plugin data is shown</td>
+                        </tr>
+                        <tr>
+                            <td>onNext</td>
+                            <td>null</td>
+                            <td>Fired when next button is clicked (return false to disable moving to the next step)</td>
+                        </tr>
+                        <tr>
+                            <td>onPrevious</td>
+                            <td>null</td>
+                            <td>Fired when previous button is clicked (return false to disable moving to the previous step)</td>
+                        </tr>
+                        <tr>
+                            <td>onFirst</td>
+                            <td>null</td>
+                            <td>Fired when first button is clicked (return false to disable moving to the first step)</td>
+                        </tr>
+                        <tr>
+                            <td>onLast</td>
+                            <td>null</td>
+                            <td>Fired when last button is clicked (return false to disable moving to the last step)</td>
+                        </tr>
+                        <tr>
+                            <td>onTabClick</td>
+                            <td>null</td>
+                            <td>Fired when a tab is clicked (return false to disable moving to that tab and showing it's contents)</td>
+                        </tr>
+                        <tr>
+                            <td>onTabShow</td>
+                            <td>null</td>
+                            <td>Fired when a tab content is shown (return false to disable showing that tab content)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/VinceG/twitter-bootstrap-wizard"><i class="fontello-icon-link-4"></i> github.com/VinceG/twitter-bootstrap-wizard</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Wizard 2 -->
+            <section id="plugins-wizard2">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-folder-empty"></i> Bootstrap Wizard 2</h2>
+                </div>
+                <dl>
+                    <dd>This twitter bootstrap plugin builds a wizard out of a formatter tabbable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each step individually.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$("#wizard").bwizard();</pre>
+                <p>For detailed info visit the original documentation</p>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/gilluminate/Bootstrap-Wizard"><i class="fontello-icon-link-4"></i> github.com/gilluminate/Bootstrap-Wizard</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Bootstrap Pillbox -->
+            <section id="plugins-pillbox">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-doc-text"></i> Bootstrap Pillbox</h2>
+                </div>
+                <dl>
+                    <dd>Easily manage selected items with color-coded text labels.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/bootstrap-fuelux/js/pillbox.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#MyPillbox').pillbox()</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div id="MyPillbox" class="pillbox">
+                          <ul>
+                                <li data-value="foo">Item One</li>
+                                <li class="status-success">Item Two</li>
+                                <li class="status-warning">Item Three</li>
+                                <li class="status-important">Item Four</li>
+                                <li class="status-info">Item Five</li>
+                                <li class="status-success">Item Six</li>
+                                <li>Item Seven</li>
+                          </ul>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div id="MyPillbox" class="pillbox"&gt;
+    &lt;ul&gt;
+        &lt;li data-value="foo"&gt;Item One&lt;/li&gt;
+        &lt;li class="status-success"&gt;Item Two&lt;/li&gt;
+        &lt;li class="status-warning"&gt;Item Three&lt;/li&gt;
+        &lt;li class="status-important"&gt;Item Four&lt;/li&gt;
+        &lt;li class="status-info"&gt;Item Five&lt;/li&gt;
+        &lt;li class="status-success"&gt;Item Six&lt;/li&gt;
+        &lt;li&gt;Item Seven&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                <h3>Methods</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th style="width: 150px;">Method</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>items</td>
+                            <td>Returns an array of objects, one per item, each containing the jQuery data() contents of the
+                                item <em><a href="http://api.jquery.com/data/#data-html5">which includes data-*
+                                    attributes</a></em> plus a <code>text</code> property with the label's visible text
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://exacttarget.github.com/fuelux/#pillbox"><i class="fontello-icon-link-4"></i> fuelux - pillbox</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Plugins jQuery 
+            ================================================== -->
+            <section id="plugins-jquery">
+                <div class="page-header doc">
+                    <h2>jQuery plugins</h2>
+                </div>
+                <h3>Location</h3>
+                <p>Location of assets/plugins/</p>
+                <hr class="bs-docs-separator">
+                <ul class="nav the-50 clearfix">
+                    <li><a href="#plugins-datatable"><i class="icon-chevron-right"></i> jQuery - Datatable</a></li>
+                    <li><a href="#plugins-sparklines"><i class="icon-chevron-right"></i> jQuery - Sparklines</a></li>
+                    <li><a href="#plugins-flot"><i class="icon-chevron-right"></i> jQuery - Flot Chart</a></li>
+                    <li><a href="#plugins-uniform"><i class="icon-chevron-right"></i> jQuery - Uniform</a></li>
+                    <li><a href="#plugins-select2"><i class="icon-chevron-right"></i> jQuery - Select2 <span class="label label-info">update</span></a></li>
+                    <li><a href="#plugins-counter"><i class="icon-chevron-right"></i> jQuery - Character & Word counter</a></li>
+                    <li><a href="#plugins-elastic"><i class="icon-chevron-right"></i> jQuery - Elastic</a></li>
+                    <li><a href="#plugins-inputmask"><i class="icon-chevron-right"></i> jQuery - Inputmask</a></li>
+                    <li><a href="#plugins-validate"><i class="icon-chevron-right"></i> jQuery - Validate</a></li>
+                    <li><a href="#plugins-nicescroll"><i class="icon-chevron-right"></i> jQuery - Nicescroll <span class="label label-info">update</span></a></li>
+                    <li><a href="#plugins-gtip"><i class="icon-chevron-right"></i> jQuery - gTip2</a></li>
+                    <li><a href="#plugins-list"><i class="icon-chevron-right"></i> jQuery - List.js</a></li>
+                    <li><a href="#plugins-fullcalendar"><i class="icon-chevron-right"></i> jQuery - Fullcalendar</a></li>
+                    <li><a href="#plugins-breadcrumbs"><i class="icon-chevron-right"></i> jQuery - xBreadcrumbs</a></li>
+                    <li><a href="#plugins-prettify"><i class="icon-chevron-right"></i> jQuery - Google-code-prettify</a></li>
+                    <li><a href="#plugins-gallery"><i class="icon-chevron-right"></i> jQuery - Image Gallery <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-nailthumb"><i class="icon-chevron-right"></i> jQuery - Nailthumb <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-wookmark"><i class="icon-chevron-right"></i> jQuery - Wookmark <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-rangeslider"><i class="icon-chevron-right"></i> jQuery - Rangeslider <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-jpages"><i class="icon-chevron-right"></i> jQuery - jPages <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-jqfileupload"><i class="icon-chevron-right"></i> jQuery - File upload <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-duallistbox"><i class="icon-chevron-right"></i> jQuery - Dual listbox <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-gritter"><i class="icon-chevron-right"></i> jQuery - Gritter <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-notyfy"><i class="icon-chevron-right"></i> jQuery - Notyfy <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-easypiechart"><i class="icon-chevron-right"></i> jQuery - Easy Pie Chart <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-knob"><i class="icon-chevron-right"></i> jQuery - Knob <span class="label label-success">new</span></a></li>
+                    <li><a href="#plugins-percentageloader"><i class="icon-chevron-right"></i> jQuery - Percentage Loader <span class="label label-success">new</span></a></li>
+                </ul>
+            </section>
+            
+            <!-- DataTables -->
+            <section id="plugins-datatable">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-th-list"></i> DataTables</h2>
+                </div>
+                <dl>
+                    <dd>DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table.</dd>
+                    <dd class="text-error">Main Specifications plugin is set directly in the file jquery.dataTables.js</dd>
+                </dl>
+                <pre class="prettyprint linenums">
+  &lt;script src="assets/plugins/datatables/media/js/jquery.dataTables.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/datatables/plugin/jquery.dataTables.plugins.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/datatables/plugin/jquery.dataTables.columnFilter.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#table').datatable();</pre>
+                <h3>Options for Boo</h3>
+                <pre class="prettyprint linenums">
+//* http://datatables.net/blog/Twitter_Bootstrap_2
+$.extend($.fn.dataTableExt.oStdClasses, {
+    sWrapper: "datatable-wrapper form-inline",
+    sFilter: "table-global-filter pull-right",
+    sInfo: "table-message-info",
+    sPaging: "btn-group paging_",
+    sLength: "length pull-left",
+    //sProcessing: "", 
+    // Paging two button
+    sPagePrevEnabled: "btn previous",
+    sPagePrevDisabled: "btn previous disabled",
+    sPageNextEnabled: "btn next",
+    sPageNextDisabled: "btn next disabled",
+    
+    // Paginate full numbers
+    sPageButton: "btn btn-boo",
+    sPageButtonActive: "btn btn-sky active",
+    sPageButtonStaticDisabled: "btn disabled",
+    sPageFirst: "btn",
+    sPageLast: "btn",
+    sPageNext: "btn",
+    sPageLast: "btn"
+});</pre>
+                <div class="alert alert-error">setting for Boo is added directly into the plugins/DataTables/media/js/jquery.dataTables.js<br>
+                    if you want to update the plugin remember to add this code (row 12102 - 12193) or jquery.dataTables.min.js file (row 158 - 250)</div>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <table id="exampleDT" class="table table-striped table-hover">
+                        <caption>
+                        Base setting <span>for table</span>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID <span class="column-sorter"></span></th>
+                                <th scope="col">Name <span class="column-sorter"></span></th>
+                                <th scope="col">City <span class="column-sorter"></span></th>
+                                <th scope="col">Email <span class="column-sorter"></span></th>
+                                <th scope="col">Date of birth <span class="column-sorter"></span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Colin Nixon</td>
+                                <td>Long Beach</td>
+                                <td>semper@diamSeddiam.edu</td>
+                                <td>02/10/1986</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Naida Bennett</td>
+                                <td>Lockport</td>
+                                <td>commodo@Curabiturconsequatlectus.ca</td>
+                                <td>04/21/1959</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Danielle Myers</td>
+                                <td>Bentonville</td>
+                                <td>nunc.sed@liberoInteger.ca</td>
+                                <td>12/11/1971</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Whitney Jones</td>
+                                <td>Troy</td>
+                                <td>Nunc@sedliberoProin.edu</td>
+                                <td>08/09/1976</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Marvin Bell</td>
+                                <td>Cody</td>
+                                <td>aliquet@Craspellentesque.com</td>
+                                <td>10/17/1979</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Lucas Melendez</td>
+                                <td>Plano</td>
+                                <td>Maecenas.malesuada@Duismi.org</td>
+                                <td>02/25/1967</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Devin Harris</td>
+                                <td>Altoona</td>
+                                <td>dolor.sit@apurus.org</td>
+                                <td>01/09/1990</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Tucker Graves</td>
+                                <td>Yorba Linda</td>
+                                <td>libero.nec.ligula@hendrerita.ca</td>
+                                <td>12/03/1962</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Linus Carpenter</td>
+                                <td>Attleboro</td>
+                                <td>pellentesque.massa@feugiat.com</td>
+                                <td>03/06/1975</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;table id="exampleDT" class="table table-striped table-hover"&gt;
+&lt;caption&gt;Default Table Caption - Title for table &lt;span&gt;Here text in span&lt;/span&gt;&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;ID &lt;span class="column-sorter"&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;Name &lt;span class="column-sorter"&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;City &lt;span class="column-sorter"&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;Email &lt;span class="column-sorter"&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;Date of birth &lt;span class="column-sorter"&gt;&lt;/span&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Colin Nixon&lt;/td&gt;
+            &lt;td&gt;Long Beach&lt;/td&gt;
+            &lt;td&gt;semper@diamSeddiam.edu&lt;/td&gt;
+            &lt;td&gt;02/10/1986&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        	...
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+$('#exampleDT').dataTable({
+    iDisplayLength: 3,
+    sDom: "&lt;'row-fluid' &lt;'span4'l&gt; &lt;'span8'pf&gt; &gt; rt &lt;'row-fluid' &lt;'span12'i&gt; &gt;"
+});</pre>
+                <a class="btn margin-m0" target="_blank" href="../component-table-datatable.html"><i class="fontello-icon-link-4"></i>Refer to the sample code in detail page for more settings</a>
+                <p class="margin-mm">and demo file ../assets/js/demo/demo-jquery.dataTables.js</p>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://datatables.net"><i class="fontello-icon-link-4"></i> DataTables</a> <a class="btn margin-m0" target="_blank" href="http://datatables.net/blog/Twitter_Bootstrap_2"><i class="fontello-icon-link-4"></i> DataTables integration in Bootstrap 2</a> <a class="btn margin-m0" target="_blank" href="http://jquery-datatables-column-filter.googlecode.com/svn/trunk/index.html"><i class="fontello-icon-link-4"></i> Column Filter Plugin</a> <a class="btn margin-m0" target="_blank" href="http://datatables.net/extras/scroller/"><i class="fontello-icon-link-4"></i>Scroller Plugin</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Sparklines -->
+            <section id="plugins-sparklines">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-chart-1"></i> jQuery Sparkline</h2>
+                </div>
+                <dl>
+                    <dd>This jQuery plugin generates sparklines (small inline charts) directly in the browser using data supplied either inline in the HTML, or via javascript.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/sparkline/jquery.sparkline.js"&gt;&lt;/script&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://omnipotent.net/jquery.sparkline/#s-about"><i class="fontello-icon-link-4"></i> jquery.sparkline</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Flot -->
+            <section id="plugins-flot">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-chart-bar"></i> jQuery Flot</h2>
+                </div>
+                <dl>
+                    <dd>Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and interactive features.</dd>
+                </dl>
+                <pre class="prettyprint linenums">
+  &lt;script src="assets/plugins/flot/jquery.flot.js"&gt;&lt;/script&gt;
+  plugins for Flot
+  &lt;script src="assets/plugins/flot/jquery.flot.categories.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.grow.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.orderBars.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.pie.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.resize.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.selection.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.stack.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.stackpercent.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.time.js"&gt;&lt;/script&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://www.flotcharts.org/"><i class="fontello-icon-link-4"></i> plotting for jQuery</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- Uniform -->
+            <section id="plugins-uniform">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-check"></i> Uniform</h2>
+                </div>
+                <dl>
+                    <dd>Uniform masks your standard form controls with custom themed controls. It works in sync with your real form elements to ensure accessibility and compatibility.</dd>
+                    <dd>In Boo with the Uniform used for radio and checkbox.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/uniform/jquery.uniform.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">
+    $("input.checkbox, input.radio, input:file.input-file").uniform({
+        radioClass: 'radios' // edited class - the original radio
+    });</pre>
+                <h3>Usage plugin</h3>
+                <p>Use class <code>.checkbox</code> <code>.radio</code> to element </p>
+                <div class="bs-docs-example">
+                    <label class="checkbox">
+                        <input class="checkbox" type="checkbox" value="option1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing checkbox </label>
+                    <label class="checkbox">
+                        <input class="checkbox" type="checkbox" value="option1" checked>
+                        Checked </label>
+                    <label class="radio">
+                        <input id="formA17" class="radio" type="radio" name="optionsRadio" value="option1">
+                        Option 1 - This is radio group </label>
+                    <label class="radio">
+                        <input id="formA18" class="radio" type="radio" name="optionsRadio" value="option2" checked>
+                        Option 2 - checked </label>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;label class="checkbox"&gt;
+&lt;input class="checkbox" type="checkbox" value="option1"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing checkbox &lt;/label&gt;
+
+&lt;label class="checkbox"&gt;
+&lt;input class="checkbox" type="checkbox" value="option2" checked&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing checkbox &lt;/label&gt;
+
+&lt;label class="radio"&gt;
+&lt;input class="radio" type="radio" value="option1"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing Radio &lt;/label&gt;</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered _table-condensed table-striped">
+                    <colgroup>
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col55">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Options</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>selectClass</td>
+                            <td>string</td>
+                            <td>selector</td>
+                            <td>Sets the class given to the wrapper div for select elements.</td>
+                        </tr>
+                        <tr>
+                            <td>radioClass</td>
+                            <td>string</td>
+                            <td>radio</td>
+                            <td>Sets the class given to the wrapper div for radio elements.</td>
+                        </tr>
+                        <tr>
+                            <td>checkboxClass</td>
+                            <td>string</td>
+                            <td>checker</td>
+                            <td>Sets the class given to the wrapper div for checkbox elements.</td>
+                        </tr>
+                        <tr>
+                            <td>fileClass</td>
+                            <td>string</td>
+                            <td>uploader</td>
+                            <td>Sets the class given to the wrapper div for file upload elements.</td>
+                        </tr>
+                        <tr>
+                            <td>filenameClass</td>
+                            <td>string</td>
+                            <td>filename</td>
+                            <td>Sets the class given to div inside a file upload container that spits out the filename.</td>
+                        </tr>
+                        <tr>
+                            <td>fileBtnClass</td>
+                            <td>string</td>
+                            <td>action</td>
+                            <td>Sets the class given to div inside a file upload container that acts as the "Choose file" button.</td>
+                        </tr>
+                        <tr>
+                            <td>fileDefaultText</td>
+                            <td>string</td>
+                            <td>No file selected</td>
+                            <td>Sets the text written in the filename div of a file upload input when there is no file selected.</td>
+                        </tr>
+                        <tr>
+                            <td>fileBtnText</td>
+                            <td>string</td>
+                            <td>Choose File</td>
+                            <td>Sets the text written on the action button inside a file upload input.</td>
+                        </tr>
+                        <tr>
+                            <td>checkedClass</td>
+                            <td>string</td>
+                            <td>checked</td>
+                            <td>Sets the class given to elements when they are checked (radios and checkboxes).</td>
+                        </tr>
+                        <tr>
+                            <td>focusClass</td>
+                            <td>string</td>
+                            <td>focus</td>
+                            <td>Sets the class given to elements when they are focused.</td>
+                        </tr>
+                        <tr>
+                            <td>disabledClass</td>
+                            <td>string</td>
+                            <td>disabled</td>
+                            <td>Sets the class given to elements when they are disabled.</td>
+                        </tr>
+                        <tr>
+                            <td>activeClass</td>
+                            <td>string</td>
+                            <td>active</td>
+                            <td>Sets the class given to elements when they are active (pressed).</td>
+                        </tr>
+                        <tr>
+                            <td>hoverClass</td>
+                            <td>string</td>
+                            <td>hover</td>
+                            <td>Sets the class given to elements when they are currently hovered.</td>
+                        </tr>
+                        <tr>
+                            <td>useID</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>If true, sets an ID on the container div of each form element. The ID is a prefixed version of the same ID of the form element.</td>
+                        </tr>
+                        <tr>
+                            <td>idPrefix</td>
+                            <td>string</td>
+                            <td>uniform</td>
+                            <td>If useID is set to true, this string is prefixed to element ID's and attached to the container div of each uniformed element. If you have a checkbox with the ID of "remember-me" the container div would have the ID "uniform-remember-me".</td>
+                        </tr>
+                        <tr>
+                            <td>resetSelector</td>
+                            <td>boolean, string</td>
+                            <td>false</td>
+                            <td>This parameter allows you to use a jQuery-style selector to point to a "reset" button in your form if you have one. Use false if you have no "reset" button, or a selector string that points to the reset button if you have one.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Sprite PSD for uniform located in the directory source/PSD</p>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://uniformjs.com/"><i class="fontello-icon-link-4"></i> uniformjs.com</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Select2 -->
+            <section id="plugins-select2">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-calendar-3"></i> Select2</h2>
+                </div>
+                <dl>
+                    <dd>Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results. Look and feel of Select2 is based on the excellent Chosen library.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/select2/select2.min.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$("#selecttwo").select2();</pre>
+                <h3>Usage plugin</h3>
+                <h4>Select</h4>
+                <div class="bs-docs-example">
+                    <label>select</label>
+                    <select class="selecttwo span3">
+                        <option value="1">item 1</option>
+                        <option value="2">item 2</option>
+                        <option value="3">item 3</option>
+                    </select>
+                    <br>
+                    <label>select with search</label>
+                    <select class="selecttwo-s span3">
+                        <option value="1">item 1</option>
+                        <option value="2">item 2</option>
+                        <option value="3">item 3</option>
+                    </select>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;select class="selecttwo"&gt;
+    &lt;option value="1"&gt;item 1&lt;/option&gt;
+    &lt;option value="2"&gt;item 2&lt;/option&gt;
+    &lt;option value="3"&gt;item 3&lt;/option&gt;
+&lt;/select&gt;
+
+// control size
+&lt;select class="selecttwo-s span3"&gt;
+    &lt;option value="1"&gt;item 1&lt;/option&gt;
+    &lt;option value="2"&gt;item 2&lt;/option&gt;
+    &lt;option value="3"&gt;item 3&lt;/option&gt;
+&lt;/select&gt;
+
+$(".selecttwo").select2({	
+    minimumResultsForSearch: 6
+});
+$(".selecttwo").select2();</pre>
+                <h4>Multiple</h4>
+                <div class="bs-docs-example">
+                    <select class="selecttwo span3" multiple="multiple">
+                        <option value="1">item 1</option>
+                        <option value="2">item 2</option>
+                        <option value="3">item 3</option>
+                        <option value="4">item 4</option>
+                        <option value="5">item 5</option>
+                        <option value="6">item 6</option>
+                    </select>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;select class="selecttwo span3" multiple="multiple"&gt;
+    &lt;option value="1"&gt;item 1&lt;/option&gt;
+    &lt;option value="2"&gt;item 2&lt;/option&gt;
+    &lt;option value="3"&gt;item 3&lt;/option&gt;
+    ...
+&lt;/select&gt;
+
+$(".selecttwo").select2();</pre>
+                <h4>Tagging Support</h4>
+                <div class="bs-docs-example">
+                    <input id="select-tag" class="span4" type="hidden" value="brown,red">
+                </div>
+                <pre class="prettyprint linenums">
+&lt;input id="select-tag" class="span4" type="hidden" value="brown,red"&gt;
+
+$("#select-tag").select2({
+    tags:["brown", "red", "green", "blue"]
+});</pre>
+                <p class="margin-bottom20">Sprite PSD for select2 located in the directory source/PSD</p>
+                <p class="margin-bottom20">Select2 plugin offers great possibilities to setup and use. Use the original documentation for details</p>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://ivaynberg.github.com/select2/"><i class="fontello-icon-link-4"></i> github.com/select2/</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Character and Word counter plugin -->
+            <section id="plugins-counter">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-article-alt"></i> jQuery Character and Word counter plugin</h2>
+                </div>
+                <dl>
+                    <dd>This plug-in allows you to count characters or words, up or down. You can set a minimum or maximum goal for the counter to reach.</dd>
+                    <dd>It will insert a <code>div</code> with an <code>id</code> of the name of the input area you are counting with a "_counter" suffix. For example, if the <code>input</code> you want to count is called "countMe", the <code>id</code> of the <code>div</code> that keeps track of the count will be "countMe_counter".</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/counter/jquery.counter.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">
+$(".limiteChar").counter();
+$(".limiteChar15").counter({ goal: 15 });
+$(".limiteChar140").counter({ goal: 140 });</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div class="control-group">
+                        <label for="limiteChar" class="control-label">Limited characters:</label>
+                        <div class="controls">
+                            <input id="limiteChar" class="span4 limiteChar15" type="text">
+                        </div>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="control-group"&gt;
+    &lt;label for="limiteChar" class="control-label"&gt;Limited characters:&lt;/label&gt;
+    &lt;div class="controls"&gt;
+        &lt;input id="limiteChar" class="span4 limiteChar15" type="text"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+$(".limiteChar15").counter({ goal: 15 });</pre>
+                <div class="bs-docs-example">
+                    <div class="control-group">
+                        <label for="limiteWords" class="control-label">Limited words:</label>
+                        <div class="controls">
+                            <textarea id="limiteWords" rows="3" class="span4 limiteWords15"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;label class="checkbox"&gt;
+&lt;div class="control-group"&gt;
+    &lt;label for="limiteWords" class="control-label"&gt;Limited words:&lt;/label&gt;
+    &lt;div class="controls"&gt;
+        &lt;textarea id="limiteWords" rows="3" class="span4 limiteWords15"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+$(".limiteWords15").counter({
+    goal: 15,
+    type: 'word',
+    msg: 'words left before you fall into a pit of emptiness.'
+});</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered _table-condensed table-striped">
+                    <colgroup>
+                    <col class="col10">
+                    <col class="col10">
+                    <col class="col20">
+                    <col class="col55">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Options</th>
+                            <th>Type</th>
+                            <th>Value</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>type</td>
+                            <td>string</td>
+                            <td>char, word</td>
+                            <td>Count characters or words by using <code>char</code> or <code>word</code> respectively. </td>
+                        </tr>
+                        <tr>
+                            <td>count</td>
+                            <td>string</td>
+                            <td>down, up</td>
+                            <td>Count <code>up</code> or <code>down</code> to or from your goal </td>
+                        </tr>
+                        <tr>
+                            <td>goal</td>
+                            <td>string</td>
+                            <td>140, x, sky</td>
+                            <td>The goal number. If you are counting <code>down</code>, the counter will start on this number. If however you are counting up, the counter will end on this number.<br>
+                                Sky's the limit! Setting the goal to the string <code>sky</code> enables counting up, infinitely without stopping the user. </td>
+                        </tr>
+                        <tr>
+                            <td>text</td>
+                            <td>boolean</td>
+                            <td>true, false</td>
+                            <td>Set false if you only want the numbers to show and not the words ( msg ).</td>
+                        </tr>
+                        <tr>
+                            <td>msg</td>
+                            <td>string</td>
+                            <td> x character(s)/word(s) left<br>
+                                x character(s)/word(s) (y max)<br>
+                                Your message here!<br>
+                                Custom language translation<br></td>
+                            <td> There are various defaults set based on the type, count options being used. You can set your own message to be added after the input field using this plugin. If you want the message off, just set the text to false.<br>
+                                Optionally, you can use the translation option to translate the default language of the message that is shown after the input field. </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/qwertypants/jQuery-Word-and-Character-Counter-Plugin"><i class="fontello-icon-link-4"></i> Character and Word counter plugin</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Elastic -->
+            <section id="plugins-elastic">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-docs-landscape"></i> Elastic</h2>
+                </div>
+                <dl>
+                    <dd>Elastic makes your textareas grow and shrink to fit it's content. It was inspired by the auto growing textareas on Facebook. The major difference between Elastic and it's competitors is it's weight.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/elastic/jquery.elastic.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">
+$('textarea.auto').elastic();
+$('textarea.auto').trigger('update');</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <textarea placeholder="paste long text" class="span4 auto" rows="3" id="elasticTextarea"></textarea>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;textarea placeholder="paste long text" class="span4 auto" rows="3" id="elasticTextarea"&gt;&lt;/textarea&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://www.unwrongest.com/projects/elastic"><i class="fontello-icon-link-4"></i> Textareas on Facebook</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Inputmask -->
+            <section id="plugins-inputmask">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-asterisk"></i> jQuery Inputmask</h2>
+                </div>
+                <dl>
+                    <dd>jQuery Inputmask is a jquery plugin which create an input mask.</dd>
+                </dl>
+                <pre class="prettyprint linenums">
+  &lt;script src="assets/plugins/inputmask/jquery.inputmask.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/inputmask/jquery.inputmask.extensions.js"&gt;&lt;/script&gt;</pre>
+                <h3>Define masks</h3>
+                <pre class="prettyprint linenums">
+$("#date").inputmask("d/m/y");  //direct mask
+$("#phone").inputmask("mask", {"mask": "(999) 999-9999"}); //specifying fn & options
+$("#tin").inputmask({"mask": "99-9999999"}); //specifying options only</pre>
+                <h3>Change the placeholder</h3>
+                <pre class="prettyprint linenums">$("#date").inputmask("d/m/y",{ "placeholder": "*" });</pre>
+                <h3>Multi-char placeholder</h3>
+                <pre class="prettyprint linenums">$("#date").inputmask("d/m/y",{ "placeholder": "dd/mm/yyyy" });</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <input id="phone" type="text" />
+                </div>
+                <pre class="prettyprint linenums">&lt;input id="phone" type="text" /&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/RobinHerbots/jquery.inputmask"><i class="fontello-icon-link-4"></i> jQuery Input Mask plugin</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Validate -->
+            <section id="plugins-validate">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-ok-circle-1"></i> jQuery Validate</h2>
+                </div>
+                <dl>
+                    <dd>The jQuery Validation Plugin provides drop-in validation for your existing forms, while making all kinds of customizations to fit your application really easy..</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/validate/js/jquery.validate.min.js"&gt;&lt;/script&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/jzaefferer/jquery-validation"><i class="fontello-icon-link-4"></i> github.com/jzaefferer/jquery-validation</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Nicescroll -->
+            <section id="plugins-nicescroll">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-resize-vertical"></i> Nicescroll</h2>
+                </div>
+                <dl>
+                    <dd>Nicescroll (as nice scroll for browsers) is a jquery (since 1.5) plugin, for nice scrollbars with a very similar ios/mobile style.</dd>
+                    <dd>Sexy zoom feature, you can "zoom-in" the content of any nicescroll'ed div. Nice to use and nice to see, all the content of the div in fullscreen mode. It works on desktop (double click on div) either in mobile/touch devices using pinch gesture.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/nicescroll/jquery.nicescroll.min.js"&gt;&lt;/script&gt;</pre>
+                <h3>Features</h3>
+                <ul>
+                    <li>simple installation and activation, it works with NO modification of your code. (some exceptions can happen, so you can write to me)</li>
+                    <li>very stylish scrollbars, with no occupation on your window (original browser scrollbars need some of page space and reduces window/div usable width)</li>
+                    <li>you can style main document scrollbar (body) too!! (not all script implements this feature)</li>
+                    <li>on all browsers you can scroll: dragging the cursor, mouse wheel (speed customizable), keyboard navigation (cursor keys, pagup/down keys, home/end keys)</li>
+                    <li>scroll is smooth (as modern tablet browsing), speed is customizable</li>
+                    <li>zoom feature</li>
+                    <li>hardware accelerated scroll (where available)</li>
+                    <li>animation frame support for smoth scrolling and cpu-saving</li>
+                    <li>dragging scroll mode with scrolling momentum (as touch device)</li>
+                    <li>tested for all major browsers desktop and mobile versions</li>
+                    <li>support for touch devices</li>
+                    <li>support for multi-input devices (IE10 with MSPointer)</li>
+                    <li>compatible with many other browsers, including IE6, Safari on Mac and WP7 Mango!</li>
+                    <li>very customizable aspect of bar</li>
+                    <li>native scroll events are working yet</li>
+                    <li>fully integrated with jQuery</li>
+                    <li>compatibile with jQuery UI, jQuery Touch, jQuery Mobile</li>
+                </ul>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">
+$("html").niceScroll();
+var nice = $("#mydiv").getNiceScroll();</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Options</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>cursorcolor</td>
+                            <td>#000000</td>
+                            <td>change cursor color in hex</td>
+                        </tr>
+                        <tr>
+                            <td>cursoropacitymin</td>
+                            <td>0 (hidden)</td>
+                            <td>change opacity very cursor is inactive (scrollabar "hidden" state), range from 1 to 0</td>
+                        </tr>
+                        <tr>
+                            <td>cursoropacitymax</td>
+                            <td>1 (full opacity)</td>
+                            <td>change opacity very cursor is active (scrollabar "visible" state), range from 1 to 0</td>
+                        </tr>
+                        <tr>
+                            <td>cursorwidth</td>
+                            <td>5 (you can write "5px" too)</td>
+                            <td>cursor width in pixel</td>
+                        </tr>
+                        <tr>
+                            <td>cursorborder</td>
+                            <td>1px solid #fff</td>
+                            <td>css definition for cursor border</td>
+                        </tr>
+                        <tr>
+                            <td>cursorborderradius</td>
+                            <td>4px</td>
+                            <td>border radius in pixel for cursor</td>
+                        </tr>
+                        <tr>
+                            <td>zindex</td>
+                            <td>9999</td>
+                            <td>change z-index for scrollbar div</td>
+                        </tr>
+                        <tr>
+                            <td>scrollspeed</td>
+                            <td>60</td>
+                            <td>scrolling speed</td>
+                        </tr>
+                        <tr>
+                            <td>mousescrollstep</td>
+                            <td>40 (pixel)</td>
+                            <td>scrolling speed with mouse wheel</td>
+                        </tr>
+                        <tr>
+                            <td>touchbehavior</td>
+                            <td>false</td>
+                            <td>enable cursor-drag scrolling like touch devices in desktop computer</td>
+                        </tr>
+                        <tr>
+                            <td>hwacceleration</td>
+                            <td>true</td>
+                            <td>use hardware accelerated scroll when supported</td>
+                        </tr>
+                        <tr>
+                            <td>boxzoom</td>
+                            <td>false</td>
+                            <td>enable zoom for box content</td>
+                        </tr>
+                        <tr>
+                            <td>dblclickzoom</td>
+                            <td>true</td>
+                            <td>(only when boxzoom=true) zoom activated when double click on box</td>
+                        </tr>
+                        <tr>
+                            <td>gesturezoom</td>
+                            <td>true</td>
+                            <td>(only when boxzoom=true and with touch devices) zoom activated when pitch out/in on box</td>
+                        </tr>
+                        <tr>
+                            <td>grabcursorenabled</td>
+                            <td>true</td>
+                            <td>display "grab" icon for div with touchbehavior = true</td>
+                        </tr>
+                        <tr>
+                            <td>autohidemode</td>
+                            <td>true</td>
+                            <td>how hide the scrollbar works, true=default / "cursor" = only cursor hidden / false = do not hide</td>
+                        </tr>
+                        <tr>
+                            <td>background</td>
+                            <td>""</td>
+                            <td>change css for rail background</td>
+                        </tr>
+                        <tr>
+                            <td>iframeautoresize</td>
+                            <td>true</td>
+                            <td>autoresize iframe on load event</td>
+                        </tr>
+                        <tr>
+                            <td>cursorminheight</td>
+                            <td>20</td>
+                            <td>set the minimum cursor height in pixel</td>
+                        </tr>
+                        <tr>
+                            <td>preservenativescrolling</td>
+                            <td>true</td>
+                            <td>you can scroll native scrollable areas with mouse, bubbling mouse wheel event</td>
+                        </tr>
+                        <tr>
+                            <td>railoffset</td>
+                            <td>false</td>
+                            <td>you can add offset top/left for rail position</td>
+                        </tr>
+                        <tr>
+                            <td>bouncescroll</td>
+                            <td>false</td>
+                            <td>enable scroll bouncing at the end of content as mobile-like (only hw accell)</td>
+                        </tr>
+                        <tr>
+                            <td>spacebarenabled</td>
+                            <td>true</td>
+                            <td>enable page down scrolling when space bar has pressed</td>
+                        </tr>
+                        <tr>
+                            <td>railpadding</td>
+                            <td>{top:0,right:0,left:0,bottom:0}</td>
+                            <td>set padding for rail bar</td>
+                        </tr>
+                        <tr>
+                            <td>disableoutline</td>
+                            <td>true</td>
+                            <td>for chrome browser, disable outline (orange hightlight) when selecting a div with nicescroll</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Boo option</h3>
+                <pre class="prettyprint linenums">
+$("html").niceScroll({
+    cursoropacitymin:0.1,
+    cursoropacitymax:0.9,
+    cursorcolor:"#adafb5",
+    cursorwidth:"8px",
+    cursorborder:"",
+    cursorborderradius:"8px",
+    usetransition:600,
+    background:"",
+    railoffset:{top:10,left:-3}	
+}); 
+
+$("#main-sidebar").niceScroll({
+    cursoropacitymin:0.1,
+    cursoropacitymax:0.9,
+    cursorcolor:"#adafb5",
+    cursorwidth:"6px",
+    cursorborder:"",
+    cursorborderradius:"6px",
+    usetransition:600,
+    background:"",
+    railoffset:{top:10,left:-1}
+});</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/inuyaksa/jquery.nicescroll"><i class="fontello-icon-link-4"></i> github.com/inuyaksa/jquery.nicescroll</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery qTip2 -->
+            <section id="plugins-gtip">
+                <div class="page-header doc">
+                    <h2><i class=" fontello-icon-comment-4"></i> qTip2 - Pretty powerful tooltips</h2>
+                </div>
+                <dl>
+                    <dd>qTip is a tooltip plugin for the jQuery framework. It's cross-browser, customizable and packed full of features!</dd>
+                    <dd>You can use the default bootstrap or just gTip2 tooltip plugin that offers more options and variations. More documentation can be found in the Original</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/qtip2/dist/jquery.qtip.min.js"&gt;&lt;/script&gt;</pre>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>class</th>
+                            <th>position</th>
+                            <th>sample</th>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-tl</code></td>
+                            <td>top left</td>
+                            <td class="tip-tl" title="top left"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-tc</code></td>
+                            <td>top center</td>
+                            <td class="tip-tc" title="top center"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-tr</code></td>
+                            <td>top right</td>
+                            <td class="tip-tr" title="top right"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-bl</code></td>
+                            <td>bottom left</td>
+                            <td class="tip-bl" title="bottom left"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-bc</code></td>
+                            <td>bottom center</td>
+                            <td class="tip-bc" title="bottom center"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-br</code></td>
+                            <td>bottom right</td>
+                            <td class="tip-br" title="bottom right"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-rt</code></td>
+                            <td>right top</td>
+                            <td class="tip-rt" title="right top"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-rc</code></td>
+                            <td>right center</td>
+                            <td class="tip-rc" title="right center"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-rb</code></td>
+                            <td>right bottom</td>
+                            <td class="tip-rb" title="right bottom"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-lt</code></td>
+                            <td>left top</td>
+                            <td class="tip-lt" title="left top"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-lc</code></td>
+                            <td>left center</td>
+                            <td class="tip-lc" title="left center"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                        <tr>
+                            <td><code>.tip-lb</code></td>
+                            <td>left bottom</td>
+                            <td class="tip-lb" title="left bottom"><center>
+                                    sample
+                                </center></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example"> <a href="#" class="tip-tc" title="sample gTip2">hover to sample</a> </div>
+                <pre class="prettyprint linenums">&lt;a href="#" class="tip-tc" title="sample gTip2"&gt;hover to sample&lt;/a&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/craga89/qtip2"><i class="fontello-icon-link-4"></i> qTip2 - Pretty powerful tooltips</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery List.js -->
+            <section id="plugins-list">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-th-list"></i> List.js</h2>
+                </div>
+                <dl>
+                    <dd>JavaScript that makes your plain HTML lists and tables super flexible, searchable, sortable and filterable.</dd>
+                </dl>
+                <pre class="prettyprint linenums">
+  &lt;script src="assets/plugins/list/js/list.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/list/plugins/list.paging.min.js"&gt;&lt;/script&gt;</pre>
+                <h3>Usage plugin</h3>
+                <p>Plugin List.js Boo is used for example in ToDo Remember <a target="_blank" href="../component-widgets-remember.html">Remember</a> or <a target="_blank" href="../component-widgets-users.html">Last logged user</a></p>
+                <pre class="prettyprint linenums">
+&lt;div id="remember"&gt;
+    &lt;ul class="list"&gt;
+       &lt;li&gt;
+           &lt;h3 class="name"&gt;Jonny&lt;/h3&gt;
+           &lt;p class="city"&gt;Stockholm&lt;/p&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+           &lt;h3 class="name"&gt;Jonas&lt;/h3&gt;
+           &lt;p class="city"&gt;Berlin&lt;/p&gt;
+       &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                
+var options = {
+    valueNames: [ 'name', 'city' ]
+};
+
+var rememberList = new List('remember', options);</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://github.com/javve/list"><i class="fontello-icon-link-4"></i> github.com/javve/list</a> <a class="btn margin-m0" target="_blank" href="http://listjs.com/"><i class="fontello-icon-link-4"></i> example list</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Fullcalendar -->
+            <section id="plugins-fullcalendar">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-calendar-1"></i> Fullcalendar</h2>
+                </div>
+                <dl>
+                    <dd>FullCalendar is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is easily configured to use your own feed format (an extension is provided for Google Calendar). It is visually customizable and exposes hooks for user-triggered events (like clicking or dragging an event).</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/fullcalendar/fullcalendar.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#calendar').fullCalendar();</pre>
+                <h3>Usage plugin</h3>
+                <pre class="prettyprint linenums">
+// example - more in component-fullcalendar.html  
+&lt;div id="calendar" class="widget widget-simple header-black fc-striped"&gt; &lt;/div&gt;</pre>
+                <h3>Example options Boo</h3>
+                <p>explore assets/js/demo/demo-fullcalendar.js</p>
+                <pre class="prettyprint linenums">
+$('#calendar').fullCalendar({
+    header: {
+            left: 'title,today',
+            center: '',
+            right: 'prev,month,agendaWeek,agendaDay,next'
+    },
+    buttonText: {
+            prev: '&lt;i class="fontello-icon-left-open-1"&gt;&lt;/i&gt;',
+            next: '&lt;i class="fontello-icon-right-open-1"&gt;&lt;/i&gt;',
+            prevYear: '&nbsp;&lt;&lt;&nbsp;',
+            nextYear: '&nbsp;&gt;&gt;&nbsp;',
+            today: ' today &lt;i class="fontello-icon-target-2 f-14"&gt;&lt;/i&gt;'
+    },
+    aspectRatio: 2,
+    editable: true,
+    ...
+    ...
+    ...
+});</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://arshaw.com/fullcalendar/"><i class="fontello-icon-link-4"></i> FullCalendar</a> <a class="btn margin-m0" target="_blank" href="http://arshaw.com/fullcalendar/docs/"><i class="fontello-icon-link-4"></i> Detail documentation</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery xBreadcrumbs -->
+            <section id="plugins-breadcrumbs">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-home"></i> xBreadcrumbs</h2>
+                </div>
+                <dl>
+                    <dd>xBreadcrumbs (Extended Breadcrumbs) is a jQuery plug-in to create categorized breadcrumbs for your site. This may be useful if your website has a deep structure and you want allow your visitors to quickly navigate through one section of the site to another. xBreadcrumbs works with unordered lists (UL/LI) which would make your breadcrumbs fully optimized for search engines. </dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/xbreadcrumbs/xbreadcrumbs.js"&gt;&lt;/script&gt;</pre>
+                <h3>Call plugin</h3>
+                <pre class="prettyprint linenums">$('#breadcrumbs').xBreadcrumbs();</pre>
+                <h3>Usage plugin</h3>
+                <div class="bs-docs-example">
+                    <div id="header-sample">
+                        <div class="header-drawer">
+                            <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                            <!-- // Resposive navigation -->
+                            <div class="breadcrumbs-nav hidden-phone">
+                                <ul id="breadcrumbs" class="breadcrumb">
+                                    <li><a href="../dashboard-one.html"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                                    <li class="dropdown"><a href="../component-table.html">Table </a> <span class="divider">/</span>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../component-table.html">Table</a></li>
+                                            <li><a href="../component-table-boo.html">Boo Table</a></li>
+                                            <li><a href="../component-table-datatable.html">DataTable</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="active">Boo Admin </li>
+                                </ul>
+                            </div>
+                            <!-- // breadcrumbs --> 
+                        </div>
+                        <!-- // drawer --> 
+                    </div>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;div class="breadcrumbs-nav hidden-phone"&gt;
+    &lt;ul id="breadcrumbs" class="breadcrumb"&gt;
+        &lt;li&gt;&lt;a href="dashboard-one.html"&gt;&lt;i class="fontello-icon-home f12"&gt;&lt;/i&gt; Dashboard&lt;/a&gt; 
+            &lt;span class="divider"&gt;/&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class="dropdown"&gt;&lt;a href="component-table.html"&gt;Table &lt;/a&gt; 
+            &lt;span class="divider"&gt;/&lt;/span&gt;
+            &lt;ul class="dropdown-menu"&gt;
+                &lt;li&gt;&lt;a href="component-table.html"&gt;Table&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="component-table-boo.html"&gt;Boo Table&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="component-table-datatable.html"&gt;DataTable&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="active"&gt;Boo Admin &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- // breadcrumbs --&gt;</pre>
+                <h3>Options</h3>
+                <table class="table table-bordered _table-condensed table-striped">
+                    <colgroup>
+                    <col class="col15">
+                    <col class="col15">
+                    <col class="col70">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Options</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>showSpeed</td>
+                            <td>fast</td>
+                            <td>Numeric value in milliseconds or jQuery string value ('fast', 'normal', 'slow'). The parameter sets speed of sub level to appear. If empty then no transition is used.</td>
+                        </tr>
+                        <tr>
+                            <td>hideSpeed</td>
+                            <td>empty</td>
+                            <td>Numeric value in milliseconds or jQuery string value ('fast', 'normal', 'slow'). The parameter sets speed of sub level to hide. If empty then no transition is used.</td>
+                        </tr>
+                        <tr>
+                            <td>collapsible</td>
+                            <td>false</td>
+                            <td>Parameters enables collapsing of upper levels.</td>
+                        </tr>
+                        <tr>
+                            <td>collapsedWidth</td>
+                            <td>10 (px)</td>
+                            <td>Width of collapsed level.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="http://www.ajaxblender.com/xbreadcrumbs.html"><i class="fontello-icon-link-4"></i> ajaxblender.com/xbreadcrumbs</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- jQuery Google-code-prettify -->
+            <section id="bootstrap-js">
+                <div class="page-header doc">
+                    <h2><i class="fontello-icon-terminal"></i> Google-code-prettify</h2>
+                </div>
+                <dl>
+                    <dd>A Javascript module and CSS file that allows syntax highlighting of source code snippets in an html page.</dd>
+                </dl>
+                <pre class="prettyprint linenums">&lt;script src="assets/plugins/google-code-prettify/prettify.js"&gt;&lt;/script&gt;</pre>
+                <div class="alert alert-info"><strong>Original documentation</strong> for this third-party plugin you can find on official plugin's website <br>
+                    <a class="btn margin-m0" target="_blank" href="https://code.google.com/p/google-code-prettify/"><i class="fontello-icon-link-4"></i> Google-code-prettify</a></div>
+                <hr class="bs-docs-separator">
+            </section>
+            
+            <!-- bootstrap js 
+            ================================================== -->
+            <section id="plugins-prettify">
+                <div class="page-header doc">
+                    <h2>Bootstrap javascript</h2>
+                </div>
+                <p class="alert alert-info">For detailed information about the bootstrap javascript framework to go bootstrap documentation</p>
+                <ul class="the-100 clearfix">
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#transitions"><i class="icon-chevron-right"></i> Transitions</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#modals"><i class="icon-chevron-right"></i> Modal</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#dropdowns"><i class="icon-chevron-right"></i> Dropdown</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#alerts"><i class="icon-chevron-right"></i> Alert</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#buttons"><i class="icon-chevron-right"></i> Button</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#collapse"><i class="icon-chevron-right"></i> Collapse</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#typeahead"><i class="icon-chevron-right"></i> Typeahead</a></li>
+                    <li><a target="_blank" href="../_bootstrap/docs/javascript.html#affix"><i class="icon-chevron-right"></i> Affix</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- Footer
+    ================================================== -->
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <ul class="unstyled">
+            <li>Created: <strong>08.12.2012</strong> </li>
+            <li> Latest Update: <strong>09.01.2013</strong> </li>
+            <li> By: Petr Marasek</li>
+            <li> email: gootoboo@gmail.com </li>
+        </ul>
+        <ul class="footer-links">
+            <li><a href="http://themeforest.net/">Themeforest</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://themes.yac.cz/boo/dashboard-one.html">Demo</a></li>
+            <li class="muted">&middot;</li>
+            <li class="muted">Built on Twitter Bootstrap documentation</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script> 
+<script src="assets/js/bootstrap-carousel.js"></script> 
+<script src="assets/js/bootstrap-typeahead.js"></script> 
+<script src="assets/js/bootstrap-affix.js"></script> 
+<!-- main js --> 
+<script src="assets/js/application.js"></script> 
+
+<!-- plugins --> 
+<script src="../assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="../assets/plugins/bootstrap-daterangepicker/js/date.js"></script> 
+<script src="../assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="../assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="../assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script> 
+<script src="../assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="../assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="../assets/plugins/uniform/jquery.uniform.js"></script> 
+<script src="../assets/plugins/select2/select2.min.js"></script> 
+<script src="../assets/plugins/counter/jquery.counter.js"></script> 
+<script src="../assets/plugins/inputmask/jquery.inputmask.js"></script> 
+<script src="../assets/plugins/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="../assets/plugins/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="../assets/plugins/xbreadcrumbs/xbreadcrumbs.js"></script> 
+<script src="../assets/plugins/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="../assets/plugins/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="../assets/plugins/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+<script src="../assets/js/demo/demo-jquery.dataTables.js"></script> 
+<script type="text/javascript">
+$(document).ready(function () {
+
+        $('#datepicker').datepicker();
+		
+		$('.timepicker').timepicker();
+		
+		$('#reservation').daterangepicker();
+
+        $('#reportrange').daterangepicker({
+                ranges: {
+                        'Today': ['today', 'today'],
+                                'Yesterday': ['yesterday', 'yesterday'],
+                                'Last 7 Days': [Date.today().add({
+                                days: -6
+                        }), 'today'],
+                                'Last 30 Days': [Date.today().add({
+                                days: -29
+                        }), 'today'],
+                                'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
+                                'Last Month': [Date.today().moveToFirstDayOfMonth().add({
+                                months: -1
+                        }), Date.today().moveToFirstDayOfMonth().add({
+                                days: -1
+                        })]
+                },
+                opens: 'left',
+                format: 'MM/dd/yyyy',
+                separator: ' to ',
+                startDate: Date.today().add({
+                        days: -29
+                }),
+                endDate: Date.today(),
+                minDate: '01/01/2012',
+                maxDate: '12/31/2013',
+                locale: {
+                        applyLabel: 'Submit',
+                        fromLabel: 'From',
+                        toLabel: 'To',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                        monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                        firstDay: 1
+                },
+                showWeekNumbers: true,
+                buttonClasses: ['btn-danger']
+        },
+
+        function (start, end) {
+                $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+        });
+
+        //Set the initial state of the picker label
+        $('#reportrange span').html(Date.today().add({
+                days: -29
+        }).toString('MMMM d, yyyy') + ' - ' + Date.today().toString('MMMM d, yyyy'));
+		
+		$('.colorpicker').colorpicker();
+		
+		$('tbody.rowlink').rowlink()
+		
+		$('.selectpicker').selectpicker();
+		$('#selectpicker2').selectpicker({
+			btnStyle: 'btn-info'
+		});
+		
+		$("input.checkbox, input.radio, input:file.input-file").uniform({
+                radioClass: 'radios' // edited class - the original radio
+        });
+		
+		$(".selecttwo").select2({
+                minimumResultsForSearch: 6,
+				width: "off"
+        });
+        $(".selecttwo-s").select2();
+		
+        $(".selecttwo-full").select2({
+				minimumResultsForSearch: 6,
+                width: "100%"
+        });
+		
+		$(".selecttwo-full-s").select2({
+				width: "100%"
+        });
+		$("#select-tag").select2({
+			tags:["brown", "red", "green", "blue"]
+		});
+		
+		$(".limiteChar15").counter({ goal: 15 });
+        $(".limiteWords15").counter({
+                goal: 15,
+                type: 'word',
+                msg: 'words left before you fall into a pit of emptiness.'
+        });
+		
+		$("#phone").inputmask("mask", {"mask": "(999) 999-9999"});
+		
+		// GTIP - TOOLTIP
+        // ------------------------------------------------------------------------------------------------ * -->
+        var shared = {
+                position: {
+                        viewport: $(window)
+                },
+                style: {
+                        tip: true,
+                        classes: 'ui-tooltip-shadow ui-tooltip-tipsy'
+                }
+        };
+
+        $('.tip-tl').qtip($.extend({}, shared, {
+                position: {
+                        my: 'bottom right',
+                        at: 'top left'
+                }
+        }));
+        $('.tip-tc, .tip').qtip($.extend({}, shared, {
+                position: {
+                        my: 'bottom center',
+                        at: 'top center'
+                }
+        }));
+        $('.tip-tr').qtip($.extend({}, shared, {
+                position: {
+                        my: 'bottom left',
+                        at: 'top right'
+                }
+        }));
+        $('.tip-bl').qtip($.extend({}, shared, {
+                position: {
+                        my: 'top right',
+                        at: 'bottom left'
+                }
+        }));
+        $('.tip-bc').qtip($.extend({}, shared, {
+                position: {
+                        my: 'top center',
+                        at: 'bottom center'
+                }
+        }));
+        $('.tip-br').qtip($.extend({}, shared, {
+                position: {
+                        my: 'top left',
+                        at: 'bottom right'
+                }
+        }));
+        $('.tip-rt').qtip($.extend({}, shared, {
+                position: {
+                        my: 'left bottom',
+                        at: 'right top'
+                }
+        }));
+        $('.tip-rc').qtip($.extend({}, shared, {
+                position: {
+                        my: 'left center',
+                        at: 'right center'
+                }
+        }));
+        $('.tip-rb').qtip($.extend({}, shared, {
+                position: {
+                        my: 'left top',
+                        at: 'right bottom'
+                }
+        }));
+        $('.tip-lt').qtip($.extend({}, shared, {
+                position: {
+                        my: 'right bottom',
+                        at: 'left top'
+                }
+        }));
+        $('.tip-lc').qtip($.extend({}, shared, {
+                position: {
+                        my: 'right center',
+                        at: 'left center'
+                }
+        }));
+        $('.tip-lb').qtip($.extend({}, shared, {
+                position: {
+                        my: 'right top',
+                        at: 'left bottom'
+                }
+        }));
+		
+		$('#breadcrumbs').xBreadcrumbs();
+
+});
+</script>
+</body>
+</html>

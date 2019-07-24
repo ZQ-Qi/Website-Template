@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Boo Admin - UI Elements - Progressbar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+    <script src="assets/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body class="sidebar-left ">
+<div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="brand" href="javascript:void(0);"><img src="assets/img/demo/logo-brand.png"></a>
+                        <div class="search-global">
+                            <input id="globalSearch" class="search search-query input-medium" type="search">
+                            <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav user-menu visible-desktop">
+                                <li><a class="btn-glyph fontello-icon-edit tip-bc" href="javascript:void(0);" title="Messages"><span class="badge badge-important">8</span></a></li>
+                                <li><a class="btn-glyph fontello-icon-mail-1 tip-bc" href="javascript:void(0);" title="Emails"></a></li>
+                                <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Support"><span class="badge badge-important">4</span></a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li> <a href="dashboard-one.html">Dashboard</a> </li>
+                                <li class="active"> <a href="javascript:void(0);">Components</a> </li>
+                                <li> <a href="component-fullcalendar-demo.html"><span class="fontello-icon-calendar"></span>Calendar</a> </li>
+                                <li> <a href="javascript:void(0);"><span class="fontello-icon-users"></span>Contacts</a> </li>
+                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="component-form-demo.html">Demo Form</a></li>
+                                        <li><a href="component-widgets-remember.html">Remember</a></li>
+                                        <li><a href="component-widgets-users.html">User List</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">Next Update</li>
+                                        <li><a href="javascript:void(0);">Contacts</a></li>
+                                        <li><a href="javascript:void(0);">Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer">
+                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                <!-- // Resposive navigation -->
+                <div class="breadcrumbs-nav hidden-phone">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                        <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Table</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">Boo Admin </li>
+                    </ul>
+                </div>
+                <!-- // breadcrumbs --> 
+            </div>
+            <!-- // drawer --> 
+        </div>
+    </div>
+    <!-- // header-container -->
+    
+    <div id="main-container">
+        <div id="main-sidebar" class="sidebar sidebar-inverse">
+            <div class="sidebar-item">
+                <div class="media profile">
+                    <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
+                        <p class="data">Last Access: 16 May 15:30</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // sidebar item - profile -->
+            
+            <ul id="mainSideMenu" class="nav nav-list nav-side">
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor"></span> <i class="chevron fontello-icon-right-open-3"></i> Dashboards </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accDash">
+                        <li> <a href="dashboard-one.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 1 </a> </li>
+                        <li> <a href="dashboard-two.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 2 </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Dashboard -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon aweso-icon-list-alt"></span><i class="chevron fontello-icon-right-open-3"></i> Form </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accForms">
+                        <li> <a href="component-form-demo.html"> <i class="fontello-icon-right-dir"></i> Demo Form </a> </li>
+                        <li> <a href="component-form-elements.html"> <i class="fontello-icon-right-dir"></i> Form Element </a> </li>
+                        <li> <a href="component-form-extension.html"> <i class="fontello-icon-right-dir"></i> Form Extension</a> </li>
+                        <li> <a href="component-form-wizard.html"> <i class="fontello-icon-right-dir"></i> Form Wizard</a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Forms -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accComponents" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Components </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accComponents">
+                        <li> <a href="elements-notification.html"> <i class="fontello-icon-right-dir"></i> Notification </a> </li>
+                        <li> <a href="component-rangeslider.html"> <i class="fontello-icon-right-dir"></i> Rangeslider </a> </li>
+                        <li> <a href="component-file-upload.html"> <i class="fontello-icon-right-dir"></i> File upload </a> </li>
+                        <li> <a href="component-gallery.html"> <i class="fontello-icon-right-dir"></i> Gallery &amp; Image </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Components -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Tables </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accTables">
+                        <li> <a href="component-table.html"> <i class="fontello-icon-right-dir"></i> Base Table </a> </li>
+                        <li> <a href="component-table-boo.html"> <i class="fontello-icon-right-dir"></i> Boo Table </a> </li>
+                        <li> <a href="component-table-datatable.html"> <i class="fontello-icon-right-dir"></i> DataTable </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Tables -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accStatistics" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-chart"></span> <i class="chevron fontello-icon-right-open-3"></i> Statistics </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accStatistics">
+                        <li> <a href="statistic-flot.html"> <i class="fontello-icon-right-dir"></i> Charts </a> </li>
+                        <li> <a href="statistic-sparkline.html"> <i class="fontello-icon-right-dir"></i> Sparklines </a> </li>
+                        <li> <a href="statistic-circle.html"> <i class="fontello-icon-right-dir"></i> Circle </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Statistics -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accWidgets" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon  fontello-icon-window"></span> <i class="chevron fontello-icon-right-open-3"></i> Widgets </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accWidgets">
+                        <li> <a href="component-widget-style.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Style </a> </li>
+                        <li> <a href="component-widget-custom.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Custom </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Widgets -->
+                <li class="accordion-group">
+                    <div class="accordion-heading active"> <a href="#accButtons" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-puzzle"></span> <i class="chevron fontello-icon-right-open-3"></i> UI Elements </a> </div>
+                    <ul class="accordion-content nav nav-list collapse in" id="accButtons">
+                        <li> <a href="elements-button.html"> <i class="fontello-icon-right-dir"></i> Button </a> </li>
+                        <li> <a href="elements-icon-font.html"> <i class="fontello-icon-right-dir"></i> Iconic fonts </a> </li>
+                        <li> <a href="elements-icon-fugue-demo.html"> <i class="fontello-icon-right-dir"></i> Icon </a> </li>
+                        <li> <a href="elements-wells.html"> <i class="fontello-icon-right-dir"></i> Wells </a> </li>
+                        <li> <a href="elements-tabs.html"> <i class="fontello-icon-right-dir"></i> Tabs </a> </li>
+                        <li> <a href="elements-modals.html"> <i class="fontello-icon-right-dir"></i> Modal </a> </li>
+                        <li class="active"> <a href="elements-progressbar.html"> <i class="fontello-icon-right-dir"></i> Progressbar </a> </li>
+                        <li> <a href="component-rangeslider.html"> <i class="fontello-icon-right-dir"></i> Rangeslider </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu UI Elements -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accCalendar" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Calendar </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accCalendar">
+                        <li> <a href="component-fullcalendar-demo.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Demo </a> </li>
+                        <li> <a href="component-fullcalendar.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Style </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Calendar -->
+            </ul>
+            <!-- // sidebar menu -->
+            
+            <div class="sidebar-item"></div>
+            <!-- // sidebar item --> 
+            
+        </div>
+        <!-- // sidebar -->
+        
+        <div id="main-content" class="main-content container-fluid">
+            <div class="row-fluid page-head">
+                <h2 class="page-title"><i class="fontello-icon-progress-3"></i> Progress Bars <small>for loading, redirecting, or action status</small></h2>
+                <div class="page-bar">
+                    <div class="btn-toolbar">
+                        <ul class="nav nav-tabs pull-right">
+                            <li class="active" id="demo-tab"> <a href="#TabDemo" data-toggle="tab">Demo Static</a> </li>
+                            <li id="modifi-tab"> <a href="#TabModifications" data-toggle="tab">Demo Animated</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- // page head -->
+            
+            <div id="page-content" class="page-content tab-content">
+                <div id="TabDemo" class="tab-pane active">
+                    <div class="page-header">
+                        <h3><i class="fontello-icon-progress-0 opaci45"></i> Progress bar horizontal <small>static</small></h3>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <h4 class="simple-header">default</h4>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="progress">
+                                        <div class="bar" style="width:80%"> </div>
+                                    </div>
+                                    <!-- // progress --> 
+                                </div>
+                                <!-- // Column --> 
+                                
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <h4 class="simple-header">colors</h4>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="progress progress-info">
+                                        <div class="bar" style="width:50%"> </div>
+                                    </div>
+                                    <div class="progress progress-success">
+                                        <div class="bar" style="width:50%"> </div>
+                                    </div>
+                                    <div class="progress progress-warning">
+                                        <div class="bar" style="width:50%"> </div>
+                                    </div>
+                                    <div class="progress progress-danger">
+                                        <div class="bar" style="width:50%"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <h4 class="simple-header">striped</h4>
+                            <p>Striped effect not available in IE7-8.</p>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="progress progress-striped">
+                                        <div class="bar" style="width:65%"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <h4 class="simple-header">animated</h4>
+                            <p>Animate stripes not available in all versions of IE.</p>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="progress progress-striped active">
+                                        <div class="bar" style="width:75%"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <h4 class="simple-header">Stacked</h4>
+                            <p>Multiple bars into the same progress.</p>
+                            <div class="progress">
+                                <div class="bar" style="width: 80%;"></div>
+                                <div class="bar bar-success" style="width: 75%;"></div>
+                                <div class="bar bar-warning" style="width: 65%;"></div>
+                                <div class="bar bar-danger" style="width: 50%;"></div>
+                            </div>
+                            <!-- // progress --> 
+                        </div>
+                        <!-- // Column -->
+                        
+                        <div class="span4 well well-nice">
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <h4 class="simple-header"> default <small>SIZE</small></h4>
+                                    <div class="progress progress-success">
+                                        <div class="bar" style="width:30%"> </div>
+                                    </div>
+                                    <!-- // progress 1 -->
+                                    <div class="progress progress-success">
+                                        <div class="bar" style="width:50%"> </div>
+                                    </div>
+                                    <!-- // progress 2 -->
+                                    <h4 class="simple-header"> default <small>ALIGNED</small></h4>
+                                    <p>Progress bar start Left or Right</p>
+                                    <div class="progress right progress-success">
+                                        <div class="bar" style="width:35%"> </div>
+                                    </div>
+                                    <!-- // progress 3 -->
+                                    <div class="progress progress-success">
+                                        <div class="bar" style="width:40%"> </div>
+                                    </div>
+                                </div>
+                                <!-- // Column --> 
+                                
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <h4 class="simple-header">medium <small>SIZE</small></h4>
+                                    <p>You can adjust the height of style bootstrap</p>
+                                    <div class="progress progress-success progress-medium">
+                                        <div class="bar" style="width:80%"> </div>
+                                    </div>
+                                    <!-- // progress 1 -->
+                                    <div class="progress progress-success progress-medium">
+                                        <div class="bar" style="width:70%"> </div>
+                                    </div>
+                                    <!-- // progress 2 -->
+                                    <div class="progress progress-success progress-medium">
+                                        <div class="bar" style="width:60%"> </div>
+                                    </div>
+                                    <!-- // progress 3 --> 
+                                </div>
+                                <!-- // Column --> 
+                                
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <h4 class="simple-header">small <small>SIZE</small></h4>
+                                    <div class="progress progress-success progress-small">
+                                        <div class="bar" style="width:30%"> </div>
+                                    </div>
+                                    <!-- // progress 1 -->
+                                    <div class="progress progress-success progress-small">
+                                        <div class="bar" style="width:60%"> </div>
+                                    </div>
+                                    <!-- // progress 2 -->
+                                    <div class="progress progress-success progress-small">
+                                        <div class="bar" style="width:90%"> </div>
+                                    </div>
+                                </div>
+                                <!-- // Column --> 
+                                
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <h4 class="simple-header">mini <small>SIZE</small></h4>
+                                    <div class="progress progress-success progress-mini">
+                                        <div class="bar" style="width:80%"> </div>
+                                    </div>
+                                    <!-- // progress 1 -->
+                                    <div class="progress progress-success progress-mini">
+                                        <div class="bar" style="width:70%"> </div>
+                                    </div>
+                                    <!-- // progress 2 -->
+                                    <div class="progress progress-success progress-mini">
+                                        <div class="bar" style="width:60%"> </div>
+                                    </div>
+                                </div>
+                                <!-- // Column --> 
+                                
+                            </div>
+                            <!-- // Example row --> 
+                            
+                        </div>
+                        <!-- // Column -->
+                        
+                        <div class="span4">
+                            <div class="row-fluid">
+                                <div class="span12 widget widget-box">
+                                    <div class="widget-header">
+                                        <h4>default <small>FILLING</small></h4>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div class="widget-body">
+                                            <p>Progress bar with a filling. Size fillers can be set to 2px, 3px, 4px, 5px, 6px<br>
+                                                Default bar keeps the height 20px and 30px</p>
+                                            <div class="progress progress-info filled3">
+                                                <div class="filler">
+                                                    <div class="bar" style="width:25%"> </div>
+                                                </div>
+                                            </div>
+                                            <!-- // progress 1 -->
+                                            <div class="progress progress-info filled5">
+                                                <div class="filler">
+                                                    <div class="bar" style="width:100%"> </div>
+                                                </div>
+                                            </div>
+                                            <!-- // progress 2 -->
+                                            <div class="progress progress-info filled6">
+                                                <div class="filler">
+                                                    <div class="bar" style="width:55%"> </div>
+                                                </div>
+                                            </div>
+                                            <!-- // progress 3 --> 
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- // Column --> 
+                                </div>
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <div class="row-fluid">
+                                <div class="span12 well well-nice well-impressed">
+                                    <h4 class="simple-header"> medium <small>FILLING</small></h4>
+                                    <div class="progress progress-info progress-medium filled3">
+                                        <div class="filler">
+                                            <div class="bar" style="width:80%"> </div>
+                                        </div>
+                                    </div>
+                                    <!-- // progress 1 -->
+                                    <div class="progress progress-info progress-medium filled4">
+                                        <div class="filler">
+                                            <div class="bar" style="width:70%"> </div>
+                                        </div>
+                                    </div>
+                                    <!-- // progress 2 -->
+                                    <div class="progress progress-info progress-medium filled5">
+                                        <div class="filler">
+                                            <div class="bar" style="width:60%"> </div>
+                                        </div>
+                                    </div>
+                                    <!-- // progress 3 --> 
+                                    
+                                </div>
+                                <!-- // Column --> 
+                                
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <div class="row-fluid">
+                                <div class="span12 well well-black">
+                                    <h4 class="simple-header"> small <small>FILLING</small></small></h4>
+                                    <div class="progress progress-info progress-small filled3">
+                                        <div class="filler">
+                                            <div class="bar" style="width:30%"> </div>
+                                        </div>
+                                    </div>
+                                    <!-- // progress 1 -->
+                                    <div class="progress progress-info progress-small filled4">
+                                        <div class="filler">
+                                            <div class="bar" style="width:60%"> </div>
+                                        </div>
+                                    </div>
+                                    <!-- // progress 2 -->
+                                    <div class="progress progress-info progress-small filled5">
+                                        <div class="filler">
+                                            <div class="bar" style="width:90%"> </div>
+                                        </div>
+                                    </div>
+                                    <!-- // progress 3 --> 
+                                </div>
+                                <!-- // Column --> 
+                                
+                            </div>
+                            <!-- // Example row -->
+                            
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <h4 class="simple-header">mini <small>FILLING</small></h4>
+                                    <div class="progress progress-info progress-mini filled3">
+                                        <div class="filler">
+                                            <div class="bar" style="width:80%"> </div>
+                                        </div>
+                                    </div>
+                                    <!-- // progress 1 -->
+                                    <div class="progress progress-info progress-mini filled4">
+                                        <div class="filler">
+                                            <div class="bar" style="width:70%"> </div>
+                                        </div>
+                                    </div>
+                                    <!-- // progress 2 -->
+                                    <div class="progress progress-info progress-mini filled5">
+                                        <div class="filler">
+                                            <div class="bar" style="width:60%"> </div>
+                                        </div>
+                                    </div>
+                                    <!-- // progress 3 --> 
+                                </div>
+                                <!-- // Column --> 
+                                
+                            </div>
+                            <!-- // Example row --> 
+                            
+                            <!-- // Column --> 
+                        </div>
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="page-header">
+                        <h3><i class="fontello-icon-signal-4 opaci45"></i> Progress bar vertical <small>static</small></h3>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <h4 class="simple-header"> vertical progress <small>COLOR</small></h4>
+                            <div class="vertical-progressbar-group">
+                                <div class="progress vertical progress-info">
+                                    <div class="bar" style="height:100%"></div>
+                                </div>
+                                <!-- // progress 1 -->
+                                <div class="progress vertical progress-success">
+                                    <div class="bar" style="height:100%"></div>
+                                </div>
+                                <!-- // progress 2 -->
+                                <div class="progress vertical progress-warning">
+                                    <div class="bar" style="height:100%"></div>
+                                </div>
+                                <!-- // progress 3 -->
+                                <div class="progress vertical progress-danger">
+                                    <div class="bar" style="height:100%"></div>
+                                </div>
+                                <!-- // progress 4 -->
+                                <div class="progress vertical">
+                                    <div class="bar" style="height:100%"></div>
+                                </div>
+                            </div>
+                            <!-- // progress group --> 
+                            
+                        </div>
+                        <!-- // Column -->
+                        
+                        <div class="span4">
+                            <h4 class="simple-header"> vertical default <small>TOP</small></h4>
+                            <div class="vertical-progressbar-group">
+                                <div class="progress vertical progress-success progress-mini">
+                                    <div class="bar" style="height:25%"></div>
+                                </div>
+                                <!-- // progress 1 -->
+                                <div class="progress vertical progress-success progress-small">
+                                    <div class="bar" style="height:50%"></div>
+                                </div>
+                                <!-- // progress 2 -->
+                                <div class="progress vertical progress-success progress-medium">
+                                    <div class="bar" style="height:75%"></div>
+                                </div>
+                                <!-- // progress 3 -->
+                                <div class="progress vertical progress-success">
+                                    <div class="bar" style="height:100%"></div>
+                                </div>
+                                <!-- // progress 4 -->
+                                <div class="progress vertical progress-success progress-large">
+                                    <div class="bar" style="height:25%"></div>
+                                </div>
+                                <!-- // progress 5 -->
+                                <div class="progress vertical progress-success progress-xlarge">
+                                    <div class="bar" style="height:50%"></div>
+                                </div>
+                                <div class="progress vertical progress-success progress-xxlarge">
+                                    <div class="bar" style="height:75%"></div>
+                                </div>
+                            </div>
+                            <!-- // progress group --> 
+                            
+                        </div>
+                        <!-- // Column -->
+                        
+                        <div class="span4">
+                            <h4 class="simple-header"> vertical bottom </h4>
+                            <div class="vertical-progressbar-group">
+                                <div class="progress vertical bottom progress-info progress-mini">
+                                    <div class="bar" style="height:25%"></div>
+                                </div>
+                                <!-- // progress 1 -->
+                                <div class="progress vertical bottom progress-info progress-small">
+                                    <div class="bar" style="height:50%"></div>
+                                </div>
+                                <!-- // progress 2 -->
+                                <div class="progress vertical bottom progress-info progress-medium">
+                                    <div class="bar" style="height:75%"></div>
+                                </div>
+                                <!-- // progress 3 -->
+                                <div class="progress vertical bottom progress-info">
+                                    <div class="bar" style="height:100%"></div>
+                                </div>
+                                <!-- // progress 4 -->
+                                <div class="progress vertical bottom progress-info progress-large">
+                                    <div class="bar" style="height:25%"></div>
+                                </div>
+                                <!-- // progress 5 -->
+                                <div class="progress vertical bottom progress-info progress-xlarge">
+                                    <div class="bar" style="height:50%"></div>
+                                </div>
+                                <!-- // progress 6 -->
+                                <div class="progress vertical bottom progress-info progress-xxlarge filled3">
+                                    <div class="bar" style="height:75%"></div>
+                                </div>
+                                
+                                <!-- // progress group --> 
+                                
+                            </div>
+                            <!-- // Column --> 
+                        </div>
+                    </div>
+                    <!-- // Example row --> 
+                    
+                </div>
+                <!-- // Tab Demo -->
+                
+                <div id="TabModifications" class="tab-pane">
+                    <div class="page-header">
+                        <h3><i class="fontello-icon-progress-0 opaci45"></i> Animated ProgressBar <small></small></h3>
+                    </div>
+                    <p>bootstrap-progressbar is a jQuery plugin which extends the basic twitter-bootstrap progressbar. It provides the ability to animate the progressbar by adding Javascript in combination with the preexisting css transitions. Additionally you can display the current progress information in the bar or get the value via callback.</p>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <section id="horizontalDefault">
+                                <div class="page-header">
+                                    <h3>default progressbar</h3>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span4">
+                                        <h4 class="simple-header">no text</h4>
+                                        <div class="progress progress-info progress-mini">
+                                            <div class="bar text-no-1" data-percentage="25"></div>
+                                        </div>
+                                        <!-- // progress 1 -->
+                                        <div class="progress progress-success progress-mini filled3">
+                                            <div class="filler">
+                                                <div class="bar text-no-1" data-percentage="50"></div>
+                                            </div>
+                                        </div>
+                                        <!-- // progress 2 -->
+                                        <div class="progress progress-warning progress-small filled3">
+                                            <div class="filler">
+                                                <div class="bar text-no-1" data-percentage="75"></div>
+                                            </div>
+                                        </div>
+                                        <!-- // progress 3 -->
+                                        <div class="progress-group margin-00">
+                                            <div class="label-field">label for progress</div>
+                                            <div class="progress progress-danger progress-medium filled3">
+                                                <div class="filler">
+                                                    <div class="bar text-no-1 four-sec-ease-in-out" data-percentage="100"></div>
+                                                </div>
+                                            </div>
+                                            <!-- // progress 4 --> 
+                                            <span class="help-block">transition: width 4s ease-in-out</span> </div>
+                                        <!-- // progress group --> 
+                                        
+                                        <a id="hpDefault-trigger" class="btn btn-green pull-right">watch a demo</a> </div>
+                                    <!-- // Column -->
+                                    
+                                    <div class="span4 well well-nice">
+                                        <h4 class="simple-header">filled text</h4>
+                                        <div class="progress-group">
+                                            <div class="progress progress-info margin-0s">
+                                                <div class="bar text-filled-1" data-percentage="25"></div>
+                                            </div>
+                                            <!-- // progress 1 -->
+                                            <div class="progress progress-success margin-0s">
+                                                <div class="bar text-filled-1" data-percentage="50"></div>
+                                            </div>
+                                            <!-- // progress 2 -->
+                                            <div class="progress progress-warning margin-0s">
+                                                <div class="bar text-filled-1" data-percentage="75"></div>
+                                            </div>
+                                            <!-- // progress 3 --> 
+                                        </div>
+                                        <!-- // progress group -->
+                                        
+                                        <div class="progress-group">
+                                            <div class="progress progress-striped active filled4">
+                                                <div class="filler">
+                                                    <div class="bar text-label-top six-sec-ease-in-out" data-percentage="65"></div>
+                                                </div>
+                                            </div>
+                                            <!-- // progress 4 -->
+                                            <div class="label-field"> <span id="label-update1"></span> <span id="label-done1" class="blueboo"></span> <span class="help-block pull-right">transition: width 6s ease-in-out</span> </div>
+                                        </div>
+                                        <!-- // progress group --> 
+                                        
+                                    </div>
+                                    <!-- // Column -->
+                                    
+                                    <div class="span4 well well-black">
+                                        <h4 class="simple-header">centered text</h4>
+                                        <div class="progress-group">
+                                            <div class="progress progress-info">
+                                                <div class="bar text-centered-1" data-percentage="25"></div>
+                                            </div>
+                                            <!-- // progress 1 -->
+                                            <div class="progress progress-success">
+                                                <div class="bar text-centered-1" data-percentage="50"></div>
+                                            </div>
+                                            <!-- // progress 2 -->
+                                            <div class="progress progress-warning">
+                                                <div class="bar text-centered-1" data-percentage="75"></div>
+                                            </div>
+                                            <!-- // progress 3 --> 
+                                        </div>
+                                        <!-- // progress group -->
+                                        
+                                        <div class="progress-group">
+                                            <div class="label-field text-right">update: <span id="label-update2">0%</span> <span id="label-done2" class="blueboo"></span> </div>
+                                            <div class="progress progress-danger progress-striped active filled4">
+                                                <div class="filler">
+                                                    <div class="bar text-label-bottom six-sec-ease-in-out" data-percentage="100"></div>
+                                                </div>
+                                            </div>
+                                            <!-- // progress 4 --> 
+                                        </div>
+                                        <!-- // progress group --> 
+                                        
+                                    </div>
+                                    <!-- // Column --> 
+                                    
+                                </div>
+                                <!-- // Example row --> 
+                            </section>
+                            <!-- // ProgressBar Horizontal Default -->
+                            
+                            <section id="horizontalAll">
+                                <div class="page-header">
+                                    <h3>setting progressbar</h3>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span12 well well-nice well-impressed">
+                                        <div class="row-fluid">
+                                            <div class="span4 well well-nice margin-0m">
+                                                <h4 class="simple-header">callback <span id="label-update7" class="pull-right"></span></h4>
+                                                <div class="progress-group">
+                                                    <div id="label-update3" class="label-field inline-left">0%</div>
+                                                    <div class="progress progress-info progress-mini filled3">
+                                                        <div class="filler">
+                                                            <div class="bar text-no-2-1 six-sec-ease-in-out" data-amount-part="1337" data-amount-total="9000"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- // progress 1 -->
+                                                    <div id="label-update4" class="label-field inline-left">0%</div>
+                                                    <div class="progress progress-success progress-mini filled3">
+                                                        <div class="filler">
+                                                            <div class="bar text-no-2-2 six-sec-ease-in-out" data-amount-part="2500" data-amount-total="5000"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- // progress 2 -->
+                                                    <div id="label-update5" class="label-field inline-left">0%</div>
+                                                    <div class="progress progress-warning progress-mini filled3">
+                                                        <div class="filler">
+                                                            <div class="bar text-no-2-3 six-sec-ease-in-out" data-amount-part="75" data-amount-total="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- // progress 3 -->
+                                                    <div id="label-update6" class="label-field inline-left">0%</div>
+                                                    <div class="progress progress-danger progress-mini filled3">
+                                                        <div class="filler">
+                                                            <div class="bar text-no-2-4 six-sec-ease-in-out" data-amount-part="10" data-amount-total="10"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- // progress 4 --> 
+                                                </div>
+                                                <!-- // progress group --> 
+                                                
+                                            </div>
+                                            <!-- // Column -->
+                                            
+                                            <div class="span4 well well-nice margin-0m">
+                                                <h4 class="simple-header">filled text - right</h4>
+                                                <div class="progress progress-success right">
+                                                    <div class="bar text-filled-5 six-sec-ease-in-out" data-amount-part="1337" data-amount-total="9000"></div>
+                                                </div>
+                                                <!-- // progress 1 -->
+                                                <div class="progress progress-success right">
+                                                    <div class="bar text-filled-5 six-sec-ease-in-out" data-amount-part="2500" data-amount-total="5000"></div>
+                                                </div>
+                                                <!-- // progress 2 -->
+                                                <div class="progress progress-success right">
+                                                    <div class="bar text-filled-5 six-sec-ease-in-out" data-amount-part="75" data-amount-total="100"></div>
+                                                </div>
+                                                <!-- // progress 3 -->
+                                                <div class="progress progress-success right">
+                                                    <div class="bar text-filled-5 six-sec-ease-in-out" data-amount-part="10" data-amount-total="10"></div>
+                                                </div>
+                                                <!-- // progress 4 --> 
+                                            </div>
+                                            <!-- // Column -->
+                                            
+                                            <div class="span4 well well-nice margin-0m">
+                                                <h4 class="simple-header">centered text</h4>
+                                                <div class="progress progress-info">
+                                                    <div class="bar text-centered-5 six-sec-ease-in-out" data-amount-part="1337" data-amount-total="9000"></div>
+                                                </div>
+                                                <!-- // progress 1 -->
+                                                <div class="progress progress-success">
+                                                    <div class="bar text-centered-5 six-sec-ease-in-out" data-amount-part="2500" data-amount-total="5000"></div>
+                                                </div>
+                                                <!-- // progress 2 -->
+                                                <div class="progress progress-warning">
+                                                    <div class="bar text-centered-5 six-sec-ease-in-out" data-amount-part="75" data-amount-total="100"></div>
+                                                </div>
+                                                <!-- // progress 3 -->
+                                                <div class="progress progress-danger">
+                                                    <div class="bar text-centered-5 six-sec-ease-in-out" data-amount-part="10" data-amount-total="10"></div>
+                                                </div>
+                                                <!-- // progress 4 --> 
+                                            </div>
+                                            <!-- // Column --> 
+                                            <a class="btn btn-green" id="horizontalAll-trigger">watch a demo</a> </div>
+                                        <!-- // Example row --> 
+                                    </div>
+                                    <!-- // Column --> 
+                                </div>
+                                <!-- // Example row --> 
+                            </section>
+                            <!-- // ProgressBar Horizontal Setting -->
+                            
+                            <section id="hpMulti">
+                                <div class="page-header">
+                                    <h4>multi trigger <small>CONTROL VALUE</small></h4>
+                                    <span class="block margin-ms"> <a class="btn btn-small btn-green" id="hpMulti-100-trigger">start with 100</a> <a class="btn btn-small btn-green" id="hpMulti-50-trigger">start with 50</a> <a class="btn btn-small btn-green" id="hpMulti-0-trigger">start with 0</a> </span> </div>
+                                <div class="row-fluid">
+                                    <div class="span4 well">
+                                        <h4 class="simple-header">no text</h4>
+                                        <div class="progress progress-success margin-00">
+                                            <div class="bar text-no-15" data-percentage="25"></div>
+                                        </div>
+                                        <!-- // progress 1 --> 
+                                    </div>
+                                    <!-- // Column -->
+                                    
+                                    <div class="span4 well well-nice">
+                                        <h4 class="simple-header">filled text</h4>
+                                        <div class="progress progress-success margin-00">
+                                            <div class="bar text-filled-15" data-percentage="25"></div>
+                                        </div>
+                                        <!-- // progress 2 --> 
+                                    </div>
+                                    <!-- // Column -->
+                                    
+                                    <div class="span4 well well-black">
+                                        <h4 class="simple-header">centered text</h4>
+                                        <div class="progress progress-success margin-00">
+                                            <div class="bar text-centered-15" data-percentage="25"></div>
+                                        </div>
+                                        <!-- // progress 3 --> 
+                                    </div>
+                                    <!-- // Column --> 
+                                    
+                                </div>
+                                <!-- // Example row --> 
+                            </section>
+                            <!-- // ProgressBar Horizontal Multi Triger -->
+                            
+                            <section id="verticalDefault">
+                                <div class="page-header">
+                                    <h3>default vertical</h3>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span4 well">
+                                        <div class="vertical-progressbar-group">
+                                            <h4 class="simple-header"><a id="vpDefault-trigger" class="btn btn-mini btn-green pull-right">watch a demo</a> no text <small>IN WELL</small> </h4>
+                                            <div class="progress vertical progress-success progress-mini">
+                                                <div class="bar text-no-3 six-sec-ease-in-out" data-percentage="75"></div>
+                                            </div>
+                                            <!-- // progress 1 -->
+                                            <div class="progress vertical progress-success progress-mini">
+                                                <div class="bar text-no-3 six-sec-ease-in-out" data-percentage="50"></div>
+                                            </div>
+                                            <!-- // progress 2 -->
+                                            <div class="progress vertical progress-success progress-small">
+                                                <div class="bar text-no-3 six-sec-ease-in-out" data-percentage="75"></div>
+                                            </div>
+                                            <!-- // progress 3 -->
+                                            <div class="progress vertical progress-success progress-small">
+                                                <div class="bar text-no-3 six-sec-ease-in-out" data-percentage="100"></div>
+                                            </div>
+                                            <!-- // progress 4 -->
+                                            <div class="progress vertical progress-success progress-medium">
+                                                <div class="bar text-no-3 four-sec-ease-in-out" data-percentage="100"></div>
+                                            </div>
+                                            <!-- // progress 5 -->
+                                            <div class="progress vertical progress-success progress-medium">
+                                                <div class="bar text-no-3 four-sec-ease-in-out" data-percentage="75"></div>
+                                            </div>
+                                            <!-- // progress 6 -->
+                                            <div class="progress vertical progress-success">
+                                                <div class="bar text-no-3 two-sec-ease-in-out" data-percentage="75"></div>
+                                            </div>
+                                            <!-- // progress 7 -->
+                                            <div class="progress vertical progress-success">
+                                                <div class="bar text-no-3 two-sec-ease-in-out" data-percentage="55"></div>
+                                            </div>
+                                        </div>
+                                        <!-- // vertical progressbar group -->
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <!-- // Column -->
+                                    
+                                    <div class="span4 well well-impressed">
+                                        <div class="vertical-progressbar-group">
+                                            <h4 class="simple-header">filled text <small>IN WELL IMPRESSED</small></h4>
+                                            <div class="progress vertical progress-info progress-large">
+                                                <div class="bar text-filled-3 two-sec-ease-in-out" data-percentage="25"></div>
+                                            </div>
+                                            <!-- // progress 1 -->
+                                            <div class="progress vertical progress-success progress-large">
+                                                <div class="bar text-filled-3 two-sec-ease-in-out" data-percentage="50"></div>
+                                            </div>
+                                            <!-- // progress 2 -->
+                                            <div class="progress vertical progress-warning progress-xlarge">
+                                                <div class="bar text-filled-3 two-sec-ease-in-out" data-percentage="75"></div>
+                                            </div>
+                                            <!-- // progress 3 -->
+                                            <div class="progress vertical progress-danger progress-xlarge">
+                                                <div class="bar text-filled-3 two-sec-ease-in-out" data-percentage="100"></div>
+                                            </div>
+                                            <!-- // progress 4 --> 
+                                        </div>
+                                        <!-- // vertical progressbar group -->
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <!-- // Column -->
+                                    
+                                    <div class="span4 well well-black well-impressed">
+                                        <div class="vertical-progressbar-group">
+                                            <h4 class="simple-header">centered text <small>IN WELL BLACK IMPRESSED</small></h4>
+                                            <div class="progress vertical progress-success progress-xxlarge bottom">
+                                                <div class="bar text-centered-3 six-sec-ease-in-out" data-percentage="30"></div>
+                                            </div>
+                                            <!-- // progress 1 -->
+                                            <div class="progress vertical progress-success progress-xxlarge">
+                                                <div class="bar text-centered-3 four-sec-ease-in-out" data-percentage="70"></div>
+                                            </div>
+                                            <!-- // progress 2 -->
+                                            <div class="progress vertical progress-success progress-xxlarge bottom">
+                                                <div class="bar text-centered-3 four-sec-ease-in-out" data-percentage="100"></div>
+                                            </div>
+                                            <!-- // progress 3 --> 
+                                        </div>
+                                        <!-- // vertical progressbar group -->
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <!-- // Column --> 
+                                    
+                                </div>
+                                <!-- // Example row --> 
+                            </section>
+                            <!-- // ProgressBar Vertical Default -->
+                            
+                            <section id="verticalAll">
+                                <div class="page-header">
+                                    <h3>setting vertical progressbar</h3>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span4 margin-bottom20">
+                                        <div class="vertical-progressbar-group">
+                                            <h4 class="simple-header">no text <a id="vpAll-trigger" class="btn btn-mini btn-green pull-right">watch a demo</a></h4>
+                                            <div class="progress vertical bottom progress-success progress-large">
+                                                <div class="bar text-no-4-1 four-sec-ease-in-out" data-percentage="25"></div>
+                                            </div>
+                                            <!-- // progress 1 -->
+                                            <div class="progress vertical bottom progress-success progress-large">
+                                                <div class="bar text-no-4-2 four-sec-ease-in-out" data-percentage="50"></div>
+                                            </div>
+                                            <!-- // progress 2 -->
+                                            <div class="progress vertical bottom progress-success progress-large">
+                                                <div class="bar text-no-4-3 four-sec-ease-in-out" data-percentage="75"></div>
+                                            </div>
+                                            <!-- // progress 3 -->
+                                            <div class="progress vertical bottom progress-success progress-large">
+                                                <div class="bar text-no-4-4 four-sec-ease-in-out" data-percentage="100"></div>
+                                            </div>
+                                            <!-- // progress 4 -->
+                                            <div class="label-field"> <span id="label-done4-1" class="blueboo"></span> <span id="label-update4-1"></span> </div>
+                                            <div class="label-field"> <span id="label-done4-2" class="blueboo"></span> <span id="label-update4-2"></span> </div>
+                                            <div class="label-field"> <span id="label-done4-3" class="blueboo"></span> <span id="label-update4-3"></span> </div>
+                                            <div class="label-field"> <span id="label-done4-4" class="blueboo"></span> <span id="label-update4-4"></span> </div>
+                                        </div>
+                                        <!-- // vertical progressbar group -->
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <!-- // Column -->
+                                    
+                                    <div class="span4 well well-nice">
+                                        <div class="vertical-progressbar-group">
+                                            <h4 class="simple-header">filled text</h4>
+                                            <div class="progress vertical bottom progress-small">
+                                                <div class="bar text-no-4 four-sec-ease-in-out" data-percentage="45"></div>
+                                            </div>
+                                            <!-- // progress 1 -->
+                                            <div class="progress vertical bottom progress-xxlarge">
+                                                <div class="bar text-filled-4 four-sec-ease-in-out" data-amount-part="10" data-amount-total="10"></div>
+                                            </div>
+                                            <!-- // progress 2 -->
+                                            <div class="progress vertical bottom progress-info progress-small">
+                                                <div class="bar text-no-4 six-sec-ease-in-out" data-percentage="35"></div>
+                                            </div>
+                                            <!-- // progress 3 -->
+                                            <div class="progress vertical bottom progress-info progress-xxlarge">
+                                                <div class="bar text-filled-4 six-sec-ease-in-out" data-amount-part="3500" data-amount-total="5000"></div>
+                                            </div>
+                                            <!-- // progress 4 --> 
+                                        </div>
+                                        <!-- // vertical progressbar group -->
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <!-- // Column -->
+                                    
+                                    <div class="span4 well well-black">
+                                        <div class="vertical-progressbar-group">
+                                            <h4 class="simple-header">centered text</h4>
+                                            <div class="progress vertical bottom progress-danger progress-small bottom">
+                                                <div class="bar text-no-4 six-sec-ease-in-out" data-percentage="75"></div>
+                                            </div>
+                                            <!-- // progress 1 -->
+                                            <div class="progress vertical bottom progress-success progress-xxlarge bottom">
+                                                <div class="bar text-centered-4 six-sec-ease-in-out" data-amount-part="157" data-amount-total="200"></div>
+                                            </div>
+                                            <!-- // progress 2 -->
+                                            <div class="progress vertical bottom progress-success progress-xxlarge bottom">
+                                                <div class="bar text-centered-4 six-sec-ease-in-out" data-amount-part="4650" data-amount-total="5000"></div>
+                                            </div>
+                                            <!-- // progress 3 -->
+                                            <div class="progress vertical bottom progress-success progress-xxlarge bottom">
+                                                <div class="bar text-centered-4 six-sec-ease-in-out" data-amount-part="75" data-amount-total="100"></div>
+                                            </div>
+                                            <!-- // progress 3 --> 
+                                        </div>
+                                        <!-- // vertical progressbar group -->
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <!-- // Column --> 
+                                    
+                                </div>
+                                <!-- // Example row --> 
+                            </section>
+                            <!-- // ProgressBar Vertical Setting -->
+                            
+                            <section id="v-error">
+                                <div class="page-header">
+                                    <h3>error</h3>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span6 well well-nice">
+                                        <h4 class="simple-header margin-bottom10">error <small>CONTROLS</small></h4>
+                                        <span class="block margin-0m"> <a class="btn btn-green" id="v-error-trigger">watch demo error progressbar</a> </span>
+                                        <div id="v-error-fail-1" class="alert alert-error hide fade in"> <a class="close" data-dismiss="alert">×</a> </div>
+                                        <!-- // message -->
+                                        <div class="progress progress-info">
+                                            <div class="bar text-centered-14-1 six-sec-ease-in-out" data-percentage="25"></div>
+                                        </div>
+                                        <!-- // progress 1 -->
+                                        <div id="v-error-fail-2" class="alert alert-error hide fade in"> <a class="close" data-dismiss="alert">×</a> </div>
+                                        <!-- // message -->
+                                        <div class="progress progress-success">
+                                            <div class="bar text-centered-14-2 six-sec-ease-in-out" data-amount-part="1337" data-amount-total="9000"></div>
+                                        </div>
+                                        <!-- // progress 2 --> 
+                                    </div>
+                                    <!-- // Column --> 
+                                    
+                                </div>
+                                <!-- // Example row --> 
+                            </section>
+                            <!-- // ProgressBar Error --> 
+                            
+                        </div>
+                        <!-- // Column --> 
+                        
+                    </div>
+                    <!-- // Example row --> 
+                    
+                </div>
+                <!-- // Tab Modifications --> 
+                
+            </div>
+            <!-- // page content --> 
+            
+        </div>
+        <!-- // main-content --> 
+        
+    </div>
+    <!-- // main-container  -->
+    
+    <footer id="footer-fix">
+        <div id="footer-sidebar" class="footer-sidebar">
+            <div class="navbar">
+                <div class="btn-toolbar"> <a class="btn btn-glyph btn-link" href="javascript:void(0);"><i class="fontello-icon-up-open-1"></i></a> </div>
+            </div>
+        </div>
+        <!-- // footer sidebar -->
+        
+        <div id="footer-content" class="footer-content">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <ul class="nav pull-left">
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnToggleSidebar" class="btn-glyph fontello-icon-resize-full-2 tip hidden-phone" href="javascript:void(0);" title="show hide sidebar"></a></li>
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnChangeSidebar" class="btn-glyph fontello-icon-login tip hidden-phone" href="javascript:void(0);" title="change sidebar position"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnChangeSidebarColor" class="btn-glyph fontello-icon-palette tip" href="javascript:void(0);" title="change sidebar color"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cw" href="javascript:void(0);"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="fontello-icon-home-3" href="dashboard-one.html"></a></li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-help-2 tip" href="javascript:void(0);" title="help to page"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cog-4 tip" href="javascript:void(0);" title="settings app"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnLogout" class="btn-glyph fontello-icon-logout-1 tip" href="javascript:void(0);" title="logout"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnScrollup" class="scrollup btn-glyph fontello-icon-up-open-1" href="javascript:void(0);"><span class="hidden-phone">Scroll</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // footer content --> 
+        
+    </footer>
+    <!-- // footer-fix  --> 
+    
+</div>
+<!-- // page-container  --> 
+
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/lib/jquery.js"></script> 
+<script src="assets/js/lib/jquery-ui.js"></script>
+<script src="assets/js/lib/jquery.cookie.js"></script> 
+<script src="assets/js/lib/jquery.date.js"></script> 
+<script src="assets/js/lib/jquery.mousewheel.js"></script> 
+<script src="assets/js/lib/jquery.load-image.min.js"></script>
+<script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+
+<!-- Plugins Bootstrap -->
+<script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+<script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script> 
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+<script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+<script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+<script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+<script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+<script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+<script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+ 
+
+<!-- Plugins Custom - Only example --> 
+<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>
+
+<!-- Plugins Custom - System --> 
+<script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+<script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+<!-- Plugins Custom - System info -->
+<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+<!-- Plugins Custom - Content -->
+<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+<!-- Plugins Custom - Component -->
+<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+<!-- Plugins Custom - Form -->
+<script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+<!-- Plugins Custom - Gallery --> 
+<script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+<script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+ 
+<!-- Plugins Tables --> 
+<script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+<!-- Plugins data visualization --> 
+<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+<script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/core.js"></script> 
+<script src="assets/js/application.js"></script> 
+
+<!-- Only This Demo Page --> 
+<script src="assets/js/demo/demo-bootstrap-progressbar.js"></script> 
+
+</body>
+</html>

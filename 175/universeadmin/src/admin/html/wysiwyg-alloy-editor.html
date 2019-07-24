@@ -1,0 +1,58 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Wysiwyg Editor / Universe Admin{% endblock %}
+
+{% block styles %}
+<!--<link rel="stylesheet" href="vendor/tui-editor/tui-editor.min.css">
+<link rel="stylesheet" href="vendor/tui-editor/tui-editor-contents.min.css">-->
+<!--<link rel="stylesheet" href="vendor/quill/quill.core.css">
+<link rel="stylesheet" href="vendor/quill/quill.snow.css">-->
+<link rel="stylesheet" href="vendor/alloy-editor/assets/alloy-editor-atlas-min.css">
+<!--<link rel="stylesheet" href="vendor/quill/quill.bubble.css">-->
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh l-2column">
+  {% include "./partials/wysiwyg-editor.html" %}
+  <div class="m-content">
+    <h3>Alloy Editor</h3>
+    <div class="m-alloy-editor">
+      <div id="m-alloy-editor" contenteditable="true" data-placeholder="Write here the content">
+        <h2>Essential things to think about before starting a blog</h2>
+        <figure class="image illustration" style="float:right;">
+          <img alt="A picture of wooden spoons with spices and herbs in them." src="https://images.pexels.com/photos/903171/pexels-photo-903171.jpeg?w=450&auto=compress&cs=tinysrgb" width="450px"/>
+          <figcaption>It takes several ingredients to create a delicious blog.</figcaption>
+        </figure>
+        <p>It has been exactly 3 years since I wrote my first blog series entitled “Flavorful Tuscany”, but starting it was definitely not easy. Back then, I didn’t know much about blogging, let alone think that one day it could become <strong>my full-time job</strong>. Even though I had many recipes and food-related stories to tell, it never crossed my mind that I could be sharing them with the whole world</p>
+        <p>I am now a <strong>full-time blogger</strong> and the curator of the <a href="https://ckeditor.com/ckeditor-4/#">Simply delicious newsletter</a>, sharing stories about traveling and cooking, as well as tips on how to run a successful blog.</p>
+        <p>If you are tempted by the idea of creating your own blog, please think about the following:</p>
+        <ul>
+          <li>Your story (what do you want to tell your audience)</li>
+          <li>Your audience (who do you write for)</li>
+          <li>Your blog name and design</li>
+        </ul>
+        <p>After you get your head around these 3 essentials, all you have to do is grab your keyboard and the rest will follow.</p>
+        <h2>Essential things to think about before starting a blog</h2>
+        <p>It has been exactly 3 years since I wrote my first blog series entitled “Flavorful Tuscany”, but starting it was definitely not easy. Back then, I didn’t know much about blogging, let alone think that one day it could become <strong>my full-time job</strong>. Even though I had many recipes and food-related stories to tell, it never crossed my mind that I could be sharing them with the whole world</p>
+        <p>I am now a <strong>full-time blogger</strong> and the curator of the <a href="https://ckeditor.com/ckeditor-4/#">Simply delicious newsletter</a>, sharing stories about traveling and cooking, as well as tips on how to run a successful blog.</p>
+        <p>If you are tempted by the idea of creating your own blog, please think about the following:</p>
+        <ul>
+          <li>Your story (what do you want to tell your audience)</li>
+          <li>Your audience (who do you write for)</li>
+          <li>Your blog name and design</li>
+        </ul>
+        <p>After you get your head around these 3 essentials, all you have to do is grab your keyboard and the rest will follow.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<!--<script src="vendor/tui-editor/tui-editor-Editor-all.min.js"></script>-->
+<!--<script src="vendor/quill/quill.min.js"></script>-->
+<script src="vendor/alloy-editor/alloy-editor-all-min.js"></script>
+<script src="js/preview/wysiwyg-alloy-editor.min.js"></script>
+{% endblock %}

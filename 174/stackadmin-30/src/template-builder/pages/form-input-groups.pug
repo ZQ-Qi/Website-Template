@@ -1,0 +1,39 @@
+//- =========================================================================================
+	File Name: form-input-groups.jade
+	Description: Form Fields Input Groups.
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle = "Input Groups"
+	- var pageSubTitle = "Input Groups with diffrent elements and styles."
+	- var description  = "Enhance form controls using buttons, icons, text to before, after, or on both sides of any <input>. Use .input-group class with an .input-group-text class to prepend or append elements to a .form-control. Place one add-on or button on either side of an input. You may also place one on both sides of an input. It does not support multiple add-ons on a single side, nor multiple form-controls in a single input group."
+	- var activeMenu = "form-input-groups"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Form Components"}, {name:"Input Groups"}])//- Include page content in page block
+append content
+	include ../contents/form-input-groups.html
+
+append vendorcss
+	//- Bootstrap Touchspin CSS
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/vendors/css/forms/spinner/jquery.bootstrap-touchspin.css')
+
+append vendorjs
+	//- Switchery Js
+	script(src=app_assets_path+'/vendors/js/forms/toggle/switchery.min.js', type='text/javascript')
+	//- Bootstrap TouchSpin JS
+	script(src=app_assets_path+'/vendors/js/forms/spinner/jquery.bootstrap-touchspin.js', type='text/javascript')
+
+append pagejs
+	//- Template js for input Groups
+	script(src=app_assets_path+'/js/scripts/forms/input-groups.js', type='text/javascript')
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/plugins/forms/checkboxes-radios.css')

@@ -1,0 +1,24 @@
+//- =========================================================================================
+	File Name: component-dropdowns.jade
+	Description: Dropdown
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+extends template
+
+block pageVars
+	- var pageTitle   = "Dropdowns"
+	- var pageSubTitle = "Dropdowns are toggleable, contextual overlays for displaying lists of links and more."
+	- var description = "Dropdowns are made interactive with the included Bootstrap dropdown JavaScript plugin.Historically dropdown menu contents had to be links, but that’s no longer the case with v4. Now you can optionally use &lt;button&gt; elements in your dropdowns instead of just &lt;a&gt;"
+	- var activeMenu  = "component-dropdowns"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Components"}, {name:"Dropdowns"}])
+
+//- Include page content in page block
+append content
+	include ../contents/component-dropdowns.html

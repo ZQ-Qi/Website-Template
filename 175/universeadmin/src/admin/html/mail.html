@@ -1,0 +1,218 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Mail / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid m-mail">
+  <div class="main-container m-mail__container">
+    <div class="m-mail__nav">
+      <ul class="m-mail__menu">
+        <li class="m-mail__menu-item">
+          <a href="#" class="m-mail__menu-link is-active">
+            <span class="m-mail__menu-icon ua-icon-inbox"></span> Inbox
+          </a>
+        </li>
+        <li class="m-mail__menu-item">
+          <a href="#" class="m-mail__menu-link">
+            <span class="m-mail__menu-icon ua-icon-star"></span> Favorites
+          </a>
+        </li>
+      </ul>
+      <div class="m-mail__separator">
+        Channels <a href="#"><span class="m-mail__separator-icon ua-icon-separator-plus"></span></a>
+      </div>
+      <ul class="m-mail__channels">
+        <li class="m-mail__channel-item">
+          <a href="#" class="m-mail__channel-link"># Canoeist Lounge</a>
+        </li>
+        <li class="m-mail__channel-item">
+          <a href="#" class="m-mail__channel-link"># Design</a>
+        </li>
+        <li class="m-mail__channel-item">
+          <a href="#" class="m-mail__channel-link is-active"># Fedback From Testers</a>
+        </li>
+        <li class="m-mail__channel-item">
+          <a href="#" class="m-mail__channel-link text-bold"># Inspiration <span class="m-mail__channel-amount">3</span></a>
+        </li>
+        <li class="m-mail__channel-item">
+          <a href="#" class="m-mail__channel-link text-bold"># Rebrand <span class="m-mail__channel-amount">2</span></a>
+        </li>
+        <li class="m-mail__channel-item">
+          <a href="#" class="m-mail__channel-link"># Shipping</a>
+        </li>
+        <li class="m-mail__channel-item">
+          <a href="#" class="m-mail__channel-link"># Support</a>
+        </li>
+        <li class="m-mail__channel-item">
+          <a href="#" class="m-mail__channel-link">+ Add Channel</a>
+        </li>
+      </ul>
+      <ul class="m-mail__menu">
+        <li class="m-mail__menu-item">
+          <a href="#" class="m-mail__menu-link">
+            <span class="m-mail__menu-icon ua-icon-archive"></span> Archived channels
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="m-mail__emails">
+      <form class="m-mail__search">
+        <div class="m-mail__search-heading">
+          Inbox <a href="#" class="m-mail__create">Start a new threat</a>
+        </div>
+        <div class="input-group input-group-icon iconfont icon-right mb-0 m-mail__search-input">
+          <input class="form-control" type="text" placeholder="Search users by name...">
+          <span class="input-icon ua-icon-search"></span>
+        </div>
+      </form>
+      <div class="m-mail__emails-list">
+        <div class="m-mail__emails-scrollpane js-scrollable">
+          <div class="m-mail__email is-active">
+            <div class="m-mail__email-body">
+              <h5 class="m-mail__email-heading">Photo shoot for product gallery photos</h5>
+              <div class="m-mail__email-text">Roxanne A.: The canoe and paddies will be ready. Thanks for update, Julia</div>
+              <div class="m-mail__tags">
+                <span class="badge badge-shamrock m-mail__tag">#Redbrand</span>
+              </div>
+            </div>
+            <div class="m-mail__email-extra">
+              <span class="m-mail__email-time">13.06.17</span>
+              <img src="img/users/user-10.png" alt="" width="34" height="34" class="rounded-circle">
+            </div>
+          </div>
+          <div class="m-mail__email has-new-messages">
+            <div class="m-mail__email-body">
+              <h5 class="m-mail__email-heading">Photo shoot for product gallery photos</h5>
+              <div class="m-mail__email-text">Roxanne A.: The canoe and paddies will be ready. Thanks for update, Julia</div>
+              <div class="m-mail__tags">
+                <span class="badge badge-buttercup m-mail__tag">#Inspiration</span>
+              </div>
+            </div>
+            <div class="m-mail__email-extra">
+              <span class="m-mail__email-time">13.06.17</span>
+              <img src="img/users/user-11.png" alt="" width="34" height="34" class="rounded-circle">
+            </div>
+          </div>
+          <div class="m-mail__email has-new-messages">
+            <div class="m-mail__email-body">
+              <h5 class="m-mail__email-heading">Photo shoot for product gallery photos</h5>
+              <div class="m-mail__email-text">Roxanne A.: The canoe and paddies will be ready. Thanks for update, Julia</div>
+              <div class="m-mail__tags">
+                <span class="badge badge-shamrock m-mail__tag">#Redbrand</span>
+              </div>
+            </div>
+            <div class="m-mail__email-extra">
+              <span class="m-mail__email-time">13.06.17</span>
+              <img src="img/users/user-9.png" alt="" width="34" height="34" class="rounded-circle">
+            </div>
+          </div>
+          <div class="m-mail__email">
+            <div class="m-mail__email-body">
+              <h5 class="m-mail__email-heading">Photo shoot for product gallery photos</h5>
+              <div class="m-mail__email-text">Roxanne A.: The canoe and paddies will be ready. Thanks for update, Julia</div>
+              <div class="m-mail__tags">
+                <span class="badge badge-lasur m-mail__tag">#Design</span>
+              </div>
+            </div>
+            <div class="m-mail__email-extra">
+              <span class="m-mail__email-time">13.06.17</span>
+              <img src="img/users/user-7.png" alt="" width="34" height="34" class="rounded-circle">
+            </div>
+          </div>
+          <div class="m-mail__email">
+            <div class="m-mail__email-body">
+              <h5 class="m-mail__email-heading">Photo shoot for product gallery photos</h5>
+              <div class="m-mail__email-text">Roxanne A.: The canoe and paddies will be ready. Thanks for update, Julia</div>
+            </div>
+            <div class="m-mail__email-extra">
+              <span class="m-mail__email-time">13.06.17</span>
+              <img src="img/users/user-4.png" alt="" width="34" height="34" class="rounded-circle">
+            </div>
+          </div>
+          <div class="m-mail__email">
+            <div class="m-mail__email-body">
+              <h5 class="m-mail__email-heading">Photo shoot for product gallery photos</h5>
+              <div class="m-mail__email-text">Roxanne A.: The canoe and paddies will be ready. Thanks for update, Julia</div>
+            </div>
+            <div class="m-mail__email-extra">
+              <span class="m-mail__email-time">13.06.17</span>
+              <img src="img/users/user-4.png" alt="" width="34" height="34" class="rounded-circle">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="m-mail__content">
+      <div class="m-mail__content-header">
+        <div>
+          <h5 class="m-mail__content-heading">Photo shoot for product gallery photos</h5>
+          <div class="m-mail__content-heading-desc">7 Followers</div>
+        </div>
+        <div class="m-mail__content-header-controls">
+          <span class="ua-icon-star-outline m-mail__content-header-control"></span>
+          <div class="dropdown no-arrow">
+            <a href="#" class="btn btn-link dropdown-toggle m-mail__content-header-control" data-toggle="dropdown">
+              <span class="ua-icon-dots"></span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Mark as read</a>
+              <a class="dropdown-item" href="#">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m-mail__content-scroll js-scrollable">
+        <div class="m-mail__content-wrap">
+          <div class="m-mail__content-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>4
+            <p><a href="#">https://example.com/uploads/d127214465c81d4433f6ac0676fb83bc40447480e395016885d2510224b25.jpeg</a></p>
+            <p><img src="img/mail/1.png" alt=""></p>
+
+            <div class="m-mail__content-separator"><span>New messages</span></div>
+
+            <div class="m-mail__content-user">
+              <img src="img/users/user-10.png" width="34" height="34" class="rounded-circle m-mail__content-user-avatar" alt="">
+              <div class="m-mail__content-user-wrap">
+                <div class="m-mail__content-user-info">
+                  <a href="#" class="m-mail__content-user-name">Roxanne Abrams</a>
+                  <span class="m-mail__content-user-date">13.06.17</span>
+                </div>
+                <div class="m-mail__content-user-message">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="m-mail__content-user-controls">
+                  <button class="btn btn-secondary iconfont icon-left m-mail__content-user-control" type="button">
+                    1 <span class="btn-icon ua-icon-like"></span>
+                  </button>
+                  <button class="btn btn-secondary m-mail__content-user-control" type="button"><span class="btn-icon ua-icon-separator-plus"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-mail__content-footer">
+            <div class="m-mail__content-footer-textarea">
+              <textarea class="form-control" placeholder="Type your message here..."></textarea>
+            </div>
+            <div class="m-mail__content-footer-actions">
+              <div class="dropdown no-arrow">
+                <a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                  <span class="ua-icon-addon"></span>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Add file</a>
+                  <a class="dropdown-item" href="#">Add video</a>
+                  <a class="dropdown-item" href="#">Add image</a>
+                </div>
+              </div>
+              <button class="btn btn-info m-mail__content-footer-submit">Post Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

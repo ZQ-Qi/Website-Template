@@ -1,0 +1,175 @@
+/* -------------------------------------------- */
+/* ############### PRICING PAGE ############### */
+/* -------------------------------------------- */
+
+.card-pricing-one {
+  padding: 60px;
+
+  > .row {
+    min-height: 100px;
+
+    .col-lg {
+      position: relative;
+
+      + .col-lg {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1px;
+          height: 100%;
+          background-color: $gray-400;
+          display: none;
+
+          @include media-breakpoint-up(lg) { display: block; }
+        }
+      }
+    }
+  }
+}
+
+.pricing-item {
+  text-align: center;
+
+  @include media-breakpoint-up(sm) {
+    padding: 30px;
+  }
+}
+
+.pricing-icon {
+  font-size: 100px;
+  color: theme-color('primary');
+}
+
+.pricing-title {
+  color: darken(theme-color('primary'), 5%);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.pricing-text { margin-bottom: 30px; }
+
+.pricing-price {
+  font-weight: 400;
+  color: $gray-800;
+  margin-bottom: 25px;
+  font-family: $font-family-lato;
+}
+
+.btn-pricing {
+  display: block;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.card-pricing-two {
+  text-align: center;
+  padding: 30px;
+
+  .pricing-title {
+    color: $gray-800;
+    font-size: 14px;
+  }
+
+  .pricing-price {
+    font-size: 56px;
+    color: theme-color('primary');
+    margin-bottom: 0;
+  }
+}
+
+.pricing-list {
+  margin: 0 20px 25px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+
+
+    + li { border-top: 1px solid $gray-300; }
+  }
+}
+
+
+.card-pricing-three {
+  border: 0;
+
+  .card-header {
+    background-color: $gray-800;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    &.bg-primary { background-color: theme-color('primary'); }
+  }
+
+  .card-pricing {
+    text-align: center;
+    padding: 50px 30px;
+    background-color: $gray-100;
+    border-left: 1px solid $gray-400;
+    border-right: 1px solid $gray-400;
+
+    h1 {
+      font-family: $font-family-lato;
+      color: $gray-900;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+
+  .card-body {
+    padding: 30px;
+    text-align: center;
+    border: 1px solid $gray-400;
+    border-top: 0;
+  }
+
+  .btn-pricing {
+    background-color: $gray-800;
+    border: 0;
+  }
+}
+
+.card-pricing-primary {
+  .card-pricing,
+  .card-body {
+    border-color: theme-color('primary');
+  }
+
+  .btn-pricing { background-color: theme-color('primary'); }
+}
+
+
+
+/********** RTL SUPPORT **********/
+/*********************************/
+[dir="rtl"] {
+  .card-pricing-one {
+    > .row {
+      .col-lg {
+        + .col-lg {
+          &::before {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}

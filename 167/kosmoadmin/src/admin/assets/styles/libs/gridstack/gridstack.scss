@@ -1,0 +1,21 @@
+@import "../../config/colors";
+@import "../../config/ui";
+
+.grid-stack {
+  margin-left: -10px;
+  margin-right: -10px;
+
+  > .grid-stack-item {
+    > .grid-stack-item-content {
+      overflow: hidden;
+    }
+  }
+
+  .grid-stack-placeholder {
+    > .placeholder-content {
+      border-radius: $ks-default-border-radius;
+      background-color: rgba(0, 0, 0, 0.02);
+      border: 2px dashed $ks-default-border-color;
+    }
+  }
+}

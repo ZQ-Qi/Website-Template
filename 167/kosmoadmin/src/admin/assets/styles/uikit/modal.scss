@@ -1,0 +1,48 @@
+@import "../config/colors";
+@import "../config/ui";
+
+/* BEGIN UIKIT MODAL */
+.modal {
+  .modal-content {
+    border: none;
+    border-radius: $ks-default-border-radius;
+  }
+
+  .modal-body {
+    padding: 20px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .modal-header {
+    padding: 16px 20px 14px 20px;
+    border-bottom: 1px solid $ks-default-border-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 65px;
+
+    .close {
+      font-size: 16px;
+      color: #8997c3;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  .modal-footer {
+    padding: 15px 20px;
+    text-align: right;
+    border-top: 1px solid $ks-default-border-color;
+  }
+}
+/* END UIKIT MODAL */

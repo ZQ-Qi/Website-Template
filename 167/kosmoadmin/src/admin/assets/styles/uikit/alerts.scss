@@ -1,0 +1,312 @@
+@import "../config/colors";
+
+/* BEGIN UIKIT ALERTS */
+.alert {
+  padding: 17px 20px;
+  border-radius: 2px;
+  background: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  font-weight: normal;
+  color: #333;
+  position: relative;
+
+  > ul {
+    margin: 0;
+    padding-left: 30px;
+  }
+
+  > .ks-icon {
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+  }
+
+  > .close {
+    position: relative;
+    top: -8px;
+    right: -8px;
+    text-shadow: none;
+
+    > span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  > .ks-actions {
+    .btn {
+      + .btn {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  > .ks-inline-image-block {
+    display: flex;
+    align-items: center;
+
+    > .ks-image {
+      margin-right: 15px;
+    }
+  }
+
+  > .alert-heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  > .ks-image-block {
+    display: flex;
+
+    > .ks-image {
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+    }
+
+    > .ks-info {
+      > .ks-name {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      > .ks-text {
+        color: rgba(51, 51, 51, 0.8);
+        display: block;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    background: transparent;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+
+  &.ks-solid {
+    border: none;
+    color:#fff;
+
+    &::before {
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    > .alert-heading {
+      color:#fff;
+    }
+
+    > .close {
+      opacity: .5;
+
+      &:hover {
+        opacity: .9;
+      }
+
+      > span {
+        color: #fff;
+      }
+    }
+
+    > .ks-image-block {
+      > .ks-info {
+        > .ks-text {
+          color: #fff;
+        }
+      }
+    }
+    
+    > .ks-actions {
+      > .ks-cancel {
+        color: #fff;
+        background: transparent;
+        border: solid 1px rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  &.ks-solid-light {
+    > .ks-actions {
+      > .ks-cancel {
+        background: transparent;
+      }
+    }
+  }
+
+  &.ks-active-border {
+    &::before {
+      background: #e5e5e5;
+    }
+  }
+
+  &.alert-primary {
+    border-color: #d0d4e7;
+
+    &.ks-active-border {
+      &::before {
+        background: #d0d4e7;
+      }
+    }
+
+    &.ks-solid {
+      background: $ks-color-primary;
+
+      &.ks-active-border {
+        &::before {
+          background: $btn-primary-bcolor-active;
+        }
+      }
+
+      > .ks-actions {
+        > .ks-approve {
+          background: $btn-primary-bcolor-active;
+          border-color: $btn-primary-bcolor-active;
+        }
+      }
+    }
+
+    &.ks-solid-light {
+      background: #f5f6fa;
+    }
+  }
+
+  &.alert-danger {
+    border-color: #fbe0db;
+
+    &.ks-active-border {
+      &::before {
+        background: #fbe0db;
+      }
+    }
+
+    &.ks-solid {
+      background: $ks-color-danger;
+
+      &.ks-active-border {
+        &::before {
+          background: #e53935;
+        }
+      }
+
+      > .ks-actions {
+        > .ks-approve {
+          background: #e53935;
+          border-color: #e53935;
+        }
+      }
+    }
+
+    &.ks-solid-light {
+      background: #fdefed;
+    }
+  }
+
+  &.alert-info {
+    border-color: #d3edfc;
+
+    &.ks-active-border {
+      &::before {
+        background: #d3edfc;
+      }
+    }
+
+    &.ks-solid {
+      background: $ks-color-info;
+
+      &.ks-active-border {
+        &::before {
+          background: #1e88e5;
+        }
+      }
+
+      > .ks-actions {
+        > .ks-approve {
+          background: #1e88e5;
+          border-color: #1e88e5;
+        }
+      }
+    }
+
+    &.ks-solid-light {
+      background: #e8f6fd;
+    }
+  }
+
+  &.alert-success {
+    border-color: #c0f0d4;
+
+    &.ks-active-border {
+      &::before {
+        background: #c0f0d4;
+      }
+    }
+
+    &.ks-solid {
+      background: $ks-color-success;
+
+      &.ks-active-border {
+        &::before {
+          background: $btn-success-bcolor-active;
+        }
+      }
+
+      > .ks-actions {
+        > .ks-approve {
+          background: $btn-success-bcolor-active;
+          border-color: $btn-success-bcolor-active;
+        }
+      }
+    }
+
+    &.ks-solid-light {
+      background: #eaf9f0;
+    }
+  }
+
+  &.alert-warning {
+    border-color: #f5ebb6;
+
+    &.ks-active-border {
+      &::before {
+        background: #f5ebb6;
+      }
+    }
+
+    &.ks-solid {
+      background: $ks-color-warning;
+
+      &.ks-active-border {
+        &::before {
+          background: #ff8f00;
+        }
+      }
+
+      > .ks-actions {
+        > .ks-approve {
+          background: #ff8f00;
+          border-color: #ff8f00;
+        }
+      }
+    }
+
+    &.ks-solid-light {
+      background: #fbf8e6;
+    }
+  }
+}
+/* END UIKIT ALERTS */

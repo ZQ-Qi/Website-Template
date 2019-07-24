@@ -1,0 +1,45 @@
+.p-message {
+  text-align: center;
+  flex: 1;
+  padding: 10% 20px;
+
+  &__heading {
+    font-size: 45px;
+    color: #111;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  &__desc,
+  &__action {
+    font-size: 17px;
+    color: $color-gray;
+  }
+
+  &__loader {
+    height: 52px;
+    margin-top: 36px;
+    margin-bottom: 26px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    &-image {
+      width: 52px;
+      height: 52px;
+    }
+
+    &-indicator {
+      position: relative;
+      top: 20px;
+    }
+
+    &-indicator > div {
+      background-color: $color-gray;
+    }
+  }
+}
+
+@include mq(phablet, max) {
+
+}

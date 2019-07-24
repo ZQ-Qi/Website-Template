@@ -1,0 +1,513 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}E-commerce Products / Universe Admin{% endblock %}
+
+{% block bodyClass %}has-subnav-lg{% endblock %}
+
+{% block content %}
+<div class="subnav">
+  <div class="subnav__header">
+    <div class="subnav__heading">
+      <span class="mdi mdi-currency-usd subnav__heading-icon"></span>Market
+    </div>
+    <div class="subnav__header-side">
+      <span href="#" class="subnav__header-text subnav__header-side-item">
+        You have <a href="#" class="e-commerce__products-amount">21 product</a> in cart
+      </span>
+      <a href="#" class="btn btn-info icon-left subnav__header-side-item">
+        Pay Now <span class="btn-icon mdi mdi-cart"></span>
+      </a>
+    </div>
+  </div>
+  <ul class="nav nav-tabs subnav__nav" role="tablist">
+    <li class="nav-item subnav__nav-item">
+      <a class="nav-link subnav__nav-link active" data-toggle="tab" href="#e-commerce-all-products">All products</a>
+    </li>
+    <li class="nav-item subnav__nav-item">
+      <a class="nav-link subnav__nav-link" data-toggle="tab" href="#e-commerce-my-products">My products</a>
+    </li>
+    <li class="nav-item subnav__nav-item">
+      <a class="nav-link subnav__nav-link" data-toggle="tab" href="#e-commerce-payment">Confirmation of payment</a>
+    </li>
+    <li class="nav-item subnav__nav-item">
+      <a class="nav-link subnav__nav-link" data-toggle="tab" href="#e-commerce-my-orders">My Orders</a>
+    </li>
+  </ul>
+</div>
+<div class="tab-content e-commerce">
+  <div class="tab-pane e-commerce__tab-pane active" id="e-commerce-all-products">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="base-panel e-commerce__filter">
+          <div class="base-panel__heading">Selected Products</div>
+          <form action="#">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <div class="col">
+                <div class="form__col-inline">
+                  <label>Status:</label>
+                  <select class="custom-select my-1 mr-sm-2">
+                    <option selected>Choose...</option>
+                    <option value="1">Active</option>
+                    <option value="2">Deactive</option>
+                    <option value="3">Pending</option>
+                    <option value="3">Trending</option>
+                    <option value="3">Disabled</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form__col-inline">
+                  <label>Size:</label>
+                  <select class="custom-select my-1 mr-sm-2">
+                    <option selected>Choose...</option>
+                    <option value="1">10</option>
+                    <option value="2">20</option>
+                    <option value="3">30</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="base-panel e-commerce__product">
+              <div class="e-commerce__product-body">
+                <div class="e-commerce__product-preview">
+                  <img src="img/social-profile/7.png" alt="" class="e-commerce__product-image e-commerce__product-image--sm">
+                  <div>
+                    <a href="#" class="e-commerce__product-name">Dry Maize</a>
+                    <div class="e-commerce__product-desc">147 acres in Mombasa</div>
+                  </div>
+                </div>
+                <div class="e-commerce__product-full-desc">
+                  Fresh dry maize raised from great Polish seeds.
+                </div>
+                <div class="e-commerce__product-rating">
+                  <div class="e-commerce__product-stars">
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star"></span>
+                  </div>
+                  <span class="e-commerce__product-user">
+                    <a href="#" class="e-commerce__product-user-link">Marcus Wright</a>
+                    <span class="mdi mdi-check-circle e-commerce__product-user-verified" data-toggle="tooltip" data-placement="top" title="Verified User"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="e-commerce__product-footer">
+                <span class="e-commerce__product-price">$269,00</span>
+                <a href="#" class="btn btn-info icon-left">
+                  Add to cart <span class="btn-icon mdi mdi-cart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="base-panel e-commerce__product">
+              <div class="e-commerce__product-body">
+                <div class="e-commerce__product-preview">
+                  <img src="img/social-profile/7.png" alt="" class="e-commerce__product-image e-commerce__product-image--sm">
+                  <div>
+                    <a href="#" class="e-commerce__product-name">Dry Maize</a>
+                    <div class="e-commerce__product-desc">147 acres in Mombasa</div>
+                  </div>
+                </div>
+                <div class="e-commerce__product-full-desc">
+                  Fresh dry maize raised from great Polish seeds.
+                </div>
+                <div class="e-commerce__product-rating">
+                  <div class="e-commerce__product-stars">
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star"></span>
+                  </div>
+                  <span class="e-commerce__product-user">
+                    <a href="#" class="e-commerce__product-user-link">Marcus Wright</a>
+                    <span class="mdi mdi-check-circle e-commerce__product-user-verified" data-toggle="tooltip" data-placement="top" title="Verified User"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="e-commerce__product-footer">
+                <span class="e-commerce__product-price">$269,00</span>
+                <a href="#" class="btn btn-info icon-left">
+                  Add to cart <span class="btn-icon mdi mdi-cart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="base-panel e-commerce__product">
+              <div class="e-commerce__product-body">
+                <div class="e-commerce__product-preview">
+                  <img src="img/social-profile/7.png" alt="" class="e-commerce__product-image e-commerce__product-image--sm">
+                  <div>
+                    <a href="#" class="e-commerce__product-name">Dry Maize</a>
+                    <div class="e-commerce__product-desc">147 acres in Mombasa</div>
+                  </div>
+                </div>
+                <div class="e-commerce__product-full-desc">
+                  Fresh dry maize raised from great Polish seeds.
+                </div>
+                <div class="e-commerce__product-rating">
+                  <div class="e-commerce__product-stars">
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star"></span>
+                  </div>
+                  <span class="e-commerce__product-user">
+                    <a href="#" class="e-commerce__product-user-link">Marcus Wright</a>
+                    <span class="mdi mdi-check-circle e-commerce__product-user-verified" data-toggle="tooltip" data-placement="top" title="Verified User"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="e-commerce__product-footer">
+                <span class="e-commerce__product-price">$269,00</span>
+                <a href="#" class="btn btn-info icon-left">
+                  Add to cart <span class="btn-icon mdi mdi-cart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="base-panel e-commerce__product">
+              <div class="e-commerce__product-body">
+                <div class="e-commerce__product-preview">
+                  <img src="img/social-profile/7.png" alt="" class="e-commerce__product-image e-commerce__product-image--sm">
+                  <div>
+                    <a href="#" class="e-commerce__product-name">Dry Maize</a>
+                    <div class="e-commerce__product-desc">147 acres in Mombasa</div>
+                  </div>
+                </div>
+                <div class="e-commerce__product-full-desc">
+                  Fresh dry maize raised from great Polish seeds.
+                </div>
+                <div class="e-commerce__product-rating">
+                  <div class="e-commerce__product-stars">
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star"></span>
+                  </div>
+                  <span class="e-commerce__product-user">
+                    <a href="#" class="e-commerce__product-user-link">Marcus Wright</a>
+                    <span class="mdi mdi-check-circle e-commerce__product-user-verified" data-toggle="tooltip" data-placement="top" title="Verified User"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="e-commerce__product-footer">
+                <span class="e-commerce__product-price">$269,00</span>
+                <a href="#" class="btn btn-info icon-left">
+                  Add to cart <span class="btn-icon mdi mdi-cart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="base-panel e-commerce__product">
+              <div class="e-commerce__product-body">
+                <div class="e-commerce__product-preview">
+                  <img src="img/social-profile/7.png" alt="" class="e-commerce__product-image e-commerce__product-image--sm">
+                  <div>
+                    <a href="#" class="e-commerce__product-name">Dry Maize</a>
+                    <div class="e-commerce__product-desc">147 acres in Mombasa</div>
+                  </div>
+                </div>
+                <div class="e-commerce__product-full-desc">
+                  Fresh dry maize raised from great Polish seeds.
+                </div>
+                <div class="e-commerce__product-rating">
+                  <div class="e-commerce__product-stars">
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star"></span>
+                  </div>
+                  <span class="e-commerce__product-user">
+                    <a href="#" class="e-commerce__product-user-link">Marcus Wright</a>
+                    <span class="mdi mdi-check-circle e-commerce__product-user-verified" data-toggle="tooltip" data-placement="top" title="Verified User"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="e-commerce__product-footer">
+                <span class="e-commerce__product-price">$269,00</span>
+                <a href="#" class="btn btn-info icon-left">
+                  Add to cart <span class="btn-icon mdi mdi-cart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="base-panel e-commerce__product">
+              <div class="e-commerce__product-body">
+                <div class="e-commerce__product-preview">
+                  <img src="img/social-profile/7.png" alt="" class="e-commerce__product-image e-commerce__product-image--sm">
+                  <div>
+                    <a href="#" class="e-commerce__product-name">Dry Maize</a>
+                    <div class="e-commerce__product-desc">147 acres in Mombasa</div>
+                  </div>
+                </div>
+                <div class="e-commerce__product-full-desc">
+                  Fresh dry maize raised from great Polish seeds.
+                </div>
+                <div class="e-commerce__product-rating">
+                  <div class="e-commerce__product-stars">
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star"></span>
+                  </div>
+                  <span class="e-commerce__product-user">
+                    <a href="#" class="e-commerce__product-user-link">Marcus Wright</a>
+                    <span class="mdi mdi-check-circle e-commerce__product-user-verified" data-toggle="tooltip" data-placement="top" title="Verified User"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="e-commerce__product-footer">
+                <span class="e-commerce__product-price">$269,00</span>
+                <a href="#" class="btn btn-info icon-left">
+                  Add to cart <span class="btn-icon mdi mdi-cart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="base-panel e-commerce__product">
+              <div class="e-commerce__product-body">
+                <div class="e-commerce__product-preview">
+                  <img src="img/social-profile/7.png" alt="" class="e-commerce__product-image e-commerce__product-image--sm">
+                  <div>
+                    <a href="#" class="e-commerce__product-name">Dry Maize</a>
+                    <div class="e-commerce__product-desc">147 acres in Mombasa</div>
+                  </div>
+                </div>
+                <div class="e-commerce__product-full-desc">
+                  Fresh dry maize raised from great Polish seeds.
+                </div>
+                <div class="e-commerce__product-rating">
+                  <div class="e-commerce__product-stars">
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star"></span>
+                  </div>
+                  <span class="e-commerce__product-user">
+                    <a href="#" class="e-commerce__product-user-link">Marcus Wright</a>
+                    <span class="mdi mdi-check-circle e-commerce__product-user-verified" data-toggle="tooltip" data-placement="top" title="Verified User"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="e-commerce__product-footer">
+                <span class="e-commerce__product-price">$269,00</span>
+                <a href="#" class="btn btn-info icon-left">
+                  Add to cart <span class="btn-icon mdi mdi-cart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="base-panel e-commerce__product">
+              <div class="e-commerce__product-body">
+                <div class="e-commerce__product-preview">
+                  <img src="img/social-profile/7.png" alt="" class="e-commerce__product-image e-commerce__product-image--sm">
+                  <div>
+                    <a href="#" class="e-commerce__product-name">Dry Maize</a>
+                    <div class="e-commerce__product-desc">147 acres in Mombasa</div>
+                  </div>
+                </div>
+                <div class="e-commerce__product-full-desc">
+                  Fresh dry maize raised from great Polish seeds.
+                </div>
+                <div class="e-commerce__product-rating">
+                  <div class="e-commerce__product-stars">
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star"></span>
+                  </div>
+                  <span class="e-commerce__product-user">
+                    <a href="#" class="e-commerce__product-user-link">Marcus Wright</a>
+                    <span class="mdi mdi-check-circle e-commerce__product-user-verified" data-toggle="tooltip" data-placement="top" title="Verified User"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="e-commerce__product-footer">
+                <span class="e-commerce__product-price">$269,00</span>
+                <a href="#" class="btn btn-info icon-left">
+                  Add to cart <span class="btn-icon mdi mdi-cart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="base-panel e-commerce__product">
+              <div class="e-commerce__product-body">
+                <div class="e-commerce__product-preview">
+                  <img src="img/social-profile/7.png" alt="" class="e-commerce__product-image e-commerce__product-image--sm">
+                  <div>
+                    <a href="#" class="e-commerce__product-name">Dry Maize</a>
+                    <div class="e-commerce__product-desc">147 acres in Mombasa</div>
+                  </div>
+                </div>
+                <div class="e-commerce__product-full-desc">
+                  Fresh dry maize raised from great Polish seeds.
+                </div>
+                <div class="e-commerce__product-rating">
+                  <div class="e-commerce__product-stars">
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star is-active"></span>
+                    <span class="mdi mdi-star e-commerce__product-star"></span>
+                  </div>
+                  <span class="e-commerce__product-user">
+                    <a href="#" class="e-commerce__product-user-link">Marcus Wright</a>
+                    <span class="mdi mdi-check-circle e-commerce__product-user-verified" data-toggle="tooltip" data-placement="top" title="Verified User"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="e-commerce__product-footer">
+                <span class="e-commerce__product-price">$269,00</span>
+                <a href="#" class="btn btn-info icon-left">
+                  Add to cart <span class="btn-icon mdi mdi-cart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="pagination dataset__pagination dataset__pagination--center e-commerce__pagination">
+          <li class="page-item dataset__pagination-item">
+            <a class="page-link dataset__pagination-page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true"><span class="mdi mdi-chevron-double-left dataset__pagination-page-link-icon"></span></span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item dataset__pagination-item">
+            <a class="page-link dataset__pagination-page-link" href="#">1</a>
+          </li>
+          <li class="page-item dataset__pagination-item active">
+            <a class="page-link dataset__pagination-page-link" href="#">2</a>
+          </li>
+          <li class="page-item dataset__pagination-item">
+            <a class="page-link dataset__pagination-page-link" href="#">3</a>
+          </li>
+          <li class="page-item dataset__pagination-item">
+            <a class="page-link dataset__pagination-page-link" href="#">4</a>
+          </li>
+          <li class="page-item dataset__pagination-item">
+            <a class="page-link dataset__pagination-page-link" href="#">...</a>
+          </li>
+          <li class="page-item dataset__pagination-item">
+            <a class="page-link dataset__pagination-page-link" href="#">10</a>
+          </li>
+          <li class="page-item dataset__pagination-item">
+            <a class="page-link dataset__pagination-page-link" href="#" aria-label="Next">
+              <span aria-hidden="true"><span class="mdi mdi-chevron-double-right dataset__pagination-page-link-icon"></span></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <div class="base-panel">
+          <h5 class="base-panel__heading">Categories</h5>
+          <ul class="e-commerce__categories">
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Tomatoes <span class="e-commerce__categories-amount">89</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Electronics <span class="e-commerce__categories-amount">22</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Pharmacy <span class="e-commerce__categories-amount">314</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Baby &amp; Kids <span class="e-commerce__categories-amount">314</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Fashion <span class="e-commerce__categories-amount">314</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Pets <span class="e-commerce__categories-amount">314</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Office <span class="e-commerce__categories-amount">314</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Home &amp; Garden <span class="e-commerce__categories-amount">314</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Automotive <span class="e-commerce__categories-amount">314</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Clothing <span class="e-commerce__categories-amount">5</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Accesories <span class="e-commerce__categories-amount">78</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Footwear <span class="e-commerce__categories-amount">91</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Hoodies <span class="e-commerce__categories-amount">34</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                T-shirt <span class="e-commerce__categories-amount">11</span>
+              </a>
+            </li>
+            <li class="e-commerce__categories-item">
+              <a href="#" class="e-commerce__categories-link">
+                Jeans <span class="e-commerce__categories-amount">85</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane e-commerce__tab-pane" id="e-commerce-my-products">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+  <div class="tab-pane e-commerce__tab-pane" id="e-commerce-payment">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+  <div class="tab-pane e-commerce__tab-pane" id="e-commerce-my-orders">4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+</div>
+{% endblock %}

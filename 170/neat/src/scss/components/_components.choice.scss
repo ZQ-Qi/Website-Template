@@ -1,0 +1,131 @@
+/* ==========================================================================
+   #CHOICE (Checkboxes & Radios)
+   ========================================================================== */
+
+/**
+ * Checkboxes & Radios are controlled with a simple class called `c-choice`
+ * because they are similar in styling, this class is used to share same 
+ * styles between them.
+ *
+ * EXAMPLE: 
+ *
+ * <div class="c-choice c-choice--checkbox">
+ *     <input class="c-choice__input" id="custom-checkbox" type="checkbox">
+ *     <label class="c-choice__label" for="custom-checkbox">Checkbox 1</label>
+ * </div>
+ */
+
+
+/**
+ * 1. Get rid of white space cause by using `inline-flex`.
+ * 
+ * Read More: https://goo.gl/ajXW52
+ */
+
+.c-choice {
+	margin: $choice-margin;
+	color: $choice-color;
+	font-size: 0; /* [1] */
+	font-weight: $choice-font-weight;
+
+	/**
+	 * Disabled state
+	 *
+	 * NOTE: `disabled` attribute must be added to <input>
+	 */
+	&.is-disabled {
+		.c-choice__label {
+			color: $choice-disabled-color;
+			cursor: default;
+
+			&::before {
+				border-color: $choice-disabled-border-color;
+				background-color: $choice-disabled-background-color;
+			}
+		}
+	}
+}
+
+
+/**
+ * 1. Hide default input and create a customized input.
+ * 2. Align the customized input with label.
+ */
+
+.c-choice__input { /* [1] */
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+
+	& + .c-choice__label {
+		display: inline-flex;
+		align-items: center;
+		color: $choice-color;
+		font-size: $choice-font-size;
+		cursor: pointer;
+	}
+
+	& + .c-choice__label::before {
+		display: inline-block;
+		position: relative;
+		top: 0; /* [2] */
+		width: 16px;
+		height: 16px;
+		margin: 0 15px 0 0;
+		transition: all 0.3s;
+		border: $choice-input-border-width solid $choice-input-border-color;
+		background-color: $choice-input-background-color;
+		color: $choice-input-color;
+		line-height: 15px;
+		text-align: center;
+		content: "";
+		visibility: visible; /* [2] */
+	}
+}
+
+
+/**
+ * Checkboxes
+ */
+
+.c-choice--checkbox {
+
+	.c-choice__input + .c-choice__label::before {
+		border-radius: $choice-checkbox-border-radius;
+	}
+
+	// custom designed checkbox
+	.c-choice__input:checked + .c-choice__label::before {
+		border-color: $choice-checkbox-border-color;
+		background-color: $choice-checkbox-background-color;
+		font-family: $base-icon-font;
+		font-size: 10px;
+		content: "\e83f"; // icon-check
+	}
+}
+
+
+/**
+ * Radio buttons
+ */
+
+.c-choice--radio {
+
+	.c-choice__input + .c-choice__label::before {
+		border-radius: 100%;
+	}
+
+	// custom designed radio button
+	.c-choice__input:checked + .c-choice__label::before {
+		border: $choice-radio-border-width solid $choice-radio-border-color;
+		background-color: $choice-radio-background-color;
+		box-shadow: 0 0 0 $choice-radio-shadow-width $choice-radio-shadow-color;
+	}
+}

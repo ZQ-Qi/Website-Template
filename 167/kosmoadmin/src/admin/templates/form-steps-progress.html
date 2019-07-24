@@ -1,0 +1,93 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/form/steps/progress.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Form Steps</h3>
+
+                <button class="btn btn-outline-primary ks-light ks-form-steps-progress-steps-block-toggle" data-block-toggle=".ks-form-steps-progress-page > .ks-wrapper > .ks-steps">Steps</button>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-form-steps-progress-page">
+                <div class="ks-form-steps-progress">
+                    <div class="ks-form-steps-progress-header">
+                        <h3>Create your account</h3>
+                        <div class="ks-description">Get access to all templates</div>
+                    </div>
+                    <div class="ks-form-steps-progress-body">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+
+                        <div class="ks-step-items">
+                            <a href="#" class="ks-step-item ks-completed">Basic Information</a>
+                            <a href="#" class="ks-step-item">Calendar &amp; Rates</a>
+                            <a href="#" class="ks-step-item">Photos</a>
+                            <a href="#" class="ks-step-item">Confirmation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ks-form-steps-progress-wrapper">
+                    <div class="list-group ks-form-steps-progress-wrapper-steps">
+                        <a href="#" class="ks-list-group-item ks-completed">
+                            <span class="ks-point"><span>1</span></span>
+                            <span class="ks-text">Payment Booking</span>
+                            <span class="la la-info-circle ks-info"></span>
+                        </a>
+                        <a href="#" class="ks-list-group-item ks-list-group-item-action ks-current">
+                            <span class="ks-point"><span>2</span></span>
+                            <span class="ks-text">Payment Booking</span>
+                            <span class="la la-info-circle ks-info"></span>
+                        </a>
+                        <a href="#" class="ks-list-group-item ks-list-group-item-action ks-invalid">
+                            <span class="ks-point"><span>3</span></span>
+                            <span class="ks-text">Payment Booking</span>
+                            <span class="la la-info-circle ks-info"></span>
+                        </a>
+                        <a href="#" class="ks-list-group-item ks-list-group-item-action">
+                            <span class="ks-point"><span>4</span></span>
+                            <span class="ks-text">Payment Booking</span>
+                            <span class="la la-info-circle ks-info"></span>
+                        </a>
+                    </div>
+                    <div class="ks-form-steps-progress-content">
+                        <div class="ks-form-steps-progress-content-wrapper ks-scrollable">
+                            <div class="ks-scroll-wrapper">
+                                <form class="ks-step">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Title</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Type</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter type">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Description</label>
+                                        <textarea class="form-control" rows="10"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="ks-controls ks-flex-end">
+                            <button class="btn btn-outline-primary ks-light ks-previous">Back</button>
+                            <button class="btn btn-primary ks-next">Next Step</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+@@include('./_partials/footer.html')

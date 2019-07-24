@@ -1,0 +1,125 @@
+.ip-header {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    min-height: 480px;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+
+    .ip-loader {
+        position: absolute;
+        left: 0;
+        bottom: 30%;
+        width: 100%;
+        opacity: 0;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    .ip-inner {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .ip-loader svg path {
+        fill: none;
+        stroke-width: 6;
+    }
+
+    .ip-loader svg path.ip-loader-circlebg {
+        stroke: #ddd;
+    }
+
+    .ip-loader svg path.ip-loader-circle {
+        transition: stroke-dashoffset 0.2s;
+        stroke: $brand-primary;
+    }
+
+}
+
+/* Animations */
+
+/* Initial animation of header elements */
+.loading .ip-loader {
+    opacity: 1;
+    animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+    animation-delay: 0.2s;
+}
+
+// .keyframes(~'animInitialHeader,  from {opacity: 0; transform: translate3d(0,800px,0); }');
+@keyframes (animInitialHeader) {
+    from {
+        opacity: 0;
+        transform: translate3d(0,800px,0);
+    }
+}
+
+
+/* Header elements when loading finishes */
+.loaded .ip-loader {
+    opacity: 1;
+}
+
+// .keyframes(~'animLoadedLogo,  to {transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }');
+@keyframes (animLoadedLogo) {
+    to {
+        transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1);
+    }
+}
+
+
+.loaded .ip-loader {
+    animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+// .keyframes(~'animLoadedLoader,  to {opacity: 0; transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }');
+@keyframes (animLoadedLoader) {
+    to {
+        opacity: 0; 
+        transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1);
+    }
+}
+
+
+
+
+/* Header animation when loading finishes */
+.loaded .ip-header {
+    animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+// .keyframes(~'animLoadedHeader,  to {transform: translate3d(0,-100%,0); }');
+@keyframes (animLoadedHeader) {
+    to {
+        transform: translate3d(0,-100%,0); 
+    }
+}
+
+
+
+
+/* Content animations */
+.loaded {
+    .ip-main .main-content > .hero {
+        h2 {
+            animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+        }
+        p {
+            animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+            animation-delay: 0.1s;
+        }
+        .btn {
+            animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+            animation-delay: 0.2s;
+        }
+    }
+}
+
+// .keyframes(~'animLoadedContent,  from {opacity: 0; transform: translate3d(0,200px,0); }');
+@keyframes (animLoadedContent) {
+    from {
+        opacity: 0;
+        transform: translate3d(0,200px,0);
+    }
+}

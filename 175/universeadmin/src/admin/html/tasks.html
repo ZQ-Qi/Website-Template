@@ -1,0 +1,577 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Tasks / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid m-tasks">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Tasks</h2>
+    </div>
+  </div>
+  <div class="main-container m-tasks__container container-heading-bordered">
+    <h2 class="container-heading">
+      <span>Tasks (18)</span>
+      <span class="container-heading-controls">
+        <a href="#" class="ua-icon-action-plus container-heading-control"></a>
+      </span>
+    </h2>
+    <div class="container-body m-tasks__columns">
+      <div class="m-tasks__column m-tasks__column--new">
+        <div class="m-tasks__column-header">
+          <span class="m-tasks__column-icon ua-icon-task-label"></span>
+          <span class="m-tasks__column-name">New</span>
+        </div>
+
+        <button class="btn btn-outline-success btn-block iconfont icon-left btn-lg m-tasks__add-card" type="button">
+          Add new card <span class="btn-icon ua-icon-plus"></span>
+        </button>
+
+        <div class="m-tasks__items m-tasks__column--new list-group">
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h6 class="m-tasks__item-name">Office Meeting</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--normal"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h6 class="m-tasks__item-name">New Sidebar Design</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--high"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h6 class="m-tasks__item-name">Slider Animation</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--medium"></span>
+          </div>
+        </div>
+      </div>
+      <div class="m-tasks__column m-tasks__column--pending list-group">
+        <div class="m-tasks__column-header">
+          <span class="m-tasks__column-icon ua-icon-task-label"></span>
+          <span class="m-tasks__column-name">Pending</span>
+        </div>
+        <div class="m-tasks__items">
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Mobile device optimization</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--normal"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Office Meeting</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--high"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Office Meeting</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--medium"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Office Meeting</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--medium"></span>
+          </div>
+        </div>
+      </div>
+      <div class="m-tasks__column m-tasks__column--in-progress list-group">
+        <div class="m-tasks__column-header">
+          <span class="m-tasks__column-icon ua-icon-task-label"></span>
+          <span class="m-tasks__column-name">In Progress</span>
+        </div>
+        <div class="m-tasks__items">
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Login Error</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--normal"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Login Error</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--normal"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Dashboard Redesign</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--high"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Fix Icons</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--medium"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Wireframe for the app</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--medium"></span>
+          </div>
+        </div>
+      </div>
+      <div class="m-tasks__column m-tasks__column--completed list-group">
+        <div class="m-tasks__column-header">
+          <span class="m-tasks__column-icon ua-icon-task-label"></span>
+          <span class="m-tasks__column-name">Completed</span>
+        </div>
+        <div class="m-tasks__items">
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Create a new logo</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--normal"></span>
+          </div>
+          <div class="m-tasks__item list-group-item">
+            <div class="dropdown no-arrow control-dropdown m-tasks__item-control">
+              <span class="dropdown-toggle ua-icon-dots" data-toggle="dropdown"></span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+                <div class="dropdown-text">Set priority:</div>
+                <div class="dropdown-radios">
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+                      <input type="radio" class="custom-control-input" name="radio" id="r1">
+                      <label class="custom-control-label" for="r1">High</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+                      <input type="radio" class="custom-control-input" name="radio" id="r2">
+                      <label class="custom-control-label" for="r2">Medium</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+                      <input type="radio" class="custom-control-input" name="radio" checked id="r3">
+                      <label class="custom-control-label" for="r3">Normal</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="m-tasks__item-name">Office Meeting</h6>
+            <div class="m-tasks__item-desc">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+            <span class="m-tasks__item-date">12 April 2018</span>
+            <span class="m-tasks__item-priority ua-icon-task-bell m-tasks__item-priority--high"></span>
+          </div>
+        </div>
+        <div class="m-tasks__empty-column">
+          <img src="img/tasks/empty.png" alt="">
+          <div class="m-tasks__empty-column-text">Drag items here or <br> <a href="#" class="link-info">Create New</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/sortable/sortable.min.js"></script>
+<script src="js/preview/tasks.min.js"></script>
+{% endblock %}

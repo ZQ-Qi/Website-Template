@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Switch</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="./assets/css/animate.min.css" rel="stylesheet">
+    <link href="./assets/css/vendor-styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="an-loader-container">
+        <img src="./assets/img/loader.png" alt="">
+      </div>
+      <header class="an-header wow fadeInDown">
+        <div class="an-topbar-left-part">
+          <h3 class="an-logo-heading">
+            <a class="an-logo-link" href="index.html">Analog
+              <span>Admin Template</span>
+            </a>
+          </h3>
+          <button class="an-btn an-btn-icon toggle-button js-toggle-sidebar">
+            <i class="icon-list"></i>
+          </button>
+          <form class="an-form" action="#">
+            <div class="an-search-field topbar">
+              <input class="an-form-control" type="text" placeholder="Search...">
+              <button class="an-btn an-btn-icon" type="submit">
+                <i class="icon-search"></i>
+              </button>
+            </div>
+          </form>
+        </div> <!-- end .AN-TOPBAR-LEFT-PART -->
+
+        <div class="an-topbar-right-part">
+          <div class="an-notifications">
+            <div class="btn-group an-notifications-dropown notifications">
+              <button type="button"
+                class="an-btn an-btn-icon dropdown-toggle js-has-new-notification"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="ion-ios-bell-outline"></i>
+              </button>
+              <div class="dropdown-menu">
+                <p class="an-info-count">Notifications <span>3</span></p>
+                <div class="an-info-content notifications-info notifications-content">
+                  <div class="an-info-single unread">
+                    <a href="#">
+                      <span class="icon-container important">
+                        <i class="icon-setting"></i>
+                      </span>
+                      <div class="info-content">
+                        <h5 class="user-name">Settings updated</h5>
+                        <p class="content"><i class="icon-clock"></i> 30 min ago</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="an-info-single unread">
+                    <a href="#">
+                      <span class="icon-container success">
+                        <i class="icon-cart"></i>
+                      </span>
+                      <div class="info-content">
+                        <h5 class="user-name">5 Orders placed</h5>
+                        <p class="content"><i class="icon-clock"></i> 1 hour ago</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="an-info-single unread">
+                    <a href="#">
+                      <span class="icon-container nutral">
+                        <i class="icon-chat-o"></i>
+                      </span>
+                      <div class="info-content">
+                        <h5 class="user-name">3 New messages </h5>
+                        <p class="content"><i class="icon-clock"></i> 1 hour ago</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="an-info-single">
+                    <a href="#">
+                      <span class="icon-container warning">
+                        <i class="icon-alerm"></i>
+                      </span>
+                      <div class="info-content">
+                        <h5 class="user-name">This is warning notification</h5>
+                        <p class="content"><i class="icon-clock"></i> 1 hour ago</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="an-info-single">
+                    <a href="#">
+                      <span class="icon-container danger"><i class="icon-danger"></i></span>
+                      <div class="info-content">
+                        <h5 class="user-name">Server loaded by 98% please recover soon</h5>
+                        <p class="content"><i class="icon-clock"></i> 1 hour ago</p>
+                      </div>
+                    </a>
+                  </div>
+                </div> <!-- end .AN-INFO-CONTENT -->
+                <div class="an-info-show-all-btn">
+                  <a class="an-btn an-btn-transparent fluid rounded uppercase small-font" href="#">Show all</a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end .AN-NOTIFICATION -->
+
+          <div class="an-messages">
+            <div class="btn-group an-notifications-dropown messages">
+              <button type="button" class="an-btn an-btn-icon dropdown-toggle js-has-new-messages"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="ion-ios-email-outline"></i>
+              </button>
+              <div class="dropdown-menu">
+                <p class="an-info-count">Messages <span>3</span></p>
+                <div class="an-info-content notifications-info">
+                  <div class="an-info-single unread">
+                    <a href="#">
+                      <span class="user-img" style="background-image: url('./assets/img/users/user1.jpeg')"></span>
+                      <div class="info-content">
+                        <h5 class="user-name">Ana malik</h5>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                        <span class="info-time"><i class="icon-clock"></i>15:28</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="an-info-single unread">
+                    <a href="#">
+                      <span class="user-img" style="background-image: url('./assets/img/users/user2.jpg')"></span>
+                      <div class="info-content">
+                        <h5 class="user-name">Jackson Fred</h5>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                        <span class="info-time"><i class="icon-clock"></i>4:54</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="an-info-single">
+                    <a href="#">
+                      <span class="user-img" style="background-image: url('./assets/img/users/user3.jpeg')"></span>
+                      <div class="info-content">
+                        <h5 class="user-name">Emma Watson</h5>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                        <span class="info-time"><i class="icon-clock"></i>28 Sep</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="an-info-single">
+                    <a href="#">
+                      <span class="user-img" style="background-image: url('./assets/img/users/user4.jpeg')"></span>
+                      <div class="info-content">
+                        <h5 class="user-name">Elina</h5>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                        <span class="info-time"><i class="icon-clock"></i>28 Sep</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="an-info-single">
+                    <a href="#">
+                      <span class="user-img" style="background-image: url('./assets/img/users/user5.jpeg')"></span>
+                      <div class="info-content">
+                        <h5 class="user-name">Jack Elison</h5>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                        <span class="info-time"><i class="icon-clock"></i>20 Sep</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="an-info-single">
+                    <a href="#">
+                      <span class="user-img" style="background-image: url('./assets/img/users/user6.jpeg')"></span>
+                      <div class="info-content">
+                        <h5 class="user-name">Lara Smith</h5>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                        <span class="info-time"><i class="icon-clock"></i>10 Sep</span>
+                      </div>
+                    </a>
+                  </div>
+                </div> <!-- end .AN-INFO-CONTENT -->
+
+                <div class="an-info-show-all-btn">
+                  <a class="an-btn an-btn-transparent fluid rounded uppercase small-font" href="#">Show all</a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end .AN-MESSAGE -->
+
+          <div class="an-profile-settings">
+            <div class="btn-group an-notifications-dropown  profile">
+              <button type="button" class="an-btn an-btn-icon dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="an-profile-img" style="background-image: url('./assets/img/users/user5.jpeg');"></span>
+                <span class="an-user-name">John Smith</span>
+                <span class="an-arrow-nav"><i class="icon-arrow-down"></i></span>
+              </button>
+              <div class="dropdown-menu">
+                <p class="an-info-count">Profile Settings</p>
+                <ul class="an-profile-list">
+                  <li><a href="#"><i class="icon-user"></i>My profile</a></li>
+                  <li><a href="#"><i class="icon-envelop"></i>My inbox</a></li>
+                  <li><a href="#"><i class="icon-calendar-check"></i>Calendar</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="icon-lock"></i>Lock screen</a></li>
+                  <li><a href="#"><i class="icon-download-left"></i>Log out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- end .AN-PROFILE-SETTINGS -->
+        </div> <!-- end .AN-TOPBAR-RIGHT-PART -->
+      </header> <!-- end .AN-HEADER -->
+
+      <div class="an-page-content">
+        <div class="an-sidebar-nav js-sidebar-toggle-with-click">
+          <div class="an-sidebar-search">
+            <form class="an-form" action="#">
+              <a class="collapse-sidebar-search-btn js-search-toggle" href="#"><i class="icon-search"></i></a>
+              <div class="an-search-field topbar js-search-show-clicked">
+                <input class="an-form-control no-redius border-bottom light-text" type="text" placeholder="Search...">
+                <button class="an-btn an-btn-icon sidebar-search" type="submit"><i class="icon-search"></i></button>
+              </div>
+            </form>
+          </div> <!-- end .AN-SIDEBAR-SEARCH -->
+
+          <div class="an-sidebar-widgets">
+            <div class="widget-signle">
+              <h5 class="counter-result">789</h5>
+              <p>Sales</p>
+            </div>
+            <div class="widget-signle">
+              <h5 class="counter-result">1,234</h5>
+              <p>Order</p>
+            </div>
+            <div class="widget-signle">
+              <h5 class="counter-result">$900</h5>
+              <p>Send</p>
+            </div>
+          </div> <!-- end .AN-SIDEBAR-WIDGETS -->
+
+          <div class="an-sidebar-nav">
+            <ul class="an-main-nav">
+              <li class="an-nav-item ">
+                <a class=" js-show-child-nav" href="#">
+                  <i class="icon-chart-stock"></i>
+                  <span class="nav-title">Dashboard
+                    <span class="an-arrow-nav"><i class="icon-arrow-down"></i></span>
+                  </span>
+                </a>
+
+                <ul class="an-child-nav js-open-nav">
+                  <li><a href="index.html">Version 1</a></li>
+                  <li><a href="index_2.html">Version 2</a></li>
+                  <li><a href="index_3.html">Version 3</a></li>
+                </ul>
+              </li>
+              <li class="an-nav-item">
+                <a class=" js-show-child-nav" href="#">
+                  <i class="icon-squares"></i>
+                  <span class="nav-title">UI Layouts
+                    <span class="an-arrow-nav"><i class="icon-arrow-down"></i></span>
+                  </span>
+                </a>
+                <ul class="an-child-nav js-open-nav">
+                  <li><a href="ui-basics.html">Basic Ui</a></li>
+                  <li><a href="ui-buttons.html">Buttons</a></li>
+                  <li><a href="ui-tabs.html">Tabs</a></li>
+                  <li><a href="ui-accordions.html">Accordions</a></li>
+                  <li><a href="ui-portlets.html">Portlets</a></li>
+                  <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
+                  <li><a href="ui-social-icons.html">Social Icons</a></li>
+                  <li><a href="ui-typography.html">Typography</a></li>
+                  <li><a href="ui-modals.html">Modals</a></li>
+                  <li><a href="ui-notifications.html">Notifications</a></li>
+                </ul>
+              </li>
+
+              <li class="an-nav-item current active">
+                <a class=" js-show-child-nav" href="#">
+                  <i class="icon-grid"></i>
+                  <span class="nav-title">Components
+                    <span class="an-arrow-nav"><i class="icon-arrow-down"></i></span>
+                  </span>
+                </a>
+                <ul class="an-child-nav js-open-nav">
+                  <li><a href="component-select.html">Select Box</a></li>
+                  <li><a href="component-switch.html">LC Switch</a></li>
+                  <li><a href="component-bs-switch.html">Bootstrap switch</a></li>
+                  <li><a href="component-clipboard.html">Clipboard</a></li>
+                  <li><a href="component-datetime.html">Date Time Picker</a></li>
+                  <li><a href="component-range.html">Ion Range Slider</a></li>
+                  <li><a href="component-tags.html">Tags Input</a></li>
+                </ul>
+              </li>
+              <li class="an-nav-item">
+                <a class="" href="forms.html">
+                  <i class="icon-setting"></i>
+                  <span class="nav-title">Forms</span>
+                </a>
+              </li>
+
+              <li class="an-nav-item">
+                <a class=" js-show-child-nav" href="#">
+                  <i class="icon-board-list"></i>
+                  <span class="nav-title">Tables
+                    <span class="an-arrow-nav"><i class="icon-arrow-down"></i></span>
+                  </span>
+                </a>
+                <ul class="an-child-nav js-open-nav">
+                  <li><a href="tables-basic.html">Basic tables</a></li>
+                  <li><a href="tables-bootstrap.html">Bootstrap tables</a></li>
+                </ul>
+              </li>
+
+              <li class="an-nav-item">
+                <a class="" href="charts.html">
+                  <i class="icon-chart"></i>
+                  <span class="nav-title">Charts</span>
+                </a>
+              </li>
+
+              <li class="an-nav-item">
+                <a class="" href="maps.html">
+                  <i class="icon-marker"></i>
+                  <span class="nav-title">Maps</span>
+                </a>
+              </li>
+
+              <li class="an-nav-item">
+                <a class="" href="inbox.html">
+                  <i class="icon-chat-o"></i>
+                  <span class="nav-title">Inbox <span class="an-arrow-nav count">3</span></span>
+                </a>
+              </li>
+
+              <li class="an-nav-item">
+                <a class=" js-show-child-nav" href="#">
+                  <i class="icon-book"></i>
+                  <span class="nav-title">App page
+                    <span class="an-arrow-nav"><i class="icon-arrow-down"></i></span>
+                  </span>
+                </a>
+                <ul class="an-child-nav js-open-nav">
+                  <li><a href="page-chats.html">Chat Layout</a></li>
+                  <li><a href="page-profile.html">Profile Page</a></li>
+                  <li><a href="page-profile-setting.html">Profile Setting</a></li>
+                  <li><a href="page-login.html">Login Form</a></li>
+                  <li><a href="page-signup.html">Register Form</a></li>
+                  <li><a href="page-contact-us.html">Contact Us</a></li>
+                  <li><a href="page-about-us.html">About Us</a></li>
+                  <li><a href="page-pricing.html">Pricing Table</a></li>
+                  <li><a href="page-portfolio.html">Portfolio</a></li>
+                  <li><a href="page-blog.html">Blog List</a></li>
+                  <li><a href="page-blog-post.html">Blog Post </a></li>
+                  <li><a href="page-construction.html">Comming soon</a></li>
+                  <li><a href="page-404.html">404 Page</a></li>
+                </ul>
+              </li>
+
+              <li class="an-nav-item">
+                <a class=" js-show-child-nav" href="#">
+                  <i class="icon-dot-vertical"></i>
+                  <span class="nav-title">Starter page
+                    <span class="an-arrow-nav"><i class="icon-arrow-down"></i></span>
+                  </span>
+                </a>
+                <ul class="an-child-nav js-open-nav">
+                  <li><a href="layout-default.html">Layout Default</a></li>
+                  <li><a href="layout-boxed.html">Layout Boxed</a></li>
+                  <li><a href="layout-fixed-header.html">Layout Fixed Header</a></li>
+                  <li><a href="layout-minimal-header.html">Layout Minimal Header</a></li>
+                  <li><a href="layout-without-breadcrumb.html">Layout Without Breadcrumb</a></li>
+                  <li><a href="layout-white-bg.html">Layout White Bg</a></li>
+                </ul>
+              </li>
+
+              <li class="an-nav-item">
+                <a class=" js-show-child-nav" href="#">
+                  <i class="icon-dot-horizontal"></i>
+                  <span class="nav-title">Sidebar layouts
+                    <span class="an-arrow-nav"><i class="icon-arrow-down"></i></span>
+                  </span>
+                </a>
+                <ul class="an-child-nav js-open-nav">
+                  <li><a href="layout-sidebar-default.html">Default Sidebar</a></li>
+                  <li><a href="layout-sidebar-hidden.html">Hidden Sidebar</a></li>
+                </ul>
+              </li>
+            </ul> <!-- end .AN-MAIN-NAV -->
+          </div> <!-- end .AN-SIDEBAR-NAV -->
+        </div> <!-- end .AN-SIDEBAR-NAV -->
+
+        <div class="an-content-body">
+          <div class="an-breadcrumb wow fadeInUp">
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Components</a></li>
+              <li class="active">Switch</li>
+            </ol>
+          </div> <!-- end AN-BREADCRUMB -->
+
+          <div class="an-body-topbar wow fadeIn">
+            <div class="an-page-title">
+              <h2>Switch</h2>
+            </div>
+          </div> <!-- end AN-BODY-TOPBAR -->
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="an-single-component with-shadow">
+                <div class="an-component-header">
+                  <h6>Lc switch box</h6>
+                </div>
+
+                <div class="an-component-body">
+                  <div class="an-helper-block">
+                    <p class="an-small-doc-blcok"><a href="http://www.lcweb.it/lc-switch-jquery-plugin">This</a> pugin offers a great way to turn checkbox/radio box into nice switch box. Use a wrapper with class <code>.an-switch-box-wrapper</code> to get switch box input. Use <code>.success .info .warning .danger</code> for different color.</p>
+
+                    <div class="an-switch-box-wrapper">
+                      <input type="checkbox" checked>
+                    </div>
+
+                    <div class="an-switch-box-wrapper success">
+                      <input type="checkbox" checked>
+                    </div>
+
+                    <div class="an-switch-box-wrapper info">
+                      <input type="checkbox" checked>
+                    </div>
+
+                    <div class="an-switch-box-wrapper warning">
+                      <input type="checkbox" checked>
+                    </div>
+
+                    <div class="an-switch-box-wrapper danger">
+                      <input type="checkbox" checked>
+                    </div>
+
+                  </div>
+                </div> <!-- end .AN-COMPONENT-BODY -->
+              </div> <!-- end .AN-SINGLE-COMPONENT -->
+            </div>
+
+            <div class="col-md-6">
+              <div class="an-single-component with-shadow">
+                <div class="an-component-header">
+                  <h6>Lc switch box</h6>
+                </div>
+
+                <div class="an-component-body">
+                  <div class="an-helper-block">
+                    <p class="an-small-doc-blcok"> Use <code>.invert</code> class to get only handle and text color.</p>
+
+                    <div class="an-switch-box-wrapper invert">
+                      <input type="checkbox" checked>
+                    </div>
+
+                    <div class="an-switch-box-wrapper invert success">
+                      <input type="checkbox" checked>
+                    </div>
+
+                    <div class="an-switch-box-wrapper invert info">
+                      <input type="checkbox" checked>
+                    </div>
+
+                    <div class="an-switch-box-wrapper invert warning">
+                      <input type="checkbox" checked>
+                    </div>
+
+                    <div class="an-switch-box-wrapper invert danger">
+                      <input type="checkbox" checked>
+                    </div>
+
+                  </div>
+                </div> <!-- end .AN-COMPONENT-BODY -->
+              </div> <!-- end .AN-SINGLE-COMPONENT -->
+            </div>
+          </div>
+
+        </div> <!-- end .AN-PAGE-CONTENT-BODY -->
+      </div> <!-- end .AN-PAGE-CONTENT -->
+      <footer class="an-footer">
+        <p>COPYRIGHT 2017 © ANALOG. ALL RIGHTS RESERVED</p>
+      </footer> <!-- end an-footer -->
+    </div> <!-- end .MAIN-WRAPPER -->
+    <script src="./assets/js-plugins/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="./assets/js-plugins/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./assets/js-plugins/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="./assets/js-plugins/lc_switch.min.js" type="text/javascript"></script>
+    <script src="./assets/js-plugins/wow.min.js" type="text/javascript"></script>
+
+    <!--  MAIN SCRIPTS START FROM HERE  above scripts from plugin   -->
+    <script src="./assets/js/scripts.js" type="text/javascript"></script>
+   <div style="text-align: center; position: fixed; bottom: 0; width: 100%; line-height:150%; background:rgba(255,255,255,.9); border-top: 1px solid #ddd; z-index: 11000; font-size: 12px; ">本素材由源代码设计店铺收集整理，<a style="color:#0066ff" target="_blank" href="https://shop303982252.taobao.com/">点此购买最新版</a></div>    
+</body>
+</html>

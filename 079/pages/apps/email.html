@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Zoom Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../node_modules/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../node_modules/mdi/css/materialdesignicons.css">
+  <link rel="stylesheet" href="../../node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- navbar starts -->
+    <nav class="navbar navbar-primary col-lg-12 col-12 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper">
+            <a class="navbar-brand brand-logo" href="#">Zoom
+              <i class="mdi mdi-cube-send"></i>
+            </a>
+            <a class="navbar-brand brand-logo-mini" href="#"><i class="mdi mdi-cube-send"></i></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+            <button class="navbar-toggler navbar-toggler d-none d-lg-block align-self-center mr-2" type="button" data-toggle="minimize">
+                <span class="mdi mdi-chevron-left"></span>
+            </button>
+            <div class="nav-profile">
+              <span>Hi, Dave Mattew</span>
+              <img src="../../images/faces/face6.jpg" />
+            </div>
+            <form class="form-inline mt-2 mt-md-0 d-none d-lg-block ml-lg-auto">
+                <input class="form-control search" type="text" placeholder="Search">
+            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-toggle="dropdown">
+                        <i class="mdi mdi-bell-outline"></i>
+                        <span class="count bg-warning">7</span>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown notification-drop-down" aria-labelledby="notificationDropdown">
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-birthday-cake text-success fa-fw"></i>
+                            <span class="notification-text">Today is John's birthday</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-phone text-danger fa-fw"></i>
+                            <span class="notification-text">Call John Doe</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-handshake-o text-primary fa-fw"></i>
+                            <span class="notification-text">Meeting Alisa</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-exclamation-triangle text-danger fa-fw"></i>
+                            <span class="notification-text">Server space almost full</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-bell text-warning fa-fw"></i>
+                            <span class="notification-text">Payment Due</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator" id="MailDropdown" href="#" data-toggle="dropdown">
+                        <i class="mdi mdi-comment-outline"></i>
+                        <span class="count bg-danger">4</span>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown mail-notification" aria-labelledby="MailDropdown">
+                        <a class="dropdown-item" href="#">
+                            <div class="sender-img">
+                                <img src="../../images/faces/face6.jpg" alt="">
+                                <span class="badge badge-success">&nbsp;</span>
+                            </div>
+                            <div class="sender">
+                                <p class="Sende-name">John Doe</p>
+                                <p class="Sender-message">Hey, We have a meeting planned at the end of the day.</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="sender-img">
+                                <img src="../../images/faces/face2.jpg" alt="">
+                                <span class="badge badge-success">&nbsp;</span>
+                            </div>
+                            <div class="sender">
+                                <p class="Sende-name">Leanne Jones</p>
+                                <p class="Sender-message">Can we schedule a call this afternoon?</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="sender-img">
+                                <img src="../../images/faces/face3.jpg" alt="">
+                                <span class="badge badge-primary">&nbsp;</span>
+                            </div>
+                            <div class="sender">
+                                <p class="Sende-name">Stella</p>
+                                <p class="Sender-message">Great presentation the other day. Keep up the good work!</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="sender-img">
+                                <img src="../../images/faces/face4.jpg" alt="">
+                                <span class="badge badge-warning">&nbsp;</span>
+                            </div>
+                            <div class="sender">
+                                <p class="Sende-name">James Brown</p>
+                                <p class="Sender-message">Need the updates of the project at the end of the week.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item view-all">View all</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <span class="mdi mdi-chevron-left"></span>
+              </button>
+        </div>
+    </nav>
+
+    <!--menu ends -->
+    <div class="container-fluid page-body-wapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- sidebar starts -->
+
+
+
+        
+
+
+
+        
+
+
+
+        
+
+
+
+        
+
+
+
+        
+
+
+
+        
+
+
+
+        
+
+
+
+        <!--menu ends -->
+        <div class="content-wrapper p-0">
+          <!-- MAIL BODY STARTS HERE -->
+          <div class="email-wrapper wrapper col-12">
+            <div class="row">
+              <div class="mail-sidebar col-lg-3 col-md-3 col-sm-12 col-12">
+                <div class="menu-bar">
+                  <span class="logo">Email</span>
+                  <!-- SIDE MENU END -->
+                  <ul class="menu-items">
+                    <li class="compose"><a href="#"><i class="flaticon-draw"></i> Compose</a></li>
+                    <li class="active"><a href="#"><i class="flaticon-chat-3"></i> Inbox</a><span class="badges green">8</span></li>
+                    <li><a href="#"><i class="flaticon-email"></i> Sent</a></li>
+                    <li><a href="#"><i class="flaticon-work-tray"></i> Draft</a><span class="badges orange">14</span></li>
+                    <li><a href="#"><i class="flaticon-outbox"></i> Outbox</a><span class="badges red">3</span></li>
+                    <li><a href="#"><i class="flaticon-star"></i> Starred</a></li>
+                    <li><a href="#"><i class="flaticon-garbage"></i> Trash</a></li>
+                  </ul>
+
+                  <!-- CHAT LIST -->
+                  <div class="col-12">
+                    <div class="online-status d-flex justify-content-between align-items-center">
+                      <p class="chat">Chats</p>
+                      <span class="status offline online"></span>
+                    </div>
+                  </div>
+                  <ul class="mail-chats">
+                    <li class="chat-persons">
+                      <a href="#">
+                        <span class="pro-pic"><img src="../../images/faces/face1.jpg" alt=""></span>
+                        <div class="user">
+                          <p class="u-name">David</p>
+                          <p class="u-designation">Python Developer</p>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- list person -->
+                    <li class="chat-persons">
+                      <a href="#">
+                        <span class="pro-pic"><img src="../../images/faces/face2.jpg" alt=""></span>
+                        <div class="user">
+                          <p class="u-name">Stella Johnson</p>
+                          <p class="u-designation">SEO Expert</p>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- list person -->
+                    <li class="chat-persons">
+                      <a href="#">
+                        <span class="pro-pic"><img src="../../images/faces/face3.jpg" alt=""></span>
+                        <div class="user">
+                          <p class="u-name">Marina Michel</p>
+                          <p class="u-designation">Business Development</p>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- list person -->
+                    <li class="chat-persons">
+                      <a href="#">
+                        <span class="pro-pic"><img src="../../images/faces/face4.jpg" alt=""></span>
+                        <div class="user">
+                          <p class="u-name">Edward Fletcher</p>
+                          <p class="u-designation">UI/UX Designer</p>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- list person -->
+                    <li class="chat-persons">
+                      <a href="#">
+                        <span class="pro-pic"><img src="../../images/faces/face5.jpg" alt=""></span>
+                        <div class="user">
+                          <p class="u-name">Sophia</p>
+                          <p class="u-designation">Business Development</p>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- list person -->
+                    <li class="chat-persons">
+                      <a href="#">
+                        <span class="pro-pic"><img src="../../images/faces/face6.jpg" alt=""></span>
+                        <div class="user">
+                          <p class="u-name">Gabriel</p>
+                          <p class="u-designation">UI/UX Designer</p>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- list person -->
+                  </ul>
+                  <!-- CHAT -->
+
+                  <!-- SIDE MENU END -->
+                </div>
+              </div>
+              <!-- side bar ends -->
+              <div class="mail-body col-lg-9 col-md-9 col-sm-12 col-12 pt-5">
+
+                <!-- HEADER -->
+                <div class="row body-header">
+                  <div class="container w-100">
+                    <div class="header-top row pl-5">
+                      <div class="col-8 search-wrapper wrapper d-flex">
+                        <input class="form-control mail-search" type="search" placeholder="Search mail" id="Mail-rearch">
+                        <input class="btn" type="submit" value="Find">
+                      </div>
+                    </div>
+                    <div class="checkbox-wrapper selectall-checkbox-btn">
+                      <input class="checkbox-dib" type="checkbox" id="select-all-check-box">
+                      <label for="select-all-check-box"> Select all</label>
+                      <i class="flaticon-garbage"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- HEADER -->
+
+                <div class="row mail-container">
+                  <div class="col-12 p-0">
+                    <div class="mail-list">
+                      <div class="checkbox-wrapper label-clone">
+                        <input class="checkbox-dib" type="checkbox" id="box-1">
+                      </div>
+                      <div class="content">
+                        <p class="sender-name">David</p>
+                        <p class="message_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod accusamus tempore perspiciatis sint odit doloremque hic reiciendis, vel illum.</p>
+                      </div>
+                      <div class="details">
+                        <p class="date">3 Hr ago</p>
+                        <i class="flaticon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail list ends -->
+                  <div class="col-12 p-0">
+                    <div class="mail-list new_mail">
+                      <div class="checkbox-wrapper label-clone">
+                        <input class="checkbox-dib" type="checkbox" id="box-2">
+                      </div>
+                      <div class="content">
+                        <p class="sender-name">Microsoft</p>
+                        <p class="message_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod accusamus tempore perspiciatis sint odit doloremque hic reiciendis, vel illum.</p>
+                      </div>
+                      <div class="details">
+                        <p class="date">8 Hr ago</p>
+                        <i class="flaticon-star favorite"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail list ends -->
+                  <div class="col-12 p-0">
+                    <div class="mail-list">
+                      <div class="checkbox-wrapper label-clone">
+                        <input class="checkbox-dib" type="checkbox" id="box-3">
+                      </div>
+                      <div class="content">
+                        <p class="sender-name">Sophia</p>
+                        <p class="message_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod accusamus tempore perspiciatis sint odit doloremque hic reiciendis, vel illum.</p>
+                      </div>
+                      <div class="details">
+                        <p class="date">2 Days ago</p>
+                        <i class="flaticon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail list ends -->
+                  <div class="col-12 p-0">
+                    <div class="mail-list">
+                      <div class="checkbox-wrapper label-clone">
+                        <input class="checkbox-dib" type="checkbox" id="box-4">
+                      </div>
+                      <div class="content">
+                        <p class="sender-name">Stella</p>
+                        <p class="message_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod accusamus tempore perspiciatis sint odit doloremque hic reiciendis, vel illum.</p>
+                      </div>
+                      <div class="details">
+                        <p class="date">7 Days ago</p>
+                        <i class="flaticon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail list ends -->
+                  <div class="col-12 p-0">
+                    <div class="mail-list">
+                      <div class="checkbox-wrapper label-clone">
+                        <input class="checkbox-dib" type="checkbox" id="box-5">
+                      </div>
+                      <div class="content">
+                        <p class="sender-name">David</p>
+                        <p class="message_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod accusamus tempore perspiciatis sint odit doloremque hic reiciendis, vel illum.</p>
+                      </div>
+                      <div class="details">
+                        <p class="date">13/8/17</p>
+                        <i class="flaticon-star favorite"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail list ends -->
+                  <div class="col-12 p-0">
+                    <div class="mail-list">
+                      <div class="checkbox-wrapper label-clone">
+                        <input class="checkbox-dib" type="checkbox" id="box-6" checked>
+                      </div>
+                      <div class="content">
+                        <p class="sender-name">Daniel Russell</p>
+                        <p class="message_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod accusamus tempore perspiciatis sint odit doloremque hic reiciendis, vel illum.</p>
+                      </div>
+                      <div class="details">
+                        <p class="date">13/8/17</p>
+                        <i class="flaticon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail list ends -->
+                  <div class="col-12 p-0">
+                    <div class="mail-list">
+                      <div class="checkbox-wrapper label-clone">
+                        <input class="checkbox-dib" type="checkbox" id="box-7">
+                      </div>
+                      <div class="content">
+                        <p class="sender-name">Sarah Graves</p>
+                        <p class="message_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod accusamus tempore perspiciatis sint odit doloremque hic reiciendis, vel illum.</p>
+                      </div>
+                      <div class="details">
+                        <p class="date">10/8/17</p>
+                        <i class="flaticon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail list ends -->
+                  <div class="col-12 p-0">
+                    <div class="mail-list">
+                      <div class="checkbox-wrapper label-clone">
+                        <input class="checkbox-dib" type="checkbox" id="box-8">
+                      </div>
+                      <div class="content">
+                        <p class="sender-name">John Doe</p>
+                        <p class="message_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod accusamus tempore perspiciatis sint odit doloremque hic reiciendis, vel illum.</p>
+                      </div>
+                      <div class="details">
+                        <p class="date">8/8/17</p>
+                        <i class="flaticon-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail list ends -->
+                  <div class="col-12 p-0">
+                    <div class="mail-list">
+                      <div class="checkbox-wrapper label-clone">
+                        <input class="checkbox-dib" type="checkbox" id="box-9">
+                      </div>
+                      <div class="content">
+                        <p class="sender-name">Bruno</p>
+                        <p class="message_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod accusamus tempore perspiciatis sint odit doloremque hic reiciendis, vel illum.</p>
+                      </div>
+                      <div class="details">
+                        <p class="date">3/8/17</p>
+                        <i class="flaticon-star favorite"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail list ends -->
+                </div>
+              </div>
+              <!-- MAIL BODY -->
+            </div>
+            <!-- ROW ENDS -->
+          </div>
+          <!-- WRAPPER-ENDS -->
+          <!-- MAIL BODY ENDS HERE-->
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="container-fluid clearfix">
+            <span class="float-right">
+                <a href="#">Zoom Admin</a> &copy; 2017
+            </span>
+          </div>
+        </footer>
+
+        <!--menu ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/sidebar-icon.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/misc.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/mail.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

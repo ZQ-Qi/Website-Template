@@ -1,0 +1,90 @@
+@import "../../config/colors";
+@import "../../config/ui";
+
+.tokenfield {
+  background: $ks-color-white;
+  padding: 10px 10px 2px 10px;
+
+  &:read-only {
+    background: $ks-color-white;
+  }
+
+  &.focus {
+    box-shadow: none;
+    border-color: #999;
+  }
+
+  .token {
+    border-radius: $ks-default-border-radius;
+    margin: -1px 7px 7px 0;
+    border: solid 1px #c4cbe1;
+    background: $ks-color-white;
+
+    .close {
+      background: #ebeef5;
+      padding-left: 4px;
+      border-left: solid 1px #c4cbe1;
+    }
+
+    &:hover, &.active {
+      border-color: #b0b9d7;
+
+      .close {
+        border-color: #b0b9d7;
+      }
+    }
+
+    .token-label {
+      font-size: 12px;
+      padding-left: 5px;
+      padding-top: 2px;
+    }
+  }
+
+  .twitter-typeahead {
+    .tt-input {
+      font-size: 13px;
+      color: $ks-default-text-color-light;
+      margin-bottom: 3px;
+    }
+  }
+
+  .tt-menu {
+    background: $ks-color-white;
+    width: 150px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #d7dceb;
+
+    .tt-suggestion {
+      padding: 7px 15px;
+      font-size: 12px;
+      color: $ks-default-text-color;
+      cursor: pointer;
+
+      &:hover {
+        color: #111;
+      }
+    }
+  }
+
+  &.disabled {
+    opacity: 0.7;
+  }
+
+  &.rtl {
+    .token {
+      .token-label {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .close {
+        border-right: solid 1px #b0b9d7;
+        border-left: none;
+        padding-left: 0;
+        padding-right: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.p-invoice {
+  padding: 0;
+
+  &__header {
+    padding: 30px 30px 10px 30px;
+  }
+
+  &__company-avatar {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  &__company-info,
+  &__notes-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 20px;
+
+    li {
+      margin-bottom: 4px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  &__table {
+    width: 100%;
+
+    ul {
+      width: 177px;
+    }
+
+    th {
+      font-weight: normal;
+      width: 25%;
+      color: #939daa;
+    }
+
+    td {
+      padding-right: 20px;
+      vertical-align: top;
+    }
+  }
+
+  &__items {
+    border-bottom: 1px solid #e9ecef;
+
+    td,
+    th {
+      &:first-child {
+        padding-left: 30px;
+      }
+
+      &:last-child {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  &__footer {
+    padding: 20px 30px 10px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__notes-heading {
+    font-size: 15px;
+    color: #939daa;
+  }
+
+  &__notes-list {
+    margin: 0;
+    color: #000;
+  }
+
+  &__total {
+    width: 30%;
+    min-width: 320px;
+    margin-right: -30px;
+
+    table {
+      border: none;
+    }
+
+    td {
+      border-top: none;
+      padding: 13px 0;
+
+      &:first-child {
+        width: 90px;
+      }
+    }
+  }
+
+  &__total-row {
+    td {
+      border-top: 1px solid #e9ecef;
+      vertical-align: bottom;
+      padding: 20px 0;
+    }
+  }
+
+  &__total-amount {
+    font-size: 30px;
+    color: #269af1;
+    line-height: 30px;
+    font-weight: 700;
+  }
+}
+
+@include mq(tablet, max) {
+  .p-invoice {
+    &__footer {
+      flex-direction: column;
+    }
+
+    &__total {
+      margin-top: 30px;
+    }
+  }
+}
+
+@include mq(phone-wide, max) {
+  .p-invoice {
+    &__footer {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__total {
+      margin-right: 0;
+    }
+  }
+}

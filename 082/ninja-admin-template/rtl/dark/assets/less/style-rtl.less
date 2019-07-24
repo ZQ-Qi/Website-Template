@@ -1,0 +1,1033 @@
+/*
+RTL Styles Support
+Version 2.0
+[Table of contents]
+-------------------------------------------------------------------------
+1. Boostrap
+2. General
+3. Main Menu
+4. Fixed Navbar
+5. Main Content
+6. Navigation
+7. User
+8. Short Menu
+9. Activity
+10. Box Content
+11. Checkbox / Radio
+12. Data Tables
+13. Dropcap
+14. Form control
+15. Invoice
+16. Jquery UI
+17. Login, Register,... Page
+18. Knob
+19. Mail
+20. Notice Popup
+21. Projects Page
+22. Review Widget
+23. Taskboard
+24. Timeline
+25. Treeview
+26. Horizontal 
+-------------------------------------------------------------------------*/
+@import url(variables.less);
+
+
+
+/*-----------------------------------------------------------------------
+1. Boostrap
+*/
+html[dir="rtl"]{
+.alert-dismissable, .alert-dismissible{
+	padding-right: 15px;
+	padding-left: 35px;
+	.close{
+		right: auto;
+		left: -21px;
+		float: left;
+	}
+}
+button.list-group-item{
+	text-align: right;
+}
+.close{
+	float: left;
+}
+.dropdown-menu{
+	text-align: right;
+}
+.input-group-addon:first-child{
+	border-right: 1px solid #ccc;
+	border-left: none;
+}
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:first-child>.btn-group:not(:first-child)>.btn,
+.input-group-btn:first-child>.btn:not(:first-child),
+.input-group-btn:last-child>.btn,
+.input-group-btn:last-child>.btn-group>.btn,
+.input-group-btn:last-child>.dropdown-toggle{
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child>.btn,
+.input-group-btn:first-child>.btn-group>.btn,
+.input-group-btn:first-child>.dropdown-toggle,
+.input-group-btn:last-child>.btn-group:not(:last-child)>.btn,
+.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle){
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.list-group-item{
+	> .badge{
+		float: left;
+	}
+}
+.nav-tabs{
+	>li{
+		float: right;
+	}
+	&.nav-justified{
+		>li{
+			float: none;
+		}
+	}
+}
+.nav-pills{
+	> li{
+		float: right;
+	}
+}
+.nav-stacked>li{
+	float: none;
+}
+.progress-bar{
+	float: right;
+}
+
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+	float: right;
+}
+@media (min-width: 768px){
+	.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9{
+		float: right;
+	}
+}
+@media (min-width: 992px){
+	.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+		float: right;
+	}
+}
+@media (min-width: 1200px){
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
+		float: right;
+	}
+}
+}
+
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+2. General
+*/
+html[dir="rtl"]{
+th{
+	text-align: right;
+}
+ul{
+	padding-right: 0;
+}
+.btn{ 
+	&.btn-icon-left{
+		padding-left: 15px;
+		padding-right: 57px;
+		&.btn-lg{
+			padding-right: 73px;
+			padding-left: 30px;
+		}
+		.ico{
+			right: 0;
+			left: auto;
+		}
+		&.btn-sm{ padding-right: 53px; padding-left: 15px; }
+		&.btn-xs{ padding-right: 47px; padding-left: 15px; }
+	}
+	&.btn-icon-right{
+		padding-right: 15px;
+		padding-left: 57px;
+		&.btn-lg{
+			padding-left: 73px;
+			padding-right: 30px;
+		}
+		.ico{
+			right: auto;
+			left: 0;
+		}
+		&.btn-sm{ padding-right: 15px; padding-left: 53px; }
+		&.btn-xs{ padding-right: 15px; padding-left: 47px }
+	}
+
+	.ico{
+		display: inline-block;
+	}
+
+	.ico-left{
+		margin-right: 0px;
+		margin-left: 8px;
+	}
+
+	.ico-right{
+		margin-left: 0px;
+		margin-right: 8px
+	}
+}
+.row-inline-block{
+	text-align: right;
+	> *{
+		float: none;
+	}
+}
+.mCS-dir-rtl>.mCSB_inside>.mCSB_container{
+	margin-left: 0;
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+3. Main Menu
+*/
+html[dir="rtl"]{
+.main-menu{
+	left: auto;
+	right: 0;
+	.mCSB_inside>.mCSB_container{
+		margin-left: 0;
+	}
+	.header{
+		.logo{
+			left: auto;
+			right: 0;
+		}
+	}
+	@media (max-width: 799px){
+		transform: translate(110%,0);
+		-moz-transform: translate(110%,0);
+		-webkit-transform: translate(110%,0);
+	}
+}
+&.menu-active .main-menu{
+	@media (max-width: 799px){
+		transform: translate(0,0);
+		-moz-transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+4. Fixed Navbar
+*/
+html[dir="rtl"]{
+.fixed-navbar{
+	left: 0;
+	right: 260px;
+	padding: 0 80px 0 20px;
+	.pull-right{
+		float: left!important;
+	}
+	.pull-left{
+		float: right!important;
+	}
+	.menu-mobile-button{
+		left: auto;
+		right: 0;
+	}
+	.ico-item{
+		margin-left: 0;
+		margin-right: 15px;
+		.ico-item{
+			margin-right: 0;
+		}
+		&.toggle-hover{
+			.toggle-content{
+				left: -10px;
+				right: auto;
+			}
+		}
+	}
+	.searchform{
+		right: auto;
+		left: -3px;
+		margin-left: 0;
+		.input-search{
+			padding-left: 40px;
+			padding-right: 20px;
+		}
+		.button-search{
+			right: auto;
+			left: 11px;
+		}
+		@media( max-width: 599px){
+			right: 0;
+		}
+	}
+	@media (max-width: 799px){
+		right: 0;
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+5. Main Content
+*/
+html[dir="rtl"]{
+.main-content{
+	margin-left: 20px;
+	margin-right: 280px;
+	@media (max-width: 799px){
+		margin-right: 20px;
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+6. Navigation
+*/
+html[dir="rtl"]{
+.navigation{
+	.menu{
+		> li{
+			> a{
+				padding-right: 53px;
+				padding-left: 30px;
+				.menu-arrow{
+					right: auto;
+					left: 20px;
+				}
+			}
+		}
+		.menu-icon{
+			left: auto;
+			right: 0;
+		}
+		.notice{
+			right: auto;
+			left: 20px;
+		}
+		.sub-menu{
+			a{
+				padding-right: 53px;
+				padding-left: 20px;
+			}
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+7. User
+*/
+html[dir="rtl"]{
+.user{
+	padding-left: 40px;
+	padding-right: 100px;
+	.avatar{
+		left: auto;
+		right: 20px;
+	}
+	.control-list{
+		left: 0;
+		right: auto;
+		a{
+			text-align: right;
+		}
+	}
+	.control-wrap{
+		right: auto;
+		left: 15px;
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+8. Short Menu
+*/
+html[dir="rtl"]{
+@media (min-width: 800px){
+	&.menu-active{
+		.fixed-navbar{
+			right: 75px;
+		}
+		.main-content{
+			margin-right: 95px;
+		}
+		.navigation{
+			.menu{
+				> li{
+					> a{
+						padding-left: 30px;
+						padding-right: 30px;
+					}
+					&:hover{
+						> a{
+							padding-left: 0;
+							padding-right: 90px;
+						}
+					}
+				}
+				.sub-menu{
+					left: auto;
+					right: 75px;
+					a{
+						padding-left: 15px;
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+9. Activity
+*/
+html[dir="rtl"]{
+.activity-item{
+	padding-right: 35px;
+	padding-left: 0;
+	.bar{
+		left: auto;
+		right: 10px;
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+10. Box Content
+*/
+html[dir="rtl"]{
+.box-content{
+	.dropdown{
+		&.js__drop_down{
+			right: auto;
+			left: 20px;
+			.sub-menu{
+				right: auto;
+				left: 100%;
+			}
+		}
+	}
+	.box-title{
+		.ico{
+			margin-left: 8px;
+			margin-right: 0;
+		}
+		&.with-control{
+			.controls{
+				right: auto;
+				left: 20px;
+			}
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+11. Checkbox / Radio
+*/
+html[dir="rtl"]{
+.checkbox{
+	label{
+		padding-right: 25px;
+		padding-left: 0;
+		&:before{
+			left: auto;
+			right: 0;
+		}
+		&:after{
+			left: auto;
+			right: 2px;
+		}
+	}
+}
+.radio{
+	label{
+		padding-left: 0;
+		padding-right: 25px;
+		&:before{
+			left: auto;
+			right: 0;
+		}
+		&:after{
+			right: 3px;
+			left: auto;
+		}
+	}
+}
+.switch{
+	label{
+		padding-right: 40px;
+		padding-left: 0;
+		&:before{
+			left: auto;
+			right: 0;
+		}
+		&:after{
+			right: 0;
+			left: auto;
+		}
+	}
+	input[type="checkbox"]:checked+label:after{
+		right: 14px;
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+12. Data Tables
+*/
+html[dir="rtl"]{
+div.dataTables_wrapper{ 
+	div.dataTables_paginate{
+		text-align: left;
+		float: left;
+		.pagination{
+			.paginate_button{
+				margin-left: 0;
+				margin-right: 10px;
+			}
+		}
+	}
+	div.dataTables_filter{
+		text-align: left;
+		float: left;
+	}
+	.dataTables_length{
+		float: right;
+	}
+	.dataTables_info {
+		float: right;
+	}
+}
+table.dataTable{ 
+	thead{
+		>tr{
+			th.sorting_asc, th.sorting_desc, th.sorting,td.sorting_asc, td.sorting_desc, td.sorting{
+				padding-right: 8px;
+				padding-left: 30px
+			}
+		}
+		.sorting,.sorting_asc,.sorting_desc,.sorting_asc_disabled,.sorting_desc_disabled{
+			background-position: center left;
+			&:after{
+				right: auto;
+				left: 8px;
+			}
+		}
+	}
+	&.table-bordered{
+		th,td{
+			border-left-width: 1px;
+			border-right-width: 0;
+			&:last-child{
+				border-left-width: 0;
+			}
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+13. Dropcap
+*/
+html[dir="rtl"]{
+.dropcap, .dropcap-circle, .dropcap-square{
+	float: right;
+	margin-left: 6px;
+	margin-right: 0;
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+14. Form control
+*/
+html[dir="rtl"]{
+.form-control-feedback{
+	right: auto;
+	left: 0;
+}
+.form-with-icon{
+	.form-control{
+		padding-right: 14px;
+		padding-left: 50px;
+	}
+	.item-icon-right{
+		left: 0;
+		right: auto;
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+15. Invoice
+*/
+html[dir="rtl"]{
+.invoice-box{
+	table{
+		text-align: right;
+		tr{
+			td{
+				&:nth-child(2){
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+16. Jquery UI
+*/
+html[dir="rtl"]{
+.ui-tabs{
+	.ui-tabs-nav{
+		li{
+			float: right;
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+17. Login, Register,... Page
+*/
+html[dir="rtl"]{
+.frm-single{
+	.a-link{
+		i{
+			margin-left: 5px;
+			margin-right: 0;
+		}
+	}
+	.frm-input{
+		.frm-ico{
+			left: auto;
+			right: 3px;
+		}
+		.frm-inp{
+			padding-right: 30px;
+			border-left: 1px solid #ccc;
+			border-right: 3px solid #999;
+		}
+	}
+	.frm-submit{
+		i{
+			margin-left: 0;
+			margin-right: 5px;
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+18. Knob
+*/
+html[dir="rtl"]{
+.knob-wrap{
+	direction: ltr;
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+19. Mail
+*/
+html[dir="rtl"]{
+.box{
+	.box-header{
+		.box-tools{
+			right: auto;
+			left: 20px;
+		}
+	}
+}
+.mailbox-attachments{
+	li{
+		float: right;
+	}
+}
+.mailbox-attachment-info{
+	&:after{
+		content: '';
+		clear: both;
+		display: block;
+	}
+}
+.mailbox-controls{ 
+	padding-left: 20px;
+	padding-right: 15px;
+	.inbox-text{
+		margin-left: 8px;
+		margin-right: 0;
+	}
+}
+.mailbox-messages{
+	.unread{
+		>td{
+			&:first-of-type{
+				border-left-width: 0;
+				border-right: 5px solid @blue;
+			}
+		}
+	}
+} 
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+20. Notice Popup
+*/
+html[dir="rtl"]{
+.notice-popup{
+	left: 20px;
+	right: auto;
+	@media(max-width: 550px){
+		left: 0px!important;
+		right: 0;
+	}
+}
+.notice-list{
+	a{
+		padding-right: 85px;
+		padding-left: 15px;
+	}
+	.avatar{
+		right: 15px;
+		left: auto;
+	}
+	.time{
+		right: auto;
+		left: 20px;
+	}
+}
+#message-popup{
+	right: auto;
+	left: 60px;
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+21. Projects Page
+*/
+html[dir="rtl"]{
+.prj-header{
+	.btn-submit-prj{
+		left: 0;
+		right: auto;
+	}
+	.result-count{
+		left: auto;
+		right: 0;
+	}
+	.filters{
+		a{
+			&:before{
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+}
+
+.prj-item{
+	.bottom-project-section{
+		.points{
+			float: right;
+			margin-left: 10px;
+			margin-right: 0;
+		}
+		.views{
+			float: right;
+			margin-left: 10px;
+			margin-right: 0;
+		}
+		.feedable-time{ float: left; }
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+22. Review Widget
+*/
+html[dir="rtl"]{
+.review-item{
+	.top{
+		.star-rating{
+			float: left;
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+23. Taskboard
+*/
+html[dir="rtl"]{
+.task-item{
+	.metas{
+		.meta{
+			float: right;
+			margin-left: 10px;
+			margin-right: 0;
+			.ico{
+				margin-left: 4px;
+				margin-right: 0;
+			}
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+24. Timeline
+*/
+html[dir="rtl"]{
+@media only screen and (min-width: 1170px){
+	.cd-timeline-block:nth-child(even) .cd-timeline-content {
+		float: left;
+	}
+}
+.cd-timeline-img img{
+	margin-left: 0;
+	margin-right: -12px;
+	left: auto;
+	right: 50%;
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+25. Treeview
+*/
+html[dir="rtl"]{
+.treeview{
+	span.icon{
+		margin-left: 5px;
+		margin-right: 0;
+	}
+}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+26. Horizontal
+*/
+html[dir="rtl"]{
+.main-content.container{
+	margin: 0 auto;
+}
+.header-top{
+	.notice-popup{
+		right: auto!important;
+		left: 0!important;
+	}
+	.searchform{
+		left: -3px;
+		right: auto;
+		.button-search{
+			right: auto;
+			left: 8px;
+		}
+		.input-search{
+			padding-left: 40px;
+			padding-right: 20px;
+		}
+	}
+	.ico-item.toggle-hover .toggle-content{
+		right: auto;
+		left: -10px;
+	}
+}
+.user-status{
+	right: auto;
+	left: 0;
+	.avatar{
+		float: right;
+		margin-left: 15px;
+		margin-right: 0;
+	}
+}
+@media (min-width: 1025px){
+	.nav-horizontal{
+		.menu{
+			> li{
+				> a{
+					.ico{
+						margin-left: 8px;
+						margin-right: 0;
+					}
+				}
+			}
+			.sub-menu{
+				right: 0;
+				left: auto;
+				&.mega{
+					> li{
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1024px){
+	.nav-horizontal{
+		left: auto;
+		right: 0;
+		transform: translate(101%,0);
+		-moz-transform: translate(101%,0);
+		-webkit-transform: translate(101%,0);
+		&.active{
+			transform: translate(0,0);
+			-moz-transform: translate(0,0);
+			-webkit-transform: translate(0,0);
+		}
+		.menu-close i{
+			margin-left: 4px;
+			margin-right: 0;
+		}
+		.menu{
+			>li{
+				>a{
+					padding-right: 53px;
+					padding-left: 30px;
+					.ico{
+						left: auto;
+						right: 0;
+					}
+				}
+			}
+			.has-sub{ 
+				> a:before,> .title:before{
+					left: 12px;
+					right: auto;
+				}
+			}
+			.sub-menu,.child-list{
+				.title,a{
+					padding-left: 15px;
+					padding-right: 53px;
+				}
+				ul{
+					a{
+						padding-right: 70px;
+					}
+				}
+			}
+		}
+	}
+}
+}
+/*---------------------------------------------------------------------*/

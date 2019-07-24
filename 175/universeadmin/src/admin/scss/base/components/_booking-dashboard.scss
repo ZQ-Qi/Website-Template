@@ -1,0 +1,340 @@
+/** BEGIN: booking widgets */
+.bd-widget-overview {
+  .tab-pane {
+    padding: 0;
+    min-height: 482px;
+  }
+
+  &--most-booked {
+    .tab-pane {
+      min-height: 382px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 21px;
+  }
+
+  &__info-tabs {
+    .btn {
+      padding: 5px 12px;
+    }
+  }
+
+  &__tags {
+    font-size: 14px;
+  }
+
+  &__tag {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__chart {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  &__most-booked-chart {
+    height: 380px;
+  }
+
+  &__stats {
+    display: flex;
+    padding: 18px 21px;
+    border-top: 1px solid rgba(#939daa, .2);
+  }
+
+  &__stats-item {
+    width: 25%;
+  }
+
+  &__stats-title {
+    font-size: 14px;
+    color: #939daa;
+  }
+
+  &__stats-content {
+    font-size: 24px;
+    color: #000;
+  }
+
+  &__stats-icon {
+    font-size: 18px;
+    position: relative;
+    top: 1px;
+
+    &--up {
+      color: #5db75d;
+    }
+
+    &--down {
+      color: #e13a34;
+    }
+  }
+}
+
+.bd-widget-stats {
+  &__chart {
+    width: 270px;
+    height: 270px;
+  }
+
+  .widget-sales-stats__labels {
+    height: auto;
+  }
+
+  .widget-step-goal__donut-progress-amount {
+    font-size: 40px;
+  }
+
+  .widget-step-goal__donut-progress {
+    left: calc(50% - 42px);
+    top: calc(50% - 20px);
+    text-align: center;
+  }
+}
+
+.bd-widget-latest-reservations {
+  padding: 0;
+
+  .widget-controls__content {
+    max-height: 1170px;
+  }
+
+  &__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 14px;
+    padding: 0 18px;
+    margin-bottom: 20px;
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-username {
+      color: #000;
+      font-weight: 600;
+    }
+
+    &-date {
+      color: $color-gray;
+    }
+
+    &-desc {
+      color: $color-gray;
+      margin-top: 5px;
+    }
+
+    &-meta {
+      margin-top: 10px;
+    }
+
+    &-meta-icon {
+      font-size: 14px;
+      color: rgba($color-gray, .7);
+      display: inline-block;
+      margin-right: 15px;
+      line-height: 14px;
+    }
+
+    &__item-meta-icon-text {
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+.bd-widget-top-countries {
+  &__chart {
+    height: 306px;
+  }
+}
+
+.bd-widget-feedback {
+  &__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__rating-header {
+    display: flex;
+  }
+
+  &__rating,
+  &__reviews {
+    width: 50%;
+  }
+
+  &__rating {
+    padding: 41px;
+  }
+
+  &__rating-amount {
+    font-size: 60px;
+    font-weight: 300;
+    margin-right: 17px;
+    line-height: 48px;
+  }
+
+  &__rating-star {
+    display: inline-block;
+    font-size: 24px;
+    color: #b7babf;
+    line-height: 24px;
+    margin-right: 6px;
+
+    &.is-active {
+      color: #FFB940;
+    }
+  }
+
+  &__rating-reviews-amount {
+    font-size: 17px;
+    color: $color-gray;
+  }
+
+  &__rating-categories {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 50px;
+  }
+
+  &__rating-category {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .progress {
+      flex-grow: 1;
+      margin: 0;
+    }
+  }
+
+  &__rating-category-name {
+    width: 100px;
+  }
+
+  &__rating-category-amount {
+    margin-left: 20px;
+  }
+
+  &__reviews {
+    position: relative;
+
+    .table {
+      border: none;
+    }
+  }
+
+  &__review-scrollpanel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__review {
+    font-size: 14px;
+
+    td {
+      vertical-align: top;
+    }
+  }
+
+  &__review-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__review-meta {
+    color: $color-gray;
+  }
+
+  &__review-desc {
+    color: $color-gray;
+  }
+
+  &__review-star {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 5px;
+    color: #b7babf;
+
+    &.is-active {
+      color: #FFB940;
+    }
+  }
+
+  &__review-avatar {
+    padding: 20px 0 !important;
+  }
+}
+
+.bd-widget-top-clients {
+  height: 491px;
+
+  &__point-cell {
+    vertical-align: top;
+  }
+
+  .table {
+    th {
+      color: #000;
+      background: #fbfcfd;
+    }
+  }
+
+  &__point {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #269af1;
+    background: #fff;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    display: block;
+    color: #269af1;
+  }
+
+  &__stars {
+    vertical-align: middle;
+  }
+
+  &__star {
+    font-size: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    color: #b7babf;
+
+    &.is-active {
+      color: #FFB940;
+    }
+  }
+}
+
+.bd-widget-client-database {
+  &__chart {
+    height: 341px;
+  }
+}
+/** END: booking widgets */

@@ -1,0 +1,49 @@
+.sidebar-user-a {
+  padding: 30px 30px 5px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__avatar {
+    width: 90px;
+    height: 90px;
+    border: 2px solid #ffc101;
+    margin-bottom: 19px;
+    box-shadow: 0 10px 40px -13px rgba(0,0,0,0.35);
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-gray;
+  }
+
+  &__desc {
+    margin-top: 2px;
+    font-size: 15px;
+    color: $color-gray;
+  }
+
+  &__link {
+    margin-top: 20px;
+    @include mx-button(#ffc101, #000, #000);
+  }
+}
+
+.sidebar-sm {
+  .sidebar-user-a {
+    padding: 10px 4px 0 4px;
+
+    &__avatar {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 10px;
+    }
+
+    &__name,
+    &__desc,
+    &__link {
+      display: none;
+    }
+  }
+}

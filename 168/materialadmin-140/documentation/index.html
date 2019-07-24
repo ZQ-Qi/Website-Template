@@ -1,0 +1,239 @@
+<!DOCTYPE html><!--if lt 8html.no-js.lt-ie8--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta charset="utf-8"><!-- if IEmeta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')--><title></title><meta name="description" content=""><meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- if lt IE 9script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- stylesheets--><link href="assets/css/bootstrap.min.css" rel="stylesheet"><link href="assets/css/docs.css" rel="stylesheet"><link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet"><link href="assets/css/main.css" rel="stylesheet"></head><body data-spy="scroll" data-target=".bs-docs-sidebar"><header class="top-header navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner"><div class="container"><div class="navbar-header"><button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="http://iarouse.com/" target="_blank">iArouse</a></div><nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"><ul class="nav navbar-nav"><li class="active"><a href="./index.html">Getting Started</a></li><li><a href="./faqs.html">FAQs</a></li></ul></nav></div></header><div class="bs-header" id="content"><div class="container"><h1>Documentation</h1><p>An overview of the admin template</p></div></div><div class="container bs-docs-container"><div class="row"><div class="col-md-3"><div class="bs-sidebar hidden-print"><ul class="nav bs-sidenav"><li><a href="#thanks">Thanks</a></li><li><a href="#intro">Introduction</a></li><li><a href="#file-structure">File Structure</a></li><li><a href="#demo">How to Run it (The Demo)?</a></li><li><a href="#bower">Dependencies Management with Bower</a></li><li><a href="#gulp">Automation with Gulp</a></li><li><a href="#use_sass">How to Use It? (As a Developer)</a></li><li><a href="#basic_html">Basic Template Structure</a></li><li><a href="./faqs.html"> <span class="glyphicon glyphicon-link"></span> FAQs </a></li></ul></div></div><div class="col-md-9" role="main"><a href="http://themeforest.net/user/arousing" target="_blank"><img style="z-index: 1100; position: fixed; top: 0; right: 0; border: 0;" src="assets/img/contact_me.png" alt="contact me"></a><section id="thanks"><div class="page-header"><h1>Thank you</h1></div><p class="lead">Thank you for purchasing. Feel free to <a href="http://themeforest.net/user/arousing" target="_blank">contact me</a> if you have any questions.</p><P class="lead">Also, <a href="http://themeforest.net/user/arousing" target="_blank">email me</a> if you have any feature requests or advices, I'll be glad to know.</P> <p class="lead"> <a href="http://themeforest.net/downloads" target="_blank">Rate it</a> if you like it, it helps for more updates, thank you so much!</p></section><section id="intro"><div class="page-header"><h1>Introduction</h1></div><p class="lead">Material is a fully responsive admin web app template built with Bootstrap & AngularJS. It uses Sass CSS which makes it easy to customize.</p></section><section id="file-structure"><div class="page-header"><h1>File Structure</h1></div><p class="lead">Within the download you'll find the following file structure and contents</p><p>Once downloaded, unzip the compressed folder  and you'll see something like this:</p><pre class="prettyprint">Material/
+├── Material/                       ───> Contains the develop version of Material Admin Template.
+│   ├── client/                           └──> All front end files (source code) are in this folder.
+│   │     ├── app/                            └──> All the custom JS scripts and HTML markup
+│   │     ├── assets/                         └──> All the assets, including images, fonts, i18n data
+│   │     ├── styles/                         └──> All the custom stylesheets (Scss files)
+│   │     ├── vendors/                        └──> Third party libaries
+│   │     ├── favicon.ico
+│   │     └── index.html
+│   ├── .bowerrc
+│   ├── .editorconfig
+│   ├── .gitattributes
+│   ├── .jshintrc
+│   ├── .travis.yml
+│   ├── bower.json
+│   ├── gulp.config.js
+│   ├── gulpfile.js
+│   └── package.json
+├── CHANGELOG.md                  ───> The change log
+├── dist/                         ───> The distribution version of Material Admin (Only for demo purpose, not development)
+├── documentation/                ───> Where the help documentation is.
+└── landing/                      ───> The landing page template</pre><p class="lead">Introduction to some important files:</p><dl class="dl-horizontal"><dt>".bowerrc"</dt><dd>file is hidden, and is used for configure <a href="http://bower.io/">Twitter Bower</a></dd><dt>"bower.json"</dt><dd> is the JSON file of <a href="http://bower.io/">Twitter Bower</a> (You can click the link to know more).</dd><dt>"gulp.config.js"</dt><dd> contains the global configuration variables of <a href="http://gulpjs.com/">Gulp</a> tasks</dd><dt>"gulpfile.js"</dt><dd> is the configure file of <a href="http://gulpjs.com/">Gulp</a> (You can click the link to know more).
+ It is used to configure or define tasks and load Gulp plugins.</dd><dt>"package.json"</dt><dd> is the JSON file of <a href="http://npmjs.com/">NPM</a> (You can click the link to know more).
+ This file is used by npm to store metadata for projects published as <a href="https://npmjs.org/">npm</a> modules.</dd></dl></section><section id="demo"><div class="page-header"><h1>How to Run the Demo?</h1></div><div class="callout callout-warning"><p>Note: <em>dist/ </em>folder contains the built distribution (production) version, which is for demo purpose only</p></div><p class="lead">You'll need to put the files on a server to run it. </p><p>So you can upload the <strong>"dist/"</strong> folder to your server to run it. Or you can build a server locally.</p><p class="lead">Then how to build a server locally?</p><p><em>You can build a locally server using WAMP or MAMP (if you uses PHP). Also it's pretty easy to build one with Python or Ruby (if you prefer Python or Ruby). And here we'll build a local server with NodeJS</em></p><p> <strong>Preparation:</strong></p><P>You'll need to install <a href="http://nodejs.org/">Node.js</a> (NPM comes along with it) and <a href="https://github.com/cloudhead/node-static">node-static</a> (an NPM package)</P><p><strong>Steps:</strong></p><p>It's easy if you are familiar with Node. Download <a href="http://nodejs.org/">Node.js here</a>  then install it, and install <a href="https://github.com/cloudhead/node-static">node-static</a> with one command line</p><pre>$ npm install -g node-static</pre><p>The usage of node-static is simple. Just enter the "dist" directory with command line</p><pre>$ cd dist/</pre><p>and type:</p><pre>$ static</pre><p>It'll return something like this: </p><pre>serving "." at http://127.0.0.1:8080</pre><p>Then you can view the template on http://127.0.0.1:8080 with your browser</p></section><section id="bower"><div class="page-header"><h1> Dependencies Management with Bower</h1></div><p class="lead"> <a href="http://bower.io/">Bower</a> is a front-end package manager for the web by Twitter.</p><p>Material use <a href="http://bower.io/">Bower </a> to manage all the front end dependencies, make things clean, tidy and simple. However if you are not familiar with command line tool, it may be a bit scary for you, but don't worry, it's simple.</p><p>If you haven't try Bower before, then give it a shot,<strong> it makes life easier</strong>, you'll fall in love with it.</p><p>Inside the <strong>bower.json</strong> file of Bower, you'll see the list dependencies (package name and version):</p><p>If you want to know more about the packages, you can <a href="http://bower.io/search/">click here.</a> Search the package and click the link to know more.</p><pre>  "dependencies": {
+    "jquery": "^3.2.1",
+    "angular": "~1.6.6",
+    "angular-animate": "~1.6.6",
+    "angular-aria": "~1.6.6",
+    "angular-messages": "~1.6.6",
+    "angular-ui-router": "~1.0.6",
+    "angular-translate": "~2.15.1",
+    "angular-translate-loader-static-files": "~2.15.1",
+    "angular-scroll": "~1.0.0",
+    "jquery.slimscroll": "~1.3.3",
+    "oclazyload": "^1.0.9",
+    "webfontloader": "^1.6.27",
+    "angular-material": "1.1.4",
+    "font-awesome": "~4.7.0",
+    "angular-validation-match": "~1.9.0",
+    "textAngular": "~1.5.0",
+    "angular-material-data-table": "^0.10.9",
+    "echarts": "~3.7.0",
+    "angular-wizard": "~1.1.1",
+    "ngECharts": "ngecharts#^0.2.0",
+    "ngmap": "~1.18.4"
+ }</pre></section><section id="gulp"><div class="page-header"> <h1>Automation with Gulp</h1></div><p class="lead"><a href="http://gulpjs.com/">Gulp</a> is a JavaScript task runner (Automation), save yourself from repetitive tasks.</p><p>It's probably a bit complex to you if it's your first time using Gulp. However, <strong>you'll fail in love with it</strong> once you get up and running, it saves you from repetitive tasks. Project like jQuery, Bootstrap and many more use and love task automation tools.</p><p>By the way, be sure to check out this <a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md" target="_blank">Getting Started guide</a>, it will help you get up and running.</p><dl class="dl-horizontal"><dt>"gulp.config.js"</dt><dd> contains the global configuration variables of <a href="http://gulpjs.com/">Gulp</a> tasks</dd><dt>"gulpfile.js"</dt><dd> is the configure file of <a href="http://gulpjs.com/">Gulp</a> (You can click the link to know more).
+ It is used to configure or define tasks and load Gulp plugins.</dd><dt>"package.json"</dt><dd> is the JSON file of <a href="http://npmjs.com/">NPM</a> (You can click the link to know more).
+ This file is used by npm to store metadata for projects published as <a href="https://npmjs.org/">npm</a> modules.</dd></dl><p>Inside <strong>package.json</strong> file, you'll see all the Gulp plugins
+ that help to automate the tasks.</p><p>And all the plugins are configured in <strong>gulpfile.js</strong> file.</p><p>If you want to know more about the plugins, you can <a href="http://gulpjs.com/plugins/">click here.</a></p><pre> "devDependencies": {
+    "browser-sync": "^2.12.10",
+    "del": "^3.0.0",
+    "gulp": "~3.9.0",
+    "gulp-angular-filesort": "~1.1.1",
+    "gulp-angular-templatecache": "~2.0.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^3.0.0",
+    "gulp-filter": "^5.0.0",
+    "gulp-if": "~2.0.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-jscs": "~4.0.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.1.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-ng-annotate": "~2.0.0",
+    "gulp-open": "~2.0.0",
+    "gulp-plumber": "~1.1.0",
+    "gulp-print": "~2.0.0",
+    "gulp-pug": "~3.3.0",
+    "gulp-rev": "^8.0.0",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-task-listing": "~1.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.0.5",
+    "gulp-util": "~3.0.4",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.1.0",
+    "wiredep": "^4.0.0",
+    "yargs": "^8.0.2"
+ }</pre></section><section id="use_sass"><div class="page-header"><h1>How to Use It?</h1></div><p class="lead">In order to do development with it, first you need to have the following tools installed:</p><li> <a href="http://nodejs.org/">Node.js</a> (NPM comes along with it), just download and install it, that's it, don't be afraid.</li><li> <a href="http://yeoman.io/">Yeoman </a>, <a href="http://bower.io/">Bower</a>, <a href="http://gulpjs.com/">Gulp</a> for modern workflow. (Note: to use bower on Windows, you need to install <a href="http://git-scm.com/">git</a> first)</li><li><a href="https://www.ruby-lang.org/en/">Ruby </a>(if you are using a Mac, you already have it)
+, <a href="http://sass-lang.com/">Sass </a>, <a href="http://compass-style.org/">Compass</a> for Sass CSS.</li><br><p>And you'll need to know how some basis about them, click the links to learn more if you not familiar with these yet. <strong>If it's your first time using these tools</strong>, it's probably too complex or even overwhelming for you. You'd better find someone to help you.</p><p>By the way, just a tip here, after you installed NodeJS (NPM comes along with it), you can use one command line to install Yeoman, Bower and Gulp instead of installing them one by one</p><pre>$ npm install -g yo bower gulp</pre><p class="lead">If you already know how to use them, then just do a few things to start developing:</p><p>1. Enter "Material" folder with your command line tool.</p><p>2. Install all the NPM packages (for development) with NPM: </p><pre>$ npm install</pre><p>3. Install all the front end packages with Twitter Bower:</p><pre>$ bower install</pre><p>4. Then type<strong> gulp serve</strong> and you are ready to go.</p><pre>$ gulp serve</pre><br><p>Tip: By the way, if you want to build a distribution (production) version, simply run</p><pre>$ gulp serve-dist</pre><br><div class="callout callout-info"><p>Note: All the source code for development are inside <strong>./material/src/</strong> folder.</p></div></section><section id="basic_html"><div class="page-header"><h1>Basic Template Structure</h1></div><p class="lead">The basic structure of template (index.html) is quiet simple. It contains 3 parts: <strong>The header</strong>, which load all the stylesheets. <strong>The body</strong>, which contains the content of App.  <strong>The footer</strong>, which load all the scripts. </p><p class="lead">The Header</p><pre class="prettyprint linenums">&lt;!doctype html&gt;
+&lt;html class="no-js"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta http-equiv='X-UA-Compatible' content='IE=edge'&gt;
+        &lt;title&gt;Web Application&lt;/title&gt;
+        &lt;meta name="description" content="Responsive Admin Web App with Bootstrap and AngularJS"&gt;
+        &lt;meta name="keywords" content="angularjs admin, admin templates, admin themes, bootstrap admin"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"&gt;
+        &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
+        &lt;meta name="apple-touch-fullscreen" content="yes"&gt;
+ 
+        &lt;!-- google fonts --&gt;
+        &lt;script type="text/javascript"&gt;
+            WebFontConfig = {
+                google: { families: [ 'Roboto:100,300,400,400italic,500,700:latin' ] }
+            };
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = 'bower_components/webfontloader/webfontloader.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            })(); 
+        &lt;/script&gt;
+ 
+ 
+        &lt;!-- Needs images, font... therefore can not be part of main.css --&gt;
+        &lt;link rel="stylesheet" href="styles/loader.css"&gt;
+        &lt;link rel="stylesheet" href="vendors/material-design-icons/iconfont/material-icons.css" rel="stylesheet" &gt;
+        &lt;link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"&gt;
+        &lt;!-- end Needs images --&gt;
+ 
+            
+            &lt;!-- build:css({.tmp,client}) styles/main.css --&gt;
+            &lt;link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"&gt;
+            &lt;link rel="stylesheet" href="styles/bootstrap.css"&gt;
+            &lt;link rel="stylesheet" href="styles/ui.css"&gt;
+            &lt;link rel="stylesheet" href="styles/app.css"&gt;
+            &lt;!-- endbuild --&gt;
+    &lt;/head&gt;</pre><p class="lead">The Body</p><pre class="prettyprint linenums">    &lt;body data-ng-app="app"
+          id="app"
+          class="app"
+          data-custom-page 
+          data-ng-controller="AppCtrl"
+          data-ng-class=" { 'layout-boxed': main.layout === 'boxed', 
+                            'nav-collapsed-min': main.isMenuCollapsed
+          } "&gt;
+        &lt;!--[if lt IE 9]&gt;
+            &lt;div class="lt-ie9-bg"&gt;
+                &lt;p class="browsehappy"&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser.&lt;/p&gt;
+                &lt;p&gt;Please &lt;a href="http://browsehappy.com/"&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;![endif]--&gt;
+ 
+        &lt;div id="loader-container"&gt;&lt;/div&gt;
+ 
+        &lt;header data-ng-include=" 'app/layout/header.html' "
+                 id="header"
+                 class="header-container "
+                 data-ng-class="{ 'header-fixed': main.fixedHeader,
+                                  'bg-white': ['11','12','13','14','15','16','21'].indexOf(main.skin) &gt;= 0,
+                                  'bg-dark': main.skin === '31',
+                                  'bg-primary': ['22','32'].indexOf(main.skin) &gt;= 0,
+                                  'bg-success': ['23','33'].indexOf(main.skin) &gt;= 0,
+                                  'bg-info': ['24','34'].indexOf(main.skin) &gt;= 0,
+                                  'bg-warning': ['25','35'].indexOf(main.skin) &gt;= 0,
+                                  'bg-danger': ['26','36'].indexOf(main.skin) &gt;= 0
+                 }"&gt;&lt;/header&gt;
+ 
+        &lt;div class="main-container"
+             data-ng-class="{ 'app-nav-horizontal': main.menu === 'horizontal' }"&gt;
+            &lt;aside data-ng-include=" 'app/layout/sidebar.html' "
+                   id="nav-container"
+                   class="nav-container"  
+                   data-ng-class="{ 'nav-fixed': main.fixedSidebar,
+                                    'nav-horizontal': main.menu === 'horizontal',
+                                    'nav-vertical': main.menu === 'vertical',
+                                    'bg-white': ['31','32','33','34','35','36'].indexOf(main.skin) &gt;= 0,
+                                    'bg-dark': ['31','32','33','34','35','36'].indexOf(main.skin) &lt; 0
+                   }"&gt;
+            &lt;/aside&gt;
+ 
+            &lt;div id="content" class="content-container"&gt;
+                &lt;section data-ui-view
+                         class="view-container {{main.pageTransition.class}}"&gt;&lt;/section&gt;
+            &lt;/div&gt;
+ 
+        &lt;/div&gt;
+ 
+        &lt;aside data-ng-include=" 'app/layout/customizer.html' "&gt;&lt;/aside&gt;</pre><p class="lead">The Footer</p><pre class="prettyprint linenums">        &lt;!-- build:js scripts/vendor.js --&gt;
+        &lt;script src="bower_components/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="bower_components/angular/angular.min.js"&gt;&lt;/script&gt;
+        &lt;script src="bower_components/angular-animate/angular-animate.min.js"&gt;&lt;/script&gt;
+        &lt;script src="bower_components/angular-aria/angular-aria.min.js"&gt;&lt;/script&gt;
+        &lt;script src="bower_components/angular-messages/angular-messages.min.js"&gt;&lt;/script&gt;
+        &lt;script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"&gt;&lt;/script&gt;
+        &lt;script src="bower_components/oclazyload/dist/ocLazyLoad.js"&gt;&lt;/script&gt;
+        &lt;!-- endbuild --&gt;
+ 
+ 
+        &lt;!-- build:js scripts/ui.js --&gt;
+        &lt;script src="bower_components/angular-translate/angular-translate.min.js"&gt;&lt;/script&gt;
+        &lt;script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"&gt;&lt;/script&gt;
+ 
+        &lt;script src="bower_components/angular-material/angular-material.min.js"&gt;&lt;/script&gt;
+ 
+        &lt;script src="bower_components/angular-scroll/angular-scroll.min.js"&gt;&lt;/script&gt;
+        &lt;script src="bower_components/jquery.slimscroll/jquery.slimscroll.min.js"&gt;&lt;/script&gt;
+ 
+        &lt;script src="vendors/echarts.js"&gt;&lt;/script&gt;        
+        &lt;script src="vendors/ngecharts.js"&gt;&lt;/script&gt;
+    
+        &lt;script src="bower_components/angular-material-data-table/dist/md-data-table.min.js"&gt;&lt;/script&gt;
+        &lt;script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"&gt;&lt;/script&gt;
+        &lt;!-- endbuild --&gt;
+ 
+ 
+        &lt;!-- build:js scripts/app.js --&gt;
+        &lt;!-- inject:js --&gt;
+        &lt;script src="app/app.module.js"&gt;&lt;/script&gt;
+        &lt;script src="app/chart/chart.module.js"&gt;&lt;/script&gt;
+        &lt;script src="app/form/form.module.js"&gt;&lt;/script&gt;
+        &lt;script src="app/form/formValidation.module.js"&gt;&lt;/script&gt;
+        &lt;script src="app/layout/layout.module.js"&gt;&lt;/script&gt;
+        &lt;script src="app/core/core.module.js"&gt;&lt;/script&gt;
+        &lt;script src="app/table/table.module.js"&gt;&lt;/script&gt;
+        &lt;script src="app/ui/ui.module.js"&gt;&lt;/script&gt;
+        &lt;script src="app/page/page.module.js"&gt;&lt;/script&gt;
+        &lt;script src="app/chart/echarts.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/dashboard/dashboard.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/form/form.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/form/formValidation.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/form/wizard.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/layout/customizer.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/layout/layout.diretive.js"&gt;&lt;/script&gt;
+        &lt;script src="app/layout/loader.js"&gt;&lt;/script&gt;
+        &lt;script src="app/layout/sidebar.directive.js"&gt;&lt;/script&gt;
+        &lt;script src="app/core/app.config.js"&gt;&lt;/script&gt;
+        &lt;script src="app/core/app.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/core/config.lazyload.js"&gt;&lt;/script&gt;
+        &lt;script src="app/core/config.route.js"&gt;&lt;/script&gt;
+        &lt;script src="app/core/i18n.js"&gt;&lt;/script&gt;
+        &lt;script src="app/table/table.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/ui/material.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/ui/ui.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/ui/ui.directive.js"&gt;&lt;/script&gt;
+        &lt;script src="app/page/page.controller.js"&gt;&lt;/script&gt;
+        &lt;script src="app/page/page.directive.js"&gt;&lt;/script&gt;
+        &lt;!-- endinject --&gt;
+        &lt;!-- endbuild --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre></section></div></div></div><!-- Footer--><footer class="bs-footer"><div class="container text-center"><p>Copyright <span id="copyright"></span> <a href="http://iarouse.com/">iArouse.com</a></p></div></footer><!-- Scripts--><script src="assets/js/jquery.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/holder.js"></script><script src="assets/js/google-code-prettify/prettify.js"></script><script src="assets/js/jquery.smooth-scroll.js"></script><script src="assets/js/application.js"></script><script>$('.bs-sidenav a').smoothScroll({offset: -80});
+window.prettyPrint && prettyPrint();</script></body></html>

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Boo Admin - Widget Users</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+    <script src="assets/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body class="sidebar-left ">
+<div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="brand" href="javascript:void(0);"><img src="assets/img/demo/logo-brand.png"></a>
+                        <div class="search-global">
+                            <input id="globalSearch" class="search search-query input-medium" type="search">
+                            <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav user-menu visible-desktop">
+                                <li><a class="btn-glyph fontello-icon-edit tip-bc" href="javascript:void(0);" title="Messages"><span class="badge badge-important">8</span></a></li>
+                                <li><a class="btn-glyph fontello-icon-mail-1 tip-bc" href="javascript:void(0);" title="Emails"></a></li>
+                                <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Support"><span class="badge badge-important">4</span></a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li> <a href="javascript:void(0);">Dashboard</a> </li>
+                                <li class="active"> <a href="javascript:void(0);">Components</a> </li>
+                                <li> <a href="component-fullcalendar-demo.html"><span class="fontello-icon-calendar"></span>Calendar</a> </li>
+                                <li> <a href="page-contact.html"><span class="fontello-icon-users"></span>Contacts</a> </li>
+                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="component-form-demo.html">Demo Form</a></li>
+                                        <li><a href="component-widgets-remember.html">Remember</a></li>
+                                        <li><a href="component-widgets-users.html">User List</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">Next Update</li>
+                                        <li><a href="javascript:void(0);">Contacts</a></li>
+                                        <li><a href="javascript:void(0);">Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer">
+                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                <!-- // Resposive navigation -->
+                <div class="breadcrumbs-nav hidden-phone">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                        <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Table</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">Boo Admin </li>
+                    </ul>
+                </div>
+                <!-- // breadcrumbs --> 
+            </div>
+            <!-- // drawer --> 
+        </div>
+    </div>
+    <!-- // header-container -->
+    
+    <div id="main-container">
+        <div id="main-sidebar" class="sidebar sidebar-inverse">
+            <div class="sidebar-item">
+                <div class="media profile">
+                    <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
+                        <p class="data">Last Access: 16 May 15:30</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // sidebar item - profile -->
+            
+            <ul id="mainSideMenu" class="nav nav-list nav-side">
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor"></span> <i class="chevron fontello-icon-right-open-3"></i> Dashboards </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accDash">
+                        <li> <a href="dashboard-one.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 1 </a> </li>
+                        <li> <a href="dashboard-two.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 2 </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Dashboard -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon aweso-icon-list-alt"></span><i class="chevron fontello-icon-right-open-3"></i> Form </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accForms">
+                        <li> <a href="component-form-demo.html"> <i class="fontello-icon-right-dir"></i> Demo Form </a> </li>
+                        <li> <a href="component-form-elements.html"> <i class="fontello-icon-right-dir"></i> Form Element </a> </li>
+                        <li> <a href="component-form-extension.html"> <i class="fontello-icon-right-dir"></i> Form Extension</a> </li>
+                        <li> <a href="component-form-wizard.html"> <i class="fontello-icon-right-dir"></i> Form Wizard</a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Forms -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accComponents" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Components </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accComponents">
+                        <li> <a href="elements-notification.html"> <i class="fontello-icon-right-dir"></i> Notification </a> </li>
+                        <li> <a href="component-rangeslider.html"> <i class="fontello-icon-right-dir"></i> Rangeslider </a> </li>
+                        <li> <a href="component-file-upload.html"> <i class="fontello-icon-right-dir"></i> File upload </a> </li>
+                        <li> <a href="component-gallery.html"> <i class="fontello-icon-right-dir"></i> Gallery &amp; Image </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Components -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Tables </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accTables">
+                        <li> <a href="component-table.html"> <i class="fontello-icon-right-dir"></i> Base Table </a> </li>
+                        <li> <a href="component-table-boo.html"> <i class="fontello-icon-right-dir"></i> Boo Table </a> </li>
+                        <li> <a href="component-table-datatable.html"> <i class="fontello-icon-right-dir"></i> DataTable </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Tables -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accStatistics" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-chart"></span> <i class="chevron fontello-icon-right-open-3"></i> Statistics </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accStatistics">
+                        <li> <a href="statistic-flot.html"> <i class="fontello-icon-right-dir"></i> Charts </a> </li>
+                        <li> <a href="statistic-sparkline.html"> <i class="fontello-icon-right-dir"></i> Sparklines </a> </li>
+                        <li> <a href="statistic-circle.html"> <i class="fontello-icon-right-dir"></i> Circle </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Statistics -->
+                <li class="accordion-group">
+                    <div class="accordion-heading active"> <a href="#accWidgets" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon  fontello-icon-window"></span> <i class="chevron fontello-icon-right-open-3"></i> Widgets </a> </div>
+                    <ul class="accordion-content nav nav-list collapse in" id="accWidgets">
+                        <li> <a href="component-widget-style.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Style </a> </li>
+                        <li class="active"> <a href="component-widget-custom.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Custom </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Widgets -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accButtons" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-puzzle"></span> <i class="chevron fontello-icon-right-open-3"></i> UI Elements </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accButtons">
+                        <li> <a href="elements-button.html"> <i class="fontello-icon-right-dir"></i> Button </a> </li>
+                        <li> <a href="elements-icon-font.html"> <i class="fontello-icon-right-dir"></i> Iconic fonts </a> </li>
+                        <li> <a href="elements-icon-fugue-demo.html"> <i class="fontello-icon-right-dir"></i> Icon </a> </li>
+                        <li> <a href="elements-wells.html"> <i class="fontello-icon-right-dir"></i> Wells </a> </li>
+                        <li> <a href="elements-tabs.html"> <i class="fontello-icon-right-dir"></i> Tabs </a> </li>
+                        <li> <a href="elements-modals.html"> <i class="fontello-icon-right-dir"></i> Modal </a> </li>
+                        <li> <a href="elements-progressbar.html"> <i class="fontello-icon-right-dir"></i> Progressbar </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu UI Elements -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accCalendar" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Calendar </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accCalendar">
+                        <li> <a href="component-fullcalendar-demo.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Demo </a> </li>
+                        <li> <a href="component-fullcalendar.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Style </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Calendar -->
+            </ul>
+            <!-- // sidebar menu -->
+            
+            <div class="sidebar-item"></div>
+            <!-- // sidebar item --> 
+            
+        </div>
+        <!-- // sidebar -->
+        
+        <div id="main-content" class="main-content container-fluid">
+            <div class="row-fluid page-head">
+                <h2 class="page-title"><i class="fontello-icon-window"></i> Widget <small>style & construction</small></h2>
+                <!--<p class="pagedesc">jQuery DataTable + Bootstrap + Boo = a powerful combination to display your data </p> -->
+                <div class="page-bar">
+                    <div class="btn-toolbar"> </div>
+                </div>
+            </div>
+            <!-- // page head -->
+            
+            <div id="page-content" class="page-content">
+                <nav>
+                    <ul class="btn-toolbar page-nav margin-btn">
+                        <li><a class="btn btn-well btn-glyph" href="component-widgets-remember.html" style="width:80px"><i class="fontello-icon-check f30"></i><span class="block">REMEMBER</span></a></li>
+                        <li><a class="btn btn-well btn-glyph" href="component-widgets-users.html" style="width:80px"><i class="fontello-icon-user f30"></i><span class="block">USER</span></a></li>
+                        <li><a class="btn btn-well btn-glyph" href="component-widgets-post.html" style="width:80px"><i class="fontello-icon-feather f30"></i><span class="block">POST</span></a></li>
+                        <li><a class="btn btn-well btn-glyph" href="#updateModal" style="width:80px" data-toggle="modal"><i class="fontello-icon-vcard f30"></i><span class="block">CONTACTS</span></a></li>
+                        <li><a class="btn btn-well btn-glyph" href="#updateModal" style="width:80px" data-toggle="modal"><i class="fontello-icon-edit f30"></i><span class="block">ARTICLE</span></a></li>
+                        <li><a class="btn btn-well btn-glyph" href="#updateModal" style="width:80px" data-toggle="modal"><i class="fontello-icon-comment-4 f30"></i><span class="block">COMMENTS</span></a></li>
+                        <li><a class="btn btn-well btn-glyph" href="#updateModal" style="width:80px" data-toggle="modal"><i class="fontello-icon-back-in-time f30"></i><span class="block">ACTIVITY</span></a></li>
+                        <li><a class="btn btn-well btn-glyph" href="#updateModal" style="width:80px" data-toggle="modal"><i class="fontello-icon-arrows-cw f30"></i><span class="block">LAST UPDATE</span></a></li>
+                    </ul>
+                    <hr class="margin-0x">
+                </nav>
+                <section>
+                    <div class="page-header">
+                        <h3>User list ... <small>.widget-user</small></h3>
+                    </div>
+                    <p><a id="btnChangeWrapper1" class="btn _btn-large btn-green" href="javascript:void(0);"> <i class="fontello-icon-arrows-cw"></i> Change widget style</a></p>
+                    <div class="row-fluid">
+                        <div class="span4 grider">
+                            <p>As sortable and filterable list</p>
+                            <div id="userLastLogged" class="widget widget-simple widget-user">
+                                <div class="widget-header no-border">
+                                    <h4><i class="fontello-icon-user-pair"></i> Last logged user</h4>
+                                </div>
+                                <div class="widget-bar form-dark">
+                                    <input id="userLastLoggedSearch" type="text" placeholder="Search user" class="input-block-level margin-05 search">
+                                    <ul class="nav nav-pills pull-left">
+                                        <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sort by <b class="caret"></b></a>
+                                            <ul class="dropdown-menu sort-by">
+                                                <li><a class="sort" data-sort="f_name" href="javascript:void(0)">by name</a></li>
+                                                <li><a class="sort" data-sort="f_status" href="javascript:void(0)">by status</a></li>
+                                                <li><a class="sort" data-sort="f_email" href="javascript:void(0)">by email</a></li>
+                                                <li><a class="sort" data-sort="f_access" href="javascript:void(0)">by access</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle">Show <b class="caret"></b></a>
+                                            <ul class="dropdown-menu filter">
+                                                <li><a id="filter-online" href="javascript:void(0)">Online</a></li>
+                                                <li><a id="filter-offline" href="javascript:void(0)">Offline</a></li>
+                                                <li class="divider"></li>
+                                                <li><a id="filter-all" href="javascript:void(0)">All</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <a id="refreshList" class="btn btn-small btn-boo pull-right" href="javascript:void(0);">Reset <i class="fontello-icon-cw-1"></i></a> </div>
+                                <!-- // widget bar -->
+                                
+                                <div class="widget-content">
+                                    <div class="widget-body">
+                                        <ul id="userLastLoggedList" class="widget-list list-bordered thumb-large list">
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-important">offline</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Paula Gates</a> <small><a class="f_email" href="javascript:void(0);">gatesa@example.com </a> </small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">08:21</strong></li>
+                                                        <li>IP address: <strong class="f_ip">158.45.46.27</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-success">online</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Joaquin Lippincott</a> <small><a class="f_email" href="">aquin@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">08:45</strong></li>
+                                                        <li>IP address: <strong class="f_ip">146.145.146.011</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-important">offline</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Dylan Tack</a> <small><a class="f_email" href="">d.tack@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">08:52</strong></li>
+                                                        <li>IP address: <strong class="f_ip">111.105.156.103</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-success">online</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Scott Vandenhey</a> <small><a class="f_email" href="">vandy@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">09:15</strong></li>
+                                                        <li>IP address: <strong class="f_ip">123.45.78.47</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-important">offline</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Barrett Olafson</a> <small><a class="f_email" href="">olagson@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">09:22</strong></li>
+                                                        <li>IP address: <strong class="f_ip">147.200.69.00</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-important">offline</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Chuck Vose</a> <small><a class="f_email" href="">vose@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">09:35</strong></li>
+                                                        <li>IP address: <strong class="f_ip">154.147.46.78</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-success">online</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Mariya Borisova</a> <small><a class="f_email" href="">mbo@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">09:37</strong></li>
+                                                        <li>IP address: <strong class="f_ip">75.45.45.75</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-important">offline</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Gizzelle Williams</a> <small><a class="f_email" href="">gizzelle@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">10:16</strong></li>
+                                                        <li>IP address: <strong class="f_ip">146.174.200.124</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-success">online</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Julie Baumler</a> <small><a class="f_email" href="">julie.baumler@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">10:22</strong></li>
+                                                        <li>IP address: <strong class="f_ip">102.105.104.55</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-success">online</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Anna Gates</a> <small><a class="f_email" href="">a.gates@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">10:59</strong></li>
+                                                        <li>IP address: <strong class="f_ip">125.205.204.27</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-important">offline</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Brent Dillender</a> <small><a class="f_email" href="">bredi@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">12:45</strong></li>
+                                                        <li>IP address: <strong class="f_ip">158.126.145.27</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-important">offline</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Petr Pederson</a> <small><a class="f_email" href="">pepe@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">12:46</strong></li>
+                                                        <li>IP address: <strong class="f_ip">111.125.146.27</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-success">online</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Nicolas Johanson</a> <small><a class="f_email" href="">nikolas.johanson@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">13:15</strong></li>
+                                                        <li>IP address: <strong class="f_ip">134.11.22.33</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-right">
+                                                    <div class="f_status label label-important">offline</div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><i class="fontello-icon-user-4"></i> <a class="f_name" href="javascript:void(0);">Katarina Sarmirianos</a> <small><a class="f_email" href="">sarmir@example.com</a></small></h4>
+                                                    <ul class="meta" >
+                                                        <li>Last Access: <i class="fontello-icon-back-in-time"></i> <strong class="f_access">14:23</strong></li>
+                                                        <li>IP address: <strong class="f_ip">158.45.46.27</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- // widget content -->
+                                
+                                <div class="widget-footer">
+                                    <div class="pagination pagination-btn pagination-small pull-left">
+                                        <ul class="paging">
+                                        </ul>
+                                    </div>
+                                    <!-- // pagination --> 
+                                    <a class="btn btn-small btn-green pull-right" href="#">View All &raquo;</a> </div>
+                            </div>
+                            <!-- // Widget --> 
+                            
+                        </div>
+                        <!-- // Column -->
+                        
+                        <div class="span8 grider">
+                            <p>As table</p>
+                            <div class="widget widget-box widget-table widget-list">
+                                <div class="widget-header">
+                                    <h4><i class="fontello-icon-user-pair"></i> Last logged user</h4>
+                                </div>
+                                <table id="lastLogedTable" class="table table-striped table-hover thumb-small bg-blue-light">
+                                    <thead>
+                                        <tr class="condensed">
+                                            <th scope="col"><span class="column-sorter"></span></th>
+                                            <th scope="col">User <span class="column-sorter"></span></th>
+                                            <th scope="col">Username <span class="column-sorter"></span></th>
+                                            <th scope="col">Active <span class="column-sorter"></span></th>
+                                            <th scope="col">Roles <span class="column-sorter"></span></th>
+                                            <th scope="col">Status <span class="column-sorter"></span></th>
+                                            <th scope="col">Last Access <span class="column-sorter"></span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="media-thumb">
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9601.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Colin Nixon</h6>
+                                                </a>
+                                                <div>semper@example.edu</div></td>
+                                            <td>[ <strong>Colix</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>administrator</td>
+                                            <td><span class="label label-success">online</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>2 min 21 sec</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">133.64.146.145</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9602.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Naida Bennett</h6>
+                                                </a>
+                                                <div>commodo@example.ca</div></td>
+                                            <td>[ <strong>Nadiana</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label label-success">online</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>5 min 45 sec</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">146.132.46.47</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9603.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Danielle Myers</h6>
+                                                </a>
+                                                <div>nunc.sed@example.ca</div></td>
+                                            <td>[ <strong>Myellersi</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>18 min 39 sec</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">44.44.55.011</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9607.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Whitney Jones</h6>
+                                                </a>
+                                                <div>nunc@example.edu</div></td>
+                                            <td>[ <strong>whitney</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>46 min 24 sec</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">188.88.88.88</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9605.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Marvin Bell</h6>
+                                                </a>
+                                                <div>aliquet@example.com</div></td>
+                                            <td>[ <strong>marvin-marvin</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>1 hour 52 min</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">97.145.98.146</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9606.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Lucas Melendez</h6>
+                                                </a>
+                                                <div>m.malesuada@example.org</div></td>
+                                            <td>[ <strong>Melendez</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label label-success">online</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>4 hour 21 min</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">111.112.112.011</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9604.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Devin Harris</h6>
+                                                </a>
+                                                <div>dolor.sit@example.org</div></td>
+                                            <td>[ <strong>dolor</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>administrator</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>1 days 20 hours</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">120.142.134.112</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9606.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Tucker Graves</h6>
+                                                </a>
+                                                <div>libero.nec.ligula@example.ca</div></td>
+                                            <td>[ <strong>Tucker</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>2 days 15 hours</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">123.123.123.111</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9605.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Linus Carpenter</h6>
+                                                </a>
+                                                <div>pellent@example.com</div></td>
+                                            <td>[ <strong>LinusCarpen</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label label-success">online</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>3 days 13 hours</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">146.120.100.101</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9604.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Quinlan Lindsay</h6>
+                                                </a>
+                                                <div>rhoncus@example.com</div></td>
+                                            <td>[ <strong>Quinla</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>user</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>1 week 5 days</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">84.75.75.21</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9603.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Jolie Ryan</h6>
+                                                </a>
+                                                <div>Proin@example.edu</div></td>
+                                            <td>[ <strong>RyJo</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>user</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>1 week 6 days</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">125.75.90.90</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9602.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Roanna Adkins</h6>
+                                                </a>
+                                                <div>egestas@example.edu</div></td>
+                                            <td>[ <strong>Rokins</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label label-success">online</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>2 week 1 day</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">196.186.67.67</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9601.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Berk Clemons</h6>
+                                                </a>
+                                                <div>mus.Proin.vel@example.edu</div></td>
+                                            <td>[ <strong>Berklemons</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>user</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>2 week 1 day</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">75.145.75.011</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9602.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Tamara Stokes</h6>
+                                                </a>
+                                                <div>nec@example.com</div></td>
+                                            <td>[ <strong>marakes</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>2 week 5 days</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">125.164.75.16</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="img-shadow"><img class="media-object thumb" src="assets/img/demo/demo-avatar9603.jpg"></span></td>
+                                            <td><a href="javascript:void(0)">
+                                                <h6 class="media-heading">Shoshana Hodges</h6>
+                                                </a>
+                                                <div>nibh@example.org</div></td>
+                                            <td>[ <strong>shoshana</strong> ]</td>
+                                            <td><strong>Yes</strong></td>
+                                            <td>editor</td>
+                                            <td><span class="label">offline</span></td>
+                                            <td><ul class="data" >
+                                                    <li><em>2 week 6 days</em> ago</li>
+                                                    <li>IP address: <strong class="f_ip">156.144.60.62</strong></li>
+                                                </ul></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // Widget --> 
+                            
+                        </div>
+                        <!-- // Column --> 
+                        
+                    </div>
+                    <!-- // Example row -->
+                    
+                    <div class="page-header margin-top30">
+                        <h4>examples of use </h4>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4 grider">
+                            <div class="widget widget-simple widget-user">
+                                <div class="widget-header no-border">
+                                    <h4><i class="fontello-icon-user"></i> Latest users</h4>
+                                </div>
+                                <div class="widget-title">
+                                    <h6>last 5 of logged users</h6>
+                                </div>
+                                <div class="widget-content">
+                                    <div class="widget-body">
+                                        <ul class="widget-list thumb-large">
+                                            <li class="media">
+                                                <div class="media-thumb media-left"> <a class="img-shadow" href="javascript:void(0);"><img class="media-object thumb" src="assets/img/demo/demo-avatar9605.jpg"></a> </div>
+                                                <div class="media-body">
+                                                    <div class="quick-menu btn-group menu-right"> <a class="btn btn-mini fontello-icon-edit" href="javascript:void(0);">10</a> <a class="btn btn-mini fontello-icon-comment-3" href="javascript:void(0);">94</a> </div>
+                                                    <h4 class="media-heading"><a href="javascript:void(0);">Paula Gates</a> <small><a href="">gatesa@example.com</a></small></h4>
+                                                    <p class="meta">Last Access: <strong>2 min 21 sec ago</strong></p>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-left"> <a class="img-shadow" href="javascript:void(0);"><img class="media-object thumb" src="assets/img/demo/demo-avatar9603.jpg"></a> </div>
+                                                <div class="media-body">
+                                                    <div class="quick-menu btn-group menu-right"> <a class="btn btn-mini fontello-icon-edit" href="javascript:void(0);">10</a> <a class="btn btn-mini fontello-icon-comment-3" href="javascript:void(0);">94</a> </div>
+                                                    <h4 class="media-heading"><a href="javascript:void(0);">Paula Gates</a> <small><a href="">gatesa@example.com</a></small></h4>
+                                                    <p class="meta">Last Access: <strong>2 min 21 sec ago</strong></p>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-left"> <a class="img-shadow" href="javascript:void(0);"><img class="media-object thumb" src="assets/img/demo/demo-avatar9601.jpg"></a> </div>
+                                                <div class="media-body">
+                                                    <div class="quick-menu btn-group menu-right"> <a class="btn btn-mini fontello-icon-edit" href="javascript:void(0);">10</a> <a class="btn btn-mini fontello-icon-comment-3" href="javascript:void(0);">94</a> </div>
+                                                    <h4 class="media-heading"><a href="javascript:void(0);">Paula Gates</a> <small><a href="">gatesa@example.com</a></small></h4>
+                                                    <p class="meta">Last Access: <strong>2 min 21 sec ago</strong></p>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="widget-footer">
+                                    <div class="btn-toolbar pull-right"> <a class="btn btn-green" href="#">View All &raquo;</a> </div>
+                                </div>
+                            </div>
+                            <!-- // Widget --> 
+                        </div>
+                        <!-- // Column -->
+                        
+                        <div class="span4 grider">
+                            <div class="widget widget-simple widget-user">
+                                <div class="widget-header no-border">
+                                    <h4><i class="fontello-icon-net"></i> Social</h4>
+                                </div>
+                                <div class="widget-title">
+                                    <h6>user social page</h6>
+                                </div>
+                                <div class="widget-bar">
+                                    <div class="btn-toolbar clearfix">
+                                        <form class="text-right">
+                                            <div class="input-append no-margin">
+                                                <input type="text" class="span11">
+                                                <button type="submit" class="btn btn-glyph fontello-icon-search-5"></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="widget-content">
+                                    <div class="widget-body">
+                                        <ul class="widget-list list-dotted thumb-small">
+                                            <li class="media">
+                                                <div class="media-thumb media-left"> <a class="img-shadow" href="javascript:void(0);"><img class="media-object thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                                                <div class="media-body">
+                                                    <div class="quick-menu-icon menu-right"> <a class="btn-link fontello-icon-facebook-rect-2" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-twitter-bird-1" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-googleplus-rect-1" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-linkedin-rect-1" href="javascript:void(0);"></a> </div>
+                                                    <h4 class="media-heading">Paula Gates <small class="block"><a href="">gatesa@example.com</a></small></h4>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-left"> <a class="img-shadow" href="javascript:void(0);"><img class="media-object thumb" src="assets/img/demo/demo-avatar9605.jpg"></a> </div>
+                                                <div class="media-body">
+                                                    <div class="quick-menu-icon menu-right"> <a class="btn-link fontello-icon-facebook-rect-2" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-twitter-bird-1" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-googleplus-rect-1" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-linkedin-rect-1" href="javascript:void(0);"></a> </div>
+                                                    <h4 class="media-heading">Paula Gates <small class="block"><a href="">gatesa@example.com</a></small></h4>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-left"> <a class="img-shadow" href="javascript:void(0);"><img class="media-object thumb" src="assets/img/demo/demo-avatar9607.jpg"></a> </div>
+                                                <div class="media-body">
+                                                    <div class="quick-menu-icon menu-right"> <a class="btn-link fontello-icon-facebook-rect-2" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-twitter-bird-1" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-googleplus-rect-1" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-linkedin-rect-1" href="javascript:void(0);"></a> </div>
+                                                    <h4 class="media-heading">Paula Gates <small class="block"><a href="">gatesa@example.com</a></small></h4>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                            <li class="media">
+                                                <div class="media-thumb media-left"> <a class="img-shadow" href="javascript:void(0);"><img class="media-object thumb" src="assets/img/demo/demo-avatar9601.jpg"></a> </div>
+                                                <div class="media-body">
+                                                    <div class="quick-menu-icon menu-right"> <a class="btn-link fontello-icon-facebook-rect-2" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-twitter-bird-1" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-googleplus-rect-1" href="javascript:void(0);"></a> <a class="btn-link fontello-icon-linkedin-rect-1" href="javascript:void(0);"></a> </div>
+                                                    <h4 class="media-heading">Paula Gates <small class="block"><a href="">gatesa@example.com</a></small></h4>
+                                                </div>
+                                            </li>
+                                            <!-- // item -->
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Widget --> 
+                        </div>
+                        <!-- // Column -->
+                        
+                        <div class="span4 grider">
+                            <div id="user-list" class="widget widget-simple widget-user">
+                                <div class="widget-header">
+                                    <h4><i class="fontello-icon-user"></i> Addresse</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <div class="widget-body">
+                                        <ul class="widget-list thumb-xxlarge media-overflow">
+                                            <li class="media">
+                                                <div class="media-thumb media-left"> <a class="img-shadow" href="javascript:void(0);"><img class="media-object thumb" src="assets/img/demo/demo-avatar9603.jpg"></a> </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><a href="javascript:void(0);">Karla Maierweisner</a> <span class="label label-success pull-right">Active</span></h4>
+                                                    <div class="quick-menu menu-right">
+                                                        <div class="btn-group">
+                                                            <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle"><i class="fontello-icon-cog-4"></i> &nbsp;<span class="caret"></span></button>
+                                                            <ul class="dropdown-menu pull-right">
+                                                                <li><a href="#"><i class="icon-pencil"></i><span class="divider-text"></span> Edit</a></li>
+                                                                <li><a href="#"><i class="icon-remove"></i><span class="divider-text"></span> Reject</a></li>
+                                                                <li><a href="#"><i class="icon-ok"></i><span class="divider-text"></span> Approve</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="#"><i class="icon-trash"></i><span class="divider-text"></span> Delete</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="data">
+                                                        <li>
+                                                            <div class="em black margin-bottom5">manager to manager</div>
+                                                        </li>
+                                                        <li>San Francisco, CA 94107</li>
+                                                        <li><abbr title="Phone"><i class="fontello-icon-phone opaci75"></i> : </abbr> <strong>(123) 456-7890</strong></li>
+                                                        <li><abbr title="Phone"><i class="fontello-icon-mail-4 opaci75"></i> : </abbr> <a href="javascript:void(0);">first.last@example.com</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="media">
+                                                <div class="media-thumb media-left"> <a class="img-shadow" href="javascript:void(0);"><img class="media-object thumb" src="assets/img/demo/demo-avatar9605.jpg"></a> </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><a href="javascript:void(0);">Karla Maierweisner</a> <span class="label label-success pull-right">Active</span></h4>
+                                                    <div class="quick-menu">
+                                                        <div class="btn-group menu-right">
+                                                            <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle"><i class="fontello-icon-cog-4"></i> &nbsp;<span class="caret"></span></button>
+                                                            <ul class="dropdown-menu pull-right">
+                                                                <li><a href="#"><i class="icon-pencil"></i><span class="divider-text"></span> Edit</a></li>
+                                                                <li><a href="#"><i class="icon-remove"></i><span class="divider-text"></span> Reject</a></li>
+                                                                <li><a href="#"><i class="icon-ok"></i><span class="divider-text"></span> Approve</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="#"><i class="icon-trash"></i><span class="divider-text"></span> Delete</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="data">
+                                                        <li>
+                                                            <div class="em black margin-bottom5">manager to manager</div>
+                                                        </li>
+                                                        <li>San Francisco, CA 94107</li>
+                                                        <li><abbr title="Phone"><i class="fontello-icon-phone opaci75"></i> : </abbr> <strong>(123) 456-7890</strong></li>
+                                                        <li><abbr title="Phone"><i class="fontello-icon-mail-4 opaci75"></i> : </abbr> <a href="javascript:void(0);">first.last@example.com</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="widget-footer">
+                                        <div class="btn-toolbar pull-right"> <a class="btn btn-small btn-green" href="javascript:void(0);">View All &raquo;</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Widget --> 
+                        </div>
+                        <!-- // Column --> 
+                        
+                    </div>
+                    <!-- // Example row --> 
+                    
+                </section>
+            </div>
+            <!-- // page content --> 
+            
+        </div>
+        <!-- // main-content --> 
+        
+    </div>
+    <!-- // main-container  -->
+    
+    <footer id="footer-fix">
+        <div id="footer-sidebar" class="footer-sidebar">
+            <div class="navbar">
+                <div class="btn-toolbar"> <a class="btn btn-glyph btn-link" href="javascript:void(0);"><i class="fontello-icon-up-open-1"></i></a> </div>
+            </div>
+        </div>
+        <!-- // footer sidebar -->
+        
+        <div id="footer-content" class="footer-content">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <ul class="nav pull-left">
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnToggleSidebar" class="btn-glyph fontello-icon-resize-full-2 tip hidden-phone" href="javascript:void(0);" title="show hide sidebar"></a></li>
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnChangeSidebar" class="btn-glyph fontello-icon-login tip hidden-phone" href="javascript:void(0);" title="change sidebar position"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnChangeSidebarColor" class="btn-glyph fontello-icon-palette tip" href="javascript:void(0);" title="change sidebar color"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cw" href="javascript:void(0);"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="fontello-icon-home-3" href="dashboard.html"></a></li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-help-2 tip" href="javascript:void(0);" title="help to page"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cog-4 tip" href="javascript:void(0);" title="settings app"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnLogout" class="btn-glyph fontello-icon-logout-1 tip" href="javascript:void(0);" title="logout"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnScrollup" class="scrollup btn-glyph fontello-icon-up-open-1" href="javascript:void(0);"><span class="hidden-phone">Scroll</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // footer content --> 
+        
+    </footer>
+    <!-- // footer-fix  --> 
+    
+</div>
+<!-- // page-container  -->
+
+<div class="modal-container"> <!-- You can put your modal definitions here but it is not required --> </div>
+<div id="updateModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 id="myModalLabel"><i class="fontello-icon-popup"></i> Next :-)</h4>
+    </div>
+    <div class="modal-body text-center">
+        <h3><i class="fontello-icon-user f30"></i> Sorry, this page comes up with next update <small>free after purchase</small></h3>
+        <p>thanks</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-red" data-dismiss="modal">Close</button>
+    </div>
+</div>
+<!-- // modal --> 
+
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/lib/jquery.js"></script> 
+<script src="assets/js/lib/jquery-ui.js"></script>
+<script src="assets/js/lib/jquery.cookie.js"></script> 
+<script src="assets/js/lib/jquery.date.js"></script> 
+<script src="assets/js/lib/jquery.mousewheel.js"></script> 
+<script src="assets/js/lib/jquery.load-image.min.js"></script>
+<script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+
+<!-- Plugins Bootstrap -->
+<script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+<script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script> 
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+<script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+<script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+<script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+<script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+<script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+<script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+ 
+
+<!-- Plugins Custom - Only example --> 
+<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>
+
+<!-- Plugins Custom - System --> 
+<script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+<script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+<!-- Plugins Custom - System info -->
+<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+<!-- Plugins Custom - Content -->
+<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+<!-- Plugins Custom - Component -->
+<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+<!-- Plugins Custom - Form -->
+<script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+<!-- Plugins Custom - Gallery --> 
+<script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+<script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+ 
+<!-- Plugins Tables --> 
+<script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+<!-- Plugins data visualization --> 
+<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+<script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/core.js"></script> 
+<script src="assets/js/application.js"></script> 
+
+<!-- Only This Demo Page --> 
+<script>
+  $(document).ready(function() {
+
+
+  });
+</script>
+</body>
+</html>

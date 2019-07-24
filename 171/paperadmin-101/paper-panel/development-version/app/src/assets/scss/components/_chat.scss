@@ -1,0 +1,111 @@
+
+/* Chat widget */
+
+.chat-widget {
+    padding: 0px 15px;
+    ul li {
+      margin: 20px 0px;
+    }
+    .chat-meta {
+      font-size: 12px;
+      color: #aaa;
+    }
+    .by-me .chat-content {
+      background: #fff;
+      margin-left: 50px;
+      position: relative;
+      line-height: 24px;
+      padding: 8px 10px;
+      border-radius: 5px;
+      background: $brand-bg;
+      &:after, &:before {
+        right: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        
+      }
+   
+      &:before {
+        border-color: rgba(238, 238, 238, 0);
+        border-right-color:#f5f8fa;
+        border-width: 7px;
+        top: 30%;
+        margin-top: -11px;
+      }
+    }
+    .by-other .chat-content {
+      background: #fff;
+      margin-right: 50px;
+      position: relative;
+      border: 1px solid #e7e7e7;
+      padding: 8px 10px;
+      border-radius: 5px;
+      line-height: 24px;
+      &:after, &:before {
+        left: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      &:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-left-color: #fff;
+        border-width: 6px;
+        top: 30%;
+        margin-top: -6px;
+      }
+      &:before {
+        border-color: rgba(204, 204, 204, 0);
+        border-left-color: #e4e4e4;
+        border-width: 7px;
+        top: 30%;
+        margin-top: -7px;
+      }
+    }
+  }
+
+
+  
+
+  .fc-event-container{
+    a{
+      padding: 4px;
+      color: white !important;
+      border: none;
+    }
+  }
+
+  .fc-toolbar{
+    background: $brand-bg;
+    padding: 3rem !important;
+    color: $default-text-color;
+  
+    &.fc-header-toolbar{
+      margin-bottom: 0;
+    }
+    h2{
+      font-size: 1.2rem;
+      color: $default-text-color;
+    }
+    .fc-button {
+
+      background: none;
+      box-shadow: none;
+      border: none;
+      border-radius:2px;
+      text-transform: uppercase;
+      color: $default-text-color;
+      text-shadow: none !important;
+  
+  }
+  } 
+  .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-content, .fc-unthemed .fc-popover, .fc-unthemed .fc-list-view, .fc-unthemed .fc-list-heading td{
+    border-color: $brand-border;
+  }

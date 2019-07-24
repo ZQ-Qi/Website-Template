@@ -1,0 +1,222 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-activity-dashboard
+2. Widgets container / .ks-activity-dashboard > .ks-widgets
+3. Activity sidebar / .ks-activity-dashboard > .ks-activity
+-------------------------------------------------------------------*/
+
+@import "../config/colors";
+
+.ks-activity-dashboard {
+  display: flex;
+
+  > .ks-widgets {
+    flex-grow: 1;
+    padding: 30px;
+  }
+
+  > .ks-activity {
+    width: 380px;
+    border-left: 1px solid $ks-default-border-color;
+    background: #fff;
+
+    .ks-activity-filter {
+      height: 49px;
+      border-bottom: 1px solid $ks-default-border-color;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+
+      > .dropdown {
+        width: 100%;
+
+        > .nav-link {
+          display: block;
+          font-size: 14px;
+          color: $ks-default-text-color;
+
+          > .ks-icon {
+            display: inline-block;
+            margin-right: 10px;
+            color: $ks-color-primary;
+          }
+        }
+      }
+    }
+
+    .ks-activity-items {
+      padding: 20px;
+
+      > .ks-header {
+        margin: 0;
+        line-height: 18px;
+        margin-bottom: 20px;
+        font-weight: normal;
+      }
+
+      > .ks-container {
+        display: block;
+
+        > .ks-item {
+          display: flex;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          > .ks-icon {
+            font-weight: normal;
+            margin-right: 15px;
+            color: $ks-color-primary;
+
+            > span {
+              font-size: 20px;
+              line-height: 20px;
+              position: relative;
+              font-weight: normal;
+              top: 4px;
+            }
+
+            &.ks-primary {
+              color: $ks-color-primary;
+            }
+
+            &.ks-success {
+              color: $ks-color-success;
+            }
+
+            &.ks-info {
+              color: $ks-color-info;
+            }
+
+            &.ks-warning {
+              color: $ks-color-warning;
+            }
+
+            &.ks-danger {
+              color: $ks-color-danger;
+            }
+          }
+
+          > .ks-wrapper {
+            > .ks-action {
+              > .ks-name {
+                font-size: 12px;
+                font-weight: 500;
+                color: $ks-default-text-color;
+              }
+
+              > .ks-description {
+                font-size: 12px;
+                color: $ks-default-text-color-light;
+              }
+
+              + .ks-target {
+                margin-top: 2px;
+                margin-bottom: 2px;
+              }
+            }
+
+            > .ks-datetime {
+              font-size: 10px;
+              line-height: 10px;
+              text-transform: uppercase;
+              color: $ks-default-text-color-light;
+              display: block;
+              margin-bottom: 10px;
+              margin-top: 2px;
+            }
+
+            > .ks-target {
+              margin-top: 7px;
+
+              &.ks-link {
+                display: block;
+                line-height: 13px;
+              }
+
+              &.ks-share-link {
+                display: block;
+                padding-left: 10px;
+                font-size: 12px;
+                line-height: 12px;
+                border-left: 4px solid $ks-default-border-color;
+
+                > .ks-name {
+                  display: block;
+                  color: $text-color;
+                  margin-bottom: 5px;
+                }
+              }
+
+              &.ks-comment {
+                padding-left: 10px;
+                border-left: 4px solid $ks-default-border-color;
+                display: block;
+                color: $text-color-light;
+              }
+
+              &.ks-image {
+                > img {
+                  width: 200px;
+                  height: 145px;
+                  border-radius: 2px;
+                }
+              }
+
+              &.ks-images {
+                display: flex;
+                flex-wrap: wrap;
+
+                > .ks-image {
+                  margin-top: 10px;
+                  margin-right: 10px;
+
+                  &:nth-child(1), &:nth-child(2) {
+                    margin-top: 0;
+                  }
+
+                  > img {
+                    width: 85px;
+                    height: 85px;
+                    border-radius: 2px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .btn {
+    &.ks-activity-block-toggle {
+      position: static;
+    }
+  }
+
+  .ks-activity-dashboard {
+    > .ks-widgets {
+      width: 100%;
+    }
+
+    > .ks-activity {
+      position: fixed;
+      top: 120px;
+      bottom: 0;
+      right: -361px;
+      z-index: 3;
+      height: 100%;
+
+      &.ks-open {
+        right: 0;
+        transition: right .2s ease;
+      }
+    }
+  }
+}

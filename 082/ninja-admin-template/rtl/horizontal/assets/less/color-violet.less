@@ -1,0 +1,388 @@
+/*
+Version 2.0[Table of contents]
+-------------------------------------------------------------------------
+1. Globally Applied Styles
+2. Header Top
+3. Navigation Desktop
+4. Navigation Mobile
+5. Footer
+6. Box Content
+7. Data Tables
+8. Inbox List
+9. Menu Mobile Button
+10. Notice
+11. Search Form
+12. Mail
+13. Login, Register, ... Form
+14. Pricing Plan
+15. Gallery
+-------------------------------------------------------------------------*/
+@import url(variables.less);
+@main : rgb(103,58,183);
+@main_hover: rgb(80,39,167);
+@main_hover_2: rgb(255,255,255);
+@mobile_bg: rgb(127,79,213);
+
+
+
+
+/*-----------------------------------------------------------------------
+1. Globally Applied Styles
+*/
+a{
+	color: @main;
+	&:hover,&:active,&:focus{
+		color: @main_hover;
+	}
+}
+.fa-hover{
+	&:hover{
+		background: @main;
+		color: @white;
+		.ico,.fa{
+			color: @white;
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+2. Header Top
+*/
+.header-top{
+	height: 55px;
+	background: @main;
+	color: @white;
+	.ico-item{
+		color: @white;
+		&:hover{
+			color: @white;
+		}
+	}
+	.searchform{
+		@media(max-width: 479px){
+			border-bottom-color: @main;
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+3. Navigation Desktop
+*/
+@media(min-width: 1025px){
+	.nav-horizontal{
+		background: @white;
+		.menu{
+			> li{
+				&:hover{
+					> a{
+						color: @main;
+					}
+				}
+				&.current{
+					> a{
+						color: @main;
+					}
+				}
+			}
+			.sub-menu{
+				background: @white;
+				&.single{
+					a{
+						color: @dark;
+						&:hover{
+							background: @main;
+							color: @white;
+						}
+					}
+				}
+				&.mega{
+					> li{
+						a{
+							color: @dark;
+							&:hover{
+								color: @main;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+4. Navigation Mobile
+*/
+@media(max-width: 1024px){
+	.nav-horizontal{
+		.menu{
+			> li{
+				> a{
+					&.active{
+						color: @white;
+						background: @main;
+					}
+				}
+				&.current{
+					> a{
+						color: @white;
+						background: @main;
+					}
+				}
+			}
+			.sub-menu,.child-list{
+				.title,a{
+					&.active{
+						color: @white;
+						background: @main;
+					}
+				}
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+5. Footer
+*/
+.footer{
+	color: rgba(0, 0, 0, 0.7);
+	a{ color: rgba(0, 0, 0, 0.7); 
+		@media (min-width: 1025px) { &:hover{ color: @main; } }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+6. Box Content
+*/
+.box-content{
+	.dropdown.js__drop_down{
+		.sub-menu{
+			background: @white;
+			a{
+				color: @dark;
+				@media (min-width: 1025px) { &:hover{ color: @main; }}
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+7. Data Tables
+*/
+.dataTables_wrapper{
+	.dataTable{
+		.group{
+			background-color: @main !important;
+			color: @white !important;
+		}
+	}
+}
+table.focus-on tbody tr.focused th, table.focus-on tbody tr.focused td{
+	background: @main!important;
+	color: @white!important;
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+8. Inbox List
+*/
+.inbox-list{
+	.name{
+		color: @main;
+		@media (min-width: 1025px) { &:hover{ color: @main_hover; } }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+9. Menu Mobile Button
+*/
+.menu-mobile-button{
+	color: @white;
+	background: @mobile_bg;
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+10. Notice
+*/
+/* Notice List */
+.notice-list{
+	.name{
+		color: #212121;
+		@media (min-width: 1025px) { &:hover{ color: @main; } }
+	}
+}
+
+/* Notice Popup */
+.notice-popup{
+	background: @white;
+	.notice-read-more{
+		color: #212121;
+		&:hover{
+			color: @main;
+		}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+11. Search Form
+*/
+.searchform{
+	.button-search{
+		@media (min-width: 1025px) { &:hover{ color: @main; } }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+12. Mail
+*/
+.box-body {
+	.nav{ 
+		li.active a{
+			background: @white;
+			color: @main;
+		}
+		a{
+			color: #212121;
+			&:hover{
+				background: @white;
+				color: @main;
+			}
+		}
+	}
+}
+.mailbox-messages{
+	.unread{
+		> td:first-of-type{ border-left-color: @main;}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+13. Login, Register, ... Form
+*/
+.frm-single{
+	.frm-input{
+		.frm-inp{
+			&:focus{
+				border-color: @main;
+			}
+		}
+	}
+	.frm-submit{
+		background: @main;
+		color: @white;
+		@media (min-width: 1025px) { &:hover{ background: @main_hover; } }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+14. Pricing Plan
+*/
+.pricing-table{
+	.thead{
+		background: @main;
+		color: #fff;
+		&.bg-main-2{background-color: @main}
+		&.bg-blue-1{background-color: #2444f9}
+		&.bg-blue-2{background-color: #1e3def}
+		&.bg-blue-3{background-color: @main}
+	}
+	.td{
+		.fa-check{
+			color: @main;
+		}
+	}
+	.col-featured{
+		.td{
+			.btn-order{ background: @main; }
+		}
+	}
+	@media(min-width: 1025px){
+		.td .btn-order:hover{background: @main}
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+15. Gallery
+*/
+.isotope-filter{
+	.filter-controls{
+		a{
+			color: @dark;
+			@media (min-width: 1025px) { &:hover{ color: @main; } }
+		}
+		.js__active{ color: @main; }
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------
+16. User Info
+*/
+.user-info{
+	a{
+		color: @main;
+		&:hover{
+			color: @main_hover;
+		}
+	}
+}
+/*---------------------------------------------------------------------*/

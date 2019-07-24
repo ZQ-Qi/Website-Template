@@ -1,0 +1,81 @@
+/* ==========================================================================
+   #TABS
+   ========================================================================== */
+
+/**
+ * A wrapper for tabs navigation and content.
+ */
+
+.c-tabs {
+	margin-bottom: 30px;
+	border-radius: $tabs-border-radius;
+	background-color: $tabs-background-color;
+	box-shadow: $tabs-box-shadow;
+}
+
+
+/**
+ * 1. Works as a wrapper for tabs navigation links.
+ */
+
+.c-tabs__list { /* [1] */
+	padding: $tabs-list-padding;
+	border: $tabs-list-border-width solid $tabs-list-border-color;
+	border-top-left-radius: $tabs-list-border-radius;
+	border-top-right-radius: $tabs-list-border-radius;
+	background-color: $tabs-list-background-color;
+
+	li {
+		display: inline-block;
+	}
+}
+
+
+.c-tabs__link {
+	display: inline-block;
+	margin: $tabs-item-margin;
+	padding: $tabs-link-padding;
+	color: $tabs-link-color;
+	font-size: $tabs-link-font-size;
+
+	&:hover {
+		color: $tabs-link-hover-color;
+		text-decoration: none;
+	}
+
+	&.is-active,
+	&.active {
+		border-bottom: $tabs-link-active-border-width solid $tabs-link-active-border-color;
+		color: $tabs-link-active-color;
+		font-weight: $font-weight-bold;
+	}
+}
+
+.c-tabs__link-icon {
+	margin-right: rem(5px);
+
+	.c-tabs__link.active & {
+		color: $brand-color;
+	}
+
+	@include respond-to($breakpoint-mobile) {
+		display: none;
+	}
+}
+
+.c-tabs__pane {
+	display: none;
+	margin: $tabs-pane-margin;
+	padding: $tabs-pane-padding;
+	border: $tabs-pane-border-width solid $tabs-pane-border-color;
+	border-top: 0;
+	border-bottom-left-radius: $tabs-pane-border-radius;
+	border-bottom-right-radius: $tabs-pane-border-radius;
+	background-color: $tabs-pane-background-color;
+	color: $tabs-pane-color;
+
+	&.is-active,
+	&.active {
+		display: block;
+	}
+}

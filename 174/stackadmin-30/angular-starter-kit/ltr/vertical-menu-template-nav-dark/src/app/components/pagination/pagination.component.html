@@ -1,0 +1,115 @@
+<!--Basic Pagination Starts-->
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-1">
+        <h3 class="content-header-title">Pagination</h3>
+    </div>
+    <div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-12">
+        <div class="breadcrumb-wrapper col-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a>Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a>Components</a>
+                </li>
+                <li class="breadcrumb-item active">Pagination
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+<section id="basic-pagination">
+    <div class="row" matchHeight="card">
+        <!--Basic Pagination Starts-->
+        <div class="col-xl-6 col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Basic Pagination</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-block">
+                        <h5 class="mb-2 mt-4 text-bold-400">Default pagination</h5>
+                        <ngb-pagination [collectionSize]="70" [(page)]="page"></ngb-pagination>
+                        <h5 class="mb-2 mt-4 text-bold-400">directionLinks = false</h5>
+                        <ngb-pagination [collectionSize]="70" [(page)]="page1" [directionLinks]="false"></ngb-pagination>
+                        <h5 class="mb-2 mt-4 text-bold-400">boundaryLinks = true</h5>
+                        <ngb-pagination [collectionSize]="70" [(page)]="page2" [boundaryLinks]="true"></ngb-pagination>
+                        <hr>
+                        <p>Current page: {{page2}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Basic Pagination Ends-->
+
+        <!--Advanced Pagination Starts-->
+        <div class="col-xl-6 col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Advanced Pagination</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-block">
+                        <h5 class="mb-2 mt-4 text-bold-400">maxSize = 5, rotate = false</h5>
+                        <ngb-pagination [collectionSize]="120" [(page)]="page3" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+                        <h5 class="mb-2 mt-4 text-bold-400">maxSize = 5, rotate = true</h5>
+                        <ngb-pagination [collectionSize]="120" [(page)]="page4" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+                        <h5 class="mb-2 mt-4 text-bold-400">maxSize = 5, rotate = true, ellipses = false</h5>
+                        <ngb-pagination [collectionSize]="120" [(page)]="page5" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+                        <hr>
+                        <p>Current page: {{page5}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Advanced Pagination Ends-->
+    </div>
+</section>
+<section id="pagination-option">
+    <div class="row" matchHeight="card">
+        <!--Pagination Sizes Starts-->
+        <div class="col-xl-6 col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Pagination Sizes</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-block">
+                        <h5 class="mb-2 mt-4 text-bold-400">Large Pagination</h5>
+                        <ngb-pagination [collectionSize]="30" [(page)]="currentPage" size="lg"></ngb-pagination>
+                        <h5 class="mb-2 mt-4 text-bold-400">Default Pagination</h5>
+                        <ngb-pagination [collectionSize]="30" [(page)]="currentPage1"></ngb-pagination>
+                        <h5 class="mb-2 mt-4 text-bold-400">Small Pagination</h5>
+                        <ngb-pagination [collectionSize]="30" [(page)]="currentPage2" size="sm"></ngb-pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Pagination Sizes Ends-->
+
+        <!--Pagination Options Starts-->
+        <div class="col-xl-6 col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Pagination Options</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-block">
+                        <h5 class="mb-2 mt-4 text-bold-400">Pagination control can be disabled</h5>
+                        <ngb-pagination [collectionSize]="70" [(page)]="page6" [disabled]='isDisabled'></ngb-pagination>
+                        <button class="btn btn-sm btn-outline-primary" (click)="toggleDisabled()">
+                            Toggle disabled
+                        </button>
+                        
+                        <h5 class="mb-2 mt-4 text-bold-400">This pagination uses custom default values</h5>
+                        <ngb-pagination [collectionSize]="70" [(page)]="page7"></ngb-pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Pagination Options Ends-->
+    </div>
+</section>
+</div>
+<!--Basic Pagination Ends-->

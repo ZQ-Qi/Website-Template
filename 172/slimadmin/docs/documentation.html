@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Slim Documentation v1.0</title>
+    <link href="documentation.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="left-panel">
+      <h4 class="logo">slim.</h4>
+      <h6 class="title-label">Introduction</h6>
+      <ul class="left-menu">
+        <li><a href="#gettingstarted">Getting Started</a></li>
+        <li><a href="#nodejs">NodeJS</a></li>
+        <li><a href="#bower">Bower</a></li>
+        <li><a href="#gulp">Gulp</a></li>
+        <li><a href="#sass">SASS</a></li>
+        <li><a href="#running">Running Slim</a></li>
+      </ul>
+
+      <h6 class="title-label mg-t-40">Stylesheet</h6>
+      <ul class="left-menu">
+        <li><a href="#bootstrap">Bootstrap</a></li>
+        <li><a href="#plugins">Lib</a></li>
+        <li><a href="#utilities">Util</a></li>
+      </ul>
+
+      <h6 class="title-label mg-t-40">HTML Structure</h6>
+      <ul class="left-menu">
+        <li><a href="#header">Header Panel</a></li>
+        <li><a href="#navbar">Top Navbar</a></li>
+        <li><a href="#mainpanel">Main Panel</a></li>
+        <li><a href="#components">Elements</a></li>
+      </ul>
+
+      <h6 class="title-label mg-t-40">More Features</h6>
+      <ul class="left-menu">
+        <li><a href="#rtl">Switch to RTL</a></li>
+        <li><a href="#stickyheader">Sticky Header</a></li>
+        <li><a href="#widepage">Wide Page</a></li>
+        <li><a href="#skinheader">Applying Skin Header</a></li>
+      </ul>
+
+      <h6 class="title-label mg-t-40">Other Information</h6>
+      <ul class="left-menu">
+        <li><a href="#knownissue">Known Issue</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#support">Customer Support</a></li>
+      </ul>
+
+      <br><br>
+    </div><!-- left-panel -->
+
+
+    <div class="main-wrapper">
+      <div class="main-panel">
+
+        <h1 id="gettingstarted" class="section-title">Slim Documentation v1.0</h1>
+        <p>Thank you so much for purchasing our theme. If you have any questions that are beyond the scope of this help file, please feel free to email us at <a href="mailto:themepixels@gmail.com">themepixels@gmail.com</a> or submit a comment to this template. Thanks so much!</p>
+
+        <h2 class="section-subtitle">Introduction</h2>
+
+        <p>Slim, a modern and clean Bootstrap 4 admin &amp; dashboard template using flat and minimal design. It is fully responsive built using SASS preprocessor, HTML5, CSS3 and jQuery plugins. It uses most of the helper/utilities classes which are reusable class that makes the page faster and increases the speed of page time load. It can be used for most type of dashboard and app templates like analytics, admin or messenger app for your desktpo or mobile applications. Amazing flexibility and reusability. See the demo.</p>
+
+        <h2 class="section-subtitle">Getting Started</h2>
+        <p>This part of the doc will help you to quick start your project and will give you a basic idea about how slim work. For you to get start open the "themes" folder in templates/ of your download package.</p>
+
+        <h2 class="section-subtitle">What's In The Box</h2>
+        <p>Once you have download the package you will see the following folder structure inside templates/ folder.</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="wd-20p">Folder</th>
+              <th class="wd-80p">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>app/</td>
+              <td>All html files that you found in demo. Default template are in folder <strong>template/</strong></td>
+            </tr>
+            <tr>
+              <td>scss/</td>
+              <td>The scss files used in this template when compiled it will goes to <strong>app/css</strong> folder</td>
+            </tr>
+            <tr>
+              <td>bower.json</td>
+              <td>A manifest file that define packages.</td>
+            </tr>
+            <tr>
+            <tr>
+              <td>gulpfile.js</td>
+              <td>A code used to configure or define tasks and load gulp plugins.</td>
+            </tr>
+            <tr>
+              <td>package.json</td>
+              <td>Gulp will use this file to install dependencies and plugins of gulp.</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <p>Note: If you are still unsure of what's the use of this files, you may want to proceed to the next topic:</p>
+        <ul>
+          <li><a href="#nodejs">NodeJS</a></li>
+          <li><a href="#bower">Bower</a></li>
+          <li><a href="#gulp">Gulp</a></li>
+        </ul>
+
+        <hr id="nodejs">
+
+        <h1 class="section-title">NodeJS</h1>
+        <p>Before installing bower and grunt first you must have NodeJs installed, NodeJS will have npm (node packaged modules). </p>
+
+        <p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
+
+        <small class="tx-muted">Online Reference: <a href="https://nodejs.org/en/" target="_blank">https://nodejs.org/en/</a></small>
+
+        <h2 class="section-subtitle">Installing in Mac</h2>
+        <p>Simply download the <a href="https://nodejs.org/en/#download">Macintosh Installer</a> direct from the nodejs.org web site.</p>
+        <p>If you want to download the package with bash:</p>
+        <div class="pre-wrapper"><pre>curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"</pre></div>
+
+        <p>Using Homebrew:</p>
+        <div class="pre-wrapper">
+          <pre>brew install node</pre>
+        </div>
+
+        <h2 class="section-subtitle">Installing in Windows</h2>
+        <p>Simply download the <a href="https://nodejs.org/en/#download">Windows Installer</a> direct from the nodejs.org web site.</p>
+
+        <hr id="bower">
+
+        <h1 class="section-title">Bower</h1>
+        <p>Before installing bower first you must have NodeJs installed, NodeJS will have npm (node packaged modules). Once you finished installing nodejs you can now install bower through npm command. </p>
+
+        <p>Keeping track of all these packages and making sure they are up to date (or set to the specific versions you need) is tricky. Bower to the rescue!</p>
+
+        <p>Bower can manage components that contain HTML, CSS, JavaScript, fonts or even image files. Bower doesn’t concatenate or minify code or do anything else - it just installs the right versions of the packages you need and their dependencies.</p>
+
+        <small class="tx-muted">Online Reference: <a href="https://bower.io/" target="_blank">https://bower.io/</a></small>
+
+        <h2 class="section-subtitle">Installing Bower</h2>
+        <p>Bower is a command line utility. Install it with npm.</p>
+        <div class="pre-wrapper">
+          <pre>$ npm install -g bower</pre>
+        </div><!-- pre-wrapper -->
+        <p>Verify that bower in successfully installed, and version of installed bower will appear.</p>
+        <div class="pre-wrapper">
+          <pre>$ bower --version</pre>
+        </div><!-- pre-wrapper -->
+        <br>
+
+        <hr id="gulp">
+
+        <h1 class="section-title">Gulp JS</h1>
+        <p>Before installing gulp first you must have NodeJs installed, NodeJS will have npm (node packaged modules). </p>
+
+        <p>Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.</p>
+
+        <small class="tx-muted">Online Reference: <a href="https://gruntjs.com/" target="_blank">https://gruntjs.com/</a></small>
+
+        <h2 class="section-subtitle">Installing the CLI</h2>
+        <p>If you have previously installed a version of gulp globally, please run npm rm --global gulp to make sure your old version doesn't collide with gulp-cli.</p>
+        <div class="pre-wrapper">
+          <pre>$ npm install -g gulp-cli</pre>
+        </div><!-- pre-wrapper -->
+
+        <p>Verify that gulp is successfully installed, and version of installed gulp will appear.</p>
+        <div class="pre-wrapper">
+          <pre>$ gulp --version</pre>
+        </div><!-- pre-wrapper -->
+        <br>
+
+        <hr id="sass">
+
+        <h1 class="section-title">SASS</h1>
+        <p>Before running grunt first you must check if you have sass installed in your machine. You can verify that sass is already installed by running the command.</p>
+        <div class="pre-wrapper">
+          <pre>$ sass --version</pre>
+        </div><!-- pre-wrapper -->
+        <p>If version appear, it means sass already installed in your machine and proceed to the next topic, otherwise follow the instructions below on installing sass.</p>
+
+        <h2 class="section-subtitle">Installing SASS</h2>
+
+        <h4>Windows</h4>
+        <p>Before you start using Sass you will need to install Ruby. The fastest way to get Ruby on your Windows computer is to use <a href="http://rubyinstaller.org/">Ruby Installer</a>. It's a single-click installer that will get everything set up for you super fast. </p>
+
+        <h4>Mac</h4>
+        <p>If you prefer the command line over an application then getting Sass set up is a fairly quick process. Sass has a Ruby dependency but if you're using a Mac, congratulations, Ruby comes pre-installed. </p>
+
+        <h4>Install SASS</h4>
+        <p>Ruby uses Gems to manage its various packages of code like Sass. In your open terminal or cmd window: </p>
+        <div class="pre-wrapper">
+          <pre>$ gem install sass</pre>
+        </div><!-- pre-wrapper -->
+        <p>You should now have Sass installed, but it never hurts to double-check.</p>
+        <div class="pre-wrapper">
+          <pre>$ sass --version</pre>
+        </div><!-- pre-wrapper -->
+
+        <br>
+
+        <small class="tx-muted">Online Reference: <a href="http://sass-lang.com/install" target="_blank">http://sass-lang.com/install</a></small>
+
+        <hr id="running">
+
+        <h1 class="section-title">Running Slim</h1>
+        <p>You're moments away to see the slim dashboard template up and running in your local machine. First, go to the root folder where the bower.json and package.json located. In your download package it should be in the template/ folder. Please run the following command below.</p>
+
+        <p>Note: Running slim to you local machine is not a requirements for you to see the template. You can directly browse to the template folder and choose any html file you want to open by opening it directly to the browser.</p>
+
+        <div class="pre-wrapper">
+          <pre>$ bower install</pre>
+        </div><!-- pre-wrapper -->
+
+        <p>This will download all dependencies defined in <strong>bower.json</strong> file. Once it finished running the command, it will generate a folder name <strong>bower_components/</strong> where you see downloaded files.Next, run another command below</p>
+
+        <div class="pre-wrapper">
+          <pre>$ npm install</pre>
+        </div><!-- pre-wrapper -->
+
+        <p>This will download all tools defined in <strong>package.json</strong> file. Once it finished running the command, it will generate a folder name <strong>node_modules/</strong> where you see downloaded tools.Next, run another command below.</p>
+
+        <div class="pre-wrapper">
+          <pre>$ gulp bower</pre>
+        </div><!-- pre-wrapper -->
+
+        <p>This will generate a <strong>app/lib/</strong> folder to extract all needed third party plugins and other resources like fonts to be use in the template.</p>
+
+        <h4>Running in Browser</h4>
+        <p>Now you're good to go in running the template and preview it in browser by running the command below.</p>
+
+        <div class="pre-wrapper">
+          <pre>$ gulp serve</pre>
+        </div><!-- pre-wrapper -->
+
+        <p>The template is now up and running in your browser. Feel free to visit each page and familiarize the flow of it.</p>
+
+        <hr>
+
+        <h1 class="section-title">Stylesheet</h1>
+        <p>We use SASS in creating styles in this template logically grouping into sections. Below are the structure of sass files and folders</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="wd-30p">Folder/File </th>
+              <th class="wd-70p">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>bootstrap/</td>
+              <td>Contains override styles from Bootstrap core framework for custom design and enhancement</td>
+            </tr>
+            <tr>
+              <td>layout/</td>
+              <td>a global style to a specific part of the template.</td>
+            </tr>
+            <tr>
+              <td>lib/</td>
+              <td>Contains a custom styles from plugins that override the current design for improvements</td>
+            </tr>
+            <tr>
+              <td>pages/</td>
+              <td>Contain a specific style only to that pages.</td>
+            </tr>
+            <tr>
+              <td>skins/</td>
+              <td>All the templates skins are here.</td>
+            </tr>
+            <tr>
+              <td>util/</td>
+              <td>Contain a helper and very reusable classes.</td>
+            </tr>
+            <tr>
+              <td>_variables.scss</td>
+              <td>an additional variables for the template.</td>
+            </tr>
+            <tr>
+              <td>slim.scss</td>
+              <td>Imports all scss file into one file for compiling into css</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <hr id="bootstrap">
+
+        <h1 class="section-title">Bootstrap</h1>
+        <p>All of the files organized into a name of element are override styles of Bootstrap core framework styles. It is overriden for performance and design quality improvement purposes.</p>
+        <p>To learn more about Bootstrap, visit their site at <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a></p>
+        <br>
+
+        <hr id="plugins">
+
+        <h1 class="section-title">Plugins</h1>
+        <p>All  files organized into a name of plugin are override styles from some of the plugins used in this template and can be found in <strong>lib/</strong> folder. It is also overriden for performance and design quality improvement purposes.</p>
+        <br>
+
+        <hr id="utilities">
+
+        <h1 class="section-title">Utilities</h1>
+        <p>Utilities classes are very reusable classes with a single purpose to reduce the frequency of highly repetitive declarations.</p>
+
+        <p><strong>Note:</strong> Below are some of the classes that we think are more reusable. If you did not find any classes on the list be sure to check the scss files under scss/utilities/ folder if there are any existing classes you need before you can create a new style.</p>
+
+        <h4>Background Color</h4>
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class</th>
+              <th class="wd-70p">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="tx-red">.bg-transparent</span>
+              </td>
+              <td>Sets a transparent background to an element with already have a background color.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bg-gray-[value]</span></td>
+              <td>900 | 800 | 700 | 600 | 500 | 400 | 300 | 200 | 100</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bg-[value]</span></td>
+              <td>primary | success | warning | danger | info | indigo | purple | teal | pink | orange</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bg-white-[value]</span></td>
+              <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bg-black-[value]</span></td>
+              <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bg-[value]</span></td>
+              <td>mantle | reef | transfile | neon | delicate | emerald | mojito | dance | teal-love | crystal-clear | grandeur | flickr | royal | firewatch</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <h4>Borders</h4>
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class</th>
+              <th class="wd-70p">Value / Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tx-red">.bd</span></td>
+              <td>Add border in all sides of an element with default color gray and default width of 1px.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-t</span></td>
+              <td>Add border to top side of element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-r</span></td>
+              <td>Add border to right side of element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-b</span></td>
+              <td>Add border to bottom side of element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-l</span></td>
+              <td>Add border to left side of element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-x</span></td>
+              <td>Add border to left and right side of element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-y</span></td>
+              <td>Add border to top and bottom side of element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd</span></td>
+              <td>Set 1px (default) border to element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-2</span></td>
+              <td>Set 2px border to element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-3</span></td>
+              <td>Set 3px border to element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-4</span></td>
+              <td>Set 4px border to element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-5</span></td>
+              <td>Set 5px border to element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-t-0</span></td>
+              <td>Remove top border of an element</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-r-0</span></td>
+              <td>Remove right border of an element</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-b-0</span></td>
+              <td>Remove bottom border of an element</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-l-0</span></td>
+              <td>Remove left border of an element</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-x-0</span></td>
+              <td>Remove left and right border of an element</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-y-0</span></td>
+              <td>Remove top and bottom border of an element</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-[t||r|bl|x|y]-0-force</span></td>
+              <td>Force remove border of any side of an element. </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-[value]</span></td>
+              <td>primary | success | warning | danger | info | indigo | purple | pink | teal | orange </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.bd-gray-[value]</span></td>
+              <td>100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.rounded</span></td>
+              <td>Set a border radius of 3px (default) to an element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.rounded-[value]</span></td>
+              <td>5 | 10 | 20 | 30 | 40 | 50 | circle</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.rounded-[value]</span></td>
+              <td>top | right | bottom | left</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <h4>Height</h4>
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class</th>
+              <th class="wd-70p">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tx-red">.ht-[value]</span></td>
+              <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.ht-[value]</span></td>
+              <td>15 | 20 | 25 | 30 | ... | 100 &nbsp; (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.ht-[value]</span></td>
+              <td>150 | 200 | 250 | 300 | ... | 850 &nbsp; (step of 50)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.ht-[value]p</span></td>
+              <td>10 | 20 | 30 | 40 | ... | 100 &nbsp; (step of 10)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.ht-[size]-[value]</span></td>
+              <td rowspan="2" class="bd-b-0-force">
+                <p class="mg-b-5">size: xs | sm | md | lg | xl</p>
+                <p class="mg-b-0">value: the height value (refer to code above)</p>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.ht-[size]-[value]p</span></td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.ht-100v</span></td>
+              <td>Set a height to an element based on viewport height.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.ht-auto</span></td>
+              <td>Set an auto height to an element.</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <h4>Width</h4>
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class</th>
+              <th class="wd-70p">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tx-red">.wd-[value]</span></td>
+              <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.wd-[value]</span></td>
+              <td>15 | 20 | 25 | 30 | ... | 100 &nbsp; (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.wd-[value]</span></td>
+              <td>150 | 200 | 250 | 300 | ... | 1000 &nbsp; (step of 50)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.wd-[value]p</span></td>
+              <td>10 | 20 | 30 | 40 | ... | 100 &nbsp; (step of 10)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.wd-[size]-[value]</span></td>
+              <td rowspan="2" class="bd-b-0-force">
+                <p class="mg-b-5">size: xs | sm | md | lg | xl</p>
+                <p class="mg-b-0">value: the width value (refer to code above)</p>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.wd-[size]-[value]p</span></td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.wd-100v</span></td>
+              <td>Set a width to an element based on viewport width.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.wd-auto</span></td>
+              <td>Set an auto width to an element.</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <h4>Margins</h4>
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class</th>
+              <th class="wd-70p">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="tx-red">.mg-t-[value]</span><br>
+                <span class="tx-red">.mg-r-[value]</span><br>
+                <span class="tx-red">.mg-b-[value]</span><br>
+                <span class="tx-red">.mg-l-[value]</span>
+              </td>
+              <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="tx-red">.mg-t-[value]</span><br>
+                <span class="tx-red">.mg-r-[value]</span><br>
+                <span class="tx-red">.mg-b-[value]</span><br>
+                <span class="tx-red">.mg-l-[value]</span>
+              </td>
+              <td>15 | 20 | 25 | 30 | ... | 120 &nbsp; (step of 5)</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="tx-red">.mg-[size]-t-[value]</span><br>
+                <span class="tx-red">.mg-[size]-r-[value]</span><br>
+                <span class="tx-red">.mg-[size]-b-[value]</span><br>
+                <span class="tx-red">.mg-[size]-l-[value]</span>
+              </td>
+              <td>
+                <p class="mg-b-5">size: xs | sm | md | lg | xl</p>
+                <p class="mg-b-0">value: the margin value (refer to code above)</p>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.mg-t-auto</span></td>
+              <td>Set a top margin to auto</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.mg-r-auto</span></td>
+              <td>Set a right margin to auto</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.mg-b-auto</span></td>
+              <td>Set a bottom margin to auto</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.mg-l-auto</span></td>
+              <td>Set a left margin to auto</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <h4>Padding</h4>
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class</th>
+              <th class="wd-70p">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="tx-red">.pd-t-[value]</span><br>
+                <span class="tx-red">.pd-r-[value]</span><br>
+                <span class="tx-red">.pd-b-[value]</span><br>
+                <span class="tx-red">.pd-l-[value]</span>
+              </td>
+              <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="tx-red">.pd-t-[value]</span><br>
+                <span class="tx-red">.pd-r-[value]</span><br>
+                <span class="tx-red">.pd-b-[value]</span><br>
+                <span class="tx-red">.pd-l-[value]</span>
+              </td>
+              <td>15 | 20 | 25 | 30 | ... | 120 &nbsp; (step of 5)</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="tx-red">.pd-t-[value]</span><br>
+                <span class="tx-red">.pd-r-[value]</span><br>
+                <span class="tx-red">.pd-b-[value]</span><br>
+                <span class="tx-red">.pd-l-[value]</span>
+              </td>
+              <td>110 | 120 | 130 | 140 | ... | 200 &nbsp; (step of 10)</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="tx-red">.pd-[size]-t-[value]</span><br>
+                <span class="tx-red">.pd-[size]-r-[value]</span><br>
+                <span class="tx-red">.pd-[size]-b-[value]</span><br>
+                <span class="tx-red">.pd-[size]-l-[value]</span>
+              </td>
+              <td>
+                <p class="mg-b-5">size: xs | sm | md | lg | xl</p>
+                <p class="mg-b-0">value: the padding value (refer to code above)</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <h4>Position</h4>
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class</th>
+              <th class="wd-70p">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tx-red">.pos-relative</span></td>
+              <td>Set a relative position to an element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.pos-absolute</span></td>
+              <td>Set an absolute position to an element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.pos-fixed</span></td>
+              <td>Set a fixed position to an element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.pos-static</span></td>
+              <td>Set a static position to an element.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.t-[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.r-[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.b-[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.l-[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.x-[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.y-[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.a-[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.t--[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.r--[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.b--[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.l--[value]</span></td>
+              <td>0 | 5 | 10 | 15 | ... | 100 (step of 5)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.z-index-[value]</span></td>
+              <td>10 | 50 | 100 | 150 | 200</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <h4>Typography</h4>
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class</th>
+              <th class="wd-70p">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tx-red">.tx-[size]</span></td>
+              <td>8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-[size]</span></td>
+              <td>18 | 20 | 22 | 24 | ... | 140 (step of 2) </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-[viewport]-[size]</span></td>
+              <td>
+                viewport: xs | sm | md | lg | xl<br>
+                size: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16
+              </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-[viewport]-[size]</span></td>
+              <td>
+                viewport: xs | sm | md | lg | xl<br>
+                size: 18 | 20 | 22 | 24 | ... | 140 (step of 2)
+              </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-[weight]</span></td>
+              <td>bold | semibold | medium | normal | light | thin | xthin</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-[viewport]-[weight]</span></td>
+              <td>
+                viewport: xs | sm | md | lg | xl <br>
+                weight: bold | semibold | medium | normal | light | thin | xthin
+              </td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-[family]</span></td>
+              <td>poppins | hind | firasans (default) | roboto | source</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-[color]</span></td>
+              <td>primary | success | warning | danger | info | indigo | purple | orange | teal | pink | black | white | inverse</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-gray-[num]</span></td>
+              <td>100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-white-[transparency]</span></td>
+              <td>2 | 3 | 4 | 5 | 6 | 7 | 8</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-spacing-[value]</span></td>
+              <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.tx-spacing--[value]</span></td>
+              <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 (negative spacing result)</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.lh-[value]</span></td>
+              <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.lh-[viewport]-[value]</span></td>
+              <td>
+                viewport: xs | sm | md | lg | xl <br>
+                value: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <p>If you have any questions that are beyond the scope of this class reference, please feel free to email us at <a href="mailto:themepixels@gmail.com">themepixels@gmail.com</a>. Thanks so much!</p>
+
+        <hr>
+
+        <h1 class="section-title">HTML Structure</h1>
+
+        <hr id="header">
+
+        <h2 class="section-subtitle">Header Panel</h2>
+        <pre class="pre-wrapper">&lt;div class=&quot;slim-header&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;slim-header-left&quot;&gt;
+      ...
+    &lt;/div&gt;&lt;!-- slim-header-left --&gt;
+    &lt;div class=&quot;slim-header-right&quot;&gt;
+      ...
+    &lt;/div&gt;&lt;!-- header-right --&gt;
+  &lt;/div&gt;&lt;!-- container --&gt;
+&lt;/div&gt;&lt;!-- slim-header --&gt;</pre>
+
+        <br>
+
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class Reference</th>
+              <th class="wd-70p">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tx-red">.slim-header-left</span></td>
+              <td>The wrapper class of all elements found in left side of the header.</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.slim-header-right</span></td>
+              <td>The wrapper class of all elements found in right side of the header.</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <hr id="navbar">
+
+        <h2 class="section-subtitle">Top Navbar</h2>
+        <p>Below is the html structure of the top navbar of slim admin template that includes menu and icon menu. Some of the class found in left sidebar are explained below.</p>
+
+        <pre class="pre-wrapper">&lt;div class=&quot;slim-navbar&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;ul class=&quot;nav&quot;&gt;
+      &lt;li class=&quot;nav-item with-sub&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;icon ion-ios-home-outline&quot;&gt;&lt;/i&gt;
+          &lt;span&gt;Dashboard&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;sub-item&quot;&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Dashboard 01&lt;/a&gt;&lt;/li&gt;
+            ...
+          &lt;/ul&gt;
+        &lt;/div&gt;&lt;!-- dropdown-menu --&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item with-sub mega-dropdown&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;icon ion-ios-filing-outline&quot;&gt;&lt;/i&gt;
+          &lt;span&gt;UI Elements&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;sub-item&quot;&gt;
+          &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-lg-5&quot;&gt;
+              &lt;label class=&quot;section-label&quot;&gt;Basic Elements&lt;/label&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;chart-morris.html&quot;&gt;Morris Charts&lt;/a&gt;&lt;/li&gt;
+                ...
+              &lt;/ul&gt;
+            &lt;/div&gt;&lt;!-- col --&gt;
+            ...
+          &lt;/div&gt;&lt;!-- row --&gt;
+        &lt;/div&gt;&lt;!-- dropdown-menu --&gt;
+      &lt;/li&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;&lt;!-- container --&gt;
+&lt;/div&gt;&lt;!-- slim-navbar --&gt;</pre>
+<br>
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class Reference</th>
+              <th class="wd-70p">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tx-red">.with-sub</span></td>
+              <td>The nav link that specify that it have a sub menu</td>
+            </tr>
+            <tr>
+              <td><span class="tx-red">.mega-dropdown</span></td>
+              <td>The wrapper element of a mega dropdown menu.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr id="mainpanel">
+
+        <h2 class="section-subtitle">Main Panel</h2>
+        <p>Below is the html structure of the main panel of slim admin template that wraps the contents of the page.</p>
+
+        <pre class="pre-wrapper">&lt;div class=&quot;slim-mainpanel&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;slim-pageheader&quot;&gt;
+      &lt;ol class=&quot;breadcrumb slim-breadcrumb&quot;&gt;
+        &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Blank&lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;h6 class=&quot;slim-pagetitle&quot;&gt;Blank&lt;/h6&gt;
+    &lt;/div&gt;&lt;!-- slim-pageheader --&gt;
+
+  &lt;/div&gt;&lt;!-- container --&gt;
+&lt;/div&gt;&lt;!-- slim-mainpanel --&gt;</pre><br>
+
+        <table class="table table-code">
+          <thead>
+            <tr>
+              <th class="wd-30p">Class Reference</th>
+              <th class="wd-70p">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tx-red">.slim-mainpanel</span></td>
+              <td>The main panel of the template.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr id="components">
+
+        <h2 class="section-subtitle">Elements</h2>
+        <p>The HTML Markup of alerts, buttons, etc. are explained in the bootstrap documentation or in thelive preview of this template. Feel free to use it in your page. Any components that are beyond of this template, may submit a request and suggestion to our email at <a href="mailto:themepixels@gmail.com">themepixels@gmail.com</a></p>
+
+        <hr>
+
+        <h1 class="section-title">More Features</h1>
+
+        <hr id="rtl">
+
+        <h2 class="section-subtitle">Switch to RTL</h2>
+        <p>You can easily switch pages into rtl direction by adding a single code in the html tag element like in the code given below:</p>
+
+        <pre class="pre-wrapper">&lt;html lang="en" dir="rtl"&gt;</pre><br>
+
+        <hr id="stickyheader">
+
+        <h2 class="section-subtitle">Make Header Sticky in Top</h2>
+        <p>You can easily make the header stick at the top by adding a single link class to the body of the page like in the code given below:</p>
+
+        <pre class="pre-wrapper">&lt;body class="slim-sticky-header"&gt;</pre><br>
+
+        <hr id="widepage">
+
+        <h2 class="section-subtitle">Make Page in Full Width</h2>
+        <p>You can easily make the page have a full width by replacing all the <strong>.container</strong> class name into <strong>.container-fluid</strong></p>
+
+        <pre class="pre-wrapper">&lt;div class="container-fluid"&gt;</pre><br>
+
+        <hr id="skinheader">
+
+        <h2 class="section-subtitle">Applying Skin Header</h2>
+        <p>You can apply additional skin to header or making the page dark by adding a link tag of header like in the code given below</p>
+
+        <pre class="pre-wrapper">&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/slim.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/slim.one.css&quot;&gt;</pre><br>
+
+        <hr id="knownissue">
+
+        <h1 class="section-title">Known Issue</h1>
+        <br>
+
+        <ul>
+          <li>
+            <p class="tx-medium tx-dark">Not displaying font icons in opening the html files directly in a browser.</p>
+            <p>A page loaded from a file:// URI, only files in (or below) the same directory of the filesystem are considered to be "same origin", and so putting the font in a different subtree (../font/) means it will be blocked by security policy restrictions. Most browser disables cross-domain fonts "by default. By fixing this, you need to put the file in a remote or local server. Anyway, that what where we're going.</p>
+          </li>
+        </ul>
+
+
+
+        <br>
+
+        <hr id="changelog">
+
+        <h1 class="section-title">Changelog</h1>
+
+        <h2>v1.0</h2>
+        <ul>
+          <li>Initial Release</li>
+        </ul>
+
+        <hr id="references">
+
+        <h1 class="section-title">References</h1>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="wd-30p">Plugins</th>
+              <th class="wd-70p">Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bootstrap</td>
+              <td><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></td>
+            </tr>
+            <!--
+            <tr>
+              <td></td>
+              <td><a href=""></a></td>
+            </tr>
+            -->
+            <tr>
+              <td>animate.css</td>
+              <td><a href="http://daneden.me/animate">http://daneden.me/animate</a></td>
+            </tr>
+            <tr>
+              <td>Chart JS</td>
+              <td><a href="http://www.chartjs.org/">http://www.chartjs.org/</a></td>
+            </tr>
+            <tr>
+              <td>DataTables</td>
+              <td><a href="https://datatables.net/">https://datatables.net/</a></td>
+            </tr>
+            <tr>
+              <td>Flot</td>
+              <td><a href="http://www.flotcharts.org/">http://www.flotcharts.org/</a></td>
+            </tr>
+            <tr>
+              <td>FontAwesome</td>
+              <td><a href="http://fontawesome.io/">http://fontawesome.io/</a></td>
+            </tr>
+            <tr>
+              <td>Ionicons</td>
+              <td><a href="http://ionicons.com/">http://ionicons.com/</a></td>
+            </tr>
+            <tr>
+              <td>Highlight JS</td>
+              <td><a href="https://highlightjs.org/">https://highlightjs.org/</a></td>
+            </tr>
+            <tr>
+              <td>Perfect Scrollbar</td>
+              <td><a href="http://utatti.github.io/perfect-scrollbar/">http://utatti.github.io/perfect-scrollbar/</a></td>
+            </tr>
+            <tr>
+              <td>Select2</td>
+              <td><a href="https://select2.org/">https://select2.org/</a></td>
+            </tr>
+            <tr>
+              <td>GMaps</td>
+              <td><a href="http://hpneo.github.io/gmaps/">http://hpneo.github.io/gmaps/</a></td>
+            </tr>
+            <tr>
+              <td>Morris JS</td>
+              <td><a href="http://morrisjs.github.io/morris.js/">http://morrisjs.github.io/morris.js/</a></td>
+            </tr>
+            <tr>
+              <td>Sparkline</td>
+              <td><a href="http://digitalbush.com/projects/masked-input-plugin/">http://digitalbush.com/projects/masked-input-plugin/</a></td>
+            </tr>
+            <tr>
+              <td>jQuery Steps</td>
+              <td><a href="http://www.jquery-steps.com/">http://www.jquery-steps.com/</a></td>
+            </tr>
+            <tr>
+              <td>jQVMap</td>
+              <td><a href="https://jqvmap.com/">https://jqvmap.com/</a></td>
+            </tr>
+            <tr>
+              <td>Medium Editor</td>
+              <td><a href="https://github.com/yabwe/medium-editor">https://github.com/yabwe/medium-editor</a></td>
+            </tr>
+            <tr>
+              <td>Parsley</td>
+              <td><a href="http://parsleyjs.org/">http://parsleyjs.org/</a></td>
+            </tr>
+            <tr>
+              <td>Rickshaw</td>
+              <td><a href="http://code.shutterstock.com/rickshaw/">http://code.shutterstock.com/rickshaw/</a></td>
+            </tr>
+            <tr>
+              <td>Spectrum</td>
+              <td><a href="https://bgrins.github.io/spectrum/">https://bgrins.github.io/spectrum/</a></td>
+            </tr>
+            <tr>
+              <td>SpinKit</td>
+              <td><a href="http://tobiasahlin.com/spinkit/">http://tobiasahlin.com/spinkit/</a></td>
+            </tr>
+            <tr>
+              <td>Summernote</td>
+              <td><a href="http://summernote.org">https://summernote.org/</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <br>
+
+        <hr id="support">
+
+        <h1 class="section-title">Customer Support</h1>
+
+        <p> You can request for support via email or themeforest item comments.</p>
+        <p>We will assist you any problem you encounter while buidling your dashboard via Slim template</p>
+        <p>Email: <a href="mailto:themepixels@gmail.com">themepixels@gmail.com</a> </p>
+        <p>We use request help form in comments and email to manage customer support. Soon, as we grow, we will invest and find the best customer support system we can use to serve you better. For the meantime, submit a help request to the link given for any issues and concerns that you have. Don't worry, we will respond to you as quickly as we can. Thank you.</p>
+
+        <br>
+        <hr>
+        <small>&copy; 2017. Slim Documentation v1.0. All Rights Reserved. Created by: ThemePixels</small>
+
+      </div><!-- main-panel -->
+    </div><!-- main-wrapper -->
+  </body>
+</htmL>

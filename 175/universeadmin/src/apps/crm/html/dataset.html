@@ -1,0 +1,612 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}CRM Dataset / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="app__page">
+  <div class="app__page-header"></div>
+  <div class="app__page-body dataset">
+    <div class="dataset__header">
+      <div class="dataset__header-side">
+        <div class="dataset__header-heading">Users</div>
+        <div class="dropdown dataset__header-filter">
+          <div class="dropdown-toggle dataset__header-filter-toggle" data-toggle="dropdown">Filter and Order</div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">ASC</a>
+            <a class="dropdown-item" href="#">DESC</a>
+          </div>
+        </div>
+      </div>
+      <div class="dataset__header-controls">
+        <div class="input-group input-group-icon icon-right dataset__header-search">
+          <input class="form-control dataset__header-search-input" type="text" placeholder="Search">
+          <span class="input-icon mdi mdi-magnify"></span>
+        </div>
+        <div class="dropdown dataset__header-view dataset__header-control">
+          <div class="mdi mdi-grid dropdown-toggle dropdown-toggle__icon dataset__header-controls-icon" data-toggle="dropdown"></div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">
+              <span class="mdi mdi-grid dropdown-item__icon"></span>Table View
+            </a>
+            <a class="dropdown-item" href="#">
+              <span class="mdi mdi-format-list-bulleted dropdown-item__icon"></span>List View
+            </a>
+            <a class="dropdown-item" href="#">
+              <span class="mdi mdi-grid-large dropdown-item__icon"></span>Grid View
+            </a>
+          </div>
+        </div>
+        <a href="#" class="mdi mdi-plus-circle dataset__header-control dataset__header-controls-icon"></a>
+      </div>
+    </div>
+    <div class="dataset__body dataset__body--panel">
+      <table class="table dataset__table table__actions">
+        <thead>
+        <tr>
+          <th class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="ch5">
+              <label class="custom-control-label" for="ch5"></label>
+            </div>
+          </th>
+          <th>Project</th>
+          <th>Deadline</th>
+          <th>Leader+Team</th>
+          <th>Budjet</th>
+          <th>Status</th>
+          <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="is-selected">
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" checked id="ch6">
+              <label class="custom-control-label" for="ch6"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description color-danger">Overdue</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description">Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input id="ch7" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ch7"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description color-danger">Overdue</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description color-danger">Not Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input id="ch8" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ch8"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description">65 Day Remaining</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description">Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input id="ch8" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ch8"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description">65 Day Remaining</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description">Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input id="ch8" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ch8"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description">65 Day Remaining</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description">Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input id="ch8" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ch8"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description">65 Day Remaining</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description">Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input id="ch8" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ch8"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description">65 Day Remaining</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description">Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input id="ch8" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ch8"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description">65 Day Remaining</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description">Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input id="ch8" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ch8"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description">65 Day Remaining</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description">Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table__checkbox">
+            <div class="custom-control custom-checkbox">
+              <input id="ch8" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ch8"></label>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <a href="#" class="table__cell-widget-name">New Dashboard</a>
+              <span class="table__cell-widget-description">Google</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">13th Nov, 17</span>
+              <span class="table__cell-widget-description">65 Day Remaining</span>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-user">
+              <img src="img/users/user-10.png" alt="" class="table__cell-user-avatar rounded-circle">
+              <div class="table__cell-user-wrap">
+                <a href="#" class="table__cell-widget-name">Annie Cooper</a>
+                <span class="table__cell-widget-description">UK, Design Team</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="table__cell-widget">
+              <span class="table__cell-widget-name">$4670</span>
+              <span class="table__cell-widget-description">Paid</span>
+            </div>
+          </td>
+          <td class="table__label"><span class="badge badge-success">Label</span></td>
+          <td class="table__cell-actions">
+            <div class="table__cell-actions-wrap">
+              <div class="dropdown table__cell-actions-item">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="dataset__footer">
+      <div class="dataset__pages">
+        <div class="dropdown dataset__pages-dropdown">
+          <div class="dropdown-toggle dataset__pages-toggle" data-toggle="dropdown">10 items</div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">10</a>
+            <a class="dropdown-item" href="#">50</a>
+            <a class="dropdown-item" href="#">100</a>
+          </div>
+        </div>
+        <span class="dataset__pages-showing-text">Showing 1 to 8 of 98 entries</span>
+      </div>
+
+      <ul class="pagination dataset__pagination">
+        <li class="page-item dataset__pagination-item">
+          <a class="page-link dataset__pagination-page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true"><span class="mdi mdi-chevron-double-left dataset__pagination-page-link-icon"></span></span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item dataset__pagination-item">
+          <a class="page-link dataset__pagination-page-link" href="#">1</a>
+        </li>
+        <li class="page-item dataset__pagination-item active">
+          <a class="page-link dataset__pagination-page-link" href="#">2</a>
+        </li>
+        <li class="page-item dataset__pagination-item">
+          <a class="page-link dataset__pagination-page-link" href="#">3</a>
+        </li>
+        <li class="page-item dataset__pagination-item">
+          <a class="page-link dataset__pagination-page-link" href="#">4</a>
+        </li>
+        <li class="page-item dataset__pagination-item">
+          <a class="page-link dataset__pagination-page-link" href="#">...</a>
+        </li>
+        <li class="page-item dataset__pagination-item">
+          <a class="page-link dataset__pagination-page-link" href="#">10</a>
+        </li>
+        <li class="page-item dataset__pagination-item">
+          <a class="page-link dataset__pagination-page-link" href="#" aria-label="Next">
+            <span aria-hidden="true"><span class="mdi mdi-chevron-double-right dataset__pagination-page-link-icon"></span></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

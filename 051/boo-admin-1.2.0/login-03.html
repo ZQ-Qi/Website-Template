@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Boo Admin - Welcome</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+    <script src="assets/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body class="signin signin-horizontal">
+<div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container"> </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer" style="height:3px"> </div>
+            <!-- // breadcrumbs --> 
+        </div>
+        <!-- // drawer --> 
+    </div>
+    <!-- // header-container -->
+    
+    <div id="main-container">
+        <div id="main-content" class="main-content container">
+            <div id="page-content" class="page-content">
+                <div class="row">
+                    <div class="tab-content overflow form-dark">
+                        <div class="tab-pane fade in active" id="login">
+                            <div class="span5">
+                                <h4 class="welcome"> <small><i class="fontello-icon-user-4"></i>Sign in </small>Boo</h4>
+                                <form method="post" action="dashboard-one.html" name="login_form">
+                                    <fieldset>
+                                        <div class="controls">
+                                            <input id="idLogin" class="span5" type="text" name="id_login_email" placeholder="your ID or email">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input id="idPassword" class="span3" type="password" name="id_login_password" placeholder="password">
+                                            <button type="submit" class="span2 btn btn-yellow btn-large">SIGN IN</button>
+                                        </div>
+                                        <hr class="margin-xm">
+                                        <label class="checkbox">
+                                            <input id="remember" class="checkbox" type="checkbox">
+                                            Remember me</label>
+                                        <hr class="margin-mm ">
+                                        <a href="#forgot" class="btn btn-boo" data-toggle="tab">Forgot Password?</a> <a href="#register" class="btn btn-boo link" data-toggle="tab">No account yet? Register now for free!</a>
+                                    </fieldset>
+                                </form>
+                                <!-- // form --> 
+                            </div>
+                            <div class="span7">
+                                <h4 class="welcome"><small>Place infotext for login</small></h4>
+                                <p>Lorem ipsum dolor sit amet consectetuer Curabitur egestas adipiscing laoreet Suspendisse. Lacus Sed justo penatibus vel wisi elit felis lorem Donec ipsum. Pretium nibh nibh eget adipiscing volutpat dui..</p>
+                                <p>Semper ipsum rutrum egestas Nam congue semper urna metus lorem habitasse. Sodales Nulla Vestibulum pretium justo quis vestibulum pellentesque et amet eu. Senectus augue turpis et Vestibulum ut risus velit pellentesque laoreet lacus.</p>
+                            </div>
+                        </div>
+                        <!-- // Tab Login -->
+                        
+                        <div class="tab-pane fade" id="forgot">
+                            <div class="span5">
+                                <h4 class="welcome"><small><i class="fontello-icon-help-2"></i>Forgot your password?</small></h4>
+                                <form class="" method="post" action="dashboard-one.html" name="forgot_password">
+                                    <p class="note">Enter your e-mail address, we will send you an e-mail code for password reset.</p>
+                                    <div class="controls">
+                                        <input id="email" class="input-block-level" type="email" name="id_email_forgot" placeholder="your email">
+                                    </div>
+                                    <p class="text-center">or</p>
+                                    <div class="controls">
+                                        <input id="email" class="input-block-level" type="tel" name="id_phone_forgot" placeholder="number phone">
+                                    </div>
+                                    <hr class="margin-xm">
+                                    <button type="submit" class="btn-block btn btn-yellow btn-large">Submit</button>
+                                    <hr class="margin-mm">
+                                    <p>Have you remembered? <a href="#login" class="btn btn-boo" data-toggle="tab">Try to log in again.</a> or <a href="#register" class="btn btn-boo link" data-toggle="tab">Register now for free!</a></p>
+                                </form>
+                                <!-- // form --> 
+                            </div>
+                            <div class="span7">
+                                <h4 class="welcome"><small>Place infotext for forgot password</small></h4>
+                                <p>Lorem ipsum dolor sit amet consectetuer Curabitur egestas adipiscing laoreet Suspendisse. Lacus Sed justo penatibus vel wisi elit felis lorem Donec ipsum. Pretium nibh nibh eget adipiscing volutpat dui..</p>
+                                <p>Semper ipsum rutrum egestas Nam congue semper urna metus lorem habitasse. Sodales Nulla Vestibulum pretium justo quis vestibulum pellentesque et amet eu. Senectus augue turpis et Vestibulum ut risus velit pellentesque laoreet lacus.</p>
+                            </div>
+                        </div>
+                        <!-- // Tab Forgot -->
+                        
+                        <div class="tab-pane fade" id="register">
+                            <div class="span7">
+                                <h4 class="welcome"><small>Place infotext for registration</small></h4>
+                                <p>Lorem ipsum dolor sit amet consectetuer Curabitur egestas adipiscing laoreet Suspendisse. Lacus Sed justo penatibus vel wisi elit felis lorem Donec ipsum. Pretium nibh nibh eget adipiscing volutpat dui..</p>
+                                <p>Semper ipsum rutrum egestas Nam congue semper urna metus lorem habitasse. Sodales Nulla Vestibulum pretium justo quis vestibulum pellentesque et amet eu. Senectus augue turpis et Vestibulum ut risus velit pellentesque laoreet lacus.</p>
+                            </div>
+                            <div class="span5">
+                                <h4 class="welcome"> <small><i class="fontello-icon-users"></i>New User Registration</small></h4>
+                                <form method="post" action="dashboard-one.html" name="login_form">
+                                    <fieldset>
+                                        <legend class="two"><span>Account information</span></legend>
+                                        <div class="controls controls-row">
+                                            <input id="idLogin" class="input-block-level" type="text" name="id_name" placeholder="name">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input id="idLogin" class="input-block-level" type="text" name="id_username" placeholder="username">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input id="idLogin" class="input-block-level" type="text" name="id_email_address" placeholder="email address">
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend class="two"><span>Password</span></legend>
+                                        <div class="controls controls-row">
+                                            <input id="idPassw" class="span3" type="password" name="password" placeholder="password">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input id="idPassw" class="span3" type="password" name="confirm_password" placeholder="confirm password">
+                                        </div>
+                                        <hr class="margin-xx">
+                                        <button type="submit" class="btn btn-green btn-block btn-large">REGISTER TO BOO</button>
+                                        <hr class="margin-xm">
+                                        <p class="text-right">Have you remembered? <a href="#login" class="btn btn-boo" data-toggle="tab">Try to log in again.</a></p>
+                                    </fieldset>
+                                </form>
+                                <!-- // form --> 
+                            </div>
+                        </div>
+                        <!-- // Tab Forgot -->
+                        
+                        <div class="web-description span12">
+                            <h5>Copyright &copy; 2012 companypage.com</h5>
+                            <p>Backend and Frontend interface for web &amp; mobile development. <br />
+                                All rights reserved.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- // Example row --> 
+                
+                <div class="row">
+                	<div class="span5">
+                        <ul class="nav nav-center well well-impressed well-small" style="margin-top: 90px">
+                            <li><a href="login-01.html" class="link">Black</a></li>
+                            <li class="divider-vertical line"></li>
+                            <li><a href="index.html" class="link">Nice</a></li>
+                            <li class="divider-vertical line"></li>
+                            <li><a href="login-02.html" class="link">Base</a></li>
+                            <li class="divider-vertical line"></li>
+                            <li class="active"><a href="login-03.html" class="link">SignIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // Example row --> 
+                
+            </div>
+            <!-- // page content --> 
+            
+        </div>
+        <!-- // main-content --> 
+        
+    </div>
+    <!-- // main-container  --> 
+    
+</div>
+<!-- // page-container --> 
+
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/lib/jquery.js"></script> 
+<script src="assets/js/lib/jquery-ui.js"></script>
+<script src="assets/js/lib/jquery.cookie.js"></script> 
+<script src="assets/js/lib/jquery.date.js"></script> 
+<script src="assets/js/lib/jquery.mousewheel.js"></script> 
+<script src="assets/js/lib/jquery.load-image.min.js"></script>
+<script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+
+<!-- Plugins Bootstrap -->
+<script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+<script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script> 
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+<script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+<script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+<script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+<script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+<script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+<script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+ 
+
+<!-- Plugins Custom - Only example --> 
+<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>
+
+<!-- Plugins Custom - System --> 
+<script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+<script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+<!-- Plugins Custom - System info -->
+<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+<!-- Plugins Custom - Content -->
+<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+<!-- Plugins Custom - Component -->
+<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+<!-- Plugins Custom - Form -->
+<script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+<!-- Plugins Custom - Gallery --> 
+<script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+<script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+ 
+<!-- Plugins Tables --> 
+<script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+<!-- Plugins data visualization --> 
+<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+<script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/core.js"></script> 
+<script src="assets/js/application.js"></script> 
+
+<script>
+$(document).ready(function() {
+
+    
+});
+
+</script>
+
+
+</body>
+</html>

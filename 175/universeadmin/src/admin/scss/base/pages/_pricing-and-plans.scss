@@ -1,0 +1,247 @@
+/** BEGIN: pricing and plans */
+.p-pricing-and-plans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+
+  &__heading {
+    font-size: 28px;
+    color: #222;
+  }
+
+  &__desc {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 60px;
+    color: #939daa;
+    max-width: 874px;
+  }
+
+  &__type {
+    margin-top: 10px;
+
+    .radio-group__text {
+      color: #939daa;
+      min-width: 80px;
+    }
+  }
+
+  &__plans {
+    display: flex;
+    font-size: 15px;
+    margin-top: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__plan {
+    width: 290px;
+    box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+    background-color: #ffffff;
+    border-top: 4px solid transparent;
+    margin-right: 30px;
+    border-radius: 0 0 3px 3px;
+    margin-top: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--free {
+      border-top-color: #269af1;
+    }
+
+    &--plus {
+      border-top-color: $color-bittersweet;
+      margin-top: 0;
+    }
+
+    &--premium {
+      border-top-color: $color-purple-mountain;
+    }
+
+    &--enterprise {
+      border-top-color: $color-fountain-blue-light;
+    }
+
+    &--enterprise &-desc {
+      margin-bottom: 108px;
+    }
+  }
+
+  &__plan-body {
+    padding: 24px 44px 30px 44px;
+    text-align: center;
+  }
+
+  &__plan-heading {
+    font-size: 24px;
+  }
+
+  &__plan-price {
+    color: #222222;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  &__plan-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #939daa;
+    line-height: 30px;
+    margin-bottom: 44px;
+    text-align: center;
+
+    &--sm {
+      font-size: 17px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__plan-desc-link,
+  &__plan-desc-link:hover {
+    color: #939daa;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(#939daa, .8);
+    margin-top: 15px;
+  }
+
+  &__plan-signup {
+    font-size: 17px;
+    min-width: 99px;
+    margin-bottom: 2px;
+  }
+
+  &__plan-features {
+    border-top: 1px solid #e9ebee;
+    padding: 21px 21px 30px 21px;
+  }
+
+  &__plan-features-list {
+    margin: 0;
+  }
+
+  &__plan-features-heading {
+    font-size: 17px;
+    color: #000000;
+  }
+
+  &__plan-feature {
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__plan-feature-icon {
+    font-size: 11px;
+    line-height: 11px;
+    display: inline-block;
+    color: #269af1;
+    margin-right: 5px;
+  }
+}
+
+.btn-plan-plus {
+  background-color: $color-bittersweet;
+  color: #fff;
+  border-color: $color-bittersweet;
+
+  &:hover {
+    &:enabled {
+      color: #fff;
+      background-color: darken($color-bittersweet, 3%);
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: darken($color-bittersweet, 7%);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: #fff;
+    background-color: $color-bittersweet;
+  }
+}
+
+.btn-plan-premium {
+  background-color: $color-purple-mountain;
+  color: #fff;
+  border-color: $color-purple-mountain;
+
+  &:hover {
+    &:enabled {
+      color: #fff;
+      background-color: darken($color-purple-mountain, 3%);
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: darken($color-purple-mountain, 7%);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: #fff;
+    background-color: $color-purple-mountain;
+  }
+}
+
+.btn-plan-enterprise {
+  background-color: $color-fountain-blue-light;
+  color: #fff;
+  border-color: $color-fountain-blue-light;
+
+  &:hover {
+    &:enabled {
+      color: #fff;
+      background-color: darken($color-fountain-blue-light, 3%);
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: darken($color-fountain-blue-light, 7%);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: #fff;
+    background-color: $color-fountain-blue-light;
+  }
+}
+
+@include mq(tablet, max) {
+  .p-pricing-and-plans {
+    &__plans {
+      flex-direction: column;
+    }
+
+    &__plan {
+      margin-top: 0;
+      margin-bottom: 30px;
+      margin-right: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/** END: pricing and plans */

@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Boo Css</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+<!-- Navbar
+    ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="brand" href="./index.html">Boo Admin</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class=""> <a href="./index.html">Home</a> </li>
+                    <li class=""> <a href="./getting-started.html">Get started</a> </li>
+                    <li class=""> <a href="./scaffolding.html">Scaffolding</a> </li>
+                    <li class="active"> <a href="./base-css.html">CSS</a> </li>
+                    <li class=""> <a href="./custom-css.html">Custom CSS</a> </li>
+                    <li class=""> <a href="./javascript.html">JavaScript</a> </li>
+                    <li class=""> <a href="./changelog.html">Boo Changelog</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron boo subhead" id="overview">
+  <div class="container">
+    <h1>Boo CSS</h1>
+    <p class="lead">Basic HTML elements and CSS styles in Boo.</p>
+  </div>
+</header>
+
+<div class="container"> 
+    
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+        <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+                <li><a href="#css-structure"><i class="icon-chevron-right"></i> CSS Files structure</a></li>
+                <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+                <li><a href="#color-utility"><i class="icon-chevron-right"></i> Color</a></li>
+                <li><a href="#gaps-utility"><i class="icon-chevron-right"></i> Gaps utility</a></li>
+                <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li>
+                <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+                <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
+            </ul>
+        </div>
+        <div class="span9"> 
+            
+            <!-- CSS 
+        	================================================== -->
+            <section id="css-structure">
+                <div class="page-header doc">
+                    <h1>CSS</h1>
+                </div>
+                <p>When building commonly use html elements and styles Bootstrap. There are only a few classes and utilities that will help you create a style Boo</p>
+                <h3>CSS files and structure</h3>
+                <ol>
+                    <li class="text-error">bootstrap.css - <em class="muted">lib</em></li>
+                    <li class="text-error">bootstrap-responsive.css - <em class="muted">lib</em></li>
+                    <li>icon-fugue.css - <em class="muted">lib fugue icon (use minifield)</em></li>
+                    <p></p>
+                    <li>boo-extension.css - <em class="muted">Imports all alternative stylesheets</em></li>
+                    <li>boo.css - <em class="muted">Corection bootstrap and boo style</em></li>
+                    <li class="text-success">style.css - <em>Here place for your styles</em></li>
+                    <li>boo-coloring.css - <em class="muted">set color</em></li>
+                    <li>boo-utility.css - <em class="muted">Boo utility for correction and styling</em></li>
+                    <li>style.css - <em class="muted">Your style</em></li>
+                </ol>
+                <p><strong>extension.css</strong> file imports all alternative stylesheets, so you don't need to include all .css files in each HTML page, simply add/remove necessary line in main.css (first lines):</p>
+                <pre class="prettyprint linenums">
+/* FONTS */
+/* Picto font & Icon */
+@import "../fonts/fontello/css/fontello.css";
+@import "../fonts/awesome/css/font-awesome.css";
+
+@import "icon-fugue.min.css";
+
+/* PLUGINS */ 
+@import "../plugins/pl-extension/google-code-prettify/prettify.css";
+
+@import "../plugins/bootstrap-datepicker/css/datepicker-theme.css";
+@import "../plugins/bootstrap-colorpicker/css/colorpicker-theme.css";
+@import "../plugins/bootstrap-daterangepicker/css/daterangepicker-theme.css";
+@import "../plugins/bootstrap-timepicker/css/timepicker.css";
+@import "../plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css";
+@import "../plugins/bootstrap-fuelux/css/fuelux-bootheme.css";
+@import "../plugins/bootstrap-progressbar/css/bootstrap-progressbar.css";
+@import "../plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css";
+@import "../plugins/bootstrap-fileupload/css/bootstrap-fileupload.css";
+@import "../plugins/bootstrap-modal/css/bootstrap-modal-bootheme.css";
+@import "../plugins/bootstrap-wizard/css/bootstrap-wizard-combi-bootheme.css";
+@import "../plugins/bootstrap-toggle-button/css/bootstrap-toggle-buttons-theme.css";
+@import "../plugins/bootstrap-image-gallery/css/bootstrap-image-gallery-bootheme.css";
+
+@import "../plugins/pl-system-info/qtip2/dist/jquery.qtip.css";
+@import "../plugins/pl-system-info/gritter/css/jquery.gritter-boothemes.css";
+@import "../plugins/pl-system-info/notyfy/themes/boo-notyfylight.css";
+
+@import "../plugins/pl-form/uniform/css/uniform-theme.css";
+@import "../plugins/pl-form/select2/select-theme.css";
+@import "../plugins/pl-form/duallistbox/dualListBox-bootheme.css";
+
+@import "../plugins/pl-file/file-upload/css/jquery.fileupload-ui-bootheme.css";
+
+@import "../plugins/pl-component/fullcalendar/fullcalendar-theme.css";
+@import "../plugins/pl-component/rangeslider/css/rangeboo.css";
+
+@import "../plugins/pl-gallery/wookmark/style-bootheme.css";
+@import "../plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.css";
+@import "../plugins/pl-gallery/nailthumb/showLoading/css/showLoading.css";
+
+@import "../plugins/pl-visualization/percentageloader/percentageloader.css";
+@import "../plugins/pl-visualization/knob/knob.css";
+
+@font-face {
+        font-family: 'ForteMT';
+        src: url('../fonts/forte/forte.eot');
+        src: url('../fonts/forte/forte.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/forte/forte.woff') format('woff'),
+             url('../fonts/forte/forte.ttf') format('truetype'),
+             url('../fonts/forte/forte.svg#forte') format('svg');
+        font-weight: normal;
+        font-style: normal;
+}
+      </pre>
+                <p>and inside HTML page include file:</p>
+                <pre class="prettyprint linenums">
+&lt;!-- Le styles --&gt;
+&lt;link href="assets/css/lib/bootstrap.css" rel="stylesheet"&gt;
+&lt;link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet"&gt;
+&lt;link href="assets/css/boo-extension.css" rel="stylesheet"&gt;
+&lt;link href="assets/css/boo.css" rel="stylesheet"&gt;
+&lt;link href="assets/css/style.css" rel="stylesheet"&gt;
+&lt;link href="assets/css/boo-coloring.css" rel="stylesheet"&gt;
+&lt;link href="assets/css/boo-utility.css" rel="stylesheet"&gt;
+      </pre>
+            </section>
+            
+            <!-- Typography
+        	================================================== -->
+            <section id="typography">
+                <div class="page-header doc">
+                    <h1>Typography</h1>
+                </div>
+                <h2 id="headings">Headings</h2>
+                <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available.</p>
+                <div class="bs-docs-example">
+                    <h1>h1. Heading 1</h1>
+                    <h2>h2. Heading 2</h2>
+                    <h3>h3. Heading 3</h3>
+                    <h4>h4. Heading 4</h4>
+                    <h5>h5. Heading 5</h5>
+                    <h6>h6. Heading 6</h6>
+                </div>
+                <p>For header add class <code>.simple-header</code> to <code>&lt;h2&gt; - &lt;h6&gt; </code> element.</p>
+                <div class="bs-docs-example">
+                    <h2 class="simple-header">h2. Simple header</h2>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <h3 class="simple-header">h3. Simple header</h3>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <h4 class="simple-header">h4. Simple header</h4>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    ... </div>
+                <pre class="prettyprint">
+&lt;h3  class="simple-header"&gt;h3. Simple header&lt;/h3&gt;
+&lt;pgt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/pgt;</pre>
+                <h2 id="body-copy">Paragraphs</h2>
+                <p>Global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>20px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
+                <div class="bs-docs-example">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                </div>
+                <pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
+                <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+                <div class="bs-docs-example">
+                    <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                </div>
+                <pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+                <p><code>&lt;small&gt;</code> for de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
+                <div class="bs-docs-example">
+                    <p><small>This line of text is meant to be treated as fine print.</small></p>
+                </div>
+                <pre class="prettyprint">
+&lt;p&gt;
+  &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
+&lt;/p&gt;
+</pre>
+                <h3>Individual font size</h3>
+                <p>For set individual font size. (10, 11, 12, 13, 14, 16, 18, 20 ... after two to 42 ) <code>class="f42"</code></p>
+                <div class="bs-docs-example">
+                    <p class="f16">Lorem ipsum dolor sit amet</p>
+                    <p class="f22">Lorem ipsum dolor sit amet</p>
+                    <p class="f30">Lorem ipsum dolor <span class="f16">sit amet</span></p>
+                    <p class="f36">Lorem ipsum dolor sit amet</p>
+                    <br>
+                    <h3 class="f20 simple-header">Lorem ipsum dolor sit amet</h3>
+                    <br>
+                    <p>statistic <strong class="f42">1592,5</strong></p>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;p class="f16"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="f22"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="f30"&gt;Lorem ipsum dolor &lt;span class="f16"&gt;sit amet&lt;/span&gt;&lt;/p&gt;
+&lt;p class="f36"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;h3 class="f20 simple-header"&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;
+&lt;p&gt;statistic &lt;strong class="f42"&gt;1592,5&lt;/strong&gt;&lt;/p&gt;
+</pre>
+                <h3>Bold</h3>
+                <p><code>&lt;strong&gt;</code> for emphasizing a snippet of text with a heavier font-weight or set individual font font-weight (replacement tag strong) add <code>class="bold"</code> to element.</p>
+                <div class="bs-docs-example">
+                    <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+                </div>
+                <pre class="prettyprint">
+&lt;strong&gt;rendered as bold text&lt;/strong&gt;
+or
+&lt;p class="bold"&gt;rendered as bold text&lt;/p&gt;
+                </pre>
+                <h3>Italics</h3>
+                <p><code>&lt;em&gt;</code> for emphasizing a snippet of text with italics.</p>
+                <div class="bs-docs-example">
+                    <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+                </div>
+                <pre class="prettyprint">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+                <h3>Emphasis classes</h3>
+                <p>Convey meaning through color with a handful of emphasis utility classes.</p>
+                <div class="bs-docs-example">
+                    <p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+                    <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+                    <p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+                    <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;p class="muted"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&lt;/p&gt;
+&lt;p class="text-warning"&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
+&lt;p class="text-error"&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
+&lt;p class="text-info"&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.&lt;/p&gt;
+&lt;p class="text-success"&gt;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&lt;/p&gt;
+</pre>
+                <hr class="bs-docs-separator">
+                <h2 id="blockquotes">Blockquotes</h2>
+                <p>Wrap <code>&lt;blockquote&gt;</code> for quoting blocks of content from another source within your document.</p>
+                <p>For more options add <code>&lt;small&gt;</code> tag for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+                <div class="bs-docs-example">
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <small>Someone famous in <cite title="Source Title">Source Title</cite></small> </blockquote>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+  &lt;small&gt;Someone famous &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/small&gt;
+&lt;/blockquote&gt;
+</pre>
+                <p>Use <code>.pull-right</code> for a floated, right-aligned blockquote.</p>
+                <div class="bs-docs-example" style="overflow: hidden;">
+                    <blockquote class="pull-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <small>Someone famous in <cite title="Source Title">Source Title</cite></small> </blockquote>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;blockquote class="pull-right"&gt;
+  ...
+&lt;/blockquote&gt;
+</pre>
+                <hr class="bs-docs-separator">
+                <h2>Utility classes for text</h2>
+                <table class="table table-bordered">
+                    <colgroup>
+                    <col class="span1">
+                    <col class="span7">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.f..</code></td>
+                            <td>Set individual font size. (12,13,14,16,18,20 ... after two to 42 ) <code>class="f42"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bold </code></td>
+                            <td>Set individual font strong (replacement tag strong) <code>class="bold"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.normal</code></td>
+                            <td>Set individual font to normal <code>class="normal"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.upper</code></td>
+                            <td>Transform text to UPPERCASE. <code>class="upper"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.em</code></td>
+                            <td>For italic style if you can not use the <code>em</code> element. <code>class="em"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-right</code></td>
+                            <td>Aligns text and inline elements. <code>class="text-right"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-center</code></td>
+                            <td>Aligns text and inline elements. <code>class="text-center"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-left</code></td>
+                            <td>Aligns text and inline elements. <code>class="text-left"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.no-wrap</code></td>
+                            <td>Prevent Wrap <code>class="no-wrap"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.no-shadow</code></td>
+                            <td>Remove shadow. <code>class="no-shadow"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.opaci15</code></td>
+                            <td>Add transparency. (value 15, 25, 35, 45, 55, 65, 75, 85) <code>class="opaci50"</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="text-right">see the file <strong>utility.css</strong></p>
+                
+                <!-- Lists -->
+                <h2 id="lists">Lists</h2>
+                <h3>Unordered</h3>
+                <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+                <div class="bs-docs-example">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipiscing elit</li>
+                        <ul>
+                            <li>Phasellus iaculis neque</li>
+                            <li>Purus sodales ultricies</li>
+                        </ul>
+                        </li>
+                        <li>Faucibus porta lacus fringilla vel</li>
+                        <li>Aenean sit amet erat nunc</li>
+                    </ul>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                <h3>Ordered</h3>
+                <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+                <div class="bs-docs-example">
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipiscing elit</li>
+                        <li>Integer molestie lorem at massa</li>
+                        <li>Facilisis in pretium nisl aliquet</li>
+                        <li>Nulla volutpat aliquam velit</li>
+                        ...
+                    </ol>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+                <h3>Unstyled</h3>
+                <p>A list of items with no <code>list-style</code> or additional left padding.</p>
+                <div class="bs-docs-example">
+                    <ul class="unstyled">
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipiscing elit</li>
+                        <ul>
+                            <li>Phasellus iaculis neque</li>
+                            <li>Purus sodales ultricies</li>
+                        </ul>
+                        </li>
+                        <li>Faucibus porta lacus fringilla vel</li>
+                        <li>Aenean sit amet erat nunc</li>
+                    </ul>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;ul class="unstyled"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                <h3>Description</h3>
+                <p>A list of terms with their associated descriptions.</p>
+                <div class="bs-docs-example">
+                    <dl>
+                        <dt>Description lists</dt>
+                        <dd>A description list is perfect for defining terms.</dd>
+                        <dt>Euismod</dt>
+                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                        <dt>Malesuada porta</dt>
+                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                    </dl>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;dl&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+                <div class="bs-docs-example">
+                    <dl class="dl-horizontal">
+                        <dt>Description lists</dt>
+                        <dd>A description list is perfect for defining terms.</dd>
+                        <dt>Euismod</dt>
+                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                        <dt>Malesuada porta</dt>
+                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                        <dt>Felis euismod semper eget lacinia</dt>
+                        <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                    </dl>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;dl class="dl-horizontal"&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+            </section>
+            
+            <!-- Color utility
+        	================================================== -->
+            <section id="color-utility">
+                <div class="page-header doc">
+                    <h1>Color classes</h1>
+                </div>
+                <h3>Text color</h3>
+                <p>For colored text, you can use all the names of colors as css class for the element. <a target="_blank" href="http://www.w3schools.com/cssref/css_colornames.asp">Color Table to preview</a></p>
+                <h3 class="bg-blue-light padding-side margin-sx radius4"> <span class="darkblue f32">Why</span> <span class="f16 forestgreen">use</span> <span class="bg-green-strong padding-side">a coloring</span> <span class="yellowgreen"> class?</span> </h3>
+                <pre class="prettyprint linenums bg-yellow-medium">
+&lt;h3 class="bg-blue-light"&gt; 
+&lt;span class="darkblue f32"&gt;Why&lt;/span&gt; 
+&lt;span class="f16 forestgreen"&gt;use&lt;/span&gt; 
+&lt;span class="bg-green-strong"&gt;a coloring&lt;/span&gt; 
+&lt;span class="yellowgreen"&gt;class?&lt;span&gt;
+&lt;/h3&gt;
+or this background
+&lt;pre class="prettyprint linenums bg-yellow-medium"&gt;
+      </pre>
+                <p>There are names of colors used as css class <br>
+                    (no need to use <code>&lt;div class="span12" style="red"&gt; ... &lt;/div&gt;</code> write only <code>&lt;div class="span12 red"&gt; ... &lt;/div&gt;</code></p>
+                <p> or <code>&lt;div class="well bg-blue-light"&gt; ... &lt;/div&gt;</code> )</p>
+                <h3>Background color class</h3>
+                <h4>Blue</h4>
+                <ul class="the-colors clearfix">
+                    <li><code>.bg-blue-light</code>
+                        <div class="bg-blue-light">&nbsp;</div>
+                    </li>
+                    <li><code>.bg-blue-light</code>
+                        <div class="bg-blue-medium">&nbsp;</div>
+                    </li>
+                    <li><code>.bg-blue-light</code>
+                        <div class="bg-blue-strong">&nbsp;</div>
+                    </li>
+                </ul>
+                <h4>Green</h4>
+                <ul class="the-colors clearfix">
+                    <li><code>.bg-green-light</code>
+                        <div class="bg-green-light">&nbsp;</div>
+                    </li>
+                    <li><code>.bg-green-light</code>
+                        <div class="bg-green-medium">&nbsp;</div>
+                    </li>
+                    <li><code>.bg-green-light</code>
+                        <div class="bg-green-strong">&nbsp;</div>
+                    </li>
+                </ul>
+                <h4>Yellow</h4>
+                <ul class="the-colors clearfix">
+                    <li><code>.bg-yellow-light</code>
+                        <div class="bg-yellow-light">&nbsp;</div>
+                    </li>
+                    <li><code>.bg-yellow-light</code>
+                        <div class="bg-yellow-medium">&nbsp;</div>
+                    </li>
+                    <li><code>.bg-yellow-light</code>
+                        <div class="bg-yellow-strong">&nbsp;</div>
+                    </li>
+                </ul>
+                <h4>Gray</h4>
+                <ul class="the-colors clearfix">
+                    <li><code>.bg-gray-light</code>
+                        <div class="bg-gray-light">&nbsp;</div>
+                    </li>
+                    <li><code>.bg-gray-light</code>
+                        <div class="bg-gray-medium">&nbsp;</div>
+                    </li>
+                    <li><code>.bg-gray-light</code>
+                        <div class="bg-gray-strong">&nbsp;</div>
+                    </li>
+                </ul>
+                <h4>White</h4>
+                <div class="well well-black">
+                    <ul class="the-colors clearfix margin-00">
+                        <li><code>.bg-white</code>
+                            <div class="bg-white">&nbsp;</div>
+                        </li>
+                        <li><code>.bg-white75</code>
+                            <div class="bg-white75">&nbsp;</div>
+                        </li>
+                        <li><code>.bg-white50</code>
+                            <div class="bg-white50">&nbsp;</div>
+                        </li>
+                        <li><code>.bg-white25</code>
+                            <div class="bg-white25">&nbsp;</div>
+                        </li>
+                    </ul>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;span class="bg-blue-strong"&gt; backround color blue &lt;/span&gt; 
+&lt;table class="bg-green-light"&gt; backround color green &lt;table&gt;</pre>
+                <p class="text-right">see the file <strong>coloring.css</strong></p>
+            </section>
+            
+            <!-- Gaps utility
+        	================================================== -->
+            <section id="gaps-utility">
+                <div class="page-header doc">
+                    <h1>Gaps utility</h1>
+                </div>
+                <p>Use bootstrap to correct styles, correct gaps and fill or remove them completely.</p>
+                <h3>Boo framework</h3>
+                <p>Use an element especially for correcting top and bottom gaps (a combination of size 0 s m x)</p>
+                <div class="row">
+                    <div class="span3">
+                        <ul class="the-100 clearfix">
+                            <li>
+                                <h4>Values</h4>
+                            </li>
+                            <li>0 = 0</li>
+                            <li>s = 5px</li>
+                            <li>m = 10px</li>
+                            <li>x = 20px</li>
+                            <li>xxx = 40px (only- no combine)</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <pre class="prettyprint linenums">
+class="margin-00"
+class="margin-ss"
+class="margin-0s"
+class="margin-sm"
+class="margin-mx"
+all combinations of 
+0 s m x
+or
+xxx only</pre>
+                        <pre class="prettyprint linenums">
+&lt;hr class="margin-sm"&gt;
+&lt;table class="margin-0x"&gt; 
+    ... 
+&lt;/table&gt;</pre>
+                    </div>
+                </div>
+                <h3>Margin & Padding with using numbers</h3>
+                <p>Option to add or remove spaces on either side of the element</p>
+                <div class="row">
+                    <div class="span3">
+                        <ul class="the-100 clearfix">
+                            <li>
+                                <h4>Values</h4>
+                            </li>
+                            <li>2 = 2px</li>
+                            <li>5 = 5px</li>
+                            <li>10 = 10px</li>
+                            <li>15 = 15px</li>
+                            <li>20 = 20px</li>
+                            <li>25 = 25px</li>
+                            <li>30 = 30px</li>
+                            <li>40 = 40px</li>
+                            <li>side = 5; 10; 15 = px</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul class="the-50 clearfix">
+                            <li>
+                                <h4>add Margin</h4>
+                            </li>
+                            <li>
+                                <h4>add Padding</h4>
+                            </li>
+                            <li>add all side</li>
+                            <li>add all side</li>
+                            <li><code>class="margin5"</code></li>
+                            <li><code>class="padding5"</code></li>
+                            <li>add left and right (5;10;15px)</li>
+                            <li>add left and right (5;10;15px)</li>
+                            <li><code>class="margin-side5"</code></li>
+                            <li><code>class="padding-side5"</code></li>
+                            <li>add only define side</li>
+                            <li>add only define side</li>
+                            <li><code>class="margin-top5"</code></li>
+                            <li><code>class="padding-top5"</code></li>
+                            <li><code>class="margin-left10"</code></li>
+                            <li><code>class="padding-left10"</code></li>
+                            <li><code>class="margin-bootom25"</code></li>
+                            <li><code>class="padding-bootom25"</code></li>
+                            <li><code>class="margin-right30"</code></li>
+                            <li><code>class="padding-right30"</code></li>
+                        </ul>
+                        <pre class="prettyprint linenums">
+// gap at the top is a standard 19px, 10px, set    
+&lt;div class="well margin-top10"&gt; ... &lt;/div&gt;
+      </pre>
+                        <pre class="prettyprint linenums">
+Set the value to the right and left (only fixed 15px)    
+&lt;span class="padding-side"&gt; ... &lt;/span&gt;
+      </pre>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span3">
+                        <p>To remove, add prefix <strong>no-</strong></p>
+                    </div>
+                    <div class="span6">
+                        <ul class="the-50 clearfix">
+                            <li>
+                                <h4>removal Margin</h4>
+                            </li>
+                            <li>
+                                <h4>removal Padding</h4>
+                            </li>
+                            <li>removal all side</li>
+                            <li>removal all side</li>
+                            <li><code>class="no-margin"</code></li>
+                            <li><code>class="no-padding"</code></li>
+                            <li>removal left and right</li>
+                            <li>removal left and right</li>
+                            <li><code>class="no-margin-side"</code></li>
+                            <li><code>class="no-padding-side"</code></li>
+                            <li>removal only define side</li>
+                            <li>removal only define side</li>
+                            <li><code>class="no-margin-top"</code></li>
+                            <li><code>class="no-padding-top"</code></li>
+                            <li><code>class="no-margin-left"</code></li>
+                            <li><code>class="no-padding-left"</code></li>
+                            <li><code>class="no-margin-bootom"</code></li>
+                            <li><code>class="no-padding-bootom"</code></li>
+                            <li><code>class="no-margin-right"</code></li>
+                            <li><code>class="no-padding-right"</code></li>
+                        </ul>
+                        <pre class="prettyprint linenums">
+class="no-padding-top"
+class="no-margin-left"
+class="no-..."
+
+remove all
+&lt;div class="well no-margin"&gt; ... &lt;/div&gt;
+      </pre>
+                    </div>
+                    <p class="text-right">see the file <strong>utility.css</strong></p>
+                </div>
+            </section>
+            
+            <!-- Tables
+        	================================================== -->
+            <section id="tables">
+                <div class="page-header">
+                    <h1>Tables</h1>
+                </div>
+                <h2>Default styles</h2>
+                <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
+                <div class="bs-docs-example">
+                    <table class="table">
+                        <caption>
+                        Caption for default table
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre class="prettyprint linenums">
+&lt;table class="table"&gt;
+  …
+&lt;/table&gt;
+</pre>
+                <hr class="bs-docs-separator">
+                <h2>Supported table markup</h2>
+                <p>List of supported table HTML elements and how they should be used.</p>
+                <table class="table table-bordered table-striped">
+                    <colgroup>
+                    <col class="span1">
+                    <col class="span7">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;table&gt;</code></td>
+                            <td> Wrapping element for displaying data in a tabular format </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;thead&gt;</code></td>
+                            <td> Container element for table header rows (<code>&lt;tr&gt;</code>) to label table columns </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;tbody&gt;</code></td>
+                            <td> Container element for table rows (<code>&lt;tr&gt;</code>) in the body of the table </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;tr&gt;</code></td>
+                            <td> Container element for a set of table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that appears on a single row </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;td&gt;</code></td>
+                            <td> Default table cell </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;th&gt;</code></td>
+                            <td> Special table cell for column (or row, depending on scope and placement) labels<br>
+                                Must be used within a <code>&lt;thead&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;caption&gt;</code></td>
+                            <td> Description or summary of what the table holds, especially useful for screen readers </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <pre class="prettyprint linenums">
+&lt;table&gt;
+  &lt;caption&gt;...&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+                <hr class="bs-docs-separator">
+                <h2>Optional classes</h2>
+                <p>Add any of the following classes to the <code>.table</code> base class.</p>
+                <table class="table table-bordered">
+                    <colgroup>
+                    <col class="span1">
+                    <col class="span7">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.table-striped</code></td>
+                            <td>Adds zebra-striping to any table row within the <code>&lt;tbody&gt;</code> via the <code>:nth-child</code> CSS selector (not available in IE7-IE8).</td>
+                        </tr>
+                        <tr>
+                            <td><code>.table-bordered</code></td>
+                            <td>Add borders and rounded corners to the table.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.table-hover</code></td>
+                            <td>Enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.table-condensed</code></td>
+                            <td>Makes tables more compact by cutting cell padding in half.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.boo-table</code></td>
+                            <td>Boo style for table. (style for border, thead, tfoot, caption, row)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.table-content</code></td>
+                            <td>Style for the table located inside of something (well, widget, wrapper).</td>
+                        </tr>
+                        <tr>
+                            <td><code>.table-light</code></td>
+                            <td>Table without lines and columns. Removes border</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="alert alert-danger">Can not be combined classes <code>table-bordered</code> and <code>table-content</code></p>
+                <p class="text-right">see the file <strong>boo.css</strong></p>
+                <h3><code>.boo-table</code></h3>
+                <p>Basic style for boo table bordered</p>
+                <div class="bs-docs-example">
+                    <table class="table boo-table table-striped">
+                        <caption>
+                        Caption for boo table <span>Here text in span</span>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;!-- Boo table --&gt;
+&lt;table class="table boo-table table-striped"&gt;
+	&lt;caption&gt;Caption for boo table &lt;span&gt;Here text in span&lt;/span&gt;&lt;/caption&gt;
+    ...
+&lt;/table&gt;
+</pre>
+                <h3><code>.table-content</code></h3>
+                <p>Content table - a table designed to be placed in the wrapper</p>
+                <div class="bs-docs-example">
+                    <table class="table boo-table table-content table-striped">
+                        <caption>
+                        Boo Table Caption - Title fot table <span>Here text in span</span>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;!-- Boo table content --&gt;
+&lt;table class="table boo-table table-content table-striped"&gt;
+	&lt;caption&gt; ... &lt;/caption&gt;
+    ...
+&lt;/table&gt;
+</pre>
+                <h3>Table content in base wrapper <code>.boo-table</code></h3>
+                <p>If you want a table with class table-content was bounded just use container - <code>&lt;div&gt;</code> element with class <code>.table-wrapper</code>.</p>
+                <div class="bs-docs-example">
+                    <div class="table-wrapper">
+                        <table class="table boo-table table-striped table-condensed table-content bg-blue-light margin-00">
+                            <caption>
+                            Boo Table Caption - Title fot table <span>Here text in span</span>
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr id="HeadersRow0" class="total">
+                                    <th>Total sum</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th class="text-right">3</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;!-- Table wrapp --&gt;
+&lt;div class="table-wrapper"&gt;
+    &lt;table class="table boo-table table-content ...."&gt;
+        ...
+    &lt;/table&gt;
+&lt;/div&gt;
+</pre>
+                <p>For a table, use a colored background <code>.bg-color-</code> classes</p>
+                <p class="alert alert-info">More examples of how to wrap the table in can be found on page <a class="btn" target="_blank" href="../component-table-boo.html">component-table-boo.html</a></p>
+                <p>More classes for table.</p>
+                <table class="table table-bordered table-striped">
+                    <colgroup>
+                    <col class="span1">
+                    <col class="span7">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.table-wrapper</code></td>
+                            <td> Base wrapper for table </td>
+                        </tr>
+                        <tr>
+                            <td><code>.datatable-wrapper</code></td>
+                            <td> Wrapper for datatable. Used automatically. You can only apply styles </td>
+                        </tr>
+                        <tr>
+                            <td><code>.filter</code></td>
+                            <td> Class for column filter to element <code>thead</code> or <code>tfoot</code>. Apli to <code>tr</code> (datatable) </td>
+                        </tr>
+                        <tr>
+                            <td><code>.column-sorter</code></td>
+                            <td> Add sortable arrow for table. Apli to <code>span</code> in <code>th</code> (datatable) </td>
+                        </tr>
+                        <tr>
+                            <td><code>.sorting</code><br>
+                                <code>.sorting_asc</code><br>
+                                <code>.sorting_desc</code><br></td>
+                            <td> Line for the total in <code>tfoot</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.pagination</code></td>
+                            <td> Default pagination bootstrap </td>
+                        </tr>
+                        <tr>
+                            <td><code>.pagination-btn</code><br>
+                                <code>.pagination-boo</code></td>
+                            <td> Style for pagination </td>
+                        </tr>
+                        <tr>
+                            <td><code>.table-tool-wrapper</code></td>
+                            <td> Wrap for tool in header (align left or right) </td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-toolbar</code></td>
+                            <td> bootstrap element - use for bar to <code>ul</code> or <code>div</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr class="bs-docs-separator">
+                <h2>Optional row classes</h2>
+                <p>Use contextual classes to color table rows.</p>
+                <table class="table table-bordered table-striped">
+                    <colgroup>
+                    <col class="span1">
+                    <col class="span7">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.success</code></td>
+                            <td>Indicates a successful or positive action.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.error</code></td>
+                            <td>Indicates a dangerous or potentially negative action.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.warning</code></td>
+                            <td>Indicates a warning that might need attention.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.info</code></td>
+                            <td>Used as an alternative to the default styles.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bs-docs-example">
+                    <table class="table table-content">
+                        <caption>
+                        color table rows
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Product</th>
+                                <th>Payment Taken</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>1</td>
+                                <td>TB - Monthly</td>
+                                <td>01/04/2012</td>
+                                <td>Approved</td>
+                            </tr>
+                            <tr class="error">
+                                <td>2</td>
+                                <td>TB - Monthly</td>
+                                <td>02/04/2012</td>
+                                <td>Declined</td>
+                            </tr>
+                            <tr class="warning">
+                                <td>3</td>
+                                <td>TB - Monthly</td>
+                                <td>03/04/2012</td>
+                                <td>Pending</td>
+                            </tr>
+                            <tr class="info">
+                                <td>4</td>
+                                <td>TB - Monthly</td>
+                                <td>04/04/2012</td>
+                                <td>Call in to confirm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre class="prettyprint linenums">
+...
+  &lt;tr class="success"&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;TB - Monthly&lt;/td&gt;
+    &lt;td&gt;01/04/2012&lt;/td&gt;
+    &lt;td&gt;Approved&lt;/td&gt;
+  &lt;/tr&gt;
+...
+</pre>
+            </section>
+            
+            <!-- Forms
+        	================================================== -->
+            <section id="forms">
+                <div class="page-header">
+                    <h1>Forms</h1>
+                </div>
+                <h3>Forms fully utilize styles bootstrap</h3>
+                <p>If you are not familiar with the bootstrap form, refer to the original <a href="../_bootstrap/docs/base-css.html#forms" target="_blank">documentation</a></p>
+                <hr class="bs-docs-separator">
+                <h2>Optional layouts classes</h2>
+                <p>Included with Bootstrap are three optional form layouts for common use cases.</p>
+                <table class="table table-bordered">
+                    <colgroup>
+                    <col class="span1">
+                    <col class="span7">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.form-search</code></td>
+                            <td>Add class to the form and <code>.search-query</code> to the <code>&lt;input&gt;</code> for an extra-rounded text input.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.form-inline</code></td>
+                            <td>Add class for left-aligned labels and inline-block controls for a compact layout.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.form-horizontal</code></td>
+                            <td>Right align labels and float them to the left to make them appear on the same line as controls.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.form-condensed</code></td>
+                            <td>Minimizes the spacing of lines (similar to tables).</td>
+                        </tr>
+                        <tr>
+                            <td><code>.form-dark</code></td>
+                            <td>Dark style for form elements. Apply the on any part or the whole the form.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr class="bs-docs-separator">
+                <h3>Default Boo style form </h3>
+                <p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
+                <form class="bs-docs-example">
+                    <fieldset>
+                        <legend>Legend</legend>
+                        <label>Label name</label>
+                        <input type="text" placeholder="Type something…">
+                    </fieldset>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <pre class="prettyprint linenums">
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Legend&lt;/legend&gt;
+    &lt;label&gt;Label name&lt;/label&gt;
+    &lt;input type="text" placeholder="Type something…"&gt;&lt;/fieldset&gt;
+  &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+                
+                <h3>Boo dark style</h3>
+                <p>Add class <code>.form-dark</code> to element <code>&lt;form&gt;</code> .</p>
+                <form class="bs-docs-example form-dark">
+                    <fieldset>
+                        <legend>Legend</legend>
+                        <label>Label name</label>
+                        <input type="text" placeholder="Type something…">
+                    </fieldset>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <pre class="prettyprint linenums">
+&lt;form class="form-dark"&gt;
+   ... 
+&lt;/form&gt;
+</pre>
+
+                <h3>Search form</h3>
+                <p>Add <code>.form-search</code> to the form and <code>.search-query</code> to the <code>&lt;input&gt;</code> for an extra-rounded text input.</p>
+                <form class="bs-docs-example form-search">
+                    <input type="text" class="input-medium search-query">
+                    <button type="submit" class="btn">Search</button>
+                </form>
+                <pre class="prettyprint linenums">
+&lt;form class="form-search"&gt;
+  &lt;input type="text" class="input-medium search-query"&gt;
+  &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+                <h3>Inline form</h3>
+                <p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
+                <form class="bs-docs-example form-inline">
+                    <input type="text" class="input-small" placeholder="Email">
+                    <input type="password" class="input-small" placeholder="Password">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Remember me </label>
+                    <button type="submit" class="btn">Sign in</button>
+                </form>
+                <pre class="prettyprint linenums">
+&lt;form class="form-inline"&gt;
+  &lt;input type="text" class="input-small" placeholder="Email"&gt;
+  &lt;input type="password" class="input-small" placeholder="Password"&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt; Remember me
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+</pre>  
+
+				<h3>Horizontal form</h3>
+                <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
+                <ul>
+                    <li>Add <code>.form-horizontal</code> to the form</li>
+                    <li>Wrap labels and controls in <code>.control-group</code></li>
+                    <li>Add <code>.control-label</code> to the label</li>
+                    <li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
+                </ul>
+                <form class="bs-docs-example form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail">Email</label>
+                        <div class="controls">
+                            <input type="text" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputPassword">Password</label>
+                        <div class="controls">
+                            <input type="password" id="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Remember me </label>
+                            <button type="submit" class="btn">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+                <pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;div class="controls"&gt;
+      &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox"&gt; Remember me
+      &lt;/label&gt;
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+ 
+                <hr class="bs-docs-separator">                
+                <h3>Boo style for form horizontal</h3>
+                <table class="table table-bordered">
+                    <colgroup>
+                    <col class="span1">
+                    <col class="span7">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><code>.form-condensed</code></td>
+                            <td>Minimizes the spacing of lines (similar to tables).</td>
+                        </tr>
+                        <tr>
+                            <td><code>.form-list</code></td>
+                            <td>use elements <code>&lt;ul&gt;</code> <code>&lt;li&gt;</code> instead of <code>&lt;div&gt;</code>. Can be applied to the element <code>&lt;div&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.list-bordered</code></td>
+                            <td>Combination with <code>.form-list .list-bordered</code>. Adds a border to control-group</td>
+                        </tr>
+                        <tr>
+                            <td><code>.dotted</code></td>
+                            <td>Style for dotted line to <code>.form-list .list-bordered .dotted</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.section-form</code></td>
+                            <td>replacement for legend to <code>.form-list</code>. Appli to <code>&lt;li&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form class="bs-docs-example form-dark form-horizontal" method="" action="" >
+                    <fieldset>
+                        <legend>Account edit form <small>Default legend</small></legend>
+                        <ul class="form-list label-left list-bordered dotted">                            
+                            <li class="control-group">
+                                <label class="control-label">Label name <span class="required">*</span></label>
+                                <div class="controls">
+                                    <input type="text" value="">
+                                </div>
+                            </li>
+                            <!-- // form item -->
+                            
+                            <li class="control-group">
+                                <label class="control-label">Label name <span class="required">*</span></label>
+                                <div class="controls">
+                                    <input type="text" value="">
+                                </div>
+                            </li>
+                            <!-- // form item -->
+                            
+                            <li class="control-group">
+                                <label class="control-label">Label name <span class="required">*</span></label>
+                                <div class="controls">
+                                    <input type="text" value="">
+                                </div>
+                            </li>
+                            <!-- // form item -->
+                            
+                            <li class="section-form">
+                                <h4>Contact info</h4>
+                            </li>
+                            <!-- // section form divider -->
+                            
+                            <li class="control-group">
+                                <label class="control-label">Label name <span class="required">*</span></label>
+                                <div class="controls">
+                                    <div class="input-append block">
+                                        <input type="text" value="">
+                                        <a class="btn fontello-icon-edit" type="button">button</a> </div>
+                                </div>
+                            </li>
+                            <!-- // form item -->
+                            
+                            <li class="control-group">
+                                <label class="control-label">Label name <span class="required">*</span></label>
+                                <div class="controls">
+                                    <input type="text" value="">
+                                </div>
+                            </li>
+                            <!-- // form item -->
+                            
+                        </ul>
+                    </fieldset>
+                    
+                    <!-- // fieldset Input -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-blue">Submit & Validate</button>
+                        <button class="btn cancel">Cancel</button>
+                    </div>
+                </form>
+                <pre class="prettyprint linenums">
+                &lt;form class="form-dark form-horizontal"&gt;
+                    &lt;fieldset&gt;
+                        &lt;legend&gt;Account edit form &lt;small&gt;Default legend&lt;/small&gt;&lt;/legend&gt;
+                        &lt;ul class="form-list label-left list-bordered dotted"&gt;                            
+                            &lt;li class="control-group"&gt;
+                                &lt;label class="control-label"&gt;Label name &lt;span class="required"&gt;*&lt;/span&gt;&lt;/label&gt;
+                                &lt;div class="controls"&gt;
+                                    &lt;input type="text" value=""&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;!-- // form item --&gt;
+                            
+                            &lt;li class="control-group"&gt; ... &lt;/li&gt;
+                            &lt;!-- // form item --&gt;
+                            
+                            &lt;li class="control-group"&gt; ... &lt;/li&gt;
+                            &lt;!-- // form item --&gt;
+                            
+                            &lt;li class="section-form"&gt;
+                                &lt;h4&gt;Contact info&lt;/h4&gt;
+                            &lt;/li&gt;
+                            &lt;!-- // section form divider --&gt;
+                            
+                            &lt;li class="control-group"&gt; ... &lt;/li&gt;
+                            &lt;!-- // form item --&gt;
+                            
+                            &lt;li class="control-group"&gt; ... &lt;/li&gt;
+                            &lt;!-- // form item --&gt;
+                            
+                        &lt;/ul&gt;
+                    &lt;/fieldset&gt;
+                    
+                    &lt;!-- // fieldset Input --&gt;
+                    &lt;div class="form-actions"&gt;
+                        &lt;button type="submit" class="btn btn-blue"&gt;Submit & Validate&lt;/button&gt;
+                        &lt;button class="btn cancel"&gt;Cancel&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;</pre>
+                
+                <hr class="bs-docs-separator">
+                <h2>Supported form controls</h2>
+                <p>Examples of Boo form controls supported in an example form layout <a href="../_bootstrap/docs/base-css.html#forms" target="_blank">bootstrap documentation</a></p>
+                
+                <h3>Boo Checkboxes and radios Boo style</h3>
+                <p>It uses a plugin uniform. Add class <code>.checkbox</code> or <code>.radio</code> to element</p>
+                <form class="bs-docs-example">
+                    <label class="checkbox">
+                        <input class="checkbox" type="checkbox" value="">
+                        Option one is this and that&mdash;be sure to include why it's great </label>
+                    <br>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Option one is this and that&mdash;be sure to include why it's great </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Option two can be something else and selecting it will deselect option one </label>
+                </form>
+                <pre class="prettyprint linenums">
+&lt;label class="checkbox"&gt;
+  &lt;input class="checkbox" type="checkbox" value=""&gt;
+  Option one is this and that&mdash;be sure to include why it's great
+&lt;/label&gt;
+
+&lt;label class="radio"&gt;
+  &lt;input class="radio" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+  Option one is this and that&mdash;be sure to include why it's great
+&lt;/label&gt;
+&lt;label class="radio" class="radio"&gt;
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+  Option two can be something else and selecting it will deselect option one
+&lt;/label&gt;
+</pre>
+                <p class="alert alert-info">More info to plugins section</p>
+                <h3>Selects</h3>
+                <p>It uses a plugin select2 or bootstrap selectpicker.</p>
+                <form class="bs-docs-example">
+                    <label>select</label>
+                    <select class="selecttwo span3">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <br>
+                    <label>select multiple</label>
+                    <select class="selecttwo span3" multiple="multiple">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <br>
+                    <label>select with search</label>
+                    <select class="selecttwo-s span3">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <br>
+                    <label>bootstrap selectpicker</label>
+                    <select class="selectpicker">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <br>
+                    <div class="row">
+                        <div class="selectpicker-block span3 clearfix">
+                            <label>selectpicker size</label>
+                            <select id="selectpicker2">
+                                <option value="1">item 1</option>
+                                <option value="2">item 2</option>
+                                <option value="3">item 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                </form>
+                <pre class="prettyprint linenums">
+&lt;select class="selecttwo span3"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select class="selecttwo span3" multiple="multiple"&gt;
+  ...
+&lt;/select&gt;
+
+&lt;select class="selectpicker"&gt;
+  ...
+&lt;/select&gt;
+</pre>
+                <p class="alert alert-info">More info to plugins section</p>
+                
+                <ul>
+                <li>Control sizing</li>
+                <li>Uneditable inputs</li>
+                <li>Form actions</li>
+                <li>Help text</li>
+                <li>Input focus</li>
+                <li>Disabled inputs</li>
+                <li>Validation states</li>
+                </ul>
+                <hr class="bs-docs-separator">
+                <p class="alert alert-info">For information, go to <a class="btn" href="../_bootstrap/docs/base-css.html#forms" target="_blank">bootstrap documentation</a></p>
+            </section>
+            
+            <!-- Buttons
+        	================================================== -->
+            <section id="buttons">
+                <div class="page-header">
+                    <h1>Buttons</h1>
+                </div>
+                <h2>Boo buttons</h2>
+                <p>We wanted to keep the original bootstrap button styles, so alternatives are available in boo style. 
+                Original <a href="../_bootstrap/docs/base-css.html#buttons" target="_blank">bootstrap buttons here</a></p>
+                <p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>class=""</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><button type="button" class="btn">Default</button></td>
+                            <td><code>btn</code></td>
+                            <td>Standard gray button with gradient</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-boo">Boo</button></td>
+                            <td><code>btn btn-boo</code></td>
+                            <td>Alternate to standard gray button with gradient</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-blue">Blue</button></td>
+                            <td><code>btn btn-blue</code></td>
+                            <td>Alternate to Provides extra visual weight and identifies the primary action in a set of buttons</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-turgu">Turgu</button></td>
+                            <td><code>btn btn-turgu</code></td>
+                            <td>Alternate to Used as an alternative to the default styles</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-green">Green</button></td>
+                            <td><code>btn btn-green</code></td>
+                            <td>Alternate to Indicates a successful or positive action</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-orange">Orange</button></td>
+                            <td><code>btn btn-orange</code></td>
+                            <td>Alternate to Indicates caution should be taken with this action</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-red">red</button></td>
+                            <td><code>btn btn-red</code></td>
+                            <td>Alternate to Indicates a dangerous or potentially negative action</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-navi">navi</button></td>
+                            <td><code>btn btn-navi</code></td>
+                            <td>Alternate to Alternate dark gray button, not tied to a semantic action or use</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-link">Link</button></td>
+                            <td><code>btn btn-link</code></td>
+                            <td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p class="alert alert-info">More examples to Boo button <a class="btn" href="../elements-button.html" target="_blank">elements-button.html</a> 
+                Setting for button <a class="btn" href="../_bootstrap/docs/base-css.html#buttons" target="_blank">Bootstrap buttons</a></p>
+                
+                
+            </section>            
+            
+        </div>
+    </div>
+</div>
+
+<!-- Footer
+    ================================================== -->
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <ul class="unstyled">
+            <li>Created: <strong>08.12.2012</strong> </li>
+            <li> Latest Update: <strong>09.01.2013</strong> </li>
+            <li> By: Petr Marasek</li>
+            <li> email: gootoboo@gmail.com </li>
+        </ul>
+        <ul class="footer-links">
+            <li><a href="http://themeforest.net/">Themeforest</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://themes.yac.cz/boo/dashboard-one.html">Demo</a></li>
+            <li class="muted">&middot;</li>
+            <li class="muted">Built on Twitter Bootstrap documentation</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script> 
+<script src="assets/js/bootstrap-carousel.js"></script> 
+<script src="assets/js/bootstrap-typeahead.js"></script> 
+<script src="assets/js/bootstrap-affix.js"></script> 
+<!-- main js --> 
+<script src="assets/js/application.js"></script>
+
+<!-- plugins -->
+<script src="../assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script>
+<script src="../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../assets/plugins/bootstrap-daterangepicker/js/date.js"></script>
+<script src="../assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script>
+<script src="../assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script src="../assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="../assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script>
+<script src="../assets/plugins/bootstrap-select/bootstrap-select.js"></script>
+<script src="../assets/plugins/uniform/jquery.uniform.js"></script>
+<script src="../assets/plugins/select2/select2.min.js"></script>
+<script src="../assets/plugins/counter/jquery.counter.js"></script>
+<script src="../assets/plugins/inputmask/jquery.inputmask.js"></script> 
+<script src="../assets/plugins/inputmask/jquery.inputmask.extensions.js"></script>
+<script src="../assets/plugins/qtip2/dist/jquery.qtip.min.js"></script>
+<script src="../assets/plugins/xbreadcrumbs/xbreadcrumbs.js"></script>
+
+<script src="../assets/plugins/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="../assets/plugins/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="../assets/plugins/datatables/plugin/jquery.dataTables.columnFilter.js"></script>
+<script src="../assets/js/demo/demo-jquery.dataTables.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+        $('#datepicker').datepicker();
+		
+		$('.timepicker').timepicker();
+		
+		$('#reservation').daterangepicker();
+
+        $('#reportrange').daterangepicker({
+                ranges: {
+                        'Today': ['today', 'today'],
+                                'Yesterday': ['yesterday', 'yesterday'],
+                                'Last 7 Days': [Date.today().add({
+                                days: -6
+                        }), 'today'],
+                                'Last 30 Days': [Date.today().add({
+                                days: -29
+                        }), 'today'],
+                                'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
+                                'Last Month': [Date.today().moveToFirstDayOfMonth().add({
+                                months: -1
+                        }), Date.today().moveToFirstDayOfMonth().add({
+                                days: -1
+                        })]
+                },
+                opens: 'left',
+                format: 'MM/dd/yyyy',
+                separator: ' to ',
+                startDate: Date.today().add({
+                        days: -29
+                }),
+                endDate: Date.today(),
+                minDate: '01/01/2012',
+                maxDate: '12/31/2013',
+                locale: {
+                        applyLabel: 'Submit',
+                        fromLabel: 'From',
+                        toLabel: 'To',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                        monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                        firstDay: 1
+                },
+                showWeekNumbers: true,
+                buttonClasses: ['btn-danger']
+        },
+
+        function (start, end) {
+                $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+        });
+
+        //Set the initial state of the picker label
+        $('#reportrange span').html(Date.today().add({
+                days: -29
+        }).toString('MMMM d, yyyy') + ' - ' + Date.today().toString('MMMM d, yyyy'));
+		
+		$('.colorpicker').colorpicker();
+		
+		$('tbody.rowlink').rowlink()
+		
+		$('.selectpicker').selectpicker();
+		$('#selectpicker2').selectpicker({
+			btnStyle: 'btn-info'
+		});
+		
+		$("input.checkbox, input.radio, input:file.input-file").uniform({
+                radioClass: 'radios' // edited class - the original radio
+        });
+		
+		$(".selecttwo").select2({
+                minimumResultsForSearch: 6,
+				width: "off"
+        });
+        $(".selecttwo-s").select2();
+		
+        $(".selecttwo-full").select2({
+				minimumResultsForSearch: 6,
+                width: "100%"
+        });
+		
+		$(".selecttwo-full-s").select2({
+				width: "100%"
+        });
+		$("#select-tag").select2({
+			tags:["brown", "red", "green", "blue"]
+		});
+		
+		$(".limiteChar15").counter({ goal: 15 });
+        $(".limiteWords15").counter({
+                goal: 15,
+                type: 'word',
+                msg: 'words left before you fall into a pit of emptiness.'
+        });
+		
+		$("#phone").inputmask("mask", {"mask": "(999) 999-9999"});
+		
+		// GTIP - TOOLTIP
+        // ------------------------------------------------------------------------------------------------ * -->
+        var shared = {
+                position: {
+                        viewport: $(window)
+                },
+                style: {
+                        tip: true,
+                        classes: 'ui-tooltip-shadow ui-tooltip-tipsy'
+                }
+        };
+
+        $('.tip-tl').qtip($.extend({}, shared, {
+                position: {
+                        my: 'bottom right',
+                        at: 'top left'
+                }
+        }));
+        $('.tip-tc, .tip').qtip($.extend({}, shared, {
+                position: {
+                        my: 'bottom center',
+                        at: 'top center'
+                }
+        }));
+        $('.tip-tr').qtip($.extend({}, shared, {
+                position: {
+                        my: 'bottom left',
+                        at: 'top right'
+                }
+        }));
+        $('.tip-bl').qtip($.extend({}, shared, {
+                position: {
+                        my: 'top right',
+                        at: 'bottom left'
+                }
+        }));
+        $('.tip-bc').qtip($.extend({}, shared, {
+                position: {
+                        my: 'top center',
+                        at: 'bottom center'
+                }
+        }));
+        $('.tip-br').qtip($.extend({}, shared, {
+                position: {
+                        my: 'top left',
+                        at: 'bottom right'
+                }
+        }));
+        $('.tip-rt').qtip($.extend({}, shared, {
+                position: {
+                        my: 'left bottom',
+                        at: 'right top'
+                }
+        }));
+        $('.tip-rc').qtip($.extend({}, shared, {
+                position: {
+                        my: 'left center',
+                        at: 'right center'
+                }
+        }));
+        $('.tip-rb').qtip($.extend({}, shared, {
+                position: {
+                        my: 'left top',
+                        at: 'right bottom'
+                }
+        }));
+        $('.tip-lt').qtip($.extend({}, shared, {
+                position: {
+                        my: 'right bottom',
+                        at: 'left top'
+                }
+        }));
+        $('.tip-lc').qtip($.extend({}, shared, {
+                position: {
+                        my: 'right center',
+                        at: 'left center'
+                }
+        }));
+        $('.tip-lb').qtip($.extend({}, shared, {
+                position: {
+                        my: 'right top',
+                        at: 'left bottom'
+                }
+        }));
+		
+		$('#breadcrumbs').xBreadcrumbs();
+
+});
+</script>
+
+</body>
+</html>

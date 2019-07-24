@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Boo Admin - Gallery 04</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+    <script src="assets/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body class="sidebar-left ">
+<div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="brand" href="javascript:void(0);"><img src="assets/img/demo/logo-brand.png"></a>
+                        <div class="search-global">
+                            <input id="globalSearch" class="search search-query input-medium" type="search">
+                            <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav user-menu visible-desktop">
+                                <li><a class="btn-glyph fontello-icon-edit tip-bc" href="javascript:void(0);" title="Messages"><span class="badge badge-important">8</span></a></li>
+                                <li><a class="btn-glyph fontello-icon-mail-1 tip-bc" href="javascript:void(0);" title="Emails"></a></li>
+                                <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Support"><span class="badge badge-important">4</span></a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li> <a href="dashboard-one.html">Dashboard</a> </li>
+                                <li class="active"> <a href="javascript:void(0);">Components</a> </li>
+                                <li> <a href="component-fullcalendar-demo.html"><span class="fontello-icon-calendar"></span>Calendar</a> </li>
+                                <li> <a href="javascript:void(0);"><span class="fontello-icon-users"></span>Contacts</a> </li>
+                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="component-form-demo.html">Demo Form</a></li>
+                                        <li><a href="component-widgets-remember.html">Remember</a></li>
+                                        <li><a href="component-widgets-users.html">User List</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">Next Update</li>
+                                        <li><a href="javascript:void(0);">Contacts</a></li>
+                                        <li><a href="javascript:void(0);">Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer">
+                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                <!-- // Resposive navigation -->
+                <div class="breadcrumbs-nav hidden-phone">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                        <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Table</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">Boo Admin </li>
+                    </ul>
+                </div>
+                <!-- // breadcrumbs --> 
+                
+            </div>
+            <!-- // drawer --> 
+            
+        </div>
+    </div>
+    <!-- // header-container -->
+    
+    <div id="main-container">
+        <div id="main-sidebar" class="sidebar sidebar-inverse">
+            <div class="sidebar-item">
+                <div class="media profile">
+                    <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
+                        <p class="data">Last Access: 16 May 15:30</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // sidebar item - profile -->
+            
+            <ul id="mainSideMenu" class="nav nav-list nav-side">
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor"></span> <i class="chevron fontello-icon-right-open-3"></i> Dashboards </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accDash">
+                        <li> <a href="dashboard-one.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 1 </a> </li>
+                        <li> <a href="dashboard-two.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 2 </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Dashboard -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon aweso-icon-list-alt"></span><i class="chevron fontello-icon-right-open-3"></i> Form </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accForms">
+                        <li> <a href="component-form-demo.html"> <i class="fontello-icon-right-dir"></i> Demo Form </a> </li>
+                        <li> <a href="component-form-elements.html"> <i class="fontello-icon-right-dir"></i> Form Element </a> </li>
+                        <li> <a href="component-form-extension.html"> <i class="fontello-icon-right-dir"></i> Form Extension</a> </li>
+                        <li> <a href="component-form-wizard.html"> <i class="fontello-icon-right-dir"></i> Form Wizard</a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Forms -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accComponents" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Components </a> </div>
+                    <ul class="accordion-content nav nav-list collapse in" id="accComponents">
+                        <li> <a href="elements-notification.html"> <i class="fontello-icon-right-dir"></i> Notification </a> </li>
+                        <li> <a href="component-rangeslider.html"> <i class="fontello-icon-right-dir"></i> Rangeslider </a> </li>
+                        <li> <a href="component-file-upload.html"> <i class="fontello-icon-right-dir"></i> File upload </a> </li>
+                        <li class="active"> <a href="component-gallery.html"> <i class="fontello-icon-right-dir"></i> Gallery &amp; Image </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Components -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Tables </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accTables">
+                        <li> <a href="component-table.html"> <i class="fontello-icon-right-dir"></i> Base Table </a> </li>
+                        <li> <a href="component-table-boo.html"> <i class="fontello-icon-right-dir"></i> Boo Table </a> </li>
+                        <li> <a href="component-table-datatable.html"> <i class="fontello-icon-right-dir"></i> DataTable </a> </li>
+                        <!-- <li> <a href="component-table-editable.html"> <i class="fontello-icon-right-dir"></i> EdiTable </a> </li> -->
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Tables -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accStatistics" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-chart"></span> <i class="chevron fontello-icon-right-open-3"></i> Statistics </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accStatistics">
+                        <li> <a href="statistic-flot.html"> <i class="fontello-icon-right-dir"></i> Charts </a> </li>
+                        <li> <a href="statistic-sparkline.html"> <i class="fontello-icon-right-dir"></i> Sparklines </a> </li>
+                        <li> <a href="statistic-circle.html"> <i class="fontello-icon-right-dir"></i> Circle </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Statistics -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accWidgets" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon  fontello-icon-window"></span> <i class="chevron fontello-icon-right-open-3"></i> Widgets </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accWidgets">
+                        <li> <a href="component-widget-style.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Style </a> </li>
+                        <li> <a href="component-widget-custom.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Custom </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Widgets -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accButtons" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-puzzle"></span> <i class="chevron fontello-icon-right-open-3"></i> UI Elements </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accButtons">
+                        <li> <a href="elements-button.html"> <i class="fontello-icon-right-dir"></i> Button </a> </li>
+                        <li> <a href="elements-icon-font.html"> <i class="fontello-icon-right-dir"></i> Iconic fonts </a> </li>
+                        <li> <a href="elements-icon-fugue-demo.html"> <i class="fontello-icon-right-dir"></i> Icon </a> </li>
+                        <li> <a href="elements-wells.html"> <i class="fontello-icon-right-dir"></i> Wells </a> </li>
+                        <li> <a href="elements-tabs.html"> <i class="fontello-icon-right-dir"></i> Tabs </a> </li>
+                        <li> <a href="elements-modals.html"> <i class="fontello-icon-right-dir"></i> Modal </a> </li>
+                        <li> <a href="elements-progressbar.html"> <i class="fontello-icon-right-dir"></i> Progressbar </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu UI Elements -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accCalendar" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Calendar </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accCalendar">
+                        <li> <a href="component-fullcalendar-demo.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Demo </a> </li>
+                        <li> <a href="component-fullcalendar.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Style </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Calendar -->
+            </ul>
+            <!-- // sidebar menu -->
+            
+            <div class="sidebar-item"></div>
+            <!-- // sidebar item --> 
+            
+        </div>
+        <!-- // sidebar -->
+        
+        <div id="main-content" class="main-content container-fluid">
+            <div class="row-fluid page-head">
+                <h2 class="page-title"><i class="fontello-icon-picture-3"></i> Image gallery <small>demonstration of  possible compilation</small></h2>
+                <p class="pagedesc">Automatic generation of thumbnails according to the setting, paging, Viewing, Editing - Take advantage of plugins. </p>
+            </div>
+            <!-- // page head -->
+            
+            <div id="page-content" class="page-content">
+                <div class="navbar navbar-page">
+                    <div class="navbar-inner">
+                        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                <ul class="nav">
+                                    <li><a href="component-gallery.html">Thumbnail</a></li>
+                                    <li><a href="component-gallery-grid.html">Grid</a></li>
+                                    <li><a href="component-gallery-01.html">Gall 1</a></li>
+                                    <li><a href="component-gallery-02.html">Gall 2</a></li>
+                                    <li><a href="component-gallery-03.html">Gall 3</a></li>
+                                    <li class="active"><a href="component-gallery-04.html">Gall 4</a></li>
+                                    <li class="divider-vertical"></li>
+                                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Select demo page <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="component-gallery-01.html">Gallery 01</a></li>
+                                            <li><a href="component-gallery-02.html">Gallery 02</a></li>
+                                            <li><a href="component-gallery-03.html">Gallery 03</a></li>
+                                            <li class="active"><a href="component-gallery-04.html">Gallery 04</a></li>
+                                            <li class="divider"></li>
+                                            <li class="nav-header">Image Style</li>
+                                            <li><a href="#">Gallery components</a></li>
+                                            <li><a href="#">Gallery thumb style</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider-vertical"></li>
+                                </ul>
+                                <ul class="nav pull-right">
+                                	<li><button id="start-slideshow" class="btn btn-green" data-slideshow="2500" data-target="#modal-gallery" data-selector="#gallery a[rel=gallery]">Start Slideshow</button> <button id="toggle-fullscreen" class="btn btn-blue" data-toggle="button">Toggle Fullscreen</button></li>
+                                </ul>
+                                
+                            </div>
+                            <!-- // nav-collapse --> 
+                        </div>
+                    </div>
+                    <!-- /navbar-inner --> 
+                </div>
+                <!-- /navbar -->
+                <section>
+                    <div class="row-fluid">
+                        <div class="span5 grider-item">
+                            <h4 class="simple-header"><a class="btn btn-green pull-right">edit gallery</a><i class="fontello-icon-edit"></i> Edit item</h4>
+                            <div class="well well-nice">
+                                <div id="previewImage" class="preview-image"> <img src="assets/img/demo/gallery/gall_01/image_01.jpg"> </div>
+                                <form id="formNextAccountSettings" class="form-horizontal form-condensed form-dark label-left no-margin-bootom">
+                                    <fieldset>
+                                        <ul class="form-list form-datapreview">
+                                            <li class="control-group">
+                                                <label for="fileName" class="control-label">File name</label>
+                                                <div class="controls"> <span>image_125487954512_1254.jpg</span> </div>
+                                            </li>
+                                            <!-- // form item -->
+                                            
+                                            <li class="control-group">
+                                                <label for="fileType" class="control-label">File type</label>
+                                                <div class="controls"> <span>image - .jpg</span> </div>
+                                            </li>
+                                            <!-- // form item -->
+                                            
+                                            <li class="control-group">
+                                                <label for="fileDateUpload" class="control-label">Upload date</label>
+                                                <div class="controls"> <span>December 21, 2012</span> </div>
+                                            </li>
+                                            <!-- // form item -->
+                                            
+                                            <li class="control-group">
+                                                <label for="fileDimensions" class="control-label">Dimensions</label>
+                                                <div class="controls"> <span>1200 x 980</span> </div>
+                                            </li>
+                                            <!-- // form item -->
+                                        </ul>
+                                        <hr class="margin-0x">
+                                    </fieldset>
+                                    <!-- // fieldset Input -->
+                                    
+                                    <fieldset>
+                                        <ul class="form-list">
+                                            <li class="control-group">
+                                                <label for="fileTile" class="control-label">Image Title</label>
+                                                <div class="controls">
+                                                    <input id="fileTile" class="input-block-level" type="text" name="fileTile" value="Image 01">
+                                                </div>
+                                            </li>
+                                            <!-- // form item -->
+                                            
+                                            <li class="control-group">
+                                                <label for="fileAltText" class="control-label">Alternate Text</label>
+                                                <div class="controls">
+                                                    <input id="fileAltText" class="input-block-level" type="text" name="fileAltText" value="Image 01">
+                                                </div>
+                                            </li>
+                                            <!-- // form item -->
+                                            
+                                            <li class="control-group">
+                                                <label for="fileCaption" class="control-label">Caption</label>
+                                                <div class="controls">
+                                                    <input id="fileCaption" class="input-block-level" type="text" name="fileCaption" value="Wallpaper image 01">
+                                                </div>
+                                            </li>
+                                            <!-- // form item -->
+                                            
+                                            <li class="control-group">
+                                                <label for="fileDescript" class="control-label">Image Description</label>
+                                                <div class="controls">
+                                                    <textarea id="fileDescript" class="input-block-level auto" rows="3" placeholder="Enter text ...">Lorem ipsum dolor sit amet consectetuer lacinia pede</textarea>
+                                                </div>
+                                            </li>
+                                            <!-- // form item -->
+                                            
+                                            <li class="control-group">
+                                                <label for="fileToGallery" class="control-label">Gallery</label>
+                                                <div class="controls">
+                                                    <select id="fileToGallery" class="selectpicker input-medium" data-style="btn-info"  name="fileToGallery">
+                                                        <option value="1">Gallery 01</option>
+                                                        <option value="2">Gallery 02</option>
+                                                        <option value="3">Gallery 03</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <!-- // form item -->
+                                            
+                                            <li class="control-group">
+                                                <label for="fileTag" class="control-label">Tag for item</label>
+                                                <div class="controls">
+                                                    <input id="fileTag" class="" type="text" name="fileTag" />
+                                                </div>
+                                            </li>
+                                            <!-- // form item -->
+                                            
+                                        </ul>
+                                    </fieldset>
+                                    <!-- // fieldset Input -->
+                                    
+                                    <div class="form-actions no-margin-bootom">
+                                        <button type="submit" class="btn btn-green">Save data</button>
+                                        <button class="btn cancel">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- // column -->
+                        
+                        <div class="span7 grider-item gallery-well gallery-small">
+                            <h4 class="simple-header">
+                                <form class="form-inline pull-right margin-00" action="">
+                                    <label>items per page: </label>
+                                    <select id="showItem" class="selectpicker" data-style="btn-boo">
+                                        <option>12</option>
+                                        <option>16</option>
+                                        <option>20</option>
+                                        <option>24</option>
+                                        <option>28</option>
+                                    </select>
+                                </form>
+                                <i class="fontello-icon-picture"></i> Gallery name</h4>
+                            
+                            <!-- class for thumbnail size - square75 square100 square150 square200 square260 horizontal75 horizontal100 horizontal200 vertical75 vertical100 vertical200 -->
+                            <ul id="gallery" class="thumbnails thumbnails-inline horizontal200" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="a[rel=gallery]">
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_01.jpg" title="image 01" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_01.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_01.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_02.jpg" title="image 02" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_02.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_02.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_03.jpg" title="image 03" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_03.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_03.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_04.jpg" title="image 04" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_04.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_04.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_05.jpg" title="image 05" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_05.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_05.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_06.jpg" title="image 06" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_06.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_06.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_07.jpg" title="image 07" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_07.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_07.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_08.jpg" title="image 08" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_08.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_08.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_09.jpg" title="image 09" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_09.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_09.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_10.jpg" title="image 10" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_10.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_10.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_11.jpg" title="image 11" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_11.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_11.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_12.jpg" title="image 12" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_12.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_12.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_13.jpg" title="image 13" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_13.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_13.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_14.jpg" title="image 14" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_14.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_14.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_15.jpg" title="image 15" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_15.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_15.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_16.jpg" title="image 16" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_16.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_16.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_17.jpg" title="image 17" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_17.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_17.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_18.jpg" title="image 18" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_18.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_18.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_19.jpg" title="image 19" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_19.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_19.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_20.jpg" title="image 20" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_20.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_20.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_21.jpg" title="image 21" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_21.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_21.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_22.jpg" title="image 22" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_22.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_22.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_23.jpg" title="image 23" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_23.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_23.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_24.jpg" title="image 24" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_24.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_24.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_25.jpg" title="image 25" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_25.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_25.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_26.jpg" title="image 26" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_26.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_26.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                                <li class="thumbnail">
+                                    <div class="nailthumb-container show-loading"> <a href="assets/img/demo/gallery/gall_01/image_27.jpg" title="image 27" rel="gallery"></a> </div>
+                                    <div class="gall-caption"> <span class="data-icon"> <span class="fontello-icon-eye-1">56</span> <span class="fontello-icon-heart">14</span> </span> <span class="menu-icon"> <a href="assets/img/demo/gallery/gall_01/image_27.jpg" class="btn-glyph edit fontello-icon-edit"></a> <a href="assets/img/demo/gallery/gall_01/image_27.jpg" class="btn-glyph delete fontello-icon-trash-4"></a> </span> </div>
+                                </li>
+                                <!-- // gallery item -->
+                                
+                            </ul>
+                            
+                            <!-- pagination -->
+                            <div class="pagination pagination-boo margin-right10">
+                                <div class="gall-legend pull-left"> 
+                                    <!-- Item oriented legend --> 
+                                    <strong id="legend2"></strong> </div>
+                                <ul class="holder pull-right">
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- // column --> 
+                        
+                    </div>
+                    <!-- // Example row --> 
+                    
+                </section>
+            </div>
+            <!-- // page content --> 
+            
+        </div>
+        <!-- // main-content --> 
+        
+    </div>
+    <!-- // main-container  -->
+    
+    <footer id="footer-fix">
+        <div id="footer-sidebar" class="footer-sidebar">
+            <div class="navbar">
+                <div class="btn-toolbar"> <a class="btn btn-glyph btn-link" href="javascript:void(0);"><i class="fontello-icon-up-open-1"></i></a> </div>
+            </div>
+        </div>
+        <!-- // footer sidebar -->
+        
+        <div id="footer-content" class="footer-content">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <ul class="nav pull-left">
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnToggleSidebar" class="btn-glyph fontello-icon-resize-full-2 tip hidden-phone" href="javascript:void(0);" title="show hide sidebar"></a></li>
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnChangeSidebar" class="btn-glyph fontello-icon-login tip hidden-phone" href="javascript:void(0);" title="change sidebar position"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnChangeSidebarColor" class="btn-glyph fontello-icon-palette tip" href="javascript:void(0);" title="change sidebar color"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cw" href="javascript:void(0);"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="fontello-icon-home-3" href="dashboard-one.html"></a></li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-help-2 tip" href="javascript:void(0);" title="help to page"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cog-4 tip" href="javascript:void(0);" title="settings app"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnLogout" class="btn-glyph fontello-icon-logout-1 tip" href="javascript:void(0);" title="logout"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnScrollup" class="scrollup btn-glyph fontello-icon-up-open-1" href="javascript:void(0);"><span class="hidden-phone">Scroll</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // footer content --> 
+        
+    </footer>
+    <!-- // footer-fix  --> 
+    
+</div>
+<!-- // page-container  -->
+
+<div class="modal-container"> <!-- You can put your modal definitions here but it is not required --> 
+    
+    <!-- modal-gallery is the modal dialog used for the image gallery -->
+    <div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+        <div class="modal-header"> <a class="close" data-dismiss="modal"><i class="fontello-icon-cancel-1"></i></a>
+            <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image"></div>
+        </div>
+        <div class="modal-footer"> 
+        	<a class="btn btn-navi text-gold modal-prev"><i class="fontello-icon-left-open"></i> Previous</a> 
+            <a class="btn btn-inverse text-gold btn-glyph modal-play modal-slideshow tip-tc" data-slideshow="5000" title="Play slideshow"> <i class="fontello-icon-play"></i></a> 
+            <a class="btn btn-inverse text-gold btn-glyph modal-download tip-tc" target="_blank" title="Downloads this image"> <i class="fontello-icon-download"></i></a> 
+            <a class="btn btn-navi text-gold  modal-next">Next image <i class="fontello-icon-right-open"></i></a> 
+        </div>
+    </div>
+    
+</div>
+
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/lib/jquery.js"></script> 
+<script src="assets/js/lib/jquery-ui.js"></script>
+<script src="assets/js/lib/jquery.cookie.js"></script> 
+<script src="assets/js/lib/jquery.date.js"></script> 
+<script src="assets/js/lib/jquery.mousewheel.js"></script> 
+<script src="assets/js/lib/jquery.load-image.min.js"></script>
+<script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+
+<!-- Plugins Bootstrap -->
+<script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+<script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script> 
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+<script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+<script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+<script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+<script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+<script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+<script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+ 
+
+<!-- Plugins Custom - Only example --> 
+<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>
+
+<!-- Plugins Custom - System --> 
+<script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+<script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+<!-- Plugins Custom - System info -->
+<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+<!-- Plugins Custom - Content -->
+<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+<!-- Plugins Custom - Component -->
+<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+<!-- Plugins Custom - Form -->
+<script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+<!-- Plugins Custom - Gallery --> 
+<script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+<script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+ 
+<!-- Plugins Tables --> 
+<script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+<!-- Plugins data visualization --> 
+<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+<script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/core.js"></script> 
+<script src="assets/js/application.js"></script> 
+
+<!-- Only This Demo Page -->
+<script type="text/javascript">
+$(document).ready(function () {
+        /* initiate plugin jPage */
+        $("ul.holder").jPages({
+                containerID: "gallery",
+                perPage: 12,
+                previous: "previous",
+                next: "next",
+                callback: function (pages, items) {
+                        $("#legend2").html(items.range.start + " - " + items.range.end + " of " + items.count);
+                }
+        });
+
+        /* on select change */
+        $("#showItem").change(function () {
+                var newPerPage = parseInt($(this).val());
+                $("ul.holder").jPages("destroy").jPages({
+                        containerID: "gallery",
+                        perPage: newPerPage
+                });
+        });
+
+        $('#gallery .nailthumb-container.show-loading').nailthumb({
+                titleWhen: 'hover',
+                animationTime: 3000,
+                replaceAnimation: 'fade',
+                imageFromWrappingLink: true,
+                onStart: function (container) {
+                        container.showLoading({
+                                'overlayWidth': 30, //null
+                                'overlayHeight': 30 //null
+                        });
+                },
+                onFinish: function (container) {
+                        container.hideLoading();
+                }
+        });
+
+        $("#gallery a.edit").click(function () {
+                $("#previewImage").html($("<img>").attr("src", this.href));
+                return false;
+
+        });
+
+        // Start slideshow button:
+        $('#start-slideshow').button().click(function () {
+                var options = $(this).data(),
+                        modal = $(options.target),
+                        data = modal.data('modal');
+                if(data) {
+                        $.extend(data.options, options);
+                }
+                else {
+                        options = $.extend(modal.data(), options);
+                }
+                modal.find('.modal-slideshow').find('i')
+                        .removeClass('fontello-icon-play')
+                        .addClass('fontello-icon-pause');
+                modal.modal(options);
+        });
+
+        // Toggle fullscreen button:
+        $('#toggle-fullscreen').button().click(function () {
+                var button = $(this),
+                        root = document.documentElement;
+                if(!button.hasClass('active')) {
+                        $('#modal-gallery').addClass('modal-fullscreen');
+                        if(root.webkitRequestFullScreen) {
+                                root.webkitRequestFullScreen(
+                                window.Element.ALLOW_KEYBOARD_INPUT);
+                        }
+                        else if(root.mozRequestFullScreen) {
+                                root.mozRequestFullScreen();
+                        }
+                }
+                else {
+                        $('#modal-gallery').removeClass('modal-fullscreen');
+                        (document.webkitCancelFullScreen || document.mozCancelFullScreen || $.noop).apply(document);
+                }
+        });
+
+        // Only demo form Tag
+        var fileTagData = [{
+                id: "Storm",
+                text: "Storm"
+        }, {
+                id: "Scenic",
+                text: "Scenic"
+        }, {
+                id: "Lakes",
+                text: "Lakes"
+        }, {
+                id: "Rivers",
+                text: "Rivers"
+        }, {
+                id: "Forest",
+                text: "Forest"
+        }, {
+                id: "Flowers",
+                text: "Flowers"
+        }]
+        $("#fileTag").select2({
+                tags: fileTagData,
+                createSearchChoice: function (term, data) {
+                        if($(data).filter(function () {
+                                return this.text.localeCompare(term) === 0;
+                        }).length === 0) {
+                                return {
+                                        id: term,
+                                        text: term
+                                };
+                        }
+                },
+                width: "100%",
+                multiple: true,
+                placeholder: "select or enter tag",
+                tokenSeparators: [",", " "]
+        });
+
+
+});
+</script>
+</body>
+</html>

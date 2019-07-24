@@ -1,0 +1,698 @@
+<!-- BEGIN DASHBOARD HEADER -->
+<div class="ks-page-header"> <!-- add "ks-header-with-addon" class if you need an addon -->
+    <section class="ks-title">
+        <h3>Dashboard</h3>
+
+        <div class="ks-controls">
+            <nav class="breadcrumb ks-default">
+                <a class="breadcrumb-item ks-breadcrumb-icon" href="index.html">
+                    <span class="la la-home ks-icon"></span>
+                </a>
+                <span class="breadcrumb-item active" href="#">Dashboard</span>
+            </nav>
+
+            <!--<button class="btn btn-outline-primary ks-light ks-header-addon-block-toggle" data-block-toggle=".ks-header-with-addon > .ks-addon">Addon</button>-->
+        </div>
+    </section>
+    <!-- Uncomment if you need an addon
+    <section class="ks-addon">
+        <div class="btn-group ks-addon-block" data-toggle="buttons">
+            <label class="btn btn-outline-primary ks-light">
+                <input type="radio" name="options" autocomplete="off"> Today
+            </label>
+            <label class="btn btn-outline-primary ks-light">
+                <input type="radio" name="options" autocomplete="off"> Week
+            </label>
+            <label class="btn btn-outline-primary ks-light active">
+                <input type="radio" name="options" autocomplete="off" checked> Month
+            </label>
+            <label class="btn btn-outline-primary ks-light">
+                <input type="radio" name="options" autocomplete="off"> Year
+            </label>
+        </div>
+
+        <div class="ks-addon-block ks-addon-actions">
+            <span class="ks-page-header-text">
+                <span class="ks-icon la la-undo"></span> 5 minutes ago
+            </span>
+            <button class="btn btn-success">
+                <span class="la la-plus ks-icon ks-sm"></span>
+                <span class="ks-text">Add widget</span>
+            </button>
+            <button class="btn btn-outline-primary ks-light">
+                <span class="la la-pencil ks-icon ks-sm"></span>
+                <span class="ks-text">Edit</span>
+            </button>
+        </div>
+    </section>
+    -->
+</div>
+<!-- END DASHBOARD HEADER -->
+
+<!-- BEGIN DASHBOARD CONTENT -->
+<div class="ks-page-content">
+    <div class="ks-page-content-body">
+        <div class="container-fluid ks-rows-section">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="ks-dashboard-widget ks-widget-amount-statistics ks-info">
+                                <div class="ks-statistics">
+                                    <span class="ks-amount" data-count-up="3119">0</span>
+                                    <span class="ks-text">total sales gross</span>
+                                </div>
+                                <div class="ks-percent ks-down"><span class="ks-text">5%</span></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="ks-dashboard-widget ks-widget-amount-statistics ks-success">
+                                <div class="ks-statistics">
+                                    <span class="ks-amount" data-count-up="8201">0</span>
+                                    <span class="ks-text">unique visitors</span>
+                                </div>
+                                <div class="ks-percent ks-up"><span class="ks-text">6%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 ks-draggable-column">
+                            <div id="ks-bar-chart-panel" class="card panel" data-dashboard-widget>
+                                <h5 class="card-header">
+                                    Bar chart
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </h5>
+                                <div class="card-block" data-widget-content>
+                                    <div id="ks-bar-chart" data-height="260"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 ks-draggable-column">
+                            <div class="card panel panel-table" data-dashboard-widget>
+                                <h5 class="card-header">
+                                    Trends
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </h5>
+                                <div class="card-block ks-scrollable" data-height="290" data-widget-content>
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th width="1">#</th>
+                                            <th>Search Terms</th>
+                                            <th width="100">Views</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td scope="row">1</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">2</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">3</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">4</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">5</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">6</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">7</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">8</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">9</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">10</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 ks-draggable-column">
+                            <div class="card panel ks-widget ks-widget-followers" data-dashboard-widget>
+                                <div class="card-header">
+                                    New Followers
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-block ks-scrollable" data-height="236" data-widget-content>
+                                    <div class="ks-wrapper">
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-success">Unfollow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-2.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-3.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-4.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-11.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-10.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-5.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card panel ks-widget ks-widget-to-do-list" data-dashboard-widget>
+                                <div class="card-header">
+                                    To Do List
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-block" data-widget-content>
+                                    <div class="ks-header">
+                                        Remaining 3 of 5
+                                        <button class="btn btn-primary ks-light">Archive</button>
+                                    </div>
+                                    <div class="ks-body ks-scrollable" data-height="140">
+                                        <ul class="ks-wrapper">
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c1" type="checkbox" class="custom-control-input">
+                                                    <label class="custom-control-label" for="c1">Android app design</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c2" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c2">iOS app design</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c3" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c3">Need to make a wireframe</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c4" type="checkbox" class="custom-control-input">
+                                                    <label class="custom-control-label" for="c4">Android app design</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c5" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c5">iOS app design</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c6" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c6">Need to make a wireframe</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c7" type="checkbox" class="custom-control-input">
+                                                    <label class="custom-control-label" for="c7">Dinner with a kids at 8:30 PM</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task ks-completed">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c8" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c8">Grocery shopping</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task ks-completed">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c9" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c9">Need to make a wireframe</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <form class="ks-footer">
+                                        <input type="text" class="form-control" placeholder="Add a new task...">
+                                        <button class="btn btn-primary">Add</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 ks-draggable-column">
+                            <div class="card ks-widget ks-widget-overview">
+                                <div class="ks-body">
+                                    <h5 class="ks-header">Account overview</h5>
+
+                                    <ul class="ks-items">
+                                        <li class="ks-item">
+                                            <span class="la la-building ks-icon"></span>
+                                            <span class="ks-text">6 properties</span>
+                                        </li>
+                                        <li class="ks-item">
+                                            <span class="la la-users ks-icon"></span>
+                                            <span class="ks-text">12 properties</span>
+                                        </li>
+                                        <li class="ks-item">
+                                            <span class="la la-envelope ks-icon"></span>
+                                            <span class="ks-text">3 unread</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ks-footer">
+                                    <div class="ks-info">
+                                        <span class="ks-name">Premium</span>
+                                        <div class="ks-datetime">to september 26, 2016</div>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-info ks-icon"></span></a>
+                                </div>
+                            </div>
+                            <div class="card panel ks-widget ks-dashboard-widget ks-widget-profile-default">
+                                <h5 class="card-header">
+                                    Profile v1
+                                </h5>
+                                <div class="card-block">
+                                    <div class="ks-user">
+                                        <a href="#" class="ks-avatar">
+                                            <img src="assets/img/avatars/avatar-10.jpg" width="55" height="55">
+                                        </a>
+                                        <div class="ks-info">
+                                            <a href="#" class="ks-name">Patricia Ferguson</a>
+                                            <a href="#" class="ks-nickname">@patricia_ferguson</a>
+                                            <span class="ks-location">United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-sections">
+                                        <div class="ks-section">
+                                            <span class="la la-comments-o ks-icon"></span>
+                                            <span class="ks-amount">85</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-heart-o ks-icon"></span>
+                                            <span class="ks-amount">408</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-external-link-square ks-icon"></span>
+                                            <span class="ks-amount">1099</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-dollar ks-icon"></span>
+                                            <span class="ks-amount">75</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-about">
+                                        <div class="ks-header">About</div>
+                                        <div class="ks-text">
+                                            Aliso Creek is a 19-mile (31 km) urban stream that runs through Orange County in the U.S. state of California from the Santa Ana Mountains
+                                        </div>
+                                    </div>
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control">
+                                            <span class="la la-plus-square ks-icon"></span> <span class="ks-text">Follow</span>
+                                        </a>
+                                        <a href="#" class="ks-control">
+                                            <span class="la la-envelope ks-icon"></span> <span class="ks-text">Message</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="ks-dashboard-widget ks-widget-amount-chart-statistics ks-purple">
+                                <div class="ks-body">
+                                    <div class="ks-statistics">
+                                        <span class="ks-text">Memory</span>
+                                        <span class="ks-amount">25%</span>
+                                    </div>
+                                    <div class="ks-chart">
+                                        <div id="ks-memory-radial-progress-chart" class="ks-radial-progress-chart ks-white"></div>
+                                    </div>
+                                </div>
+                                <div class="ks-footer">
+                                    <div id="ks-memory-area-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="ks-dashboard-widget ks-widget-amount-chart-statistics ks-white">
+                                <div class="ks-body">
+                                    <div class="ks-statistics">
+                                        <span class="ks-text">CPU</span>
+                                        <span class="ks-amount">50%</span>
+                                    </div>
+                                    <div class="ks-chart">
+                                        <div id="ks-cpu-radial-progress-chart" class="ks-radial-progress-chart ks-primary"></div>
+                                    </div>
+                                </div>
+                                <div class="ks-footer">
+                                    <div id="ks-cpu-area-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 ks-draggable-column">
+                            <div id="ks-line-chart-panel" class="card panel" data-dashboard-widget>
+                                <h5 class="card-header">
+                                    Line chart
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </h5>
+                                <div class="card-block" data-widget-content>
+                                    <div id="ks-line-chart" data-height="260"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 ks-draggable-column">
+                            <div class="card panel" data-dashboard-widget>
+                                <h5 class="card-header">
+                                    Pie Chart
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </h5>
+                                <div class="card-block" data-height="251" data-widget-content>
+                                    <div id="ks-pie-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 ks-draggable-column">
+                            <div class="card panel ks-widget ks-widget-post" data-dashboard-widget>
+                                <div class="card-header">
+                                    <a href="#" class="ks-text">
+                                        Summer Hits You Need For Your 2016 Playlists
+                                    </a>
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-block" data-widget-content>
+                                    <div class="ks-user">
+                                        <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                        <div class="ks-info">
+                                            <a href="#" class="ks-name">Carl Nelson</a>
+                                            <span class="ks-description">Project Manager at Universal Music</span>
+                                        </div>
+                                        <span class="ks-datetime">8 min ago</span>
+                                    </div>
+                                    <div class="ks-text">Picking the song of summer for 2016 from a pool of proven candidates and promising newcomers</div>
+                                    <div class="ks-actions">
+                                <span class="ks-control" data-toggle="tooltip" data-placement="top" title="" data-original-title="Share">
+                                    <span class="la la-bullhorn ks-icon"></span>
+                                    <span class="ks-amount">1</span>
+                                </span>
+                                <span class="ks-control" data-toggle="tooltip" data-placement="top" title="" data-original-title="Like">
+                                    <span class="la la-heart-o ks-icon"></span>
+                                    <span class="ks-amount">3</span>
+                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card panel ks-dashboard-widget ks-widget-profile-image">
+                                <h5 class="card-header">
+                                    Profile v2
+                                </h5>
+                                <div class="card-block">
+                                    <div class="ks-cover" style="background-image: url('assets/img/profile/profile_image_cover.png');"></div>
+                                    <div class="ks-user">
+                                        <a href="#" class="ks-avatar">
+                                            <img src="assets/img/avatars/avatar-10.jpg" width="55" height="55">
+                                        </a>
+                                        <div class="ks-info">
+                                            <a href="#" class="ks-name">Patricia Ferguson</a>
+                                            <a href="#" class="ks-nickname">@patricia_ferguson</a>
+                                            <span class="ks-location">United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-sections">
+                                        <div class="ks-section">
+                                            <span class="la la-comments-o ks-icon"></span>
+                                            <span class="ks-amount">85</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-heart-o ks-icon"></span>
+                                            <span class="ks-amount">408</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-external-link-square ks-icon"></span>
+                                            <span class="ks-amount">1099</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-dollar ks-icon"></span>
+                                            <span class="ks-amount">75</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control">
+                                            <span class="la la-plus-square ks-icon"></span> <span class="ks-text">Follow</span>
+                                        </a>
+                                        <a href="#" class="ks-control">
+                                            <span class="la la-envelope ks-icon"></span> <span class="ks-text">Message</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 ks-draggable-column">
+                            <div class="card panel ks-widget ks-widget-like-post" data-dashboard-widget>
+                                <div class="card-header">
+                                    <div class="ks-user">
+                                        <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                        <div class="ks-info">
+                                            <a href="#" class="ks-name">Carl Nelson</a>
+                                            <span class="ks-description">22 min ago near Zagreb</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-block" data-widget-content>
+                                    <div class="ks-text">Picking the song of summer for 2016 from a pool of proven candidates and promising newcomers</div>
+                                    <img src="assets/img/placeholders/placeholder-360x230.png" class="ks-thumbnail img-fluid">
+                                    <div class="ks-actions">
+                                <span class="ks-control" data-toggle="tooltip" data-placement="top" title="" data-original-title="Share">
+                                    <span class="la la-comment-o ks-icon"></span>
+                                    <span class="ks-amount">1</span>
+                                </span>
+                                <span class="ks-control" data-toggle="tooltip" data-placement="top" title="" data-original-title="Like">
+                                    <span class="la la-heart-o ks-icon"></span>
+                                    <span class="ks-amount">3</span>
+                                </span>
+                                    </div>
+                                    <div class="ks-likes-block">
+                                        <div class="ks-users">
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-1.jpg" width="26" height="26">
+                                            </a>
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-7.jpg" width="26" height="26">
+                                            </a>
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-11.jpg" width="26" height="26">
+                                            </a>
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-2.jpg" width="26" height="26">
+                                            </a>
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-6.jpg" width="26" height="26">
+                                            </a>
+                                        </div>
+                                        <span class="ks-text">and 103 other like this</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END DASHBOARD CONTENT -->

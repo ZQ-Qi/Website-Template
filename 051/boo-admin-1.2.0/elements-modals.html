@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Boo Admin - UI Elements Modal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/boo-extension.css" rel="stylesheet">
+<link href="assets/css/boo.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/boo-coloring.css" rel="stylesheet">
+<link href="assets/css/boo-utility.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+    <script src="assets/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body class="sidebar-left ">
+<div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="brand" href="javascript:void(0);"><img src="assets/img/demo/logo-brand.png"></a>
+                        <div class="search-global">
+                            <input id="globalSearch" class="search search-query input-medium" type="search">
+                            <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav user-menu visible-desktop">
+                                <li><a class="btn-glyph fontello-icon-edit tip-bc" href="javascript:void(0);" title="Messages"><span class="badge badge-important">8</span></a></li>
+                                <li><a class="btn-glyph fontello-icon-mail-1 tip-bc" href="javascript:void(0);" title="Emails"></a></li>
+                                <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Support"><span class="badge badge-important">4</span></a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li> <a href="javascript:void(0);">Dashboard</a> </li>
+                                <li class="active"> <a href="javascript:void(0);">Components</a> </li>
+                                <li> <a href="component-fullcalendar-demo.html"><span class="fontello-icon-calendar"></span>Calendar</a> </li>
+                                <li> <a href="page-contact.html"><span class="fontello-icon-users"></span>Contacts</a> </li>
+                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="component-form-demo.html">Demo Form</a></li>
+                                        <li><a href="component-widgets-remember.html">Remember</a></li>
+                                        <li><a href="component-widgets-users.html">User List</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">Next Update</li>
+                                        <li><a href="javascript:void(0);">Contacts</a></li>
+                                        <li><a href="javascript:void(0);">Email</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer">
+                <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                <!-- // Resposive navigation -->
+                <div class="breadcrumbs-nav hidden-phone">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                        <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Table</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">Boo Admin </li>
+                    </ul>
+                </div>
+                <!-- // breadcrumbs --> 
+            </div>
+            <!-- // drawer --> 
+        </div>
+    </div>
+    <!-- // header-container -->
+    
+    <div id="main-container">
+        <div id="main-sidebar" class="sidebar sidebar-inverse">
+            <div class="sidebar-item">
+                <div class="media profile">
+                    <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
+                        <p class="data">Last Access: 16 May 15:30</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // sidebar item - profile -->
+            
+            <ul id="mainSideMenu" class="nav nav-list nav-side">
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor"></span> <i class="chevron fontello-icon-right-open-3"></i> Dashboards </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accDash">
+                        <li> <a href="dashboard-one.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 1 </a> </li>
+                        <li> <a href="dashboard-two.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Dashboard</span> Demo 2 </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Dashboard -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon aweso-icon-list-alt"></span><i class="chevron fontello-icon-right-open-3"></i> Form </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accForms">
+                        <li> <a href="component-form-demo.html"> <i class="fontello-icon-right-dir"></i> Demo Form </a> </li>
+                        <li> <a href="component-form-elements.html"> <i class="fontello-icon-right-dir"></i> Form Element </a> </li>
+                        <li> <a href="component-form-extension.html"> <i class="fontello-icon-right-dir"></i> Form Extension</a> </li>
+                        <li> <a href="component-form-wizard.html"> <i class="fontello-icon-right-dir"></i> Form Wizard</a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Forms -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accComponents" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Components </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accComponents">
+                        <li> <a href="elements-notification.html"> <i class="fontello-icon-right-dir"></i> Notification </a> </li>
+                        <li> <a href="component-rangeslider.html"> <i class="fontello-icon-right-dir"></i> Rangeslider </a> </li>
+                        <li> <a href="component-file-upload.html"> <i class="fontello-icon-right-dir"></i> File upload </a> </li>
+                        <li> <a href="component-gallery.html"> <i class="fontello-icon-right-dir"></i> Gallery &amp; Image </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Components -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-align-justify"></span> <i class="chevron fontello-icon-right-open-3"></i> Tables </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accTables">
+                        <li> <a href="component-table.html"> <i class="fontello-icon-right-dir"></i> Base Table </a> </li>
+                        <li> <a href="component-table-boo.html"> <i class="fontello-icon-right-dir"></i> Boo Table </a> </li>
+                        <li> <a href="component-table-datatable.html"> <i class="fontello-icon-right-dir"></i> DataTable </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Tables -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accStatistics" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-chart"></span> <i class="chevron fontello-icon-right-open-3"></i> Statistics </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accStatistics">
+                        <li> <a href="statistic-flot.html"> <i class="fontello-icon-right-dir"></i> Charts </a> </li>
+                        <li> <a href="statistic-sparkline.html"> <i class="fontello-icon-right-dir"></i> Sparklines </a> </li>
+                        <li> <a href="statistic-circle.html"> <i class="fontello-icon-right-dir"></i> Circle </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Statistics -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accWidgets" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon  fontello-icon-window"></span> <i class="chevron fontello-icon-right-open-3"></i> Widgets </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accWidgets">
+                        <li> <a href="component-widget-style.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Style </a> </li>
+                        <li> <a href="component-widget-custom.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Widgets </span> Custom </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Widgets -->
+                <li class="accordion-group">
+                    <div class="accordion-heading active"> <a href="#accButtons" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-puzzle"></span> <i class="chevron fontello-icon-right-open-3"></i> UI Elements </a> </div>
+                    <ul class="accordion-content nav nav-list collapse in" id="accButtons">
+                        <li> <a href="elements-button.html"> <i class="fontello-icon-right-dir"></i> Button </a> </li>
+                        <li> <a href="elements-icon-font.html"> <i class="fontello-icon-right-dir"></i> Iconic fonts </a> </li>
+                        <li> <a href="elements-icon-fugue-demo.html"> <i class="fontello-icon-right-dir"></i> Icon </a> </li>
+                        <li> <a href="elements-wells.html"> <i class="fontello-icon-right-dir"></i> Wells </a> </li>
+                        <li> <a href="elements-tabs.html"> <i class="fontello-icon-right-dir"></i> Tabs </a> </li>
+                        <li class="active"> <a href="elements-modals.html"> <i class="fontello-icon-right-dir"></i> Modal </a> </li>
+                        <li> <a href="elements-progressbar.html"> <i class="fontello-icon-right-dir"></i> Progressbar </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu UI Elements -->
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accCalendar" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Calendar </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accCalendar">
+                        <li> <a href="component-fullcalendar-demo.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Demo </a> </li>
+                        <li> <a href="component-fullcalendar.html"> <i class="fontello-icon-right-dir"></i> <span class="hidden-tablet">Calendar </span> Style </a> </li>
+                    </ul>
+                </li>
+                <!-- // item accordionMenu Calendar -->
+            </ul>
+            <!-- // sidebar menu -->
+            
+            <div class="sidebar-item"></div>
+            <!-- // sidebar item --> 
+            
+        </div>
+        <!-- // sidebar -->
+        
+        <div id="main-content" class="main-content container-fluid">
+            <div class="row-fluid page-head">
+                <h2 class="page-title"><i class="fontello-icon-popup"></i> Modal <small>alert, confirm and flexible dialogs</small></h2>
+                <!--<p class="pagedesc">jQuery DataTable + Bootstrap + Boo = a powerful combination to display your data </p> -->
+                <div class="page-bar">
+                    <div class="btn-toolbar"> </div>
+                </div>
+            </div>
+            <!-- // page head -->
+            
+            <div id="page-content" class="page-content">
+                <section>
+                    <div class="page-header">
+                        <h3>Modal <small>static example</small></h3>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="modal modal-shadow" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+                                    <h4>Modal</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>One fine body&hellip;</p>
+                                </div>
+                                <div class="modal-footer"> <a href="#" class="btn">Close</a> <a href="#" class="btn btn-green">Save changes</a> </div>
+                            </div>
+                            <!-- // modal-default-example -->
+                            
+                            <div class="modal modal-gallery" tabindex="-1" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+                                <div class="modal-header"> <a class="close" data-dismiss="modal"><i class="fontello-icon-cancel-1"></i></a>
+                                    <h4 class="modal-title">Modal to media</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-image"></div>
+                                </div>
+                                <div class="modal-footer"> <a class="btn btn-navi text-gold modal-prev"><i class="fontello-icon-left-open"></i> Previous</a> <a class="btn btn-inverse text-gold btn-glyph modal-play modal-slideshow tip-tc" data-slideshow="5000" title="Play slideshow"> <i class="fontello-icon-play"></i></a> <a class="btn btn-inverse text-gold btn-glyph modal-download tip-tc" target="_blank" title="Downloads this image"> <i class="fontello-icon-download"></i></a> <a class="btn btn-navi text-gold  modal-next">Next image <i class="fontello-icon-right-open"></i></a> </div>
+                            </div>
+                            <!-- // modal-gallery-example -->
+                            
+                            <h4 class="simple-header">Options</h4>
+                            <p>In addition to the standard bootstrap options, you now have access to the following options</p>
+                            <ul>
+                                <li><strong>width</strong> Set the inital width of the modal.</li>
+                                <li><strong>height</strong> Set the inital height of the modal.</li>
+                                <li><strong>maxHeight</strong> Set the max-height of the modal.
+                                <li><strong>loading</strong> Toggle the loading state.</li>
+                                <li><strong>spinner</strong> Provide a custom image or animation for the loading spinner.</li>
+                                <li><strong>modalOverflow</strong> Set this property to true for modals with highly dynamic content. This will force the modal behave as if it is larger then the viewport.</li>
+                            </ul>
+                        </div>
+                        <!-- // Column -->
+                        
+                        <div class="span8">
+                            <h4 class="simple-header">Sample in action </h4>
+                            <div class="margin-xxx"> 
+                            	<a href="#defaultModal" class="btn btn-green btn-large btn-block" data-toggle="modal">Show modal default</a> 
+                                <a href="#mediaModal" class="btn btn-green btn-large btn-block" data-toggle="modal">Show modal media</a> 
+                                <a href="#responsive" class="btn btn-primary btn-large btn-block" data-toggle="modal">Resposive Modal</a> 
+                                <a href="#stack1" class="btn btn-primary btn-large btn-block" data-toggle="modal">Demo - Modal Stacled</a> 
+                                <a id="dynamicModal" class="btn btn-primary btn-large btn-block" data-toggle="modal">Dynamic Generated Modal</a> 
+                                <a id="ajaxModal" class="btn btn-primary btn-large btn-block" data-toggle="modal">Ajax (via jQuery.load)</a> 
+                                <a href="#full-width" class="btn btn-primary btn-large btn-block" data-toggle="modal" >Modal Full Width to Container</a> 
+                                <a href="#full-width2" class="btn btn-primary btn-large btn-block" data-toggle="modal" >Modal Width 90% Window</a> 
+                                <a href="#longModal" class="btn btn-primary btn-large btn-block" data-toggle="modal">Long Modal</a> 
+                            </div>
+                            <div class="well well-nice no-padding">
+                                <h4 class="simple-header padding-side padding-top15">Modal & Bootbox</h4>
+                                <div class="row-fluid">
+                                    <ul class="nav nav-list span5 margin-mm">
+                                        <li class="nav-header">Basic usage</li>
+                                        <li><a href="javascript:void(0);" data-bb="alert" title="Simple Alert">Alert</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="confirm">Confirm</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="prompt">Prompt</a></li>
+                                        <li class="nav-header">Advanced usage</li>
+                                        <li><a href="javascript:void(0);" data-bb="alert_button" title="Simple Alert">Alert button</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="alert_callback" title="Simple Alert">Alert callback</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="alert_confirm_buttons" title="Simple Alert">Alert confirm buttons</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="dialog">Custom Dialog</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="multiple">Multiple Dialogs</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="dialog_close">Programmatic Close</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="generic_modal">Generic Modal</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="dynamic">Dynamic Content</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="icons_explicit">Iconified buttons (explicit)</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="icons_override">Override alert and confirm icons (programmatic)</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="no_close_button">Don&rsquo;t close if callback returns false</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="prompt_default">Prompt with default value</a></li>
+                                        <li class="nav-header">Custom options</li>
+                                        <li><a href="javascript:void(0);" data-bb="onescape">options.onEscape &rarr; function</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="nofade">options.animate &rarr; false</a></li>
+                                        <li><a href="javascript:void(0);" data-bb="nobackdrop">options.backdrop &rarr; false</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // Column --> 
+                        
+                    </div>
+                    <!-- // Example row --> 
+                </section>
+                <section>
+                    <div class="page-header">
+                        <h3>Modal <small>static example</small></h3>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4"> </div>
+                        <!-- // Column -->
+                        
+                        <div class="span4"> </div>
+                        <!-- // Column --> 
+                        
+                    </div>
+                    <!-- // Example row --> 
+                </section>
+            </div>
+            <!-- // page content --> 
+            
+        </div>
+        <!-- // main-content --> 
+        
+    </div>
+    <!-- // main-container  -->
+    
+    <footer id="footer-fix">
+        <div id="footer-sidebar" class="footer-sidebar">
+            <div class="navbar">
+                <div class="btn-toolbar"> <a class="btn btn-glyph btn-link fontello-icon-up-open-1" href="javascript:void(0);"></a> </div>
+            </div>
+        </div>
+        <!-- // footer sidebar -->
+        
+        <div id="footer-content" class="footer-content">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <ul class="nav pull-left">
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnToggleSidebar" class="btn-glyph fontello-icon-resize-full-2 tip hidden-phone" href="javascript:void(0);" title="show hide sidebar"></a></li>
+                        <li class="divider-vertical hidden-phone"></li>
+                        <li><a id="btnChangeSidebar" class="btn-glyph fontello-icon-login tip hidden-phone" href="javascript:void(0);" title="change sidebar position"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnChangeSidebarColor" class="btn-glyph fontello-icon-palette tip" href="javascript:void(0);" title="change sidebar color"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cw" href="javascript:void(0);"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="fontello-icon-home-3" href="dashboard-one.html"></a></li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-help-2 tip" href="javascript:void(0);" title="help to page"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a class="btn-glyph fontello-icon-cog-4 tip" href="javascript:void(0);" title="settings app"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnLogout" class="btn-glyph fontello-icon-logout-1 tip" href="javascript:void(0);" title="logout"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a id="btnScrollup" class="scrollup btn-glyph fontello-icon-up-open-1" href="javascript:void(0);"><span class="hidden-phone">Scroll</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // footer content --> 
+        
+    </footer>
+    <!-- // footer-fix  --> 
+    
+</div>
+<!-- // page-container  -->
+
+<div class="modal-container"> <!-- You can put your modal definitions here but it is not required. Modal for media and gallery here Always place -->
+    
+    <div id="mediaModal" class="modal modal-gallery hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header"> <a class="close" data-dismiss="modal"><i class="fontello-icon-cancel-1"></i></a>
+            <h4 class="modal-title">Modal to media</h4>
+        </div>
+        <div class="modal-body"> <img src="assets/img/demo/gallery/gall_01/image_11.jpg"> </div>
+        <div class="modal-footer"> 
+        	<a class="btn btn-navi gold modal-prev"><i class="fontello-icon-left-open"></i> Previous</a> 
+            <a class="btn btn-inverse gold btn-glyph modal-play modal-slideshow tip-tc" data-slideshow="5000" title="Play slideshow"> <i class="fontello-icon-play"></i></a> 
+            <a class="btn btn-inverse gold btn-glyph modal-download tip-tc" target="_blank" title="Downloads this image"> <i class="fontello-icon-download"></i></a> 
+            <a class="btn btn-navi gold  modal-next">Next image <i class="fontello-icon-right-open"></i></a> 
+        </div>
+    </div>
+    <!-- // sample modal - media ====================  --> 
+
+	<!-- Modal Definitions for ModalManager plugin ======  -->
+    <div id="defaultModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4 id="myModalLabel"><i class="fontello-icon-popup"></i> Modal :-)</h4>
+        </div>
+        <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetuer aliquet ac dolor amet est. Augue elit metus ac leo ligula nunc gravida Morbi risus malesuada. Vel ligula condimentum in a orci Vestibulum ante In nulla metus. Condimentum vestibulum venenatis id neque tortor quis massa Sed consectetuer dignissim. Ac pretium ac malesuada purus Nam convallis id quis justo Cras. Curabitur odio tincidunt.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-red" data-dismiss="modal">Close</button>
+            <button class="btn btn-green">Save Task</button>
+        </div>
+    </div>
+    <!-- // sample modal - default ======================  -->
+    
+    <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>Modal header</h4>
+        </div>
+        <div class="modal-body">
+            <div class="page-header">
+                <p>The modal uses bootstrap fluid class. The width is set to optional <code>data-width="760"</code>.</p>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <h4>Form content</h4>
+                    <p>
+                        <input type="text" class="input-block-level" />
+                    </p>
+                    <p>
+                        <input type="text" class="input-block-level" />
+                    </p>
+                    <p>
+                        <input type="text" class="input-block-level" />
+                    </p>
+                    <p>
+                        <input type="text" class="input-block-level" />
+                    </p>
+                    <p>
+                        <input type="text" class="input-block-level" />
+                    </p>
+                    <p>
+                        <input type="text" class="input-block-level" />
+                    </p>
+                    <p>
+                        <input type="text" class="input-block-level" />
+                    </p>
+                </div>
+                <div class="span6">
+                    <h4>Text content</h4>
+                    <p>
+                        <input type="text" class="input-block-level" />
+                    </p>
+                    <div class="span12">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ipsum ac ante fermentum suscipit. In ac augue non purus accumsan lobortis id sed nibh. Nunc egestas hendrerit ipsum, et porttitor augue volutpat non. Aliquam erat volutpat. Vestibulum scelerisque lobortis pulvinar. Aenean hendrerit risus neque, eget tincidunt leo. Vestibulum est tortor, commodo nec cursus nec, vestibulum vel nibh. Morbi elit magna, ornare placerat euismod semper, dignissim vel odio. Phasellus elementum quam eu ipsum euismod pretium.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-boo">Close</button>
+            <button type="button" class="btn btn-green">Save changes</button>
+        </div>
+    </div>
+    <!-- // sample modal - resposive ====================  -->
+    
+    <div id="stack1" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>Modal header</h4>
+        </div>
+        <div class="modal-body">
+            <p>One fine body…</p>
+            <p>One fine body…</p>
+            <p>One fine body…</p>
+            <a class="btn btn-blue" data-toggle="modal" href="#stack2">Launch modal</a> 
+        </div>
+        <div class="modal-footer"> <a type="button" data-dismiss="modal" class="btn btn-boo">Close</a> <a type="button" class="btn btn-green">Ok</a> </div>
+    </div>
+    <!-- // sample modal - stack ========================  -->
+    
+    <div id="stack2" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>Modal header</h4>
+        </div>
+        <div class="modal-body">
+            <p>One fine body…</p>
+            <p>One fine body…</p>
+            <button class="btn btn-yellow" data-toggle="modal" href="#stack3">Launch modal</button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-boo">Close</button>
+            <button type="button" class="btn btn-green">Ok</button>
+        </div>
+    </div>
+    <!-- // sample modal - stack2 =======================  -->
+    
+    <div id="stack3" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>Modal header</h4>
+        </div>
+        <div class="modal-body">
+            <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-boo">Close</button>
+            <button type="button" class="btn btn-green">Ok</button>
+        </div>
+    </div>
+    <!-- // sample modal - stack3 =======================  -->
+    
+    <div id="full-width" class="modal container hide fade" tabindex="-1">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>Modal header</h4>
+        </div>
+        <div class="modal-body">
+            <p>This modal will resize itself to the same dimensions as the <code>.container</code> class.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ipsum ac ante fermentum suscipit. In ac augue non purus accumsan lobortis id sed nibh. Nunc egestas hendrerit ipsum, et porttitor augue volutpat non. Aliquam erat volutpat. Vestibulum scelerisque lobortis pulvinar. Aenean hendrerit risus neque, eget tincidunt leo. Vestibulum est tortor, commodo nec cursus nec, vestibulum vel nibh. Morbi elit magna, ornare placerat euismod semper, dignissim vel odio. Phasellus elementum quam eu ipsum euismod pretium.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-boo">Close</button>
+            <button type="button" class="btn btn-green">Save changes</button>
+        </div>
+    </div>
+    <!-- // sample modal - full =========================  -->
+    
+    <div id="full-width2" class="modal hide fade" tabindex="-1" data-width="90%">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>Modal header</h4>
+        </div>
+        <div class="modal-body">
+            <p>The modal size will be 90% of the window. <code>data-width="90%"</code></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ipsum ac ante fermentum suscipit. In ac augue non purus accumsan lobortis id sed nibh. Nunc egestas hendrerit ipsum, et porttitor augue volutpat non. Aliquam erat volutpat. Vestibulum scelerisque lobortis pulvinar. Aenean hendrerit risus neque, eget tincidunt leo. Vestibulum est tortor, commodo nec cursus nec, vestibulum vel nibh. Morbi elit magna, ornare placerat euismod semper, dignissim vel odio. Phasellus elementum quam eu ipsum euismod pretium.</p>
+            <div class="well well-nice">
+                <table class="table table-hover">
+                    <caption>
+                    Default Table Caption - Title for table <span>Here text in span</span>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th class="hidden-phone" scope="col">City</th>
+                            <th class="hidden-tablet hidden-phone" scope="col">Email</th>
+                            <th scope="col">Date of birth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Colin Nixon</td>
+                            <td class="hidden-phone">Long Beach</td>
+                            <td class="hidden-tablet hidden-phone">semper@diamSeddiam.edu</td>
+                            <td>02/10/1986</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Naida Bennett</td>
+                            <td class="hidden-phone">Lockport</td>
+                            <td class="hidden-tablet hidden-phone">commodo@conseque.ca</td>
+                            <td>04/21/1959</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Danielle Myers</td>
+                            <td class="hidden-phone">Bentonville</td>
+                            <td class="hidden-tablet hidden-phone">nunc.sed@liberoInteger.ca</td>
+                            <td>12/11/1971</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Whitney Jones</td>
+                            <td class="hidden-phone">Troy</td>
+                            <td class="hidden-tablet hidden-phone">Nunc@sedliberoProin.edu</td>
+                            <td>08/09/1976</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Marvin Bell</td>
+                            <td class="hidden-phone">Cody</td>
+                            <td class="hidden-tablet hidden-phone">aliquet@Craspellentesque.com</td>
+                            <td>10/17/1979</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-boo">Close</button>
+            <button type="button" class="btn btn-green">Save changes</button>
+        </div>
+    </div>
+    <!-- // sample modal - 90% ==========================  -->
+    
+    <div id="longModal" class="modal hide fade" tabindex="-1">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>A Fairly Long Modal</h4>
+        </div>
+        <div class="modal-body">
+            <button class="btn" data-toggle="modal" href="#notLongModal" style="position: absolute; top: 50%; right: 12px">Not So Long Modal</button>
+            <!--<img style="height: 800px" src="http://i.imgur.com/KwPYo.jpg">  -->
+            <img src="http://dummyimage.com/350x800/ccc/fff" alt="Generic"/>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn">Close</button>
+        </div>
+    </div>
+    <!-- // sample modal - long modal ===============  -->
+    
+    <div id="notLongModal" class="modal hide fade" tabindex="-1">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>A Fairly Long Modal</h4>
+        </div>
+        <div class="modal-body">
+            <button class="btn" data-toggle="modal" href="#veryLongModal" style="position: absolute; top: 50%; right: 12px">Not So Long Modal</button>
+            <!--<img style="height: 800px" src="http://i.imgur.com/KwPYo.jpg">  -->
+            <img src="http://dummyimage.com/350x400/ccc/fff" alt="Generic"/>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn">Close</button>
+        </div>
+    </div>
+    <!-- // sample modal - notlong modal ===============  -->
+    
+    <div id="veryLongModal" class="modal hide fade" tabindex="-1">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>A Fairly Long Modal</h4>
+        </div>
+        <div class="modal-body">
+            <button class="btn" data-toggle="modal" href="#notlong" style="position: absolute; top: 50%; right: 12px">Not So Long Modal</button>
+            <!--<img style="height: 800px" src="http://i.imgur.com/KwPYo.jpg">  -->
+            <img src="http://dummyimage.com/350x1000/ccc/fff" alt="Generic"/>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn">Close</button>
+        </div>
+    </div>
+    <!-- // sample modal - verylong modal ===============  -->
+    
+    <div id="myModal" class="modal hide fade" tabindex="-1">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fontello-icon-cancel-1"></i></button>
+            <h4>Modal header</h4>
+        </div>
+        <div class="modal-body">
+            <p>This modal is in a custom manager apply to <code>div.page-container</code>. Default is the <code>body</code> element</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-boo">Close</button>
+            <button type="button" class="btn btn-green">Ok</button>
+        </div>
+    </div>
+    <!-- // sample modal - default modal ===============  -->
+    
+    <div id="ajax-modal" class="modal hide fade" tabindex="-1"></div>
+    <!-- // sample modal - ajax =========================  --> 
+</div>
+<!-- // Modal container--> 
+
+<!-- Le javascript --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/lib/jquery.js"></script> 
+<script src="assets/js/lib/jquery-ui.js"></script>
+<script src="assets/js/lib/jquery.cookie.js"></script> 
+<script src="assets/js/lib/jquery.date.js"></script> 
+<script src="assets/js/lib/jquery.mousewheel.js"></script> 
+<script src="assets/js/lib/jquery.load-image.min.js"></script>
+<script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+
+<!-- Plugins Bootstrap -->
+<script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+<script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script> 
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+<script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+<script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+<script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+<script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+<script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+<script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+<script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+<script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+<script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+<script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+ 
+
+<!-- Plugins Custom - Only example --> 
+<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>
+
+<!-- Plugins Custom - System --> 
+<script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+<script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+<!-- Plugins Custom - System info -->
+<script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+<script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+<script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+<!-- Plugins Custom - Content -->
+<script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+<script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+<script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+<!-- Plugins Custom - Component -->
+<script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+<script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+<!-- Plugins Custom - Form -->
+<script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+<script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+<script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+<script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+<script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+<script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+<script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+<!-- Plugins Custom - Gallery --> 
+<script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+<script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+<script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+ 
+<!-- Plugins Tables --> 
+<script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+<script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+<!-- Plugins data visualization --> 
+<script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+<script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+<script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+<script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/core.js"></script> 
+<script src="assets/js/application.js"></script> 
+
+<!-- Only This Demo Page --> 
+<script src="assets/js/demo/demo-modal.js"></script> 
+<script>
+    $(document).ready(function() {
+		
+	});
+</script>
+</body>
+</html>

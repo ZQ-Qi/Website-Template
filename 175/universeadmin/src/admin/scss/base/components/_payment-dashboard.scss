@@ -1,0 +1,203 @@
+/** BEGIN: payment dashboard */
+.widget-payment-account {
+  display: flex;
+
+  &__item {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:last-child {
+      width: 4%;
+    }
+  }
+
+  &__heading {
+    color: #939daa;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  &__value {
+    font-size: 20px;
+    color: #222;
+  }
+
+  &__item-card {
+    align-items: flex-end;
+
+    img {
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+.widget-payment-balance {
+  min-height: 297px;
+  padding-top: 0;
+
+  .widget-controls__header {
+    padding: 0;
+    height: auto;
+    margin-bottom: 13px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-heading {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  &__item-value {
+    font-size: 28px;
+    color: #222;
+  }
+}
+
+.widget-payment-cards {
+  min-height: 297px;
+  padding-top: 0;
+
+  .widget-controls__header {
+    padding: 0;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__type {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  &__number {
+    font-size: 28px;
+    line-height: 30px;
+    color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__expiration-date {
+    color: #939daa;
+    font-size: 14px;
+  }
+}
+
+.widget-payment-scheduled {
+  min-height: 297px;
+  padding-top: 0;
+
+  .widget-controls__header {
+    padding: 0;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__image {
+    margin-right: 20px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__info-name,
+  &__date {
+    font-size: 14px;
+    color: #939daa;
+  }
+
+  &__info-desc {
+    font-size: 20px;
+  }
+
+  &__amount {
+    margin-top: 25px;
+    font-size: 28px;
+    margin-bottom: 27px;
+
+    span {
+      color: #939daa;
+    }
+  }
+}
+
+.widget-payment-balance-table {
+  min-height: 287px;
+  padding: 0;
+
+  .widget-controls__header {
+    height: auto;
+  }
+
+  &__table {
+    width: 100%;
+
+    td {
+      padding: 20px;
+
+      &:first-child {
+        width: 100px;
+      }
+
+      &:last-child {
+        width: 1px;
+      }
+    }
+  }
+}
+
+.widget-payment-templates{
+  padding: 0;
+  min-height: 287px;
+
+  .widget-controls__header {
+    height: auto;
+  }
+
+  &__image {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__table {
+    width: 100%;
+
+    td {
+      padding: 13px 20px;
+
+      &:first-child {
+        width: 80px;
+      }
+    }
+  }
+}
+/** END: payment dashboard */

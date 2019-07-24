@@ -1,0 +1,28 @@
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        var ksViews = $('.ks-mail > .ks-view');
+        var ksMailView = $('.ks-mail[data-mail-view] > .ks-view');
+        var ksCreateView = $('.ks-mail[data-mail-manage] > .ks-view');
+
+        if (Response.band(0, 780)) {
+            var ksEmails = $('.ks-mail[data-mail-view] > .ks-emails > .ks-body .ks-email');
+            var ksMailManage = $('.ks-mail[data-mail-manage] > .ks-emails .ks-mail-manage');
+            var ksViewCancel = $('.ks-mail > .ks-view .ks-view-cancel');
+
+            ksEmails.on('click', function () {
+                ksMailView.addClass('ks-open');
+            });
+
+            ksMailManage.on('click', function () {
+                ksCreateView.addClass('ks-open');
+                console.log(11);
+            });
+
+            ksViewCancel.on('click', function() {
+                ksViews.removeClass('ks-open');
+            });
+        }
+    });
+})(jQuery);
+</script>

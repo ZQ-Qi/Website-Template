@@ -1,0 +1,270 @@
+@import "../common/variables";
+
+/** BEGIN: sumoselect */
+.SumoSelect {
+  width: 100%;
+
+  label {
+    margin: 0;
+  }
+
+  .CaptionCont {
+    height: $input-height;
+    border-color: $color-gray-medium;
+    border-radius: $border-radius;
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 5px 11px;
+
+    label {
+      margin: 0;
+
+      i {
+        background: none;
+        height: 6px;
+        width: 12px;
+        position: relative;
+        top: calc(50% - 2px);
+
+        &:before {
+          position: absolute;
+          content: $dropdown-icon-code;
+          font-family: $font-icon;
+          font-size: 6px;
+          color: #939daa;
+          font-style: normal;
+          opacity: 1;
+          transition: transform $transition;
+          transform-origin: 50%;
+          height: 6px;
+          line-height: 6px;
+        }
+      }
+    }
+  }
+
+  &:focus,
+  &:hover {
+    .CaptionCont {
+      border-color: $color-gray-medium;
+      box-shadow: none;
+    }
+  }
+
+  > .CaptionCont {
+    > span.placeholder {
+      font-style: normal;
+      color: $color-black-light;
+    }
+  }
+
+  &.open {
+    &:focus,
+    &:hover {
+      .CaptionCont {
+        border-color: $color-lasur;
+        box-shadow: none;
+      }
+    }
+
+    .CaptionCont {
+      border-color: $color-lasur;
+      box-shadow: none;
+
+      label {
+        i {
+          &:before {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+
+    .optWrapper {
+      top: 40px;
+    }
+  }
+
+  .select-all {
+    height: 36px;
+    padding: 7px 0 3px 35px;
+
+    &.partial {
+      border-bottom: 1px solid $color-gray-medium;
+
+      span {
+        i {
+          opacity: 1;
+          width: 15px;
+          height: 15px;
+          min-width: 15px;
+          min-height: 15px;
+          border-radius: 2px;
+          border: 1px solid #d3d9dd;
+          background: #fff;
+          transition: border .15s ease-in-out, color .15s ease-in-out;
+          box-shadow: none !important;
+
+          &:hover {
+            border: 1px solid #1990ea;
+          }
+        }
+      }
+    }
+
+    &.selected {
+      span {
+        i {
+          opacity: 1;
+          background: #fff;
+          border: 1px solid #d3d9dd;
+
+          &:hover {
+            border: 1px solid #1990ea;
+          }
+
+          &::before {
+            content: $icon-checkbox-check-code;
+            font-family: $font-icon;
+            font-size: 15px;
+            color: #3f4145;
+            font-weight: bold;
+            position: absolute;
+            top: -3px;
+            left: 1px;
+            line-height: 12px;
+            height: 16px;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+
+  .optWrapper {
+    animation: fadeInDown .3s cubic-bezier(.23, 1, .32, 1);
+    border: 1px solid $color-gray-medium;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
+
+  & > .optWrapper {
+    > .options {
+      &::-webkit-scrollbar-track
+      {
+        box-shadow: none;
+        background: rgba(#aeb5bf, .2);
+      }
+
+      &::-webkit-scrollbar
+      {
+        width: 4px;
+        background: #fff;
+      }
+
+      &::-webkit-scrollbar-thumb
+      {
+        background: rgba(#455161, .1);
+        border: none;
+      }
+    }
+  }
+
+  > .optWrapper.multiple {
+    > .options {
+      li.opt {
+        border: none;
+        height: 36px;
+
+        label {
+          margin: 0;
+          line-height: 25px;
+        }
+
+        &:disabled {
+          color: #999;
+        }
+
+        &:hover {
+          background: rgba(#0094f2, .15);
+          color: $color-black;
+        }
+
+        span {
+          i {
+            opacity: 1;
+            width: 15px;
+            height: 15px;
+            min-width: 15px;
+            min-height: 15px;
+            border-radius: 2px;
+            border: 1px solid #d3d9dd;
+            background-color: #ffffff;
+            transition: border .15s ease-in-out, color .15s ease-in-out;
+            box-shadow: none !important;
+
+            &:hover {
+              border: 1px solid #1990ea;
+            }
+          }
+        }
+
+        &.selected {
+          span {
+            i {
+              opacity: 1;
+              background: #fff;
+              border: 1px solid #d3d9dd;
+
+              &:hover {
+                border: 1px solid #1990ea;
+              }
+
+              &::before {
+                content: $icon-checkbox-check-code;
+                font-family: $font-icon;
+                font-size: 15px;
+                color: #3f4145;
+                font-weight: bold;
+                position: absolute;
+                top: -3px;
+                left: 1px;
+                line-height: 12px;
+                height: 16px;
+                font-style: normal;
+              }
+            }
+          }
+        }
+      }
+
+      li.group {
+        & > label {
+          font-weight: 600;
+        }
+      }
+    }
+
+    > .MultiControls {
+      border-color: $color-gray-medium;
+
+      > p.btnOk {
+        border-color: $color-gray-medium;
+      }
+
+      > p.btnOk,
+      > p.btnCancel {
+        &:hover,
+        &:active,
+        &:focus {
+          background: rgba(#0094f2, .15);
+          color: $color-black;
+          box-shadow: none;
+          border-color: $color-gray-medium;
+        }
+      }
+    }
+  }
+}
+/** END: sumoselect */

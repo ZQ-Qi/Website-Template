@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>仓库-入库单</title>
+<link  type="text/css" rel="stylesheet"  href="css/style.css"/>
+<link  type="text/css" rel="stylesheet"  href="css/index.css"/>
+
+<script  src="js/jquery.min.js"></script>
+<!-- 动态菜单JS -->
+<script type="text/javascript"  src="js/menu.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+ <div class="cont-top">
+  <div class="companyname">首耀照明</div>
+  <div class="cont-top-middle">
+   <ul>
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon.png">
+      </div>
+       <div class="top-txt">购物单</div>
+     </a>
+    </li>
+    
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="img/icon1.png">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+   
+   </ul>
+  </div>
+  <div class="cont-top-rg">
+   <ul class="advanced-menu">
+    <li>
+     <div class="top-search">
+      <div class="t-s-l">
+       <span class="left-line"></span>
+       <input type="text" value="搜库存" class="search-type" disabled>
+       <span class="triangle-bottom"></span>
+      </div>
+      <div class="t-s-l">
+       <input type="text" placeholder="请输入商品编码或名称" class="search-dt" autocomplete="off"> 
+       <span class="right-line"></span>
+       <span class="right-icon"><img src="img/search-icon.png"></span>
+      </div>
+     </div>
+    </li>
+    <li class="default" style="position:relative;">
+     <span class="user"><img src="img/user.png"></span>
+     <a  href="#" class="special">小丫头</a>
+     <span class="triangle-bottom" style="margin:6px 0 0 10px;"></span>
+     <div class="drop-down-wrap" style="width:180px;left:15px;display: none;">
+      <div class="drop-down">
+       <span class="triangle-border"></span>
+       <span class="triangle-bg"></span>
+       <ul class="del-ul">
+        <li><a href="#" class="hot">首耀照明</a></li>
+        <li><a href="#">小丫头</a></li>
+        <li><a href="#">操作日志</a></li>       
+       </ul>
+      </div>
+     </div>
+    </li>    
+   </ul>
+   <ul class="advanced-menu">
+    <li>
+     <a href="#"><img  src="img/top-icon1.png"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="img/top-icon2.png"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="img/top-icon3.png"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="img/top-icon4.png"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="img/top-icon5.png"></a>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <div class="left-menu" style="height:949px;">
+  <div class="menu-list">
+   <ul>
+    <li class="menu-list-01" >
+     <a href="ck-kffp.html">
+     <p class="fumenu">库房管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd5">入库单</p>
+      <p class="zcd" id="zcd6">出库单</p>
+      <p class="zcd" id="zcd7">库存余额表</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-02">
+     <a  href="ckgl.html">
+     <p class="fumenu">产品管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd5">产品库存</p>
+      <p class="zcd" id="zcd6">产品成本</p>
+      <p class="zcd" id="zcd7">产品属性管理</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-01" >
+    <a href="dd-ddgl.html">
+     <p class="fumenu">订单管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd8">下单账户</p>
+      <p class="zcd" id="zcd9">所属员工</p>
+      <p class="zcd" id="zcd10">订单成本</p>
+      <p class="zcd" id="zcd1">订单成本费用</p>
+      <p class="zcd" id="zcd12">订单总支付金额</p>
+      <p class="zcd" id="zcd3">订单商品</p>
+      <p class="zcd" id="zcd14">手动增加订单</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-02">
+     <a href="cj-ckd.html">
+     <p class="fumenu">财务管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd15">记录出款和入款</p>
+      <p class="zcd" id="zcd16">计算一段时间的利润</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-01" >
+    <a href="kh-khgl.html">
+     <p class="fumenu">客户管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd17">客户基本信息</p>
+      <p class="zcd" id="zcd18">客户VIP登记管理</p>
+      <p class="zcd" id="zcd19">客户信息管理</p>
+      <p class="zcd" id="zcd20">客户订单管理</p>
+      <p class="zcd" id="zcd21">转移客户</p>
+     </div>
+    </li>
+    
+    <li class="menu-list-02">
+    <a href="yg-jbxx.html">
+     <p class="fumenu">员工管理</p>
+     <img class="xiala" src="img/xiala.png" />
+     </a>
+     <div class="list-p">
+      <p class="zcd" id="zcd22">员工基本信息</p>
+      <p class="zcd" id="zcd23">员工权限</p>
+       <p class="zcd" id="zcd24">开通新客户</p>
+      <p class="zcd" id="zcd25">销售额管理</p>
+     </div>
+    </li>
+   </ul>
+  </div>
+ </div>
+ 
+ <div class="right-menu">
+  <div class="main-hd">
+   <div class="page-teb" >
+    <div class="l-tab-links">
+     <ul style="left:0;">
+      <li class="l-select">
+       <a href="#">首页</a>
+      </li>
+       <li class="l-select">
+       <a href="#">入库单</a>
+      </li>
+     </ul>
+    </div>
+
+    <div class="l-tab-content" style="background:#fff;">
+     <div class="tab-content-item">
+      <div class="home">
+      <!--入库单   开始-->
+        <div class="con-header">
+         <div class="header-rg">
+          <div class="ident">
+           <label>录制时间：</label>
+           <input type="text" class="input-txt11" autocomplete="off" value="2017-06-13">
+          </div>
+          <div class="ident">
+           <label>单据编号：</label>
+           <input type="text" class="input-txt11" autocomplete="off" value="2017061456">
+          </div>
+         </div>
+        </div>
+        
+        <div class="gys-list">
+         <div class="layoutgr">
+          <ul>
+           <li>
+            <label>供货单位</label>
+            <input type="text" class="buedit">
+           </li>
+            <li>
+            <label>经手人</label>
+            <input type="text" class="buedit">
+           </li>
+           <li>
+            <label>部门</label>
+            <input type="text" class="buedit">
+           </li>
+           <li>
+            <label>入库仓库</label>
+            <input type="text" class="buedit">
+           </li>
+           <li>
+            <label>附加说明</label>
+            <input type="text" class="buedit">
+           </li>
+          </ul>
+         </div>
+         
+         <div class="grid">
+           <!--仓库基本信息   开始-->
+           <div class="layoutitem" style="width:100%;border:none;">
+           <form method="post"> 
+            <table class="gridbar" border="0" cellpadding="0" cellspacing="0">
+            <thead>
+             <tr>
+              <th scope="col">编号</th>
+              <th scope="col">ID</th>
+              <th>商品编号</th>
+              <th>商品名称</th>
+              <th>单位</th>
+              <th>仓库</th>
+              <th>数量</th>
+              <th>入库单价</th>
+              <th>入库金额</th>
+              <th>备注</th>
+             </tr>
+         
+             <tr>
+              <td><input type="text"/></td>
+              <td><input type="text"/></td>
+              <td><input type="text"/></td>
+              <td><input type="text"/></td>
+              <td><input type="text"/></td>
+              <td><input type="text"/></td>
+              <td><input type="text"/></td>
+              <td><input type="text"/></td>
+              <td><input type="text"/></td>
+              <td><input type="text"/></td>
+             </tr>
+              <tr class="odd">
+              <td>2</td>
+              <td>25</td>
+              <td>458622</td>
+              <td>景观灯</td>
+              <td>首耀照明</td>
+              <td>只</td>
+              <td>2564</td>
+              <td>52元</td>
+              <td>7595245元</td>
+              <td>无</td>
+             </tr>
+             </thead>
+            </table>
+            </form>
+           </div>
+           <!--仓库基本信息   结束-->     
+          </div>
+          <div class="cellspacing">
+           <div class="cell-zd">
+            <p>制单人：<span>www</span></p>
+           </div>
+           <div class="cell-je">
+            <a href="#" class="rz">操作日志</a>
+            <a href="#" class="bc">保存</a>
+           </div>
+          </div>
+         </div>
+        </div>
+      <!--入库单   结束-->
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+</div>
+</body>
+</html>

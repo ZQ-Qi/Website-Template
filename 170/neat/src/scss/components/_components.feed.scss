@@ -1,0 +1,65 @@
+/* ==========================================================================
+   #FEED
+   ========================================================================== */
+
+.c-feed {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 3px;
+		width: 2px;
+		height: 100%;
+		background-color: $color-sky;
+		content: "";
+	}
+}
+
+.c-feed__item {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 20px;
+	padding: $spacer-xsmall 0;
+
+	&::before {
+		position: absolute;
+		top: 17px;
+		left: -20px;
+		width: 8px;
+		height: 8px;
+		border-radius: 100%;
+		content: "";
+		@include linear-gradient(to bottom, $gradient-info);
+	}
+}
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-feed__item--success {
+	&::before {
+		@include linear-gradient(to bottom, $gradient-success);
+	}
+}
+
+.c-feed__item--warning {
+	&::before {
+		@include linear-gradient(to bottom, $gradient-warning);
+	}
+}
+
+.c-feed__item--danger {
+	&::before {
+		@include linear-gradient(to bottom, $gradient-danger);
+	}
+}
+
+.c-feed__item--fancy {
+	&::before {
+		@include linear-gradient(to bottom, $gradient-fancy);
+	}
+}

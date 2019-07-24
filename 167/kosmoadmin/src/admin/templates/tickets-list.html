@@ -1,0 +1,34 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/tickets.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Tickets</h3>
+                <button class="btn btn-outline-primary ks-light ks-tickets-navigation-block-toggle" data-block-toggle=".ks-tickets-page > .ks-navigation">Menu</button>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-tickets-page">
+                @@include('./_partials/apps/tickets/navigation.html')
+                @@include('./_partials/apps/tickets/tickets.html')
+
+                <div class="ks-view ks-empty">
+                    <span class="ks-icon la la-ticket"></span>
+                    <div class="ks-text">Nothing selected. Please select a ticket in the left pane or</div>
+                    <a href="tickets-create.html" class="btn btn-primary">Create a new ticket</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+@@include('./_partials/apps/tickets/scripts.html')
+@@include('./_partials/footer.html')

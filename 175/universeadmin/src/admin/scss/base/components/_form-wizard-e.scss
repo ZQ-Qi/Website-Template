@@ -1,0 +1,233 @@
+/** BEGIN: form wizard (e) */
+.form-wizard-e {
+  &.main-container {
+    padding: 0;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__steps {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  &__step {
+    flex-grow: 1;
+    padding: 24px 32px 22px 32px;
+    text-align: center;
+    border-bottom: 1px solid rgba(#939daa, .2);
+
+    &:first-child {
+      border-top-left-radius: 3px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 3px;
+    }
+
+    &.is-current {
+      background: #269af1;
+      color: #fff;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #269af1;
+        z-index: 1;
+      }
+    }
+
+    &.is-completed {
+      background: #92cf5c;
+      color: #50752f;
+    }
+  }
+
+  &__step-icon-block {
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 20px;
+  }
+
+  &__step-check-icon {
+    position: absolute;
+    top: 10px;
+    right: -26px;
+    font-size: 16px;
+    display: none;
+  }
+
+  &__step.is-current &__step-desc,
+  &__step.is-current &__step-icon {
+    color: #fff;
+  }
+
+  &__step.is-completed &__step-desc,
+  &__step.is-completed &__step-icon {
+    color: #50752f;
+  }
+
+  &__step.is-completed &__step-check-icon {
+    display: block;
+  }
+
+  &__step-icon {
+    color: #269af1;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  &__step-name {
+    font-size: 20px;
+  }
+
+  &__step-desc {
+    font-size: 14px;
+    color: #939daa;
+    margin-top: 5px;
+  }
+
+  &__content {
+    padding: 25px 20px 5px 20px;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__step-content {
+    display: none;
+    min-width: 100%;
+
+    &.is-current {
+      display: block;
+    }
+  }
+
+  &__step-content-heading {
+    font-size: 24px;
+    color: #000;
+
+    span {
+      color: #269af1;
+    }
+  }
+
+  &__step-content-heading-icon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  &__step-form {
+    margin-top: 15px;
+  }
+
+  &__control-next,
+  &__control-prev {
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 56px;
+  }
+
+  &__control-next {
+    padding-right: 70px;
+    align-items: flex-start;
+  }
+
+  &__control-prev {
+    align-items: flex-end;
+    padding-left: 70px;
+  }
+
+  &__control-next-desc,
+  &__control-prev-desc {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+  &__control-prev-icon,
+  &__control-next-icon {
+    font-size: 16px;
+    position: absolute;
+    top: 19px;
+  }
+
+  &__control-prev-icon {
+    left: 18px;
+  }
+
+  &__control-next-icon {
+    right: 18px;
+  }
+}
+
+@include mq(tablet, max) {
+  .form-wizard-e {
+    &__step {
+      padding: 15px 10px 10px 10px;
+    }
+
+    &__step-name {
+      font-size: 16px;
+    }
+
+    &__step-desc {
+      display: none;
+    }
+  }
+}
+
+@include mq(phablet, max) {
+  .form-wizard-e {
+    &__steps {
+      display: none;
+      flex-direction: column;
+    }
+
+    &__step-icon {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    &__step-name {
+      font-size: 14px;
+    }
+
+    &__control-next-name,
+    &__control-next-desc,
+    &__control-prev-name,
+    &__control-prev-desc {
+      display: none;
+    }
+
+    &__control-next,
+    &__control-prev {
+      padding: 10px 26px;
+    }
+  }
+}
+/** END: form wizard (e) */

@@ -1,0 +1,542 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-mail
+2. Emails list / .ks-mail > .ks-emails
+3. View and Manage content / .ks-mail > .ks-biew
+-------------------------------------------------------------------*/
+
+@import "../config/mixins";
+@import "../config/colors";
+
+.ks-mail {
+  display: flex;
+  height: 100%;
+
+  > .ks-emails {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100%;
+    border-right: 1px solid $ks-default-border-color;
+
+    > .ks-header {
+      display: flex;
+      min-height: 56px;
+      height: 56px;
+      border-bottom: 1px solid $ks-default-border-color;
+      align-items: center;
+      padding: 0 10px;
+
+      > .ks-search {
+        flex-grow: 1;
+      }
+
+      > .ks-actions {
+        margin-left: 10px;
+
+        > .btn, > .btn-group {
+          margin-right: 8px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        > .btn-group {
+          > .btn {
+            > .ks-icon {
+              font-size: 24px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    > .ks-body {
+      flex-grow: 1;
+
+      ul {
+        @include list-unstyled;
+      }
+
+      .ks-email {
+        border-bottom: 1px solid $ks-default-border-color;
+
+        &.ks-active {
+          @include menu_active_item;
+        }
+
+        &.ks-new {
+          background: rgba(247, 202, 24, 0.1);
+
+          > a {
+            font-weight: 500;
+          }
+        }
+
+        &.ks-closed {
+          > a {
+            opacity: 0.7;
+          }
+        }
+
+        > a {
+          display: flex;
+          padding: 15px 20px;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          > .ks-avatar {
+            margin-right: 12px;
+          }
+
+          > .ks-body {
+            flex: 1 1 auto;
+
+            > .ks-info {
+              margin-bottom: 2px;
+              display: flex;
+              justify-content: space-between;
+
+              > .ks-name {
+                color: #333333;
+                font-size: 13px;
+                font-weight: normal;
+
+                > .ks-favorite {
+                  color: rgba(57, 81, 155, 0.6);
+                  font-size: 15px;
+                  font-weight: normal;
+                  position: relative;
+                  top: 1px;
+                  display: inline-block;
+                  margin-right: 5px;
+
+                  &.ks-active {
+                    color: $ks-color-warning;
+                  }
+                }
+              }
+
+              > .ks-time {
+                color: $ks-default-text-color-light;
+                font-size: 10px;
+                text-transform: uppercase;
+              }
+            }
+
+            > .ks-subject {
+              font-weight: 500;
+              color: $ks-default-text-color;
+              margin-bottom: 4px;
+            }
+
+            > .ks-message {
+              color: $ks-default-text-color;
+              font-size: 12px;
+              font-weight: normal;
+            }
+
+            > .ks-status {
+              margin-top: 5px;
+              padding: 3px 5px;
+            }
+          }
+        }
+      }
+    }
+
+    &.ks-compact {
+      width: 1px;
+      flex: 1 1 auto;
+      border-right: none;
+
+      > .ks-header {
+        padding-left: 20px;
+
+        > .ks-check-all {
+          width: 36px;
+          display: flex;
+          align-items: center;
+
+          > .custom-checkbox {
+            width: 16px;
+            height: 16px;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      > .ks-body {
+        .ks-table {
+          width: 100%;
+          border: none;
+
+          .ks-checkbox {
+            .custom-control-indicator {
+              &:before {
+                left: 0;
+              }
+            }
+          }
+
+          tr {
+            &.ks-selected {
+              background-color: rgba(247, 202, 24, 0.1);
+
+              > td {
+                background-color: rgba(247, 202, 24, 0.1);
+
+                &:hover {
+                  background-color: rgba(247, 202, 24, 0.1);
+                }
+              }
+            }
+
+            &.ks-unread {
+              > td {
+                &.ks-message {
+                  color: $text-color;
+                }
+              }
+            }
+          }
+
+          td {
+            cursor: pointer;
+            padding-top: 10px;
+            padding-bottom: 9px;
+            border-top: none;
+            border-bottom: 1px solid $ks-default-border-color;
+            vertical-align: middle;
+
+            &.ks-sender {
+              width: 180px;
+              padding-left: 15px;
+
+              > .ks-favorite {
+                color: rgba(57, 81, 155, 0.6);
+                display: inline-block;
+                margin-right: 10px;
+                font-size: 16px;
+                position: relative;
+                top: 1px;
+
+                &.ks-active {
+                  color: $ks-color-warning;
+                }
+              }
+
+              > .ks-amount {
+                color: $ks-default-text-color-light;
+              }
+            }
+
+            &.ks-message {
+              color: $ks-default-text-color-light;
+
+              > .ks-badge {
+                padding: 3px 5px;
+                margin: 0;
+                margin-right: 10px;
+              }
+
+              > .ks-subject {
+                color: $text-color;
+                display: inline-block;
+                margin-right: 20px;
+              }
+            }
+
+            &.ks-datetime {
+              text-align: right;
+              color: $ks-default-text-color-light;
+              font-size: 10px;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > .ks-view {
+    flex-grow: 1;
+    background: #fff;
+
+    &.ks-empty {
+      display: flex;
+      background-color: #f5f6fa;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .ks-icon {
+        font-size: 62px;
+        color: rgba(57, 81, 155, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .ks-text {
+        width: 230px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.5;
+        color: $ks-default-text-color-light;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+
+    > .ks-header {
+      display: flex;
+      height: 56px;
+      border-bottom: 1px solid #d7dceb;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 30px;
+
+      > .ks-mail-controls {
+        > .btn {
+          + .btn {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      > .ks-controls {
+        display: flex;
+
+        > .btn {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    > .ks-body {
+      flex-grow: 1;
+
+      .ks-email-content {
+        padding: 20px 30px 20px 20px;
+
+        > .ks-subject {
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+
+        > .ks-badges {
+          margin-bottom: 16px;
+
+          > .ks-badge {
+            padding: 3px 5px;
+            margin-right: 5px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+
+        > .ks-sender {
+          margin-bottom: 30px;
+          display: flex;
+
+          > .ks-avatar {
+            margin-right: 12px;
+
+            > img {
+              width: 36px;
+              height: 36px;
+            }
+          }
+
+          > .ks-info {
+            margin-right: 20px;
+
+            > .ks-name, > .ks-time {
+              display: block;
+            }
+
+            > .ks-name {
+              > .ks-favorite {
+                font-size: 16px;
+                color: #8897c3;
+                position: relative;
+                top: 1px;
+
+                &.ks-active {
+                  color: $ks-color-warning;
+                }
+
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+
+            > .ks-time {
+              color: $ks-default-text-color-light;
+            }
+          }
+
+          > .ks-data {
+            > .ks-from, > .ks-to {
+              display: block;
+              color: $ks-default-text-color-light;
+            }
+          }
+        }
+
+        > .ks-attachments {
+          margin-top: 20px;
+
+          > ul {
+            margin: 0;
+            padding: 0;
+          }
+
+          .file-item {
+            display: inline-block;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 10px;
+            position: relative;
+
+            &:hover {
+              > .thumb {
+                border: solid 1px $ks-color-info;
+              }
+            }
+
+            > .thumb {
+              width: 90px;
+              height: 90px;
+              border-radius: 2px;
+              background-color: #fff;
+              border: solid 1px $ks-default-border-color;
+              margin-bottom: 5px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              font-size: 45px;
+              color: $ks-color-primary;
+
+              &::before {
+                width: 100%;
+              }
+            }
+
+            > img.thumb {
+              border: none;
+            }
+
+            > .filename {
+              display: block;
+              font-size: 12px;
+              font-weight: 400;
+              color: $ks-default-text-color;
+            }
+
+            > .size {
+              position: relative;
+              top: -2px;
+              font-size: 10px;
+              color: $ks-default-text-color-light;
+            }
+          }
+        }
+      }
+    }
+
+    &.ks-manage {
+      > .ks-body {
+        padding: 20px 30px 20px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .btn {
+    &.ks-mail-navigation-block-toggle {
+      position: static;
+    }
+  }
+
+  .ks-mail {
+    > .ks-navigation {
+      position: fixed;
+      top: 120px;
+      bottom: 0;
+      left: -250px;
+      z-index: 3;
+      height: 100%;
+
+      &.ks-open {
+        left: 0;
+        transition: left .2s ease;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .ks-mail {
+    > .ks-emails {
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .ks-mail {
+    > .ks-emails {
+      width: 100%;
+
+      .ks-header {
+        padding: 0 20px;
+      }
+    }
+
+    > .ks-view {
+      position: fixed;
+      z-index: 2;
+      height: 100%;
+      top: 120px;
+      width: 100%;
+      visibility: hidden;
+      right: -1000px;
+
+      > .ks-header {
+        > .ks-mail-controls {
+          .btn {
+            width: 38px;
+            padding: 0;
+
+            > .ks-icon {
+              margin: 0;
+            }
+
+            > .ks-text {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &.ks-open {
+        visibility: visible;
+        right: 0;
+        transition: right .2s ease;
+      }
+    }
+  }
+}

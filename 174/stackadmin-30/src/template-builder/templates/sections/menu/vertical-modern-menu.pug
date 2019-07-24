@@ -1,0 +1,534 @@
+- var sk_path = "../../../starter-kit/"+ useDirection +"/"+ useLayout +"/"
+
+//- main menu
+.main-menu(class=menuType + ' ' + menuColor + ' ' + menuOpenType, class=(menuNativeScroll == true ? 'menu-native-scroll' : ''), class=(menuIconRight == true ? 'menu-icon-right' : ''), class=(menuDevider == true ? 'menu-bordered' : ''), class=(menuShadow == true ? 'menu-shadow' : ''), class=(menuBorder == true ? 'menu-border' : '') data-scroll-to-active="true")
+
+  //- main menu header
+  //- include includes/menu-header
+  //- / main menu header
+
+  //- main menu content
+  .main-menu-content
+    +verticalMenu([
+
+      {navheader:"General",icon:""},
+
+        {url:"index.html",name:"Dashboard",slug:"dashboard",icon:"ft-home", tag:"3" , tagcustom: "badge badge-primary badge-pill float-right mr-2",
+          submenu:[
+            {url:"dashboard-ecommerce.html", name:"eCommerce", slug:"dashboard-ecommerce"},
+            {url:"dashboard-analytics.html", name:"Analytics", slug:"dashboard-analytics"},
+            {url:"dashboard-fitness.html", name:"Fitness", slug:"dashboard-fitness"},
+          ]
+        },
+
+        {url:"#",name:"Templates",slug:"#",icon:"ft-monitor",
+          submenu:[
+            {url:"#", name:"Vertical", slug:"",
+              submenu:[
+                {url:"../vertical-modern-menu-template", name:"Modern Menu", slug:""},
+                {url:"../vertical-menu-template", name:"Semi Light", slug:""},
+                {url:"../vertical-menu-template-semi-dark", name:"Semi Dark", slug:""},
+                {url:"../vertical-menu-template-nav-dark", name:"Nav Dark", slug:""},
+                {url:"../vertical-menu-template-light", name:"Light", slug:""},
+                {url:"../vertical-overlay-menu-template", name:"Overlay Menu", slug:""},
+              ]
+            },
+            {url:"#", name:"Horizontal", slug:"",
+              submenu:[
+                {url:"../horizontal-menu-template", name:"Classic", slug:""},
+                {url:"../horizontal-menu-template-nav", name:"Nav Dark", slug:""},
+              ]
+            },
+          ]
+        },
+
+        {url:"#",name:"Layouts",slug:"layouts",icon:"ft-layout",
+          submenu:[
+            {url:"#",name:"Page Layouts",slug:"page_layouts",icon:"icon-stack-2",
+              submenu:[
+                {url:"layout-1-column.html", name:"1 column", slug:"layout-1-column"},
+                {url:"layout-2-columns.html", name:"2 columns", slug:"layout-2-columns"},
+                {url:"#", name:"Content Det. Sidebar", slug:"",
+                  submenu:[
+                    {url:"layout-content-detached-left-sidebar.html", name:"Detached left sidebar", slug:"layout-content-detached-left-sidebar"},
+                    {url:"layout-content-detached-left-sticky-sidebar.html", name:"Detached sticky left sidebar", slug:"layout-content-detached-left-sticky-sidebar"},
+                    {url:"layout-content-detached-right-sidebar.html", name:"Detached right sidebar", slug:"layout-content-detached-right-sidebar"},
+                    {url:"layout-content-detached-right-sticky-sidebar.html", name:"Detached sticky right sidebar", slug:"layout-content-detached-right-sticky-sidebar"},
+                  ]
+                },
+                {divider:"1"},
+                {url:"layout-fixed-navbar.html",name:"Fixed navbar",slug:"layout-fixed-navbar"},
+                {url:"layout-fixed-navigation.html",name:"Fixed navigation",slug:"layout-fixed-navigation"},
+                {url:"layout-fixed-navbar-navigation.html",name:"Fixed navbar & navigation",slug:"layout-fixed-navbar-navigation"},
+                {url:"layout-fixed-navbar-footer.html",name:"Fixed navbar & footer",slug:"layout-fixed-navbar-footer"},
+                {divider:"1"},
+                {url:"layout-fixed.html",name:"Fixed layout",slug:"layout-fixed"},
+                {url:"layout-boxed.html",name:"Boxed layout",slug:"layout-boxed"},
+                {url:"layout-static.html",name:"Static layout",slug:"layout-static"},
+                {divider:"1"},
+                {url:"layout-light.html",name:"Light layout",slug:"layout-light"},
+                {url:"layout-dark.html",name:"Dark layout",slug:"layout-dark"},
+                {url:"layout-semi-dark.html",name:"Semi dark layout",slug:"layout-semi-dark"},
+              ]
+            },
+
+            {url:"#", name:"Navbars", icon:"icon-navicon2", slug:"",
+              submenu:[
+                {url:"navbar-light.html", name:"Navbar Light", icon:"", slug:"navbar-light"},
+                {url:"navbar-dark.html", name:"Navbar Dark", icon:"", slug:"navbar-dark"},
+                {url:"navbar-semi-dark.html", name:"Navbar Semi Dark", icon:"", slug:"navbar-semi-dark"},
+                {url:"navbar-brand-center.html", name:"Brand Center", icon:"", slug:"navbar-brand-center"},
+                {url:"navbar-fixed-top.html", name:"Fixed Top", icon:"", slug:"navbar-fixed-top"},
+                {url:"#", name:"Hide on Scroll", icon:"", slug:"navbar-hide-on-scroll",
+                  submenu:[
+                    {url:"navbar-hide-on-scroll-top.html", name:"Hide on Scroll Top", icon:"", slug:"navbar-hide-on-scroll-top"},
+                    {url:"navbar-hide-on-scroll-bottom.html", name:"Hide on Scroll Bottom", icon:"", slug:"navbar-hide-on-scroll-bottom"},
+                  ]
+                },
+                {url:"navbar-components.html", name:"Navbar Components", icon:"", slug:"navbar-components"},
+                {url:"navbar-styling.html", name:"Navbar Styling", icon:"", slug:"navbar-styling"},
+              ]
+            },
+
+            {url:"#", name:"Vertical Nav", icon:"icon-panorama_vertical", slug:"",
+              submenu:[
+                {url:"#", name:"Navigation Types", icon:"", slug:"vertical-navigation-types",
+                  submenu:[
+                    {url:"../vertical-menu-template", name:"Vertical Menu", slug:"vertical-menu"},
+                    {url:"../vertical-overlay-menu-template", name:"Vertical Overlay", slug:"vertical-overlay"},
+                  ]
+                },
+                {url:"vertical-nav-compact-menu.html", name:"Compact Menu", icon:"", slug:"vertical-nav-compact-menu"},
+                {url:"vertical-nav-fixed.html", name:"Fixed Navigation", icon:"", slug:"vertical-nav-fixed"},
+                {url:"vertical-nav-static.html", name:"Static Navigation", icon:"", slug:"vertical-nav-static"},
+                {url:"vertical-nav-light.html", name:"Navigation Light", icon:"", slug:"vertical-nav-light"},
+                {url:"vertical-nav-dark.html", name:"Navigation Dark", icon:"", slug:"vertical-nav-dark"},
+                {url:"vertical-nav-accordion.html", name:"Accordion Navigation", icon:"", slug:"vertical-nav-accordion"},
+                {url:"vertical-nav-collapsible.html",name:"Collapsible Navigation", icon:"", slug:"vertical-nav-collapsible"},
+                {url:"vertical-nav-flipped.html", name:"Flipped Navigation", icon:"", slug:"vertical-nav-flipped"},
+                {url:"vertical-nav-native-scroll.html", name:"Native scroll", icon:"", slug:"vertical-nav-native-scroll"},
+                {url:"vertical-nav-right-side-icon.html", name:"Right side icons", icon:"", slug:"vertical-nav-right-side-icon"},
+                {url:"vertical-nav-bordered.html", name:"Bordered Navigation", icon:"", slug:"vertical-nav-bordered"},
+                {url:"vertical-nav-disabled-link.html", name:"Disabled Navigation", icon:"", slug:"vertical-nav-disabled-link"},
+                {url:"vertical-nav-styling.html", name:"Navigation Styling", icon:"", slug:"vertical-nav-styling"},
+                {url:"vertical-nav-tags-pills.html", name:"Tags & Pills", icon:"", slug:"vertical-nav-tags-pills", label:"Hey!", labelcustom: "badge badge-glow badge-pill badge-default badge-danger"},
+              ]
+            },
+
+            {url:"#", name:"Horizontal Nav", icon:"icon-panorama_horizontal", slug:"",
+              submenu:[
+                {url:"#", name:"Navigation Types",icon:"", slug:"horizontal-navigation-types",
+                  submenu:[
+                    {url:"../horizontal-menu-template", name:"Classic", slug:"Classic"},
+                    {url:"../horizontal-menu-template-nav", name:"Nav Dark", slug:"nav-dark"},
+                  ]
+                },
+              ]
+            },
+
+            {url:"#", name:"Page Headers", icon:"icon-header", slug:"",
+              submenu:[
+                {url:"headers-breadcrumbs-basic.html", name:"Breadcrumbs basic", icon:"", slug:"headers-breadcrumbs-basic"},
+                {url:"headers-breadcrumbs-top.html", name:"Breadcrumbs top", icon:"", slug:"headers-breadcrumbs-top"},
+                {url:"headers-breadcrumbs-bottom.html", name:"Breadcrumbs bottom", icon:"", slug:"headers-breadcrumbs-bottom"},
+                {url:"headers-breadcrumbs-with-button.html", name:"Breadcrumbs with button", icon:"", slug:"headers-breadcrumbs-with-button"},
+                {url:"headers-breadcrumbs-with-round-button.html", name:"Breadcrumbs with round button 2", icon:"", slug:"headers-breadcrumbs-with-round-button"},
+                {url:"headers-breadcrumbs-with-stats.html", name:"Breadcrumbs with stats", icon:"", slug:"headers-breadcrumbs-with-stats"},
+              ]
+            },
+
+            {url:"#", name:"Footers", icon:"icon-vertical_align_bottom", slug:"",
+              submenu:[
+                {url:"footer-light.html", name:"Footer Light",icon:"", slug:"footer-light"},
+                {url:"footer-dark.html", name:"Footer Dark",icon:"", slug:"footer-dark"},
+                {url:"footer-transparent.html", name:"Footer Transparent",icon:"", slug:"footer-transparent"},
+                {url:"footer-fixed.html", name:"Footer Fixed",icon:"", slug:"footer-fixed"},
+                {url:"footer-components.html", name:"Footer Components",icon:"", slug:"footer-components"},
+              ]
+            },
+          ]
+        },
+
+        {url:"#", name:"Starter kit", slug:"", icon:"ft-zap", tag:"New" , tagcustom: "badge badge-danger badge-pill float-right mr-2",
+          submenu:[
+            {url:sk_path+"layout-1-column.html", name:"1 column", slug:"1-column"},
+            {url:sk_path+"layout-2-columns.html", name:"2 columns", slug:"2-columns"},
+            {url:"#", name:"Content Det. Sidebar", slug:"",
+              submenu:[
+                {url:sk_path+"layout-content-detached-left-sidebar.html", name:"Detached left sidebar", slug:"content-detached-left-sidebar"},
+                {url:sk_path+"layout-content-detached-left-sticky-sidebar.html", name:"Detached sticky left sidebar", slug:"content-detached-left-sticky-sidebar"},
+                {url:sk_path+"layout-content-detached-right-sidebar.html", name:"Detached right sidebar", slug:"content-detached-right-sidebar"},
+                {url:sk_path+"layout-content-detached-right-sticky-sidebar.html", name:"Detached sticky right sidebar", slug:"content-detached-right-sticky-sidebar"},
+              ]
+            },
+            {divider:"1"},
+            {url:sk_path+"layout-fixed-navbar.html",name:"Fixed navbar",slug:"fixed-navbar"},
+            {url:sk_path+"layout-fixed-navigation.html",name:"Fixed navigation",slug:"fixed-navigation"},
+            {url:sk_path+"layout-fixed-navbar-navigation.html",name:"Fixed navbar & navigation",slug:"fixed-navbar-navigation"},
+            {url:sk_path+"layout-fixed-navbar-footer.html",name:"Fixed navbar & footer",slug:"fixed-navbar-footer"},
+            {divider:"1"},
+            {url:sk_path+"layout-fixed.html",name:"Fixed layout",slug:"fixed"},
+            {url:sk_path+"layout-boxed.html",name:"Boxed layout",slug:"boxed"},
+            {url:sk_path+"layout-static.html",name:"Static layout",slug:"static"},
+            {divider:"1"},
+            {url:sk_path+"layout-light.html",name:"Light layout",slug:"light"},
+            {url:sk_path+"layout-dark.html",name:"Dark layout",slug:"dark"},
+            {url:sk_path+"layout-semi-dark.html",name:"Semi dark layout",slug:"semi-dark"},
+          ]
+        },
+
+      {navheader:"Apps",icon:""},
+
+        {url:"email-application.html",name:"Email Application",icon:"ft-mail",slug:"email-application"},
+
+        {url:"chat-application.html",name:"Chat Application",icon:"ft-message-square",slug:"chat-application"},
+
+        {url:"project-summary.html",name:"Project Summary",icon:"ft-airplay",slug:"project-summary"},
+
+        {url:"invoice-template.html",name:"Invoice Template",icon:"ft-printer",slug:"invoice-template"},
+
+        {url:"#",name:"Timelines",icon:"ft-share",slug:"timeline-pages",
+          submenu:[
+            {url:"timeline-center.html",name:"Timelines Center", slug:"timeline-center"},
+            {url:"timeline-horizontal.html",name:"Timelines Horizontal", slug:"timeline-horizontal"},
+          ]
+        },
+
+
+        {url:"#",name:"Users",icon:"ft-user",slug:"user-pages",
+          submenu:[
+            {url:"user-profile.html",name:"Users Profile", icon:"ft-user" ,slug:"user-profile"},
+            {url:"user-cards.html",name:"Users Cards", icon:"ft-user-plus" ,slug:"user-cards"},
+          ]
+        },
+
+        {url:"#",name:"Calender",icon:"ft-plus-square",slug:"calender-pages",
+          submenu:[
+            {url:"full-calender-basic.html",name:"Full Calender Basic", slug:"full-calender-basic"},
+            {url:"full-calender-events.html",name:"Full Calender Events", slug:"full-calender-events"},
+            {url:"full-calender-advance.html",name:"Full Calender Advance", slug:"full-calender-advance"},
+            {url:"full-calender-extra.html",name:"Full Calender Extra", slug:"full-calender-extra"},
+          ]
+        },
+
+        {url:"#",name:"Gallery",icon:"ft-image",slug:"gallery-pages",
+          submenu:[
+            {url:"gallery-grid.html",name:"Gallery Grid",slug:"gallery-grid"},
+            {url:"gallery-grid-with-desc.html",name:"Gallery Grid with Desc",slug:"gallery-grid-with-desc"},
+            {url:"gallery-masonry.html",name:"Masonry Gallery",slug:"gallery-masonry"},
+            {url:"gallery-masonry-with-desc.html",name:"Masonry Gallery with Desc",slug:"gallery-masonry-with-desc"},
+            {url:"gallery-hover-effects.html",name:"Hover Effects",slug:"gallery-hover-effects"}
+          ]
+        },
+
+        {url:"#",name:"Search",icon:"ft-search",slug:"search-pages",
+          submenu:[
+            {url:"search-page.html",name:"Search Page",slug:"search-page"},
+            {url:"search-website.html",name:"Search Website",slug:"search-website"},
+            {url:"search-images.html",name:"Search Images",slug:"search-images"},
+            {url:"search-videos.html",name:"Search Videos",slug:"search-videos"}
+          ]
+        },
+
+        {url:"#",name:"Authentication",icon:"ft-unlock",slug:"login-register-pages",
+          submenu:[
+            {url:"login-simple.html",name:"Login Simple",slug:"login-simple"},
+            {url:"login-with-bg.html",name:"Login with Bg",slug:"login-with-bg"},
+            {url:"login-with-bg-image.html",name:"Login with Bg Image",slug:"login-with-bg-image"},
+            {url:"register-simple.html",name:"Register Simple",slug:"register-simple"},
+            {url:"register-with-bg.html",name:"Register with Bg",slug:"register-with-bg"},
+            {url:"register-with-bg-image.html",name:"Register with Bg Image",slug:"register-with-bg-image"},
+            {url:"unlock-user.html",name:"Unlock User",slug:"unlock-user"},
+            {url:"recover-password.html",name:"Recover Password",slug:"recover-password"},
+          ]
+        },
+
+        {url:"#",name:"Error",icon:"ft-alert-triangle",slug:"error-pages",
+          submenu:[
+            {url:"error-400.html",name:"Error 400",slug:"error-400"},
+            {url:"error-401.html",name:"Error 401",slug:"error-401"},
+            {url:"error-403.html",name:"Error 403",slug:"error-403"},
+            {url:"error-404.html",name:"Error 404",slug:"error-404"},
+            {url:"error-500.html",name:"Error 500",slug:"error-500"},
+          ]
+        },
+
+        {url:"#",name:"Coming Soon", icon:"ft-watch" ,slug:"coming-soon",
+          submenu:[
+            {url:"coming-soon-flat.html", name:"Flat",icon:"", slug:"coming-soon-flat"},
+            {url:"coming-soon-bg-image.html", name:"Bg image",icon:"", slug:"coming-soon-bg-image"},
+            {url:"coming-soon-bg-video.html", name:"Bg video",icon:"", slug:"coming-soon-bg-video"},
+          ]
+        },
+
+        {url:"under-maintenance.html",name:"Maintenance", icon:"ft-cloud-off" ,slug:"under-maintenance"},
+
+      {navheader:"UI",icon:"ft-droplet"},
+
+        {url:"#", name:"Content", icon:"ft-globe", slug:"",
+          submenu:[
+            {url:"content-grid.html", name:"Grid", icon:"", slug:"content-grid"},
+            {url:"content-typography.html", name:"Typography", icon:"", slug:"content-typography"},
+            {url:"content-text-utilities.html", name:"Text utilities", icon:"", slug:"content-text-utilities"},
+            {url:"content-syntax-highlighter.html", name:"Syntax highlighter", icon:"", slug:"content-syntax-highlighter"},
+            {url:"content-helper-classes.html", name:"Helper classes", icon:"", slug:"content-helper-classes"},
+          ]
+        },
+        {url:"#", name:"Cards",icon:"", slug:"card-bootstrap", icon:"ft-square", tag:"Hot" , tagcustom: "badge badge-pill badge-success float-right mr-2",
+          submenu:[
+            {url:"card-bootstrap.html", name:"Bootstrap",icon:"", slug:"card-bootstrap"},
+            {url:"card-headings.html", name:"Headings",icon:"", slug:"card-headings"},
+            {url:"card-options.html", name:"Options",icon:"", slug:"card-options"},
+            {url:"card-actions.html", name:"Action",icon:"", slug:"card-actions"},
+            {url:"card-draggable.html", name:"Draggable",icon:"", slug:"card-draggable"},
+          ]
+        },
+        {url:"#", name:"Advance Cards", slug:"card-advance", icon:"ft-layers",
+          submenu:[
+            {url:"card-statistics.html", name:"Statistics",icon:"", slug:"card-statistics"},
+            {url:"card-weather.html", name:"Weather",icon:"", slug:"card-weather"},
+            {url:"card-charts.html", name:"Charts",icon:"", slug:"card-charts"},
+            {url:"card-maps.html", name:"Maps",icon:"", slug:"card-maps"},
+            {url:"card-social.html", name:"Social",icon:"", slug:"card-social"},
+            {url:"card-ecommerce.html", name:"E-Commerce",icon:"", slug:"card-ecommerce"},
+          ]
+        },
+        {url:"#",name:"Color Palette",slug:"",icon:"ft-droplet", tag:"14", tagcustom: "badge badge-warning badge-pill float-right mr-2",
+          submenu:[
+            {url:"color-palette-primary.html",name:"Primary palette",slug:"color-palette-primary"},
+            {url:"color-palette-danger.html",name:"Danger palette",slug:"color-palette-danger"},
+            {url:"color-palette-success.html",name:"Success palette",slug:"color-palette-success"},
+            {url:"color-palette-warning.html",name:"Warning palette",slug:"color-palette-warning"},
+            {url:"color-palette-info.html",name:"Info palette",slug:"color-palette-info"},
+            {divider:"1"},
+            {url:"color-palette-red.html",name:"Red palette",slug:"color-palette-red"},
+            {url:"color-palette-pink.html",name:"Pink palette",slug:"color-palette-pink"},
+            {url:"color-palette-purple.html",name:"Purple palette",slug:"color-palette-purple"},
+            {url:"color-palette-blue.html",name:"Blue palette",slug:"color-palette-blue"},
+            {url:"color-palette-cyan.html",name:"Cyan palette",slug:"color-palette-cyan"},
+            {url:"color-palette-teal.html",name:"Teal palette",slug:"color-palette-teal"},
+            {url:"color-palette-yellow.html",name:"Yellow palette",slug:"color-palette-yellow"},
+            {url:"color-palette-amber.html",name:"Amber palette",slug:"color-palette-amber"},
+            {url:"color-palette-blue-grey.html",name:"Blue Grey palette",slug:"color-palette-blue-grey"},
+          ]
+        },
+        {url:"#", name:"Icons", icon:"ft-eye", slug:"",
+          submenu:[
+            {url:"icons-feather.html", name:"Feather", icon:"", slug:"icons-feather"},
+            {url:"icons-font-awesome.html", name:"Font Awesome", icon:"", slug:"icons-font-awesome"},
+            {url:"icons-simple-line-icons.html", name:"Simple Line Icons", icon:"", slug:"icons-simple-line-icons"},
+            {url:"icons-meteocons.html", name:"Meteocons", icon:"", slug:"icons-meteocons"},
+          ]
+        },
+
+      {navheader:"Components",icon:""},
+        {url:"#", name:"Bootstrap Components", icon:"ft-briefcase", slug:"",
+          submenu:[
+            {url:"component-alerts.html", name:"Alerts",icon:"", slug:"component-alerts"},
+            {url:"component-callout.html", name:"Callout",icon:"", slug:"component-callout"},
+            {url:"#", name:"Buttons",icon:"", slug:"components-buttons",
+              submenu:[
+                {url:"component-buttons-basic.html", name:"Basic Buttons",icon:"", slug:"component-buttons-basic"},
+                {url:"component-buttons-extended.html", name:"Extended Buttons",icon:"", slug:"component-buttons-extended"},
+              ]
+            },
+            {url:"component-carousel.html", name:"Carousel",icon:"", slug:"component-carousel"},
+            {url:"component-collapse.html", name:"Collapse",icon:"", slug:"component-collapse"},
+            {url:"component-dropdowns.html", name:"Dropdowns",icon:"", slug:"component-dropdowns"},
+            {url:"component-list-group.html", name:"List Group",icon:"", slug:"component-list-group"},
+            {url:"component-modals.html", name:"Modals",icon:"", slug:"component-modals"},
+            {url:"component-pagination.html", name:"Pagination",icon:"", slug:"component-pagination"},
+            {url:"component-navs-component.html", name:"Navs Component",icon:"", slug:"component-navs-component"},
+            {url:"component-tabs-component.html", name:"Tabs Component",icon:"", slug:"component-tabs-component"},
+            {url:"component-pills-component.html", name:"Pills Component",icon:"", slug:"component-pills-component"},
+            {url:"component-tooltips.html", name:"Tooltips",icon:"", slug:"component-tooltips"},
+            {url:"component-popovers.html", name:"Popovers",icon:"", slug:"component-popovers"},
+            {url:"component-badges.html", name:"Badges",icon:"", slug:"component-badges"},
+            {url:"component-pill-badges.html", name:"Pill Badges",icon:"", slug:"component-pill-badges"},
+            {url:"component-progress.html", name:"Progress",icon:"", slug:"component-progress"},
+            {url:"component-media-objects.html", name:"Media Objects",icon:"", slug:"component-media-objects"},
+            {url:"component-scrollable.html", name:"Scrollable",icon:"", slug:"component-scrollable"},
+            {url:"component-spinners.html", name:"Spinners",icon:"", slug:"component-spinners"},
+          ]
+        },
+        {url:"#", name:"Extra Components", icon:"ft-box", slug:"",
+          submenu:[
+            {url:"ex-component-sweet-alerts.html", name:"Sweet Alerts", icon:"", slug:"ex-component-sweet-alerts"},
+            {url:"ex-component-ratings.html", name:"Ratings", icon:"", slug:"ex-component-ratings"},
+            {url:"ex-component-toastr.html", name:"Toastr", icon:"", slug:"ex-component-toastr"},
+            {url:"ex-component-noui-slider.html", name:"NoUI Slider", icon:"", slug:"ex-component-noui-slider"},
+            {url:"ex-component-knob.html", name:"Knob", icon:"", slug:"ex-component-knob"},
+            {url:"ex-component-block-ui.html", name:"Block UI", icon:"", slug:"ex-component-block-ui"},
+            {url:"ex-component-date-time-picker.html", name:"DateTime Picker", icon:"", slug:"ex-component-date-time-picker"},
+            {url:"ex-component-file-uploader-dropzone.html", name:"File Uploader", icon:"", slug:"ex-component-file-uploader-dropzone"},
+            {url:"ex-component-image-cropper.html", name:"Image Cropper", icon:"", slug:"ex-component-image-cropper"},
+          ]
+        },
+        {url:"#", name:"Forms", icon:"ft-edit", slug:"",
+          submenu:[
+            {url:"#", name:"Form Elements", icon:"icon-wpforms", slug:"form-elements",
+              submenu:[
+                {url:"form-inputs.html", name:"Form Inputs",icon:"", slug:"form-inputs"},
+                {url:"form-input-groups.html", name:"Input Groups",icon:"", slug:"form-input-groups"},
+                {url:"form-input-grid.html", name:"Input Grid",icon:"", slug:"form-input-grid"},
+                {url:"form-extended-inputs.html", name:"Extended Inputs",icon:"", slug:"form-extended-inputs"},
+                {url:"form-checkboxes-radios.html", name:"Checkboxes & Radios",icon:"", slug:"form-checkboxes-radios"},
+                {url:"form-switch.html", name:"Switch",icon:"", slug:"form-switch"},
+                {url:"form-select2.html", name:"Select2",icon:"", slug:"form-select2"},
+                {url:"form-tags-input.html", name:"Tags Input",icon:"", slug:"form-tags-input"},
+                {url:"form-validation.html", name:"Validation",icon:"", slug:"form-validation"},
+              ]
+            },
+            {url:"#", name:"Form Layouts", icon:"icon-wpforms", slug:"form-layouts",
+              submenu:[
+                {url:"form-layout-basic.html", name:"Basic Forms",icon:"", slug:"form-layout-basic"},
+                {url:"form-layout-horizontal.html", name:"Horizontal Forms",icon:"", slug:"form-layout-horizontal"},
+                {url:"form-layout-hidden-labels.html", name:"Hidden Labels",icon:"", slug:"form-layout-hidden-labels"},
+                {url:"form-layout-form-actions.html", name:"Form Actions",icon:"", slug:"form-layout-form-actions"},
+                {url:"form-layout-bordered.html", name:"Bordered",icon:"", slug:"form-layout-bordered"},
+                {url:"form-layout-striped-rows.html", name:"Striped Rows",icon:"", slug:"form-layout-striped-rows"},
+              ]
+            },
+            {url:"form-wizard.html", name:"Form Wizard", icon:"", slug:"form-wizard"},
+            {url:"form-repeater.html", name:"Form Repeater", icon:"", slug:"form-repeater"},
+          ]
+        },
+        {url:"#",name:"Tables",icon:"ft-grid",slug:"tables",
+          submenu:[
+            {url:"#",name:"Bootstrap Tables",icon:"icon-table2",slug:"bootstrap-tables",
+              submenu:[
+                {url:"table-basic.html",name:"Basic Tables",slug:"table-basic"},
+                {url:"table-border.html",name:"Table Border",slug:"table-border"},
+                {url:"table-sizing.html",name:"Table Sizing",slug:"table-sizing"},
+                {url:"table-styling.html",name:"Table Styling",slug:"table-styling"},
+                {url:"table-components.html",name:"Table Components",slug:"table-components"},
+              ]
+            },
+
+            {url:"#",name:"DataTables",icon:"icon-th",slug:"data-tables",
+              submenu:[
+                {url:"dt-basic-initialization.html",name:"Basic Initialisation",slug:"dt-basic-initialization"},
+                {url:"dt-advanced-initialization.html",name:"Advanced initialisation",slug:"dt-advanced-initialization"},
+                {url:"dt-styling.html",name:"Styling",slug:"dt-styling"},
+                {url:"dt-data-sources.html",name:"Data Sources",slug:"dt-data-sources"},
+                {url:"dt-api.html",name:"API",slug:"dt-api"},
+                {url:"#",name:"DataTables Ext.",icon:"icon-th-large",slug:"datatable-extensions", i18n:"nav.datatable_extensions.main",
+                  submenu:[
+                    {url:"dt-extensions-autofill.html",name:"AutoFill",slug:"dt-extensions-autofill", i18n:"nav.datatable_extensions.dt_extensions_autofill"},
+                    {url:"#",name:"Buttons",slug:"datatable-buttons", i18n:"nav.datatable_extensions.datatable_buttons.main",
+                      submenu:[
+                        {url:"dt-extensions-buttons-basic.html",name:"Basic Buttons",slug:"dt-extensions-buttons-basic", i18n:"nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_basic"},
+                        {url:"dt-extensions-buttons-html-5-data-export.html",name:"HTML 5 Data Export",slug:"dt-extensions-buttons-html-5-data-export", i18n:"nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_html_5_data_export"},
+                        {url:"dt-extensions-buttons-flash-data-export.html",name:"Flash Data Export",slug:"dt-extensions-buttons-flash-data-export", i18n:"nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_flash_data_export"},
+                        {url:"dt-extensions-buttons-column-visibility.html",name:"Column Visibility",slug:"dt-extensions-buttons-column-visibility", i18n:"nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_column_visibility"},
+                        {url:"dt-extensions-buttons-print.html",name:"Print",slug:"dt-extensions-buttons-print", i18n:"nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_print"},
+                        {url:"dt-extensions-buttons-api.html",name:"API",slug:"dt-extensions-buttons-api", i18n:"nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_api"},
+                      ]
+                    },
+                    {url:"dt-extensions-column-reorder.html",name:"Column Reorder",slug:"dt-extensions-column-reorder", i18n:"nav.datatable_extensions.dt_extensions_column_reorder"},
+                    {url:"dt-extensions-fixed-columns.html",name:"Fixed Columns",slug:"dt-extensions-fixed-columns", i18n:"nav.datatable_extensions.dt_extensions_fixed_columns"},
+                    {url:"dt-extensions-key-table.html",name:"Key Table",slug:"dt-extensions-key-table", i18n:"nav.datatable_extensions.dt_extensions_key_table"},
+                    {url:"dt-extensions-row-reorder.html",name:"Row Reorder",slug:"dt-extensions-row-reorder", i18n:"nav.datatable_extensions.dt_extensions_row_reorder"},
+                    {url:"dt-extensions-select.html",name:"Select",slug:"dt-extensions-select", i18n:"nav.datatable_extensions.dt_extensions_select"},
+                    {url:"dt-extensions-fix-header.html",name:"Fix Header",slug:"dt-extensions-fix-header", i18n:"nav.datatable_extensions.dt_extensions_fix_header"},
+                    {url:"dt-extensions-responsive.html",name:"Responsive",slug:"dt-extensions-responsive", i18n:"nav.datatable_extensions.dt_extensions_responsive"},
+                    {url:"dt-extensions-column-visibility.html",name:"Column Visibility",slug:"dt-extensions-column-visibility", i18n:"nav.datatable_extensions.dt_extensions_column_visibility"},
+                  ]
+                },
+              ]
+            },
+
+            {url:"table-jsgrid.html",name:"jsGrid",icon:"icon-table",slug:"table-jsgrid"},
+          ]
+        },
+        {url:"#",name:"Charts",icon:"ft-bar-chart-2",slug:"chart",
+          submenu:[
+            {url:"#",name:"Echarts",icon:"icon-bubble_chart",slug:"echarts",
+              submenu:[
+                {url:"echarts-line-area-charts.html",name:"Line & Area charts",slug:"echarts-line-area-charts"},
+                {url:"echarts-bar-column-charts.html",name:"Bar & Column charts",slug:"echarts-bar-column-charts"},
+                {url:"echarts-pie-doughnut-charts.html",name:"Pie & Doughnut charts",slug:"echarts-pie-doughnut-charts"},
+                {url:"echarts-scatter-charts.html",name:"Scatter charts",slug:"echarts-scatter-charts"},
+                {url:"echarts-radar-chord-charts.html",name:"Radar & Chord charts",slug:"echarts-radar-chord-charts"},
+                {url:"echarts-funnel-gauges-charts.html",name:"Funnel & Gauges charts",slug:"echarts-funnel-gauges-charts"},
+                {url:"echarts-combination-charts.html",name:"Combination charts",slug:"echarts-combination-charts"},
+                {url:"echarts-advance-charts.html",name:"Advance charts",slug:"echarts-advance-charts"},
+              ]
+            },
+
+            {url:"#",name:"Chartjs",icon:"icon-stats-dots",slug:"chartjs",
+              submenu:[
+                {url:"chartjs-line-charts.html",name:"Line charts",slug:"chartjs-line-charts"},
+                {url:"chartjs-bar-charts.html",name:"Bar charts",slug:"chartjs-bar-charts"},
+                {url:"chartjs-pie-doughnut-charts.html",name:"Pie & Doughnut charts",slug:"chartjs-pie-doughnut-charts"},
+                {url:"chartjs-scatter-charts.html",name:"Scatter charts",slug:"chartjs-scatter-charts"},
+                {url:"chartjs-polar-radar-charts.html",name:"Polar & Radar charts",slug:"chartjs-polar-radar-charts"},
+                {url:"chartjs-advance-charts.html",name:"Advance charts",slug:"chartjs-advance-charts"},
+              ]
+            },
+
+            {url:"morris-charts.html",name:"Morris Charts",icon:"icon-graphic_eq",slug:"morris-charts"},
+
+            {url:"#",name:"Flot Charts",icon:"icon-pie-graph2",slug:"flot-charts",
+              submenu:[
+                {url:"flot-line-charts.html",name:"Line charts",slug:"flot-line-charts"},
+                {url:"flot-bar-charts.html",name:"Bar charts",slug:"flot-bar-charts"},
+                {url:"flot-pie-charts.html",name:"Pie charts",slug:"flot-pie-charts"},
+              ]
+            },
+
+            {url:"#",name:"Chartist",icon:"icon-stats-bars",slug:"chartist",
+              submenu:[
+                {url:"chartist-line-charts.html",name:"Line charts",slug:"chartist-line-charts"},
+                {url:"chartist-bar-charts.html",name:"Bar charts",slug:"chartist-bar-charts"},
+                {url:"chartist-pie-charts.html",name:"Pie charts",slug:"chartist-pie-charts"},
+              ]
+            },
+          ]
+        },
+        {url:"#",name:"Maps",icon:"ft-map",slug:"maps",
+          submenu:[
+            {url:"#",name:"google Maps",slug:"google-maps",
+              submenu:[
+                {url:"gmaps-basic-maps.html",name:"Maps",slug:"gmaps-basic-maps"},
+                {url:"gmaps-services.html",name:"Services",slug:"gmaps-services"},
+                {url:"gmaps-overlays.html",name:"Overlays",slug:"gmaps-overlays"},
+                {url:"gmaps-routes.html",name:"Routes",slug:"gmaps-routes"},
+                {url:"gmaps-utils.html",name:"Utils",slug:"gmaps-utils"}
+              ]
+            },
+            {url:"vector-maps-jvector.html",name:"jVector Map",slug:"jvector-maps"},
+          ]
+        },
+
+      {navheader:"Others",icon:""},
+
+        {url:"#",name:"Menu levels",icon:"ft-align-left",slug:"",
+          submenu:[
+            {url:"#",name:"Second level",slug:""},
+            {url:"#",name:"Second level child",slug:"",
+              submenu:[
+                {url:"#",name:"Third level",slug:""},
+                {url:"#",name:"Third level child",slug:"",
+                  submenu:[
+                    {url:"#",name:"Fourth level",slug:""},
+                    {url:"#",name:"Fourth level",slug:""},
+                  ]
+                },
+              ]
+            },
+          ]
+        },
+        {url:"changelog.html" ,name:"Changelog" ,icon:"ft-file",slug:"changelog" ,tag:"3.0" , tagcustom: "badge badge-pill badge-info float-right"},
+        {url:"#" ,name:"Disabled Menu" , icon:"ft-slash",slug:"", classlist:"disabled"},
+        {url:"https://pixinvent.ticksy.com/",name:"Raise Support",slug:"support-raise-support",icon:"ft-life-buoy"},
+        {url:"https://pixinvent.com/stack-bootstrap-admin-template/documentation",name:"Documentation",slug:"documentation",icon:"ft-folder"},
+
+    ])
+
+  //- /main menu content
+
+  //- main menu footer
+  //- include includes/menu-footer
+  //- main menu footer
+//- / main menu

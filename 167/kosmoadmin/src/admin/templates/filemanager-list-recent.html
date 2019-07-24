@@ -1,0 +1,268 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/file-manager.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>File Manager</h3>
+                <div class="ks-controls">
+                    <button class="btn btn-outline-primary ks-light ks-filemanager-navigation-block-toggle" data-block-toggle=".ks-filemanager-page > .ks-navigation">Navigation</button>
+                    <button class="btn btn-outline-primary ks-light ks-filemanager-info-block-toggle" data-block-toggle=".ks-filemanager-page > .ks-info">Info</button>
+                </div>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-filemanager-page">
+                @@include('./_partials/apps/filemanager/navigation.html')
+
+                <div class="ks-files">
+                    <div class="ks-header">
+                        <div class="ks-search input-icon icon-right icon icon-lg">
+                            <input id="input-group-icon-text" type="text" class="form-control" placeholder="Search">
+                            <span class="icon-addon">
+                                <span class="la la-search"></span>
+                            </span>
+                        </div>
+                        <div class="ks-filters">
+                            <div class="ks-add btn-group">
+                                <button class="btn btn-outline-primary ks-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Add
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right ks-dropdown-menu-icons">
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-upload"></span> Upload file
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-folder-o"></span> Folder
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-file-word-o"></span> Document
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-file-excel-o"></span> Table
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="la la-file-powerpoint-o"></span> Presentation
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ks-sortable btn-group">
+                                <button class="btn btn-outline-primary ks-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="btn-text-lighter">Sort by</span> Name
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right ks-dropdown-menu-sortable">
+                                    <a class="dropdown-item dropdown-item-checked" href="#">
+                                        <span class="ks-sort-by-text">Sort by</span> Name
+                                        <input name="radio" type="radio">
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="ks-sort-by-text">Sort by</span> Size
+                                        <input name="radio" type="radio">
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="ks-sort-by-text">Sort by</span> Type
+                                        <input name="radio" type="radio">
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="ks-sort-by-text">Sort by</span> Last Modified
+                                        <input name="radio" type="radio">
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                        <span>Ascending</span>
+                                        <input name="radio" type="radio">
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span>Descending</span>
+                                        <input name="radio" type="radio">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="ks-view-type btn-group">
+                                <button type="button" class="btn btn-outline-primary ks-light ks-no-text active">
+                                    <span class="ks-icon la la-th-list"></span>
+                                </button>
+                                <button type="button" class="btn btn-outline-primary ks-no-text ks-light">
+                                    <span class="ks-icon la la-th"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ks-breadcrubms">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">My Drive</a></li>
+                            <li class="breadcrumb-item"><a href="#">Projects</a></li>
+                            <li class="breadcrumb-item"><a href="#">January</a></li>
+                            <li class="breadcrumb-item ks-active">2105</li>
+                        </ol>
+                    </div>
+                    <div class="ks-content ks-compact ks-recent">
+                        <table class="table ks-text-light">
+                            <thead class="ks-thead-default">
+                            <tr>
+                                <th class="ks-name-column" width="35%">Name</th>
+                                <th>Owner</th>
+                                <th width="100">Size</th>
+                                <th width="240">Last Modified</th>
+                            </tr>
+                            </thead>
+                        </table>
+                        <div class="ks-table-content ks-scrollable" data-auto-height>
+                            <div class="ks-recent-box">
+                                <h6 class="ks-header">Today</h6>
+                                <table class="table ks-text-light">
+                                    <tbody>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-folder-o text-primary"></span> Folder
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">34 KB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-excel-o text-success"></span> File.xls
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-powerpoint-o text-warning"></span>
+                                            <span class="ks-filename">File.ppt</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ks-recent-box">
+                                <h6 class="ks-header">Earlier this week</h6>
+                                <table class="table ks-text-light">
+                                    <tbody>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-pdf-o text-danger"></span>
+                                            <span class="ks-filename">File.pdf</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-picture-o text-info"></span>
+                                            <span class="ks-filename">Image.jpg</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-code-o text-gray"></span>
+                                            <span class="ks-filename">File.css</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-word-o text-info"></span>
+                                            <span class="ks-filename">File.doc</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ks-recent-box">
+                                <h6 class="ks-header">Earlier this month</h6>
+                                <table class="table ks-text-light">
+                                    <tbody>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-audio-o text-pink"></span>
+                                            <span class="ks-filename">File.mp3</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-archive-o text-brown"></span>
+                                            <span class="ks-filename">File.zip</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-text-o text-info"></span>
+                                            <span class="ks-filename">File.txt</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ks-recent-box">
+                                <h6 class="ks-header">Earlier this year</h6>
+                                <table class="table ks-text-light">
+                                    <tbody>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-o text-gray"></span>
+                                            <span class="ks-filename">File.exe</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ks-name-column" width="35%">
+                                            <span class="ks-icon la la-file-movie-o text-pink"></span>
+                                            <span class="ks-filename">File.mov</span>
+                                        </td>
+                                        <td>me</td>
+                                        <td width="100">1.4 MB</td>
+                                        <td width="240">September 14 at 11:00 AM</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ks-info ks-empty">
+                    <span class="ks-icon la la-info-circle"></span>
+                    <span class="ks-text">Select file to view details</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+@@include('./_partials/apps/filemanager/scripts.html')
+@@include('./_partials/footer.html')

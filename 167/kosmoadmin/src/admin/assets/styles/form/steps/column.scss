@@ -1,0 +1,202 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-form-steps-column-page
+2. Steps indicator / .ks-form-steps-column-page > .ks-steps
+3. Step content / .ks-form-steps-column-page > .ks-wrapper > .ks-step-content
+-------------------------------------------------------------------*/
+
+@import "../../config/colors";
+@import "../../config/ui";
+
+.ks-form-steps-column-page {
+  display: flex;
+  height: 100%;
+  background: #fff;
+
+  .ks-form-column-steps {
+    width: 294px;
+    border-right: 1px solid rgba(57, 80, 155, 0.2);
+    padding: 30px;
+    background: #fff;
+
+    .ks-form-column-steps-header {
+      font-size: 24px;
+      line-height: 24px;
+      margin-top: 0;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .ks-form-column-steps-description {
+      font-size: 12px;
+      color: $text-color-light;
+    }
+
+    .ks-form-column-steps-items {
+      margin-top: 30px;
+      border-left: 1px solid rgba(51, 51, 51, 0.1);
+      margin-left: 19px;
+
+      .ks-form-column-steps-item {
+        margin-left: -19px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 14px;
+        color: rgba(51, 51, 51, 0.3);
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .ks-point {
+          width: 36px;
+          height: 36px;
+          font-size: 12px;
+          line-height: 11px;
+          background-color: #ffffff;
+          border: solid 1px rgba(51, 51, 51, 0.2);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 15px;
+        }
+
+        &.ks-completed {
+          color: $ks-color-success;
+          font-weight: 500;
+
+          .ks-point {
+            background: $ks-color-success;
+            border: none;
+
+            span {
+              display: none;
+            }
+
+            &:before {
+              content: "\f17b";
+              font-family: $ks-icon-font-name;
+              color: #fff;
+              font-size: 16px;
+              position: relative;
+              top: 1px;
+            }
+          }
+        }
+
+        &.ks-current {
+          color: $ks-color-primary;
+          font-weight: 500;
+
+          .ks-point {
+            border: solid 1px $ks-color-primary;
+          }
+        }
+
+        &.ks-invalid {
+          color: $ks-color-danger;
+
+          .ks-point {
+            border: solid 1px $ks-color-danger;
+          }
+        }
+      }
+    }
+  }
+
+  .ks-form-column-steps-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .ks-form-column-steps-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      .ks-form-column-steps-description {
+        padding: 30px;
+        border-bottom: 1px solid rgba(57, 80, 155, 0.2);
+        min-height: 113px;
+
+        .ks-form-column-steps-content-header {
+          font-size: 24px;
+          line-height: 24px;
+          margin-top: 0;
+          font-weight: normal;
+          margin-bottom: 10px;
+        }
+
+        .ks-form-column-steps-content-text {
+          font-size: 12px;
+          color: $text-color-light;
+        }
+      }
+
+      .ks-form-column-steps-body {
+        height: 1px;
+        flex-grow: 1;
+
+        .ks-form {
+          padding: 30px;
+
+          .ks-separator {
+            height: 1px;
+            background-color: rgba(57, 80, 155, 0.2);
+            margin-left: -30px;
+            margin-right: -30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+
+    .ks-form-column-steps-controls {
+      padding: 30px;
+
+      .ks-previous {
+        margin-right: 10px;
+      }
+
+      &.ks-space-between {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &.ks-flex-end {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .btn {
+    &.ks-form-steps-column-steps-block-toggle {
+      position: static;
+    }
+  }
+
+  .ks-form-steps-column-page {
+    .ks-form-column-steps {
+      position: fixed;
+      z-index: 2;
+      height: calc(100% - 120px);
+      top: 120px;
+      visibility: hidden;
+      left: -296px;
+
+      &.ks-open {
+        visibility: visible;
+        left: 0;
+        transition: left .2s ease;
+      }
+    }
+  }
+}

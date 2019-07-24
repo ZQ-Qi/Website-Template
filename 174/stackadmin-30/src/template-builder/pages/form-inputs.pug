@@ -1,0 +1,28 @@
+//- =========================================================================================
+	File Name: form-basic-elements.jade
+	Description: All Basic form Elements.
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+extends template
+
+block pageVars
+	- var pageTitle = "Form Basic Elements"
+	- var pageSubTitle = "Basic Form elements with diffrent styles."
+	- var description  = "Standard form controls supported in all example form elements. Form controls automatically receives global styling."
+	- var activeMenu = "form-inputs"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Form"}, {name:"Basic Elements"}])
+
+
+//- Include page content in page block
+append content
+	include ../contents/form-inputs.html
+
+append pagejs
+	script(src=app_assets_path+'/vendors/js/forms/tags/form-field.js', type='text/javascript')

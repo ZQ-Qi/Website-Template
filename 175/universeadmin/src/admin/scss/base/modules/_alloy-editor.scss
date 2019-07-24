@@ -1,0 +1,169 @@
+@import "../common/mixins";
+@import "../common/variables";
+
+.m-alloy-editor {
+  @include mx-input-border();
+  @include mx-border-radius();
+  padding: 15px;
+
+  .cke_focus {
+    outline: none;
+  }
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  table {
+    font-size: 15px;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 15px;
+    border: 1px solid #e9ecef;
+
+    td,
+    th {
+      vertical-align: middle;
+      padding: 15px 20px;
+    }
+
+    + .table-header {
+      margin-top: 20px;
+    }
+
+    thead {
+      th {
+        color: #939daa;
+        font-weight: 400;
+        border-bottom: 1px solid #e9ecef;
+      }
+    }
+
+    tr {
+      &.is-selected {
+        td {
+          &:first-child {
+            border-left: 3px solid #269af1;
+            padding-left: 17px;
+          }
+
+          background-color: #f4f9fc;
+        }
+      }
+    }
+  }
+
+  a {
+    @include mx-link($color-info);
+  }
+}
+
+.ae-placeholder:not(:focus):before {
+  color: $color-gray;
+}
+
+.ae-ui {
+  .ae-toolbar,
+  [class^=ae-toolbar-] {
+    z-index: 3;
+    @include mx-border-radius();
+
+    .ae-button {
+      @include mx-border-radius();
+    }
+
+    .ae-button:hover,
+    .ae-toolbar-element:hover {
+      color: $color-lasur;
+    }
+  }
+
+  .ae-toolbar-add {
+    z-index: 3;
+    border-color: $color-lasur;
+    color: $color-lasur;
+    border-radius: 50%;
+    margin-left: 6px;
+
+    .ae-button-add {
+      height: 20px;
+      width: 20px;
+
+      .ae-icon-add {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+
+  .ae-container-edit-link {
+    margin: 0 -10px !important;
+
+    .ae-button {
+      width: 50px;
+    }
+  }
+
+  .ae-dropdown {
+    box-shadow: $box-shadow;
+  }
+
+  .ae-toolbar,
+  .ae-toolbar-styles {
+    padding: 2px 10px;
+  }
+
+  .ae-container-input {
+    font-size: 15px;
+
+    .ae-input {
+      height: 30px;
+    }
+
+    .ae-icon-remove {
+      right: -5px;
+    }
+
+    &.xxl {
+      height: 30px;
+    }
+
+    .ae-container-edit-link-target {
+      height: 30px;
+
+      .ae-toolbar-element {
+        height: 30px;
+      }
+
+      .ae-container-dropdown-selected-item {
+        line-height: 32px !important;
+      }
+    }
+  }
+
+  .ae-dropdown {
+    margin-top: -9px;
+
+    &:after {
+      display: none !important;
+    }
+
+    .ae-listbox {
+      .ae-toolbar-element {
+        height: auto;
+        padding: 3px 12px;
+      }
+    }
+  }
+
+  .ae-toolbar-styles {
+    .ae-container-edit-link {
+      .ae-icon-remove {
+        position: relative;
+        right: -15px;
+      }
+    }
+  }
+}

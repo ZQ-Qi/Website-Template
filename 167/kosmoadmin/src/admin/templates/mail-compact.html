@@ -1,0 +1,535 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/mail.min.css"> <!-- Customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Mail Compact</h3>
+                <button class="btn btn-outline-primary ks-light ks-mail-navigation-block-toggle" data-block-toggle=".ks-mail > .ks-navigation">Menu</button>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-mail">
+                @@include('./_partials/apps/mail/navigation.html')
+
+                <div class="ks-emails ks-compact">
+                    <div class="ks-header">
+                        <div class="ks-check-all">
+                            <div class="custom-control custom-checkbox ks-no-description">
+                                <input id="c1" type="checkbox" class="custom-control-input">
+                                <label class="custom-control-label" for="c1"></label>
+                            </div>
+                        </div>
+                        <div class="ks-search">
+                            <div class="input-icon icon-right icon icon-lg">
+                                <input id="input-group-icon-text" type="text" class="form-control" placeholder="Text">
+                                <span class="icon-addon">
+                                    <span class="la la-search"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ks-actions">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-primary ks-light ks-no-text">
+                                    <span class="la la-angle-left ks-icon"></span>
+                                </button>
+                                <button type="button" class="btn btn-outline-primary ks-light ks-no-text">
+                                    <span class="la la-angle-right ks-icon"></span>
+                                </button>
+                            </div>
+                            <button class="btn btn-outline-primary ks-light ks-no-text">
+                                <span class="la la-refresh ks-icon"></span>
+                            </button>
+                            <button class="btn btn-primary">
+                                <span class="la la-plus ks-icon"></span>
+                                <span class="ks-text">Add new email</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ks-body ks-scrollable" data-auto-height>
+                        <table class="ks-table table table-hover">
+                            <tbody>
+                                <tr class="ks-unread ks-selected">
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c2" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                        <span class="ks-amount">(3)</span>
+                                    </td>
+                                    <td class="ks-message">
+                                        <span class="ks-badge badge badge-info">Family</span>
+                                        <span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…
+                                    </td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c3" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c3"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr class="ks-unread">
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c4" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c4"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c5" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c5"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star ks-active ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                        <span class="ks-amount">(3)</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> Redesigned navigation on Mac app Hello, Konstantin! The fungus Chalciporus piperatus, commonly know…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c6" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c6"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c7" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c7"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c8" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c8"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c9" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c9"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr class="ks-unread ks-selected">
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c10" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c10"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                        <span class="ks-amount">(3)</span>
+                                    </td>
+                                    <td class="ks-message">
+                                        <span class="ks-badge badge badge-info">Family</span>
+                                        <span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…
+                                    </td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c11" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c11"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr class="ks-unread">
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c12" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c12"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c13" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c13"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star ks-active ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                        <span class="ks-amount">(3)</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> Redesigned navigation on Mac app Hello, Konstantin! The fungus Chalciporus piperatus, commonly know…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c14" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c14"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c15" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c15"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c16" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c16"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c17" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c17"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr class="ks-unread ks-selected">
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c18" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c18"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                        <span class="ks-amount">(3)</span>
+                                    </td>
+                                    <td class="ks-message">
+                                        <span class="ks-badge badge badge-info">Family</span>
+                                        <span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…
+                                    </td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c19" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c19"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr class="ks-unread">
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c20" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c20"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c21" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c21"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star ks-active ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                        <span class="ks-amount">(3)</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> Redesigned navigation on Mac app Hello, Konstantin! The fungus Chalciporus piperatus, commonly know…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c22" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c22"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c23" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c23"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c24" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c24"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c25" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c25"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr class="ks-unread ks-selected">
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c26" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c26"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                        <span class="ks-amount">(3)</span>
+                                    </td>
+                                    <td class="ks-message">
+                                        <span class="ks-badge badge badge-info">Family</span>
+                                        <span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…
+                                    </td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c27" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c27"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr class="ks-unread">
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c28" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c28"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c29" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c29"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star ks-active ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                        <span class="ks-amount">(3)</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> Redesigned navigation on Mac app Hello, Konstantin! The fungus Chalciporus piperatus, commonly know…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c30" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c30"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c31" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c31"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c32" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c32"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input id="c33" type="checkbox" class="custom-control-input">
+                                            <label class="custom-control-label" for="c33"></label>
+                                        </div>
+                                    </td>
+                                    <td class="ks-sender">
+                                        <span class="la la-star-o ks-favorite"></span>
+                                        <span class="ks-name">Nataly Dawn</span>
+                                    </td>
+                                    <td class="ks-message"><span class="ks-subject">Message header</span> The fungus Chalciporus piperatus, commonly known as the peppery bolete, is a small mushroom of…</td>
+                                    <td class="ks-datetime">today at 8:45 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+@@include('./_partials/footer.html')

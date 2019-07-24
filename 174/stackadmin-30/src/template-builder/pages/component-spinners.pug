@@ -1,0 +1,23 @@
+//- =========================================================================
+	File Name: component-spinners.jade
+	Description: This Page contains Icon spinners and Progress bars.
+	--------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle   = "Spinners"
+	- var pageSubTitle = "Icon Spinners"
+	- var description  = "Spinners contains Icon spinners with different styles."
+	- var activeMenu  = "component-spinners"
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Components"}, {name:"Spinners"}])
+
+//- Include page content in page block
+append content
+	include ../contents/component-spinners.html

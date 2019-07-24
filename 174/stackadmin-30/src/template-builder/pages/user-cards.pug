@@ -1,0 +1,30 @@
+//- =========================================================================================
+	File Name: user-cards.jade
+	Description: User Cards
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	=========================================================================================-//
+
+extends template
+
+block pageVars
+	- var pageTitle    = "User Cards"
+	- var pageSubTitle = "User custom cards types"
+	//- var description  = ""
+	- var activeMenu   = "user-cards"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Users"}, {name:"User Cards"}])
+
+//- Include page content in page block
+append content
+	include ../contents/user-cards.html
+
+//- Page CSS
+//------------------------------
+//- Add page specific CSS
+append pagecss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/pages/users.css')

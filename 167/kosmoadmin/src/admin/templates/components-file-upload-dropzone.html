@@ -1,0 +1,87 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/dropzone/basic.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="libs/dropzone/dropzone.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/dropzone/dropzone.min.css"> <!-- Customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>File Upload / DropZone</h3>
+
+                <div class="ks-controls">
+                    <nav class="breadcrumb ks-default">
+                        <a class="breadcrumb-item ks-breadcrumb-icon" href="index.html">
+                            <span class="la la-home ks-icon"></span>
+                        </a>
+                        <a href="#" class="breadcrumb-item">Components</a>
+                        <span class="breadcrumb-item active" href="#">File Upload</span>
+                    </nav>
+                </div>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>Upload any file</h4>
+                                <form id="ks-default-dropzone" class="dropzone" data-min-height="300">
+                                    <div class="dz-message">
+                                        <span class="dz-message-header">Drop files here or click to upload.</span>
+                                        <span class="dz-message-description">(This is just a demo dropzone. Selected files are <strong>actually</strong> uploaded.)</span>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-lg-6">
+                                <h4>Upload images only</h4>
+                                <form id="ks-default-dropzone-images-only" class="dropzone" data-min-height="300">
+                                    <div class="dz-message">
+                                        <span class="dz-message-header">Drop files here or click to upload.</span>
+                                        <span class="dz-message-description">(This is just a demo dropzone. Selected files are <strong>actually</strong> uploaded.)</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/dropzone/dropzone.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    Dropzone.autoDiscover = false;
+
+    $(document).ready(function() {
+        $("#ks-default-dropzone").dropzone({
+            url: "http://themesanytime.com/uploads/file.php",
+            maxFilesize: 1,
+            addRemoveLinks: true,
+            dictDefaultMessage: 'Drop files here or click to upload',
+            thumbnailWidth: 110,
+            thumbnailHeight: 110
+        });
+
+        $("#ks-default-dropzone-images-only").dropzone({
+            url: "http://themesanytime.com/uploads/file.php",
+            maxFilesize: 1,
+            addRemoveLinks: true,
+            dictDefaultMessage: 'Drop files here or click to upload',
+            thumbnailWidth: 110,
+            thumbnailHeight: 110,
+            acceptedFiles: 'image/*'
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

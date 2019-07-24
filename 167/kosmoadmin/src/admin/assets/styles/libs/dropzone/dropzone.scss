@@ -1,0 +1,171 @@
+@import "../../config/colors";
+
+.dropzone {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: dashed 1px rgba(23, 23, 23, 0.25);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.dz-started {
+    display: block;
+  }
+
+  .dz-image-preview {
+    z-index: 1;
+
+    &:hover {
+      z-index: 1;
+    }
+  }
+
+  .dz-preview {
+    width: 110px;
+
+    &:hover {
+      z-index: 1 !important;
+    }
+
+    .dz-image {
+      z-index: 1;
+      width: 110px;
+      height: 110px;
+      border-radius: 4px;
+
+      &:hover {
+        z-index: 1;
+      }
+
+      > img {
+        min-height: 110px;
+      }
+    }
+
+    .dz-progress {
+      height: 14px;
+      margin-top: -15px;
+      border: none;
+      border-radius: 7px;
+      background-color: rgba(255, 255, 255, 0.8);
+
+      .dz-upload {
+        background: #df538b;
+      }
+    }
+
+    .dz-details {
+      padding: 2.4em 1em;
+      z-index: 1;
+
+      &:hover {
+        z-index: 1 !important;
+      }
+
+      .dz-size {
+        border-radius: 4px;
+
+        span {
+          border-radius: 4px;
+          background-color: rgba(255, 255, 255, 0.8);
+          font-size: 12px;
+          text-transform: uppercase;
+          color: #171717;
+          padding: 5px 8px;
+          border: none;
+        }
+      }
+
+      .dz-filename {
+        border-radius: 4px;
+
+        span {
+          border-radius: 4px;
+          background-color: rgba(255, 255, 255, 0.8);
+          font-size: 9px;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: #171717;
+          padding: 3px 5px;
+          border: none !important;
+
+          span {
+            border: none !important;
+          }
+        }
+
+        &:hover {
+          border: none !important;
+
+          span {
+            border: none !important;
+          }
+        }
+      }
+    }
+
+    &.dz-file-preview {
+      .dz-image {
+        background: #eff1fc;
+        border-radius: 4px;
+      }
+    }
+
+    .dz-error-message {
+      background: #df538b;
+      font-size: 12px;
+      color: #fff;
+      padding: 15px;
+      border-radius: 4px;
+      text-align: center;
+      top: 140px;
+      left: -15px;
+
+      &:after {
+        border-bottom-color: #df538b;
+      }
+    }
+
+    .dz-remove {
+      color: $ks-color-danger;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .dz-error-mark, .dz-success-mark {
+      width: 32px;
+      height: 32px;
+      margin-left: -15px;
+      margin-top: -24px;
+      z-index: 1;
+
+      svg {
+        width: 32px !important;
+        height: 32px !important;
+      }
+    }
+  }
+
+  .dz-message {
+    .dz-message-header {
+      font-size: 18px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .dz-message-description {
+      display: block;
+      font-size: 12px;
+      text-align: center;
+      color: rgba(18, 18, 18, 0.6);
+
+      strong {
+        color: #333;
+      }
+    }
+  }
+}

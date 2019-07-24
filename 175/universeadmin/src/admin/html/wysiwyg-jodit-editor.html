@@ -1,0 +1,24 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Wysiwyg Editor / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/jodit/jodit.min.css">
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh l-2column">
+  {% include "./partials/wysiwyg-editor.html" %}
+  <div class="m-content">
+    <h3 class="mb-4">Jodit Editor with File Manager and Image Editor</h3>
+    <textarea id="editor" name="editor"></textarea>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/jodit/jodit.min.js"></script>
+<script src="js/preview/wysiwyg-jodit-editor.min.js"></script>
+{% endblock %}

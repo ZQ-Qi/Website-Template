@@ -1,0 +1,370 @@
+@import "../common/variables";
+
+.m-task {
+  display: flex;
+  flex-grow: 1;
+  font-size: 15px;
+
+  &__content {
+    flex-grow: 1;
+    margin-right: 20px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-size: 28px;
+    color: #222;
+    line-height: 34px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  &__type {
+    margin-bottom: 24px;
+  }
+
+  &__labels-heading,
+  &__due-date-heading {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 13px;
+    font-weight: 400;
+  }
+
+  &__labels-items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__labels-item {
+    width: 39px;
+    height: 39px;
+    margin-right: 9px;
+    border-radius: $border-radius;
+
+    &--scooter {
+      background: $color-scooter;
+    }
+
+    &--bittersweet {
+      background: $color-bittersweet;
+    }
+  }
+
+  &__due-date-label {
+    color: #fff;
+    height: 39px;
+    border-radius: $border-radius;
+    background: $color-success;
+    min-width: 204px;
+    padding: 5px 11px;
+    line-height: 29px;
+
+    &.is-past-due {
+      background: #fe4b61;
+    }
+  }
+
+  &__due-date-label-icon {
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 9px;
+    position: relative;
+    top: 2px;
+  }
+
+  &__labels-add-item,
+  &__control {
+    color: #939daa;
+    margin-left: 5px;
+  }
+
+  &__desc {
+    margin-top: 30px;
+  }
+
+  &__desc-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+
+  &__desc-heading {
+    margin: 0;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  &__checklist {
+    margin-top: 32px;
+  }
+
+  &__checklist-heading {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  &__checklist-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 13px;
+  }
+
+  &__checklist-item {
+    max-width: 863px;
+    background: rgba(#939daa, .15);
+    padding: 5px 11px 4px 11px;
+    border-radius: $border-radius;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.is-selected {
+      background-color: rgba(#0094f2, .15);
+    }
+  }
+
+  &__comments {
+    margin-top: 45px;
+    max-width: 863px;
+  }
+
+  &__comments-heading {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  &__comments-textarea {
+    height: 99px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+    min-height: 99px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  &__comments-dropdown {
+    margin-left: 18px;
+    margin-top: 7px;
+
+    .dropdown-toggle {
+      font-size: 16px;
+      color: rgba(#939daa, .5);
+
+      &:hover {
+        color: $color-lasur;
+      }
+    }
+
+    &.show {
+      .dropdown-toggle {
+        color: $color-lasur;
+      }
+    }
+  }
+
+  &__comment-items {
+    margin-top: 30px;
+  }
+
+  &__comment {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__comment-wrap {
+    position: relative;
+    flex-grow: 1;
+    font-size: 15px;
+    padding-top: 4px;
+
+    &:hover {
+      .m-task__comment-reply-btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__comment-text {
+    color: #000;
+  }
+
+  &__comment-images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__comment-image {
+    margin-top: 18px;
+    margin-right: 17px;
+    border-radius: 4px;
+  }
+
+  &__comment-reply-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #939daa;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity $transition;
+
+    &:hover {
+      color: $color-lasur;
+    }
+  }
+
+  &__comment-reply-btn-icon {
+    color: rgba(#939daa, .5);
+    font-size: 16px;
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    margin-right: 3px;
+    transition: $transition-hover;
+  }
+
+  &__comment-reply-btn:hover &__comment-reply-btn-icon {
+    color: $color-lasur;
+  }
+
+  &__comment-avatar {
+    margin-right: 15px;
+  }
+
+  &__comment-name {
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 3px;
+  }
+
+  &__comment-date {
+    color: #939daa;
+  }
+
+  &__aside {
+    width: 433px;
+    min-width: 433px;
+
+    .m-task__control {
+      margin: 0;
+    }
+  }
+
+  &__aside-heading {
+    font-size: 20px;
+    margin-bottom: 9px;
+  }
+
+  &__assigned {
+    margin-bottom: 37px;
+  }
+
+  &__assigned-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  &__assigned-item {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  &__activities {
+    max-width: 328px;
+    margin-bottom: 30px;
+  }
+
+  &__activities-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+  &__activity {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__activity-date {
+    color: #939daa;
+  }
+
+  &__aside-attachments {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -8px;
+  }
+
+  &__aside-attachment {
+    margin-top: 18px;
+    margin-right: 18px;
+    width: 62px;
+    height: 62px;
+  }
+
+  &__aside-attachment-image {
+    border-radius: $border-radius;
+  }
+
+  &__aside-attachment-file {
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--pdf {
+      background-color: #ff5722;
+    }
+
+    &--word {
+      background-color: #1976d2;
+    }
+
+    &--excel {
+      background-color: #388e3c;
+    }
+  }
+
+  &__aside-attachment-file-icon {
+    color: #fff;
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+@include mq(screen-lg, max) {
+  .m-task {
+    flex-direction: column;
+
+    &__aside {
+      width: 100%;
+    }
+  }
+}
+
+@include mq(tablet-small, max) {
+  .m-task {
+    &__info {
+      flex-direction: column;
+    }
+
+    &__due-date {
+      margin-top: 20px;
+    }
+  }
+}

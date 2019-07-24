@@ -1,0 +1,367 @@
+//pre
+pre {
+  padding: 20px;
+  font-size: 13px;
+  color: #fff;
+  background-color: #082c46;
+  border-radius: 3px;
+}
+
+.modal-footer{
+  background: $brand-bg;
+}
+
+
+
+//Accordion
+//.accordion {
+//  .panel-group .panel {
+//    border-radius: 3px;
+//    margin-bottom: 0;
+//  }
+//  .panel-default {
+//    border: 2px solid $brand-border;
+//  }
+//  .panel-default > .panel-heading {
+//    background-color: $brand-bg;
+//  }
+//  .panel-default > .panel-heading + .panel-collapse > .panel-body {
+//    border-top-color: #f5f8fa;
+//  }
+//  .panel-title {
+//    font-size: 14px;
+//    color: $main-text;
+//    font-weight: 300;
+//    a {
+//      text-decoration: none;
+//    }
+//  }
+//  .panel-body {
+//    color: $main-text;
+//    font-weight: 300;
+//    font-size: 14px;
+//  }
+//}
+//
+//.accordion.style1 {
+//  .panel-group .panel {
+//    margin-bottom: 10px;
+//  }
+//  .panel-default {
+//    border: none;
+//  }
+//  .panel-title {
+//    font-size: 18px;
+//  }
+//}
+//
+//.accordion-style2 {
+//  .panel-group {
+//    .panel {
+//      border-radius: 0px;
+//    }
+//    .panel-default {
+//      border: none;
+//      box-shadow: none;
+//      .panel-heading {
+//        border-bottom: 2px solid $brand-border;
+//        background: none;
+//        a {
+//          text-decoration: none;
+//        }
+//      }
+//    }
+//    .panel-title {
+//      font-size: 14px;
+//      color: $default-text-color;
+//    }
+//    .panel-heading + .panel-collapse > .panel-body,
+//    .panel-group .panel-heading + .panel-collapse > .list-group {
+//      border-top: 2px solid #03A9F4;
+//    }
+//    .fa {
+//      padding-right: 15px;
+//    }
+//  }
+//}
+
+//Progressbars
+.progress {
+
+  &.progress-xs {
+    height: 0.25rem;
+  }
+}
+
+.nav-material {
+  > li {
+    position: relative;
+    .nav-link {
+      &.active {
+        border: 0;
+        background: transparent;
+        border-bottom: 3px solid $brand-primary;
+      }
+    }
+    > .nav-link {
+      border: none;
+      &.active{
+        color: $brand-primary;
+      }
+    }
+    > a {
+      color: $default-text-color;
+      &:hover {
+        border: none;
+        color: $brand-primary;
+        background: transparent;
+      }
+      &::after {
+        content: "";
+        background: $brand-primary;
+        height: 3px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        transition: all 250ms ease 0s;
+        transform: scale(0);
+      }
+    }
+    &:hover > a::after {
+      transform: scale(1);
+    }
+    }
+  &.nav-material-white {
+    border: none;
+    > li {
+      .nav-link {
+        &.active {
+          border-color: $white;
+        }
+        > a {
+          color: $white !important;
+          &:hover {
+            color: $white !important;
+          }
+          &::after {
+            background: $white !important;
+          }
+        }
+      }
+    }
+  }
+  }
+.nav-icon-pills{
+ .btn-fab {
+   padding: 0 !important;
+   i {
+     color: $brand-primary;
+   }
+    &.active{
+      i{
+        color: #fff;
+      }
+    }
+  }
+}
+
+//tables
+.table thead th {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+//Vertical Tabs
+.v_tabs {
+  .tabs-left,
+  .tabs-right {
+    border-bottom: none;
+    padding-top: 2px;
+  }
+  .tabs-left {
+    border-right: 3px solid $color-5;
+    padding-right: 70px;
+  }
+  .tabs-right {
+    border-left: 3px solid $color-5;
+  }
+  .tabs-left > li,
+  .tabs-right > li {
+    float: none;
+    margin-bottom: 2px;
+  }
+
+  .tabs-left > li {
+    margin-right: -1px;
+  }
+
+  .tabs-right > li {
+    margin-left: -1px;
+  }
+
+
+  .tabs-right > li > a {
+    border-radius: 0 4px 4px 0;
+    margin-right: 0;
+  }
+  .tab-pane li {
+    padding-bottom: 20px;
+    color: #86939e;
+  }
+  .tabs-left {
+    li {
+      .nav-link {
+        position: relative;
+        border-radius: 4px 0 0 4px;
+        margin-right: 0;
+        display: block;
+        color: $default-text-color;
+        border: none;
+        &:hover {
+          background-color: #03A9F4;
+          text-decoration: none;
+          color: #fff;
+          border-radius: 5px;
+        }
+        &:focus {
+          border: 3px solid $color-5;
+          border-radius: 5px;
+        }
+        &.active {
+          border: 3px solid $color-5;
+          border-radius: 5px;
+          &::after {
+            border: 2px solid #f5f8fa;
+            color: wheat;
+            content: "";
+            height: 3px;
+            position: absolute;
+            right: -74px;
+            top: 50%;
+            width: 73px;
+            @include tablet-and-phone {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 980px) {
+  .tabs-left li.active::after {
+    left: 208px
+  }
+}
+
+@media(max-width: 768px) {
+  #lightSlider li img {
+    width: 73%;
+    margin-right: 20px;
+  }
+  .mokupSlider li a {
+    height: 360px;
+  }
+}
+
+@include phone {
+  #lightSlider li img {
+    width: 75%;
+    margin: 0;
+  }
+  .mokupSlider li a {
+    height: 130px;
+  }
+  .tabs-left {
+    padding-right: 10px;
+  }
+  .tabs-left li.active::after {
+    border: none;
+  }
+}
+
+//Alert 
+.alert {
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 300;
+  strong {
+    font-weight: 500;
+  }
+  &.alert-info {
+    background-color: #f6fafd;
+    border-color: #d9eff7;
+  }
+  &.alert-warning {
+    background-color: rgba(252, 248, 227, .3);
+    border-color: #faebcc;
+    color: #8a6d3b;
+  }
+  &.alert-danger {
+    background-color: rgba(242, 222, 222, .3);
+    border-color: #ebccd1;
+    color: #a94442;
+  }
+  &.alert-success {
+    background-color: rgba(223, 240, 216, .3);
+    border-color: #d6e9c6;
+    color: #3c763d;
+  }
+}
+
+//Thumbnail
+.thumbnail {
+  padding: 15px;
+  border: 3px solid #f5f8fa;
+  iframe {
+    height: 180px;
+    width: 100%;
+  }
+}
+
+//badge
+.badge {
+  //border-radius: 0;
+  padding: 6px 10px;
+  font-weight: 300;
+  &.badge-mini {
+    padding: 0;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    right: 3px;
+  }
+}
+//Panels
+.panel {
+  border-radius: 1px;
+}
+.panel-heading {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 10px 15px;
+}
+
+
+
+//well
+.well {
+  padding: 40px;
+  background-color: #F5F8FA;
+  border: 1px solid #F5F8FA;
+}
+
+.thumbnail {
+  margin-bottom: 15px;
+  .caption {
+    padding: 25px 4px 10px;
+  }
+}

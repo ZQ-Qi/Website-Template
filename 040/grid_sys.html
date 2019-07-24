@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>        
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />    
+    <!--[if gt IE 8]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+    <![endif]-->                
+    <title>Grid System - Aries Premium Admin Template</title>
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    
+    <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 7]>
+        <link href="css/ie.css" rel="stylesheet" type="text/css" />
+        <script type='text/javascript' src='js/plugins/other/lte-ie7.js'></script>
+    <![endif]-->      
+    <script type='text/javascript' src='js/plugins/jquery/jquery-1.9.1.min.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery/jquery-ui-1.10.1.custom.min.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery/jquery-migrate-1.1.1.min.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery/globalize.js'></script>
+    <script type='text/javascript' src='js/plugins/other/excanvas.js'></script>
+    
+    <script type='text/javascript' src='js/plugins/other/jquery.mousewheel.min.js'></script>
+        
+    <script type='text/javascript' src='js/plugins/bootstrap/bootstrap.min.js'></script>            
+    
+    <script type='text/javascript' src='js/plugins/cookies/jquery.cookies.2.2.0.min.js'></script>    
+    
+    <script type='text/javascript' src="js/plugins/uniform/jquery.uniform.min.js"></script>
+    
+    <script type='text/javascript' src='js/plugins/shbrush/XRegExp.js'></script>
+    <script type='text/javascript' src='js/plugins/shbrush/shCore.js'></script>
+    <script type='text/javascript' src='js/plugins/shbrush/shBrushXml.js'></script>
+    <script type='text/javascript' src='js/plugins/shbrush/shBrushJScript.js'></script>
+    <script type='text/javascript' src='js/plugins/shbrush/shBrushCss.js'></script>    
+    
+    <script type='text/javascript' src='js/plugins.js'></script>
+    <script type='text/javascript' src='js/charts.js'></script>
+    <script type='text/javascript' src='js/actions.js'></script>
+    
+</head>
+<body>    
+    <div id="loader"><img src="img/loader.gif"/></div>
+    <div class="wrapper">
+        
+        <div class="sidebar">
+            
+            <div class="top">
+                <a href="index-2.html" class="logo"></a>
+                <div class="search">
+                    <div class="input-prepend">
+                        <span class="add-on orange"><span class="icon-search icon-white"></span></span>
+                        <input type="text"/>                                                      
+                    </div>            
+                </div>
+            </div>
+            
+            <ul class="navigation">            
+                <li><a href="index-2.html" class="blblue">Dashboard</a></li>
+                <li class="active">
+                    <a href="#" class="blyellow">UI Elements</a>
+                    <div class="open"></div>
+                    <ul>
+                        <li><a href="ui.html">UI Elements</a></li>
+                        <li><a href="widgets.html">Widgets</a></li>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li><a href="icons.html">Icons</a></li>
+                        <li class="active"><a href="grid_sys.html">Grid System</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="blgreen">Forms Stuff</a>
+                    <div class="open"></div>
+                    <ul>
+                        <li><a href="forms.html">Form Elements</a></li>
+                        <li><a href="validation.html">Validation</a></li>
+                        <li><a href="grid.html">Grid</a></li>
+                        <li><a href="editor.html">Editors</a></li>  
+                        <li><a href="wizard.html">Wizard</a></li>
+                    </ul>
+                </li>
+                <li><a href="statistic.html" class="blred">Statistic</a></li>                
+                <li>
+                    <a href="#" class="bldblue">Tables</a>
+                    <div class="open"></div>
+                    <ul>
+                        <li><a href="tables.html">Simple</a></li>
+                        <li><a href="tables_dynamic.html">Dynamic</a></li>                    
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="blpurple">Samples</a>
+                    <div class="open"></div>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="invoice.html">Invoice</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>                    
+                </li>
+                <li>
+                    <a href="#" class="blorange">Other</a>
+                    <div class="open"></div>
+                    <ul>
+                        <li><a href="files.html">File handling</a></li>
+                        <li><a href="images.html">Images</a></li>
+                        <li><a href="typography.html">Typography</a></li>
+                        <li><a href="404.html">Error 404</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div class="widget">
+                <div class="datepicker"></div>
+            </div>
+            
+        </div>
+        
+        <div class="body">
+            
+            <ul class="navigation">
+                <li>
+                    <a href="index-2.html" class="button">
+                        <div class="icon">
+                            <span class="ico-monitor"></span>
+                        </div>                    
+                        <div class="name">Dashboard</div>
+                    </a>                
+                </li>
+                <li>
+                    <a href="#" class="button yellow">
+                        <div class="arrow"></div>
+                        <div class="icon">
+                            <span class="ico-cog-2"></span>
+                        </div>                    
+                        <div class="name">UI Elements</div>
+                    </a>          
+                    <ul class="sub">
+                        <li><a href="ui.html">UI Elements</a></li>
+                        <li><a href="widgets.html">Widgets</a></li>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li><a href="icons.html">Icons</a></li>
+                        <li><a href="grid_system.html">Grid System</a></li>
+                    </ul>
+                </li>                
+                <li>
+                    <a href="#" class="button green">
+                        <div class="arrow"></div>
+                        <div class="icon">
+                            <span class="ico-pen-2"></span>
+                        </div>                    
+                        <div class="name">Forms Stuff</div>
+                    </a>                
+                    <ul class="sub">
+                        <li><a href="forms.html">Elements</a></li>
+                        <li><a href="validation.html">Validation</a></li>
+                        <li><a href="grid.html">Grid</a></li>
+                        <li><a href="editor.html">Editors</a></li>
+                        <li><a href="wizard.html">Wizard</a></li>
+                    </ul>                    
+                </li>                        
+                <li>
+                    <a href="statistic.html" class="button red">
+                        <div class="icon">
+                            <span class="ico-chart-4"></span>
+                        </div>                    
+                        <div class="name">Statistic</div>
+                    </a>                
+                </li>                
+                <li>
+                    <a href="#" class="button dblue">
+                        <div class="arrow"></div>
+                        <div class="icon">
+                            <span class="ico-layout-7"></span>
+                        </div>                    
+                        <div class="name">Tables</div>
+                    </a> 
+                    <ul class="sub">
+                        <li><a href="tables.html">Simple</a></li>
+                        <li><a href="tables_dynamic.html">Dynamic</a></li>
+                    </ul>                                        
+                </li>
+                <li>
+                    <a href="#" class="button purple">
+                        <div class="arrow"></div>
+                        <div class="icon">
+                            <span class="ico-box"></span>
+                        </div>                    
+                        <div class="name">Samples</div>
+                    </a>                
+                    <ul class="sub">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="invoice.html">Invoice</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>                                        
+                </li>
+                <li>
+                    <a href="#" class="button orange">
+                        <div class="arrow"></div>
+                        <div class="icon">
+                            <span class="ico-cloud"></span>
+                        </div>                    
+                        <div class="name">Other</div>
+                    </a>                
+                    <ul class="sub">
+                        <li><a href="files.html">File handling</a></li>
+                        <li><a href="images.html">Images</a></li>
+                        <li><a href="typography.html">Typography</a></li>
+                        <li><a href="404.html">Error 404</a></li>
+                    </ul>                                        
+                </li>                
+                <li>
+                    <div class="user">
+                        <img src="img/examples/users/dmitry_m.jpg" align="left"/>
+                        <a href="#" class="name">
+                            <span>Dmitry Ivaniuk</span>
+                            <span class="sm">Administrator</span>
+                        </a>
+                    </div>
+                    <div class="buttons">
+                        <div class="sbutton green navButton">
+                            <a href="#"><span class="ico-align-justify"></span></a>
+                        </div>
+                        <div class="sbutton blue">
+                            <a href="#"><span class="ico-cogs"></span></a>
+                            <div class="popup">
+                                <div class="arrow"></div>
+                                <div class="row-fluid">
+                                    <div class="row-form">
+                                        <div class="span12"><strong>SETTINGS</strong></div>
+                                    </div>                                    
+                                    <div class="row-form">
+                                        <div class="span4">Navigation:</div>
+                                        <div class="span8"><input type="radio" class="cNav" name="cNavButton" value="default"/> Default <input type="radio" class="cNav" name="cNavButton" value="bordered"/> Bordered</div>
+                                    </div>                                    
+                                    <div class="row-form">
+                                        <div class="span4">Content:</div>
+                                        <div class="span8"><input type="radio" class="cCont" name="cContent" value=""/> Responsive <input type="radio" class="cCont" name="cContent" value="fixed"/> Fixed</div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </li>                
+            </ul>
+            
+            
+            <div class="content sortableContent">
+                
+                <div class="page-header">
+                    <div class="icon">
+                        <span class="ico-stack-2"></span>
+                    </div>
+                    <h1>Grid System <small>METRO STYLE ADMIN PANEL</small></h1>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span4 column">
+                        <div class="block" id="sWidget_1">
+                            <div class="head">                                
+                                <h2>Sample block</h2>                          
+                            </div>
+                            <div class="data">
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                            </div>
+                        </div>                
+                        <div class="block" id="sWidget_2">
+                            <div class="head dblue">                                
+                                <h2>Sample block</h2>                                
+                            </div>
+                            <div class="data dark">
+                                Ut quis lectus turpis, a pretium massa. Aliquam diam libero, ullamcorper sit amet consequat ut, rutrum a dui. Morbi hendrerit tempus lectus, non euismod mauris tempus sit amet. Curabitur sed rhoncus nibh. Maecenas fringilla ornare lorem sit amet egestas. Donec sit amet nunc diam. Cras urna dui, vestibulum feugiat luctus eu, semper vel diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="span4 column">
+                        <div class="block" id="sWidget_3">
+                            <div class="head">
+                                <div class="icon"><i class="ico-grid"></i></div>
+                                <h2>Sample block</h2>
+                            </div>
+                            <div class="data">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo ligula, aliquam in ullamcorper sed, adipiscing vitae ligula. Morbi sed mi ipsum. Vivamus laoreet, ante eget bibendum accumsan
+                            </div>                            
+                        </div>                
+                        <div class="block" id="sWidget_4">
+                            <div class="head blue">                        
+                                <div class="icon"><i class="ico-grid"></i></div>
+                                <h2>Sample block</h2>
+                            </div>
+                            <div class="data">
+                                Sed leo orci, placerat consectetur gravida a, varius in purus. Cras scelerisque lorem a lorem rutrum molestie. Nulla tincidunt diam at orci ultrices eleifend. Vestibulum metus elit, mollis sed blandit non, adipiscing ornare magna. Suspendisse eget tincidunt enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vel lobortis felis.
+                            </div>
+                        </div>                 
+                    </div>
+                    <div class="span4 column">
+                        <div class="block" id="sWidget_5">
+                            <div class="head">
+                                <div class="icon"><i class="ico-grid"></i></div>
+                                <h2>Sample block</h2>     
+                                <ul class="buttons">                                    
+                                    <li><a href="#"><div class="icon"><span class="ico-cog"></span></div></a></li>                                    
+                                </ul>                                
+                            </div>
+                            <div class="data">
+                                Fusce et justo risus, sed suscipit sapien. Aenean ornare pharetra massa, ac scelerisque ligula venenatis sed. Aliquam at sapien quis magna imperdiet placerat. Ut eros orci, luctus nec tincidunt venenatis, interdum nec augue. Ut nibh tellus, sollicitudin nec aliquam ut
+                            </div>
+                        </div>                
+                        <div class="block" id="sWidget_6">
+                            <div class="head orange">
+                                <div class="icon"><i class="ico-grid"></i></div>
+                                <h2>Sample block</h2>                 
+                                <ul class="buttons">                                    
+                                    <li><a href="#"><div class="icon"><span class="ico-cog"></span></div></a></li>                                    
+                                </ul>                                
+                            </div>
+                            <div class="data">
+                                Morbi ut ligula nec eros rutrum congue quis sed diam. Sed venenatis purus ac diam scelerisque bibendum. Vestibulum euismod, nulla ut malesuada pretium, massa dolor suscipit ligula, nec laoreet metus nisl vel urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vestibulum pharetra interdum. Vivamus bibendum, lectus tincidunt viverra feugiat, neque risus auctor felis, ut convallis ipsum ipsum at metus.
+                            </div>
+                        </div>                
+                    </div>
+                </div>    
+                
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</body>
+</html>

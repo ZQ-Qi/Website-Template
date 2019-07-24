@@ -1,0 +1,95 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/trumbowyg/ui/trumbowyg.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="libs/trumbowyg/plugins/colors/ui/trumbowyg.colors.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/trumbowyg/trumbowyg.min.css"> <!-- customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Trumbowyg Editor</h3>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <textarea name="text" id="ks-trumbowyg-editor">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, <strong>some text bold</strong> sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat.
+                            </p>
+
+                            <p>
+                                Duis aute <a href="http://heeeeeeeey.com/" target="_blank">some link</a> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
+                            </p>
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/trumbowyg/trumbowyg.min.js"></script>
+<script src="libs/trumbowyg/plugins/base64/trumbowyg.base64.min.js"></script>
+<script src="libs/trumbowyg/plugins/colors/trumbowyg.colors.min.js"></script>
+<script src="libs/trumbowyg/plugins/noembed/trumbowyg.noembed.min.js"></script>
+<script src="libs/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.min.js"></script>
+<script src="libs/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js"></script>
+<script src="libs/trumbowyg/plugins/upload/trumbowyg.upload.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    var configurations = {
+        core: {
+            autogrow: true
+        },
+        plugins: {
+            autogrow: true,
+            btnsDef: {
+                // Customizables dropdowns
+                image: {
+                    dropdown: ['insertImage', 'upload', 'base64', 'noembed'],
+                    ico: 'insertImage'
+                }
+            },
+            btns: [
+                ['viewHTML'],
+                ['undo', 'redo'],
+                ['formatting'],
+                'btnGrp-design',
+                ['link'],
+                ['image'],
+                'btnGrp-justify',
+                'btnGrp-lists',
+                ['foreColor', 'backColor'],
+                ['preformatted'],
+                ['horizontalRule'],
+                ['fullscreen']
+            ],
+            plugins: {
+                // Add imagur parameters to upload plugin
+                upload: {
+                    serverPath: 'https://api.imgur.com/3/image',
+                    fileFieldName: 'image',
+                    headers: {
+                        'Authorization': 'Client-ID 9e57cb1c4791cea'
+                    },
+                    urlPropertyName: 'data.link'
+                }
+            }
+        }
+    };
+
+    $('#ks-trumbowyg-editor').trumbowyg(configurations.plugins);
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

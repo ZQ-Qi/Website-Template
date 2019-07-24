@@ -1,0 +1,87 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/summernote/summernote.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/summernote/summernote.min.css"> <!-- customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Summernote Editor</h3>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3>Default mode</h3>
+
+                                <textarea name="text" id="ks-summernote-editor-default">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, <strong>some text bold</strong> sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat.
+                                    </p>
+
+                                    <p>
+                                        Duis aute <a href="http://heeeeeeeey.com/" target="_blank">some link</a> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                        mollit anim id est laborum.
+                                    </p>
+                                </textarea>
+                            </div>
+                            <div class="col-lg-3">
+                                <h3>Air Mode</h3>
+
+                                <div id="ks-summernote-editor-air-mode">
+                                    This is an Air-mode editable area.
+
+                                    <p>
+                                        Select a text to reveal the toolbar.
+                                        Edit rich document on-the-fly, so elastic!
+                                        End of air-mode area
+                                    </p>
+
+                                    <p>
+                                        This is an Air-mode editable area.
+                                    </p>
+
+                                    <p>
+                                        Select a text to reveal the toolbar.
+                                        Edit rich document on-the-fly, so elastic!
+                                        End of air-mode area
+                                    </p>
+
+                                    This is an Air-mode editable area.
+
+                                    <p>
+                                        Select a text to reveal the toolbar.
+                                        Edit rich document on-the-fly, so elastic!
+                                        End of air-mode area
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/summernote/summernote.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $('#ks-summernote-editor-default').summernote();
+    $('#ks-summernote-editor-air-mode').summernote({
+        airMode: true
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

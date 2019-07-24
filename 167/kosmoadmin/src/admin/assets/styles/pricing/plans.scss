@@ -1,0 +1,167 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-pricing-plans-page
+2. Header / .ks-pricing-plans-page > .ks-header
+3. Price plans / .ks-pricing-plans-page > .ks-plans
+-------------------------------------------------------------------*/
+
+@import "../config/colors";
+@import "../config/ui";
+
+.ks-pricing-plans-page {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  > .ks-header {
+    margin-bottom: 60px;
+
+    > .ks-name {
+      font-size: 36px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    > .ks-description {
+      font-size: 14px;
+      color: $ks-default-text-color-light;
+    }
+  }
+
+  > .ks-plans {
+    display: flex;
+    background: #fff;
+
+    > .ks-plan {
+      width: 364px;
+      padding: 40px 50px;
+      border-radius: 2px;
+      background-color: rgba(57, 80, 155, 0.05);
+      border: solid 1px rgba(57, 81, 155, 0.1);
+      margin-right: 30px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 10px;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        background: #e2e4f0;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.ks-info {
+        background-color: #ffffff;
+        border: solid 1px rgba(33, 166, 240, 0.2);
+
+        &:before {
+          background: $ks-color-info;
+        }
+      }
+
+      > .ks-header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 45px;
+
+        > .ks-name {
+          font-size: 18px;
+          margin-bottom: 24px;
+          text-align: center;
+        }
+
+        > .ks-price {
+          display: flex;
+          justify-content: center;
+
+          > .ks-currency {
+            align-self: flex-start;
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: normal;
+          }
+
+          > .ks-amount {
+            font-size: 64px;
+            line-height: 52px;
+            font-weight: normal;
+            margin-right: 7px;
+            margin-left: 7px;
+          }
+
+          > .ks-period {
+            align-self: flex-end;
+            font-size: 14px;
+            line-height: 14px;
+            color: $text-color-light;
+          }
+        }
+      }
+
+      > .ks-body {
+        > .ks-list {
+          height: 150px;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          margin-bottom: 60px;
+
+          > li {
+            font-size: 14px;
+            margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &:before {
+              content: "\f17b";
+              font-family: $ks-icon-font-name;
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              font-size: 20px;
+              color: rgba(58, 82, 155, 0.3);
+              margin-right: 15px;
+              position: relative;
+              top: 2px;
+            }
+          }
+
+          &.ks-success {
+            > li {
+              &:before {
+                color: $ks-color-success;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .ks-pricing-plans-page {
+    > .ks-plans {
+      flex-direction: column;
+      align-items: center;
+
+      > .ks-plan {
+        margin: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

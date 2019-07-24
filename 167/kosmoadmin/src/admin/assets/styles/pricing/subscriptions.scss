@@ -1,0 +1,173 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-pricing-subscriptions-page
+2. Header / .ks-pricing-subscriptions-page > .ks-header
+3. Subscriptions plans / .ks-pricing-subscriptions-page > .ks-subscriptions
+-------------------------------------------------------------------*/
+
+@import "../config/colors";
+
+.ks-pricing-subscriptions-page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  margin: 0 auto;
+
+  > .ks-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+
+    > .ks-name {
+      font-size: 36px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    > .ks-description {
+      font-size: 14px;
+      color: $ks-default-text-color-light;
+    }
+  }
+
+  > .ks-subscriptions {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > .subscription-toggle {
+      position: absolute;
+      right: 0;
+      top: -100px;
+
+      > .ks-checkbox-text-slider {
+        text-align: right;
+      }
+
+      > .ks-description {
+        border-radius: 2px;
+        background-color: rgba(46, 204, 113, 0.1);
+        font-size: 10px;
+        font-weight: 500;
+        text-align: center;
+        color: $ks-color-success;
+        padding: 7px 15px;
+        margin-top: 10px;
+        text-transform: uppercase;
+      }
+    }
+
+    > .ks-subscription {
+      margin-top: 30px;
+      width: 364px;
+      border-radius: 2px;
+      background: #ffffff;
+      border: solid 1px rgba(57, 81, 155, 0.1);
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      > .ks-header {
+        padding: 30px 50px;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba(57, 80, 155, 0.1);
+        text-align: center;
+
+        > .ks-name {
+          font-size: 14px;
+          font-weight: 500;
+          color: $ks-default-text-color;
+          margin-bottom: 10px;
+        }
+
+        > .ks-price {
+          font-size: 24px;
+          color: $ks-default-text-color;
+
+          > .ks-amount {
+            display: inline-block;
+            color: $ks-color-info;
+            margin-right: 5px;
+          }
+        }
+      }
+      > .ks-body {
+        padding: 30px 50px;
+
+        > ul {
+          margin: 0;
+          list-style: none;
+          padding: 0;
+          margin-bottom: 30px;
+
+          > .ks-item {
+            font-size: 12px;
+            margin-bottom: 11px;
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            > .ks-icon {
+              font-size: 20px;
+              line-height: 20px;
+              color: rgba(51, 51, 51, 0.3);
+              width: 28px;
+            }
+
+            > .ks-text {
+              flex-grow: 1;
+            }
+
+            > .ks-amount {
+              font-weight: 500;
+              color: $ks-default-text-color;
+            }
+          }
+        }
+      }
+
+      &.ks-active {
+        background-color: rgba(33, 166, 240, 0.05);
+        border: solid 1px rgba(33, 166, 240, 0.2);
+
+        > .ks-body {
+          > ul {
+            > .ks-item {
+              > .ks-icon {
+                color: $ks-color-info;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 862px) {
+  .ks-pricing-subscriptions-page {
+    > .ks-subscriptions {
+      flex-direction: column;
+      align-items: center;
+
+      > .subscription-toggle {
+        position: static;
+
+        > .ks-checkbox-text-slider {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

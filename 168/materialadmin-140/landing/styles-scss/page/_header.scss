@@ -1,0 +1,276 @@
+.header {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // background-color: $dark_bg;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    padding: 0 2em;
+    .container {
+        padding: 3em 15px; // 2em padding for mobile
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    &.navbar-light {
+        border: 0;
+    }
+
+    &.navbar-fixed-top {
+        background-color: #fff;
+        position: fixed;
+        @include z-depth-1;
+        animation-name: slideInDown;
+        color: $dark;
+        a,
+        .navbar-toggler,
+        .navbar-nav > li > a {
+            color: $dark;
+        }
+        .navbar-nav > li > a {
+            &:hover,
+            &:active,
+            &:focus {
+                color: $dark;
+            }
+        }
+        .container {
+            padding: 1em 0;
+        }
+    }
+
+    .navbar-brand {
+        padding: 5px 0;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        color: #fff;
+        &:hover,
+        &:active,
+        &:focus {
+            color: #f1f1f1;
+        }
+    }
+
+    .logo {
+        display: inline-block;
+        margin-right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: normal;
+        color: #f5f5f5;
+        font-weight: 100;
+        background-color: $main_color;
+        border-radius: 50%;
+    }
+
+    .brand-txt {
+        display: none;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+            display: inline-block;
+        }
+    }
+
+
+    .navbar-nav {
+        display: none;
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+            display: block;
+        }
+    }
+    .navbar-toggler {
+        display: block;
+        color: $bright;
+        &:hover {
+            cursor: pointer;
+        }
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+            display: none;
+        }        
+    }
+
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.9);
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+            background: none;
+        }
+    }
+
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
+        .navbar-nav {
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            padding: 7px 0;
+
+            > li {
+                margin-left: 25px;
+                padding: 8px 10px;
+                &.highlight {
+                    border: 2px solid #f1f1f1;
+                    border-radius: $border-radius;
+                    > a {
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            font-weight: normal;
+                            color: $skin-lighter;
+                            border-bottom: 0;
+                        }
+                    }
+                }
+
+                &.active {
+                    > a {
+                        font-weight: normal;
+                        color: #f1f1f1;
+                        background-color: transparent;
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            font-weight: normal;
+                            color: #f1f1f1;
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                > a {
+                    padding: 0;
+                    font-weight: $display1-weight;
+                    color: $skin-lighter;
+                    transition: all .25s ease-in-out;
+                    border-bottom: 2px solid transparent;   
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        font-weight: $display1-weight;
+                        color: #f1f1f1;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    .togger-container {
+        padding: 6px 0;
+    }
+}
+
+
+
+// Mobile Menu
+.cbp-spmenu {
+    position: fixed;
+    padding-top:3rem;
+    background-color: $dark;
+    -webkit-box-shadow: -1px 0px 7px 0px rgba(50, 50, 50, 1);
+    -moz-box-shadow:    -1px 0px 7px 0px rgba(50, 50, 50, 1);
+    box-shadow:         -1px 0px 7px 0px rgba(50, 50, 50, 1);
+
+    a {
+        color: $skin-lighter;
+        display: block;
+        font-size: .9rem;
+        line-height: 1.72rem;
+        text-decoration:none;
+        text-align:left; 
+        opacity:0.5;    
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            margin-left:0.2rem;
+            opacity:1;  
+        }
+    }
+}
+
+.cbp-spmenu-vertical {
+    width: 200px;
+    height: 100%;
+    top: 0;
+    z-index: 1001;
+
+    a {
+        padding:0.4rem;
+        padding-left:2rem;
+    }
+}
+
+.cbp-spmenu-right {
+    right: -210px;
+    &.cbp-spmenu-open {
+        right: 0px;
+    }
+}
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+    transition: all 0.3s ease;
+}
+
+
+/*-- Mobile Menu open & close buttons --*/
+
+.close_icon {}
+
+.mobile_menu_open_button {
+    margin-top:0.5rem;
+}
+
+.mobile_nav_close_button {
+    position:absolute;
+    z-index: 100;
+    right: 2rem;
+    top: 2.7rem;
+    border:0;
+
+    a  {
+        border:0;
+        color:white;
+        font-size:2rem !important;
+        line-height:2rem;
+        opacity:0.5 !important;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        &:hover  {
+            opacity:1 !important;
+            margin-left:0rem !important;
+        }
+    }
+}
+
+
+.mobile_nav_open_button a {
+    border:0;
+    color:white;
+    font-size:2rem !important;
+    line-height:2rem;
+}
+
+.mobile_nav_open_button {
+    opacity:0.5;
+    transition: all 0.3s ease;
+    &:hover {
+        opacity:1
+    }
+}
+
+#mobile_menu_content {
+    clear:both;
+    box-shadow:none;
+    -webkit-box-shadow: none;
+}
+

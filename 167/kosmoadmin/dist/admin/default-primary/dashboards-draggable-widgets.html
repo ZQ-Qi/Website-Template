@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <title>KOSMO - Multi Purpose Bootstrap 4 Admin Template</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/line-awesome/css/line-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="assets/fonts/open-sans/styles.css">-->
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/montserrat/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="libs/tether/css/tether.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/jscrollpane/jquery.jscrollpane.css">
+    <link rel="stylesheet" type="text/css" href="libs/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/common.min.css">
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/themes/primary.min.css">
+    <link class="ks-sidebar-dark-style" rel="stylesheet" type="text/css" href="assets/styles/themes/sidebar-black.min.css">
+    <!-- END THEME STYLES -->
+
+<link rel="stylesheet" type="text/css" href="assets/styles/widgets/panels.min.css">
+<link rel="stylesheet" type="text/css" href="assets/scripts/charts/area/area.chart.min.css">
+<link rel="stylesheet" type="text/css" href="assets/scripts/charts/radial-progress/radial-progress.chart.min.css">
+<link rel="stylesheet" type="text/css" href="libs/jquery-confirm/jquery-confirm.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/jquery-confirm/jquery.confirm.min.css"> <!-- original -->
+</head>
+<!-- END HEAD -->
+
+<body class="ks-navbar-fixed ks-sidebar-default ks-sidebar-position-fixed ks-page-header-fixed ks-theme-primary ks-page-loading"> <!-- remove ks-page-header-fixed to unfix header -->
+
+    <!-- BEGIN HEADER -->
+<nav class="navbar ks-navbar">
+    <!-- BEGIN HEADER INNER -->
+    <!-- BEGIN LOGO -->
+    <div href="index.html" class="navbar-brand">
+        <!-- BEGIN RESPONSIVE SIDEBAR TOGGLER -->
+        <a href="#" class="ks-sidebar-toggle"><i class="ks-icon la la-bars" aria-hidden="true"></i></a>
+        <a href="#" class="ks-sidebar-mobile-toggle"><i class="ks-icon la la-bars" aria-hidden="true"></i></a>
+        <!-- END RESPONSIVE SIDEBAR TOGGLER -->
+
+        <div class="ks-navbar-logo">
+            <a href="index.html" class="ks-logo">Kosmo</a>
+
+            <!-- BEGIN GRID NAVIGATION -->
+            <!--<span class="nav-item dropdown ks-dropdown-grid">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu ks-info ks-scrollable" aria-labelledby="Preview" data-height="260">
+                    <div class="ks-scroll-wrapper">
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Dashboard</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-flask"></span>
+                            <span class="ks-text">Projects</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-globe"></span>
+                            <span class="ks-text">Form</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-calendar-o"></span>
+                            <span class="ks-text">Calendar</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-ticket"></span>
+                            <span class="ks-text">Tickets</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Profile</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Documentation</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">FAQ</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Components</span>
+                        </a>
+                    </div>
+                </div>
+            </span>-->
+
+            <span class="nav-item dropdown ks-dropdown-grid-images">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu ks-info ks-scrollable" aria-labelledby="Preview" data-height="260">
+                    <div class="ks-scroll-wrapper">
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/dashboard.png">
+                            <span class="ks-text">Dashboard</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/flask.png">
+                            <span class="ks-text">Projects</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/calendar.png">
+                            <span class="ks-text">Calendar</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/profile.png">
+                            <span class="ks-text">Profile</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/ticket.png">
+                            <span class="ks-text">Tickets</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/settings.png">
+                            <span class="ks-text">Settings</span>
+                        </a>
+                    </div>
+                </div>
+            </span>
+
+            <!-- END GRID NAVIGATION -->
+        </div>
+    </div>
+    <!-- END LOGO -->
+
+    <!-- BEGIN MENUS -->
+    <div class="ks-wrapper">
+        <nav class="nav navbar-nav">
+            <!-- BEGIN NAVBAR MENU -->
+            <div class="ks-navbar-menu">
+                <form class="ks-search-form">
+                    <a class="ks-search-open" href="#">
+                        <span class="la la-search"></span>
+                    </a>
+                    <div class="ks-wrapper">
+                        <div class="input-icon icon-right icon icon-lg icon-color-primary">
+                            <input id="input-group-icon-text" type="text" class="form-control" placeholder="Search...">
+                            <span class="icon-addon">
+                                <span class="la la-search ks-icon"></span>
+                            </span>
+                        </div>
+                        <a class="ks-search-close" href="#">
+                            <span class="la la-close"></span>
+                        </a>
+                    </div>
+                </form>
+                <a class="nav-item nav-link" href="#">Dashboard</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu ks-info" aria-labelledby="Preview">
+                        <a class="dropdown-item ks-active" href="#">Dropdown Link 1</a>
+                        <a class="dropdown-item" href="#">Dropdown Link 2</a>
+                        <a class="dropdown-item" href="#">Dropdown Link 3</a>
+                        <div class="dropdown-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="Preview">
+                                <a class="dropdown-item" href="#">Dropdown Link 1</a>
+                                <a class="dropdown-item" href="#">Dropdown Link 2</a>
+                                <a class="dropdown-item" href="#">Dropdown Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-link ks-btn-action">
+                    <a class="btn btn-info" href="https://themeforest.net/item/kosmo-multi-purpose-responsive-bootstrap-4-admin-template-ui-framework/19506620?ref=themesanytime">Buy Now!</a>
+                </div>
+            </div>
+            <!-- END NAVBAR MENU -->
+
+            <!-- BEGIN NAVBAR ACTIONS -->
+            <div class="ks-navbar-actions">
+                <!-- BEGIN NAVBAR ACTION BUTTON -->
+                <div class="nav-item nav-link btn-action-block">
+                    <a class="btn btn-danger" href="#">
+                        <span class="ks-action">Activate Your Account</span>
+                        <span class="ks-description">trial ends in 1 day</span>
+                    </a>
+                </div>
+                <!-- END NAVBAR ACTION BUTTON -->
+
+                <!-- BEGIN NAVBAR LANGUAGES -->
+                <div class="nav-item dropdown ks-languages">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        EN <span class="ks-text">Languages</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right ks-scrollable" aria-labelledby="Preview">
+                        <div class="ks-wrapper">
+                            <a href="#" class="ks-language ks-selected">
+                                <span class="flag-icon flag-icon-us ks-icon"></span>
+                                <span class="ks-text">English</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-pl ks-icon"></span>
+                                <span class="ks-text">Polski</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-de ks-icon"></span>
+                                <span class="ks-text">Deutsch</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-lt ks-icon"></span>
+                                <span class="ks-text">Lietuvių</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-fr ks-icon"></span>
+                                <span class="ks-text">Français</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-by ks-icon"></span>
+                                <span class="ks-text">Беларуская</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-it ks-icon"></span>
+                                <span class="ks-text">Italiano</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-ua ks-icon"></span>
+                                <span class="ks-text">Українська</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-es ks-icon"></span>
+                                <span class="ks-text">Español</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-ru ks-icon"></span>
+                                <span class="ks-text">Русский</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-cz ks-icon"></span>
+                                <span class="ks-text">Česky</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-jp ks-icon"></span>
+                                <span class="ks-text">日本語</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-cn ks-icon"></span>
+                                <span class="ks-text">中文</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-tr ks-icon"></span>
+                                <span class="ks-text">Türkçe</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END NAVBAR LANGUAGES -->
+
+                <!-- BEGIN NAVBAR MESSAGES -->
+                <div class="nav-item dropdown ks-messages">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="la la-envelope ks-icon" aria-hidden="true">
+                            <span class="badge badge-pill badge-info">3</span>
+                        </span>
+                        <span class="ks-text">Messages</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <section class="ks-tabs-actions">
+                            <a href="#"><i class="la la-plus ks-icon"></i></a>
+                            <a href="#"><i class="la la-search ks-icon"></i></a>
+                        </section>
+                        <ul class="nav nav-tabs ks-nav-tabs ks-info" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-toggle="tab" data-target="#ks-navbar-messages-inbox" role="tab">Inbox</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#ks-navbar-messages-sent" role="tab">Sent</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#ks-navbar-messages-archive" role="tab">Archive</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane ks-messages-tab active" id="ks-navbar-messages-inbox" role="tabpanel">
+                                <div class="ks-wrapper ks-scrollable">
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-online">
+                                            <img src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-online">
+                                            <img src="assets/img/avatars/avatar-5.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-offline">
+                                            <img src="assets/img/avatars/placeholders/ava-36.png" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-offline">
+                                            <img src="assets/img/avatars/avatar-4.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="ks-view-all">
+                                    <a href="#">View all</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane ks-empty" id="ks-navbar-messages-sent" role="tabpanel">
+                                There are no messages.
+                            </div>
+                            <div class="tab-pane ks-empty" id="ks-navbar-messages-archive" role="tabpanel">
+                                There are no messages.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END NAVBAR MESSAGES -->
+
+                <!-- BEGIN NAVBAR NOTIFICATIONS -->
+                <div class="nav-item dropdown ks-notifications">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="la la-bell ks-icon" aria-hidden="true">
+                            <span class="badge badge-pill badge-info">7</span>
+                        </span>
+                        <span class="ks-text">Notifications</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <ul class="nav nav-tabs ks-nav-tabs ks-info" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-toggle="tab" data-target="#navbar-notifications-all" role="tab">All</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#navbar-notifications-activity" role="tab">Activity</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#navbar-notifications-comments" role="tab">Comments</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane ks-notifications-tab active" id="navbar-notifications-all" role="tabpanel">
+                                <div class="ks-wrapper ks-scrollable">
+                                    <a href="#" class="ks-notification">
+                                        <div class="ks-avatar">
+                                            <img src="assets/img/avatars/avatar-3.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter <span class="ks-description">has uploaded 1 file</span></div>
+                                            <div class="ks-text"><span class="la la-file-text-o ks-icon"></span> logo vector doc</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-notification">
+                                        <div class="ks-action">
+                                            <span class="ks-default">
+                                                <span class="la la-briefcase ks-icon"></span>
+                                            </span>
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">New project created</div>
+                                            <div class="ks-text">Dashboard UI</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-notification">
+                                        <div class="ks-action">
+                                            <span class="ks-error">
+                                                <span class="la la-times-circle ks-icon"></span>
+                                            </span>
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">File upload error</div>
+                                            <div class="ks-text"><span class="la la-file-text-o ks-icon"></span> logo vector doc</div>
+                                            <div class="ks-datetime">10 minutes ago</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="ks-view-all">
+                                    <a href="#">Show more</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane ks-empty" id="navbar-notifications-activity" role="tabpanel">
+                                There are no activities.
+                            </div>
+                            <div class="tab-pane ks-empty" id="navbar-notifications-comments" role="tabpanel">
+                                There are no comments.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END NAVBAR NOTIFICATIONS -->
+
+                <!-- BEGIN NAVBAR USER -->
+                <div class="nav-item dropdown ks-user">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="ks-avatar">
+                            <img src="assets/img/avatars/avatar-13.jpg" width="36" height="36">
+                        </span>
+                        <span class="ks-info">
+                            <span class="ks-name">Robert Dean</span>
+                            <span class="ks-description">Premium User</span>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-user ks-icon"></span>
+                            <span>Profile</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-wrench ks-icon" aria-hidden="true"></span>
+                            <span>Settings</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-question-circle ks-icon" aria-hidden="true"></span>
+                            <span>Help</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-sign-out ks-icon" aria-hidden="true"></span>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END NAVBAR USER -->
+            </div>
+            <!-- END NAVBAR ACTIONS -->
+        </nav>
+
+        <!-- BEGIN NAVBAR ACTIONS TOGGLER -->
+        <nav class="nav navbar-nav ks-navbar-actions-toggle">
+            <a class="nav-item nav-link" href="#">
+                <span class="la la-ellipsis-h ks-icon ks-open"></span>
+                <span class="la la-close ks-icon ks-close"></span>
+            </a>
+        </nav>
+        <!-- END NAVBAR ACTIONS TOGGLER -->
+
+        <!-- BEGIN NAVBAR MENU TOGGLER -->
+        <nav class="nav navbar-nav ks-navbar-menu-toggle">
+            <a class="nav-item nav-link" href="#">
+                <span class="la la-th ks-icon ks-open"></span>
+                <span class="la la-close ks-icon ks-close"></span>
+            </a>
+        </nav>
+        <!-- END NAVBAR MENU TOGGLER -->
+    </div>
+    <!-- END MENUS -->
+    <!-- END HEADER INNER -->
+</nav>
+<!-- END HEADER -->
+
+
+
+
+
+
+<div class="ks-page-container">
+    
+    <!-- BEGIN DEFAULT SIDEBAR -->
+<div class="ks-column ks-sidebar ks-info">
+    <div class="ks-wrapper ks-sidebar-wrapper">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="nav-item ks-user dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/img/avatars/avatar-12.jpg" width="36" height="36" class="ks-avatar rounded-circle">
+                    <div class="ks-info">
+                        <div class="ks-name">Peter Armstrong</div>
+                        <div class="ks-text">Product Manager</div>
+                    </div>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="profile-social-profile.html">Profile</a>
+                    <a class="dropdown-item" href="profile-settings-general.html">Settings</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-dashboard"></span>
+                    <span>Dashboard</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item ks-active" href="index.html">Default</a>
+                    <a class="dropdown-item" href="dashboards-draggable-widgets.html">Draggable Widgets</a>
+                    <a class="dropdown-item" href="dashboards-mail.html">Mail</a>
+                    <a class="dropdown-item" href="dashboards-projects.html">Projects</a>
+                    <a class="dropdown-item" href="dashboards-widgets-and-activity.html">Activity</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-cubes"></span>
+                    <span>Layouts</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../default-primary/index.html">Default</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Sidebar</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../sidebar_sections-primary/index.html" target="_blank">Sections</a>
+                            <a class="dropdown-item" href="../sidebar_compact-primary/index.html" target="_blank">Compact</a>
+                            <a class="dropdown-item" href="../sidebar_iconbar-primary/index.html" target="_blank">Iconbar</a>
+                            <a class="dropdown-item" href="../sidebar_iconbar_compact-primary/index.html" target="_blank">Iconbar Compact</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Navigation</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../horizontal_navbar-primary/index.html" target="_blank">Horizontal</a>
+                            <a class="dropdown-item" href="../horizontal_navbar_iconbar-primary/index.html" target="_blank">Horizontal Iconbar</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-flask"></span>
+                    <span>Apps</span>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>CRM</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="crm-contacts.html">Contacts</a>
+                            <a class="dropdown-item" href="crm-user-contact-view.html">Contact View</a>
+                            <a class="dropdown-item" href="crm-users-list-view.html">Users List View</a>
+                            <a class="dropdown-item" href="crm-users-grid-view.html">Users Grid View</a>
+                            <a class="dropdown-item" href="crm-roles-and-permissions.html">Roles &amp; Permissions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Projects</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="projects-kanban-board.html">Kanban Board</a>
+                            <a class="dropdown-item" href="projects-grid-board.html">Grid Board</a>
+                            <a class="dropdown-item" href="projects-tasks.html">Tasks</a>
+                            <a class="dropdown-item" href="projects-task.html">Task</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Mail</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="mail-empty.html">Mail Empty</a>
+                            <a class="dropdown-item" href="mail-view.html">Mail View</a>
+                            <a class="dropdown-item" href="mail-create.html">Mail Create</a>
+                            <a class="dropdown-item" href="mail-compact.html">Mail Compact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Tickets</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="tickets-empty.html">Empty</a>
+                            <a class="dropdown-item" href="tickets-list.html">List</a>
+                            <a class="dropdown-item" href="tickets-create.html">Create</a>
+                            <a class="dropdown-item" href="tickets-view.html">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Messenger</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="messenger.html">Default</a>
+                            <a class="dropdown-item" href="messenger-group.html">Group</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>File Manager</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span>Grid</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="filemanager-grid.html">Default</a>
+                                    <a class="dropdown-item" href="filemanager-grid-selected-items.html">Selected Items</a>
+                                    <a class="dropdown-item" href="filemanager-grid-image.html">Image</a>
+                                    <a class="dropdown-item" href="filemanager-grid-audio.html">Audio</a>
+                                    <a class="dropdown-item" href="filemanager-grid-recent.html">Recent</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span>List</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="filemanager-list.html">Default</a>
+                                    <a class="dropdown-item" href="filemanager-list-selected-items.html">Selected Items</a>
+                                    <a class="dropdown-item" href="filemanager-list-recent.html">Recent</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Document Viewer</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="document-viewer-image.html">Image Viewer</a>
+                            <a class="dropdown-item" href="document-viewer-pdf.html">Pdf Viewer</a>
+                            <a class="dropdown-item" href="document-viewer-presentation.html">Presentation Viewer</a>
+                            <a class="dropdown-item" href="document-viewer-audio.html">Audio Viewer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="music-app.html">Music</a>
+                </div>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="calendar.html">Calendar</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-toggle-off"></span>
+                    <span>Form</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="form-basic-inputs.html">Basic Inputs</a>
+                    <a class="dropdown-item" href="form-advanced-inputs.html">Extended Inputs</a>
+                    <a class="dropdown-item" href="form-buttons.html">Buttons</a>
+                    <a class="dropdown-item" href="form-validation.html">Validation</a>
+                    <a class="dropdown-item" href="form-touchspin.html">Touchspin</a>
+                    <a class="dropdown-item" href="form-flex-labels.html">Flex Labels</a>
+                    <a class="dropdown-item" href="form-mask-input.html">Mask Input</a>
+                    <a class="dropdown-item" href="form-autocomplete-and-tags.html">Autocomplete &amp; Tags</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Steps</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="form-steps-column.html">Column Steps</a>
+                            <a class="dropdown-item" href="form-steps-progress.html">Progress Steps</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-desktop"></span>
+                    <span>UI Kit</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="uikit-bootstrap-ui.html">Bootstrap UI</a>
+                    <a class="dropdown-item" href="uikit-colors.html">Colors</a>
+                    <a class="dropdown-item" href="uikit-typography.html">Typography</a>
+                    <a class="dropdown-item" href="uikit-cards.html">Cards</a>
+                    <a class="dropdown-item" href="uikit-panels.html">Panels</a>
+                    <a class="dropdown-item" href="uikit-tables.html">Tables</a>
+                    <a class="dropdown-item" href="uikit-tabs.html">Tabs</a>
+                    <a class="dropdown-item" href="uikit-default-alerts.html">Alerts</a>
+                    <a class="dropdown-item" href="uikit-pagination.html">Pagination</a>
+                    <a class="dropdown-item" href="uikit-modal.html">Modal</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-sliders"></span>
+                    <span>Components</span>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>File Upload</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="components-file-upload-uppy.html">Uppy</a>
+                            <a class="dropdown-item" href="components-file-upload-dropzone.html">DropZone</a>
+                            <a class="dropdown-item" href="components-file-upload-jquery-file-upload.html">Jquery File Upload</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Select</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="components-select-select2.html">Select2</a>
+                            <a class="dropdown-item" href="components-select-multi.html">Multi</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Wysiwyg Editors</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="components-wysiwyg-editors-bootstrap-markdown-editor.html">Bootstrap Markdown</a>
+                            <a class="dropdown-item" href="components-wysiwyg-editors-simplemde-markdown-editor.html">SimpleMDE Markdown</a>
+                            <a class="dropdown-item" href="components-wysiwyg-editors-trumbowyg-editor.html">Trumbowyg Editor</a>
+                            <a class="dropdown-item" href="components-wysiwyg-editors-summernote-editor.html">Summernote Editor</a>
+                        </div>
+                    </div>
+                    <a class="dropdown-item" href="components-alerts-and-confirm.html">Alerts &amp; Confirm</a>
+                    <a class="dropdown-item" href="components-sweetalert.html">SweetAlert</a>
+                    <a class="dropdown-item" href="components-bootstrap-notify.html">Bootstrap Notify</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>DatePicker</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="components-datepicker-flatpickr.html">Flatpickr</a>
+                            <a class="dropdown-item" href="components-datepicker-bootstrap-date-range-picker.html">Range DatePicker</a>
+                        </div>
+                    </div>
+                    <a class="dropdown-item" href="components-ion-range-slider-flat-skin-basic.html">Ion Range Slider</a>
+                    <a class="dropdown-item" href="components-nestable.html">Nestable</a>
+                    <a class="dropdown-item" href="components-colorpicker.html">Color Picker</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-user"></span>
+                    <span>Profile</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="profile-social-profile.html">Social Profile</a>
+                    <a class="dropdown-item" href="profile-customer-profile.html">Customer Profile</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Settings</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="profile-settings-general.html">General</a>
+                            <a class="dropdown-item" href="profile-settings-contact-info.html">Contact Info</a>
+                            <a class="dropdown-item" href="profile-settings-experience.html">Experience</a>
+                            <a class="dropdown-item" href="profile-settings-education.html">Education</a>
+                            <a class="dropdown-item" href="profile-settings-organizations.html">Organizations</a>
+                            <a class="dropdown-item" href="profile-settings-notifications.html">Notifications</a>
+                            <a class="dropdown-item" href="profile-settings-billing.html">Billing</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-th"></span>
+                    <span>DataTables</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="datatables-datatables-net.html">DataTables.net</a>
+                    <a class="dropdown-item" href="datatables-bootstrap-table.html">Bootstrap Table</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-puzzle-piece"><span class="badge badge-pill badge-pink ks-label">3</span></span>
+                    <span>Widgets</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="widgets-panels.html">Panels</a>
+                    <a class="dropdown-item" href="widgets-upload.html">Upload</a>
+                    <a class="dropdown-item" href="widgets-tables.html">Tables</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-file-text-o"></span>
+                    <span>Pages</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="pages-blank.html">Blank</a>
+                    <a class="dropdown-item" href="pages-error404.html">Error 404</a>
+                    <a class="dropdown-item" href="pages-error500.html">Error 500</a>
+                    <a class="dropdown-item" href="pages-contacts.html">Contacts</a>
+                    <a class="dropdown-item" href="pages-login.html" target="_blank">Login</a>
+                    <a class="dropdown-item" href="pages-signup.html" target="_blank">Sign Up</a>
+                    <a class="dropdown-item" href="pages-forgot-password.html" target="_blank">Forgot Password</a>
+                    <a class="dropdown-item" href="pages-locked-account.html" target="_blank">Locked Account</a>
+                    <a class="dropdown-item" href="pages-confirmation.html" target="_blank">Confirmation</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-credit-card"></span>
+                    <span>Payment</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="payment-billing.html">Billing</a>
+                    <a class="dropdown-item" href="payment-invoices.html">Invoices</a>
+                    <a class="dropdown-item" href="payment-order.html">Order</a>
+                    <a class="dropdown-item" href="payment-orders-history.html">Orders History</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-usd"></span>
+                    <span>Pricing</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="pricing-plans.html">Plans</a>
+                    <a class="dropdown-item" href="pricing-subscriptions.html">Subscriptions</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="email-templates.html">
+                    <span class="ks-icon la la-envelope-o"></span>
+                    <span>Email Templates</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="documentation.html">
+                    <span class="ks-icon la la-book"></span>
+                    <span>Documentation</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-question-circle"></span>
+                    <span>FAQ</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="faq.html">Index</a>
+                </div>
+            </li>
+        </ul>
+        <div class="ks-sidebar-extras-block">
+            <div class="ks-extras-block-item">
+                <div class="ks-name">Monthly Badwidth Transfer</div>
+                <div class="ks-progress">
+                    <div class="progress ks-progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 84%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="ks-description">
+                    <span class="ks-amount">84%</span>
+                    <span class="ks-text">(8 400 MB of 10 000)</span>
+                </div>
+            </div>
+            <div class="ks-extras-block-item">
+                <div class="ks-name">Disk Space Usage</div>
+                <div class="ks-progress">
+                    <div class="progress ks-progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 36%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="ks-description">
+                    <span class="ks-amount">36%</span>
+                    <span class="ks-text">(3 600 MB of 10 000)</span>
+                </div>
+            </div>
+            <div class="ks-sidebar-copyright">© 2016 Kosmo. All right reserved</div>
+        </div>
+    </div>
+</div>
+<!-- END DEFAULT SIDEBAR -->
+
+
+
+
+
+
+
+
+
+
+
+    <div class="ks-column ks-page">
+        <!-- BEGIN DASHBOARD HEADER -->
+<div class="ks-page-header"> <!-- add "ks-header-with-addon" class if you need an addon -->
+    <section class="ks-title">
+        <h3>Dashboard</h3>
+
+        <div class="ks-controls">
+            <nav class="breadcrumb ks-default">
+                <a class="breadcrumb-item ks-breadcrumb-icon" href="index.html">
+                    <span class="la la-home ks-icon"></span>
+                </a>
+                <span class="breadcrumb-item active" href="#">Dashboard</span>
+            </nav>
+
+            <!--<button class="btn btn-outline-primary ks-light ks-header-addon-block-toggle" data-block-toggle=".ks-header-with-addon > .ks-addon">Addon</button>-->
+        </div>
+    </section>
+    <!-- Uncomment if you need an addon
+    <section class="ks-addon">
+        <div class="btn-group ks-addon-block" data-toggle="buttons">
+            <label class="btn btn-outline-primary ks-light">
+                <input type="radio" name="options" autocomplete="off"> Today
+            </label>
+            <label class="btn btn-outline-primary ks-light">
+                <input type="radio" name="options" autocomplete="off"> Week
+            </label>
+            <label class="btn btn-outline-primary ks-light active">
+                <input type="radio" name="options" autocomplete="off" checked> Month
+            </label>
+            <label class="btn btn-outline-primary ks-light">
+                <input type="radio" name="options" autocomplete="off"> Year
+            </label>
+        </div>
+
+        <div class="ks-addon-block ks-addon-actions">
+            <span class="ks-page-header-text">
+                <span class="ks-icon la la-undo"></span> 5 minutes ago
+            </span>
+            <button class="btn btn-success">
+                <span class="la la-plus ks-icon ks-sm"></span>
+                <span class="ks-text">Add widget</span>
+            </button>
+            <button class="btn btn-outline-primary ks-light">
+                <span class="la la-pencil ks-icon ks-sm"></span>
+                <span class="ks-text">Edit</span>
+            </button>
+        </div>
+    </section>
+    -->
+</div>
+<!-- END DASHBOARD HEADER -->
+
+<!-- BEGIN DASHBOARD CONTENT -->
+<div class="ks-page-content">
+    <div class="ks-page-content-body">
+        <div class="container-fluid ks-rows-section">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="ks-dashboard-widget ks-widget-amount-statistics ks-info">
+                                <div class="ks-statistics">
+                                    <span class="ks-amount" data-count-up="3119">0</span>
+                                    <span class="ks-text">total sales gross</span>
+                                </div>
+                                <div class="ks-percent ks-down"><span class="ks-text">5%</span></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="ks-dashboard-widget ks-widget-amount-statistics ks-success">
+                                <div class="ks-statistics">
+                                    <span class="ks-amount" data-count-up="8201">0</span>
+                                    <span class="ks-text">unique visitors</span>
+                                </div>
+                                <div class="ks-percent ks-up"><span class="ks-text">6%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 ks-draggable-column">
+                            <div id="ks-bar-chart-panel" class="card panel" data-dashboard-widget>
+                                <h5 class="card-header">
+                                    Bar chart
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </h5>
+                                <div class="card-block" data-widget-content>
+                                    <div id="ks-bar-chart" data-height="260"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 ks-draggable-column">
+                            <div class="card panel panel-table" data-dashboard-widget>
+                                <h5 class="card-header">
+                                    Trends
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </h5>
+                                <div class="card-block ks-scrollable" data-height="290" data-widget-content>
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th width="1">#</th>
+                                            <th>Search Terms</th>
+                                            <th width="100">Views</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td scope="row">1</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">2</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">3</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">4</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">5</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">6</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">7</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">8</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">9</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">10</td>
+                                            <td>The Dark Knight Rises (Google Russia)</td>
+                                            <td class="ks-color-success">317,233</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 ks-draggable-column">
+                            <div class="card panel ks-widget ks-widget-followers" data-dashboard-widget>
+                                <div class="card-header">
+                                    New Followers
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-block ks-scrollable" data-height="236" data-widget-content>
+                                    <div class="ks-wrapper">
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-success">Unfollow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-2.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-3.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-4.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-11.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-10.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                        <div class="ks-user">
+                                            <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-5.jpg" width="36" height="36">
+                                            <div class="ks-info">
+                                                <a href="#" class="ks-name">Carl Nelson</a>
+                                                <span class="ks-description">@berezhski</span>
+                                            </div>
+                                            <button class="btn btn-outline-success">Follow</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card panel ks-widget ks-widget-to-do-list" data-dashboard-widget>
+                                <div class="card-header">
+                                    To Do List
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-block" data-widget-content>
+                                    <div class="ks-header">
+                                        Remaining 3 of 5
+                                        <button class="btn btn-primary ks-light">Archive</button>
+                                    </div>
+                                    <div class="ks-body ks-scrollable" data-height="140">
+                                        <ul class="ks-wrapper">
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c1" type="checkbox" class="custom-control-input">
+                                                    <label class="custom-control-label" for="c1">Android app design</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c2" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c2">iOS app design</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c3" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c3">Need to make a wireframe</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c4" type="checkbox" class="custom-control-input">
+                                                    <label class="custom-control-label" for="c4">Android app design</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c5" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c5">iOS app design</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c6" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c6">Need to make a wireframe</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c7" type="checkbox" class="custom-control-input">
+                                                    <label class="custom-control-label" for="c7">Dinner with a kids at 8:30 PM</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task ks-completed">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c8" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c8">Grocery shopping</label>
+                                                </div>
+                                            </li>
+                                            <li class="ks-task ks-completed">
+                                                <span class="ks-icon la la-bars"></span>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="c9" type="checkbox" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="c9">Need to make a wireframe</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <form class="ks-footer">
+                                        <input type="text" class="form-control" placeholder="Add a new task...">
+                                        <button class="btn btn-primary">Add</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 ks-draggable-column">
+                            <div class="card ks-widget ks-widget-overview">
+                                <div class="ks-body">
+                                    <h5 class="ks-header">Account overview</h5>
+
+                                    <ul class="ks-items">
+                                        <li class="ks-item">
+                                            <span class="la la-building ks-icon"></span>
+                                            <span class="ks-text">6 properties</span>
+                                        </li>
+                                        <li class="ks-item">
+                                            <span class="la la-users ks-icon"></span>
+                                            <span class="ks-text">12 properties</span>
+                                        </li>
+                                        <li class="ks-item">
+                                            <span class="la la-envelope ks-icon"></span>
+                                            <span class="ks-text">3 unread</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ks-footer">
+                                    <div class="ks-info">
+                                        <span class="ks-name">Premium</span>
+                                        <div class="ks-datetime">to september 26, 2016</div>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-primary ks-light ks-no-text"><span class="la la-info ks-icon"></span></a>
+                                </div>
+                            </div>
+                            <div class="card panel ks-widget ks-dashboard-widget ks-widget-profile-default">
+                                <h5 class="card-header">
+                                    Profile v1
+                                </h5>
+                                <div class="card-block">
+                                    <div class="ks-user">
+                                        <a href="#" class="ks-avatar">
+                                            <img src="assets/img/avatars/avatar-10.jpg" width="55" height="55">
+                                        </a>
+                                        <div class="ks-info">
+                                            <a href="#" class="ks-name">Patricia Ferguson</a>
+                                            <a href="#" class="ks-nickname">@patricia_ferguson</a>
+                                            <span class="ks-location">United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-sections">
+                                        <div class="ks-section">
+                                            <span class="la la-comments-o ks-icon"></span>
+                                            <span class="ks-amount">85</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-heart-o ks-icon"></span>
+                                            <span class="ks-amount">408</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-external-link-square ks-icon"></span>
+                                            <span class="ks-amount">1099</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-dollar ks-icon"></span>
+                                            <span class="ks-amount">75</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-about">
+                                        <div class="ks-header">About</div>
+                                        <div class="ks-text">
+                                            Aliso Creek is a 19-mile (31 km) urban stream that runs through Orange County in the U.S. state of California from the Santa Ana Mountains
+                                        </div>
+                                    </div>
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control">
+                                            <span class="la la-plus-square ks-icon"></span> <span class="ks-text">Follow</span>
+                                        </a>
+                                        <a href="#" class="ks-control">
+                                            <span class="la la-envelope ks-icon"></span> <span class="ks-text">Message</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="ks-dashboard-widget ks-widget-amount-chart-statistics ks-purple">
+                                <div class="ks-body">
+                                    <div class="ks-statistics">
+                                        <span class="ks-text">Memory</span>
+                                        <span class="ks-amount">25%</span>
+                                    </div>
+                                    <div class="ks-chart">
+                                        <div id="ks-memory-radial-progress-chart" class="ks-radial-progress-chart ks-white"></div>
+                                    </div>
+                                </div>
+                                <div class="ks-footer">
+                                    <div id="ks-memory-area-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="ks-dashboard-widget ks-widget-amount-chart-statistics ks-white">
+                                <div class="ks-body">
+                                    <div class="ks-statistics">
+                                        <span class="ks-text">CPU</span>
+                                        <span class="ks-amount">50%</span>
+                                    </div>
+                                    <div class="ks-chart">
+                                        <div id="ks-cpu-radial-progress-chart" class="ks-radial-progress-chart ks-primary"></div>
+                                    </div>
+                                </div>
+                                <div class="ks-footer">
+                                    <div id="ks-cpu-area-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 ks-draggable-column">
+                            <div id="ks-line-chart-panel" class="card panel" data-dashboard-widget>
+                                <h5 class="card-header">
+                                    Line chart
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </h5>
+                                <div class="card-block" data-widget-content>
+                                    <div id="ks-line-chart" data-height="260"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 ks-draggable-column">
+                            <div class="card panel" data-dashboard-widget>
+                                <h5 class="card-header">
+                                    Pie Chart
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </h5>
+                                <div class="card-block" data-height="251" data-widget-content>
+                                    <div id="ks-pie-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 ks-draggable-column">
+                            <div class="card panel ks-widget ks-widget-post" data-dashboard-widget>
+                                <div class="card-header">
+                                    <a href="#" class="ks-text">
+                                        Summer Hits You Need For Your 2016 Playlists
+                                    </a>
+
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-block" data-widget-content>
+                                    <div class="ks-user">
+                                        <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                        <div class="ks-info">
+                                            <a href="#" class="ks-name">Carl Nelson</a>
+                                            <span class="ks-description">Project Manager at Universal Music</span>
+                                        </div>
+                                        <span class="ks-datetime">8 min ago</span>
+                                    </div>
+                                    <div class="ks-text">Picking the song of summer for 2016 from a pool of proven candidates and promising newcomers</div>
+                                    <div class="ks-actions">
+                                <span class="ks-control" data-toggle="tooltip" data-placement="top" title="" data-original-title="Share">
+                                    <span class="la la-bullhorn ks-icon"></span>
+                                    <span class="ks-amount">1</span>
+                                </span>
+                                <span class="ks-control" data-toggle="tooltip" data-placement="top" title="" data-original-title="Like">
+                                    <span class="la la-heart-o ks-icon"></span>
+                                    <span class="ks-amount">3</span>
+                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card panel ks-dashboard-widget ks-widget-profile-image">
+                                <h5 class="card-header">
+                                    Profile v2
+                                </h5>
+                                <div class="card-block">
+                                    <div class="ks-cover" style="background-image: url('assets/img/profile/profile_image_cover.png');"></div>
+                                    <div class="ks-user">
+                                        <a href="#" class="ks-avatar">
+                                            <img src="assets/img/avatars/avatar-10.jpg" width="55" height="55">
+                                        </a>
+                                        <div class="ks-info">
+                                            <a href="#" class="ks-name">Patricia Ferguson</a>
+                                            <a href="#" class="ks-nickname">@patricia_ferguson</a>
+                                            <span class="ks-location">United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-sections">
+                                        <div class="ks-section">
+                                            <span class="la la-comments-o ks-icon"></span>
+                                            <span class="ks-amount">85</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-heart-o ks-icon"></span>
+                                            <span class="ks-amount">408</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-external-link-square ks-icon"></span>
+                                            <span class="ks-amount">1099</span>
+                                        </div>
+                                        <div class="ks-section">
+                                            <span class="la la-dollar ks-icon"></span>
+                                            <span class="ks-amount">75</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control">
+                                            <span class="la la-plus-square ks-icon"></span> <span class="ks-text">Follow</span>
+                                        </a>
+                                        <a href="#" class="ks-control">
+                                            <span class="la la-envelope ks-icon"></span> <span class="ks-text">Message</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 ks-draggable-column">
+                            <div class="card panel ks-widget ks-widget-like-post" data-dashboard-widget>
+                                <div class="card-header">
+                                    <div class="ks-user">
+                                        <img class="ks-avatar rounded-circle" src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                        <div class="ks-info">
+                                            <a href="#" class="ks-name">Carl Nelson</a>
+                                            <span class="ks-description">22 min ago near Zagreb</span>
+                                        </div>
+                                    </div>
+                                    <div class="ks-controls">
+                                        <a href="#" class="ks-control" data-control-content-visible data-icon-visible="la la-minus" data-icon-hidden="la la-plus">
+                                            <span class="ks-icon la la-minus" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-refresh>
+                                            <span class="ks-icon la la-refresh" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-fullscreen>
+                                            <span class="ks-icon la la-expand" data-control-icon></span>
+                                        </a>
+                                        <a href="#" class="ks-control" data-control-close>
+                                            <span class="ks-icon la la-close" data-control-icon></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-block" data-widget-content>
+                                    <div class="ks-text">Picking the song of summer for 2016 from a pool of proven candidates and promising newcomers</div>
+                                    <img src="assets/img/placeholders/placeholder-360x230.png" class="ks-thumbnail img-fluid">
+                                    <div class="ks-actions">
+                                <span class="ks-control" data-toggle="tooltip" data-placement="top" title="" data-original-title="Share">
+                                    <span class="la la-comment-o ks-icon"></span>
+                                    <span class="ks-amount">1</span>
+                                </span>
+                                <span class="ks-control" data-toggle="tooltip" data-placement="top" title="" data-original-title="Like">
+                                    <span class="la la-heart-o ks-icon"></span>
+                                    <span class="ks-amount">3</span>
+                                </span>
+                                    </div>
+                                    <div class="ks-likes-block">
+                                        <div class="ks-users">
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-1.jpg" width="26" height="26">
+                                            </a>
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-7.jpg" width="26" height="26">
+                                            </a>
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-11.jpg" width="26" height="26">
+                                            </a>
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-2.jpg" width="26" height="26">
+                                            </a>
+                                            <a href="#" class="ks-user">
+                                                <img class="ks-avatar" src="assets/img/avatars/avatar-6.jpg" width="26" height="26">
+                                            </a>
+                                        </div>
+                                        <span class="ks-text">and 103 other like this</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END DASHBOARD CONTENT -->
+    </div>
+</div>
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/popper/popper.min.js"></script>
+<script src="libs/responsejs/response.min.js"></script>
+<script src="libs/loading-overlay/loadingoverlay.min.js"></script>
+<script src="libs/tether/js/tether.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+<script src="libs/jscrollpane/jquery.mousewheel.js"></script>
+<script src="libs/flexibility/flexibility.js"></script>
+<script src="libs/noty/noty.min.js"></script>
+<script src="libs/velocity/velocity.min.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<script src="assets/scripts/common.min.js"></script>
+<!-- END THEME LAYOUT SCRIPTS -->
+
+<!-- BEGIN DASHBOARD SCRIPTS -->
+<script src="libs/jquery/jquery-ui.min.js"></script>
+<script src="libs/d3/d3.min.js"></script>
+<script src="libs/count-up/count-up.min.js"></script>
+<script src="assets/scripts/charts/area/area.chart.min.js"></script>
+<script src="assets/scripts/charts/radial-progress/radial-progress.chart.min.js"></script>
+<script src="assets/scripts/charts/bar/inline-bar.chart.min.js"></script>
+<script src="libs/jquery-confirm/jquery-confirm.min.js"></script>
+<script src="assets/scripts/kosmo.widget-controls.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+(function ($) {
+    $(document).ready(function() {
+        var memoryRadialProgressChart = new KosmoCharts.RadialProgress('#ks-memory-radial-progress-chart', {
+            lineWidth: 8,
+            size: 50,
+            showAmount: false,
+            amount: 25
+        });
+        memoryRadialProgressChart.render();
+
+        var cpuRadialProgressChart = new KosmoCharts.RadialProgress('#ks-cpu-radial-progress-chart', {
+            lineWidth: 8,
+            size: 50,
+            showAmount: false,
+            amount: 50
+        });
+        cpuRadialProgressChart.render();
+
+        google.charts.load('current', {'packages':['corechart', 'bar', 'line']});
+        google.charts.setOnLoadCallback(drawBarChart);
+        google.charts.setOnLoadCallback(drawLineChart);
+        google.charts.setOnLoadCallback(drawPieChart);
+        google.charts.setOnLoadCallback(function () {
+            var data = google.visualization.arrayToDataTable([
+                ['Memory', 'Usages'],
+                [10,  20],
+                [11,  50],
+                [12,  10],
+                [13,  80],
+                [14,  20],
+                [15,  90],
+                [16,  60],
+                [17,  30],
+                [18,  50],
+                [19,  20],
+                [20,  40],
+                [21,  50],
+                [22,  90],
+                [23,  80],
+                [24,  20],
+                [25,  90],
+                [26,  50],
+                [27,  30],
+                [28,  60],
+                [29,  30]
+            ]);
+
+            var options = {
+                title: null,
+                height: 40,
+                legend: {position: 'none'},
+                backgroundColor: {
+                    fill: 'transparent'
+                },
+                chartArea:{
+                    left:0,
+                    top:0,
+                    right: 0,
+                    height: 40
+                },
+                lineWidth: 1,
+                colors:['#efc8ea','#f5daf1'],
+                hAxis: {
+                    baselineColor: 'none',
+                    gridlines: {
+                        color: '#fff'
+                    }
+                },
+                vAxis: {
+                    baselineColor: 'none',
+                    maxValue: 115,
+                    gridlines: {
+                        color: '#e1e5f0'
+                    }
+                }
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('ks-memory-area-chart'));
+            chart.draw(data, options);
+        });
+        google.charts.setOnLoadCallback(function () {
+            var data = google.visualization.arrayToDataTable([
+                ['CPU', 'Usages'],
+                [10,  30],
+                [11,  50],
+                [12,  10],
+                [13,  80],
+                [14,  20],
+                [15,  90],
+                [16,  60],
+                [17,  30],
+                [18,  50],
+                [19,  20],
+                [20,  40],
+                [21,  50],
+                [22,  90],
+                [23,  80],
+                [24,  20],
+                [25,  90],
+                [26,  50],
+                [27,  30],
+                [28,  60],
+                [29,  30]
+            ]);
+
+            var options = {
+                title: null,
+                height: 40,
+                legend: {position: 'none'},
+                backgroundColor: {
+                    fill: 'transparent'
+                },
+                chartArea:{
+                    left:0,
+                    top:0,
+                    right: 0,
+                    height: 40
+                },
+                lineWidth: 1,
+                colors:['#c4cbe1','#ebeef5'],
+                hAxis: {
+                    baselineColor: 'none',
+                    gridlines: {
+                        color: '#fff'
+                    }
+                },
+                vAxis: {
+                    baselineColor: 'none',
+                    maxValue: 115,
+                    gridlines: {
+                        color: '#e1e5f0'
+                    }
+                }
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('ks-cpu-area-chart'));
+            chart.draw(data, options);
+        });
+
+        function drawBarChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses', 'Profit'],
+                ['2014', 1000, 400, 200],
+                ['2015', 1170, 460, 250],
+                ['2016', 660, 1120, 300],
+                ['2017', 1030, 540, 350]
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Company Performance',
+                    subtitle: 'Sales, Expenses, and Profit: 2014-2017'
+                }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('ks-bar-chart'));
+
+            chart.draw(data, options);
+        }
+
+        function drawLineChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'Day');
+            data.addColumn('number', 'Guardians of the Galaxy');
+            data.addColumn('number', 'The Avengers');
+            data.addColumn('number', 'Transformers: Age of Extinction');
+            data.addRows([
+                [1,  37.8, 80.8, 41.8],
+                [2,  30.9, 69.5, 32.4],
+                [3,  25.4,   57, 25.7],
+                [4,  11.7, 18.8, 10.5],
+                [5,  11.9, 17.6, 10.4],
+                [6,   8.8, 13.6,  7.7],
+                [7,   7.6, 12.3,  9.6],
+                [8,  12.3, 29.2, 10.6],
+                [9,  16.9, 42.9, 14.8],
+                [10, 12.8, 30.9, 11.6],
+                [11,  5.3,  7.9,  4.7],
+                [12,  6.6,  8.4,  5.2],
+                [13,  4.8,  6.3,  3.6],
+                [14,  4.2,  6.2,  3.4]
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Box Office Earnings in First Two Weeks of Opening',
+                    subtitle: 'in millions of dollars (USD)'
+                }
+            };
+
+            var chart = new google.charts.Line(document.getElementById('ks-line-chart'));
+
+            chart.draw(data, options);
+        }
+
+        function drawPieChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work',     11],
+                ['Eat',      2],
+                ['Commute',  2],
+                ['Watch TV', 2],
+                ['Sleep',    7]
+            ]);
+
+            var options = {
+                title: 'My Daily Activities',
+                height: 242,
+                chartArea: {
+                    top: 50,
+                    height: 180
+                },
+                titleTextStyle: {
+                    color: '#757575',
+                    fontSize: 16,
+                    bold: false
+                },
+                legend: {
+                    alignment: 'center'
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('ks-pie-chart'));
+            chart.draw(data, options);
+        }
+
+        var barChartBlock = $("#ks-bar-chart-panel .card-block");
+        barChartBlock.LoadingOverlay("show", {
+            color: 'rgba(255, 255, 255, 0.8)',
+            image: '',
+            fontawesome : "la la-refresh la-spin"
+        });
+
+        var lineChartBlock = $("#ks-line-chart-panel .card-block");
+        lineChartBlock.LoadingOverlay("show", {
+            color: 'rgba(255, 255, 255, 0.8)',
+            image: '',
+            fontawesome : "la la-refresh la-spin"
+        });
+
+        setTimeout(function () {
+            barChartBlock.LoadingOverlay("hide");
+            lineChartBlock.LoadingOverlay("hide");
+        }, 1000);
+
+        var options = {
+            useEasing : true,
+            useGrouping : true,
+            separator : ',',
+            decimal : '.',
+            prefix : '',
+            suffix : ''
+        };
+
+        $('.ks-amount[data-count-up]').each(function() {
+            var countUp = parseInt($(this).data('count-up'));
+            (new CountUp(this, 0, 6555, 0, 2, options)).start();
+        });
+
+        $('[data-dashboard-widget]').KosmoWidgetControls({
+            onRefresh: function (element) {
+                var zIndex = 1;
+
+                if (element.hasClass($.fn.KosmoWidgetControls.defaults.fullScreenClass)) {
+                    zIndex = 11;
+                }
+
+                element.LoadingOverlay("show", {
+                    color: 'rgba(255, 255, 255, 0.8)',
+                    image: '',
+                    fontawesome : "la la-refresh la-spin",
+                    zIndex: zIndex
+                });
+
+                setTimeout(function () {
+                    element.LoadingOverlay("hide");
+                }, 2000);
+            },
+            onFullScreen: function (element, isFullScreen) {
+                // Disable sortable on full screen mode
+                if (isFullScreen) {
+                    $(".ks-draggable-column").sortable('disable');
+                } else {
+                    $(".ks-draggable-column").sortable('enable');
+                }
+            },
+            onClose: function (element, closeCallback) {
+                $.confirm({
+                    title: 'Danger!',
+                    content: 'Are you sure you want to remove this widget from dashboard?',
+                    type: 'danger',
+                    buttons: {
+                        confirm: {
+                            text: 'Yes, remove',
+                            btnClass: 'btn-danger',
+                            action: function() {
+                                closeCallback();
+                            }
+                        },
+                        cancel: function () {}
+                    }
+                });
+            }
+        });
+
+        $(".ks-draggable-column").sortable({
+            containment: ".ks-page-content-body > .container-fluid",
+            handle: ".card-header",
+            cancel: ".card-header .ks-controls",
+            placeholder: "ks-dashboard-portlet-placeholder",
+            connectWith: ".ks-draggable-column",
+            revert: true,
+            activate: function(event, ui) {
+                $('.ks-dashboard-portlet-placeholder').height(ui.item.height() - 2); // 2 - border-width
+            },
+            change: function () {
+                $('.ks-draggable-column').each(function () {
+                    if ($(this).find('.ui-sortable-helper').size() && $(this).closest('.row').find('.card').size() == 1) {
+                        $(this).closest('.row').css({
+                            margin: 0,
+                            height: 0
+                        });
+                    }
+                });
+
+                $('.row').each(function () {
+                    if ($(this).find('[class*="col-"]').size() == 0) {
+                        $(this).remove();
+                    }
+                });
+            }
+        });
+
+        //$(".ks-draggable-column").sortable('disable');
+    });
+})(jQuery);
+</script>
+<!-- END DASHBOARD SCRIPTS -->
+<div class="ks-mobile-overlay"></div>
+
+<!-- BEGIN SETTINGS BLOCK -->
+<div class="ks-settings-slide-block">
+    <a class="ks-settings-slide-control">
+        <span class="ks-icon la la-cog"></span>
+    </a>
+
+    <div class="ks-header">
+        <span class="ks-text">Layout Options</span>
+        <a class="ks-settings-slide-close-control">
+            <span class="ks-icon la la-close"></span>
+        </a>
+    </div>
+
+    <div class="ks-themes-list">
+        <a href="../default-primary/index.html" class="ks-theme ks-primary ks-active"></a>
+        <a href="../default-primary-dark/index.html" class="ks-theme ks-dark-primary"></a>
+        <a href="../default-info/index.html" class="ks-theme ks-info"></a>
+        <a href="../default-pink/index.html" class="ks-theme ks-blink-pink-san-marino"></a>
+        <a href="../default-bermuda-gray/index.html" class="ks-theme ks-bermuda-gray-malachite"></a>
+        <a href="../default-royal-blue/index.html" class="ks-theme ks-royal-blue-orchid"></a>
+        <a href="../default-ebony-clay/index.html" class="ks-theme ks-ebony-clay-cerise-red"></a>
+        <a href="../default-international-klein-blue/index.html" class="ks-theme ks-international-klein-blue-dixie"></a>
+        <a href="../default-jungle-green/index.html" class="ks-theme ks-jungle-green-chambray"></a>
+        <a href="../default-voodoo/index.html" class="ks-theme ks-voodoo-medium-purple"></a>
+        <a href="../default-cornflower-blue/index.html" class="ks-theme ks-cornflower-blue-ecstasy"></a>
+        <a href="../default-purple/index.html" class="ks-theme ks-purple-mandy"></a>
+        <a href="../default-oslo-gray/index.html" class="ks-theme ks-oslo-gray-royal-blue"></a>
+        <a href="../default-astronaut-blue/index.html" class="ks-theme ks-astronaut-blue-persian-green"></a>
+        <a href="../default-old-brick/index.html" class="ks-theme ks-old-brick"></a>
+        <a href="../default-white/index.html" class="ks-theme ks-white"></a>
+    </div>
+
+    <ul class="ks-settings-list">
+        <li>
+            <span class="ks-text">Collapsed Sidebar</span>
+            <label class="ks-checkbox-slider ks-on-off ks-primary ks-sidebar-checkbox-toggle">
+                <input type="checkbox" value="1">
+                <span class="ks-indicator"></span>
+                <span class="ks-on">On</span>
+                <span class="ks-off">Off</span>
+            </label>
+        </li>
+        <li>
+            <span class="ks-text">Fixed page header</span>
+            <label class="ks-checkbox-slider ks-on-off ks-primary ks-page-header-checkbox-toggle">
+                <input type="checkbox" value="0" checked>
+                <span class="ks-indicator"></span>
+                <span class="ks-on">On</span>
+                <span class="ks-off">Off</span>
+            </label>
+        </li>
+        <li>
+            <span class="ks-text">Dark/Light Sidebar</span>
+            <label class="ks-checkbox-slider ks-on-off ks-primary ks-sidebar-style-checkbox-toggle">
+                <input type="checkbox" value="0" checked>
+                <span class="ks-indicator"></span>
+                <span class="ks-on">On</span>
+                <span class="ks-off">Off</span>
+            </label>
+        </li>
+        <li>
+            <span class="ks-text">White/Gray Content Background</span>
+            <label class="ks-checkbox-slider ks-on-off ks-primary ks-content-bg-checkbox-toggle">
+                <input type="checkbox" value="0" checked>
+                <span class="ks-indicator"></span>
+                <span class="ks-on">On</span>
+                <span class="ks-off">Off</span>
+            </label>
+        </li>
+    </ul>
+</div>
+<!-- END SETTINGS BLOCK -->
+</body>
+</html>

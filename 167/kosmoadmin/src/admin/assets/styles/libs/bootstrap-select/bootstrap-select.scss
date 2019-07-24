@@ -1,0 +1,160 @@
+@import "../../../styles/config/colors";
+
+.bootstrap-select {
+  .dropdown-toggle:focus {
+    outline: none;
+    outline-offset: 0;
+  }
+
+  border-radius: 2px;
+  border: solid 1px rgba(57, 81, 155, 0.3);
+
+  &.form-control {
+    border: solid 1px rgba(57, 81, 155, 0.3);
+  }
+
+  .btn {
+    background: #fff;
+    padding: 0;
+    font-weight: normal;
+    color: #333333;
+    border: none;
+    outline: none;
+    height: 36px;
+  }
+
+  .dropdown-toggle::after {
+    position: absolute;
+    right: 14px;
+    top: 7px;
+    font-size: 16px;
+  }
+
+  .filter-option {
+    height: 38px;
+    padding: 10px 15px 10px 15px;
+
+    > .fa {
+      display: inline-block;
+      margin-right: 7px;
+      color: $ks-color-primary;
+    }
+
+    > .badge {
+      padding: 2px 3px;
+    }
+
+    > .avatar {
+      display: inline-block;
+      margin-right: 7px;
+      position: relative;
+
+      > img {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &.images {
+    .filter-option {
+      padding: 9px 15px 8px 15px;
+
+      > .text {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    .bs-searchbox {
+      padding: 8px;
+    }
+
+    li {
+      > a {
+        display: block;
+        padding: 10px 25px;
+        color: #333333;
+
+        &:hover {
+          text-decoration: none;
+          background-color: rgba(57, 81, 155, 0.05);
+        }
+
+        > .fa {
+          display: inline-block;
+          margin-right: 7px;
+          color: $ks-color-primary;
+        }
+
+        > .badge {
+          padding: 2px 3px;
+        }
+
+        > .avatar {
+          display: inline-block;
+          margin-right: 7px;
+          position: relative;
+          top: -1px;
+
+          > img {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      &.selected {
+        > a {
+          background-color: rgba(57, 81, 155, 0.1);
+          position: relative;
+
+          .check-mark {
+            &::before {
+              font-family: FontAwesome;
+              content: "\f00c";
+              font-size: 16px;
+              font-weight: 400;
+              color: $ks-color-primary;
+              position: absolute;
+              top: -9px;
+              right: 0;
+            }
+          }
+        }
+      }
+
+      &.hidden {
+        display: none;
+      }
+
+      &.no-results {
+        padding: 10px 5px;
+        background: none;
+      }
+    }
+  }
+
+  .dropdown-header {
+    /*background-color: rgba(57, 81, 155, 0.1);*/
+    font-weight: 500;
+    color: #333333;
+    display: block;
+    padding: 10px 25px;
+    margin-left: -10px;
+  }
+
+  &.show-tick {
+    .dropdown-menu {
+      li {
+        > a {
+          background: none;
+        }
+      }
+    }
+  }
+}

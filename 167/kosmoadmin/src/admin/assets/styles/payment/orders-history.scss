@@ -1,0 +1,133 @@
+@import "../config/colors";
+
+.ks-orders-history-page {
+  background: #fff;
+
+  > .ks-header {
+    height: 72px;
+    border-bottom: 1px solid $ks-default-border-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    > .ks-text {
+      margin: 0;
+      line-height: 24px;
+      font-size: 24px;
+      font-weight: normal;
+    }
+  }
+
+  > .ks-body {
+    > .ks-header {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(57, 80, 155, 0.05);
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 12px;
+    }
+
+    > .ks-table {
+      width: 100%;
+
+      thead {
+        display: none;
+      }
+
+      td {
+        padding: 30px;
+        border-bottom: 1px solid $ks-default-border-color;
+
+        &.ks-info {
+          width: 20%;
+
+          > span {
+            display: block;
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          > .ks-date {
+            color: $ks-default-text-color-light;
+            font-size: 12px;
+          }
+
+          > .ks-price {
+            margin-top: 15px;
+          }
+        }
+
+        &.ks-description {
+          vertical-align: bottom;
+
+          > span {
+            display: block;
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          > .ks-text {
+            color: $ks-default-text-color-light;
+            font-size: 12px;
+          }
+        }
+
+        &.ks-controls {
+          width: 167px;
+          vertical-align: middle;
+
+          > .btn {
+            margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ks-orders-history-page {
+    > .ks-body {
+      > .ks-table {
+        th {
+          &.st-head-row-main {
+            display: none;
+          }
+
+          &.st-head-row {
+            padding: 20px;
+
+            > span {
+              display: block;
+              font-weight: normal;
+
+              &.ks-date {
+                color: $ks-default-text-color-light;
+                font-size: 12px;
+              }
+
+              &.ks-price {
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

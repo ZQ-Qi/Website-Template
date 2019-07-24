@@ -1,0 +1,91 @@
+@import "../../config/colors";
+
+.dm-roles-permissions-wrap {
+  display: flex;
+}
+
+.ks-roles-permissions-block-header {
+  min-height: 40px;
+  align-items: center;
+  display: flex;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom: 1px solid $ks-default-border-color;
+}
+
+.ks-roles-permissions-modules {
+  .ks-checkbox-switch {
+    margin: 0;
+  }
+
+  .nav {
+    flex-direction: column !important;
+  }
+
+  .nav-link {
+    padding: 8px 35px 8px 20px !important;
+  }
+
+  .dropdown-item {
+    padding-left: 30px !important;
+    padding-right: 35px !important;
+  }
+}
+
+.dm-permissions-list {
+  flex: 1;
+  background: #fff;
+  overflow-x: scroll;
+}
+
+.dm-permissions-list-table {
+  th {
+    border-top: 1px solid transparent;
+    text-align: center;
+  }
+
+  tbody {
+    padding-top: 22px;
+  }
+
+  td {
+    vertical-align: middle;
+    border-top: none;
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  .custom-control {
+    position: relative;
+    top: 3px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .dm-roles-permissions-wrap {
+    .dm-permissions-list {
+      width: 100%;
+      position: fixed;
+      margin-left: -981px;
+    }
+
+    .ks-navigation {
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .dm-roles-permissions-wrap {
+    .ks-roles-permissions-modules {
+      width: 100%;
+      position: fixed;
+      margin-left: -501px;
+    }
+  }
+}

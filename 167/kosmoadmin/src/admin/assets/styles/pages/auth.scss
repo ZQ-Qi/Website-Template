@@ -1,0 +1,255 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-page
+2. Header / .ks-page > .ks-header
+3. Header logo / .ks-page > .ks-header > .ks-logo
+4. Main content / .ks-page > .ks-body
+5. Footer / .ks-page > .ks-footer
+-------------------------------------------------------------------*/
+
+@import "../config/colors";
+@import "../config/mixins";
+
+body {
+  padding: 0;
+  height: 100%;
+  background: #f5f6fa;
+}
+
+.ks-page {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  .ks-page-header {
+    .ks-logo {
+      margin-left: 30px;
+      margin-top: 30px;
+      text-transform: uppercase;
+      font-size: 18px;
+      color: $ks-color-primary;
+      font-weight: bold;
+      display: inline-block;
+
+      &:hover,
+      &:active,
+      &:visited {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .ks-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+
+    .ks-logo {
+      color: $ks-color-primary;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .ks-panel {
+      width: 364px;
+      margin: 0 auto;
+      border-radius: 2px;
+      background-color: #ffffff;
+
+      &.ks-signup, &.ks-forgot-password {
+        width: 400px;
+      }
+
+      &.ks-signup {
+        min-height: 467px;
+      }
+
+      &.ks-login, &.ks-signup, &.ks-forgot-password {
+        > .card-block {
+          > .form-container {
+            > .ks-header {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+
+      &.ks-confirm {
+        > .card-block {
+          > .ks-header {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+
+          > .ks-description {
+            line-height: 1.5;
+            font-size: 12px;
+            text-align: center;
+          }
+
+          > .ks-resend {
+            border-top: 1px solid $border-color-light;
+            padding-top: 20px;
+            text-align: center;
+            margin-top: 30px;
+            margin-left: -30px;
+            margin-right: -30px;
+            margin-bottom: -10px;
+          }
+        }
+      }
+
+      .col-sm-right {
+        padding-right: 7px;
+      }
+
+      .col-sm-left {
+        padding-left: 7px;
+      }
+
+      .card-block {
+        padding: 30px;
+
+        > .ks-locked-form {
+          > .ks-user {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            > .ks-avatar {
+              text-align: center;
+              display: inline-block;
+              width: 64px;
+              height: 64px;
+              margin-bottom: 10px;
+            }
+
+            > .ks-name {
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      h4 {
+        text-align: center;
+
+        span {
+          margin-top: 5px;
+          display: block;
+          font-size: 13px;
+          line-height: 1.3;
+          font-weight: normal;
+        }
+      }
+
+      .form-control {
+        border-color: rgba(57, 81, 155, 0.2);
+
+        &:focus {
+          border-color: rgba(57, 81, 155, 0.3);
+        }
+      }
+
+      .icon-addon {
+        span {
+          color: rgba(51, 51, 51, 0.6);
+        }
+      }
+
+      .ks-social {
+        margin-top: 15px;
+        margin-bottom: -14px;
+        padding: 15px 30px 0 30px;
+        border-top: 1px solid rgba(57, 81, 155, 0.2);
+        margin-right: -30px;
+        margin-left: -30px;
+        line-height: 36px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          display: inline-block;
+          width: 36px;
+          height: 36px;
+          border-radius: 2px;
+          color: #fff;
+          opacity: 0.9;
+          font-size: 22px;
+          line-height: 36px;
+          text-align: center;
+          margin-right: 10px;
+
+          &.facebook {
+            background: #3b5998;
+          }
+
+          &.twitter {
+            background: #1da1f2;
+          }
+
+          &.google {
+            background: #db4437;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    > .ks-panel-extra {
+      margin-top: 20px;
+      width: 364px;
+      border-radius: 2px;
+      background-color: rgba(57, 81, 155, 0.05);
+      padding: 17px;
+      text-align: center;
+    }
+  }
+
+  > .ks-footer {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 14px;
+
+    ul {
+      @include list-unstyled();
+      display: inline-block;
+
+      li {
+        display: inline-block;
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .ks-page {
+    .ks-signup {
+      .row {
+        > div {
+          + div {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

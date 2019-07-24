@@ -1,0 +1,93 @@
+/** BEGIN: tag editor */
+.tag-editor {
+  tags {
+    border-color: #d3d9dd;
+    border-radius: 3px;
+    padding: 5px 5px 1px 5px;
+
+    &:hover {
+      border-color: #d3d9dd;
+    }
+
+    min-height: 79px;
+  }
+
+  tags > div {
+    margin: 0;
+  }
+
+  tags tag {
+    background-color: #ecf2f6;
+    height: 24px;
+    border-radius: 24px;
+    margin: 0;
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+    margin-bottom: 6px;
+  }
+
+  tags tag > div {
+    padding: 4px 5px;
+    padding-right: 23px;
+  }
+
+  tags tag > div {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  tags tag > div > span {
+    font-size: 13px;
+    color: #939daa;
+    line-height: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  tags > div > input {
+    height: auto;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    line-height: 14px;
+  }
+
+  tags tag x {
+    font-size: 28px;
+    font-family: $font-base;
+    width: 20px;
+    height: 20px;
+    right: 6px;
+    color: #ecf2f6;
+
+    &:hover {
+      background: #ecf2f6;
+      color: #ecf2f6;
+
+      &:before {
+        color: $color-danger;
+      }
+    }
+
+    &:before {
+      content: $icon-close;
+      font-family: $font-icon;
+      font-size: 12px;
+      color: rgba(#939daa, .8);
+      position: absolute;
+      top: 3px;
+      left: 4px;
+    }
+  }
+
+  tags > div > input.placeholder ~ span {
+    font-size: 14px;
+    color: #939daa;
+    opacity: 1;
+    line-height: 27px;
+    padding: 0;
+    margin: 0;
+  }
+}
+/** END: tag editor */

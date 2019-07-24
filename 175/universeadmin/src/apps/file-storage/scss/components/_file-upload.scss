@@ -1,0 +1,98 @@
+.file-storage {
+
+  &__upload {
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+    border: 1px solid #e9ebee;
+    background-color: #ffffff;
+    border-radius: 3px;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+      border-bottom: 1px solid rgba(#939daa, .2);
+      height: 49px;
+      min-height: 49px;
+      font-size: 17px;
+      color: #222;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    &-body {
+      position: relative;
+      flex-grow: 1;
+    }
+
+    &-scrollpane {
+      @include mx-scrollpane();
+    }
+
+    &-item {
+      display: flex;
+      height: 64px;
+      align-items: center;
+      padding: 0 15px;
+      border-bottom: 1px solid rgba(#939daa, .2);
+
+      &.has-error {
+        background-color: rgba(#ed1b24, .05);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &-preview {
+        margin-right: 10px;
+        width: 56px;
+        text-align: center;
+      }
+
+      &-image {
+        height: 28px;
+      }
+
+      &-name {
+        color: #000;
+        flex-grow: 1;
+      }
+
+      &-extension {
+        color: $color-gray;
+      }
+
+      &-status {
+        text-align: center;
+        cursor: pointer;
+
+        &-icon {
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+
+      &-success {
+        color: #35cd68;
+      }
+
+      &-warning {
+        color: #ed1b24;
+      }
+
+      &-close {
+        color: #ed1b24;
+      }
+
+      &-action {
+        @include mx-link(#269af1);
+        cursor: pointer;
+      }
+    }
+  }
+}

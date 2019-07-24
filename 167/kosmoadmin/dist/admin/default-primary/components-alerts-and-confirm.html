@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <title>KOSMO - Multi Purpose Bootstrap 4 Admin Template</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/line-awesome/css/line-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="assets/fonts/open-sans/styles.css">-->
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/montserrat/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="libs/tether/css/tether.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/jscrollpane/jquery.jscrollpane.css">
+    <link rel="stylesheet" type="text/css" href="libs/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/common.min.css">
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/themes/primary.min.css">
+    <link class="ks-sidebar-dark-style" rel="stylesheet" type="text/css" href="assets/styles/themes/sidebar-black.min.css">
+    <!-- END THEME STYLES -->
+
+<link rel="stylesheet" type="text/css" href="libs/jquery-confirm/jquery-confirm.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/jquery-confirm/jquery.confirm.min.css"> <!-- original -->
+</head>
+<!-- END HEAD -->
+
+<body class="ks-navbar-fixed ks-sidebar-default ks-sidebar-position-fixed ks-page-header-fixed ks-theme-primary ks-page-loading"> <!-- remove ks-page-header-fixed to unfix header -->
+
+    <!-- BEGIN HEADER -->
+<nav class="navbar ks-navbar">
+    <!-- BEGIN HEADER INNER -->
+    <!-- BEGIN LOGO -->
+    <div href="index.html" class="navbar-brand">
+        <!-- BEGIN RESPONSIVE SIDEBAR TOGGLER -->
+        <a href="#" class="ks-sidebar-toggle"><i class="ks-icon la la-bars" aria-hidden="true"></i></a>
+        <a href="#" class="ks-sidebar-mobile-toggle"><i class="ks-icon la la-bars" aria-hidden="true"></i></a>
+        <!-- END RESPONSIVE SIDEBAR TOGGLER -->
+
+        <div class="ks-navbar-logo">
+            <a href="index.html" class="ks-logo">Kosmo</a>
+
+            <!-- BEGIN GRID NAVIGATION -->
+            <!--<span class="nav-item dropdown ks-dropdown-grid">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu ks-info ks-scrollable" aria-labelledby="Preview" data-height="260">
+                    <div class="ks-scroll-wrapper">
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Dashboard</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-flask"></span>
+                            <span class="ks-text">Projects</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-globe"></span>
+                            <span class="ks-text">Form</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-calendar-o"></span>
+                            <span class="ks-text">Calendar</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-ticket"></span>
+                            <span class="ks-text">Tickets</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Profile</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Documentation</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">FAQ</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Components</span>
+                        </a>
+                    </div>
+                </div>
+            </span>-->
+
+            <span class="nav-item dropdown ks-dropdown-grid-images">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu ks-info ks-scrollable" aria-labelledby="Preview" data-height="260">
+                    <div class="ks-scroll-wrapper">
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/dashboard.png">
+                            <span class="ks-text">Dashboard</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/flask.png">
+                            <span class="ks-text">Projects</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/calendar.png">
+                            <span class="ks-text">Calendar</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/profile.png">
+                            <span class="ks-text">Profile</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/ticket.png">
+                            <span class="ks-text">Tickets</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/settings.png">
+                            <span class="ks-text">Settings</span>
+                        </a>
+                    </div>
+                </div>
+            </span>
+
+            <!-- END GRID NAVIGATION -->
+        </div>
+    </div>
+    <!-- END LOGO -->
+
+    <!-- BEGIN MENUS -->
+    <div class="ks-wrapper">
+        <nav class="nav navbar-nav">
+            <!-- BEGIN NAVBAR MENU -->
+            <div class="ks-navbar-menu">
+                <form class="ks-search-form">
+                    <a class="ks-search-open" href="#">
+                        <span class="la la-search"></span>
+                    </a>
+                    <div class="ks-wrapper">
+                        <div class="input-icon icon-right icon icon-lg icon-color-primary">
+                            <input id="input-group-icon-text" type="text" class="form-control" placeholder="Search...">
+                            <span class="icon-addon">
+                                <span class="la la-search ks-icon"></span>
+                            </span>
+                        </div>
+                        <a class="ks-search-close" href="#">
+                            <span class="la la-close"></span>
+                        </a>
+                    </div>
+                </form>
+                <a class="nav-item nav-link" href="#">Dashboard</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu ks-info" aria-labelledby="Preview">
+                        <a class="dropdown-item ks-active" href="#">Dropdown Link 1</a>
+                        <a class="dropdown-item" href="#">Dropdown Link 2</a>
+                        <a class="dropdown-item" href="#">Dropdown Link 3</a>
+                        <div class="dropdown-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="Preview">
+                                <a class="dropdown-item" href="#">Dropdown Link 1</a>
+                                <a class="dropdown-item" href="#">Dropdown Link 2</a>
+                                <a class="dropdown-item" href="#">Dropdown Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-link ks-btn-action">
+                    <a class="btn btn-info" href="https://themeforest.net/item/kosmo-multi-purpose-responsive-bootstrap-4-admin-template-ui-framework/19506620?ref=themesanytime">Buy Now!</a>
+                </div>
+            </div>
+            <!-- END NAVBAR MENU -->
+
+            <!-- BEGIN NAVBAR ACTIONS -->
+            <div class="ks-navbar-actions">
+                <!-- BEGIN NAVBAR ACTION BUTTON -->
+                <div class="nav-item nav-link btn-action-block">
+                    <a class="btn btn-danger" href="#">
+                        <span class="ks-action">Activate Your Account</span>
+                        <span class="ks-description">trial ends in 1 day</span>
+                    </a>
+                </div>
+                <!-- END NAVBAR ACTION BUTTON -->
+
+                <!-- BEGIN NAVBAR LANGUAGES -->
+                <div class="nav-item dropdown ks-languages">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        EN <span class="ks-text">Languages</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right ks-scrollable" aria-labelledby="Preview">
+                        <div class="ks-wrapper">
+                            <a href="#" class="ks-language ks-selected">
+                                <span class="flag-icon flag-icon-us ks-icon"></span>
+                                <span class="ks-text">English</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-pl ks-icon"></span>
+                                <span class="ks-text">Polski</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-de ks-icon"></span>
+                                <span class="ks-text">Deutsch</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-lt ks-icon"></span>
+                                <span class="ks-text">Lietuvių</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-fr ks-icon"></span>
+                                <span class="ks-text">Français</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-by ks-icon"></span>
+                                <span class="ks-text">Беларуская</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-it ks-icon"></span>
+                                <span class="ks-text">Italiano</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-ua ks-icon"></span>
+                                <span class="ks-text">Українська</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-es ks-icon"></span>
+                                <span class="ks-text">Español</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-ru ks-icon"></span>
+                                <span class="ks-text">Русский</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-cz ks-icon"></span>
+                                <span class="ks-text">Česky</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-jp ks-icon"></span>
+                                <span class="ks-text">日本語</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-cn ks-icon"></span>
+                                <span class="ks-text">中文</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-tr ks-icon"></span>
+                                <span class="ks-text">Türkçe</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END NAVBAR LANGUAGES -->
+
+                <!-- BEGIN NAVBAR MESSAGES -->
+                <div class="nav-item dropdown ks-messages">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="la la-envelope ks-icon" aria-hidden="true">
+                            <span class="badge badge-pill badge-info">3</span>
+                        </span>
+                        <span class="ks-text">Messages</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <section class="ks-tabs-actions">
+                            <a href="#"><i class="la la-plus ks-icon"></i></a>
+                            <a href="#"><i class="la la-search ks-icon"></i></a>
+                        </section>
+                        <ul class="nav nav-tabs ks-nav-tabs ks-info" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-toggle="tab" data-target="#ks-navbar-messages-inbox" role="tab">Inbox</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#ks-navbar-messages-sent" role="tab">Sent</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#ks-navbar-messages-archive" role="tab">Archive</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane ks-messages-tab active" id="ks-navbar-messages-inbox" role="tabpanel">
+                                <div class="ks-wrapper ks-scrollable">
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-online">
+                                            <img src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-online">
+                                            <img src="assets/img/avatars/avatar-5.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-offline">
+                                            <img src="assets/img/avatars/placeholders/ava-36.png" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-offline">
+                                            <img src="assets/img/avatars/avatar-4.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="ks-view-all">
+                                    <a href="#">View all</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane ks-empty" id="ks-navbar-messages-sent" role="tabpanel">
+                                There are no messages.
+                            </div>
+                            <div class="tab-pane ks-empty" id="ks-navbar-messages-archive" role="tabpanel">
+                                There are no messages.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END NAVBAR MESSAGES -->
+
+                <!-- BEGIN NAVBAR NOTIFICATIONS -->
+                <div class="nav-item dropdown ks-notifications">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="la la-bell ks-icon" aria-hidden="true">
+                            <span class="badge badge-pill badge-info">7</span>
+                        </span>
+                        <span class="ks-text">Notifications</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <ul class="nav nav-tabs ks-nav-tabs ks-info" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-toggle="tab" data-target="#navbar-notifications-all" role="tab">All</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#navbar-notifications-activity" role="tab">Activity</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#navbar-notifications-comments" role="tab">Comments</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane ks-notifications-tab active" id="navbar-notifications-all" role="tabpanel">
+                                <div class="ks-wrapper ks-scrollable">
+                                    <a href="#" class="ks-notification">
+                                        <div class="ks-avatar">
+                                            <img src="assets/img/avatars/avatar-3.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter <span class="ks-description">has uploaded 1 file</span></div>
+                                            <div class="ks-text"><span class="la la-file-text-o ks-icon"></span> logo vector doc</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-notification">
+                                        <div class="ks-action">
+                                            <span class="ks-default">
+                                                <span class="la la-briefcase ks-icon"></span>
+                                            </span>
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">New project created</div>
+                                            <div class="ks-text">Dashboard UI</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-notification">
+                                        <div class="ks-action">
+                                            <span class="ks-error">
+                                                <span class="la la-times-circle ks-icon"></span>
+                                            </span>
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">File upload error</div>
+                                            <div class="ks-text"><span class="la la-file-text-o ks-icon"></span> logo vector doc</div>
+                                            <div class="ks-datetime">10 minutes ago</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="ks-view-all">
+                                    <a href="#">Show more</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane ks-empty" id="navbar-notifications-activity" role="tabpanel">
+                                There are no activities.
+                            </div>
+                            <div class="tab-pane ks-empty" id="navbar-notifications-comments" role="tabpanel">
+                                There are no comments.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END NAVBAR NOTIFICATIONS -->
+
+                <!-- BEGIN NAVBAR USER -->
+                <div class="nav-item dropdown ks-user">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="ks-avatar">
+                            <img src="assets/img/avatars/avatar-13.jpg" width="36" height="36">
+                        </span>
+                        <span class="ks-info">
+                            <span class="ks-name">Robert Dean</span>
+                            <span class="ks-description">Premium User</span>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-user ks-icon"></span>
+                            <span>Profile</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-wrench ks-icon" aria-hidden="true"></span>
+                            <span>Settings</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-question-circle ks-icon" aria-hidden="true"></span>
+                            <span>Help</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-sign-out ks-icon" aria-hidden="true"></span>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END NAVBAR USER -->
+            </div>
+            <!-- END NAVBAR ACTIONS -->
+        </nav>
+
+        <!-- BEGIN NAVBAR ACTIONS TOGGLER -->
+        <nav class="nav navbar-nav ks-navbar-actions-toggle">
+            <a class="nav-item nav-link" href="#">
+                <span class="la la-ellipsis-h ks-icon ks-open"></span>
+                <span class="la la-close ks-icon ks-close"></span>
+            </a>
+        </nav>
+        <!-- END NAVBAR ACTIONS TOGGLER -->
+
+        <!-- BEGIN NAVBAR MENU TOGGLER -->
+        <nav class="nav navbar-nav ks-navbar-menu-toggle">
+            <a class="nav-item nav-link" href="#">
+                <span class="la la-th ks-icon ks-open"></span>
+                <span class="la la-close ks-icon ks-close"></span>
+            </a>
+        </nav>
+        <!-- END NAVBAR MENU TOGGLER -->
+    </div>
+    <!-- END MENUS -->
+    <!-- END HEADER INNER -->
+</nav>
+<!-- END HEADER -->
+
+
+
+
+
+
+<div class="ks-page-container">
+    
+    <!-- BEGIN DEFAULT SIDEBAR -->
+<div class="ks-column ks-sidebar ks-info">
+    <div class="ks-wrapper ks-sidebar-wrapper">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="nav-item ks-user dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/img/avatars/avatar-12.jpg" width="36" height="36" class="ks-avatar rounded-circle">
+                    <div class="ks-info">
+                        <div class="ks-name">Peter Armstrong</div>
+                        <div class="ks-text">Product Manager</div>
+                    </div>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="profile-social-profile.html">Profile</a>
+                    <a class="dropdown-item" href="profile-settings-general.html">Settings</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-dashboard"></span>
+                    <span>Dashboard</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item ks-active" href="index.html">Default</a>
+                    <a class="dropdown-item" href="dashboards-draggable-widgets.html">Draggable Widgets</a>
+                    <a class="dropdown-item" href="dashboards-mail.html">Mail</a>
+                    <a class="dropdown-item" href="dashboards-projects.html">Projects</a>
+                    <a class="dropdown-item" href="dashboards-widgets-and-activity.html">Activity</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-cubes"></span>
+                    <span>Layouts</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../default-primary/index.html">Default</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Sidebar</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../sidebar_sections-primary/index.html" target="_blank">Sections</a>
+                            <a class="dropdown-item" href="../sidebar_compact-primary/index.html" target="_blank">Compact</a>
+                            <a class="dropdown-item" href="../sidebar_iconbar-primary/index.html" target="_blank">Iconbar</a>
+                            <a class="dropdown-item" href="../sidebar_iconbar_compact-primary/index.html" target="_blank">Iconbar Compact</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Navigation</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../horizontal_navbar-primary/index.html" target="_blank">Horizontal</a>
+                            <a class="dropdown-item" href="../horizontal_navbar_iconbar-primary/index.html" target="_blank">Horizontal Iconbar</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-flask"></span>
+                    <span>Apps</span>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>CRM</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="crm-contacts.html">Contacts</a>
+                            <a class="dropdown-item" href="crm-user-contact-view.html">Contact View</a>
+                            <a class="dropdown-item" href="crm-users-list-view.html">Users List View</a>
+                            <a class="dropdown-item" href="crm-users-grid-view.html">Users Grid View</a>
+                            <a class="dropdown-item" href="crm-roles-and-permissions.html">Roles &amp; Permissions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Projects</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="projects-kanban-board.html">Kanban Board</a>
+                            <a class="dropdown-item" href="projects-grid-board.html">Grid Board</a>
+                            <a class="dropdown-item" href="projects-tasks.html">Tasks</a>
+                            <a class="dropdown-item" href="projects-task.html">Task</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Mail</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="mail-empty.html">Mail Empty</a>
+                            <a class="dropdown-item" href="mail-view.html">Mail View</a>
+                            <a class="dropdown-item" href="mail-create.html">Mail Create</a>
+                            <a class="dropdown-item" href="mail-compact.html">Mail Compact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Tickets</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="tickets-empty.html">Empty</a>
+                            <a class="dropdown-item" href="tickets-list.html">List</a>
+                            <a class="dropdown-item" href="tickets-create.html">Create</a>
+                            <a class="dropdown-item" href="tickets-view.html">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Messenger</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="messenger.html">Default</a>
+                            <a class="dropdown-item" href="messenger-group.html">Group</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>File Manager</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span>Grid</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="filemanager-grid.html">Default</a>
+                                    <a class="dropdown-item" href="filemanager-grid-selected-items.html">Selected Items</a>
+                                    <a class="dropdown-item" href="filemanager-grid-image.html">Image</a>
+                                    <a class="dropdown-item" href="filemanager-grid-audio.html">Audio</a>
+                                    <a class="dropdown-item" href="filemanager-grid-recent.html">Recent</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span>List</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="filemanager-list.html">Default</a>
+                                    <a class="dropdown-item" href="filemanager-list-selected-items.html">Selected Items</a>
+                                    <a class="dropdown-item" href="filemanager-list-recent.html">Recent</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Document Viewer</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="document-viewer-image.html">Image Viewer</a>
+                            <a class="dropdown-item" href="document-viewer-pdf.html">Pdf Viewer</a>
+                            <a class="dropdown-item" href="document-viewer-presentation.html">Presentation Viewer</a>
+                            <a class="dropdown-item" href="document-viewer-audio.html">Audio Viewer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="music-app.html">Music</a>
+                </div>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="calendar.html">Calendar</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-toggle-off"></span>
+                    <span>Form</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="form-basic-inputs.html">Basic Inputs</a>
+                    <a class="dropdown-item" href="form-advanced-inputs.html">Extended Inputs</a>
+                    <a class="dropdown-item" href="form-buttons.html">Buttons</a>
+                    <a class="dropdown-item" href="form-validation.html">Validation</a>
+                    <a class="dropdown-item" href="form-touchspin.html">Touchspin</a>
+                    <a class="dropdown-item" href="form-flex-labels.html">Flex Labels</a>
+                    <a class="dropdown-item" href="form-mask-input.html">Mask Input</a>
+                    <a class="dropdown-item" href="form-autocomplete-and-tags.html">Autocomplete &amp; Tags</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Steps</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="form-steps-column.html">Column Steps</a>
+                            <a class="dropdown-item" href="form-steps-progress.html">Progress Steps</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-desktop"></span>
+                    <span>UI Kit</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="uikit-bootstrap-ui.html">Bootstrap UI</a>
+                    <a class="dropdown-item" href="uikit-colors.html">Colors</a>
+                    <a class="dropdown-item" href="uikit-typography.html">Typography</a>
+                    <a class="dropdown-item" href="uikit-cards.html">Cards</a>
+                    <a class="dropdown-item" href="uikit-panels.html">Panels</a>
+                    <a class="dropdown-item" href="uikit-tables.html">Tables</a>
+                    <a class="dropdown-item" href="uikit-tabs.html">Tabs</a>
+                    <a class="dropdown-item" href="uikit-default-alerts.html">Alerts</a>
+                    <a class="dropdown-item" href="uikit-pagination.html">Pagination</a>
+                    <a class="dropdown-item" href="uikit-modal.html">Modal</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-sliders"></span>
+                    <span>Components</span>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>File Upload</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="components-file-upload-uppy.html">Uppy</a>
+                            <a class="dropdown-item" href="components-file-upload-dropzone.html">DropZone</a>
+                            <a class="dropdown-item" href="components-file-upload-jquery-file-upload.html">Jquery File Upload</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Select</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="components-select-select2.html">Select2</a>
+                            <a class="dropdown-item" href="components-select-multi.html">Multi</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Wysiwyg Editors</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="components-wysiwyg-editors-bootstrap-markdown-editor.html">Bootstrap Markdown</a>
+                            <a class="dropdown-item" href="components-wysiwyg-editors-simplemde-markdown-editor.html">SimpleMDE Markdown</a>
+                            <a class="dropdown-item" href="components-wysiwyg-editors-trumbowyg-editor.html">Trumbowyg Editor</a>
+                            <a class="dropdown-item" href="components-wysiwyg-editors-summernote-editor.html">Summernote Editor</a>
+                        </div>
+                    </div>
+                    <a class="dropdown-item" href="components-alerts-and-confirm.html">Alerts &amp; Confirm</a>
+                    <a class="dropdown-item" href="components-sweetalert.html">SweetAlert</a>
+                    <a class="dropdown-item" href="components-bootstrap-notify.html">Bootstrap Notify</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>DatePicker</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="components-datepicker-flatpickr.html">Flatpickr</a>
+                            <a class="dropdown-item" href="components-datepicker-bootstrap-date-range-picker.html">Range DatePicker</a>
+                        </div>
+                    </div>
+                    <a class="dropdown-item" href="components-ion-range-slider-flat-skin-basic.html">Ion Range Slider</a>
+                    <a class="dropdown-item" href="components-nestable.html">Nestable</a>
+                    <a class="dropdown-item" href="components-colorpicker.html">Color Picker</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-user"></span>
+                    <span>Profile</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="profile-social-profile.html">Social Profile</a>
+                    <a class="dropdown-item" href="profile-customer-profile.html">Customer Profile</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>Settings</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="profile-settings-general.html">General</a>
+                            <a class="dropdown-item" href="profile-settings-contact-info.html">Contact Info</a>
+                            <a class="dropdown-item" href="profile-settings-experience.html">Experience</a>
+                            <a class="dropdown-item" href="profile-settings-education.html">Education</a>
+                            <a class="dropdown-item" href="profile-settings-organizations.html">Organizations</a>
+                            <a class="dropdown-item" href="profile-settings-notifications.html">Notifications</a>
+                            <a class="dropdown-item" href="profile-settings-billing.html">Billing</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-th"></span>
+                    <span>DataTables</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="datatables-datatables-net.html">DataTables.net</a>
+                    <a class="dropdown-item" href="datatables-bootstrap-table.html">Bootstrap Table</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-puzzle-piece"><span class="badge badge-pill badge-pink ks-label">3</span></span>
+                    <span>Widgets</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="widgets-panels.html">Panels</a>
+                    <a class="dropdown-item" href="widgets-upload.html">Upload</a>
+                    <a class="dropdown-item" href="widgets-tables.html">Tables</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-file-text-o"></span>
+                    <span>Pages</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="pages-blank.html">Blank</a>
+                    <a class="dropdown-item" href="pages-error404.html">Error 404</a>
+                    <a class="dropdown-item" href="pages-error500.html">Error 500</a>
+                    <a class="dropdown-item" href="pages-contacts.html">Contacts</a>
+                    <a class="dropdown-item" href="pages-login.html" target="_blank">Login</a>
+                    <a class="dropdown-item" href="pages-signup.html" target="_blank">Sign Up</a>
+                    <a class="dropdown-item" href="pages-forgot-password.html" target="_blank">Forgot Password</a>
+                    <a class="dropdown-item" href="pages-locked-account.html" target="_blank">Locked Account</a>
+                    <a class="dropdown-item" href="pages-confirmation.html" target="_blank">Confirmation</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-credit-card"></span>
+                    <span>Payment</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="payment-billing.html">Billing</a>
+                    <a class="dropdown-item" href="payment-invoices.html">Invoices</a>
+                    <a class="dropdown-item" href="payment-order.html">Order</a>
+                    <a class="dropdown-item" href="payment-orders-history.html">Orders History</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-usd"></span>
+                    <span>Pricing</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="pricing-plans.html">Plans</a>
+                    <a class="dropdown-item" href="pricing-subscriptions.html">Subscriptions</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="email-templates.html">
+                    <span class="ks-icon la la-envelope-o"></span>
+                    <span>Email Templates</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="documentation.html">
+                    <span class="ks-icon la la-book"></span>
+                    <span>Documentation</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="ks-icon la la-question-circle"></span>
+                    <span>FAQ</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="faq.html">Index</a>
+                </div>
+            </li>
+        </ul>
+        <div class="ks-sidebar-extras-block">
+            <div class="ks-extras-block-item">
+                <div class="ks-name">Monthly Badwidth Transfer</div>
+                <div class="ks-progress">
+                    <div class="progress ks-progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 84%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="ks-description">
+                    <span class="ks-amount">84%</span>
+                    <span class="ks-text">(8 400 MB of 10 000)</span>
+                </div>
+            </div>
+            <div class="ks-extras-block-item">
+                <div class="ks-name">Disk Space Usage</div>
+                <div class="ks-progress">
+                    <div class="progress ks-progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 36%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="ks-description">
+                    <span class="ks-amount">36%</span>
+                    <span class="ks-text">(3 600 MB of 10 000)</span>
+                </div>
+            </div>
+            <div class="ks-sidebar-copyright">© 2016 Kosmo. All right reserved</div>
+        </div>
+    </div>
+</div>
+<!-- END DEFAULT SIDEBAR -->
+
+
+
+
+
+
+
+
+
+
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Alerts  &amp; Confirm</h3>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <h4>Default behaviours</h4>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p>Elegant Alerts.</p>
+                                <button class="btn btn-outline-primary btn-block example-p-1">Alerts</button>
+                            </div>
+
+                            <div class="col-md-3">
+                                <p>Stacked Confirmations</p>
+                                <button class="btn btn-outline-primary btn-block example-p-2">Confirmation</button>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Success, error, warning</p>
+                                <button class="btn btn-outline-primary btn-block example-p-70-type">Alert types</button>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Need input?</p>
+                                <button class="btn btn-outline-primary btn-block example-p-7-1">Prompt</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p>Its also a Dialog.</p>
+                                <button class="btn btn-outline-primary btn-block example-p-4">Dialogs</button>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Not so important modal</p>
+                                <button class="btn btn-outline-primary btn-block example-p-3">Background dismiss</button>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Loading from remote places</p>
+                                <button class="btn btn-outline-primary btn-block example-p-5">Asynchronous content</button>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Some actions maybe critical</p>
+                                <button class="btn btn-outline-primary btn-block example-p-6">Auto-close</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p>Responds to keystrokes</p>
+                                <button class="btn btn-outline-primary btn-block example-p-7">Keystrokes</button>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Automatically centered</p>
+                                <button class="btn btn-outline-primary btn-block example-pc-1">Alignment</button>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Loading images</p>
+                                <button class="btn btn-outline-primary btn-block example-pc-2">Images</button>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Clean animations</p>
+                                <button class="btn btn-outline-primary btn-block example-pc-3">Animations</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p>Drag me around</p>
+                                <button class="btn btn-outline-primary btn-block example-p-7-2">Draggable</button>
+                            </div>
+                        </div>
+
+                        <h4>Dialog types</h4>
+                        <p>
+                            Dialog types helps give the user a hint as to what the dialog is about
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-primary btn-block ks-alert-primary-dialog-example">Primary Dialog</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-success btn-block ks-alert-success-dialog-example">Success Dialog</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-info btn-block ks-alert-info-dialog-example">Info Dialog</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-warning btn-block ks-alert-warning-dialog-example">Warning Dialog</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-danger btn-block ks-alert-danger-dialog-example">Error Dialog</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/popper/popper.min.js"></script>
+<script src="libs/responsejs/response.min.js"></script>
+<script src="libs/loading-overlay/loadingoverlay.min.js"></script>
+<script src="libs/tether/js/tether.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+<script src="libs/jscrollpane/jquery.mousewheel.js"></script>
+<script src="libs/flexibility/flexibility.js"></script>
+<script src="libs/noty/noty.min.js"></script>
+<script src="libs/velocity/velocity.min.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<script src="assets/scripts/common.min.js"></script>
+<!-- END THEME LAYOUT SCRIPTS -->
+
+<script src="libs/jquery-confirm/jquery-confirm.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function () {
+        $('.example-p-1').on('click', function () {
+            $.alert({
+                title: 'Alert alert!',
+                content: 'This is a simple alert. <br> with some <strong>HTML</strong> <em>contents</em>',
+                icon: 'la la-rocket',
+                animation: 'zoom',
+                closeAnimation: 'zoom',
+                buttons: {
+                    okay: {
+                        text: 'Okay',
+                        btnClass: 'btn-info'
+                    }
+                }
+            });
+        });
+
+        // confirmation
+        $('.example-p-2').on('click', function () {
+            $.confirm({
+                title: 'A secure action',
+                content: 'Its smooth to do multiple confirms at a time. <br> Click confirm or cancel for another modal',
+                icon: 'la la-question-circle',
+                animation: 'scale',
+                closeAnimation: 'scale',
+                opacity: 0.5,
+                buttons: {
+                    'confirm': {
+                        text: 'Proceed',
+                        btnClass: 'btn-info',
+                        action: function () {
+                            $.confirm({
+                                title: 'This maybe critical',
+                                content: 'Critical actions can have multiple confirmations like this one.',
+                                icon: 'la la-warning',
+                                animation: 'zoom',
+                                closeAnimation: 'zoom',
+                                buttons: {
+                                    confirm: {
+                                        text: 'Yes, sure!',
+                                        btnClass: 'btn-danger',
+                                        action: function () {
+                                            $.alert('A very critical action <strong>triggered!</strong>');
+                                        }
+                                    },
+                                    cancel: function () {
+                                        $.alert('you clicked on <strong>cancel</strong>');
+                                    }
+                                }
+                            });
+                        }
+                    },
+                    cancel: function () {
+                        $.alert('you clicked on <strong>cancel</strong>');
+                    }
+                }
+            });
+        });
+
+        // prompt
+        $('.example-p-7-1').on('click', function () {
+            $.confirm({
+                title: 'A simple form',
+                content: 'url:data/alert-prompt-form.html',
+                buttons: {
+                    sayMyName: {
+                        text: 'Say my name',
+                        btnClass: 'btn-crusta',
+                        action: function () {
+                            var input = this.$content.find('input#input-name');
+                            var errorText = this.$content.find('.text-danger');
+                            if (input.val() == '') {
+                                errorText.html('Please don\'t keep the name field empty!').slideDown(200);
+                                return false;
+                            } else {
+                                $.alert('Hello ' + input.val() + ', i hope you have a great day!');
+                            }
+                        }
+                    },
+                    later: function () {
+                        // do nothing.
+                    }
+                }
+            });
+        });
+
+        // alert types
+        $('.example-p-70-type').on('click', function () {
+            $.alert({
+                title: 'Oh no',
+                type: 'red',
+                content: 'Something bad, bad happened.',
+            });
+        });
+
+        // background dismiss
+        $('.example-p-3').on('click', function () {
+            $.alert({
+                title: 'Background dismiss',
+                content: 'Click outside the modal to close it.',
+                animation: 'top',
+                closeAnimation: 'bottom',
+                backgroundDismiss: true,
+                buttons: {
+                    okay: {
+                        text: 'okay',
+                        btnClass: 'btn-info',
+                        action: function () {
+                            // do nothing
+                        }
+                    }
+                }
+            });
+        });
+
+        // using as dialogs
+        $('.example-p-4').on('click', function () {
+            $.dialog({
+                title: 'Title comes here',
+                content: 'Just need a popup without buttons, <strong>no problem!</strong><br>' +
+                '<h3>disable the buttons</h3>' +
+                '<h4>and you get a dialog modal</h4>' +
+                '<p><em>Well, that close icon is shown if no buttons are here (u need something to close the modal right), u can explicitly control that too.</em></p>' +
+                '<button type="button" class="btn btn-success">Click me to change the content</button>',
+                animation: 'scale',
+                onOpen: function () {
+                    var that = this;
+                    this.$content.find('button').click(function () {
+                        that.setContent('As simple as that !');
+                    })
+                }
+            });
+        });
+
+        // asynchronous content
+        $('.example-p-5').on('click', function () {
+            $.dialog({
+                title: 'Asynchronous content',
+                content: 'url:data/alert-table.html',
+                animation: 'zoom',
+                columnClass: 'medium',
+                closeAnimation: 'scale',
+                backgroundDismiss: true
+            });
+        });
+
+        // auto close
+        $('.example-p-6').on('click', function () {
+            $.confirm({
+                title: 'Auto close',
+                content: 'Some actions maybe critical, prevent it with the Auto close. This dialog will automatically trigger cancel after the timer runs out.',
+                autoClose: 'cancelAction|10000',
+                escapeKey: 'cancelAction',
+                buttons: {
+                    confirm: {
+                        btnClass: 'btn-danger',
+                        text: 'Delete ben\'s account',
+                        action: function () {
+                            $.alert('You deleted Ben\'s account!');
+                        }
+                    },
+                    cancelAction: {
+                        text: 'Cancel',
+                        action: function () {
+                            $.alert('Ben just got saved!');
+                        }
+                    }
+                }
+            });
+        });
+
+        // key strokes
+        $('.example-p-7').on('click', function () {
+            $.confirm({
+                title: 'Keystrokes',
+                escapeKey: true, // close the modal when escape is pressed.
+                content: 'Press the <strong>escape key</strong> to close the modal. That works.' +
+                '<br> press <strong>enter key</strong> to trigger okay.' +
+                '<br> press <strong>shift or ctrl key</strong> to trigger cancel.',
+                backgroundDismiss: true, // for escapeKey to work, backgroundDismiss should be enabled.
+                buttons: {
+                    okay: {
+                        keys: [
+                            'enter'
+                        ],
+                        action: function () {
+                            $.alert('<strong>Okay button</strong> was triggered.');
+                        }
+                    },
+                    cancel: {
+                        keys: [
+                            'ctrl',
+                            'shift'
+                        ],
+                        action: function () {
+                            $.alert('<strong>Cancel button</strong> was triggered.');
+                        }
+                    }
+                }
+            });
+        });
+
+        // alignment
+        $('.example-pc-1').on('click', function () {
+            $.confirm({
+                title: 'Gracefully center aligned',
+                content: '<p>You can add content and not worry about the alignment. The goal is to make a Interactive dialog!.</p>' +
+                '<button type="button" class="btn btn-success">Click me to add more content</button> <span> <br></span> ',
+                buttons: {
+                    someButton: {
+                        text: 'Add wow',
+                        btnClass: 'btn-success',
+                        action: function () {
+                            this.$content.find('span').append('<br>Wowww');
+                            return false; // prevent dialog from closing.
+                        }
+                    },
+                    someOtherButton: {
+                        text: 'Clear it',
+                        btnClass: 'btn-crusta',
+                        action: function () {
+                            this.$content.find('span').html('');
+                            return false; // prevent dialog from closing.
+                        }
+                    },
+                    close: function () {
+                        // lets the user close the modal.
+                    }
+                },
+                onOpen: function () {
+                    // onOpen attach the events.
+                    var that = this;
+                    this.$content.find('button').click(function () {
+                        that.$content.find('span').append('<br>This is awesome!!!!');
+                    });
+                }
+            });
+        });
+
+        // working with images
+        // todo: images is not tested yet.
+        $('.example-pc-2').on('click', function () {
+            $.confirm({
+                title: 'Adding images',
+                content: 'Images from flickr <br><img src="https://c2.staticflickr.com/4/3891/14354989289_2eec0ba724_b.jpg" class="rounded img-fluid mt-1">',
+                animation: 'zoom',
+                animationClose: 'top',
+                buttons: {
+                    confirm: {
+                        text: 'Add more',
+                        btnClass: 'btn-info',
+                        action: function () {
+                            this.$content.append('<img src="https://c2.staticflickr.com/6/5248/5240523362_8d6d315391_b.jpg" class="rounded img-fluid mt-1">');
+                            return false; // prevent dialog from closing.
+                        }
+                    },
+                    cancel: function () {
+                        // lets the user close the modal.
+                    }
+                }
+            });
+        });
+
+        // animations
+        $(' .example-pc-3').on('click', function () {
+            $.alert({
+                title: 'Animations',
+                content: 'jquery-confirm provides a lot of open &amp; close animations out of the box. <br>The best part is, you can add custom ones too.',
+                animation: 'rotate',
+                closeAnimation: 'right',
+                buttons: {
+                    zoom: function () {
+                        this.setCloseAnimation('zoom');
+                    },
+                    rotate: function () {
+                        this.setCloseAnimation('rotate');
+                    },
+                    scale: function () {
+                        this.setCloseAnimation('scale');
+                    },
+                    top: function () {
+                        this.setCloseAnimation('top');
+                    }
+                },
+                backgroundDismiss: function () {
+                    return false;
+                }
+            });
+        });
+
+        $('.example-p-7-2').on('click', function () {
+            $.alert({
+                title: 'A draggable dialog',
+                content: 'This dialog is draggable, use the title to drag it around. It wont touch the screen borders',
+                type: 'info',
+                draggable: true
+            });
+        });
+
+        /**
+         * Dialog types
+         */
+        $('.ks-alert-primary-dialog-example').on('click', function () {
+            $.confirm({
+                title: 'Primary!',
+                content: 'Some content here.',
+                type: 'primary',
+                buttons: {
+                    confirm: {
+                        text: 'OK',
+                        btnClass: 'btn-primary'
+                    },
+                    cancel: function () {
+                        
+                    }
+                }
+            });
+        });
+
+        $('.ks-alert-success-dialog-example').on('click', function () {
+            $.confirm({
+                title: 'Success!',
+                content: 'Some content here.',
+                type: 'success',
+                buttons: {
+                    confirm: {
+                        text: 'OK',
+                        btnClass: 'btn-success'
+                    },
+                    cancel: function () {
+
+                    }
+                }
+            });
+        });
+
+        $('.ks-alert-info-dialog-example').on('click', function () {
+            $.confirm({
+                title: 'Info!',
+                content: 'Some content here.',
+                type: 'info',
+                buttons: {
+                    confirm: {
+                        text: 'OK',
+                        btnClass: 'btn-info'
+                    },
+                    cancel: function () {
+
+                    }
+                }
+            });
+        });
+
+        $('.ks-alert-warning-dialog-example').on('click', function () {
+            $.confirm({
+                title: 'Warning!',
+                content: 'Some content here.',
+                type: 'warning',
+                buttons: {
+                    confirm: {
+                        text: 'OK',
+                        btnClass: 'btn-warning'
+                    },
+                    cancel: function () {
+
+                    }
+                }
+            });
+        });
+
+        $('.ks-alert-danger-dialog-example').on('click', function () {
+            $.confirm({
+                title: 'Danger!',
+                content: 'Some content here.',
+                type: 'danger',
+                buttons: {
+                    confirm: {
+                        text: 'OK',
+                        btnClass: 'btn-danger'
+                    },
+                    cancel: function () {
+
+                    }
+                }
+            });
+        });
+    });
+})(jQuery);
+</script>
+<div class="ks-mobile-overlay"></div>
+
+<!-- BEGIN SETTINGS BLOCK -->
+<div class="ks-settings-slide-block">
+    <a class="ks-settings-slide-control">
+        <span class="ks-icon la la-cog"></span>
+    </a>
+
+    <div class="ks-header">
+        <span class="ks-text">Layout Options</span>
+        <a class="ks-settings-slide-close-control">
+            <span class="ks-icon la la-close"></span>
+        </a>
+    </div>
+
+    <div class="ks-themes-list">
+        <a href="../default-primary/index.html" class="ks-theme ks-primary ks-active"></a>
+        <a href="../default-primary-dark/index.html" class="ks-theme ks-dark-primary"></a>
+        <a href="../default-info/index.html" class="ks-theme ks-info"></a>
+        <a href="../default-pink/index.html" class="ks-theme ks-blink-pink-san-marino"></a>
+        <a href="../default-bermuda-gray/index.html" class="ks-theme ks-bermuda-gray-malachite"></a>
+        <a href="../default-royal-blue/index.html" class="ks-theme ks-royal-blue-orchid"></a>
+        <a href="../default-ebony-clay/index.html" class="ks-theme ks-ebony-clay-cerise-red"></a>
+        <a href="../default-international-klein-blue/index.html" class="ks-theme ks-international-klein-blue-dixie"></a>
+        <a href="../default-jungle-green/index.html" class="ks-theme ks-jungle-green-chambray"></a>
+        <a href="../default-voodoo/index.html" class="ks-theme ks-voodoo-medium-purple"></a>
+        <a href="../default-cornflower-blue/index.html" class="ks-theme ks-cornflower-blue-ecstasy"></a>
+        <a href="../default-purple/index.html" class="ks-theme ks-purple-mandy"></a>
+        <a href="../default-oslo-gray/index.html" class="ks-theme ks-oslo-gray-royal-blue"></a>
+        <a href="../default-astronaut-blue/index.html" class="ks-theme ks-astronaut-blue-persian-green"></a>
+        <a href="../default-old-brick/index.html" class="ks-theme ks-old-brick"></a>
+        <a href="../default-white/index.html" class="ks-theme ks-white"></a>
+    </div>
+
+    <ul class="ks-settings-list">
+        <li>
+            <span class="ks-text">Collapsed Sidebar</span>
+            <label class="ks-checkbox-slider ks-on-off ks-primary ks-sidebar-checkbox-toggle">
+                <input type="checkbox" value="1">
+                <span class="ks-indicator"></span>
+                <span class="ks-on">On</span>
+                <span class="ks-off">Off</span>
+            </label>
+        </li>
+        <li>
+            <span class="ks-text">Fixed page header</span>
+            <label class="ks-checkbox-slider ks-on-off ks-primary ks-page-header-checkbox-toggle">
+                <input type="checkbox" value="0" checked>
+                <span class="ks-indicator"></span>
+                <span class="ks-on">On</span>
+                <span class="ks-off">Off</span>
+            </label>
+        </li>
+        <li>
+            <span class="ks-text">Dark/Light Sidebar</span>
+            <label class="ks-checkbox-slider ks-on-off ks-primary ks-sidebar-style-checkbox-toggle">
+                <input type="checkbox" value="0" checked>
+                <span class="ks-indicator"></span>
+                <span class="ks-on">On</span>
+                <span class="ks-off">Off</span>
+            </label>
+        </li>
+        <li>
+            <span class="ks-text">White/Gray Content Background</span>
+            <label class="ks-checkbox-slider ks-on-off ks-primary ks-content-bg-checkbox-toggle">
+                <input type="checkbox" value="0" checked>
+                <span class="ks-indicator"></span>
+                <span class="ks-on">On</span>
+                <span class="ks-off">Off</span>
+            </label>
+        </li>
+    </ul>
+</div>
+<!-- END SETTINGS BLOCK -->
+</body>
+</html>

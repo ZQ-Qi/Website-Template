@@ -1,0 +1,113 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/bootstrap-daterange-picker/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/bootstrap-daterange-picker/daterangepicker.min.css">
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Bootstrap Date Range Picker</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <h4>Date Range Picker</h4>
+                                <p>
+                                    The Date Range Picker is attached to a text input. It will use the current value of the input to initialize, and update the input if new dates are chosen.
+                                </p>
+
+                                <div class="form-group">
+                                    <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" class="form-control ks-daterange col-xl-3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <h4>Date and Time</h4>
+                                <p>
+                                    The Date Range Picker can also be used to select times. Hour, minute and (optional) second dropdowns are added below the calendars. An option exists to set the increment count of the minutes dropdown to e.g. offer only 15-minute or 30-minute increments.
+                                </p>
+
+                                <div class="form-group">
+                                    <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" class="form-control ks-daterange-time col-xl-3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <h4>Predefined Ranges</h4>
+                                <p>
+                                    This example shows the option to predefine date ranges that the user can choose from a list.
+                                </p>
+
+                                <div class="form-group">
+                                    <input type="text" name="daterange" value="10/24/1984" class="form-control ks-daterange-predefined-ranges col-xl-3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <h4>Single Date Picker</h4>
+                                <p>
+                                    The Date Range Picker can be turned into a single date picker widget with only one calendar. In this example, dropdowns to select a month and year have also been enabled at the top of the calendar to quickly jump to different months.
+                                </p>
+
+                                <div class="form-group">
+                                    <input type="text" name="daterange" value="10/24/1984" class="form-control ks-daterange-single col-xl-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/momentjs/moment-with-locales.min.js"></script>
+<script src="libs/bootstrap-daterange-picker/daterangepicker.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('.ks-daterange').daterangepicker();
+        $('.ks-daterange-time').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 30,
+            locale: {
+                format: 'MM/DD/YYYY h:mm A'
+            }
+        });
+        $('.ks-daterange-single').daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true
+        });
+
+        var start = moment().subtract(29, 'days');
+        var end = moment();
+
+        $('.ks-daterange-predefined-ranges').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

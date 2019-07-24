@@ -1,0 +1,545 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Card Widgets / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Card Widgets</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card-widget card-widget-a">
+        <div class="card-widget-a__user" style="background-image: url('img/widgets/20.png');">
+          <a href="#" class="card-widget-a__user-avatar">
+            <img src="img/widgets/19.png" alt="" class="card-widget-a__user-image rounded-circle">
+          </a>
+        </div>
+        <div class="card-widget-a__stats">
+          <div class="card-widget-a__user-info">
+            <a href="#" class="card-widget-a__user-name">Jonatan Anderson</a>
+            <div class="card-widget-a__user-desc">Administrator</div>
+          </div>
+
+          <div class="card-widget-a__stats-items">
+            <div class="card-widget-a__stats-item">
+              <span class="ua-icon-phone-alt card-widget-a__stats-item-icon"></span>
+              <span class="card-widget-a__stats-item-title">Phone</span>
+              <span class="card-widget-a__stats-item-value">+1 (800) 234-5678</span>
+            </div>
+            <div class="card-widget-a__stats-item">
+              <span class="ua-icon-envelope card-widget-a__stats-item-icon"></span>
+              <span class="card-widget-a__stats-item-title">Email</span>
+              <span class="card-widget-a__stats-item-value">info@example.com</span>
+            </div>
+            <div class="card-widget-a__stats-item">
+              <span class="ua-icon-fax card-widget-a__stats-item-icon"></span>
+              <span class="card-widget-a__stats-item-title">Fax</span>
+              <span class="card-widget-a__stats-item-value">+1 (800) 234-5678</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="card-widget card-widget-b">
+        <div class="card-widget-b__user" style="background-image: url(img/widgets/21.png)">
+          <div class="card-widget-b__controls">
+            <span class="ua-icon-edit-pencil card-widget-b__control"></span>
+            <div class="dropdown show">
+              <span data-toggle="dropdown">
+                <span class="ua-icon-dots-h-alt card-widget-b__control"></span>
+              </span>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="card-widget-b__user-name">Sara Connor</a>
+        </div>
+        <div class="card-widget-b__stats">
+          <div class="card-widget-b__stats-item">
+            <span class="ua-icon-phone card-widget-b__stats-item-icon"></span>
+            <div class="card-widget-b__stats-item-content">
+              <div class="card-widget-b__stats-item-value">+1 (800) 234-5678</div>
+              <div class="card-widget-b__stats-item-desc">Mobile</div>
+            </div>
+          </div>
+          <div class="card-widget-b__stats-item">
+            <span class="ua-icon-phone card-widget-b__stats-item-icon"></span>
+            <div class="card-widget-b__stats-item-content">
+              <div class="card-widget-b__stats-item-value">+1 (800) 234-5678</div>
+              <div class="card-widget-b__stats-item-desc">Work</div>
+            </div>
+          </div>
+          <div class="card-widget-b__stats-item">
+            <span class="ua-icon-envelope card-widget-b__stats-item-icon"></span>
+            <div class="card-widget-b__stats-item-content">
+              <div class="card-widget-b__stats-item-value">saraconnor@example.com</div>
+              <div class="card-widget-b__stats-item-desc">Personal</div>
+            </div>
+          </div>
+          <div class="card-widget-b__stats-item">
+            <span class="ua-icon-envelope card-widget-b__stats-item-icon"></span>
+            <div class="card-widget-b__stats-item-content">
+              <div class="card-widget-b__stats-item-value">s.connor@example.com</div>
+              <div class="card-widget-b__stats-item-desc">Work</div>
+            </div>
+          </div>
+          <div class="card-widget-b__stats-item">
+            <span class="ua-icon-map-pin card-widget-b__stats-item-icon"></span>
+            <div class="card-widget-b__stats-item-content">
+              <div class="card-widget-b__stats-item-value">
+                <div>2000 SW 1st Awe</div>
+                <div>San Francisco, CA 94112</div>
+              </div>
+              <div class="card-widget-b__stats-item-desc">Home</div>
+            </div>
+          </div>
+          <div class="card-widget-b__stats-item">
+            <span class="ua-icon-map-pin card-widget-b__stats-item-icon"></span>
+            <div class="card-widget-b__stats-item-content">
+              <div class="card-widget-b__stats-item-value">
+                <div>1600 Amphiteatre Pkwy</div>
+                <div>Mountain View, CA, 94043</div>
+              </div>
+              <div class="card-widget-b__stats-item-desc">Work</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-widget card-widget-c">
+        <a href="#" class="card-widget-c__avatar">
+          <img src="img/widgets/22.png" alt="" class="card-widget-c__image rounded-circle">
+        </a>
+        <a href="#" class="card-widget-c__name">Breno Bitencourt</a>
+        <span class="card-widget-c__desc">Web Designer</span>
+        <div class="card-widget-c__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="card-widget-c__links">
+          <a href="#" class="ua-icon-twitter-square card-widget-c__link"></a>
+          <a href="#" class="ua-icon-facebook-square-alt card-widget-c__link"></a>
+          <a href="#" class="ua-icon-social-instagram card-widget-c__link"></a>
+        </div>
+        <a href="#" class="btn btn-info card-widget-c__action-link">Follow</a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-widget card-widget-d">
+        <div class="card-widget-d__user">
+          <a href="#" class="card-widget-d__avatar">
+            <img src="img/widgets/23.png" alt="" class="card-widget-d__image rounded-circle">
+          </a>
+          <a href="#" class="card-widget-d__name">Breno Bitencourt</a>
+          <span class="card-widget-d__desc">Web Designer</span>
+          <span class="card-widget-d__location">Washington d.c.</span>
+        </div>
+        <div class="card-widget-d__controls">
+          <a href="#" class="btn btn-info card-widget-d__control">Follow</a>
+          <div class="dropdown card-widget-d__dropdown">
+            <button class="btn btn-outline-info dropdown-toggle card-widget-d__control" type="button" data-toggle="dropdown">
+              Connect
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Send message</a>
+              <a class="dropdown-item" href="#">Add to friends</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-widget-d__stats">
+          <div class="card-widget-d__stats-item">
+            260 <span class="card-widget-d__stats-name">Following</span>
+          </div>
+          <div class="card-widget-d__stats-item">
+            1.8M <span class="card-widget-d__stats-name">Followers</span>
+          </div>
+        </div>
+        <div class="card-widget-d__links">
+          <a href="#" class="card-widget-d__link">
+            <span class="ua-icon-twitter-square card-widget-d__link-icon"></span>
+            <span class="card-widget-d__link-text">twitter.com/example</span>
+          </a>
+          <a href="#" class="card-widget-d__link">
+            <span class="ua-icon-twitter-square card-widget-d__link-icon"></span>
+            <span class="card-widget-d__link-text">facebook.com/example</span>
+          </a>
+          <a href="#" class="card-widget-d__link">
+            <span class="ua-icon-twitter-square card-widget-d__link-icon"></span>
+            <span class="card-widget-d__link-text">instagram.com/example</span>
+          </a>
+        </div>
+        <a href="#" class="card-widget-d__export">
+          <span class="ua-icon-print card-widget-d__export-icon"></span>
+          <span class="card-widget-d__export-text">Export page as PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card-widget card-widget-e">
+        <div class="card-widget-e__user">
+          <div class="card-widget-e__controls">
+            <div class="dropdown show">
+              <span data-toggle="dropdown">
+                <span class="ua-icon-dots-h-alt card-widget-e__control"></span>
+              </span>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="card-widget-e__user-avatar">
+            <img src="img/widgets/24.png" alt="" class="card-widget-e__user-image rounded-circle">
+          </a>
+          <a href="#" class="card-widget-e__user-name">Dom Harris</a>
+          <a href="#" class="card-widget-e__user-desc">Graphic Designer</a>
+        </div>
+        <div class="card-widget-e__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="card-widget card-widget-f">
+        <div class="card-widget-f__user">
+          <a href="#" class="card-widget-f__user-avatar">
+            <img src="img/widgets/24.png" alt="" class="card-widget-f__user-image rounded-circle">
+          </a>
+          <a href="#" class="card-widget-f__user-name">Dom Harris</a>
+          <a href="#" class="card-widget-f__user-desc">Graphic Designer</a>
+        </div>
+        <div class="card-widget-f__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <a href="#" class="card-widget-f__link">GO SOMEWHERE</a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-widget card-widget-g">
+        <a href="#" class="card-widget-g__avatar">
+          <img src="img/widgets/25.png" alt="" class="card-widget-g__image rounded-circle">
+        </a>
+        <a href="#" class="card-widget-g__name">John Doe</a>
+        <span class="card-widget-g__desc">Web Designer</span>
+        <a href="#" class="card-widget-g__website-link">example.com</a>
+        <a href="#" class="btn btn-info card-widget-g__action-link">View Profile</a>
+        <div class="card-widget-g__links">
+          <a href="#" class="ua-icon-twitter-square card-widget-g__link card-widget-g__link--twitter"></a>
+          <a href="#" class="ua-icon-facebook-square card-widget-g__link card-widget-g__link--facebook"></a>
+          <a href="#" class="ua-icon-social-instagram card-widget-g__link card-widget-g__link--instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-widget card-widget-h">
+        <a href="#" class="card-widget-h__avatar">
+          <img src="img/widgets/25.png" alt="" class="card-widget-h__image rounded-circle">
+        </a>
+        <a href="#" class="card-widget-h__name">John Doe</a>
+        <span class="card-widget-h__desc">UX/UI</span>
+        <div class="card-widget-h__info">
+          <div class="card-widget-h__info-item">johndoe@gmail.com</div>
+          <div class="card-widget-h__info-item">+1 2345 678909</div>
+        </div>
+      </div>
+      <div class="card-widget card-widget-j">
+        <div class="card-widget-j__stats">
+          <div class="card-widget-j__stats-item">
+            <span class="card-widget-j__stats-value">34</span>
+            <span class="card-widget-j__stats-title">Projects</span>
+          </div>
+          <div class="card-widget-j__stats-item">
+            <span class="card-widget-j__stats-value">23</span>
+            <span class="card-widget-j__stats-title">Tasks</span>
+          </div>
+          <div class="card-widget-j__stats-item card-widget-j__stats-item--full-width">
+            <span class="card-widget-j__stats-title">About</span>
+            <span class="card-widget-j__stats-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          </div>
+        </div>
+        <div class="card-widget-j__links">
+          <a href="#" class="card-widget-j__link">twitter.com/example</a>
+          <a href="#" class="card-widget-j__link">facebook.com/example</a>
+          <a href="#" class="card-widget-j__link">instagram.com/example</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-widget card-widget-i">
+        <div class="card-widget-i__user" style="background-image: url(img/widgets/26.png)"></div>
+        <div class="card-widget-i__stats">
+          <div class="card-widget-i__stats-item">
+            <span class="card-widget-i__stats-title">Name</span>
+            <span class="card-widget-i__stats-value">Sara Konnor</span>
+          </div>
+          <div class="card-widget-i__stats-item">
+            <span class="card-widget-i__stats-title">Occupation</span>
+            <span class="card-widget-i__stats-value">Designer</span>
+          </div>
+          <div class="card-widget-i__stats-item">
+            <span class="card-widget-i__stats-title">E-mail</span>
+            <span class="card-widget-i__stats-value">sconnor@example.com</span>
+          </div>
+          <div class="card-widget-i__stats-item">
+            <span class="card-widget-i__stats-title">Phone</span>
+            <span class="card-widget-i__stats-value">+123 456 789</span>
+          </div>
+          <div class="card-widget-i__stats-item card-widget-i__stats-item--full-width">
+            <span class="card-widget-i__stats-title">Address</span>
+            <span class="card-widget-i__stats-value">Lorem ipsum dolor sit amet, consectetur.</span>
+          </div>
+        </div>
+        <div class="card-widget-i__links">
+          <a href="#" class="card-widget-i__link card-widget-i__link--twitter">
+            <span class="ua-icon-twitter-square card-widget-i__link-icon"></span>
+            <span class="card-widget-i__link-text">258</span>
+          </a>
+          <a href="#" class="card-widget-i__link card-widget-i__link--facebook">
+            <span class="ua-icon-facebook-square card-widget-i__link-icon"></span>
+            <span class="card-widget-i__link-text">125</span>
+          </a>
+          <a href="#" class="card-widget-i__link card-widget-i__link--instagram">
+            <span class="ua-icon-social-instagram card-widget-i__link-icon"></span>
+            <span class="card-widget-i__link-text">556</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card-widget card-widget-k">
+        <div class="card-widget-k__user">
+          <a href="#" class="card-widget-k__user-name">James Anderson</a>
+          <a href="#" class="card-widget-k__user-desc">Owner &amp; Seo</a>
+        </div>
+        <a href="#" class="card-widget-k__user-avatar">
+          <img src="img/widgets/27.png" alt="" class="card-widget-k__user-image rounded-circle">
+        </a>
+        <div class="card-widget-k__stats">
+          <div class="card-widget-k__stats-item">
+            <span class="card-widget-k__stats-value">34</span>
+            <span class="card-widget-k__stats-title">Projects</span>
+          </div>
+          <div class="card-widget-k__stats-item">
+            <span class="card-widget-k__stats-value">23</span>
+            <span class="card-widget-k__stats-title">Tasks</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-widget card-widget-o">
+        <div class="card-widget-o__user" style="background-image: url('img/widgets/29.png');">
+          <a href="#" class="card-widget-o__user-avatar">
+            <img src="img/widgets/27.png" alt="" class="card-widget-o__user-image rounded-circle">
+          </a>
+          <a href="#" class="card-widget-o__user-name">James Anderson</a>
+          <a href="#" class="card-widget-o__user-desc">Owner &amp; Seo</a>
+        </div>
+        <div class="card-widget-o__stats">
+          <div class="card-widget-o__stats-item">
+            <span class="card-widget-o__stats-value">34</span>
+            <span class="card-widget-o__stats-title">Projects</span>
+          </div>
+          <div class="card-widget-o__stats-item">
+            <span class="card-widget-o__stats-value">23</span>
+            <span class="card-widget-o__stats-title">Tasks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-widget card-widget-k">
+        <div class="card-widget-k__user" style="background-image: url(img/widgets/29.png)">
+          <a href="#" class="card-widget-k__user-name">James Anderson</a>
+          <a href="#" class="card-widget-k__user-desc">Owner &amp; Seo</a>
+        </div>
+        <a href="#" class="card-widget-k__user-avatar">
+          <img src="img/widgets/28.png" alt="" class="card-widget-k__user-image rounded-circle">
+        </a>
+        <div class="card-widget-k__stats">
+          <div class="card-widget-k__stats-item">
+            <span class="card-widget-k__stats-value">34</span>
+            <span class="card-widget-k__stats-title">Projects</span>
+          </div>
+          <div class="card-widget-k__stats-item">
+            <span class="card-widget-k__stats-value">23</span>
+            <span class="card-widget-k__stats-title">Tasks</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-widget card-widget-o">
+        <div class="card-widget-o__user">
+          <a href="#" class="card-widget-o__user-avatar">
+            <img src="img/widgets/34.png" alt="" class="card-widget-o__user-image rounded-circle">
+          </a>
+          <a href="#" class="card-widget-o__user-name">James Anderson</a>
+          <a href="#" class="card-widget-o__user-desc">Owner &amp; Seo</a>
+        </div>
+        <div class="card-widget-o__stats">
+          <div class="card-widget-o__stats-item">
+            <span class="card-widget-o__stats-value">34</span>
+            <span class="card-widget-o__stats-title">Projects</span>
+          </div>
+          <div class="card-widget-o__stats-item">
+            <span class="card-widget-o__stats-value">23</span>
+            <span class="card-widget-o__stats-title">Tasks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-widget card-widget-l">
+        <div class="card-widget-l__user">
+          <a href="#" class="card-widget-l__user-avatar">
+            <img src="img/widgets/30.png" alt="" class="card-widget-l__user-image rounded-circle">
+          </a>
+          <div class="card-widget-l__user-info">
+            <a href="#" class="card-widget-l__user-name">Amanda Clark</a>
+            <a href="#" class="card-widget-l__user-desc">Developer</a>
+          </div>
+        </div>
+        <ul class="card-widget-l__stats">
+          <li class="card-widget-l__stats-item">
+            <span class="card-widget-l__stats-title">Sales</span>
+            <span class="card-widget-l__stats-value color-info">100</span>
+          </li>
+          <li class="card-widget-l__stats-item">
+            <span class="card-widget-l__stats-title">Projects</span>
+            <span class="card-widget-l__stats-value color-success">50</span>
+          </li>
+          <li class="card-widget-l__stats-item">
+            <span class="card-widget-l__stats-title">Followers</span>
+            <span class="card-widget-l__stats-value color-warning">25</span>
+          </li>
+          <li class="card-widget-l__stats-item">
+            <span class="card-widget-l__stats-title">Tasks</span>
+            <span class="card-widget-l__stats-value color-danger">58</span>
+          </li>
+        </ul>
+      </div>
+      <div class="card-widget card-widget-l card-widget-l--rtl">
+        <div class="card-widget-l__user" style="background-image: url('img/widgets/33.png');">
+          <a href="#" class="card-widget-l__user-avatar">
+            <img src="img/widgets/18.png" alt="" class="card-widget-l__user-image rounded-circle">
+          </a>
+          <div class="card-widget-l__user-info">
+            <a href="#" class="card-widget-l__user-name">Amanda Clark</a>
+            <a href="#" class="card-widget-l__user-desc">Developer</a>
+          </div>
+        </div>
+        <ul class="card-widget-l__stats">
+          <li class="card-widget-l__stats-item">
+            <span class="card-widget-l__stats-title">Sales</span>
+            <span class="card-widget-l__stats-value color-info">100</span>
+          </li>
+          <li class="card-widget-l__stats-item">
+            <span class="card-widget-l__stats-title">Projects</span>
+            <span class="card-widget-l__stats-value color-success">50</span>
+          </li>
+          <li class="card-widget-l__stats-item">
+            <span class="card-widget-l__stats-title">Followers</span>
+            <span class="card-widget-l__stats-value color-warning">25</span>
+          </li>
+          <li class="card-widget-l__stats-item">
+            <span class="card-widget-l__stats-title">Tasks</span>
+            <span class="card-widget-l__stats-value color-danger">58</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-widget card-widget-m">
+        <div class="card-widget-m__header">Profile v1</div>
+        <div class="card-widget-m__user">
+          <a href="#" class="card-widget-m__user-avatar">
+            <img src="img/widgets/31.png" alt="" class="card-widget-m__user-image rounded-circle">
+          </a>
+          <div class="card-widget-m__user-info">
+            <a href="#" class="card-widget-m__user-name">Patricia Ferguson</a>
+            <span class="card-widget-m__nickname">@patricia_ferguson</span>
+            <span class="card-widget-m__user-desc">United Kingdom</span>
+          </div>
+        </div>
+        <div class="card-widget-m__stats">
+          <div class="card-widget-m__stats-item">
+            <span class="ua-icon-comment-alt card-widget-m__stats-item-icon"></span>
+            <span class="card-widget-m__stats-item-text">85</span>
+          </div>
+          <div class="card-widget-m__stats-item">
+            <span class="ua-icon-heart-alt card-widget-m__stats-item-icon"></span>
+            <span class="card-widget-m__stats-item-text">408</span>
+          </div>
+          <div class="card-widget-m__stats-item">
+            <span class="ua-icon-arrow-square-up card-widget-m__stats-item-icon"></span>
+            <span class="card-widget-m__stats-item-text">1099</span>
+          </div>
+          <div class="card-widget-m__stats-item">
+            <span class="ua-icon-money-bag card-widget-m__stats-item-icon"></span>
+            <span class="card-widget-m__stats-item-text">75</span>
+          </div>
+        </div>
+        <div class="card-widget-m__text">
+          <div class="card-widget-m__text-heading">About</div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="card-widget-m__controls">
+          <a href="#" class="card-widget-m__control">
+            <span class="ua-icon-plus-circle card-widget-m__control-icon"></span>
+            <span class="card-widget-m__control-text">Follow</span>
+          </a>
+          <a href="#" class="card-widget-m__control">
+            <span class="ua-icon-envelope card-widget-m__control-icon"></span>
+            <span class="card-widget-m__control-text">Message</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-widget card-widget-n">
+        <div class="card-widget-n__user">
+          <a href="#" class="card-widget-n__user-name">James Anderson</a>
+        </div>
+        <a href="#" class="card-widget-n__user-avatar">
+          <img src="img/widgets/25.png" alt="" class="card-widget-n__user-image rounded-circle">
+        </a>
+        <div class="card-widget-n__links">
+          <a href="#" class="ua-icon-twitter-square card-widget-n__link"></a>
+          <a href="#" class="ua-icon-facebook-square-alt card-widget-n__link"></a>
+          <a href="#" class="ua-icon-social-instagram card-widget-n__link"></a>
+        </div>
+        <div class="card-widget-n__desc">
+          795 Folsom Ave, Suite 600 San Francisco, Cadge 94107
+        </div>
+        <div class="card-widget-n__stats">
+          <div class="card-widget-n__stats-item">
+            <span class="card-widget-n__stats-value">34</span>
+            <span class="card-widget-n__stats-title">Projects</span>
+          </div>
+          <div class="card-widget-n__stats-item">
+            <span class="card-widget-n__stats-value">23</span>
+            <span class="card-widget-n__stats-title">Tasks</span>
+          </div>
+          <div class="card-widget-n__stats-item">
+            <span class="card-widget-n__stats-value">$2046</span>
+            <span class="card-widget-n__stats-title">Spent</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+

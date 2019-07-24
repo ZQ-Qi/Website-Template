@@ -1,0 +1,78 @@
+.app {
+  font-size: 14px;
+
+  &__header {
+    position: fixed;
+    z-index: 1;
+    height: 52px;
+    box-shadow: $box-shadow-a;
+    background-color: #ffffff;
+    top: 52px;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+
+    &-tab {
+      height: 36px;
+      line-height: 14px;
+      padding: 0 10px 0 15px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #d3d9dd;
+      color: $color-gray;
+      border-radius: $border-radius;
+      cursor: pointer;
+      margin-right: 8px;
+
+      &-close {
+        color: rgba(#455161, .5);
+        font-size: 19px;
+        line-height: 19px;
+        margin-left: 10px;
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    &-tab.is-active {
+      border: 1px solid $color-lasur;
+      background: $color-lasur;
+      color: #fff;
+    }
+
+    &-tab.is-active &-tab-close {
+      color: #fff;
+    }
+  }
+
+  &__content {
+    padding-left: 330px;
+    margin-left: 0;
+    font-size: 14px;
+    min-height: 100vh;
+    padding-top: 104px;
+  }
+
+  &__page {
+    padding: 20px;
+    min-height: calc(100vh - 104px);
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+
+    }
+
+    &-body {
+      flex-grow: 1;
+
+      &--panel {
+        padding: 20px;
+        border-radius: $border-radius;
+        background-color: $color-white;
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+}

@@ -1,0 +1,343 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/music-app.min.css">
+<link rel="stylesheet" type="text/css" href="libs/ion-range-slider/css/ion.rangeSlider.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/ion-range-slider/nice-skin/info.min.css"> <!-- customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Music</h3>
+                <button class="btn btn-outline-primary ks-light ks-music-app-navigation-block-toggle" data-block-toggle=".ks-music-app > .ks-navigation">Menu</button>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-music-app ks-player-active">
+                <div class="ks-navigation ks-browse ks-scrollable" data-auto-height>
+                    <div class="ks-wrapper">
+                        <div class="ks-separator">
+                            Library
+                        </div>
+                        <ul class="ks-menu">
+                            <li>
+                                <a href="#" class="ks-menu-item ks-active">
+                                    <span class="ks-text">
+                                        <span class="ks-icon la la-star-o"></span>
+
+                                        Collections
+                                    </span>
+                                    <span class="ks-badge badge badge-pill badge-pink">15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="ks-menu-item">
+                                    <span class="ks-text">
+                                        <span class="ks-icon la la-music"></span>
+
+                                        Music
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="ks-menu-item">
+                                    <span class="ks-text">
+                                        <span class="ks-icon la la-search"></span>
+
+                                        Search
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="ks-menu-item">
+                                    <span class="ks-text">
+                                        <span class="ks-icon la la-cog"></span>
+
+                                        Settings
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="ks-separator">
+                            Play lists
+                        </div>
+                        <ul class="ks-menu">
+                            <li>
+                                <a href="#" class="ks-menu-item">
+                                    <span class="ks-text">Best of 2016</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="ks-menu-item">
+                                    <span class="ks-text">My favourites</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="ks-menu-item">
+                                    <span class="ks-text">Best in January</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ks-music-app-content">
+                    <div class="ks-music-app-content-cover">
+                        <img class="ks-music-cover-image" src="assets/img/album-image.png">
+                        <div class="ks-music-cover-info">
+                            <h3 class="ks-music-cover-info-header">Dangerous Intentions</h3>
+                            <ul class="ks-music-album-info">
+                                <li class="ks-music-album-artist">Patterns</li>
+                                <li class="ks-music-album-year">2013</li>
+                                <li class="ks-music-album-name">Electronics</li>
+                            </ul>
+                            <div class="ks-music-cover-controls">
+                                <button class="btn btn-fuchsia-pink">
+                                    <span class="la la-play ks-icon"></span>
+                                    <span class="ks-text">Play all</span>
+                                </button>
+                                <button class="btn btn-white-outline">
+                                    <span class="la la-plus-circle ks-icon"></span>
+                                    <span class="ks-text">Add to my music</span>
+                                </button>
+                            </div>
+                            <div class="ks-music-cover-mobile-controls">
+                                <button class="btn btn-fuchsia-pink ks-no-text">
+                                    <span class="la la-play ks-icon"></span>
+                                </button>
+                                <button class="btn btn-white-outline ks-no-text">
+                                    <span class="la la-plus-circle ks-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ks-music-app-content-songs ks-scrollable" data-auto-height data-fix-height="10">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th width="1">#</th>
+                                    <th>Track</th>
+                                    <th>Artist</th>
+                                    <th>Album</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ks-album-song-number">1</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">2</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">3</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">4</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">5</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">6</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">7</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">8</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">9</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">10</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">11</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">12</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">13</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">14</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">15</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">16</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">17</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">18</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">19</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">20</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">21</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">22</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                                <tr>
+                                    <td class="ks-album-song-number">23</td>
+                                    <td>Burning Man</td>
+                                    <td>Patterns</td>
+                                    <td>Dangerous Intentions</td>
+                                    <td class="ks-album-song-duration">3:50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="ks-music-app-player">
+                    <div class="progress ks-music-app-player-progress">
+                        <span class="ks-music-app-player-progress-elapsed-time">1:32</span>
+                        <span class="ks-music-app-player-progress-duration">4:04</span>
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="ks-music-app-player-wrapper">
+                        <div class="ks-music-app-player-song-info">
+                            <img class="ks-music-app-player-album-image" src="assets/img/album-image.png">
+                            <div class="ks-music-app-player-info">
+                                <div class="ks-music-app-player-info-header">
+                                    <span class="ks-music-app-player-info-song-name">Sunny Days</span>
+                                    <span class="ks-music-app-player-info-album-name">Dangerous Intentions</span>
+                                </div>
+                                <div class="ks-music-app-player-info-artist">Patterns</div>
+                            </div>
+                        </div>
+                        <div class="ks-music-app-player-song-controls">
+                            <span class="la la-backward ks-music-app-player-song-control"></span>
+                            <span class="la la-pause ks-music-app-player-song-control"></span>
+                            <span class="la la-forward ks-music-app-player-song-control"></span>
+                        </div>
+                        <div class="ks-music-app-player-song-extra-controls">
+                            <span class="la la-refresh ks-music-app-player-song-extra-control"></span>
+                            <span class="la la-repeat ks-music-app-player-song-extra-control"></span>
+                            <div class="ks-music-app-player-song-extra-control-volume">
+                                <span class="la la-volume-up ks-music-app-player-song-extra-control"></span>
+                                <div class="ks-music-app-volume-control ks-irs-slider-nice-info ks-hide-controls">
+                                    <input value="20">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/ion-range-slider/js/ion.rangeSlider.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(".ks-music-app-volume-control input").ionRangeSlider({
+        min: 0,
+        max: 100
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

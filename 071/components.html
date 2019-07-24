@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mobile first web app theme | first</title>
+  <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/plugin.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="navbar">
+    <ul class="nav navbar-nav navbar-avatar pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">            
+          <span class="hidden-sm-only">Mika Sokeil</span>
+          <span class="thumb-small avatar inline"><img src="images/avatar.jpg" alt="Mika Sokeil" class="img-circle"></span>
+          <b class="caret hidden-sm-only"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#"><span class="badge bg-danger pull-right">3</span>Notifications</a></li>
+          <li class="divider"></li>
+          <li><a href="docs.html">Help</a></li>
+          <li><a href="signin.html">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="navbar-brand" href="#">first</a>
+    <button type="button" class="btn btn-link pull-left nav-toggle hidden-lg" data-toggle="class:show" data-target="#nav">
+      <i class="icon-reorder icon-xlarge text-default"></i>
+    </button>
+    <ul class="nav navbar-nav hidden-sm">
+      <li>
+        <div class="m-t m-b-small" id="panel-notifications">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-comment-alt icon-xlarge text-default"></i><b class="badge badge-notes bg-danger count-n">2</b></a>
+          <section class="dropdown-menu m-l-small m-t-mini">
+            <section class="panel panel-large arrow arrow-top">
+              <header class="panel-heading bg-white"><span class="h5"><strong>You have <span class="count-n">2</span> notifications</strong></span></header>
+              <div class="list-group list-group-flush m-t-n">
+                <a href="#" class="media list-group-item">
+                  <span class="pull-left thumb-small"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
+                  <span class="media-body block m-b-none">
+                    Moved to Bootstrap 3.0<br>
+                    <small class="text-muted">23 June 13</small>
+                  </span>
+                </a>
+                <a href="#" class="media list-group-item">
+                  <span class="media-body block m-b-none">
+                    first v.1 (Bootstrap 2.3 based) released<br>
+                    <small class="text-muted">19 June 13</small>
+                  </span>
+                </a>
+              </div>
+              <footer class="panel-footer text-small">
+                <a href="#" class="pull-right"><i class="icon-cog"></i></a>
+                <a href="#">See all the notifications</a>
+              </footer>
+            </section>
+          </section>
+        </div>
+      </li>
+      <li><div class="m-t-small"><a class="btn btn-small btn-info" data-toggle="modal" href="#modal"><i class="icon-plus"></i> POST</a></div></li>
+      <li class="dropdown shift" data-toggle="shift:appendTo" data-target=".nav-primary .nav">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-xlarge visible-sm visible-sm-inline"></i>Settings <b class="caret hidden-sm-only"></b></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#" data-toggle="class:navbar-fixed" data-target='body'>Navbar 
+              <span class="text-active">auto</span>
+              <span class="text">fixed</span>
+            </a>
+          </li>
+          <li class="visible-lg">
+            <a href="#" data-toggle="class:nav-vertical" data-target="#nav">Nav 
+              <span class="text-active">vertical</span>
+              <span class="text">horizontal</span>
+            </a>
+          </li>
+          <li class="divider hidden-sm"></li>
+          <li class="dropdown-header">Colors</li>
+          <li>
+            <a href="#" data-toggle="class:bg bg-black" data-target='.navbar'>Navbar 
+              <span class="text-active">white</span>
+              <span class="text">inverse</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-toggle="class:bg-light" data-target='#nav'>Nav 
+              <span class="text-active">inverse</span>
+              <span class="text">light</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form pull-left shift" action="" data-toggle="shift:appendTo" data-target=".nav-primary">
+      <i class="icon-search text-muted"></i>
+      <input type="text" class="input-small form-control" placeholder="Search">
+    </form>
+  </header>
+  <!-- / header -->
+  <!-- nav -->
+  <nav id="nav" class="nav-primary visible-lg nav-vertical">
+    <ul class="nav" data-spy="affix" data-offset-top="50">
+      <li><a href="index.html"><i class="icon-dashboard icon-xlarge"></i>Dashboard</a></li>
+      <li class="dropdown-submenu active">
+        <a href="#"><i class="icon-th icon-xlarge"></i>Elements</a>
+        <ul class="dropdown-menu">
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="icons.html"><b class="badge pull-right">302</b>Icons</a></li>            
+          <li><a href="grid.html">Grid</a></li>
+          <li><a href="widgets.html"><b class="badge bg-primary pull-right">8</b>Widgets</a></li>
+          <li><a href="components.html"><b class="badge pull-right">18</b>Components</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a href="#"><i class="icon-list icon-xlarge"></i>Lists</a>
+        <ul class="dropdown-menu">
+          <li><a href="list.html">List groups</a></li>
+          <li><a href="table.html">Table</a></li>
+        </ul>
+      </li>
+      <li><a href="form.html"><i class="icon-edit icon-xlarge"></i>Form</a></li>
+      <li><a href="chart.html"><i class="icon-signal icon-xlarge"></i>Chart</a></li>
+      <li class="dropdown-submenu">
+        <a href="#"><i class="icon-link icon-xlarge"></i>Others</a>
+        <ul class="dropdown-menu">
+          <li><a href="signin.html">Signin page</a></li>
+          <li><a href="signup.html">Signup page</a></li>
+          <li><a href="404.html">404 page</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- / nav -->
+  <section id="content">
+    <section class="main padder">
+      <div class="clearfix">
+        <h4><i class="icon-magic"></i>Components</h4>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- .breadcrumb -->
+          <ul class="breadcrumb">
+            <li><a href="#"><i class="icon-home"></i>Home</a></li>
+            <li><a href="#"><i class="icon-list-ul"></i>Elements</a></li>
+            <li class="active">Components</li>
+          </ul>
+          <!-- / .breadcrumb -->
+        </div>
+        <div class="col-lg-6">
+          <!-- .crousel slide -->
+          <section class="panel">
+            <div class="carousel slide auto" id="c-slide">
+                <ol class="carousel-indicators out">
+                  <li data-target="#c-slide" data-slide-to="0" class=""></li>
+                  <li data-target="#c-slide" data-slide-to="1" class="active"></li>
+                  <li data-target="#c-slide" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <p class="text-center">
+                      <em class="h4 text-mute">Save your time</em><br>
+                      <small class="text-muted">Many components</small>
+                    </p>
+                  </div>
+                  <div class="item">
+                    <p class="text-center">
+                      <em class="h4 text-mute">Nice and easy to use</em><br>
+                      <small class="text-muted">Full documents</small>
+                    </p>
+                  </div>
+                  <div class="item">
+                    <p class="text-center">
+                      <em class="h4 text-mute">Mobile header first</em><br>
+                      <small class="text-muted">Mobile/Tablet/Desktop</small>
+                    </p>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#c-slide" data-slide="prev">
+                  <i class="icon-chevron-left"></i>
+                </a>
+                <a class="right carousel-control" href="#c-slide" data-slide="next">
+                  <i class="icon-chevron-right"></i>
+                </a>
+            </div>
+          </section>
+          <!-- / .carousel slide -->
+        </div>
+        <div class="col-lg-6">
+          <!-- .crousel fade -->
+          <section class="panel bg-inverse">
+            <div class="carousel slide carousel-fade" id="c-fade">
+                <ol class="carousel-indicators out">
+                  <li data-target="#c-fade" data-slide-to="0" class=""></li>
+                  <li data-target="#c-fade" data-slide-to="1" class="active"></li>
+                  <li data-target="#c-fade" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item">
+                    <p class="text-center bg-inverse">
+                      <em class="h4 text-mute">Save your time</em><br>
+                      <small class="text-muted">Many components</small>
+                    </p>
+                  </div>
+                  <div class="item active">
+                    <p class="text-center bg-inverse">
+                      <em class="h4 text-mute">Nice and easy to use</em><br>
+                      <small class="text-muted">Full documents</small>
+                    </p>
+                  </div>
+                  <div class="item">
+                    <p class="text-center bg-inverse">
+                      <em class="h4 text-mute">Mobile header first</em><br>
+                      <small class="text-muted">Mobile/Tablet/Desktop</small>
+                    </p>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#c-fade" data-slide="prev">
+                  <i class="icon-chevron-left"></i>
+                </a>
+                <a class="right carousel-control" href="#c-fade" data-slide="next">
+                  <i class="icon-chevron-right"></i>
+                </a>
+            </div>
+          </section>
+          <!-- / .carousel fade -->
+        </div>
+        <div class="col-lg-6">
+          <!-- .accordion -->
+          <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner text-small">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner text-small">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                  Collapsible Group Item #3
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body in collapse" style="height: auto;">
+                <div class="accordion-inner text-small">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / .accordion -->
+          <!-- .nav-justified -->
+          <section class="panel">
+            <header class="panel-heading">
+              <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                <li><a href="#settings" data-toggle="tab">Settings</a></li>
+              </ul>
+            </header>
+            <div class="tab-content">
+              <div class="tab-pane active" id="home">home</div>
+              <div class="tab-pane" id="profile">profile</div>
+              <div class="tab-pane" id="messages">message</div>
+              <div class="tab-pane" id="settings">settings</div>
+            </div>
+          </section>
+          <!-- / .nav-justified -->
+          <!-- left tab -->
+          <section class="panel">
+            <header class="panel-heading">
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#messages-1" data-toggle="tab"><i class="icon-comments icon-large text-default"></i></a></li>
+                <li><a href="#profile-1" data-toggle="tab"><i class="icon-user icon-large text-default"></i>Profile</a></li>
+                <li><a href="#settings-1" data-toggle="tab"><i class="icon-cog icon-large text-default"></i>Settings</a></li>
+              </ul>
+              <span class="hidden-sm">Right tab</span>
+            </header>
+            <div class="tab-content">              
+              <div class="tab-pane active" id="messages-1">message</div>
+              <div class="tab-pane" id="profile-1">profile</div>
+              <div class="tab-pane" id="settings-1">settings</div>
+            </div>
+          </section>
+          <!-- / left tab -->
+          <!-- right tab -->
+          <section class="panel">
+            <header class="panel-heading text-right">
+              <ul class="nav nav-tabs pull-left">
+                <li><a href="#messages-2" data-toggle="tab"><i class="icon-comments icon-large text-default"></i></a></li>
+                <li class="active"><a href="#profile-2" data-toggle="tab"><i class="icon-user icon-large text-default"></i>Profile</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-large text-default"></i>Settings <b class="caret"></b></a>
+                  <ul class="dropdown-menu text-left">
+                    <li><a href="#dropdown1" data-toggle="tab">@fat</a></li>
+                    <li><a href="#dropdown2" data-toggle="tab">@mdo</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <span class="hidden-sm">Left tab</span>
+            </header>
+            <div class="tab-content">              
+              <div class="tab-pane fade" id="messages-2">message</div>
+              <div class="tab-pane fade active in" id="profile-2">profile</div>
+              <div class="tab-pane fade" id="dropdown1">dropdown1</div>
+              <div class="tab-pane fade" id="dropdown2">dropdown2</div>
+            </div>
+          </section>
+          <!-- / right tab -->
+          <!-- .dropdown -->
+          <section class="panel pos-rlt clearfix">
+            <header class="panel-heading">
+              <ul class="nav nav-pills pull-right">
+                <li>
+                  <a href="#" class="panel-toggle text-muted"><i class="icon-caret-down icon-large text-active"></i><i class="icon-caret-up icon-large text"></i></a>
+                </li>
+              </ul>
+              Dropdown
+            </header>
+            <div class="panel-content">
+              <div class="dropdown pull-left m-r">
+                <ul class="dropdown-menu pos-stc inline" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Separated link</a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                      <li><a tabindex="-1" href="#">Action</a></li>
+                      <li><a tabindex="-1" href="#">Another action</a></li>
+                      <li><a tabindex="-1" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown dropup pull-left">
+                <ul class="dropdown-menu bg-inverse pos-stc inline" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Separated link</a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                      <li class="dropdown-submenu  pull-left">
+                        <a tabindex="-1" href="#">Action</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                          <li><a tabindex="-1" href="#">Action</a></li>
+                          <li><a tabindex="-1" href="#">Another action</a></li>
+                          <li><a tabindex="-1" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li><a tabindex="-1" href="#">Another action</a></li>
+                      <li><a tabindex="-1" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- / .dropmenu -->
+          <!-- .tooltip & popup -->
+          <section class="panel text-small doc-buttons">
+            <button class="btn btn-small btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+            <button class="btn btn-small btn-white" data-toggle="tooltip" data-placement="right" title="Tooltip on right">On right</button>
+            <button class="btn btn-small btn-white" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">On bottom</button>
+            <button class="btn btn-small btn-white" data-toggle="tooltip" data-placement="left" title="Tooltip on left">On left</button>
+            <button class="btn btn-small btn-info" data-toggle="popover" data-html="true" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title='<button type="button" class="close pull-right" data-dismiss="popover"><i class="icon-remove"></i></button>Popover on top'>Popover on top</button>
+          </section>
+
+          <section class="panel"> 
+            <div class="wizard clearfix m-b">
+              <ul class="steps">
+                <li data-target="#step1" class="active"><span class="badge badge-info">1</span>Step 1</li>
+                <li data-target="#step2"><span class="badge">2</span>Step 2</li>
+                <li data-target="#step3"><span class="badge">3</span>Step 3</li>
+              </ul>
+              <div class="actions">
+                <button type="button" class="btn btn-white btn-mini btn-prev" disabled="disabled"> <i class="icon-chevron-left"></i>Prev</button>
+                <button type="button" class="btn btn-white btn-mini btn-next" data-last="Finish">Next<i class="icon-chevron-right"></i></button>
+              </div>
+            </div>
+            <div class="step-content">
+              <div class="step-pane active" id="step1">This is step 1</div>
+              <div class="step-pane" id="step2">This is step 2</div>
+              <div class="step-pane" id="step3">This is step 3</div>
+            </div>
+          </section>
+          <section class="panel clearfix"> 
+            <div class="wizard wizard-vertical clearfix" id="wizard-2">
+              <ul class="steps">
+                <li data-target="#step4" class="active"><span class="badge badge-info">1</span>Get it!</li>
+                <li data-target="#step5"><span class="badge">2</span>Unzip it</li>
+                <li data-target="#step6"><span class="badge">3</span>Finish</li>
+              </ul>
+            </div>
+            <div class="step-content">
+              <div class="step-pane active" id="step4">
+                <p>You can get this theme at <a href="http://themeforest.net/item/first-mobile-first-web-app-theme/5002403"><strong>here</strong></a>
+                <br><small class="text-muted">Do not forget to rate it when you get it.</small></p>
+              </div>
+              <div class="step-pane" id="step5">
+                <p>Unzipping this file, please wait it complete...</p>
+                <div class="progress progress-mini m-t-small">                  
+                  <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="40%" style="width: 40%"></div>
+                </div>
+                <p class="text-muted"><small>Some features you need know...</small></p>     
+              </div>
+              <div class="step-pane" id="step6">
+                <p>Thank you for choose this theme for your web application. <br>Have Fun!</p>
+              </div>
+              <div class="actions m-t text-right">
+                <button type="button" class="btn btn-white btn-small btn-prev" data-target="#wizard-2" data-wizard="previous" disabled="disabled">Prev</button>
+                <button type="button" class="btn btn-white btn-small btn-next" data-target="#wizard-2" data-wizard="next" data-last="Finish">Next</button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-lg-6">
+          <section class="panel" id="progressbar">
+            <header class="panel-heading">
+              <ul class="nav nav-pills pull-right">
+                <li><a href="#" data-toggle="progress" data-target="#progressbar">Random</a></li>
+              </ul>
+              Progress bar
+            </header>
+            <ul class="list-group list-group-flush m-t-n">
+              <li class="list-group-item">
+                <div class="progress progress-mini m-t-small">
+                  <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="40%" style="width: 40%"></div>
+                </div>
+                <div class="progress progress-mini progress-striped">
+                  <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="10%" style="width: 10%"></div>
+                </div>
+                <div class="progress progress-mini progress-striped">
+                  <div class="progress-bar progress-bar-warning" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
+                </div>
+                <div class="progress progress-mini progress-striped active">
+                  <div class="progress-bar progress-bar-danger" data-toggle="tooltip" data-original-title="30%" style="width: 30%"></div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="progress progress-small m-t-small">
+                  <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="10%" style="width: 10%"></div>
+                </div>
+                <div class="progress progress-small progress-striped  active">
+                  <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="30%" style="width: 30%"></div>
+                </div>
+                <div class="progress progress-small progress-striped">
+                  <div class="progress-bar progress-bar-warning" data-toggle="tooltip" data-original-title="20%" style="width: 20%"></div>
+                </div>
+                <div class="progress progress-small progress-striped">
+                  <div class="progress-bar progress-bar-danger" data-toggle="tooltip" data-original-title="10%" style="width: 10%"></div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="progress m-t-small">
+                  <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="40%" style="width: 40%"></div>
+                  <div class="progress-bar progress-bar-warning" data-toggle="tooltip" data-original-title="10%" style="width: 10%"></div>
+                  <div class="progress-bar progress-bar-danger" data-toggle="tooltip" data-original-title="15%" style="width: 15%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="col-lg-6">
+          <!-- .label and .badge -->
+          <div class="block text-center">
+            <p>
+              <span class="label">label</span>
+              <span class="label bg-primary">Primary</span>
+              <span class="label bg-success">Success</span>
+              <span class="label bg-info">Info</span>
+              <span class="label bg-inverse">Inverse</span>
+              <span class="label bg-warning">Warning</span>
+              <span class="label bg-danger">Danger</span>
+            </p>
+            <p class="m-b-none">
+              <span class="badge">15</span>
+               <span class="badge bg-primary">15</span>
+              <span class="badge bg-success">20</span>
+              <span class="badge bg-info">21</span>
+              <span class="badge bg-inverse">13</span>
+              <span class="badge bg-warning">35</span>
+              <span class="badge bg-danger">32</span>
+            </p>
+          </div>
+          <!-- / .label and .badge -->
+          <div class="alert alert-warning alert-block">
+            <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+            <h4><i class="icon-bell-alt"></i>Warning!</h4>
+            <p>Best check yo self, you're not looking too good...</p>
+          </div>
+          <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+            <i class="icon-ban-circle icon-large"></i><strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+          </div>
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+            <i class="icon-ok-sign icon-large"></i><strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+          </div>
+          <div class="alert alert-info">
+            <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+            <i class="icon-info-sign icon-large"></i><strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+          </div>
+          <div class="text-center">
+            <ul class="pagination pagination-large">
+              <li><a href="#"><i class="icon-chevron-left"></i></a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#"><i class="icon-chevron-right"></i></a></li>
+            </ul>
+          </div>
+          <div class="text-center">
+            <ul class="pagination pagination">
+              <li><a href="#"><i class="icon-chevron-left"></i></a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#"><i class="icon-chevron-right"></i></a></li>
+            </ul>
+          </div>
+          <div class="text-center">
+            <ul class="pagination pagination-small">
+              <li><a href="#"><i class="icon-chevron-left"></i></a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#"><i class="icon-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+    <!-- footer -->
+  <footer id="footer">
+    <div class="text-center padder clearfix">
+      <p>
+        <small>&copy; first 2013, Mobile first web app framework base on Bootstrap  更多模板：<a href="http://www.aspku.com/" target="_blank">源码之家</a></small><br><br>
+        <a href="#" class="btn btn-mini btn-circle btn-twitter"><i class="icon-twitter"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-facebook"><i class="icon-facebook"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-gplus"><i class="icon-google-plus"></i></a>
+      </p>
+    </div>
+  </footer>
+  <!-- / footer -->
+	<script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- app -->
+  <script src="js/app.js"></script>
+  <script src="js/app.plugin.js"></script>
+  <script src="js/app.data.js"></script>
+  <script src="js/fuelux/fuelux.js"></script>
+</body>
+</html>

@@ -1,0 +1,1347 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Checkbox, Radio buttons, Toggle buttons / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Checkbox, Radio buttons, Toggle buttons</h2>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#">Form</a>
+        </li>
+        <li class="breadcrumb-item active">Checkbox, Radio buttons, Toggle buttons</li>
+      </ol>
+    </div>
+  </div>
+  <div class="main-container container-fh__content">
+    <div class="row">
+      <div class="col-xl-2">
+        <h3>Checkbox</h3>
+        <div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="ch1" value="1">
+            <label class="custom-control-label" for="ch1">Inactive</label>
+          </div>
+        </div>
+        <div class="mt-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" checked id="ch2" value="2">
+            <label class="custom-control-label" for="ch2">Active</label>
+          </div>
+        </div>
+        <div class="mt-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" disabled id="ch3" value="3">
+            <label class="custom-control-label" for="ch3">Disabled</label>
+          </div>
+        </div>
+        <div class="mt-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" checked disabled id="ch4" value="4">
+            <label class="custom-control-label" for="ch4">Checked and Disabled</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-2">
+        <h3>Radio buttons</h3>
+        <div>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" name="cradio" id="r1">
+            <label class="custom-control-label" for="r1">Inactive</label>
+          </div>
+        </div>
+        <div class="mt-3">
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" name="cradio" id="r2" checked>
+            <label class="custom-control-label" for="r2">Active</label>
+          </div>
+        </div>
+        <div class="mt-3">
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" name="cradio" id="r3" disabled>
+            <label class="custom-control-label" for="r3">Disabled</label>
+          </div>
+        </div>
+        <div class="mt-3">
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" name="cradio" id="r4" checked disabled>
+            <label class="custom-control-label" for="r4">Active</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-2">
+        <h3>Invisible border</h3>
+        <div>
+          <div class="custom-control custom-radio custom-radio-simple">
+            <input type="radio" class="custom-control-input" name="csradio" id="r5">
+            <label class="custom-control-label" for="r5">Active</label>
+          </div>
+        </div>
+        <div>
+          <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--secondary">
+            <input type="radio" class="custom-control-input" name="csradio" id="r6">
+            <label class="custom-control-label" for="r6">Active</label>
+          </div>
+        </div>
+        <div>
+          <div class="custom-control custom-radio custom-radio-simple custom-radio-simple--info">
+            <input type="radio" class="custom-control-input" name="csradio" id="r7">
+            <label class="custom-control-label" for="r7">Active</label>
+          </div>
+        </div>
+        <div>
+          <label class="custom-control custom-radio custom-radio-simple custom-radio-simple--danger">
+            <input type="radio" class="custom-control-input" name="csradio" id="r8">
+            <label class="custom-control-label" for="r8">Active</label>
+          </label>
+        </div>
+        <div>
+          <label class="custom-control custom-radio custom-radio-simple custom-radio-simple--success">
+            <input type="radio" class="custom-control-input" name="csradio" id="r9">
+            <label class="custom-control-label" for="r9">Active</label>
+          </label>
+        </div>
+        <div>
+          <label class="custom-control custom-radio custom-radio-simple custom-radio-simple--warning">
+            <input type="radio" class="custom-control-input" name="csradio" id="r10">
+            <label class="custom-control-label" for="r10">Active</label>
+          </label>
+        </div>
+      </div>
+      <div class="col-xl-2">
+        <h3>Toggle buttons</h3>
+        <p>
+          <label class="switch mr-3">
+            <input type="checkbox">
+              <span class="switch-slider">
+                <span class="switch-slider__on"></span>
+                <span class="switch-slider__off"></span>
+              </span>
+          </label>
+          <label class="switch switch--info">
+            <input type="checkbox" checked>
+            <span class="switch-slider">
+              <span class="switch-slider__on"></span>
+              <span class="switch-slider__off"></span>
+            </span>
+          </label>
+        </p>
+        <p>
+          <label class="switch mr-3">
+            <input type="checkbox" checked>
+                <span class="switch-slider">
+                  <span class="switch-slider__on"></span>
+                  <span class="switch-slider__off"></span>
+                </span>
+          </label>
+          <label class="switch switch--bg-warning">
+            <input type="checkbox">
+                <span class="switch-slider">
+                  <span class="switch-slider__on"></span>
+                  <span class="switch-slider__off"></span>
+                </span>
+          </label>
+        </p>
+        <p>
+          <label class="switch mr-3">
+            <input type="checkbox" disabled>
+                <span class="switch-slider">
+                  <span class="switch-slider__on"></span>
+                  <span class="switch-slider__off"></span>
+                </span>
+          </label>
+          <label class="switch switch--info">
+            <input type="checkbox" checked disabled>
+            <span class="switch-slider">
+              <span class="switch-slider__on"></span>
+              <span class="switch-slider__off"></span>
+            </span>
+          </label>
+        </p>
+        <p>
+          <label class="switch mr-3">
+            <input type="checkbox" checked disabled>
+                <span class="switch-slider">
+                  <span class="switch-slider__on"></span>
+                  <span class="switch-slider__off"></span>
+                </span>
+          </label>
+          <label class="switch switch--bg-warning">
+            <input type="checkbox" disabled>
+                <span class="switch-slider">
+                  <span class="switch-slider__on"></span>
+                  <span class="switch-slider__off"></span>
+                </span>
+          </label>
+        </p>
+        <p>
+          <label class="switch-inline">
+            <span class="switch">
+              <input type="checkbox">
+                <span class="switch-slider">
+                  <span class="switch-slider__on"></span>
+                  <span class="switch-slider__off"></span>
+                </span>
+              </span>
+              <span class="switch-inline__text">Enable or disable option</span>
+          </label>
+        </p>
+        <p>
+          <label class="switch-inline is-disabled">
+            <span class="switch">
+              <input type="checkbox" disabled checked>
+                <span class="switch-slider">
+                  <span class="switch-slider__on"></span>
+                  <span class="switch-slider__off"></span>
+                </span>
+              </span>
+            <span class="switch-inline__text">Enable or disable option</span>
+          </label>
+        </p>
+      </div>
+      <div class="col-xl-2">
+        <h3>Toggle buttons</h3>
+        <p>
+          <label class="switch mr-3">
+            <input type="checkbox">
+            <span class="switch-slider"></span>
+          </label>
+          <label class="switch switch--info mr-3">
+            <input type="checkbox" checked>
+            <span class="switch-slider"></span>
+          </label>
+          <label class="switch switch--sm">
+            <input type="checkbox" checked>
+            <span class="switch-slider"></span>
+          </label>
+        </p>
+        <p>
+          <label class="switch mr-3">
+            <input type="checkbox" checked>
+            <span class="switch-slider"></span>
+          </label>
+          <label class="switch switch--bg-danger mr-3">
+            <input type="checkbox">
+            <span class="switch-slider"></span>
+          </label>
+          <label class="switch switch--sm switch--bg-danger">
+            <input type="checkbox">
+            <span class="switch-slider"></span>
+          </label>
+        </p>
+        <p>
+          <label class="switch mr-3">
+            <input type="checkbox" disabled>
+            <span class="switch-slider"></span>
+          </label>
+          <label class="switch switch--info mr-3">
+            <input type="checkbox" checked disabled>
+            <span class="switch-slider"></span>
+          </label>
+          <label class="switch switch--sm switch--info">
+            <input type="checkbox" checked disabled>
+            <span class="switch-slider"></span>
+          </label>
+        </p>
+        <p>
+          <label class="switch mr-3">
+            <input type="checkbox" checked disabled>
+            <span class="switch-slider"></span>
+          </label>
+          <label class="switch switch--bg-danger mr-3">
+            <input type="checkbox" disabled>
+            <span class="switch-slider"></span>
+          </label>
+          <label class="switch switch--sm switch--bg-danger">
+            <input type="checkbox" disabled>
+            <span class="switch-slider"></span>
+          </label>
+        </p>
+        <p>
+          <label class="switch-inline">
+            <span class="switch">
+              <input type="checkbox">
+              <span class="switch-slider"></span>
+            </span>
+            <span class="switch-inline__text">Enable or disable option</span>
+          </label>
+        </p>
+        <p>
+          <label class="switch-inline is-disabled">
+            <span class="switch">
+              <input type="checkbox" disabled checked>
+              <span class="switch-slider"></span>
+            </span>
+            <span class="switch-inline__text">Enable or disable option</span>
+          </label>
+        </p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <h3>Color Checkbox</h3>
+
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--primary"></span>
+          <span class="color-checkbox__text">primary</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--success"></span>
+          <span class="color-checkbox__text">success</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--info"></span>
+          <span class="color-checkbox__text">info</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--warning"></span>
+          <span class="color-checkbox__text">warning</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--danger"></span>
+          <span class="color-checkbox__text">danger</span>
+        </label>
+        <label class="color-checkbox is-checked">
+          <input type="checkbox" checked>
+          <span class="color-checkbox__color"></span>
+          <span class="color-checkbox__text">#1</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--river-bad"></span>
+          <span class="color-checkbox__text">#2</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--deep-cerulean"></span>
+          <span class="color-checkbox__text">#3</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--bermuda-gray"></span>
+          <span class="color-checkbox__text">#4</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--sun-juan"></span>
+          <span class="color-checkbox__text">#5</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--big-stone"></span>
+          <span class="color-checkbox__text">#6</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--kabul"></span>
+          <span class="color-checkbox__text">#7</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--wine-berry"></span>
+          <span class="color-checkbox__text">#8</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--killarney"></span>
+          <span class="color-checkbox__text">#9</span>
+        </label>
+        <label class="color-checkbox">
+          <input type="checkbox">
+          <span class="color-checkbox__color color-checkbox__color--deep-sea"></span>
+          <span class="color-checkbox__text">#10</span>
+        </label>
+      </div>
+      <div class="col-lg-6">
+        <h3>Color Radio</h3>
+
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--primary"></span>
+          <span class="color-radio__text">primary</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--success"></span>
+          <span class="color-radio__text">success</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--info"></span>
+          <span class="color-radio__text">info</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--warning"></span>
+          <span class="color-radio__text">warning</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--danger"></span>
+          <span class="color-radio__text">danger</span>
+        </label>
+        <label class="color-radio is-checked">
+          <input type="radio" name="radio" checked>
+          <span class="color-radio__color"></span>
+          <span class="color-radio__text">#1</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--river-bad"></span>
+          <span class="color-radio__text">#2</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--deep-cerulean"></span>
+          <span class="color-radio__text">#3</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--bermuda-gray"></span>
+          <span class="color-radio__text">#4</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--sun-juan"></span>
+          <span class="color-radio__text">#5</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--big-stone"></span>
+          <span class="color-radio__text">#6</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--kabul"></span>
+          <span class="color-radio__text">#7</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--wine-berry"></span>
+          <span class="color-radio__text">#8</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--killarney"></span>
+          <span class="color-radio__text">#9</span>
+        </label>
+        <label class="color-radio">
+          <input type="radio" name="radio">
+          <span class="color-radio__color color-radio__color--deep-sea"></span>
+          <span class="color-radio__text">#10</span>
+        </label>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-4">
+        <h3>Material Design Switch</h3>
+
+        <div class="mt-4">
+          <div class="flex align-items-center">
+            <span class="material-switch material-switch--default mr-4">
+              <input id="material-switch-default" type="checkbox" disabled>
+              <label for="material-switch-default"></label>
+            </span>
+            <span class="material-switch material-switch--default mr-4">
+              <input id="material-switch-default-checked" type="checkbox" checked disabled>
+              <label for="material-switch-default-checked"></label>
+            </span>
+            <span class="material-switch material-switch--sm material-switch--default">
+              <input id="material-switch-default-checked-sm" type="checkbox">
+              <label for="material-switch-default-checked-sm"></label>
+            </span>
+          </div>
+          <div class="mt-4">
+            <span class="material-switch material-switch--primary mr-4">
+              <input id="material-switch-primary" type="checkbox">
+              <label for="material-switch-primary"></label>
+            </span>
+            <span class="material-switch material-switch--primary mr-4">
+              <input id="material-switch-primary-checked" type="checkbox" checked>
+              <label for="material-switch-primary-checked"></label>
+            </span>
+            <span class="material-switch material-switch--sm material-switch--primary mr-4">
+                <input id="material-switch-primary-checked-sm" type="checkbox" checked>
+                <label for="material-switch-primary-checked-sm"></label>
+              </span>
+          </div>
+          <div class="mt-4">
+            <span class="material-switch material-switch--success mr-4">
+              <input id="material-switch-success" type="checkbox">
+              <label for="material-switch-success"></label>
+            </span>
+            <span class="material-switch material-switch--success mr-4">
+              <input id="material-switch-success-checked" type="checkbox" checked>
+              <label for="material-switch-success-checked"></label>
+            </span>
+            <span class="material-switch material-switch--sm material-switch--success">
+                <input id="material-switch-success-checked-sm" type="checkbox" checked>
+                <label for="material-switch-success-checked-sm"></label>
+              </span>
+          </div>
+          <div class="mt-4">
+            <span class="material-switch material-switch--info mr-4">
+              <input id="material-switch-info" type="checkbox">
+              <label for="material-switch-info"></label>
+            </span>
+            <span class="material-switch material-switch--info mr-4">
+              <input id="material-switch-info-checked" type="checkbox" checked>
+              <label for="material-switch-info-checked"></label>
+            </span>
+            <span class="material-switch material-switch--sm material-switch--info">
+              <input id="material-switch-info-checked-sm" type="checkbox" checked>
+              <label for="material-switch-info-checked-sm"></label>
+            </span>
+          </div>
+          <div class="mt-4">
+            <span class="material-switch material-switch--warning mr-4">
+              <input id="material-switch-warning" type="checkbox">
+              <label for="material-switch-warning"></label>
+            </span>
+            <span class="material-switch material-switch--warning mr-4">
+              <input id="material-switch-warning-checked" type="checkbox" checked>
+              <label for="material-switch-warning-checked"></label>
+            </span>
+            <span class="material-switch material-switch--sm material-switch--warning">
+              <input id="material-switch-warning-checked-sm" type="checkbox" checked>
+              <label for="material-switch-warning-checked-sm"></label>
+            </span>
+          </div>
+          <div class="mt-4">
+            <span class="material-switch material-switch--danger mr-4">
+              <input id="material-switch-danger" type="checkbox">
+              <label for="material-switch-danger"></label>
+            </span>
+            <span class="material-switch material-switch--danger mr-4">
+              <input id="material-switch-danger-checked" type="checkbox" checked>
+              <label for="material-switch-danger-checked"></label>
+            </span>
+            <span class="material-switch material-switch--sm material-switch--danger">
+              <input id="material-switch-danger-checked-sm" type="checkbox" checked>
+              <label for="material-switch-danger-checked-sm"></label>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <h3>Simple Switch</h3>
+
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple mr-3">
+          <input type="checkbox" class="switch-simple mr-3">
+          <input type="checkbox"checked disabled class="switch-simple mr-3">
+          <input type="checkbox" disabled class="switch-simple mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--primary mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--primary mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--primary mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--primary mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--success mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--success mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--success mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--success mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--info mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--info mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--info mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--info mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--warning mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--warning mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--warning mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--warning mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--danger mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--danger mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--danger mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--danger mr-3">
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <h3>Simple Switch Small</h3>
+
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--sm mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--sm mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--sm mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--sm mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--sm switch-simple--primary mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--sm switch-simple--primary mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--sm switch-simple--primary mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--sm switch-simple--primary mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--sm switch-simple--success mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--sm switch-simple--success mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--sm switch-simple--success mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--sm switch-simple--success mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--sm switch-simple--info mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--sm switch-simple--info mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--sm switch-simple--info mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--sm switch-simple--info mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--sm switch-simple--warning mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--sm switch-simple--warning mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--sm switch-simple--warning mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--sm switch-simple--warning mr-3">
+        </div>
+        <div class="mt-4">
+          <input type="checkbox"checked class="switch-simple switch-simple--sm switch-simple--danger mr-3">
+          <input type="checkbox" class="switch-simple switch-simple--sm switch-simple--danger mr-3">
+          <input type="checkbox"checked disabled class="switch-simple switch-simple--sm switch-simple--danger mr-3">
+          <input type="checkbox" disabled class="switch-simple switch-simple--sm switch-simple--danger mr-3">
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <div>
+          <label class="checkbox-toggle mr-3">
+            <input type="checkbox" checked />
+            <span data-on="On" data-off="Off"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--info mr-3">
+            <input type="checkbox" checked>
+            <span data-on="On" data-off="Off"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--primary mr-3">
+            <input type="checkbox" checked>
+            <span data-on="On" data-off="Off"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--warning mr-3">
+            <input type="checkbox" checked>
+            <span data-on="On" data-off="Off"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--danger mr-3">
+            <input type="checkbox" checked>
+            <span data-on="On" data-off="Off"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--purple">
+            <input type="checkbox" checked>
+            <span data-on="On" data-off="Off"></span>
+          </label>
+        </div>
+        <div class="mt-4">
+          <label class="checkbox-toggle mr-3">
+            <input type="checkbox">
+            <span data-on="Custom text" data-off="Disabled"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--info mr-3">
+            <input type="checkbox" checked>
+            <span data-on="Custom text" data-off="Disabled"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--primary mr-3">
+            <input type="checkbox" checked>
+            <span data-on="Custom text" data-off="Disabled"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--warning mr-3">
+            <input type="checkbox" checked>
+            <span data-on="Custom text" data-off="Disabled"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--danger mr-3">
+            <input type="checkbox" checked>
+            <span data-on="Custom text" data-off="Disabled"></span>
+          </label>
+          <label class="checkbox-toggle checkbox-toggle--purple">
+            <input type="checkbox" checked>
+            <span data-on="Custom text" data-off="Disabled"></span>
+          </label>
+        </div>
+    </div>
+  </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-12">
+        <h3>Radio Group</h3>
+        <div class="mt-4">
+          <div class="radio-group mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--md mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-md" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--sm">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-sm" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="radio-group radio-group--primary mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-primary" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-primary" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-primary" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--primary radio-group--md mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-primary-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-primary-md" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-primary-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--primary radio-group--sm">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-primary-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-primary-sm" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-primary-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="radio-group radio-group--success mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-success" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-success" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-success" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--success radio-group--md mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-success-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-success-md" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-success-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--success radio-group--sm">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-success-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-success-sm" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-success-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="radio-group radio-group--info mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-info" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-info" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-info" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--info radio-group--md mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-info-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-info-md" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-info-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--info radio-group--sm">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-info-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-info-sm" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-info-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="radio-group radio-group--warning mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-warning" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-warning" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-warning" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--warning radio-group--md mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-warning-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-warning-md" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-warning-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--warning radio-group--sm">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-warning-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-warning-sm" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-warning-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="radio-group radio-group--danger mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-danger" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-danger" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-danger" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--danger radio-group--md mr-3">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-danger-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-danger-md" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-danger-md" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="radio-group radio-group--danger radio-group--sm">
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-danger-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-danger-sm" class="radio-group__input" checked>
+              <span class="radio-group__text">Lorem</span>
+            </label>
+            <label class="radio-group__item">
+              <input type="radio" name="radio-group-danger-sm" class="radio-group__input">
+              <span class="radio-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mt-5">Radio Group with labels</h3>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="radio-group mr-3">
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 1</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input" checked>
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-danger radio-group__label">Label 2</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-warning radio-group__label">Label 3</span>
+            </span>
+          </label>
+        </div>
+        <div class="radio-group radio-group--md mr-3">
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-md" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 1</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-md" class="radio-group__input" checked>
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 2</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-md" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 3</span>
+            </span>
+          </label>
+        </div>
+        <div class="radio-group radio-group--sm">
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-sm" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 1</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-sm" class="radio-group__input" checked>
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 2</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-sm" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 3</span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mt-5">Radio Group with hidden borders</h3>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="radio-group radio-group--border-hidden mr-3">
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 1</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input" checked>
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-danger radio-group__label">Label 2</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-warning radio-group__label">Label 3</span>
+            </span>
+          </label>
+        </div>
+        <div class="radio-group radio-group--border-hidden radio-group--md mr-3">
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-md" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 1</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-md" class="radio-group__input" checked>
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 2</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-md" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 3</span>
+            </span>
+          </label>
+        </div>
+        <div class="radio-group radio-group--border-hidden radio-group--sm">
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-sm" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 1</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-sm" class="radio-group__input" checked>
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 2</span>
+            </span>
+          </label>
+          <label class="radio-group__item">
+            <input type="radio" name="radio-group-sm" class="radio-group__input">
+            <span class="radio-group__text">
+              <span class="badge-circle badge-circle-xss badge-circle-success radio-group__label">Label 3</span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-12">
+        <h3>Checkbox Group</h3>
+        <div class="mt-4">
+          <div class="checkbox-group mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--md mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-md" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--sm">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-sm" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="checkbox-group checkbox-group--primary mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-primary" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-primary" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-primary" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--primary checkbox-group--md mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-primary-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-primary-md" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-primary-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--primary checkbox-group--sm">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-primary-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-primary-sm" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-primary-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="checkbox-group checkbox-group--success mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-success" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-success" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-success" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--success checkbox-group--md mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-success-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-success-md" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-success-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--success checkbox-group--sm">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-success-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-success-sm" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-success-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="checkbox-group checkbox-group--info mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-info" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-info" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-info" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--info checkbox-group--md mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-info-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-info-md" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-info-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--info checkbox-group--sm">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-info-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-info-sm" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-info-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="checkbox-group checkbox-group--warning mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-warning" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-warning" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-warning" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--warning checkbox-group--md mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-warning-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-warning-md" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-warning-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--warning checkbox-group--sm">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-warning-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-warning-sm" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-warning-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="checkbox-group checkbox-group--danger mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-danger" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-danger" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-danger" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--danger checkbox-group--md mr-3">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-danger-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-danger-md" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-danger-md" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+          <div class="checkbox-group checkbox-group--danger checkbox-group--sm">
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-danger-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-danger-sm" class="checkbox-group__input" checked>
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+            <label class="checkbox-group__item">
+              <input type="checkbox" name="checkbox-group-danger-sm" class="checkbox-group__input">
+              <span class="checkbox-group__text">Lorem</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+/* ==========================================================================
+   #CHARTIST TOOLTIP CUSTOM
+   ========================================================================== */
+
+/**
+ * Instead of modifying `_chartist-plugin-tooltip.scss` directly, we add Dashboard's custom
+ * styles for chartist-plugin-tooltip plugin here.
+ */
+
+.chartist-tooltip {
+	min-width: 3em;
+	padding: $tooltip-padding;
+	transition: opacity .2s linear;
+	border-radius: $base-border-radius;
+	background: $tooltip-background-color;
+	color: $color-white;
+	font-family: $base-font-family;
+	font-weight: $font-weight-normal;
+	text-align: center;
+	opacity: 0;
+	z-index: 1;
+}
+
+.chartist-tooltip::before {
+	margin-left: -6px;
+	border: 6px solid transparent;
+	border-top-color: $tooltip-background-color;
+}
+
+.chartist-tooltip.tooltip-show {
+	opacity: 1;
+}

@@ -1,0 +1,130 @@
+.m-im-content-canvas {
+  flex-grow: 1;
+  font-size: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-im-canvas {
+  width: 880px;
+  height: 587px;
+  box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+  background-color: #ffffff;
+}
+
+.m-im-toolbox {
+  width: 36px;
+  box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+  background-color: #ffffff;
+  position: absolute;
+  left: 32px;
+  border-radius: 3px;
+
+  &__item {
+    display: block;
+    color: #939daa;
+    text-align: center;
+
+    &:first-child {
+      border-radius: 3px 3px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 3px 3px;
+    }
+
+    &.is-active {
+      background: $color-lasur;
+      color: #fff;
+    }
+  }
+
+  &__item-icon {
+    font-size: 22px;
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+
+    &.ua-icon-im-arrow-up,
+    &.ua-icon-im-arrow-down {
+      font-size: 12px;
+    }
+  }
+}
+
+.m-im-controls {
+  position: absolute;
+  right: 32px;
+
+  &__history {
+    width: 36px;
+    box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+    background-color: #ffffff;
+    margin-bottom: 18px;
+    border-radius: 3px;
+    padding-bottom: 2px;
+
+    &-item {
+      cursor: pointer;
+      display: block;
+      color: #939daa;
+      font-size: 22px;
+      text-align: center;
+      height: 36px;
+      line-height: 38px;
+
+      &:first-child {
+        border-radius: 3px 3px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 3px 3px;
+      }
+
+      &:hover {
+        color: $color-lasur;
+      }
+    }
+  }
+
+  &__size {
+    width: 36px;
+    box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 8px 0;
+
+    &-item {
+      cursor: pointer;
+      display: block;
+      color: #939daa;
+      font-size: 22px;
+      text-align: center;
+      height: 22px;
+      line-height: 22px;
+
+      &:first-child {
+        border-radius: 3px 3px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 3px 3px;
+      }
+
+      &:hover {
+        color: $color-lasur;
+      }
+    }
+  }
+
+  &__size-amount {
+    display: block;
+    color: #939daa;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    margin: 10px 0 9px 0;
+  }
+}

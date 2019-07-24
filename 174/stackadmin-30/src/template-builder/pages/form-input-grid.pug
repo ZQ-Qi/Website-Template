@@ -1,0 +1,22 @@
+//- =========================================================================================
+	File Name: form-input-grid.jade
+	Description: All input grids with offsets.
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+extends template
+
+block pageVars
+	- var pageTitle = "Input Grid"
+	- var pageSubTitle = "A powerful mobile-first grid system"
+	- var description  = "Fileds to display within the grids and also using offsets."
+	- var activeMenu = "form-input-grid"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Form Components"}, {name:"Input Grid"}])//- Include page content in page block
+append content
+	include ../contents/form-input-grid.html

@@ -1,0 +1,112 @@
+@import "../../config/colors";
+
+.note-popover {
+  display: none;
+}
+
+.note-btn-group {
+  .dropdown-toggle {
+    padding-right: 32px !important;
+  }
+
+  .note-btn {
+    padding: 7px 15px;
+    height: 32px;
+
+    .note-icon-caret {
+      display: none;
+    }
+
+    + .dropdown-toggle {
+      padding-right: 26px !important;
+    }
+  }
+}
+
+.note-color {
+  .dropdown-menu {
+    padding-top: 1px;
+    padding-bottom: 5px;
+    padding-left: 1px;
+
+    .btn-group {
+      flex-direction: column;
+
+      .btn {
+        padding: 3px 6px !important;
+        border-radius: 2px !important;
+        height: auto;
+      }
+    }
+  }
+}
+
+.note-align {
+  margin-bottom: 4px;
+}
+
+.note-list {
+  margin-left: 0 !important;
+}
+
+.note-editor, .note-popover {
+  .btn {
+    border-color: $ks-default-border-color;
+  }
+}
+
+.note-editor {
+  &.note-frame {
+    border-color: $ks-default-border-color;
+  }
+
+  .note-btn-group:not(.note-color) {
+    .dropdown-menu {
+      li {
+        color: #474747;
+        padding: 10px 15px;
+        margin: 0;
+        border-bottom: 1px solid #c4cbe1;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        p, a, blockquote, pre {
+          margin: 0;
+          color: #474747 !important;
+        }
+      }
+    }
+  }
+
+  .note-style {
+    .dropdown-menu {
+      min-width: 190px !important;
+    }
+  }
+
+  .modal {
+    .modal-header {
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+
+      h4 {
+        margin: 0 !important;
+      }
+
+      .close {
+        font-size: 20px;
+      }
+    }
+
+    .modal-footer {
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

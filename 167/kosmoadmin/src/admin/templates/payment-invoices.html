@@ -1,0 +1,574 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/datatables-net/media/css/dataTables.bootstrap4.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="libs/datatables-net/extensions/responsive/css/responsive.bootstrap4.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/datatables-net/datatables.min.css"> <!-- customization -->
+<link rel="stylesheet" type="text/css" href="libs/select2/css/select2.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/select2/select2.min.css"> <!-- Customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Invoices</h3>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-invoices ks-body-wrap">
+                <div class="ks-body-wrap-container">
+                    <div class="ks-full-table">
+                        <div class="ks-full-table-header">
+                            <h4 class="ks-full-table-name">All Invoices</h4>
+                            <div class="ks-controls">
+                                <button class="btn btn-primary">Create Invoice</button>
+                            </div>
+                        </div>
+                        <table id="ks-datatable" class="table ks-table-info dt-responsive nowrap">
+                            <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Amount</th>
+                                <th>Customer</th>
+                                <th>Issue Date</th>
+                                <th>Invoice</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-danger ks-text-danger">12 days overdue</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-info ks-text-info">Outstanding</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-danger ks-text-danger">12 days overdue</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-info ks-text-info">Outstanding</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-danger ks-text-danger">12 days overdue</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-info ks-text-info">Outstanding</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-success ks-text-success">Paid</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-danger ks-text-danger">12 days overdue</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-info ks-text-info">Outstanding</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-danger ks-text-danger">12 days overdue</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge ks-circle badge-info ks-text-info">Outstanding</span>
+                                </td>
+                                <td>$12,119.00</td>
+                                <td>Anthony Stephens</td>
+                                <td>September 29, 2016</td>
+                                <td>#16277-02</td>
+                                <td class="ks-controls">
+                                    <div class="dropdown">
+                                        <a class="btn btn-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="la la-ellipsis-h"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/datatables-net/media/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-net/media/js/dataTables.bootstrap4.min.js"></script>
+<script src="libs/datatables-net/extensions/responsive/js/dataTables.responsive.min.js"></script>
+<script src="libs/datatables-net/extensions/responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="libs/select2/js/select2.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        var table = $('#ks-datatable').DataTable({
+            responsive: true,
+            "initComplete": function () {
+                $('.dataTables_wrapper select').select2({
+                    minimumResultsForSearch: Infinity
+                });
+            }
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

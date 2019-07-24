@@ -1,0 +1,105 @@
+.p-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  flex: 1;
+
+  &__form {
+    width: 564px;
+    min-height: 534px;
+    box-shadow: 0 2px 3px rgba(236, 242, 246, 0.75);
+    border-radius: 3px;
+    background-color: #ffffff;
+    padding: 0;
+  }
+
+  &__form-heading {
+    border-bottom: 1px solid rgba(#939daa, .2);
+    padding: 17px 22px 18px 22px;
+    font-size: 28px;
+    color: #222;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__form-content {
+    padding: 18px 22px 22px 22px;
+  }
+
+  &__form-submit {
+    margin-top: 15px;
+  }
+
+  &__form-password-hints {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+
+    li {
+      width: 50%;
+      color: #000000;
+      margin-bottom: 10px;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border: 2px solid #269af1;
+        background: #fbfcfd;
+        margin-right: 10px;
+        border-radius: 50%;
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+
+  &__form-links {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  &__form-link {
+    color: #939daa;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.p-signup-helper {
+  .p-front {
+    &__content {
+      min-height: 698px;
+    }
+  }
+}
+
+@include mq(phablet, max) {
+  .p-signup {
+    height: auto;
+    padding: 20px;
+
+    &__form {
+      width: 100%;
+    }
+
+    &__form-password-hints {
+      flex-direction: column;
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+}

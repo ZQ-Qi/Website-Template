@@ -1,0 +1,38 @@
+/* ==========================================================================
+   #NOTIFICATION
+   ========================================================================== */
+
+/**
+ * 1. Remove weird spacing.
+ */
+
+.c-notification {
+	color: $color-ink;
+	font-size: 0; /* [1] */
+
+	&.has-indicator {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: -10px;
+			right: 0;
+			left: 0;
+			width: 5px;
+			height: 5px;
+			margin: 0 auto;
+			border-radius: 100%;
+			background-color: $brand-color;
+			box-shadow: 0 0 10px 0 rgba($brand-color, .9);
+			content: "";
+		}
+	}
+
+	&:hover {
+		color: $color-ink-dark;
+	}
+}
+
+.c-notification__icon {
+	font-size: 24px;
+}

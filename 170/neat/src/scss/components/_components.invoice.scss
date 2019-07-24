@@ -1,0 +1,167 @@
+/* ==========================================================================
+   #INVOICE
+   ========================================================================== */
+
+.c-invoice {
+	position: relative;
+	border: $base-border-width solid $color-sky;
+	border-radius: $base-border-radius;
+	background-color: $color-white;
+	color: $heading-color;
+	box-shadow: $card-box-shadow;
+	overflow: hidden;
+
+	@include respond-to($breakpoint-tablet) {
+		padding: $spacer;
+	}
+}
+
+.c-invoice__wrapper {
+	padding: $spacer-xlarge $spacer-xlarge 0;
+
+	@include respond-to($breakpoint-tablet) {
+		padding: $spacer-small $spacer-small 0;
+	}
+}
+
+/**
+ * Invoice Header
+ *
+ * Contains:
+ * - compnay's name & logo 
+ * - invoice's title & date
+ */
+
+.c-invoice__header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: $spacer-large;
+
+	@include respond-to($breakpoint-tablet) {
+		flex-flow: column;
+	}
+}
+
+.c-invoice__brand {
+	margin-bottom: $spacer;
+
+	@include respond-to($breakpoint-tablet) {
+		margin: 0;
+	}
+}
+
+.c-invoice__brand-img {
+	max-width: 40px;
+	margin-bottom: $spacer-small;
+}
+
+.c-invoice__brand-name {
+	font-size: $h3-font-size;
+}
+
+.c-invoice__title {
+	margin-bottom: $spacer-small;
+	font-size: $h3-font-size;
+}
+
+.c-invoice__date {
+	display: block;
+	color: $color-ink-light;
+	font-size: $text-font-size;
+	text-transform: uppercase;
+}
+
+/**
+ * Invoice Details
+ *
+ */
+
+.c-invoice__details {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: $spacer-xlarge;
+}
+
+
+.c-invoice__company-name {
+	margin-bottom: $spacer-small;
+	font-size: $h4-font-size;
+}
+
+.c-invoice__company-address {
+	margin-bottom: $spacer-small;
+	color: $color-ink-light;
+}
+
+/**
+ * Invoice content
+ */
+
+.c-invoice__body {
+	display: flex;
+	margin-bottom: $spacer-large;
+
+	@include respond-to($breakpoint-tablet) {
+		flex-flow: column;
+	}
+}
+
+.c-invoice__number {
+	color: $color-ink-light;
+	font-size: $text-font-size;
+}
+
+.c-invoice__table {
+	width: 100%;
+
+	.c-table {
+		margin-bottom: $spacer-xsmall;
+		box-shadow: none;
+
+		strong {
+			color: $color-ink-dark;
+		}
+
+		@include respond-to($breakpoint-tablet) {
+			display: table;
+			width: 100%;
+		}
+	}
+}
+
+.c-invoice__terms {
+	color: $color-ink-light;
+	font-size: $text-font-size;
+}
+
+.c-invoice__note {
+	margin-bottom: $spacer;
+}
+
+/**
+ * Footer
+ */
+
+.c-invoice__footer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: $spacer-xlarge;
+	padding: $spacer $spacer-xlarge;
+	color: $color-white;
+	@include linear-gradient(to bottom, $gradient-secondary);
+
+	@include respond-to($breakpoint-mobile) {
+		flex-flow: column;
+		text-align: center;
+	}
+}
+
+.c-invoice__footer-brand {
+	display: flex;
+	align-items: center;
+
+	@include respond-to($breakpoint-mobile) {
+		flex-flow: column;
+		justify-content: center;
+	}
+}

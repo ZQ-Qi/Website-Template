@@ -1,0 +1,674 @@
+@import "../config/colors";
+
+$ks-tabs-border-color: #d7dceb;
+
+/* BEGIN UIKIT TABS */
+.ks-tabs-page-container {
+  background: #f5f6fa;
+  padding: 0;
+
+  .ks-tabs-container-description {
+    padding: 30px;
+
+    > h3 {
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    > p {
+      color: #858585;
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+
+  > .tab-content {
+    background: #fff;
+
+    > .tab-pane {
+      padding: 30px;
+    }
+  }
+
+  > .ks-nav-tabs {
+    .nav-item:first-child {
+      margin-left: 30px;
+    }
+  }
+}
+
+.nav {
+  &.ks-nav-tabs {
+    border-bottom: 1px solid $ks-tabs-border-color;
+    border-color: $ks-tabs-border-color; /*#c4cbe1;*/
+    flex-wrap: wrap;
+
+    &.ks-tabs-page-default {
+      .nav-link {
+        position: relative;
+        padding: 15px 20px;
+        border-radius: 0;
+        font-size: 14px;
+        color: #333333;
+        border-left: 1px solid $ks-tabs-border-color;
+        border-top: 1px solid $ks-tabs-border-color;
+        border-right: none;
+        border-bottom: none;
+
+        > .badge {
+          padding: 3px 6px;
+          border-radius: 9px;
+          margin-left: 6px;
+          line-height: 11px;
+        }
+
+        &.active {
+          font-weight: 500;
+          background: #fff;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            height: 4px;
+            display: block;
+            background: $ks-color-primary;
+            z-index: 1;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            display: block;
+            background: #fff;
+            z-index: 1;
+          }
+        }
+      }
+
+      .nav-item {
+        & + .nav-item {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          .nav-link {
+            border-right: 1px solid $ks-tabs-border-color;
+          }
+        }
+      }
+    }
+
+    .nav-item {
+      &.dropdown {
+        .dropdown-menu {
+          margin: 0;
+          margin-top: 4px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+
+        &.show {
+          > .nav-link, > .nav-link:hover {
+            position: relative;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: auto;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              height: 4px;
+              display: block;
+              background: $ks-color-info;
+              z-index: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ks-tabs-container {
+  .tab-content {
+    .tab-pane {
+      padding: 20px;
+    }
+  }
+
+  &.ks-tabs-primary {
+    .nav-link {
+      &.active {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: auto;
+          left: -1px;
+          right: -1px;
+          top: -1px;
+          height: 4px;
+          display: block;
+          background: $ks-color-primary;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  &.ks-tabs-info {
+    .nav-link {
+      &.active {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: auto;
+          left: -1px;
+          right: -1px;
+          top: -1px;
+          height: 4px;
+          display: block;
+          background: $ks-color-info;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .ks-nav-tabs .nav-item {
+    +.nav-item {
+      margin-left: 0;
+    }
+
+    .nav-link {
+      .ks-icon {
+        display: inline-block;
+        margin-right: 7px;
+        font-size: 23px;
+        position: relative;
+        top: 3px;
+        line-height: 11px;
+      }
+    }
+  }
+
+  &.ks-tabs-icons-vertical {
+    .ks-nav-tabs {
+      .nav-item {
+        .nav-link {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          text-align: center;
+
+          > .ks-icon {
+            margin: 0;
+            margin-bottom: 10px;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.ks-tabs-icons {
+    .ks-nav-tabs {
+      .nav-item {
+        .nav-link {
+          .ks-icon {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.ks-tabs-default {
+    border-radius: 2px;
+    border: solid 1px $ks-tabs-border-color;
+
+    .nav-link {
+      color: #333;
+      line-height: 14px;
+      position: relative;
+      font-size: 14px;
+      padding: 18px 20px;
+
+      &.active {
+        font-weight: 500;
+      }
+
+      &:focus {
+        color: #333;
+      }
+    }
+
+    &.ks-tabs-header-default {
+      .ks-nav-tabs {
+        background: #f5f6fa;
+      }
+    }
+
+    &.ks-tabs-no-separator {
+      > .ks-nav-tabs {
+        .nav-link {
+          border: none;
+
+          &:hover {
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 4px;
+              display: block;
+              z-index: 1;
+              background: #d3edfc;
+            }
+          }
+
+          &.active {
+            &::before, &:hover::before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 4px;
+              display: block;
+              background: $ks-color-info;
+              z-index: 1;
+            }
+          }
+        }
+      }
+
+      &.ks-tabs-bottom {
+        .ks-nav-tabs {
+          border-top: 1px solid $ks-tabs-border-color;
+          border-bottom: none;
+        }
+
+        .nav-item {
+          margin-top: -1px;
+          margin-bottom: 0;
+        }
+
+        .nav-link {
+          border: none;
+
+          &:hover {
+            &::before {
+              bottom: auto;
+              top: 0;
+            }
+          }
+
+          &.active {
+            &::before,
+            &:hover::before {
+              bottom: auto;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.ks-tabs-with-separator {
+      .nav-link {
+        border: none;
+        border-radius: 0;
+      }
+
+      .nav-item {
+        .nav-link {
+          &.active {
+            background: #fff;
+            border-left: solid 1px $ks-tabs-border-color;
+            border-right: solid 1px $ks-tabs-border-color;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              right: 0;
+              height: 1px;
+              display: block;
+              background: #fff;
+              z-index: 1;
+            }
+          }
+        }
+
+        &:first-child {
+          .nav-link {
+            &.active {
+              border-left: none;
+              border-right: solid 1px $ks-tabs-border-color;
+            }
+          }
+        }
+      }
+
+      &.ks-tabs-bottom {
+        .ks-nav-tabs {
+          border-top: 1px solid $ks-tabs-border-color;
+          border-bottom: none;
+        }
+
+        .nav-item {
+          margin-top: -1px;
+          margin-bottom: 0;
+
+          > .nav-link {
+            &.active {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ks-tabs-vertical {
+    display: flex;
+    flex-direction: row;
+
+    &.ks-center-content {
+      align-items: center;
+
+      .tab-content {
+        text-align: center;
+      }
+    }
+
+    .nav-item + .nav-item {
+      margin-top: 0;
+    }
+
+    .ks-nav-tabs {
+      flex-direction: column;
+      border: none;
+      border-right: 1px solid $ks-tabs-border-color;
+
+      .nav-item {
+        margin-right: -1px;
+        white-space: nowrap;
+      }
+
+      &.ks-nav-tabs-icons {
+        .nav-item {
+          text-align: center;
+
+          .ks-icon {
+            font-size: 23px;
+            font-weight: normal;
+            color: $ks-color-primary;
+            width: 21px;
+            margin-right: 0;
+            position: relative;
+            top: 3px;
+            line-height: 11px;
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      width: 100%;
+    }
+
+    &.ks-tabs-default {
+      &.ks-tabs-vertical-right {
+        flex-direction: row-reverse;
+
+        .ks-nav-tabs {
+          border: none;
+          border-left: 1px solid $ks-tabs-border-color;
+
+          &.ks-nav-tabs-icons {
+            .nav-item {
+              .nav-link {
+                .ks-icon {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+
+        .nav-item {
+          margin-right: 0;
+          margin-left: -1px;
+        }
+      }
+
+      &.ks-tabs-no-separator {
+        .nav-link {
+          padding-top: 18px;
+
+          &:hover {
+            &::before {
+              content: '';
+              height: 100%;
+              width: 4px;
+              display: block;
+              z-index: 1;
+              right: 0;
+              left: auto;
+              background: #d3edfc;
+            }
+          }
+
+          &.active {
+            &::before, &:hover::before {
+              content: '';
+              height: 100%;
+              width: 4px;
+              display: block;
+              background: $ks-color-info;
+              z-index: 1;
+              right: 0;
+              left: auto;
+            }
+          }
+        }
+
+        &.ks-tabs-vertical-right {
+          .nav-link {
+            &.active {
+              &::before, &:hover::before {
+                right: auto;
+                left: 0;
+              }
+            }
+
+            &:hover {
+              &::before {
+                right: auto;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &.ks-tabs-with-separator {
+        .nav-item {
+          .nav-link {
+            border-right: 1px solid $ks-tabs-border-color;
+
+            &.active {
+              border: none;
+              border-top: 1px solid $ks-tabs-border-color;
+              border-bottom: 1px solid $ks-tabs-border-color;
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+
+          &:first-child {
+            .nav-link {
+              &.active {
+                border-top: none;
+              }
+            }
+          }
+
+          &:last-child {
+            .nav-link {
+              &.active {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+
+        &.ks-tabs-vertical-right {
+          .nav-link {
+            border-right: none;
+            border-left: 1px solid $ks-tabs-border-color;
+
+            &.active {
+              border: none;
+              border-top: 1px solid $ks-tabs-border-color;
+              border-bottom: 1px solid $ks-tabs-border-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ks-tabs-pills {
+    .nav-pills {
+      .nav-item {
+        margin-left: 10px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .nav-link {
+        padding: 18px 20px;
+        font-size: 14px;
+        line-height: 14px;
+        color: #333333;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: #e9f6fe;
+        }
+
+        &.active, .active:focus, .active:hover {
+          color: #fff;
+          background-color: $ks-color-info;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .tab-content {
+      border-radius: 2px;
+      border: solid 1px $ks-tabs-border-color;
+      margin-top: 10px;
+    }
+  }
+
+  &.ks-tabs-default.ks-tabs-with-separator.ks-tabs-bordered {
+    .nav-item {
+      .nav-link {
+        border-right: 1px solid $ks-tabs-border-color;
+
+        &.active {
+          border-left: none;
+        }
+      }
+    }
+  }
+
+  &.ks-full {
+    border: none;
+    border-radius: 0;
+
+    .ks-nav-tabs {
+      padding-left: 30px;
+      padding-right: 30px;
+      border-color: rgba(57, 80, 155, 0.2);
+    }
+
+    &.ks-light {
+      > .ks-nav-tabs {
+        .nav-link:not(.active) {
+          color: $text-color-light;
+        }
+      }
+    }
+
+    > .ks-nav-tabs {
+      > .nav-item {
+        > .nav-link {
+          font-size: 14px;
+          padding: 20px 18px;
+        }
+      }
+    }
+
+    .tab-pane {
+      padding: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .ks-tabs-page-container {
+    [class*="col-"] {
+      .ks-tabs-container {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .ks-tabs-page-container {
+    .nav {
+      &.ks-nav-tabs.ks-tabs-full-page {
+        flex-direction: column;
+
+        > .nav-item {
+          margin: 0;
+
+          > .nav-link {
+            &.active {
+              border-bottom: 1px solid $ks-tabs-border-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* END UIKIT TABS */

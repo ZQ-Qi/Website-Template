@@ -1,0 +1,27 @@
+{% extends "./common/auth.html" %}
+
+{% block title %}Thanks / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/loaders-css/loaders.min.css">
+{{ super() }}
+{% endblock %}
+
+{% block sidebar %}{% endblock %}
+
+{% block front_body %}
+<div class="p-message">
+  <div class="p-message__container">
+    <h2 class="p-message__heading">Thank you for signing up</h2>
+    <div class="p-message__desc">Were setting up your account as fast we can. If youre not redirected please <a
+      href="#" class="link-info">click here to continue</a></div>
+    <div class="p-message__loader">
+      <!--<img src="img/message-loader.gif" alt="" class="p-message__loader-image">-->
+      <div class="line-spin-fade-loader p-message__loader-indicator"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div class="p-message__action">Setting Up Your Portal</div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}{% endblock %}

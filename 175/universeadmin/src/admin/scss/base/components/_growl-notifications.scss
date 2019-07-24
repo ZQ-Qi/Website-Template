@@ -1,0 +1,252 @@
+@import "../common/variables";
+
+$growl-notification-margin-position: 20px; // left or right position offset
+
+/** BEGIN: growl notifications */
+.growl-notification {
+  position: fixed;
+  width: 350px;
+  min-height: 50px;
+  box-shadow: $box-shadow;
+  border: 1px solid #e9ebee;
+  background: #fff;
+  z-index: 1056;
+  font-size: 14px;
+  padding: 13px 25px;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+
+  &:before {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    content: '';
+    width: 4px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #929faa;
+    transition: color .1s;
+    cursor: pointer;
+  }
+
+  &--closed {
+    z-index: 1055;
+  }
+
+  &__title {
+    font-size: 17px;
+    color: #000;
+    margin-top: -2px;
+  }
+
+  &__desc {
+    color: #939daa;
+  }
+
+  &--close-on-click {
+    cursor: pointer;
+  }
+
+  &--image {
+    width: 420px;
+  }
+
+  &__image {
+    margin-right: 17px;
+  }
+
+  &--alert {
+    &:before {
+      background: $color-info;
+    }
+  }
+
+  &--alert &__close {
+    &:hover {
+      color: $color-info;
+    }
+  }
+
+  &--success {
+    &:before {
+      background: #8bc34a;
+    }
+  }
+
+  &--success &__close {
+    &:hover {
+      color: #8bc34a;
+    }
+  }
+
+  &--warning {
+    &:before {
+      background: #ffc107;
+    }
+  }
+
+  &--warning &__close {
+    &:hover {
+      color: #ffc107;
+    }
+  }
+
+  &--error {
+    &:before {
+      background: #ff3d00;
+    }
+  }
+
+  &--error &__close {
+    &:hover {
+      color: #ff3d00;
+    }
+  }
+
+  &--info {
+    &:before {
+      background: #ab47bc;
+    }
+  }
+
+  &--info &__close {
+    &:hover {
+      color: #ab47bc;
+    }
+  }
+
+  &.position-top-right,
+  &.position-bottom-right {
+    &.animation-slide {
+      &-in {
+        transform: translateX(100%);
+        animation: position-right-slide-in .3s forwards;
+      }
+
+      &-out {
+        margin-right: -$growl-notification-margin-position;
+        transform: translateX(0%);
+        animation: position-right-slide-out .3s forwards;
+      }
+    }
+  }
+
+  &.position-top-center {
+    &.animation-slide {
+      &-in {
+        transform: translateY(-100%);
+        animation: position-top-slide-in .3s forwards;
+      }
+
+      &-out {
+        margin-top: -$growl-notification-margin-position;
+        transform: translateY(0%);
+        animation: position-top-slide-out .3s forwards;
+      }
+    }
+  }
+
+  &.position-bottom-center {
+    &.animation-slide {
+      &-in {
+        transform: translateY(100%);
+        animation: position-bottom-slide-in .3s forwards;
+      }
+
+      &-out {
+        margin-bottom: -$growl-notification-margin-position;
+        transform: translateY(0%);
+        animation: position-bottom-slide-out .3s forwards;
+      }
+    }
+  }
+
+  &.position-top-left,
+  &.position-bottom-left {
+    &.animation-slide {
+      &-in {
+        transform: translateX(-100%);
+        animation: position-left-slide-in .3s forwards;
+      }
+
+      &-out {
+        margin-left: -$growl-notification-margin-position;
+        transform: translateX(0%);
+        animation: position-left-slide-out .3s forwards;
+      }
+    }
+  }
+
+  &.position-top-left,
+  &.position-top-right,
+  &.position-top-center {
+    transition: top .2s;
+  }
+
+  &.position-bottom-left,
+  &.position-bottom-center,
+  &.position-bottom-right {
+    transition: bottom .2s;
+  }
+
+  &.animation-fade {
+    &-in {
+      opacity: 0;
+      animation: fade-in .3s forwards;
+    }
+
+    &-out {
+      animation: fade-out .3s forwards;
+    }
+  }
+}
+
+@keyframes position-right-slide-in {
+  100% { transform: translateX(0%); }
+}
+
+@keyframes position-right-slide-out {
+  100% { transform: translateX(100%); }
+}
+
+@keyframes position-left-slide-in {
+  100% { transform: translateX(0%); }
+}
+
+@keyframes position-left-slide-out {
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes position-top-slide-in {
+  100% { transform: translateY(0%); }
+}
+
+@keyframes position-top-slide-out {
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes position-bottom-slide-in {
+  100% { transform: translateY(0%); }
+}
+
+@keyframes position-bottom-slide-out {
+  100% { transform: translateY(100%); }
+}
+
+@keyframes fade-in {
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out {
+  100% { opacity: 0; }
+}
+/** END: growl notifications */

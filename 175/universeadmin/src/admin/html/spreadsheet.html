@@ -1,0 +1,36 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Spreadsheet / Universe Admin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="vendor/jexcel/css/jquery.jexcel.css">
+<link rel="stylesheet" href="vendor/jexcel/css/jquery.jcalendar.css">
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div class="page-content__header">
+    <div>
+      <h2 class="page-content__header-heading">Spreadsheet</h2>
+    </div>
+  </div>
+
+  <div class="container-fh__content">
+    <div class="spreadsheet">
+      <div class="spreadsheet__scrollpane js-scrollable">
+        <div id="spreadsheet-ex1" class="spreadsheet__table"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="vendor/jexcel/js/excel-formula.min.js"></script>
+<script src="vendor/jexcel/js/jquery.csv.min.js"></script>
+<script src="vendor/jexcel/js/jquery.jcalendar.js"></script>
+<script src="vendor/jexcel/js/jquery.jexcel.js"></script>
+<script src="js/preview/spreadsheet.min.js"></script>
+{% endblock %}

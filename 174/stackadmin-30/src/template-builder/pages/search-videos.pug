@@ -1,0 +1,28 @@
+//- =========================================================================================
+	File Name: search-videos.jade
+	Description: Videos search result page.
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================-//
+
+extends template
+
+block pageVars
+	- var pageTitle    = "Search Videos"
+	- var pageSubTitle = "Search Videos Result"
+	//- var description  = ""
+	- var activeMenu   = "search-videos"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Search"}, {name:"Search Videos"}])//- Include page content in page block
+append content
+	include ../contents/search-videos.html
+
+//- Page CSS
+//------------------------------
+//- Add custom page specific CSS
+append pagecss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/pages/search.css')

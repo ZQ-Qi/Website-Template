@@ -1,0 +1,33 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/mail.min.css"> <!-- Customization -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Mail</h3>
+                <button class="btn btn-outline-primary ks-light ks-mail-navigation-block-toggle" data-block-toggle=".ks-mail > .ks-navigation">Menu</button>
+            </section>
+        </div>
+        <div class="ks-page-content">
+            <div class="ks-page-content-body ks-mail">
+                @@include('./_partials/apps/mail/navigation.html')
+                @@include('./_partials/apps/mail/emails.html')
+
+                <div class="ks-view ks-empty">
+                    <span class="ks-icon la la-envelope-o"></span>
+                    <div class="ks-text">Nothing selected. Please select an email in the left pane or</div>
+                    <a href="mail-create.html" class="btn btn-primary">Create a new email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+@@include('./_partials/apps/mail/scripts.html')
+@@include('./_partials/footer.html')

@@ -1,0 +1,121 @@
+<!-- partial:partials/_header.html -->
+<!-- partial -->
+<div class="page has-sidebar-left bg-light height-full">
+    <header class="blue accent-3 relative nav-sticky">
+        <div class="container-fluid text-white">
+            <div class="row">
+                <div class="col">
+                    <h3 class="my-3">
+                        <i class="icon icon-date_range"></i>
+                        Date Time Picker <span class="s-14"> <a class="btn btn-outline-primary btn-xs"
+                                                                href="https://xdsoft.net/jqplugins/datetimepicker/"
+                                                                target="_blank"> View Plugin Docs</a> </span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid my-3">
+        <div class="d-flex row">
+            <div class="col-5 align-self-center">
+                <div class="card">
+                    <div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Simple usage</div>
+                            <input type="text" class="date-time-picker form-control" value="2018/06/01 22:46"/>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Only Date Picker</div>
+                            <div class="input-group">
+                                <input type="text" class="date-time-picker form-control"
+                                       data-options='{"timepicker":false, "format":"d-m-Y"}' value="2018/06/01"/>
+                                <span class="input-group-append">
+                                    <span class="input-group-text add-on white">
+                                        <i class="icon-calendar"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Only Time Picker</div>
+                            <div class="input-group">
+                                <input type="text" class="date-time-picker form-control" value="22:46"
+                                       data-options='{"datepicker":false, "format":"H:i"}'/>
+                                <span class="input-group-append">
+                                    <span class="input-group-text add-on white">
+                                        <i class="icon-timer"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Date Time Picker Inline</div>
+                            <div class="form-group">
+                                <input type="text" class="date-time-picker form-control form-control-lg"
+                                       data-options='{"inline":true, "format":"d.m.Y H:i"}'/>
+                            </div>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title">Date Time Picker Inline Dark</div>
+                            <div class="form-group">
+                                <input type="text" class="date-time-picker form-control form-control-lg"
+                                       data-options='{"theme":"dark","inline":true, "format":"d.m.Y H:i"}'/>
+                            </div>
+                        </div>
+                        <div class="card-body b-b">
+                            <div class="card-title"> Time Picker Inline</div>
+                            <div class="form-group">
+                                <input type="text" class="date-time-picker form-control form-control-lg"
+                                       data-options='{"inline":true, "datepicker":false, "format":"H:i"}'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <h3>Documentation</h3>
+                <hr>
+                <p>You can pass plugin options using data-options attribute. Please make sure to use valid json
+                    code.</p>
+                <a href="https://xdsoft.net/jqplugins/datetimepicker/" target="_blank"
+                   class="btn btn-xs btn-primary">Plugin Docs</a>
+                <a href="https://jsonformatter.org/" target="_blank" class="btn btn-outline-primary btn-xs">JSON
+                    Formatter</a>
+                <h4 class="mt-5">Code Example</h4>
+                <hr>
+                <pre><code>&lt;div class="form-group"&gt;
+&nbsp;&nbsp;&nbsp;&lt;input type="text" class="date-time-picker form-control form-control-lg"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-options='{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"theme":"dark",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"inline":true,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"format":"d.m.Y H:i"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}'/&gt;
+&lt;/div&gt;</code></pre>
+
+                <p>For Date time range (Please check plugin docs for more information)</p>
+                <pre><code>jQuery(function(){
+&nbsp;jQuery('#date_timepicker_start').datetimepicker({
+&nbsp;&nbsp;format:'Y/m/d',
+&nbsp;&nbsp;onShow:function( ct ){
+&nbsp;&nbsp;&nbsp;this.setOptions({
+&nbsp;&nbsp;&nbsp;&nbsp;maxDate:jQuery('#date_timepicker_end').val()?jQuery('#date_timepicker_end').val():false
+&nbsp;&nbsp;&nbsp;})
+&nbsp;&nbsp;},
+&nbsp;&nbsp;timepicker:false
+&nbsp;});
+&nbsp;jQuery('#date_timepicker_end').datetimepicker({
+&nbsp;&nbsp;format:'Y/m/d',
+&nbsp;&nbsp;onShow:function( ct ){
+&nbsp;&nbsp;&nbsp;this.setOptions({
+&nbsp;&nbsp;&nbsp;&nbsp;minDate:jQuery('#date_timepicker_start').val()?jQuery('#date_timepicker_start').val():false
+&nbsp;&nbsp;&nbsp;})
+&nbsp;&nbsp;},
+&nbsp;&nbsp;timepicker:false
+&nbsp;});
+});</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial:partials/_foot.html -->
+<!-- partial -->

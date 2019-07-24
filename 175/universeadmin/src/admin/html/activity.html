@@ -1,0 +1,224 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Activity / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh p-activity">
+  <div class="main-container main-container--empty container-fh__content">
+    <div class="container-header">
+      <h2 class="container-heading">Activity</h2>
+      <div class="container-header-controls">
+        <div class="container-header-tabs">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#activity-stream">Activity Stream</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#discussions">Discussions <span class="nav-tabs__link-amount">3</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tasks">Tasks <span class="nav-tabs__link-amount">3</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-body">
+      <div class="tab-content">
+        <div class="tab-pane active" id="activity-stream">
+          <div class="p-activity__items">
+            <h3 class="p-activity__heading">Recent Activity</h3>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure p-activity__item-figure--scooter">
+                  <span class="ua-icon-arrow-up p-activity__item-icon p-activity__item-icon--lg"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  <a href="#" class="p-activity__item-user">
+                    <img src="img/users/user-16.png" width="22" height="22" alt="" class="p-activity__item-user-avatar rounded-circle"> <span>chrislloyd</span>
+                  </a> promoted <a href="#" class="link-info">Auto-archive discussion after n-period</a> <span class="text-muted-md">#123</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure">
+                  <span class="ua-icon-activity-comments p-activity__item-icon"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  <a href="#" class="p-activity__item-user">
+                    <img src="img/users/user-15.png" width="22" height="22" alt="" class="p-activity__item-user-avatar rounded-circle"> <span>Joan Russell</span>
+                  </a> commented on <a href="#" class="link-info">Competition to award $100K in prizes to the product that makes the money in 4 mounth</a> <span class="text-muted-md">#656</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-activity__item-date">
+              <div class="p-activity__item-date-wrap">
+                <span class="p-activity__item-date-value">an hour ago</span>
+                <span class="p-activity__item-date-figure"></span>
+              </div>
+            </div>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure">
+                  <span class="ua-icon-activity-comments p-activity__item-icon"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  <a href="#" class="p-activity__item-name link-info">3 comments</a> made on task <a href="#" class="link-info">Signing up for app ideas doesnt work</a> <span class="text-muted-md">#458</span>
+                  <div class="p-activity__item-users">
+                    <a href="#" class="p-activity__item-user">
+                      <img src="img/users/user-13.png" alt="" class="p-activity__item-user-avatar" width="20" height="20">
+                    </a>
+                    <a href="#" class="p-activity__item-user">
+                      <img src="img/users/user-15.png" alt="" class="p-activity__item-user-avatar" width="20" height="20">
+                    </a>
+                    <a href="#" class="p-activity__item-user">
+                      <img src="img/users/user-16.png" alt="" class="p-activity__item-user-avatar" width="20" height="20">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure p-activity__item-figure--info">
+                  <span class="ua-icon-activity-promoted p-activity__item-icon p-activity__item-icon--lg"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  <a href="#" class="p-activity__item-user">
+                    <img src="img/users/user-16.png" width="22" height="22" alt="" class="p-activity__item-user-avatar rounded-circle"> <span>chrislloyd</span>
+                  </a> promoted <a href="#" class="link-info">Auto-archive discussion after n-period</a> <span class="text-muted-md">#123</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure p-activity__item-figure--info">
+                  <span class="ua-icon-activity-edit p-activity__item-icon p-activity__item-icon--lg"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  <a href="#" class="p-activity__item-user">
+                    <img src="img/users/user-16.png" width="22" height="22" alt="" class="p-activity__item-user-avatar rounded-circle"> <span>chrislloyd</span>
+                  </a> promoted <a href="#" class="link-info">Auto-archive discussion after n-period</a> <span class="text-muted-md">#123</span>
+                  <div class="p-activity__item-image">
+                    <img src="img/activity/image.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure">
+                  <span class="ua-icon-activity-comments p-activity__item-icon"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  <a href="#" class="p-activity__item-user">
+                    <img src="img/users/user-15.png" width="22" height="22" alt="" class="p-activity__item-user-avatar rounded-circle"> <span>Joan Russell</span>
+                  </a> commented on <a href="#" class="link-info">Competition to award $100K in prizes to the product that makes the money in 4 mounth</a> <span class="text-muted-md">#656</span>
+
+                  <div class="p-activity__comments">
+                    <div class="p-activity__comment">
+                      <img src="img/users/user-17.png" width="34" height="34" alt="" class="p-activity__comment-avatar rounded-circle">
+                      <div class="p-activity__comment-info">
+                        <div class="p-activity__comment-name">
+                          <a href="#">Donald Pierce</a> wrote:
+                        </div>
+                        <div class="p-activity__comment-content">
+                          go signup for this app <a href="#" class="link-info">http://example.com/link</a> and you’ll be redirected to
+                          <a href="#" class="link-info">...ideas/example.com/vote</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-activity__comment">
+                      <img src="img/users/user-17.png" width="34" height="34" alt="" class="p-activity__comment-avatar rounded-circle">
+                      <div class="p-activity__comment-info">
+                        <div class="p-activity__comment-name">
+                          <a href="#">Donald Pierce</a> wrote:
+                        </div>
+                        <div class="p-activity__comment-content">
+                          go signup for this app <a href="#" class="link-info">http://example.com/link</a> and you’ll be redirected to
+                          <a href="#" class="link-info">...ideas/example.com/vote</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-activity__item-date">
+              <div class="p-activity__item-date-wrap">
+                <span class="p-activity__item-date-value">2 hours ago</span>
+                <span class="p-activity__item-date-figure"></span>
+              </div>
+            </div>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure p-activity__item-figure--cornflower-blue">
+                  <span class="ua-icon-activity-bookmark p-activity__item-icon p-activity__item-icon-lg p-activity__item-icon--lg"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  A git hub repository was created at <a href="#" class="link-info">app-products/example</a>
+                </div>
+              </div>
+            </div>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure p-activity__item-figure--yellow-orange">
+                  <span class="ua-icon-star p-activity__item-icon p-activity__item-icon--lg"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  <a href="#" class="p-activity__item-user">
+                    <img src="img/users/user-16.png" width="22" height="22" alt="" class="p-activity__item-user-avatar rounded-circle"> <span>chrislloyd</span>
+                  </a> promoted <a href="#" class="link-info">Auto-archive discussion after n-period</a> <span class="text-muted-md">#123</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure">
+                  <span class="ua-icon-activity-pencil p-activity__item-icon p-activity__item-icon--lg"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  <a href="#" class="p-activity__item-user">
+                    <img src="img/users/user-16.png" width="22" height="22" alt="" class="p-activity__item-user-avatar rounded-circle"> <span>chrislloyd</span>
+                  </a> renamed <span class="text-muted-md text-line-through">Thrust Budger</span> to New App
+                </div>
+              </div>
+            </div>
+            <div class="p-activity__item">
+              <div class="p-activity__item-wrap">
+                <span class="p-activity__item-figure p-activity__item-figure--info">
+                  <span class="ua-icon-activity-push p-activity__item-icon"></span>
+                </span>
+                <div class="p-activity__item-info">
+                  <a href="#" class="p-activity__item-user">
+                    <img src="img/users/user-16.png" width="22" height="22" alt="" class="p-activity__item-user-avatar rounded-circle"> <span>chrislloyd</span>
+                  </a> pushed to master at <a href="#" class="link-info">app-products/example</a>
+
+                  <div class="p-activity__item-info-content">
+                    Commit <a href="#" class="link-info">1042a3</a>: "#606 Use gorp in main as well as test"
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="dashboard">
+          Dashboard
+        </div>
+        <div class="tab-pane" id="discussions">
+          Discussions
+        </div>
+        <div class="tab-pane" id="tasks">
+          Tasks
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+

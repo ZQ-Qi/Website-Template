@@ -1,0 +1,154 @@
+.swal-overlay {
+  background-color: rgba(#000, .5);
+}
+
+.swal-modal {
+  border-radius: 4px;
+  width: 453px;
+}
+
+.swal-title {
+  font-size: 24px;
+  color: #222;
+  font-weight: normal;
+  padding: 0 20px;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+
+.swal-text {
+  font-size: 14px;
+  color: #000;
+  padding: 0 20px;
+  max-width: 100%;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+
+.swal-footer {
+  padding: 0 16px 20px 16px;
+  text-align: center;
+}
+
+.swal-button-container {
+  padding: 0;
+}
+
+.swal-button {
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: normal;
+  padding: 11px 20px;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &--confirm {
+    background-color: #269af1;
+
+    &:hover {
+      background-color: $color-info-hover;
+    }
+  }
+
+  &--danger {
+    background-color: $color-danger;
+
+    &:hover {
+      background-color: $color-danger-hover;
+    }
+  }
+
+  &--cancel {
+    border: 1px solid #d3d9dd;
+    background: #fff;
+    padding: 10px 20px;
+
+    &:hover {
+      background-color: rgba(#d3d9dd, .3);
+    }
+  }
+}
+
+.swal-icon {
+  &--success,
+  &--warning,
+  &--error,
+  &--info {
+    margin: 25px auto;
+    border: none;
+
+    &:first-child {
+      margin-top: 28px;
+    }
+
+    &__line,
+    &__hide-corners,
+    &__ring,
+    &__body,
+    &__dot,
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  &--success {
+    background: url(../img/sweet-alert-success.png) no-repeat center center;
+  }
+
+  &--warning {
+    background: url(../img/sweet-alert-warning.png) no-repeat center center;
+  }
+
+  &--error {
+    background: url(../img/sweet-alert-error.png) no-repeat center center;
+  }
+
+  &--info {
+    background: url(../img/sweet-alert-info.png) no-repeat center center;
+  }
+}
+
+.swal-content {
+  &__input {
+    border: 1px solid $input-border-color;
+    border-radius: $border-radius;
+    line-height: 21px;
+    color: #000;
+    width: 100%;
+    padding: 7px 10px;
+
+    &::placeholder {
+      color: #939daa;
+    }
+
+    &:focus {
+      border-color: $color-lasur;
+      color: #000;
+      box-shadow: none;
+      outline: none;
+    }
+
+    &:disabled,
+    &:disabled:focus {
+      background: #e9ecf1;
+      border: 1px solid #d3d9dd;
+    }
+
+    &:read-only {
+      border: 1px solid rgba(#d3d9dd, .6);
+      background: rgba(#e9ecf1, .5);
+
+      &:focus {
+        border-color: $color-lasur;
+      }
+    }
+  }
+}

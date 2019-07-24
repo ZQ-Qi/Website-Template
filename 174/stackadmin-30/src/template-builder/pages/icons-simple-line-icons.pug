@@ -1,0 +1,26 @@
+//- =========================================================================================
+	File Name: icons-simple-line-icons.jade
+	Description: Simple Line Icons
+	----------------------------------------------------------------------------------------
+	Item Name: Stack - Responsive Admin Template
+	Version: 3.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================
+
+extends template
+
+block pageVars
+	- var pageTitle = "Simple Line Icons"
+	- var activeMenu = "icons-simple-line-icons"
+
+block breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},  {name:"Icons"}, {name:"Simple Line Icons"}])//- Include page content in page block
+append content
+	include ../contents/icons-simple-line-icons.html
+
+//- Page CSS
+//------------------------------
+//- Add Page specific CSS
+append pagecss
+	link(rel='stylesheet', type='text/css', href=app_assets_path+'/fonts/simple-line-icons/style.min.css')

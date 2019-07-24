@@ -1,0 +1,107 @@
+{% extends "./common/layout.html" %}
+
+{% block title %}Form Wizard (A) / Universe Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-fh">
+  <div id="form-wizard-a" class="main-container container-fh__content form-wizard-a">
+    <div class="container-header">
+      <h2 class="container-heading">Advanced Form Wizard</h2>
+    </div>
+    <div class="form-wizard-a__body">
+      <ul class="form-wizard-a__steps">
+        <li class="form-wizard-a__step is-current" data-step="1">
+          <div class="form-wizard-a__step-progress">
+            <div class="form-wizard-a__step-progress-indicator">1</div>
+          </div>
+          <div class="form-wizard-a__step-name">Account Information <span class="ua-icon-circle-check form-wizard-a__step-check-icon"></span></div>
+          <div class="form-wizard-a__step-desc">Enter your first time username password details</div>
+        </li>
+        <li class="form-wizard-a__step" data-step="2">
+          <div class="form-wizard-a__step-progress">
+            <div class="form-wizard-a__step-progress-indicator">2</div>
+          </div>
+          <div class="form-wizard-a__step-name">Personal Information</div>
+          <div class="form-wizard-a__step-desc">Enter your first time username password details</div>
+        </li>
+        <li class="form-wizard-a__step" data-step="3">
+          <div class="form-wizard-a__step-progress">
+            <div class="form-wizard-a__step-progress-indicator">3</div>
+          </div>
+          <div class="form-wizard-a__step-name">Payment Information</div>
+          <div class="form-wizard-a__step-desc">Enter your first time username password details</div>
+        </li>
+        <li class="form-wizard-a__step" data-step="4">
+          <div class="form-wizard-a__step-progress">
+            <div class="form-wizard-a__step-progress-indicator">4</div>
+          </div>
+          <div class="form-wizard-a__step-name">Confirm Your Details</div>
+          <div class="form-wizard-a__step-desc">Enter your first time username password details</div>
+        </li>
+      </ul>
+      <div class="form-wizard-a__content">
+        <div class="form-wizard-a__step-content is-current" data-step-content="1">
+          <h3 class="form-wizard-a__step-content-heading">
+            <span class="form-wizard-a__step-content-heading-icon ua-icon-lock-outline"></span> <span>Account</span> Information
+          </h3>
+          <div class="row">
+            <div class="col-lg-4">
+              <form class="form-wizard__step-form">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <div class="input-group input-group-icon iconfont icon-right">
+                    <input class="form-control" id="username" type="text" placeholder="John Doe">
+                    <span class="input-icon ua-icon-user"></span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="confirm-password">Confirm Password</label>
+                  <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div class="input-group input-group-icon icon-right">
+                    <input type="email" class="form-control" id="email" placeholder="Please Enter your email address">
+                    <span class="input-icon ua-icon-envelope"></span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="form-wizard-a__step-content" data-step-content="2">
+          Step 2
+        </div>
+        <div class="form-wizard-a__step-content" data-step-content="3">
+          Step 3
+        </div>
+        <div class="form-wizard-a__step-content" data-step-content="4">
+          Step 4
+        </div>
+      </div>
+      <div class="form-wizard-a__controls">
+        <a href="#" class="btn btn-info form-wizard-a__control-prev disabled" data-step-control-prev>
+          <span class="form-wizard-a__control-prev-name">Previous Step</span>
+          <span class="form-wizard-a__control-prev-desc">Account Name</span>
+          <span class="ua-icon-step-arrow-left form-wizard-a__control-prev-icon"></span>
+        </a>
+        <a href="#" class="btn btn-info form-wizard-a__control-next" data-step-control-next>
+          <span class="form-wizard-a__control-prev-name">Next Step</span>
+          <span class="form-wizard-a__control-prev-desc">Personal Information</span>
+          <span class="ua-icon-step-arrow-right form-wizard-a__control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="js/form-wizard/form-wizard.js"></script>
+<script src="js/preview/form-wizard-a.min.js"></script>
+{% endblock %}

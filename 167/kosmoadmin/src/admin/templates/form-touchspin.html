@@ -1,0 +1,76 @@
+@@include('./_partials/header_start.html')
+<link rel="stylesheet" type="text/css" href="libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css"> <!-- load original styles -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/touchspin/touchspin.min.css"> <!-- load theme customization styles -->
+@@include('./_partials/header_end.html')
+@@include('./_partials/navbar/include.html')
+
+<div class="ks-page-container">
+    @@include('./_partials/sidebar/include.html')
+
+    <div class="ks-column ks-page">
+        <div class="ks-page-header">
+            <section class="ks-title">
+                <h3>Touchspin</h3>
+            </section>
+        </div>
+
+        <div class="ks-page-content">
+            <div class="ks-page-content-body">
+                <div class="ks-nav-body-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-block">
+                                        <h5 class="card-title">Touchspin</h5>
+                                        <div>
+                                            <div class="form-group">
+                                                <input id="touchspin" type="text" class="form-control" value="55">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="touchspin-vertical-buttons" type="text" value="" class="form-control touchspin-default">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="touchspin-button" type="text" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./_partials/scripts.html')
+<script src="libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<script type="application/javascript">
+(function ($) {
+    $(document).ready(function() {
+        $('#touchspin').TouchSpin({
+            min: 0,
+            max: 100,
+            step: 0.1,
+            decimals: 2,
+            boostat: 5,
+            maxboostedstep: 10,
+            postfix: '%'
+        });
+
+        $('#touchspin-vertical-buttons').TouchSpin({
+            verticalbuttons: true,
+            verticalupclass: 'la la-plus',
+            verticaldownclass: 'la la-minus'
+        });
+
+        $('#touchspin-button').TouchSpin({
+            postfix: "button",
+            postfix_extraclass: "btn btn-default"
+        });
+    });
+})(jQuery);
+</script>
+@@include('./_partials/footer.html')

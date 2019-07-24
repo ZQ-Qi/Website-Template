@@ -1,0 +1,32 @@
+/* ==========================================================================
+   #RANGES
+   ========================================================================== */
+
+// sass-lint:disable no-vendor-prefixes
+
+.c-range {
+	width: 100%;
+	outline: 0;
+	appearance: none;
+}
+
+.c-range--inline {
+	width: 96px;
+}
+
+.c-range::-webkit-slider-thumb {
+	position: relative;
+	top: -6px;
+	width: $range-thumb-width;
+	height: $range-thumb-height;
+	border-radius: 100%;
+	cursor: pointer;
+	appearance: none;
+	@include linear-gradient(to bottom, $range-thumb-gradient);
+}
+
+.c-range::-webkit-slider-runnable-track {
+	height: $range-track-height;
+	border-radius: $range-track-border-radius;
+	background-color: $range-track-background-color;
+}
