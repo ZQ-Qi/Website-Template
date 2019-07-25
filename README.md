@@ -130,7 +130,7 @@
 ![042_example](https://raw.githubusercontent.com/ZQ-Qi/Website-Template/master/preview/042.jpg)
 
 # 043
-![043_example](https://raw.githubusercontent.com/ZQ-Qi/Website-Template/master/preview/043.jpg)
+![043_example](https://raw.githubusercontent.com/ZQ-Qi/Website-Template/master/preview/043.jpeg)
 
 # 044
 ![044_example](https://raw.githubusercontent.com/ZQ-Qi/Website-Template/master/preview/044.jpg)
